@@ -1,7 +1,7 @@
 from pathlib import Path
 import argparse
 import sys
-
+import re
 import torch
 from tokenizers import ByteLevelBPETokenizer
 
@@ -115,7 +115,10 @@ def main():
 
     output_ids = generated[0].tolist()
     output_text = tokenizer.decode(output_ids)
-    
+    # Basit Türkçe diyalog format düzeltmeleri
+    output_text = re.sub(r"(Asistan:)(\S)", r"\1 \2", output_text)
+    output_text = re.sub(r"(Kullanıcı:)(\S)", r"\1 \2", output_text)
+        
     # Special token sonrası devamı kırp
     for stop_token in ["</s>", "<s>", "<pad>", "<unk>", "<mask>"]:
         if stop_token in output_text:

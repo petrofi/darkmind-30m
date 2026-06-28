@@ -1,0 +1,129 @@
+<s>
+Yapay zeka, bilgisayar sistemlerinin verilerden örüntü öğrenmesini sağlayan geniş bir alandır.
+Makine öğrenmesi, yapay zekanın en önemli alt alanlarından biridir.
+Bir makine öğrenmesi modeli, geçmiş verilerden öğrenerek yeni veriler üzerinde tahmin yapmaya çalışır.
+Derin öğrenme, çok katmanlı yapay sinir ağları kullanarak karmaşık ilişkileri öğrenir.
+Dil modelleri, metin dizilerindeki bir sonraki tokenı tahmin ederek eğitilir.
+
+Bir dil modeli için veri kalitesi model mimarisi kadar önemlidir.
+Eğer veri düzensiz, kirli veya tekrarlıysa model de bu hataları öğrenir.
+İyi bir corpus, temiz, çeşitli ve amaca uygun metinlerden oluşmalıdır.
+Türkçe bir dil modeli geliştirirken ekler, çekimler, deyimler ve cümle yapısı özellikle önemlidir.
+Türkçe sondan eklemeli bir dil olduğu için tokenizer tasarımı büyük önem taşır.
+
+Transformer mimarisi attention mekanizması üzerine kuruludur.
+Attention, modelin bir tokenı işlerken diğer tokenlarla ilişkisini hesaplamasını sağlar.
+Decoder-only Transformer modelleri genellikle metin üretimi için kullanılır.
+GPT ailesi decoder-only Transformer mimarisine dayanır.
+Bu modeller, verilen bağlamdan sonra gelecek metni üretmeyi öğrenir.
+
+Model eğitimi sırasında loss değeri izlenir.
+Loss değeri, modelin tahminleri ile gerçek hedefler arasındaki hatayı gösterir.
+Loss düşüyorsa model eğitim verisindeki örüntüleri öğreniyor demektir.
+Ancak çok küçük veri setlerinde loss düşmesi modelin gerçekten öğrendiği anlamına gelmeyebilir.
+Bazen model sadece veriyi ezberler.
+Bu yüzden train loss ve validation loss birlikte izlenmelidir.
+
+DarkMind projesinin amacı, Türkçe odaklı küçük bir dil modelini sıfırdan geliştirmektir.
+Bu projede hazır bir modelin üzerine sadece fine-tuning yapmak yerine, tokenizer, mimari ve eğitim döngüsü sıfırdan kurulmaktadır.
+Bu yaklaşım, modelin iç çalışma mantığını anlamak için değerlidir.
+Küçük modeller, büyük modelleri anlamanın en iyi başlangıç noktalarından biridir.
+</s>
+
+<s>
+İnsan bazen yolun başında kendini yetersiz hissedebilir.
+Bu his, gerçekten yetersiz olduğu anlamına gelmez.
+Bazen insan sadece henüz yeterince deneme yapmamıştır.
+Bir projede ilerlemek, her gün küçük ama düzenli adımlar atmakla mümkündür.
+Büyük hedefler çoğu zaman küçük ve sessiz başlangıçlardan doğar.
+
+Motivasyon her zaman güçlü olmak değildir.
+Bazen motivasyon, yorgun hissettiğin halde masaya tekrar oturabilmektir.
+Bazen motivasyon, hata aldığında kaçmak yerine hatayı okumaktır.
+Bazen motivasyon, kimse görmese bile yaptığın işi ciddiye almaktır.
+Bir geliştirici için en önemli özelliklerden biri devam edebilmektir.
+
+Darklove fikri, insan duygularını anlayan bir yapay zeka hayalinden doğdu.
+İnsanlar bazen yalnız olduklarında sadece tavsiye değil, anlaşılmak ister.
+Duygusal yapay zeka, insanın ne hissettiğini anlamaya çalışan sistemler geliştirmeyi amaçlar.
+Bu sistemler insanın yerine karar vermemeli, onu manipüle etmemeli ve yanlış yönlendirmemelidir.
+İyi bir duygusal yapay zeka, güvenli, şeffaf ve destekleyici olmalıdır.
+
+Bir insanın kendini geliştirmesi doğrusal ilerlemez.
+Bazı günler hızlı ilerler, bazı günler aynı yerde kalmış gibi hisseder.
+Ama öğrenme sürecinde görünmeyen ilerlemeler de vardır.
+Bir gün zor gelen hata, başka bir gün basit bir paket sorunu gibi görünür.
+Bu değişim, kişinin gerçekten geliştiğini gösterir.
+
+Kendi modelini geliştirmek isteyen biri için sabır çok önemlidir.
+İlk model kötü cevap verebilir.
+İlk veri seti küçük olabilir.
+İlk loss değeri yanıltıcı olabilir.
+Ama bunların her biri araştırma sürecinin parçasıdır.
+Önemli olan sistemi anlamak, deneyleri kaydetmek ve her sürümde daha iyi hale getirmektir.
+</s>
+
+<s>
+Python, okunabilir sözdizimi nedeniyle yapay zeka ve veri bilimi alanlarında sık kullanılan bir programlama dilidir.
+Python'da değişkenler dinamik olarak tip alır.
+Liste, sözlük, demet ve küme Python'ın temel veri yapıları arasındadır.
+Fonksiyonlar, tekrar eden işlemleri düzenli şekilde yazmak için kullanılır.
+Sınıflar, nesne yönelimli programlama yaklaşımının temelidir.
+
+PyTorch, derin öğrenme modelleri geliştirmek için kullanılan popüler bir kütüphanedir.
+PyTorch'ta tensor yapısı, model eğitiminin temel veri yapısıdır.
+Tensorlar CPU veya GPU üzerinde çalıştırılabilir.
+CUDA aktif olduğunda, tensor işlemleri NVIDIA ekran kartı üzerinde hızlanır.
+Model eğitimi sırasında veriler tensora dönüştürülür, modelden geçirilir, loss hesaplanır ve geri yayılım yapılır.
+
+Bir eğitim döngüsünde genellikle şu adımlar bulunur.
+Önce batch verisi alınır.
+Model bu batch üzerinden tahmin üretir.
+Tahmin ile gerçek hedef arasında loss hesaplanır.
+Optimizer, model ağırlıklarını günceller.
+Bu işlem birçok adım boyunca tekrar eder.
+
+AdamW, Transformer modellerinde sık kullanılan bir optimizer türüdür.
+Learning rate, modelin her adımda ne kadar güncelleneceğini belirler.
+Learning rate çok yüksek olursa model kararsız öğrenebilir.
+Learning rate çok düşük olursa eğitim çok yavaş ilerler.
+Batch size, aynı anda modele verilen örnek sayısını belirler.
+
+Python projelerinde klasör yapısı önemlidir.
+Kod, veri, config dosyaları ve dokümantasyon ayrı tutulmalıdır.
+Config dosyaları, model ayarlarını koddan ayırmak için kullanılır.
+Bu sayede farklı model boyutları aynı eğitim scripti ile çalıştırılabilir.
+DarkMind projesinde tiny, 5M ve 30M modelleri config dosyaları ile yönetilmektedir.
+</s>
+
+<s>
+Soru: Bir dil modeli nasıl öğrenir?
+Cevap: Bir dil modeli, verilen token dizisinin devamını tahmin etmeye çalışarak öğrenir. Eğitim sırasında modelin tahmini ile doğru token karşılaştırılır ve loss hesaplanır.
+
+Soru: Tokenizer ne işe yarar?
+Cevap: Tokenizer, metni modelin işleyebileceği sayısal tokenlara dönüştürür. Kelimeleri, alt kelimeleri veya byte seviyesindeki parçaları temsil edebilir.
+
+Soru: Transformer nedir?
+Cevap: Transformer, attention mekanizması kullanan bir derin öğrenme mimarisidir. Dil modellerinde kelimeler arasındaki ilişkileri öğrenmek için yaygın şekilde kullanılır.
+
+Soru: Decoder-only model ne demektir?
+Cevap: Decoder-only model, genellikle metin üretimi için kullanılan Transformer türüdür. Geçmiş tokenlara bakarak bir sonraki tokenı tahmin eder.
+
+Soru: Loss değeri neden önemlidir?
+Cevap: Loss, modelin yaptığı hatayı gösterir. Eğitim sırasında loss değerinin düşmesi modelin eğitim verisini daha iyi tahmin ettiğini gösterir.
+
+Soru: Düşük loss her zaman iyi midir?
+Cevap: Hayır. Veri seti çok küçükse model veriyi ezberleyebilir. Bu durumda loss düşük görünür ama model gerçek anlamda genelleme yapamayabilir.
+
+Soru: CUDA ne işe yarar?
+Cevap: CUDA, NVIDIA ekran kartları üzerinde hesaplama yapmayı sağlar. Derin öğrenme eğitimlerinde GPU kullanmak eğitimi ciddi şekilde hızlandırır.
+
+Soru: DarkMind projesinin amacı nedir?
+Cevap: DarkMind projesinin amacı, Türkçe odaklı küçük bir dil modelini sıfırdan geliştirmek ve dil modeli eğitim sürecini adım adım öğrenmektir.
+
+Soru: Darklove ile DarkMind arasındaki ilişki nedir?
+Cevap: Darklove, duygusal yapay zeka fikrinin ürün tarafıdır. DarkMind ise bu fikrin araştırma ve model geliştirme tarafını temsil eder.
+
+Soru: Küçük bir model geliştirmek neden değerlidir?
+Cevap: Küçük modeller, büyük modellerin temel mantığını anlamak için değerlidir. Tokenizer, model mimarisi, training loop ve veri kalitesi küçük modeller üzerinde daha kolay incelenebilir.
+</s>

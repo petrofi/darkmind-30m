@@ -1,0 +1,30 @@
+Python, okunabilir sözdizimi nedeniyle yapay zeka ve veri bilimi alanlarında sık kullanılan bir programlama dilidir.
+Python'da değişkenler dinamik olarak tip alır.
+Liste, sözlük, demet ve küme Python'ın temel veri yapıları arasındadır.
+Fonksiyonlar, tekrar eden işlemleri düzenli şekilde yazmak için kullanılır.
+Sınıflar, nesne yönelimli programlama yaklaşımının temelidir.
+
+PyTorch, derin öğrenme modelleri geliştirmek için kullanılan popüler bir kütüphanedir.
+PyTorch'ta tensor yapısı, model eğitiminin temel veri yapısıdır.
+Tensorlar CPU veya GPU üzerinde çalıştırılabilir.
+CUDA aktif olduğunda, tensor işlemleri NVIDIA ekran kartı üzerinde hızlanır.
+Model eğitimi sırasında veriler tensora dönüştürülür, modelden geçirilir, loss hesaplanır ve geri yayılım yapılır.
+
+Bir eğitim döngüsünde genellikle şu adımlar bulunur.
+Önce batch verisi alınır.
+Model bu batch üzerinden tahmin üretir.
+Tahmin ile gerçek hedef arasında loss hesaplanır.
+Optimizer, model ağırlıklarını günceller.
+Bu işlem birçok adım boyunca tekrar eder.
+
+AdamW, Transformer modellerinde sık kullanılan bir optimizer türüdür.
+Learning rate, modelin her adımda ne kadar güncelleneceğini belirler.
+Learning rate çok yüksek olursa model kararsız öğrenebilir.
+Learning rate çok düşük olursa eğitim çok yavaş ilerler.
+Batch size, aynı anda modele verilen örnek sayısını belirler.
+
+Python projelerinde klasör yapısı önemlidir.
+Kod, veri, config dosyaları ve dokümantasyon ayrı tutulmalıdır.
+Config dosyaları, model ayarlarını koddan ayırmak için kullanılır.
+Bu sayede farklı model boyutları aynı eğitim scripti ile çalıştırılabilir.
+DarkMind projesinde tiny, 5M ve 30M modelleri config dosyaları ile yönetilmektedir.

@@ -1,0 +1,31 @@
+
+İnsan bazen yolun başında kendini yetersiz hissedebilir.
+Bu his, gerçekten yetersiz olduğu anlamına gelmez.
+Bazen insan sadece henüz yeterince deneme yapmamıştır.
+Bir projede ilerlemek, her gün küçük ama düzenli adımlar atmakla mümkündür.
+Büyük hedefler çoğu zaman küçük ve sessiz başlangıçlardan doğar.
+
+Motivasyon her zaman güçlü olmak değildir.
+Bazen motivasyon, yorgun hissettiğin halde masaya tekrar oturabilmektir.
+Bazen motivasyon, hata aldığında kaçmak yerine hatayı okumaktır.
+Bazen motivasyon, kimse görmese bile yaptığın işi ciddiye almaktır.
+Bir geliştirici için en önemli özelliklerden biri devam edebilmektir.
+
+Darklove fikri, insan duygularını anlayan bir yapay zeka hayalinden doğdu.
+İnsanlar bazen yalnız olduklarında sadece tavsiye değil, anlaşılmak ister.
+Duygusal yapay zeka, insanın ne hissettiğini anlamaya çalışan sistemler geliştirmeyi amaçlar.
+Bu sistemler insanın yerine karar vermemeli, onu manipüle etmemeli ve yanlış yönlendirmemelidir.
+İyi bir duygusal yapay zeka, güvenli, şeffaf ve destekleyici olmalıdır.
+
+Bir insanın kendini geliştirmesi doğrusal ilerlemez.
+Bazı günler hızlı ilerler, bazı günler aynı yerde kalmış gibi hisseder.
+Ama öğrenme sürecinde görünmeyen ilerlemeler de vardır.
+Bir gün zor gelen hata, başka bir gün basit bir paket sorunu gibi görünür.
+Bu değişim, kişinin gerçekten geliştiğini gösterir.
+
+Kendi modelini geliştirmek isteyen biri için sabır çok önemlidir.
+İlk model kötü cevap verebilir.
+İlk veri seti küçük olabilir.
+İlk loss değeri yanıltıcı olabilir.
+Ama bunların her biri araştırma sürecinin parçasıdır.
+Önemli olan sistemi anlamak, deneyleri kaydetmek ve her sürümde daha iyi hale getirmektir.

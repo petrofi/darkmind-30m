@@ -1,0 +1,29 @@
+Yapay zeka, bilgisayar sistemlerinin verilerden örüntü öğrenmesini sağlayan geniş bir alandır.
+Makine öğrenmesi, yapay zekanın en önemli alt alanlarından biridir.
+Bir makine öğrenmesi modeli, geçmiş verilerden öğrenerek yeni veriler üzerinde tahmin yapmaya çalışır.
+Derin öğrenme, çok katmanlı yapay sinir ağları kullanarak karmaşık ilişkileri öğrenir.
+Dil modelleri, metin dizilerindeki bir sonraki tokenı tahmin ederek eğitilir.
+
+Bir dil modeli için veri kalitesi model mimarisi kadar önemlidir.
+Eğer veri düzensiz, kirli veya tekrarlıysa model de bu hataları öğrenir.
+İyi bir corpus, temiz, çeşitli ve amaca uygun metinlerden oluşmalıdır.
+Türkçe bir dil modeli geliştirirken ekler, çekimler, deyimler ve cümle yapısı özellikle önemlidir.
+Türkçe sondan eklemeli bir dil olduğu için tokenizer tasarımı büyük önem taşır.
+
+Transformer mimarisi attention mekanizması üzerine kuruludur.
+Attention, modelin bir tokenı işlerken diğer tokenlarla ilişkisini hesaplamasını sağlar.
+Decoder-only Transformer modelleri genellikle metin üretimi için kullanılır.
+GPT ailesi decoder-only Transformer mimarisine dayanır.
+Bu modeller, verilen bağlamdan sonra gelecek metni üretmeyi öğrenir.
+
+Model eğitimi sırasında loss değeri izlenir.
+Loss değeri, modelin tahminleri ile gerçek hedefler arasındaki hatayı gösterir.
+Loss düşüyorsa model eğitim verisindeki örüntüleri öğreniyor demektir.
+Ancak çok küçük veri setlerinde loss düşmesi modelin gerçekten öğrendiği anlamına gelmeyebilir.
+Bazen model sadece veriyi ezberler.
+Bu yüzden train loss ve validation loss birlikte izlenmelidir.
+
+DarkMind projesinin amacı, Türkçe odaklı küçük bir dil modelini sıfırdan geliştirmektir.
+Bu projede hazır bir modelin üzerine sadece fine-tuning yapmak yerine, tokenizer, mimari ve eğitim döngüsü sıfırdan kurulmaktadır.
+Bu yaklaşım, modelin iç çalışma mantığını anlamak için değerlidir.
+Küçük modeller, büyük modelleri anlamanın en iyi başlangıç noktalarından biridir.

@@ -3,7 +3,7 @@ from tokenizers import ByteLevelBPETokenizer
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 
-DATA_PATH = ROOT_DIR / "data" / "corpus_v1.txt"
+DATA_PATH = ROOT_DIR / "data" / "processed" / "corpus_v2.txt"
 TOKENIZER_DIR = ROOT_DIR / "tokenizer" / "darkmind-tokenizer"
 
 TOKENIZER_DIR.mkdir(parents=True, exist_ok=True)

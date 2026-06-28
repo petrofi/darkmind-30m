@@ -1,6 +1,6 @@
 {
   "run_name": "darkmind_30m",
-  "data_path": "data/corpus_v1.txt",
+  "data_path": "data/processed/corpus_v2.txt",
   "tokenizer_dir": "tokenizer/darkmind-tokenizer",
   "checkpoint_path": "checkpoints/darkmind_30m.pt",
   "seed": 42,

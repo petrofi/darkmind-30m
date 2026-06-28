@@ -1,0 +1,29 @@
+Soru: Bir dil modeli nasıl öğrenir?
+Cevap: Bir dil modeli, verilen token dizisinin devamını tahmin etmeye çalışarak öğrenir. Eğitim sırasında modelin tahmini ile doğru token karşılaştırılır ve loss hesaplanır.
+
+Soru: Tokenizer ne işe yarar?
+Cevap: Tokenizer, metni modelin işleyebileceği sayısal tokenlara dönüştürür. Kelimeleri, alt kelimeleri veya byte seviyesindeki parçaları temsil edebilir.
+
+Soru: Transformer nedir?
+Cevap: Transformer, attention mekanizması kullanan bir derin öğrenme mimarisidir. Dil modellerinde kelimeler arasındaki ilişkileri öğrenmek için yaygın şekilde kullanılır.
+
+Soru: Decoder-only model ne demektir?
+Cevap: Decoder-only model, genellikle metin üretimi için kullanılan Transformer türüdür. Geçmiş tokenlara bakarak bir sonraki tokenı tahmin eder.
+
+Soru: Loss değeri neden önemlidir?
+Cevap: Loss, modelin yaptığı hatayı gösterir. Eğitim sırasında loss değerinin düşmesi modelin eğitim verisini daha iyi tahmin ettiğini gösterir.
+
+Soru: Düşük loss her zaman iyi midir?
+Cevap: Hayır. Veri seti çok küçükse model veriyi ezberleyebilir. Bu durumda loss düşük görünür ama model gerçek anlamda genelleme yapamayabilir.
+
+Soru: CUDA ne işe yarar?
+Cevap: CUDA, NVIDIA ekran kartları üzerinde hesaplama yapmayı sağlar. Derin öğrenme eğitimlerinde GPU kullanmak eğitimi ciddi şekilde hızlandırır.
+
+Soru: DarkMind projesinin amacı nedir?
+Cevap: DarkMind projesinin amacı, Türkçe odaklı küçük bir dil modelini sıfırdan geliştirmek ve dil modeli eğitim sürecini adım adım öğrenmektir.
+
+Soru: Darklove ile DarkMind arasındaki ilişki nedir?
+Cevap: Darklove, duygusal yapay zeka fikrinin ürün tarafıdır. DarkMind ise bu fikrin araştırma ve model geliştirme tarafını temsil eder.
+
+Soru: Küçük bir model geliştirmek neden değerlidir?
+Cevap: Küçük modeller, büyük modellerin temel mantığını anlamak için değerlidir. Tokenizer, model mimarisi, training loop ve veri kalitesi küçük modeller üzerinde daha kolay incelenebilir.

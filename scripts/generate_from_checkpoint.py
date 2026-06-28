@@ -110,6 +110,11 @@ def main():
 
     output_ids = generated[0].tolist()
     output_text = tokenizer.decode(output_ids)
+    
+    # Special token sonrası devamı kırp
+    for stop_token in ["</s>", "<s>", "<pad>", "<unk>", "<mask>"]:
+        if stop_token in output_text:
+            output_text = output_text.split(stop_token)[0].strip()
 
     print("=" * 70)
     print("PROMPT:")

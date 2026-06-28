@@ -26,6 +26,12 @@ def main():
         required=True,
         help="Path to config JSON file. Example: configs/darkmind_tiny.json",
     )
+    parser.add_argument(
+        "--data_path",
+        type=str,
+        default=None,
+        help="Optional corpus path override.",
+    )
     args = parser.parse_args()
 
     config_path = ROOT_DIR / args.config
@@ -42,7 +48,7 @@ def main():
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    data_path = ROOT_DIR / cfg["data_path"]
+    data_path = ROOT_DIR / (args.data_path or cfg["data_path"])
     tokenizer_dir = ROOT_DIR / cfg["tokenizer_dir"]
     checkpoint_path = ROOT_DIR / cfg["checkpoint_path"]
 

@@ -1,0 +1,537 @@
+<s>
+Yapay zeka, bilgisayar sistemlerinin verilerden örüntü öğrenmesini sağlayan geniş bir alandır.
+Makine öğrenmesi, yapay zekanın en önemli alt alanlarından biridir.
+Bir makine öğrenmesi modeli, geçmiş verilerden öğrenerek yeni veriler üzerinde tahmin yapmaya çalışır.
+Derin öğrenme, çok katmanlı yapay sinir ağları kullanarak karmaşık ilişkileri öğrenir.
+Dil modelleri, metin dizilerindeki bir sonraki tokenı tahmin ederek eğitilir.
+
+Bir dil modeli için veri kalitesi model mimarisi kadar önemlidir.
+Eğer veri düzensiz, kirli veya tekrarlıysa model de bu hataları öğrenir.
+İyi bir corpus, temiz, çeşitli ve amaca uygun metinlerden oluşmalıdır.
+Türkçe bir dil modeli geliştirirken ekler, çekimler, deyimler ve cümle yapısı özellikle önemlidir.
+Türkçe sondan eklemeli bir dil olduğu için tokenizer tasarımı büyük önem taşır.
+
+Transformer mimarisi attention mekanizması üzerine kuruludur.
+Attention, modelin bir tokenı işlerken diğer tokenlarla ilişkisini hesaplamasını sağlar.
+Decoder-only Transformer modelleri genellikle metin üretimi için kullanılır.
+GPT ailesi decoder-only Transformer mimarisine dayanır.
+Bu modeller, verilen bağlamdan sonra gelecek metni üretmeyi öğrenir.
+
+Model eğitimi sırasında loss değeri izlenir.
+Loss değeri, modelin tahminleri ile gerçek hedefler arasındaki hatayı gösterir.
+Loss düşüyorsa model eğitim verisindeki örüntüleri öğreniyor demektir.
+Ancak çok küçük veri setlerinde loss düşmesi modelin gerçekten öğrendiği anlamına gelmeyebilir.
+Bazen model sadece veriyi ezberler.
+Bu yüzden train loss ve validation loss birlikte izlenmelidir.
+
+DarkMind projesinin amacı, Türkçe odaklı küçük bir dil modelini sıfırdan geliştirmektir.
+Bu projede hazır bir modelin üzerine sadece fine-tuning yapmak yerine, tokenizer, mimari ve eğitim döngüsü sıfırdan kurulmaktadır.
+Bu yaklaşım, modelin iç çalışma mantığını anlamak için değerlidir.
+Küçük modeller, büyük modelleri anlamanın en iyi başlangıç noktalarından biridir.
+</s>
+
+<s>
+Kod yazarken hata almak öğrenme sürecinin doğal bir parçasıdır.
+Bir hata mesajı, çoğu zaman sistemin sana neyin yanlış olduğunu anlatma biçimidir.
+Yeni başlayan biri için hata mesajları korkutucu görünebilir.
+Ama deneyim kazandıkça hata mesajları yol gösterici hale gelir.
+Bir geliştirici için önemli olan şey hata almamak değil, hatayı okuyabilmektir.
+
+Python projelerinde en sık yapılan hatalardan biri yanlış dosya yolunda çalışmaktır.
+Terminal başka bir klasördeyken komut çalıştırıldığında dosya bulunamayabilir.
+Bu yüzden hata aldığında önce bulunduğun klasörü kontrol etmek gerekir.
+PowerShell üzerinde bulunduğun konum satırın başında görünür.
+Proje kökünde mi, scripts klasöründe mi, configs klasöründe mi olduğunu bilmek önemlidir.
+
+Bir diğer yaygın hata sanal ortamı aktif etmeden çalışmaktır.
+Python projesinde kullanılan paketler çoğu zaman .venv içinde kurulur.
+Eğer sanal ortam aktif değilse sistem farklı bir Python sürümünü kullanabilir.
+Bu durumda PyTorch CUDA yerine CPU sürümüyle çalışabilir.
+DarkMind projesinde bu yüzden her yeni terminalde .venv aktif edilmelidir.
+
+Git kullanırken yapılan hatalardan biri repository başlatmadan commit atmaya çalışmaktır.
+Bir klasör Git reposu değilse git branch, git remote veya git push komutları çalışmaz.
+Önce git init komutu ile repo başlatılmalıdır.
+Sonra git status ile dosyaların durumu kontrol edilmelidir.
+Git, projedeki değişiklikleri takip etmek için güçlü bir araçtır.
+
+GitHub'a gereksiz dosya göndermemek de önemlidir.
+.venv klasörü, checkpoint dosyaları ve büyük model dosyaları GitHub'a gönderilmemelidir.
+Bu yüzden .gitignore dosyası kullanılmalıdır.
+Checkpoints klasörü genellikle yerelde kalır.
+Kod, config, küçük veri kaynakları ve dokümantasyon GitHub'a gönderilir.
+
+Model eğitimi sırasında yapılan hatalardan biri veri setinin çok küçük olduğunu unutup sonucu fazla büyütmektir.
+Loss düşük çıkabilir ama model sadece veriyi ezberlemiş olabilir.
+Bu durumda model güçlü bir dil modeli olmuş sayılmaz.
+Gerçek gelişim için veri seti büyütülmeli, çeşitlendirilmeli ve deneyler dikkatli yorumlanmalıdır.
+DarkMind projesinde düşük loss değerleri bu yüzden dikkatli değerlendirilmektedir.
+
+Bir başka hata tokenizer değiştikten sonra eski checkpoint'i kullanmaya çalışmaktır.
+Tokenizer vocabulary değiştiğinde modelin embedding boyutu da değişebilir.
+Bu durumda eski checkpoint yeni tokenizer ile uyumlu olmayabilir.
+Her büyük tokenizer değişiminden sonra modeli sıfırdan eğitmek daha doğru olur.
+Bu durum başarısızlık değil, dil modeli geliştirme sürecinin normal bir parçasıdır.
+
+Kodda path hataları da sık görülür.
+Bir script içinde relative path kullanılıyorsa scriptin nereden çalıştırıldığı önem kazanabilir.
+Bu yüzden projelerde ROOT_DIR gibi merkezi yol tanımları kullanmak daha güvenlidir.
+DarkMind scriptlerinde Path(__file__).resolve().parents[1] kullanılması bu yüzden faydalıdır.
+Bu yöntem script hangi klasörden çalıştırılırsa çalıştırılsın proje kökünü bulmaya yardımcı olur.
+
+Hata çözmenin iyi bir yöntemi, çıktıyı parça parça okumaktır.
+Önce hatanın en son satırına bakılır.
+Sonra hangi dosyada ve hangi satırda hata verdiği kontrol edilir.
+Ardından kullanılan komut, klasör yolu ve sanal ortam durumu incelenir.
+Bir hata anlaşılmadan rastgele çözüm denemek daha büyük karışıklığa yol açabilir.
+
+İyi bir geliştirici, hataları not alır.
+Bugün zor gelen bir hata, yarın benzer bir durumda hızlıca çözülebilir.
+Deney dosyaları, commit mesajları ve düzenli dokümantasyon bu yüzden değerlidir.
+DarkMind projesinde her aşamanın kayıt altına alınması sadece gösteriş için değil, öğrenme sürecini takip etmek içindir.
+Kod yazmak kadar, kodun neden çalıştığını anlamak da önemlidir.
+</s>
+
+<s>
+Duygusal yapay zeka sistemlerinde güvenlik çok önemlidir.
+Bir sistem insanın duygularına hitap ediyorsa daha dikkatli tasarlanmalıdır.
+Çünkü kullanıcılar bazen kırılgan, yalnız, öfkeli veya umutsuz hissedebilir.
+Bu durumda yapay zekanın amacı kullanıcıyı manipüle etmek değil, güvenli ve destekleyici bir şekilde cevap vermek olmalıdır.
+
+Darklove gibi bir sistem, kendisini terapist olarak tanıtmamalıdır.
+Yapay zeka destekleyici olabilir, fakat profesyonel psikolojik destek yerine geçemez.
+Kullanıcı ciddi bir kriz yaşıyorsa sistem onu güvenilir insan desteğine veya profesyonel yardım kaynaklarına yönlendirmelidir.
+Model, kesin teşhis koymamalı ve kullanıcının hayatı hakkında ağır kararlar vermemelidir.
+
+Duygusal destek veren bir yapay zeka, kullanıcının zayıf anlarını ticari amaçla kullanmamalıdır.
+Kullanıcının yalnızlığını, korkusunu veya bağımlılık hissini artıracak şekilde tasarlanmamalıdır.
+İyi bir sistem, kullanıcıyı kendisine bağımlı hale getirmek yerine onun kendi hayatında daha güçlü kararlar almasına yardımcı olmalıdır.
+Bu yüzden yapay zeka cevapları dengeli, dürüst ve sınırları belli olmalıdır.
+
+Bir duygusal yapay zeka kullanıcının her söylediğine koşulsuz katılmamalıdır.
+Kullanıcı kendisine veya başkasına zarar verebilecek düşünceler ifade ederse model bunu normalleştirmemelidir.
+Model, kullanıcının duygusunu kabul edebilir fakat zararlı davranışı desteklememelidir.
+Empati ile güvenlik aynı anda korunmalıdır.
+
+Gizlilik de bu tür projelerde temel konulardan biridir.
+Kullanıcıların kişisel duyguları, özel hayatları ve mesajları hassas veri olarak kabul edilmelidir.
+Veriler gereksiz yere saklanmamalı, kullanıcı açıkça bilgilendirilmeli ve mümkün olduğunda yerel işleme tercih edilmelidir.
+Darklove fikrinde local AI yaklaşımı bu yüzden değerlidir.
+Yerel çalışan sistemler, kullanıcı verisinin dış sunuculara gitme riskini azaltabilir.
+
+Bir yapay zeka sistemi kullanıcının duygusal durumunu analiz ederken kesin yargılar vermemelidir.
+Örneğin kullanıcı üzgün bir mesaj yazdığında model onun kesin olarak depresyonda olduğunu söylememelidir.
+Bunun yerine, mesajda üzgünlük, yorgunluk veya stres belirtileri olabileceğini dikkatli bir dille ifade edebilir.
+Belirsizlik olduğunda model bunu açıkça belirtmelidir.
+
+Güvenli cevap üretimi için sistem promptları ve veri seti dikkatli hazırlanmalıdır.
+Model, kullanıcıyı küçümseyen, suçlayan veya baskılayan cevaplardan kaçınmalıdır.
+Aynı zamanda aşırı romantikleştirilmiş, bağımlılık oluşturan veya gerçeklikten koparan cevaplar da risklidir.
+Duygusal yapay zeka insanı gerçek hayattan uzaklaştırmamalı, tam tersine daha sağlıklı adımlar atmasına yardımcı olmalıdır.
+
+DarkMind tarafında bu güvenlik ilkeleri veri setine yavaş yavaş eklenmelidir.
+Model sadece teknik bilgi değil, güvenli cevap verme davranışlarını da öğrenmelidir.
+Bu, küçük bir model için bile önemlidir.
+Çünkü model ne kadar küçük olursa olsun, eğitim verisindeki üslup ve değerleri taklit etmeye çalışır.
+
+Duygusal yapay zeka projelerinde amaç insanın yerine geçmek değildir.
+Amaç, insanın kendini ifade etmesine, düşüncelerini düzenlemesine ve daha güvenli adımlar atmasına yardımcı olmaktır.
+Model, gerektiğinde kısa, sakin ve yönlendirici cevaplar verebilmelidir.
+Bazen en iyi cevap uzun tavsiyeler değil, kullanıcının duygusunu anladığını gösteren sade ve güvenli bir cümledir.
+</s>
+
+<s>
+DarkMind projesi, sıfırdan küçük bir Türkçe dil modeli geliştirme denemesidir.
+Bu proje, hazır bir modeli sadece kullanmak yerine modelin iç yapısını anlamayı amaçlar.
+İlk hedef, küçük de olsa çalışan bir tokenizer, Transformer mimarisi ve eğitim döngüsü kurmaktır.
+Bu yüzden proje doğrudan büyük model hedefiyle değil, küçük deneylerle başlamıştır.
+
+İlk aşamada Byte-Level BPE tokenizer eğitildi.
+Tokenizer, Türkçe metinleri token parçalarına ayırmayı öğrendi.
+İlk veri seti çok küçük olduğu için tokenizer vocabulary boyutu da küçüktü.
+Buna rağmen decode işlemi doğru çalıştı.
+Bu, metnin tokenlara ayrılıp tekrar okunabilir hale getirilebildiğini gösterdi.
+
+Sonraki aşamada decoder-only Transformer mimarisi yazıldı.
+Modelde token embedding, position embedding, causal self-attention, feed-forward katmanı, residual connection ve layer normalization kullanıldı.
+Bu yapı GPT tarzı modellerin temel mantığını temsil eder.
+Model başlangıçta rastgele ağırlıklara sahipti.
+Eğitim sırasında verilen metnin devamını tahmin etmeye çalıştı.
+
+İlk eğitim deneyi DarkMind Tiny GPT olarak adlandırıldı.
+Bu deneyin amacı kaliteli metin üretmek değildi.
+Amaç, pipeline'ın uçtan uca çalıştığını doğrulamaktı.
+Tokenizer çalıştı, model forward yaptı, loss hesaplandı, optimizer ağırlıkları güncelledi ve checkpoint kaydedildi.
+Bu noktada proje artık sadece fikir olmaktan çıktı.
+
+Daha sonra config tabanlı eğitim sistemi kuruldu.
+Model ayarları doğrudan Python dosyasının içinden çıkarıldı.
+Tiny, 5M ve 30M gibi farklı model boyutları JSON config dosyalarıyla yönetilmeye başlandı.
+Bu yaklaşım, deneyleri daha düzenli hale getirdi.
+Aynı training scripti farklı model konfigürasyonlarıyla çalışabilir hale geldi.
+
+RTX 4060 Laptop GPU üzerinde CUDA eğitimi başarıyla çalıştırıldı.
+CPU üzerinde uzun süren eğitimler GPU üzerinde birkaç saniyeye düştü.
+Bu fark, derin öğrenme eğitimlerinde GPU kullanımının önemini gösterdi.
+DarkMind 30M config ile 26 milyon civarında parametreli bir model eğitildi.
+Bu model henüz güçlü bir dil modeli değildir, fakat yerel bilgisayarda sıfırdan büyükçe bir Transformer modelinin eğitilebildiğini kanıtladı.
+
+Corpus v0.2 aşamasında veri kaynakları ayrıldı.
+Yapay zeka notları, Python notları, duygu notları ve soru-cevap örnekleri ayrı dosyalara yazıldı.
+Daha sonra build_corpus scripti bu kaynakları tek bir corpus dosyasında birleştirdi.
+Bu yapı, veri setini daha kontrollü büyütmek için önemlidir.
+Her veri dosyası ayrı bir amaca hizmet eder.
+
+DarkMind projesinde her deneyin belgelenmesi önemlidir.
+Deney dosyaları, hangi modelin hangi veriyle ve hangi sonuçlarla eğitildiğini kaydeder.
+Bu kayıtlar ileride proje büyüdüğünde geri dönüp analiz yapmayı kolaylaştırır.
+Bir araştırma projesinde sadece çalışan kod değil, deney geçmişi de değerlidir.
+Bu yüzden DarkMind, kod kadar dokümantasyona da önem veren bir proje olarak ilerlemektedir.
+
+Bu projenin erken aşamalarında modelin metinleri ezberlemesi normaldir.
+Veri seti küçük olduğunda model genelleme yapamaz.
+Aynı cümleleri veya benzer yapıları tekrar üretir.
+Bu durum başarısızlık değil, veri ihtiyacının doğal sonucudur.
+Modelin daha iyi üretim yapabilmesi için daha fazla, daha çeşitli ve daha temiz Türkçe veri gerekir.
+
+DarkMind'in kısa vadeli hedefi, 50.000 karakterin üzerinde temiz bir Türkçe corpus oluşturmaktır.
+Orta vadeli hedef, 30M civarında parametreli modeli daha çeşitli veriyle eğitmektir.
+Uzun vadeli hedef ise Türkçe duygu, motivasyon, yazılım ve yapay zeka alanlarında özelleşmiş küçük ama anlaşılır bir model geliştirmektir.
+Bu süreç, büyük bir model üretmekten önce model geliştirme disiplinini öğrenmeyi amaçlar.
+</s>
+
+<s>
+İnsan bazen yolun başında kendini yetersiz hissedebilir.
+Bu his, gerçekten yetersiz olduğu anlamına gelmez.
+Bazen insan sadece henüz yeterince deneme yapmamıştır.
+Bir projede ilerlemek, her gün küçük ama düzenli adımlar atmakla mümkündür.
+Büyük hedefler çoğu zaman küçük ve sessiz başlangıçlardan doğar.
+
+Motivasyon her zaman güçlü olmak değildir.
+Bazen motivasyon, yorgun hissettiğin halde masaya tekrar oturabilmektir.
+Bazen motivasyon, hata aldığında kaçmak yerine hatayı okumaktır.
+Bazen motivasyon, kimse görmese bile yaptığın işi ciddiye almaktır.
+Bir geliştirici için en önemli özelliklerden biri devam edebilmektir.
+
+Darklove fikri, insan duygularını anlayan bir yapay zeka hayalinden doğdu.
+İnsanlar bazen yalnız olduklarında sadece tavsiye değil, anlaşılmak ister.
+Duygusal yapay zeka, insanın ne hissettiğini anlamaya çalışan sistemler geliştirmeyi amaçlar.
+Bu sistemler insanın yerine karar vermemeli, onu manipüle etmemeli ve yanlış yönlendirmemelidir.
+İyi bir duygusal yapay zeka, güvenli, şeffaf ve destekleyici olmalıdır.
+
+Bir insanın kendini geliştirmesi doğrusal ilerlemez.
+Bazı günler hızlı ilerler, bazı günler aynı yerde kalmış gibi hisseder.
+Ama öğrenme sürecinde görünmeyen ilerlemeler de vardır.
+Bir gün zor gelen hata, başka bir gün basit bir paket sorunu gibi görünür.
+Bu değişim, kişinin gerçekten geliştiğini gösterir.
+
+Kendi modelini geliştirmek isteyen biri için sabır çok önemlidir.
+İlk model kötü cevap verebilir.
+İlk veri seti küçük olabilir.
+İlk loss değeri yanıltıcı olabilir.
+Ama bunların her biri araştırma sürecinin parçasıdır.
+Önemli olan sistemi anlamak, deneyleri kaydetmek ve her sürümde daha iyi hale getirmektir.
+</s>
+
+<s>
+Kullanıcı: Bir dil modeli nasıl öğrenir?
+Asistan: Bir dil modeli, verilen token dizisinin devamını tahmin etmeye çalışarak öğrenir. Her tahmininden sonra hata değeri hesaplanır ve model ağırlıkları güncellenir.
+
+Kullanıcı: Tokenizer neden önemli?
+Asistan: Tokenizer, metni modelin anlayabileceği parçalara dönüştürür. Tokenizer kötü tasarlanırsa model metni verimli öğrenemez.
+
+Kullanıcı: DarkMind hazır bir model mi?
+Asistan: Hayır. DarkMind projesinde amaç küçük de olsa tokenizer, Transformer mimarisi ve eğitim döngüsünü sıfırdan kurmaktır.
+
+Kullanıcı: Modelin loss değeri çok düşük çıktı. Bu iyi mi?
+Asistan: Tek başına yeterli değildir. Veri seti çok küçükse model veriyi ezberlemiş olabilir. Bu yüzden train loss ve validation loss birlikte değerlendirilmelidir.
+
+Kullanıcı: CUDA neden önemli?
+Asistan: CUDA, model eğitimini NVIDIA ekran kartı üzerinde çalıştırmayı sağlar. Bu sayede CPU'da dakikalar süren eğitim GPU'da saniyelere düşebilir.
+
+Kullanıcı: Checkpoint nedir?
+Asistan: Checkpoint, modelin eğitim sonrası kaydedilen ağırlıkları ve konfigürasyon bilgilerini içerir. Daha sonra bu checkpoint yüklenerek modelden metin üretilebilir.
+
+Kullanıcı: Neden küçük modelle başlıyoruz?
+Asistan: Küçük modeller daha hızlı eğitilir ve hata ayıklaması daha kolaydır. Büyük modellerin mantığını anlamak için önce küçük modellerle çalışmak daha sağlıklıdır.
+
+Kullanıcı: Darklove ile DarkMind aynı şey mi?
+Asistan: Hayır. Darklove daha çok ürün ve duygusal yapay zeka tarafını temsil eder. DarkMind ise model geliştirme ve araştırma tarafıdır.
+
+Kullanıcı: Model şu an neden yaratıcı cevap vermiyor?
+Asistan: Çünkü veri seti hâlâ küçük. Model şu an daha çok gördüğü metinleri devam ettirmeyi öğreniyor. Daha iyi üretim için daha fazla ve daha çeşitli veriye ihtiyaç var.
+
+Kullanıcı: Veri setini nasıl büyütmeliyim?
+Asistan: Kaynak dosyalarını konulara ayırarak büyütmelisin. Teknik notlar, soru-cevaplar, güvenlik ilkeleri, proje günlüğü ve kısa diyaloglar ayrı dosyalarda tutulabilir.
+
+Kullanıcı: Transformer nedir?
+Asistan: Transformer, attention mekanizmasını kullanan bir derin öğrenme mimarisidir. Modern dil modellerinin çoğu bu mimariye dayanır.
+
+Kullanıcı: Attention ne işe yarar?
+Asistan: Attention, modelin bir tokenı işlerken diğer tokenlarla ilişkisini hesaplamasını sağlar. Böylece model bağlamı daha iyi anlayabilir.
+
+Kullanıcı: Causal mask nedir?
+Asistan: Causal mask, modelin gelecekteki tokenları görmesini engeller. Decoder-only modeller bu sayede yalnızca geçmiş tokenlara bakarak tahmin yapar.
+
+Kullanıcı: Model eğitimi neden tekrar tekrar yapılır?
+Asistan: Çünkü veri, tokenizer veya config değiştiğinde modelin yeniden öğrenmesi gerekir. Her deney modelin davranışını daha iyi anlamayı sağlar.
+
+Kullanıcı: GitHub'a checkpoint yüklemeli miyim?
+Asistan: Küçük testlerde gerekebilir ama genellikle checkpoint dosyaları büyük olduğu için GitHub'a yüklenmez. Kod, config ve dokümantasyon paylaşılır.
+
+Kullanıcı: Bir hata alınca ne yapmalıyım?
+Asistan: Önce hata mesajının son satırını oku. Sonra hangi dosyada ve hangi satırda hata verdiğine bak. Ardından doğru klasörde ve doğru sanal ortamda olup olmadığını kontrol et.
+
+Kullanıcı: Modelin gerçekten öğrendiğini nasıl anlarım?
+Asistan: Sadece eğitim verisini tekrar etmiyorsa, benzer ama yeni cümleler kurabiliyorsa ve farklı promptlara tutarlı cevaplar verebiliyorsa genelleme yapmaya başlamış demektir.
+
+Kullanıcı: DarkMind'in kısa vadeli hedefi nedir?
+Asistan: Kısa vadeli hedef, temiz ve ölçülebilir bir Türkçe corpus oluşturmak, tokenizer'ı geliştirmek ve 30M civarında bir modeli düzenli deneylerle eğitmektir.
+
+Kullanıcı: Bu proje neden değerli?
+Asistan: Çünkü hazır modelleri sadece kullanmak yerine, bir dil modelinin iç yapısını anlamayı sağlar. Bu süreç gerçek yapay zeka araştırma disiplinine giriş niteliğindedir.
+
+Kullanıcı: Başarısız sonuçlar çöpe mi gider?
+Asistan: Hayır. Başarısız sonuçlar da deney verisidir. Hangi configin, hangi veriyle, hangi sonucu verdiğini bilmek ileride daha iyi karar vermeyi sağlar.
+
+Kullanıcı: CUDA neden önemli?
+Asistan: CUDA, NVIDIA ekran kartı üzerinde hızlandırılmış hesaplama yapmayı sağlar. Derin öğrenme eğitimlerinde GPU kullanmak, CPU'ya göre çok daha hızlı sonuç verir.
+
+Kullanıcı: CUDA ne işe yarar?
+Asistan: CUDA, model eğitiminde büyük matris işlemlerini ekran kartı üzerinde çalıştırmayı sağlar. Bu sayede PyTorch gibi kütüphaneler GPU gücünü kullanabilir.
+
+Kullanıcı: CUDA ile tokenizer aynı şey mi?
+Asistan: Hayır. CUDA hesaplama hızlandırma teknolojisidir. Tokenizer ise metni modelin anlayabileceği token parçalarına dönüştürür.
+
+Kullanıcı: Tokenizer ne işe yarar?
+Asistan: Tokenizer, metni modelin işleyebileceği küçük parçalara ayırır. Dil modeli kelimeleri doğrudan değil, token ID değerlerini öğrenir.
+
+Kullanıcı: Tokenizer neden önemli?
+Asistan: Tokenizer kötü olursa model metni verimli öğrenemez. İyi bir tokenizer, Türkçe karakterleri ve sık kullanılan kelime parçalarını daha dengeli işler.
+
+Kullanıcı: PyTorch CUDA görmüyorsa ne yapmalıyım?
+Asistan: Önce sanal ortamın aktif olduğundan emin olmalısın. Sonra torch.cuda.is_available() sonucunu kontrol etmelisin. Eğer False dönüyorsa CUDA destekli PyTorch sürümü kurulu olmayabilir.
+
+Kullanıcı: torch.cuda.is_available() ne anlama gelir?
+Asistan: Bu komut PyTorch'un NVIDIA GPU ve CUDA desteğini görüp görmediğini kontrol eder. True dönerse model eğitimi GPU üzerinde çalışabilir.
+
+Kullanıcı: CPU ile GPU eğitimi arasındaki fark nedir?
+Asistan: CPU genel amaçlı işlemcidir. GPU ise paralel hesaplamalarda çok daha hızlıdır. Derin öğrenme eğitiminde GPU kullanmak eğitim süresini ciddi şekilde azaltabilir.
+
+Kullanıcı: Checkpoint nedir?
+Asistan: Checkpoint, eğitilmiş modelin ağırlıklarını ve config bilgilerini saklayan dosyadır. Daha sonra bu dosya yüklenerek modelden tekrar metin üretilebilir.
+
+Kullanıcı: Checkpoint GitHub'a yüklenmeli mi?
+Asistan: Genellikle hayır. Checkpoint dosyaları büyük olabilir ve GitHub reposunu şişirebilir. Kod, config, tokenizer ve dokümantasyon GitHub'a gönderilir; checkpoint çoğu zaman yerelde kalır.
+
+Kullanıcı: Tokenizer değişirse checkpoint çalışır mı?
+Asistan: Her zaman çalışmayabilir. Tokenizer vocabulary değişirse modelin embedding boyutu da değişebilir. Bu durumda eski checkpoint yeni tokenizer ile uyumsuz olabilir.
+
+Kullanıcı: Modelin loss değeri çok düştü. Bu model çok iyi oldu mu?
+Asistan: Tek başına hayır. Loss düşük olabilir çünkü veri seti küçüktür ve model veriyi ezberlemiştir. Gerçek kalite için farklı promptlarla generation çıktıları test edilmelidir.
+
+Kullanıcı: Overfitting nedir?
+Asistan: Overfitting, modelin veriyi anlamaktan çok ezberlemesi durumudur. Bu durumda eğitim verisinde iyi sonuç verir ama yeni sorularda zayıf kalabilir.
+
+Kullanıcı: DarkMind bazen neden yanlış cevap veriyor?
+Asistan: Çünkü corpus hâlâ küçüktür ve bazı kavramlar birbirine yakın geçmektedir. Model daha fazla temiz ve hedefli veriyle eğitildikçe karışıklık azalabilir.
+
+Kullanıcı: Dialogue mode ne işe yarar?
+Asistan: Dialogue mode, kullanıcı sorusunu otomatik olarak Kullanıcı ve Asistan formatına dönüştürür. Böylece model soru-cevap verisine daha uygun şekilde cevap üretir.
+
+Kullanıcı: stop_at_next_user ne işe yarar?
+Asistan: stop_at_next_user, model bir cevaptan sonra yeni bir Kullanıcı bloğuna geçerse üretimi keser. Bu sayede tek soruya tek cevap alınır.
+
+Kullanıcı: Temperature nedir?
+Asistan: Temperature, generation sırasında rastgelelik seviyesini kontrol eder. Düşük temperature daha kontrollü cevap verir; yüksek temperature daha çeşitli ama daha riskli cevaplar üretebilir.
+
+Kullanıcı: Top-k sampling nedir?
+Asistan: Top-k sampling, modelin sadece en olası belirli sayıdaki token arasından seçim yapmasını sağlar. Bu yöntem tamamen rastgele ve dağınık üretimi azaltabilir.
+
+Kullanıcı: DarkMind'in şu anki hedefi nedir?
+Asistan: DarkMind'in şu anki hedefi, küçük ama anlaşılır bir Türkçe dil modeli geliştirme sürecini adım adım öğrenmek ve ölçülebilir deneylerle ilerlemektir.
+
+Kullanıcı: Küçük model geliştirmek neden değerli?
+Asistan: Küçük model geliştirmek, tokenizer, Transformer mimarisi, eğitim döngüsü, loss takibi ve generation davranışını daha anlaşılır şekilde öğrenmeyi sağlar.
+
+Kullanıcı: CUDA ile tokenizer aynı şey mi?
+Asistan: Hayır. CUDA ve tokenizer tamamen farklı şeylerdir. CUDA, NVIDIA GPU üzerinde hızlı hesaplama yapmayı sağlar. Tokenizer ise metni modelin anlayabileceği token ID değerlerine dönüştürür.
+
+Kullanıcı: CUDA tokenizer mıdır?
+Asistan: Hayır. CUDA bir metin işleme aracı değildir. CUDA, GPU hızlandırması sağlar. Tokenizer ise metni parçalara ayırır.
+
+Kullanıcı: Tokenizer CUDA mıdır?
+Asistan: Hayır. Tokenizer, metni tokenlara bölen yazılımsal bir bileşendir. CUDA ise NVIDIA ekran kartı üzerinde hesaplama yapmayı sağlayan teknolojidir.
+
+Kullanıcı: CUDA ile tokenizer arasındaki fark nedir?
+Asistan: CUDA eğitim ve hesaplama hızını artırır. Tokenizer ise metni modelin öğrenebileceği sayısal token dizilerine çevirir. Biri hesaplama, diğeri metin hazırlama aşamasıdır.
+
+Kullanıcı: Overfitting nedir?
+Asistan: Overfitting, modelin veriyi anlamak yerine ezberlemesi durumudur. Böyle bir model eğitim verisinde iyi görünür ama yeni sorularda zayıf cevap verebilir.
+
+Kullanıcı: Overfitting causal mask midir?
+Asistan: Hayır. Overfitting modelin veriyi ezberlemesidir. Causal mask ise decoder-only modellerde gelecekteki tokenları görmeyi engelleyen attention maskesidir.
+
+Kullanıcı: Causal mask ile overfitting aynı şey mi?
+Asistan: Hayır. Causal mask model mimarisindeki bir attention kuralıdır. Overfitting ise eğitim sürecinde modelin veriye fazla uyum sağlamasıdır.
+
+Kullanıcı: Modelin ezber yapmasına ne denir?
+Asistan: Modelin eğitim verisini anlamaktan çok ezberlemesine overfitting denir. Bu durumda model düşük loss alabilir ama yeni promptlarda karışık cevaplar verebilir.
+
+Kullanıcı: Loss çok düşükse model kesin iyi midir?
+Asistan: Hayır. Loss çok düşük olabilir ama model küçük veri setini ezberlemiş olabilir. Bu yüzden farklı promptlarla test yapmak gerekir.
+
+Kullanıcı: DarkMind neden bazı sorularda yanlış konuya kayıyor?
+Asistan: Çünkü corpus hâlâ küçüktür ve bazı teknik kavramlar yakın formatlarda geçmektedir. Daha fazla hedefli soru-cevap verisi eklemek bu karışıklığı azaltabilir.
+</s>
+
+<s>
+Model eğitimi, veriden örüntü öğrenme sürecidir.
+Bir dil modeli eğitilirken amaç, bir token dizisinden sonraki tokenı tahmin etmektir.
+Model başlangıçta rastgele ağırlıklara sahiptir.
+Bu yüzden ilk tahminleri genellikle kötüdür.
+Eğitim ilerledikçe model ağırlıkları güncellenir.
+
+Training loop, model eğitiminin tekrar eden ana döngüsüdür.
+Bu döngüde önce bir batch veri alınır.
+Sonra model bu veriden tahmin üretir.
+Tahminler ile gerçek hedefler karşılaştırılır.
+Bu karşılaştırmadan loss değeri hesaplanır.
+Loss değerine göre geri yayılım yapılır ve optimizer ağırlıkları günceller.
+
+Overfitting, modelin eğitim verisini ezberleyip yeni veriye genelleme yapamaması durumudur.
+Küçük veri setlerinde overfitting çok hızlı gerçekleşebilir.
+Train loss çok düşerken validation loss yükseliyorsa model ezberlemeye başlamış olabilir.
+Bu yüzden train loss ve validation loss birlikte izlenmelidir.
+DarkMind'in ilk deneylerinde veri küçük olduğu için düşük loss değerleri dikkatli yorumlanmalıdır.
+
+Batch size, aynı anda modele verilen örnek sayısını ifade eder.
+Batch size büyüdükçe eğitim daha stabil olabilir fakat daha fazla GPU belleği gerekir.
+Block size, modelin aynı anda görebildiği token uzunluğunu belirler.
+Block size büyüdükçe model daha uzun bağlamı öğrenebilir fakat bellek ihtiyacı artar.
+Learning rate, modelin ağırlıklarının ne kadar hızlı güncelleneceğini belirler.
+
+AdamW optimizer, Transformer modellerinde yaygın kullanılan bir optimizer türüdür.
+AdamW, ağırlık güncellemelerinde momentum benzeri istatistikler kullanır.
+Weight decay, modelin aşırı büyük ağırlıklar öğrenmesini engellemeye yardımcı olur.
+Gradient clipping, gradient değerleri çok büyüdüğünde eğitimi stabil tutmak için kullanılabilir.
+
+CUDA kullanımı eğitim süresini ciddi şekilde azaltır.
+CPU üzerinde dakikalar süren bir eğitim, GPU üzerinde saniyelere düşebilir.
+Ancak GPU kullanmak için doğru PyTorch CUDA sürümünün kurulmuş olması gerekir.
+Eğitim başlamadan önce torch.cuda.is_available sonucu kontrol edilmelidir.
+DarkMind projesinde RTX 4060 Laptop GPU ile CUDA eğitimi başarıyla çalıştırılmıştır.
+
+Bir modelin eğitilmesi yalnızca kod yazmak değildir.
+Deneyleri kaydetmek, config dosyalarını düzenlemek, veri sürümlerini takip etmek ve sonuçları yorumlamak da sürecin parçasıdır.
+Profesyonel bir araştırma projesinde her deneyin amacı, sistemi, konfigürasyonu ve sonucu belgelenmelidir.
+DarkMind projesinde experiment dosyaları bu yüzden tutulmaktadır.
+</s>
+
+<s>
+Python, okunabilir sözdizimi nedeniyle yapay zeka ve veri bilimi alanlarında sık kullanılan bir programlama dilidir.
+Python'da değişkenler dinamik olarak tip alır.
+Liste, sözlük, demet ve küme Python'ın temel veri yapıları arasındadır.
+Fonksiyonlar, tekrar eden işlemleri düzenli şekilde yazmak için kullanılır.
+Sınıflar, nesne yönelimli programlama yaklaşımının temelidir.
+
+PyTorch, derin öğrenme modelleri geliştirmek için kullanılan popüler bir kütüphanedir.
+PyTorch'ta tensor yapısı, model eğitiminin temel veri yapısıdır.
+Tensorlar CPU veya GPU üzerinde çalıştırılabilir.
+CUDA aktif olduğunda, tensor işlemleri NVIDIA ekran kartı üzerinde hızlanır.
+Model eğitimi sırasında veriler tensora dönüştürülür, modelden geçirilir, loss hesaplanır ve geri yayılım yapılır.
+
+Bir eğitim döngüsünde genellikle şu adımlar bulunur.
+Önce batch verisi alınır.
+Model bu batch üzerinden tahmin üretir.
+Tahmin ile gerçek hedef arasında loss hesaplanır.
+Optimizer, model ağırlıklarını günceller.
+Bu işlem birçok adım boyunca tekrar eder.
+
+AdamW, Transformer modellerinde sık kullanılan bir optimizer türüdür.
+Learning rate, modelin her adımda ne kadar güncelleneceğini belirler.
+Learning rate çok yüksek olursa model kararsız öğrenebilir.
+Learning rate çok düşük olursa eğitim çok yavaş ilerler.
+Batch size, aynı anda modele verilen örnek sayısını belirler.
+
+Python projelerinde klasör yapısı önemlidir.
+Kod, veri, config dosyaları ve dokümantasyon ayrı tutulmalıdır.
+Config dosyaları, model ayarlarını koddan ayırmak için kullanılır.
+Bu sayede farklı model boyutları aynı eğitim scripti ile çalıştırılabilir.
+DarkMind projesinde tiny, 5M ve 30M modelleri config dosyaları ile yönetilmektedir.
+</s>
+
+<s>
+Soru: Bir dil modeli nasıl öğrenir?
+Cevap: Bir dil modeli, verilen token dizisinin devamını tahmin etmeye çalışarak öğrenir. Eğitim sırasında modelin tahmini ile doğru token karşılaştırılır ve loss hesaplanır.
+
+Soru: Tokenizer ne işe yarar?
+Cevap: Tokenizer, metni modelin işleyebileceği sayısal tokenlara dönüştürür. Kelimeleri, alt kelimeleri veya byte seviyesindeki parçaları temsil edebilir.
+
+Soru: Transformer nedir?
+Cevap: Transformer, attention mekanizması kullanan bir derin öğrenme mimarisidir. Dil modellerinde kelimeler arasındaki ilişkileri öğrenmek için yaygın şekilde kullanılır.
+
+Soru: Decoder-only model ne demektir?
+Cevap: Decoder-only model, genellikle metin üretimi için kullanılan Transformer türüdür. Geçmiş tokenlara bakarak bir sonraki tokenı tahmin eder.
+
+Soru: Loss değeri neden önemlidir?
+Cevap: Loss, modelin yaptığı hatayı gösterir. Eğitim sırasında loss değerinin düşmesi modelin eğitim verisini daha iyi tahmin ettiğini gösterir.
+
+Soru: Düşük loss her zaman iyi midir?
+Cevap: Hayır. Veri seti çok küçükse model veriyi ezberleyebilir. Bu durumda loss düşük görünür ama model gerçek anlamda genelleme yapamayabilir.
+
+Soru: CUDA ne işe yarar?
+Cevap: CUDA, NVIDIA ekran kartları üzerinde hesaplama yapmayı sağlar. Derin öğrenme eğitimlerinde GPU kullanmak eğitimi ciddi şekilde hızlandırır.
+
+Soru: DarkMind projesinin amacı nedir?
+Cevap: DarkMind projesinin amacı, Türkçe odaklı küçük bir dil modelini sıfırdan geliştirmek ve dil modeli eğitim sürecini adım adım öğrenmektir.
+
+Soru: Darklove ile DarkMind arasındaki ilişki nedir?
+Cevap: Darklove, duygusal yapay zeka fikrinin ürün tarafıdır. DarkMind ise bu fikrin araştırma ve model geliştirme tarafını temsil eder.
+
+Soru: Küçük bir model geliştirmek neden değerlidir?
+Cevap: Küçük modeller, büyük modellerin temel mantığını anlamak için değerlidir. Tokenizer, model mimarisi, training loop ve veri kalitesi küçük modeller üzerinde daha kolay incelenebilir.
+</s>
+
+<s>
+Transformer mimarisi, modern dil modellerinin temel yapı taşlarından biridir.
+Bu mimarinin en önemli fikri attention mekanizmasıdır.
+Attention, modelin bir tokenı işlerken bağlamdaki diğer tokenlara ne kadar dikkat edeceğini hesaplar.
+Bir cümledeki kelimeler birbirinden bağımsız değildir.
+Model, kelimeler arasındaki ilişkileri öğrenerek daha anlamlı temsil vektörleri oluşturur.
+
+Self-attention mekanizmasında her token, aynı dizideki diğer tokenlarla ilişki kurar.
+Bu işlem sırasında query, key ve value adı verilen üç farklı temsil kullanılır.
+Query, bir tokenın ne aradığını temsil eder.
+Key, diğer tokenların ne sunduğunu temsil eder.
+Value ise ilişki sonucunda taşınacak bilgiyi temsil eder.
+Model, query ve key benzerliğine göre attention skorları hesaplar.
+
+Decoder-only Transformer modellerinde causal mask kullanılır.
+Causal mask, modelin gelecekteki tokenları görmesini engeller.
+Böylece model sadece geçmiş tokenlara bakarak bir sonraki tokenı tahmin eder.
+Bu yapı metin üretimi için uygundur.
+GPT tarzı modeller decoder-only Transformer mimarisine dayanır.
+
+Bir Transformer bloğu genellikle iki ana parçadan oluşur.
+İlk parça attention katmanıdır.
+İkinci parça feed-forward katmanıdır.
+Bu iki parçanın etrafında residual connection ve layer normalization kullanılır.
+Residual connection, bilginin katmanlar boyunca daha rahat akmasını sağlar.
+Layer normalization ise eğitimi daha stabil hale getirir.
+
+Embedding katmanı token ID değerlerini vektörlere dönüştürür.
+Position embedding, tokenların sıradaki konum bilgisini modele verir.
+Çünkü Transformer mimarisi tek başına kelime sırasını doğal olarak bilmez.
+Token embedding ve position embedding toplanarak modele giriş olarak verilir.
+
+Modelin parametre sayısı embedding boyutu, katman sayısı, attention head sayısı ve vocabulary boyutuna bağlıdır.
+Embedding boyutu büyüdükçe model daha fazla temsil kapasitesi kazanır.
+Katman sayısı arttıkça model daha derin ilişkileri öğrenebilir.
+Ancak model büyüdükçe daha fazla veri, daha fazla bellek ve daha uzun eğitim süresi gerekir.
+
+Küçük bir Transformer modeli, büyük modeller kadar güçlü olmayabilir.
+Fakat küçük modeller eğitim mantığını anlamak için çok değerlidir.
+Bir geliştirici küçük model üzerinde tokenizer, attention, loss, optimizer ve generation sürecini doğrudan gözlemleyebilir.
+Bu yüzden DarkMind projesi küçük modelden başlayarak ilerlemektedir.
+</s>

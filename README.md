@@ -1,5 +1,14 @@
 # DarkMind-30M
 
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.11-ee4c2c?logo=pytorch&logoColor=white)
+![CUDA](https://img.shields.io/badge/CUDA-12.8-76b900?logo=nvidia&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Stars](https://img.shields.io/github/stars/petrofi/darkmind-30m?style=social)
+
+> 🇹🇷 Türkçe odaklı mini LLM projesi — Sıfırdan tokenizer, decoder-only Transformer ve eğitim pipeline'ı.
+
+
 ## Data Pipeline
 
 Clean raw collected text files:

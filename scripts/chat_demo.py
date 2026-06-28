@@ -1,5 +1,6 @@
 from pathlib import Path
 import argparse
+import re
 import sys
 
 import torch
@@ -14,6 +15,10 @@ from model.gpt import GPTConfig, GPTLanguageModel, count_parameters
 
 
 EXIT_COMMANDS = {"q", "quit", "exit", "çık"}
+
+
+def normalize_user_input(user_input: str) -> str:
+    return re.sub(r"[ \t]+", " ", user_input.strip())
 
 
 def resolve_path(path_value: str) -> Path:
@@ -101,8 +106,17 @@ def generate_answer(
     max_new_tokens: int,
     temperature: float,
     top_k: int,
+    debug_prompt: bool,
 ) -> str:
-    prompt = f"Kullanıcı: {question.strip()}\nAsistan:"
+    normalized_question = normalize_user_input(question)
+    prompt = f"Kullanıcı: {normalized_question}\nAsistan:"
+
+    if debug_prompt:
+        print("-" * 70)
+        print("DEBUG PROMPT:")
+        print(prompt)
+        print("-" * 70)
+
     encoded = tokenizer.encode(prompt)
 
     idx = torch.tensor(
@@ -158,6 +172,11 @@ def main():
         default=120,
         help="Maximum number of new tokens per answer.",
     )
+    parser.add_argument(
+        "--debug_prompt",
+        action="store_true",
+        help="Print the exact prompt sent to the model.",
+    )
     args = parser.parse_args()
 
     if args.temperature <= 0:
@@ -173,7 +192,7 @@ def main():
 
     while True:
         try:
-            user_input = input("Sen: ").strip()
+            user_input = normalize_user_input(input("Sen: "))
         except (EOFError, KeyboardInterrupt):
             print()
             break
@@ -192,6 +211,7 @@ def main():
             max_new_tokens=args.max_new_tokens,
             temperature=args.temperature,
             top_k=args.top_k,
+            debug_prompt=args.debug_prompt,
         )
 
         print(f"DarkMind: {answer}")

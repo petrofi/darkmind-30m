@@ -12,15 +12,10 @@ sys.path.append(str(ROOT_DIR))
 from model.gpt import GPTConfig, GPTLanguageModel, count_parameters
 
 
-def clean_output_text(output_text: str) -> str:
-    # Special token sonrası devamı kırp
+def clean_special_tokens(output_text: str) -> str:
     for stop_token in ["</s>", "<s>", "<pad>", "<unk>", "<mask>"]:
         if stop_token in output_text:
             output_text = output_text.split(stop_token)[0].strip()
-
-    # Basit Türkçe diyalog format düzeltmeleri
-    output_text = re.sub(r"(Asistan:)(\S)", r"\1 \2", output_text)
-    output_text = re.sub(r"(Kullanıcı:)(\S)", r"\1 \2", output_text)
 
     return output_text.strip()
 
@@ -46,8 +41,17 @@ def stop_after_first_answer(output_text: str, prompt_text: str) -> str:
     return (prompt_text + generated_part).strip()
 
 
+def fix_dialogue_spacing(output_text: str) -> str:
+    output_text = re.sub(r"(Asistan:)(\S)", r"\1 \2", output_text)
+    output_text = re.sub(r"(Kullanıcı:)(\S)", r"\1 \2", output_text)
+
+    return output_text.strip()
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Generate text from a DarkMind checkpoint.")
+    parser = argparse.ArgumentParser(
+        description="Generate text from a DarkMind checkpoint."
+    )
 
     parser.add_argument(
         "--checkpoint",
@@ -99,8 +103,11 @@ def main():
 
     args = parser.parse_args()
 
+    # Dialogue mode:
+    # Model bu formatı öğrendiği için Asistan: sonrasında boşluk bırakmıyoruz.
+    # Boşluk düzeltmesini generation bittikten sonra yapıyoruz.
     if args.dialogue is not None:
-        args.prompt = f"Kullanıcı: {args.dialogue}\nAsistan: "
+        args.prompt = f"Kullanıcı: {args.dialogue}\nAsistan:"
         args.stop_at_next_user = True
 
     checkpoint_path = ROOT_DIR / args.checkpoint
@@ -163,11 +170,15 @@ def main():
     output_ids = generated[0].tolist()
     output_text = tokenizer.decode(output_ids)
 
-    output_text = clean_output_text(output_text)
+    # 1. Özel token sonrası kırp
+    output_text = clean_special_tokens(output_text)
 
+    # 2. Dialogue modunda ilk cevaptan sonra dur
     if args.stop_at_next_user:
         output_text = stop_after_first_answer(output_text, args.prompt)
-        output_text = clean_output_text(output_text)
+
+    # 3. En son ekrana basmadan format düzelt
+    output_text = fix_dialogue_spacing(output_text)
 
     print("=" * 70)
     print("PROMPT:")

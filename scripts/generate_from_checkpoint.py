@@ -53,8 +53,17 @@ def main():
     action="store_true",
     help="If enabled, stop generation when the next Kullanıcı: block starts.",
     ) 
+    parser.add_argument(
+    "--dialogue",
+    type=str,
+    default=None,
+    help="Dialogue mode. Example: --dialogue 'DarkMind hazır bir model mi?'",
+    )
 
     args = parser.parse_args()
+    if args.dialogue is not None:
+        args.prompt = f"Kullanıcı: {args.dialogue}\nAsistan:"
+        args.stop_at_next_user = True
 
     checkpoint_path = ROOT_DIR / args.checkpoint
 

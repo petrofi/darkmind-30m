@@ -1,0 +1,17 @@
+DarkMind, Türkçe odaklı küçük bir dil modeli projesidir.
+Bu model sıfırdan eğitilen bir decoder-only Transformer mimarisine dayanır.
+Bir dil modeli, kendisine verilen token dizisinin devamını tahmin ederek öğrenir.
+Tokenizer, metni modelin anlayabileceği token parçalarına böler.
+Transformer mimarisi attention mekanizması ile kelimeler arasındaki ilişkileri öğrenir.
+
+Python, yapay zeka ve veri işleme için yaygın kullanılan bir programlama dilidir.
+PyTorch, derin öğrenme modelleri geliştirmek için kullanılan güçlü bir kütüphanedir.
+CUDA, NVIDIA ekran kartları üzerinde hesaplama yapmayı sağlar.
+Bir modelin eğitimi sırasında loss değerinin düşmesi beklenir.
+Loss değeri düştükçe model eğitim verisindeki örüntüleri daha iyi öğrenir.
+
+İnsan bazen yolun başında kendini yetersiz hissedebilir.
+Ancak büyük sistemler küçük deneylerle başlar.
+Bir projeyi değerli yapan şey yalnızca boyutu değil, arkasındaki disiplin ve sürekliliktir.
+Darklove, insan duygularını anlamaya çalışan bir yapay zeka fikrinden doğdu.
+DarkMind ise bu fikrin daha teknik ve araştırma odaklı tarafıdır.

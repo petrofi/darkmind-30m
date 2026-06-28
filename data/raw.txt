@@ -1,0 +1,10 @@
+Ben küçük ama sıfırdan eğitilmiş bir Türkçe dil modeli geliştiriyorum.
+Bu modelin adı DarkMind olacak.
+DarkMind, Türkçe metinleri anlamayı ve üretmeyi öğrenen küçük bir yapay zeka modelidir.
+Bir dil modeli, verilen metnin devamını tahmin ederek öğrenir.
+Model önce harfleri, kelimeleri, cümleleri ve anlam ilişkilerini öğrenir.
+Ben bu projede kendi tokenizerımı, kendi transformer modelimi ve kendi eğitim döngümü yazacağım.
+Başarı bir anda gelmez. Küçük modeller büyük hedeflerin ilk adımıdır.
+Darklove projesi insanların duygularını anlayan bir yapay zeka fikrinden doğdu.
+Bu yüzden DarkMind modeli de Türkçe, duygu, motivasyon ve kişisel gelişim alanlarında gelişecektir.
+Bugün küçük başlıyorum ama hedefim kendi yapay zeka araştırma yolumu oluşturmak.

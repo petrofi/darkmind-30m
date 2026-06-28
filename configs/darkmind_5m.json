@@ -1,0 +1,23 @@
+{
+  "run_name": "darkmind_5m",
+  "data_path": "data/corpus_v1.txt",
+  "tokenizer_dir": "tokenizer/darkmind-tokenizer",
+  "checkpoint_path": "checkpoints/darkmind_5m.pt",
+  "seed": 42,
+  "model": {
+    "block_size": 128,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 256,
+    "dropout": 0.1
+  },
+  "training": {
+    "batch_size": 32,
+    "max_steps": 1000,
+    "eval_interval": 100,
+    "eval_iters": 10,
+    "learning_rate": 0.0003,
+    "train_ratio": 0.9,
+    "min_tokens": 100000
+  }
+}

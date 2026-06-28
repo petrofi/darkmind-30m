@@ -48,6 +48,11 @@ def main():
         default=50,
         help="Top-k sampling value.",
     )
+    parser.add_argument(
+    "--stop_at_next_user",
+    action="store_true",
+    help="If enabled, stop generation when the next Kullanıcı: block starts.",
+    ) 
 
     args = parser.parse_args()
 
@@ -115,6 +120,22 @@ def main():
     for stop_token in ["</s>", "<s>", "<pad>", "<unk>", "<mask>"]:
         if stop_token in output_text:
             output_text = output_text.split(stop_token)[0].strip()
+    
+        # Dialogue mode: cevap verdikten sonra yeni kullanıcı mesajına geçerse kırp
+    if args.stop_at_next_user:
+        prompt_text = args.prompt
+
+        if output_text.startswith(prompt_text):
+            generated_part = output_text[len(prompt_text):]
+        else:
+            generated_part = output_text
+
+        stop_marker = "\n\nKullanıcı:"
+        if stop_marker in generated_part:
+            generated_part = generated_part.split(stop_marker)[0].strip()
+
+    output_text = prompt_text + generated_part
+    output_text = output_text.strip()
 
     print("=" * 70)
     print("PROMPT:")

@@ -2,6 +2,7 @@ from pathlib import Path
 import argparse
 import sys
 import re
+
 import torch
 from tokenizers import ByteLevelBPETokenizer
 
@@ -9,6 +10,40 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.append(str(ROOT_DIR))
 
 from model.gpt import GPTConfig, GPTLanguageModel, count_parameters
+
+
+def clean_output_text(output_text: str) -> str:
+    # Special token sonrası devamı kırp
+    for stop_token in ["</s>", "<s>", "<pad>", "<unk>", "<mask>"]:
+        if stop_token in output_text:
+            output_text = output_text.split(stop_token)[0].strip()
+
+    # Basit Türkçe diyalog format düzeltmeleri
+    output_text = re.sub(r"(Asistan:)(\S)", r"\1 \2", output_text)
+    output_text = re.sub(r"(Kullanıcı:)(\S)", r"\1 \2", output_text)
+
+    return output_text.strip()
+
+
+def stop_after_first_answer(output_text: str, prompt_text: str) -> str:
+    if output_text.startswith(prompt_text):
+        generated_part = output_text[len(prompt_text):]
+    else:
+        generated_part = output_text
+
+    stop_markers = [
+        "\n\nKullanıcı:",
+        "\nKullanıcı:",
+        "\n\nSoru:",
+        "\nSoru:",
+    ]
+
+    for marker in stop_markers:
+        if marker in generated_part:
+            generated_part = generated_part.split(marker)[0].strip()
+            break
+
+    return (prompt_text + generated_part).strip()
 
 
 def main():
@@ -26,6 +61,13 @@ def main():
         type=str,
         default="DarkMind",
         help="Prompt text.",
+    )
+
+    parser.add_argument(
+        "--dialogue",
+        type=str,
+        default=None,
+        help="Dialogue mode. Example: --dialogue 'DarkMind hazır bir model mi?'",
     )
 
     parser.add_argument(
@@ -48,21 +90,17 @@ def main():
         default=50,
         help="Top-k sampling value.",
     )
+
     parser.add_argument(
-    "--stop_at_next_user",
-    action="store_true",
-    help="If enabled, stop generation when the next Kullanıcı: block starts.",
-    ) 
-    parser.add_argument(
-    "--dialogue",
-    type=str,
-    default=None,
-    help="Dialogue mode. Example: --dialogue 'DarkMind hazır bir model mi?'",
+        "--stop_at_next_user",
+        action="store_true",
+        help="If enabled, stop generation when the next Kullanıcı: block starts.",
     )
 
     args = parser.parse_args()
+
     if args.dialogue is not None:
-        args.prompt = f"Kullanıcı: {args.dialogue}\nAsistan:"
+        args.prompt = f"Kullanıcı: {args.dialogue}\nAsistan: "
         args.stop_at_next_user = True
 
     checkpoint_path = ROOT_DIR / args.checkpoint
@@ -124,30 +162,12 @@ def main():
 
     output_ids = generated[0].tolist()
     output_text = tokenizer.decode(output_ids)
-    # Basit Türkçe diyalog format düzeltmeleri
-    output_text = re.sub(r"(Asistan:)(\S)", r"\1 \2", output_text)
-    output_text = re.sub(r"(Kullanıcı:)(\S)", r"\1 \2", output_text)
-        
-    # Special token sonrası devamı kırp
-    for stop_token in ["</s>", "<s>", "<pad>", "<unk>", "<mask>"]:
-        if stop_token in output_text:
-            output_text = output_text.split(stop_token)[0].strip()
-    
-        # Dialogue mode: cevap verdikten sonra yeni kullanıcı mesajına geçerse kırp
+
+    output_text = clean_output_text(output_text)
+
     if args.stop_at_next_user:
-        prompt_text = args.prompt
-
-        if output_text.startswith(prompt_text):
-            generated_part = output_text[len(prompt_text):]
-        else:
-            generated_part = output_text
-
-        stop_marker = "\n\nKullanıcı:"
-        if stop_marker in generated_part:
-            generated_part = generated_part.split(stop_marker)[0].strip()
-
-    output_text = prompt_text + generated_part
-    output_text = output_text.strip()
+        output_text = stop_after_first_answer(output_text, args.prompt)
+        output_text = clean_output_text(output_text)
 
     print("=" * 70)
     print("PROMPT:")

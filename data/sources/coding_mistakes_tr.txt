@@ -1,0 +1,59 @@
+Kod yazarken hata almak öğrenme sürecinin doğal bir parçasıdır.
+Bir hata mesajı, çoğu zaman sistemin sana neyin yanlış olduğunu anlatma biçimidir.
+Yeni başlayan biri için hata mesajları korkutucu görünebilir.
+Ama deneyim kazandıkça hata mesajları yol gösterici hale gelir.
+Bir geliştirici için önemli olan şey hata almamak değil, hatayı okuyabilmektir.
+
+Python projelerinde en sık yapılan hatalardan biri yanlış dosya yolunda çalışmaktır.
+Terminal başka bir klasördeyken komut çalıştırıldığında dosya bulunamayabilir.
+Bu yüzden hata aldığında önce bulunduğun klasörü kontrol etmek gerekir.
+PowerShell üzerinde bulunduğun konum satırın başında görünür.
+Proje kökünde mi, scripts klasöründe mi, configs klasöründe mi olduğunu bilmek önemlidir.
+
+Bir diğer yaygın hata sanal ortamı aktif etmeden çalışmaktır.
+Python projesinde kullanılan paketler çoğu zaman .venv içinde kurulur.
+Eğer sanal ortam aktif değilse sistem farklı bir Python sürümünü kullanabilir.
+Bu durumda PyTorch CUDA yerine CPU sürümüyle çalışabilir.
+DarkMind projesinde bu yüzden her yeni terminalde .venv aktif edilmelidir.
+
+Git kullanırken yapılan hatalardan biri repository başlatmadan commit atmaya çalışmaktır.
+Bir klasör Git reposu değilse git branch, git remote veya git push komutları çalışmaz.
+Önce git init komutu ile repo başlatılmalıdır.
+Sonra git status ile dosyaların durumu kontrol edilmelidir.
+Git, projedeki değişiklikleri takip etmek için güçlü bir araçtır.
+
+GitHub'a gereksiz dosya göndermemek de önemlidir.
+.venv klasörü, checkpoint dosyaları ve büyük model dosyaları GitHub'a gönderilmemelidir.
+Bu yüzden .gitignore dosyası kullanılmalıdır.
+Checkpoints klasörü genellikle yerelde kalır.
+Kod, config, küçük veri kaynakları ve dokümantasyon GitHub'a gönderilir.
+
+Model eğitimi sırasında yapılan hatalardan biri veri setinin çok küçük olduğunu unutup sonucu fazla büyütmektir.
+Loss düşük çıkabilir ama model sadece veriyi ezberlemiş olabilir.
+Bu durumda model güçlü bir dil modeli olmuş sayılmaz.
+Gerçek gelişim için veri seti büyütülmeli, çeşitlendirilmeli ve deneyler dikkatli yorumlanmalıdır.
+DarkMind projesinde düşük loss değerleri bu yüzden dikkatli değerlendirilmektedir.
+
+Bir başka hata tokenizer değiştikten sonra eski checkpoint'i kullanmaya çalışmaktır.
+Tokenizer vocabulary değiştiğinde modelin embedding boyutu da değişebilir.
+Bu durumda eski checkpoint yeni tokenizer ile uyumlu olmayabilir.
+Her büyük tokenizer değişiminden sonra modeli sıfırdan eğitmek daha doğru olur.
+Bu durum başarısızlık değil, dil modeli geliştirme sürecinin normal bir parçasıdır.
+
+Kodda path hataları da sık görülür.
+Bir script içinde relative path kullanılıyorsa scriptin nereden çalıştırıldığı önem kazanabilir.
+Bu yüzden projelerde ROOT_DIR gibi merkezi yol tanımları kullanmak daha güvenlidir.
+DarkMind scriptlerinde Path(__file__).resolve().parents[1] kullanılması bu yüzden faydalıdır.
+Bu yöntem script hangi klasörden çalıştırılırsa çalıştırılsın proje kökünü bulmaya yardımcı olur.
+
+Hata çözmenin iyi bir yöntemi, çıktıyı parça parça okumaktır.
+Önce hatanın en son satırına bakılır.
+Sonra hangi dosyada ve hangi satırda hata verdiği kontrol edilir.
+Ardından kullanılan komut, klasör yolu ve sanal ortam durumu incelenir.
+Bir hata anlaşılmadan rastgele çözüm denemek daha büyük karışıklığa yol açabilir.
+
+İyi bir geliştirici, hataları not alır.
+Bugün zor gelen bir hata, yarın benzer bir durumda hızlıca çözülebilir.
+Deney dosyaları, commit mesajları ve düzenli dokümantasyon bu yüzden değerlidir.
+DarkMind projesinde her aşamanın kayıt altına alınması sadece gösteriş için değil, öğrenme sürecini takip etmek içindir.
+Kod yazmak kadar, kodun neden çalıştığını anlamak da önemlidir.

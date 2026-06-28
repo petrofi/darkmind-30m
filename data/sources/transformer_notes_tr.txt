@@ -1,0 +1,40 @@
+Transformer mimarisi, modern dil modellerinin temel yapı taşlarından biridir.
+Bu mimarinin en önemli fikri attention mekanizmasıdır.
+Attention, modelin bir tokenı işlerken bağlamdaki diğer tokenlara ne kadar dikkat edeceğini hesaplar.
+Bir cümledeki kelimeler birbirinden bağımsız değildir.
+Model, kelimeler arasındaki ilişkileri öğrenerek daha anlamlı temsil vektörleri oluşturur.
+
+Self-attention mekanizmasında her token, aynı dizideki diğer tokenlarla ilişki kurar.
+Bu işlem sırasında query, key ve value adı verilen üç farklı temsil kullanılır.
+Query, bir tokenın ne aradığını temsil eder.
+Key, diğer tokenların ne sunduğunu temsil eder.
+Value ise ilişki sonucunda taşınacak bilgiyi temsil eder.
+Model, query ve key benzerliğine göre attention skorları hesaplar.
+
+Decoder-only Transformer modellerinde causal mask kullanılır.
+Causal mask, modelin gelecekteki tokenları görmesini engeller.
+Böylece model sadece geçmiş tokenlara bakarak bir sonraki tokenı tahmin eder.
+Bu yapı metin üretimi için uygundur.
+GPT tarzı modeller decoder-only Transformer mimarisine dayanır.
+
+Bir Transformer bloğu genellikle iki ana parçadan oluşur.
+İlk parça attention katmanıdır.
+İkinci parça feed-forward katmanıdır.
+Bu iki parçanın etrafında residual connection ve layer normalization kullanılır.
+Residual connection, bilginin katmanlar boyunca daha rahat akmasını sağlar.
+Layer normalization ise eğitimi daha stabil hale getirir.
+
+Embedding katmanı token ID değerlerini vektörlere dönüştürür.
+Position embedding, tokenların sıradaki konum bilgisini modele verir.
+Çünkü Transformer mimarisi tek başına kelime sırasını doğal olarak bilmez.
+Token embedding ve position embedding toplanarak modele giriş olarak verilir.
+
+Modelin parametre sayısı embedding boyutu, katman sayısı, attention head sayısı ve vocabulary boyutuna bağlıdır.
+Embedding boyutu büyüdükçe model daha fazla temsil kapasitesi kazanır.
+Katman sayısı arttıkça model daha derin ilişkileri öğrenebilir.
+Ancak model büyüdükçe daha fazla veri, daha fazla bellek ve daha uzun eğitim süresi gerekir.
+
+Küçük bir Transformer modeli, büyük modeller kadar güçlü olmayabilir.
+Fakat küçük modeller eğitim mantığını anlamak için çok değerlidir.
+Bir geliştirici küçük model üzerinde tokenizer, attention, loss, optimizer ve generation sürecini doğrudan gözlemleyebilir.
+Bu yüzden DarkMind projesi küçük modelden başlayarak ilerlemektedir.

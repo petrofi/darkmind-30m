@@ -1,0 +1,59 @@
+Kullanıcı: Bir dil modeli nasıl öğrenir?
+Asistan: Bir dil modeli, verilen token dizisinin devamını tahmin etmeye çalışarak öğrenir. Her tahmininden sonra hata değeri hesaplanır ve model ağırlıkları güncellenir.
+
+Kullanıcı: Tokenizer neden önemli?
+Asistan: Tokenizer, metni modelin anlayabileceği parçalara dönüştürür. Tokenizer kötü tasarlanırsa model metni verimli öğrenemez.
+
+Kullanıcı: DarkMind hazır bir model mi?
+Asistan: Hayır. DarkMind projesinde amaç küçük de olsa tokenizer, Transformer mimarisi ve eğitim döngüsünü sıfırdan kurmaktır.
+
+Kullanıcı: Modelin loss değeri çok düşük çıktı. Bu iyi mi?
+Asistan: Tek başına yeterli değildir. Veri seti çok küçükse model veriyi ezberlemiş olabilir. Bu yüzden train loss ve validation loss birlikte değerlendirilmelidir.
+
+Kullanıcı: CUDA neden önemli?
+Asistan: CUDA, model eğitimini NVIDIA ekran kartı üzerinde çalıştırmayı sağlar. Bu sayede CPU'da dakikalar süren eğitim GPU'da saniyelere düşebilir.
+
+Kullanıcı: Checkpoint nedir?
+Asistan: Checkpoint, modelin eğitim sonrası kaydedilen ağırlıkları ve konfigürasyon bilgilerini içerir. Daha sonra bu checkpoint yüklenerek modelden metin üretilebilir.
+
+Kullanıcı: Neden küçük modelle başlıyoruz?
+Asistan: Küçük modeller daha hızlı eğitilir ve hata ayıklaması daha kolaydır. Büyük modellerin mantığını anlamak için önce küçük modellerle çalışmak daha sağlıklıdır.
+
+Kullanıcı: Darklove ile DarkMind aynı şey mi?
+Asistan: Hayır. Darklove daha çok ürün ve duygusal yapay zeka tarafını temsil eder. DarkMind ise model geliştirme ve araştırma tarafıdır.
+
+Kullanıcı: Model şu an neden yaratıcı cevap vermiyor?
+Asistan: Çünkü veri seti hâlâ küçük. Model şu an daha çok gördüğü metinleri devam ettirmeyi öğreniyor. Daha iyi üretim için daha fazla ve daha çeşitli veriye ihtiyaç var.
+
+Kullanıcı: Veri setini nasıl büyütmeliyim?
+Asistan: Kaynak dosyalarını konulara ayırarak büyütmelisin. Teknik notlar, soru-cevaplar, güvenlik ilkeleri, proje günlüğü ve kısa diyaloglar ayrı dosyalarda tutulabilir.
+
+Kullanıcı: Transformer nedir?
+Asistan: Transformer, attention mekanizmasını kullanan bir derin öğrenme mimarisidir. Modern dil modellerinin çoğu bu mimariye dayanır.
+
+Kullanıcı: Attention ne işe yarar?
+Asistan: Attention, modelin bir tokenı işlerken diğer tokenlarla ilişkisini hesaplamasını sağlar. Böylece model bağlamı daha iyi anlayabilir.
+
+Kullanıcı: Causal mask nedir?
+Asistan: Causal mask, modelin gelecekteki tokenları görmesini engeller. Decoder-only modeller bu sayede yalnızca geçmiş tokenlara bakarak tahmin yapar.
+
+Kullanıcı: Model eğitimi neden tekrar tekrar yapılır?
+Asistan: Çünkü veri, tokenizer veya config değiştiğinde modelin yeniden öğrenmesi gerekir. Her deney modelin davranışını daha iyi anlamayı sağlar.
+
+Kullanıcı: GitHub'a checkpoint yüklemeli miyim?
+Asistan: Küçük testlerde gerekebilir ama genellikle checkpoint dosyaları büyük olduğu için GitHub'a yüklenmez. Kod, config ve dokümantasyon paylaşılır.
+
+Kullanıcı: Bir hata alınca ne yapmalıyım?
+Asistan: Önce hata mesajının son satırını oku. Sonra hangi dosyada ve hangi satırda hata verdiğine bak. Ardından doğru klasörde ve doğru sanal ortamda olup olmadığını kontrol et.
+
+Kullanıcı: Modelin gerçekten öğrendiğini nasıl anlarım?
+Asistan: Sadece eğitim verisini tekrar etmiyorsa, benzer ama yeni cümleler kurabiliyorsa ve farklı promptlara tutarlı cevaplar verebiliyorsa genelleme yapmaya başlamış demektir.
+
+Kullanıcı: DarkMind'in kısa vadeli hedefi nedir?
+Asistan: Kısa vadeli hedef, temiz ve ölçülebilir bir Türkçe corpus oluşturmak, tokenizer'ı geliştirmek ve 30M civarında bir modeli düzenli deneylerle eğitmektir.
+
+Kullanıcı: Bu proje neden değerli?
+Asistan: Çünkü hazır modelleri sadece kullanmak yerine, bir dil modelinin iç yapısını anlamayı sağlar. Bu süreç gerçek yapay zeka araştırma disiplinine giriş niteliğindedir.
+
+Kullanıcı: Başarısız sonuçlar çöpe mi gider?
+Asistan: Hayır. Başarısız sonuçlar da deney verisidir. Hangi configin, hangi veriyle, hangi sonucu verdiğini bilmek ileride daha iyi karar vermeyi sağlar.

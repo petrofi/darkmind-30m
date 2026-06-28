@@ -1,0 +1,57 @@
+DarkMind projesi, sıfırdan küçük bir Türkçe dil modeli geliştirme denemesidir.
+Bu proje, hazır bir modeli sadece kullanmak yerine modelin iç yapısını anlamayı amaçlar.
+İlk hedef, küçük de olsa çalışan bir tokenizer, Transformer mimarisi ve eğitim döngüsü kurmaktır.
+Bu yüzden proje doğrudan büyük model hedefiyle değil, küçük deneylerle başlamıştır.
+
+İlk aşamada Byte-Level BPE tokenizer eğitildi.
+Tokenizer, Türkçe metinleri token parçalarına ayırmayı öğrendi.
+İlk veri seti çok küçük olduğu için tokenizer vocabulary boyutu da küçüktü.
+Buna rağmen decode işlemi doğru çalıştı.
+Bu, metnin tokenlara ayrılıp tekrar okunabilir hale getirilebildiğini gösterdi.
+
+Sonraki aşamada decoder-only Transformer mimarisi yazıldı.
+Modelde token embedding, position embedding, causal self-attention, feed-forward katmanı, residual connection ve layer normalization kullanıldı.
+Bu yapı GPT tarzı modellerin temel mantığını temsil eder.
+Model başlangıçta rastgele ağırlıklara sahipti.
+Eğitim sırasında verilen metnin devamını tahmin etmeye çalıştı.
+
+İlk eğitim deneyi DarkMind Tiny GPT olarak adlandırıldı.
+Bu deneyin amacı kaliteli metin üretmek değildi.
+Amaç, pipeline'ın uçtan uca çalıştığını doğrulamaktı.
+Tokenizer çalıştı, model forward yaptı, loss hesaplandı, optimizer ağırlıkları güncelledi ve checkpoint kaydedildi.
+Bu noktada proje artık sadece fikir olmaktan çıktı.
+
+Daha sonra config tabanlı eğitim sistemi kuruldu.
+Model ayarları doğrudan Python dosyasının içinden çıkarıldı.
+Tiny, 5M ve 30M gibi farklı model boyutları JSON config dosyalarıyla yönetilmeye başlandı.
+Bu yaklaşım, deneyleri daha düzenli hale getirdi.
+Aynı training scripti farklı model konfigürasyonlarıyla çalışabilir hale geldi.
+
+RTX 4060 Laptop GPU üzerinde CUDA eğitimi başarıyla çalıştırıldı.
+CPU üzerinde uzun süren eğitimler GPU üzerinde birkaç saniyeye düştü.
+Bu fark, derin öğrenme eğitimlerinde GPU kullanımının önemini gösterdi.
+DarkMind 30M config ile 26 milyon civarında parametreli bir model eğitildi.
+Bu model henüz güçlü bir dil modeli değildir, fakat yerel bilgisayarda sıfırdan büyükçe bir Transformer modelinin eğitilebildiğini kanıtladı.
+
+Corpus v0.2 aşamasında veri kaynakları ayrıldı.
+Yapay zeka notları, Python notları, duygu notları ve soru-cevap örnekleri ayrı dosyalara yazıldı.
+Daha sonra build_corpus scripti bu kaynakları tek bir corpus dosyasında birleştirdi.
+Bu yapı, veri setini daha kontrollü büyütmek için önemlidir.
+Her veri dosyası ayrı bir amaca hizmet eder.
+
+DarkMind projesinde her deneyin belgelenmesi önemlidir.
+Deney dosyaları, hangi modelin hangi veriyle ve hangi sonuçlarla eğitildiğini kaydeder.
+Bu kayıtlar ileride proje büyüdüğünde geri dönüp analiz yapmayı kolaylaştırır.
+Bir araştırma projesinde sadece çalışan kod değil, deney geçmişi de değerlidir.
+Bu yüzden DarkMind, kod kadar dokümantasyona da önem veren bir proje olarak ilerlemektedir.
+
+Bu projenin erken aşamalarında modelin metinleri ezberlemesi normaldir.
+Veri seti küçük olduğunda model genelleme yapamaz.
+Aynı cümleleri veya benzer yapıları tekrar üretir.
+Bu durum başarısızlık değil, veri ihtiyacının doğal sonucudur.
+Modelin daha iyi üretim yapabilmesi için daha fazla, daha çeşitli ve daha temiz Türkçe veri gerekir.
+
+DarkMind'in kısa vadeli hedefi, 50.000 karakterin üzerinde temiz bir Türkçe corpus oluşturmaktır.
+Orta vadeli hedef, 30M civarında parametreli modeli daha çeşitli veriyle eğitmektir.
+Uzun vadeli hedef ise Türkçe duygu, motivasyon, yazılım ve yapay zeka alanlarında özelleşmiş küçük ama anlaşılır bir model geliştirmektir.
+Bu süreç, büyük bir model üretmekten önce model geliştirme disiplinini öğrenmeyi amaçlar.

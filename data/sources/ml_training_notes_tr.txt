@@ -1,0 +1,40 @@
+Model eğitimi, veriden örüntü öğrenme sürecidir.
+Bir dil modeli eğitilirken amaç, bir token dizisinden sonraki tokenı tahmin etmektir.
+Model başlangıçta rastgele ağırlıklara sahiptir.
+Bu yüzden ilk tahminleri genellikle kötüdür.
+Eğitim ilerledikçe model ağırlıkları güncellenir.
+
+Training loop, model eğitiminin tekrar eden ana döngüsüdür.
+Bu döngüde önce bir batch veri alınır.
+Sonra model bu veriden tahmin üretir.
+Tahminler ile gerçek hedefler karşılaştırılır.
+Bu karşılaştırmadan loss değeri hesaplanır.
+Loss değerine göre geri yayılım yapılır ve optimizer ağırlıkları günceller.
+
+Overfitting, modelin eğitim verisini ezberleyip yeni veriye genelleme yapamaması durumudur.
+Küçük veri setlerinde overfitting çok hızlı gerçekleşebilir.
+Train loss çok düşerken validation loss yükseliyorsa model ezberlemeye başlamış olabilir.
+Bu yüzden train loss ve validation loss birlikte izlenmelidir.
+DarkMind'in ilk deneylerinde veri küçük olduğu için düşük loss değerleri dikkatli yorumlanmalıdır.
+
+Batch size, aynı anda modele verilen örnek sayısını ifade eder.
+Batch size büyüdükçe eğitim daha stabil olabilir fakat daha fazla GPU belleği gerekir.
+Block size, modelin aynı anda görebildiği token uzunluğunu belirler.
+Block size büyüdükçe model daha uzun bağlamı öğrenebilir fakat bellek ihtiyacı artar.
+Learning rate, modelin ağırlıklarının ne kadar hızlı güncelleneceğini belirler.
+
+AdamW optimizer, Transformer modellerinde yaygın kullanılan bir optimizer türüdür.
+AdamW, ağırlık güncellemelerinde momentum benzeri istatistikler kullanır.
+Weight decay, modelin aşırı büyük ağırlıklar öğrenmesini engellemeye yardımcı olur.
+Gradient clipping, gradient değerleri çok büyüdüğünde eğitimi stabil tutmak için kullanılabilir.
+
+CUDA kullanımı eğitim süresini ciddi şekilde azaltır.
+CPU üzerinde dakikalar süren bir eğitim, GPU üzerinde saniyelere düşebilir.
+Ancak GPU kullanmak için doğru PyTorch CUDA sürümünün kurulmuş olması gerekir.
+Eğitim başlamadan önce torch.cuda.is_available sonucu kontrol edilmelidir.
+DarkMind projesinde RTX 4060 Laptop GPU ile CUDA eğitimi başarıyla çalıştırılmıştır.
+
+Bir modelin eğitilmesi yalnızca kod yazmak değildir.
+Deneyleri kaydetmek, config dosyalarını düzenlemek, veri sürümlerini takip etmek ve sonuçları yorumlamak da sürecin parçasıdır.
+Profesyonel bir araştırma projesinde her deneyin amacı, sistemi, konfigürasyonu ve sonucu belgelenmelidir.
+DarkMind projesinde experiment dosyaları bu yüzden tutulmaktadır.

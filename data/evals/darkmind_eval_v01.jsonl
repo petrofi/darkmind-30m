@@ -1,0 +1,50 @@
+{"id":"identity_001","prompt":"sen kimsin","expected_keywords":["DarkMind","Türkçe","dil modeli"],"category":"identity"}
+{"id":"identity_002","prompt":"Sen kimsin?","expected_keywords":["DarkMind","model"],"category":"identity"}
+{"id":"identity_003","prompt":"DarkMind nedir?","expected_keywords":["DarkMind","Türkçe"],"category":"identity"}
+{"id":"identity_004","prompt":"kendini tanıtır mısın","expected_keywords":["DarkMind","geliştirme"],"category":"identity"}
+{"id":"fallback_001","prompt":"Her şeyi biliyor musun?","expected_keywords":["hayır","sınırlı"],"category":"fallback"}
+{"id":"fallback_002","prompt":"Bilmediğin bir soru gelirse ne yaparsın?","expected_keywords":["bilmiyorsam","kesin"],"category":"fallback"}
+{"id":"fallback_003","prompt":"Emin olmadığın konuda nasıl cevap vermelisin?","expected_keywords":["emin","sınırlı"],"category":"fallback"}
+{"id":"fallback_004","prompt":"Bunu bilmiyor musun?","expected_keywords":["yeterli","bilgi"],"category":"fallback"}
+{"id":"tokenizer_001","prompt":"Tokenizer nedir?","expected_keywords":["metni","token","model"],"category":"tokenizer"}
+{"id":"tokenizer_002","prompt":"Tokenizer neden önemli?","expected_keywords":["metin","token"],"category":"tokenizer"}
+{"id":"tokenizer_003","prompt":"Token ne demek?","expected_keywords":["parça","metin"],"category":"tokenizer"}
+{"id":"tokenizer_004","prompt":"Metni tokenlara ayırmak ne işe yarar?","expected_keywords":["model","token"],"category":"tokenizer"}
+{"id":"cuda_001","prompt":"CUDA neden önemli?","expected_keywords":["NVIDIA","GPU","hız"],"category":"cuda"}
+{"id":"cuda_002","prompt":"CUDA nedir?","expected_keywords":["GPU","PyTorch"],"category":"cuda"}
+{"id":"cuda_003","prompt":"torch.cuda.is_available false ise ne anlama gelir?","expected_keywords":["CUDA","GPU"],"category":"cuda"}
+{"id":"cuda_004","prompt":"GPU eğitimde ne işe yarar?","expected_keywords":["hız","eğitim"],"category":"cuda"}
+{"id":"overfitting_001","prompt":"Overfitting nedir?","expected_keywords":["ezber","genelleme"],"category":"overfitting"}
+{"id":"overfitting_002","prompt":"Model neden ezberler?","expected_keywords":["eğitim","veri"],"category":"overfitting"}
+{"id":"overfitting_003","prompt":"Validation loss yükselirse ne olabilir?","expected_keywords":["overfitting","genelleme"],"category":"overfitting"}
+{"id":"overfitting_004","prompt":"Aşırı öğrenme ne demek?","expected_keywords":["ezber","yeni"],"category":"overfitting"}
+{"id":"checkpoint_001","prompt":"Checkpoint nedir?","expected_keywords":["model","ağırlık"],"category":"checkpoint"}
+{"id":"checkpoint_002","prompt":"Checkpoint ne işe yarar?","expected_keywords":["kayded","model"],"category":"checkpoint"}
+{"id":"checkpoint_003","prompt":"Checkpoint ile tokenizer uyumu neden önemli?","expected_keywords":["tokenizer","vocab"],"category":"checkpoint"}
+{"id":"checkpoint_004","prompt":"Eğitimden sonra model nasıl saklanır?","expected_keywords":["checkpoint","kayded"],"category":"checkpoint"}
+{"id":"python_basic_001","prompt":"Python'da iki sayıyı toplayan fonksiyon nasıl yazılır?","expected_keywords":["def","return"],"category":"python_basic"}
+{"id":"python_basic_002","prompt":"Python'da listeye eleman nasıl eklenir?","expected_keywords":["append","liste"],"category":"python_basic"}
+{"id":"python_basic_003","prompt":"Python'da if else ne işe yarar?","expected_keywords":["koşul","else"],"category":"python_basic"}
+{"id":"python_basic_004","prompt":"Python'da for döngüsü ne yapar?","expected_keywords":["döngü","liste"],"category":"python_basic"}
+{"id":"data_pipeline_001","prompt":"Data pipeline nedir?","expected_keywords":["ham veri","temizleme","corpus"],"category":"data_pipeline"}
+{"id":"data_pipeline_002","prompt":"Corpus nasıl oluşturulur?","expected_keywords":["kaynak","birleştir"],"category":"data_pipeline"}
+{"id":"data_pipeline_003","prompt":"Temiz veri neden önemli?","expected_keywords":["kalite","model"],"category":"data_pipeline"}
+{"id":"data_pipeline_004","prompt":"clean_text.py ne yapar?","expected_keywords":["temiz","veri"],"category":"data_pipeline"}
+{"id":"coding_errors_001","prompt":"ModuleNotFoundError hatası alıyorum, ne yapmalıyım?","expected_keywords":["paket","ortam"],"category":"coding_errors"}
+{"id":"coding_errors_002","prompt":"FileNotFoundError neden olur?","expected_keywords":["dosya","yol"],"category":"coding_errors"}
+{"id":"coding_errors_003","prompt":"IndentationError nasıl çözülür?","expected_keywords":["girinti","blok"],"category":"coding_errors"}
+{"id":"coding_errors_004","prompt":"Git not a repository hatası ne demek?","expected_keywords":["git","klasör"],"category":"coding_errors"}
+{"id":"chat_basics_001","prompt":"Merhaba","expected_keywords":["merhaba","DarkMind"],"category":"chat_basics"}
+{"id":"chat_basics_002","prompt":"Nasılsın?","expected_keywords":["iyiyim","model"],"category":"chat_basics"}
+{"id":"chat_basics_003","prompt":"Bana yardım eder misin?","expected_keywords":["yardımcı","çalışırım"],"category":"chat_basics"}
+{"id":"chat_basics_004","prompt":"Normal sohbet edebilir misin?","expected_keywords":["sınırlı","cevap"],"category":"chat_basics"}
+{"id":"identity_005","prompt":"DarkMind ChatGPT gibi mi?","expected_keywords":["hayır","küçük"],"category":"identity"}
+{"id":"fallback_005","prompt":"Cevabın yanlış olabilir mi?","expected_keywords":["hatalı","geliştirme"],"category":"fallback"}
+{"id":"tokenizer_005","prompt":"Vocab nedir?","expected_keywords":["token","sözlük"],"category":"tokenizer"}
+{"id":"cuda_005","prompt":"CPU ile GPU arasındaki fark nedir?","expected_keywords":["GPU","CPU"],"category":"cuda"}
+{"id":"overfitting_005","prompt":"Train loss düşerken validation loss artarsa ne düşünmeliyim?","expected_keywords":["overfitting","validation"],"category":"overfitting"}
+{"id":"checkpoint_005","prompt":"Checkpoint dosyası ne içerir?","expected_keywords":["ağırlık","config"],"category":"checkpoint"}
+{"id":"python_basic_005","prompt":"Python'da try except ne işe yarar?","expected_keywords":["hata","except"],"category":"python_basic"}
+{"id":"data_pipeline_005","prompt":"build_dataset_from_raw.py ne yapar?","expected_keywords":["corpus","birleştir"],"category":"data_pipeline"}
+{"id":"coding_errors_005","prompt":"Yanlış Python interpreter kullanırsam ne olur?","expected_keywords":["ortam","Python"],"category":"coding_errors"}
+{"id":"chat_basics_005","prompt":"Selam","expected_keywords":["selam","yardımcı"],"category":"chat_basics"}

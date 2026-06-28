@@ -1,0 +1,126 @@
+Kullanıcı: ModuleNotFoundError: No module named 'torch' hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata aktif Python ortamında torch paketinin kurulu olmadığını gösterir. Sanal ortamın aktif olduğundan emin olmalı ve paketi doğru ortamda kurmalısın.
+Kullanıcı: Python'da ModuleNotFoundError: No module named 'torch' neden olur?
+Asistan: Bu hata aktif Python ortamında torch paketinin kurulu olmadığını gösterir. Sanal ortamın aktif olduğundan emin olmalı ve paketi doğru ortamda kurmalısın.
+Kullanıcı: ModuleNotFoundError: No module named 'torch' hatasını nasıl çözebilirim?
+Asistan: Bu hata aktif Python ortamında torch paketinin kurulu olmadığını gösterir. Sanal ortamın aktif olduğundan emin olmalı ve paketi doğru ortamda kurmalısın.
+Kullanıcı: ImportError: cannot import name 'GPTLanguageModel' hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata import edilen ismin dosyada bulunmadığını veya yanlış yerden import edildiğini gösterir. Sınıf adını, dosya yolunu ve sys.path ayarını kontrol etmelisin.
+Kullanıcı: Python'da ImportError: cannot import name 'GPTLanguageModel' neden olur?
+Asistan: Bu hata import edilen ismin dosyada bulunmadığını veya yanlış yerden import edildiğini gösterir. Sınıf adını, dosya yolunu ve sys.path ayarını kontrol etmelisin.
+Kullanıcı: ImportError: cannot import name 'GPTLanguageModel' hatasını nasıl çözebilirim?
+Asistan: Bu hata import edilen ismin dosyada bulunmadığını veya yanlış yerden import edildiğini gösterir. Sınıf adını, dosya yolunu ve sys.path ayarını kontrol etmelisin.
+Kullanıcı: SyntaxError: invalid syntax hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata Python kodunda yazım kuralı hatası olduğunu gösterir. Hatanın gösterdiği satırdaki parantez, iki nokta ve tırnak işaretlerini kontrol etmelisin.
+Kullanıcı: Python'da SyntaxError: invalid syntax neden olur?
+Asistan: Bu hata Python kodunda yazım kuralı hatası olduğunu gösterir. Hatanın gösterdiği satırdaki parantez, iki nokta ve tırnak işaretlerini kontrol etmelisin.
+Kullanıcı: SyntaxError: invalid syntax hatasını nasıl çözebilirim?
+Asistan: Bu hata Python kodunda yazım kuralı hatası olduğunu gösterir. Hatanın gösterdiği satırdaki parantez, iki nokta ve tırnak işaretlerini kontrol etmelisin.
+Kullanıcı: IndentationError: expected an indented block hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata if, for, while veya def satırından sonra girinti beklediğini gösterir. Blok içindeki satırları aynı girinti seviyesiyle yazmalısın.
+Kullanıcı: Python'da IndentationError: expected an indented block neden olur?
+Asistan: Bu hata if, for, while veya def satırından sonra girinti beklediğini gösterir. Blok içindeki satırları aynı girinti seviyesiyle yazmalısın.
+Kullanıcı: IndentationError: expected an indented block hatasını nasıl çözebilirim?
+Asistan: Bu hata if, for, while veya def satırından sonra girinti beklediğini gösterir. Blok içindeki satırları aynı girinti seviyesiyle yazmalısın.
+Kullanıcı: NameError: name 'tokenizer' is not defined hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata tokenizer değişkeninin kullanılmadan önce tanımlanmadığını gösterir. Değişkeni önce oluşturmalı veya doğru isimle çağırmalısın.
+Kullanıcı: Python'da NameError: name 'tokenizer' is not defined neden olur?
+Asistan: Bu hata tokenizer değişkeninin kullanılmadan önce tanımlanmadığını gösterir. Değişkeni önce oluşturmalı veya doğru isimle çağırmalısın.
+Kullanıcı: NameError: name 'tokenizer' is not defined hatasını nasıl çözebilirim?
+Asistan: Bu hata tokenizer değişkeninin kullanılmadan önce tanımlanmadığını gösterir. Değişkeni önce oluşturmalı veya doğru isimle çağırmalısın.
+Kullanıcı: TypeError: unsupported operand type(s) hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata uyumsuz veri tipleriyle işlem yapılmaya çalışıldığını gösterir. Değerlerin tipini kontrol etmeli ve gerekirse int, float veya str dönüşümü yapmalısın.
+Kullanıcı: Python'da TypeError: unsupported operand type(s) neden olur?
+Asistan: Bu hata uyumsuz veri tipleriyle işlem yapılmaya çalışıldığını gösterir. Değerlerin tipini kontrol etmeli ve gerekirse int, float veya str dönüşümü yapmalısın.
+Kullanıcı: TypeError: unsupported operand type(s) hatasını nasıl çözebilirim?
+Asistan: Bu hata uyumsuz veri tipleriyle işlem yapılmaya çalışıldığını gösterir. Değerlerin tipini kontrol etmeli ve gerekirse int, float veya str dönüşümü yapmalısın.
+Kullanıcı: ValueError: invalid literal for int() hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata sayıya çevrilemeyen bir metnin int() içine verildiğini gösterir. Girdiyi doğrulamalı veya dönüşümü try/except ile güvenli hale getirmelisin.
+Kullanıcı: Python'da ValueError: invalid literal for int() neden olur?
+Asistan: Bu hata sayıya çevrilemeyen bir metnin int() içine verildiğini gösterir. Girdiyi doğrulamalı veya dönüşümü try/except ile güvenli hale getirmelisin.
+Kullanıcı: ValueError: invalid literal for int() hatasını nasıl çözebilirim?
+Asistan: Bu hata sayıya çevrilemeyen bir metnin int() içine verildiğini gösterir. Girdiyi doğrulamalı veya dönüşümü try/except ile güvenli hale getirmelisin.
+Kullanıcı: FileNotFoundError: No such file or directory hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata okunmak istenen dosyanın belirtilen konumda bulunmadığını gösterir. Dosya yolunu Path ile kontrol etmeli ve çalışma dizinini doğrulamalısın.
+Kullanıcı: Python'da FileNotFoundError: No such file or directory neden olur?
+Asistan: Bu hata okunmak istenen dosyanın belirtilen konumda bulunmadığını gösterir. Dosya yolunu Path ile kontrol etmeli ve çalışma dizinini doğrulamalısın.
+Kullanıcı: FileNotFoundError: No such file or directory hatasını nasıl çözebilirim?
+Asistan: Bu hata okunmak istenen dosyanın belirtilen konumda bulunmadığını gösterir. Dosya yolunu Path ile kontrol etmeli ve çalışma dizinini doğrulamalısın.
+Kullanıcı: PermissionError: permission denied hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata dosya veya klasöre erişim izni olmadığını gösterir. Dosyanın başka programda açık olmadığını ve yazma izninin bulunduğunu kontrol etmelisin.
+Kullanıcı: Python'da PermissionError: permission denied neden olur?
+Asistan: Bu hata dosya veya klasöre erişim izni olmadığını gösterir. Dosyanın başka programda açık olmadığını ve yazma izninin bulunduğunu kontrol etmelisin.
+Kullanıcı: PermissionError: permission denied hatasını nasıl çözebilirim?
+Asistan: Bu hata dosya veya klasöre erişim izni olmadığını gösterir. Dosyanın başka programda açık olmadığını ve yazma izninin bulunduğunu kontrol etmelisin.
+Kullanıcı: IndexError: list index out of range hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata listenin olmayan bir indeksine erişilmeye çalışıldığını gösterir. İndeksi kullanmadan önce listenin uzunluğunu kontrol etmelisin.
+Kullanıcı: Python'da IndexError: list index out of range neden olur?
+Asistan: Bu hata listenin olmayan bir indeksine erişilmeye çalışıldığını gösterir. İndeksi kullanmadan önce listenin uzunluğunu kontrol etmelisin.
+Kullanıcı: IndexError: list index out of range hatasını nasıl çözebilirim?
+Asistan: Bu hata listenin olmayan bir indeksine erişilmeye çalışıldığını gösterir. İndeksi kullanmadan önce listenin uzunluğunu kontrol etmelisin.
+Kullanıcı: KeyError: 'config' hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata sözlükte olmayan bir anahtarın okunmaya çalışıldığını gösterir. Anahtar adını kontrol etmeli veya get() ile varsayılan değer kullanmalısın.
+Kullanıcı: Python'da KeyError: 'config' neden olur?
+Asistan: Bu hata sözlükte olmayan bir anahtarın okunmaya çalışıldığını gösterir. Anahtar adını kontrol etmeli veya get() ile varsayılan değer kullanmalısın.
+Kullanıcı: KeyError: 'config' hatasını nasıl çözebilirim?
+Asistan: Bu hata sözlükte olmayan bir anahtarın okunmaya çalışıldığını gösterir. Anahtar adını kontrol etmeli veya get() ile varsayılan değer kullanmalısın.
+Kullanıcı: AttributeError: object has no attribute 'generate' hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata nesnede çağrılan özellik veya metodun bulunmadığını gösterir. Nesnenin tipini ve kullandığın metod adını kontrol etmelisin.
+Kullanıcı: Python'da AttributeError: object has no attribute 'generate' neden olur?
+Asistan: Bu hata nesnede çağrılan özellik veya metodun bulunmadığını gösterir. Nesnenin tipini ve kullandığın metod adını kontrol etmelisin.
+Kullanıcı: AttributeError: object has no attribute 'generate' hatasını nasıl çözebilirim?
+Asistan: Bu hata nesnede çağrılan özellik veya metodun bulunmadığını gösterir. Nesnenin tipini ve kullandığın metod adını kontrol etmelisin.
+Kullanıcı: fatal: not a git repository hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata komutun Git deposu olmayan bir klasörde çalıştırıldığını gösterir. Önce proje kök dizinine gitmeli veya doğru klasörde git init yapılmış mı bakmalısın.
+Kullanıcı: Python'da fatal: not a git repository neden olur?
+Asistan: Bu hata komutun Git deposu olmayan bir klasörde çalıştırıldığını gösterir. Önce proje kök dizinine gitmeli veya doğru klasörde git init yapılmış mı bakmalısın.
+Kullanıcı: fatal: not a git repository hatasını nasıl çözebilirim?
+Asistan: Bu hata komutun Git deposu olmayan bir klasörde çalıştırıldığını gösterir. Önce proje kök dizinine gitmeli veya doğru klasörde git init yapılmış mı bakmalısın.
+Kullanıcı: git push rejected hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata uzak depoda yerelde olmayan commitler bulunduğunu veya branch koruması olduğunu gösterir. Önce remote değişiklikleri anlamalı, gerekirse pull veya rebase yapmalı ve çakışmaları çözmelisin.
+Kullanıcı: Python'da git push rejected neden olur?
+Asistan: Bu hata uzak depoda yerelde olmayan commitler bulunduğunu veya branch koruması olduğunu gösterir. Önce remote değişiklikleri anlamalı, gerekirse pull veya rebase yapmalı ve çakışmaları çözmelisin.
+Kullanıcı: git push rejected hatasını nasıl çözebilirim?
+Asistan: Bu hata uzak depoda yerelde olmayan commitler bulunduğunu veya branch koruması olduğunu gösterir. Önce remote değişiklikleri anlamalı, gerekirse pull veya rebase yapmalı ve çakışmaları çözmelisin.
+Kullanıcı: venv aktif değil hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata komutların beklenen sanal ortam yerine sistem Python'unda çalıştığını gösterir. PowerShell'de .\.venv\Scripts\Activate.ps1 ile ortamı aktifleştirmelisin.
+Kullanıcı: Python'da venv aktif değil neden olur?
+Asistan: Bu hata komutların beklenen sanal ortam yerine sistem Python'unda çalıştığını gösterir. PowerShell'de .\.venv\Scripts\Activate.ps1 ile ortamı aktifleştirmelisin.
+Kullanıcı: venv aktif değil hatasını nasıl çözebilirim?
+Asistan: Bu hata komutların beklenen sanal ortam yerine sistem Python'unda çalıştığını gösterir. PowerShell'de .\.venv\Scripts\Activate.ps1 ile ortamı aktifleştirmelisin.
+Kullanıcı: torch.cuda.is_available() False dönüyor hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata PyTorch'un CUDA'yı görmediğini veya CUDA destekli kurulum olmadığını gösterir. GPU sürücüsünü, CUDA destekli PyTorch kurulumunu ve doğru Python ortamını kontrol etmelisin.
+Kullanıcı: Python'da torch.cuda.is_available() False dönüyor neden olur?
+Asistan: Bu hata PyTorch'un CUDA'yı görmediğini veya CUDA destekli kurulum olmadığını gösterir. GPU sürücüsünü, CUDA destekli PyTorch kurulumunu ve doğru Python ortamını kontrol etmelisin.
+Kullanıcı: torch.cuda.is_available() False dönüyor hatasını nasıl çözebilirim?
+Asistan: Bu hata PyTorch'un CUDA'yı görmediğini veya CUDA destekli kurulum olmadığını gösterir. GPU sürücüsünü, CUDA destekli PyTorch kurulumunu ve doğru Python ortamını kontrol etmelisin.
+Kullanıcı: yanlış Python interpreter kullanılıyor hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata paketlerin kurulu olduğu ortam ile çalışan Python yorumlayıcısının farklı olduğunu gösterir. where python, py --version ve venv yolunu kontrol ederek aynı ortamı kullanmalısın.
+Kullanıcı: Python'da yanlış Python interpreter kullanılıyor neden olur?
+Asistan: Bu hata paketlerin kurulu olduğu ortam ile çalışan Python yorumlayıcısının farklı olduğunu gösterir. where python, py --version ve venv yolunu kontrol ederek aynı ortamı kullanmalısın.
+Kullanıcı: yanlış Python interpreter kullanılıyor hatasını nasıl çözebilirim?
+Asistan: Bu hata paketlerin kurulu olduğu ortam ile çalışan Python yorumlayıcısının farklı olduğunu gösterir. where python, py --version ve venv yolunu kontrol ederek aynı ortamı kullanmalısın.
+Kullanıcı: checkpoint/tokenizer mismatch hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata modelin eğitildiği tokenizer ile üretimde kullanılan tokenizer'ın farklı olabileceğini gösterir. Checkpoint ile aynı tokenizer klasörünü kullanmalı ve vocab boyutlarını karşılaştırmalısın.
+Kullanıcı: Python'da checkpoint/tokenizer mismatch neden olur?
+Asistan: Bu hata modelin eğitildiği tokenizer ile üretimde kullanılan tokenizer'ın farklı olabileceğini gösterir. Checkpoint ile aynı tokenizer klasörünü kullanmalı ve vocab boyutlarını karşılaştırmalısın.
+Kullanıcı: checkpoint/tokenizer mismatch hatasını nasıl çözebilirim?
+Asistan: Bu hata modelin eğitildiği tokenizer ile üretimde kullanılan tokenizer'ın farklı olabileceğini gösterir. Checkpoint ile aynı tokenizer klasörünü kullanmalı ve vocab boyutlarını karşılaştırmalısın.
+Kullanıcı: JSONDecodeError in config hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata JSON config dosyasında virgül, tırnak veya parantez hatası olduğunu gösterir. Config dosyasını JSON formatına göre kontrol etmeli ve sondaki gereksiz virgülleri kaldırmalısın.
+Kullanıcı: Python'da JSONDecodeError in config neden olur?
+Asistan: Bu hata JSON config dosyasında virgül, tırnak veya parantez hatası olduğunu gösterir. Config dosyasını JSON formatına göre kontrol etmeli ve sondaki gereksiz virgülleri kaldırmalısın.
+Kullanıcı: JSONDecodeError in config hatasını nasıl çözebilirim?
+Asistan: Bu hata JSON config dosyasında virgül, tırnak veya parantez hatası olduğunu gösterir. Config dosyasını JSON formatına göre kontrol etmeli ve sondaki gereksiz virgülleri kaldırmalısın.
+Kullanıcı: Windows path problem hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata ters slash karakterlerinin veya göreli yolların yanlış yorumlandığını gösterir. Pathlib kullanmalı ve yolları proje kökünden güvenli şekilde birleştirmelisin.
+Kullanıcı: Python'da Windows path problem neden olur?
+Asistan: Bu hata ters slash karakterlerinin veya göreli yolların yanlış yorumlandığını gösterir. Pathlib kullanmalı ve yolları proje kökünden güvenli şekilde birleştirmelisin.
+Kullanıcı: Windows path problem hatasını nasıl çözebilirim?
+Asistan: Bu hata ters slash karakterlerinin veya göreli yolların yanlış yorumlandığını gösterir. Pathlib kullanmalı ve yolları proje kökünden güvenli şekilde birleştirmelisin.
+Kullanıcı: RuntimeError: size mismatch for token_embedding.weight hatası alıyorum. Ne yapmalıyım?
+Asistan: Bu hata checkpoint içindeki vocab boyutu ile mevcut tokenizer vocab boyutunun uyuşmadığını gösterir. Tokenizer'ı değiştirdiysen modeli yeniden eğitmeli veya doğru checkpoint-tokenizer çiftini kullanmalısın.
+Kullanıcı: Python'da RuntimeError: size mismatch for token_embedding.weight neden olur?
+Asistan: Bu hata checkpoint içindeki vocab boyutu ile mevcut tokenizer vocab boyutunun uyuşmadığını gösterir. Tokenizer'ı değiştirdiysen modeli yeniden eğitmeli veya doğru checkpoint-tokenizer çiftini kullanmalısın.
+Kullanıcı: RuntimeError: size mismatch for token_embedding.weight hatasını nasıl çözebilirim?
+Asistan: Bu hata checkpoint içindeki vocab boyutu ile mevcut tokenizer vocab boyutunun uyuşmadığını gösterir. Tokenizer'ı değiştirdiysen modeli yeniden eğitmeli veya doğru checkpoint-tokenizer çiftini kullanmalısın.

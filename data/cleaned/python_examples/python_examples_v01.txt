@@ -1,0 +1,1030 @@
+Kullanıcı: Python'da bir metin değişkeni tanımla.
+Asistan:
+```python
+name = "DarkMind"
+print(name)
+```
+Kullanıcı: Python'da bir tam sayı değişkeni tanımla.
+Asistan:
+```python
+age = 3
+print(age)
+```
+Kullanıcı: Python'da ondalıklı sayı değişkeni tanımla.
+Asistan:
+```python
+temperature = 0.8
+print(temperature)
+```
+Kullanıcı: Python'da boolean değişkeni tanımla.
+Asistan:
+```python
+is_active = True
+print(is_active)
+```
+Kullanıcı: Python'da iki değişkenin değerini ekrana yazdır.
+Asistan:
+```python
+city = "İstanbul"
+score = 42
+print(city, score)
+```
+Kullanıcı: Python'da değişkenleri kullanarak kısa bir cümle oluştur.
+Asistan:
+```python
+model_name = "DarkMind"
+version = "v01"
+message = f"{model_name} veri seti {version} ile büyüyor."
+print(message)
+```
+Kullanıcı: Python'da iki sayıyı topla ve sonucu değişkende sakla.
+Asistan:
+```python
+a = 12
+b = 8
+total = a + b
+print(total)
+```
+Kullanıcı: Python'da kullanıcı adını bir değişkende sakla.
+Asistan:
+```python
+username = "tarik"
+print(f"Merhaba {username}")
+```
+Kullanıcı: Python'da iki sayıyı toplayan bir fonksiyon yaz.
+Asistan:
+```python
+def add_numbers(a, b):
+    return a + b
+```
+Kullanıcı: Python'da iki sayıyı çarpan bir fonksiyon yaz.
+Asistan:
+```python
+def multiply_numbers(a, b):
+    return a * b
+```
+Kullanıcı: Python'da bir sayının karesini döndüren fonksiyon yaz.
+Asistan:
+```python
+def square(number):
+    return number * number
+```
+Kullanıcı: Python'da metni büyük harfe çeviren fonksiyon yaz.
+Asistan:
+```python
+def make_upper(text):
+    return text.upper()
+```
+Kullanıcı: Python'da listedeki sayıların toplamını döndüren fonksiyon yaz.
+Asistan:
+```python
+def sum_list(numbers):
+    return sum(numbers)
+```
+Kullanıcı: Python'da bir isme selam veren fonksiyon yaz.
+Asistan:
+```python
+def greet(name):
+    return f"Merhaba {name}"
+```
+Kullanıcı: Python'da ortalama hesaplayan bir fonksiyon yaz.
+Asistan:
+```python
+def average(numbers):
+    return sum(numbers) / len(numbers)
+```
+Kullanıcı: Python'da boş liste kontrolü yapan fonksiyon yaz.
+Asistan:
+```python
+def is_empty(items):
+    return len(items) == 0
+```
+Kullanıcı: Python'da bir sayının pozitif olup olmadığını kontrol et.
+Asistan:
+```python
+number = 7
+if number > 0:
+    print("Pozitif")
+else:
+    print("Pozitif değil")
+```
+Kullanıcı: Python'da bir sayının çift mi tek mi olduğunu yazdır.
+Asistan:
+```python
+number = 10
+if number % 2 == 0:
+    print("Çift")
+else:
+    print("Tek")
+```
+Kullanıcı: Python'da yaşa göre yetişkin kontrolü yap.
+Asistan:
+```python
+age = 20
+if age >= 18:
+    print("Yetişkin")
+else:
+    print("Çocuk")
+```
+Kullanıcı: Python'da not değerine göre geçti veya kaldı yazdır.
+Asistan:
+```python
+grade = 72
+if grade >= 50:
+    print("Geçti")
+else:
+    print("Kaldı")
+```
+Kullanıcı: Python'da boş metin kontrolü yap.
+Asistan:
+```python
+text = "Merhaba"
+if text:
+    print("Metin dolu")
+else:
+    print("Metin boş")
+```
+Kullanıcı: Python'da listenin boş olup olmadığını kontrol et.
+Asistan:
+```python
+items = [1, 2, 3]
+if items:
+    print("Liste dolu")
+else:
+    print("Liste boş")
+```
+Kullanıcı: Python'da sıcaklığa göre kısa mesaj yazdır.
+Asistan:
+```python
+temperature = 28
+if temperature >= 25:
+    print("Hava sıcak")
+else:
+    print("Hava serin")
+```
+Kullanıcı: Python'da şifre uzunluğu kontrolü yap.
+Asistan:
+```python
+password = "gizli123"
+if len(password) >= 8:
+    print("Şifre uzunluğu yeterli")
+else:
+    print("Şifre çok kısa")
+```
+Kullanıcı: Python'da listedeki sayıları for döngüsüyle yazdır.
+Asistan:
+```python
+numbers = [1, 2, 3, 4]
+for number in numbers:
+    print(number)
+```
+Kullanıcı: Python'da 1'den 5'e kadar sayıları yazdır.
+Asistan:
+```python
+for number in range(1, 6):
+    print(number)
+```
+Kullanıcı: Python'da listedeki isimlere selam ver.
+Asistan:
+```python
+names = ["Ayşe", "Mehmet", "Zeynep"]
+for name in names:
+    print(f"Merhaba {name}")
+```
+Kullanıcı: Python'da listedeki sayıların toplamını for döngüsüyle bul.
+Asistan:
+```python
+numbers = [4, 8, 15]
+total = 0
+for number in numbers:
+    total += number
+print(total)
+```
+Kullanıcı: Python'da listedeki çift sayıları yazdır.
+Asistan:
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+for number in numbers:
+    if number % 2 == 0:
+        print(number)
+```
+Kullanıcı: Python'da metindeki karakterleri tek tek yazdır.
+Asistan:
+```python
+text = "kod"
+for character in text:
+    print(character)
+```
+Kullanıcı: Python'da enumerate ile liste elemanlarını numaralandır.
+Asistan:
+```python
+tasks = ["oku", "yaz", "test et"]
+for index, task in enumerate(tasks, start=1):
+    print(index, task)
+```
+Kullanıcı: Python'da sözlük anahtar ve değerlerini döngüyle yazdır.
+Asistan:
+```python
+scores = {"Ali": 80, "Ayşe": 95}
+for name, score in scores.items():
+    print(name, score)
+```
+Kullanıcı: Python'da while ile 1'den 5'e kadar say.
+Asistan:
+```python
+counter = 1
+while counter <= 5:
+    print(counter)
+    counter += 1
+```
+Kullanıcı: Python'da while ile geri sayım yap.
+Asistan:
+```python
+counter = 5
+while counter > 0:
+    print(counter)
+    counter -= 1
+```
+Kullanıcı: Python'da while ile toplam hesapla.
+Asistan:
+```python
+number = 1
+total = 0
+while number <= 5:
+    total += number
+    number += 1
+print(total)
+```
+Kullanıcı: Python'da while döngüsünden break ile çık.
+Asistan:
+```python
+number = 0
+while True:
+    number += 1
+    if number == 3:
+        break
+print(number)
+```
+Kullanıcı: Python'da while ile liste elemanlarını sırayla yazdır.
+Asistan:
+```python
+items = ["a", "b", "c"]
+index = 0
+while index < len(items):
+    print(items[index])
+    index += 1
+```
+Kullanıcı: Python'da while ile koşul sağlanana kadar artırma yap.
+Asistan:
+```python
+value = 2
+while value < 20:
+    value *= 2
+print(value)
+```
+Kullanıcı: Python'da bir liste oluştur ve ilk elemanı yazdır.
+Asistan:
+```python
+fruits = ["elma", "armut", "muz"]
+print(fruits[0])
+```
+Kullanıcı: Python'da listeye yeni eleman ekle.
+Asistan:
+```python
+fruits = ["elma", "armut"]
+fruits.append("muz")
+print(fruits)
+```
+Kullanıcı: Python'da listeden eleman çıkar.
+Asistan:
+```python
+fruits = ["elma", "armut", "muz"]
+fruits.remove("armut")
+print(fruits)
+```
+Kullanıcı: Python'da listedeki eleman sayısını bul.
+Asistan:
+```python
+numbers = [3, 5, 8, 13]
+print(len(numbers))
+```
+Kullanıcı: Python'da listenin son elemanını yazdır.
+Asistan:
+```python
+items = ["ilk", "orta", "son"]
+print(items[-1])
+```
+Kullanıcı: Python'da listeyi ters sırada yazdır.
+Asistan:
+```python
+numbers = [1, 2, 3, 4]
+print(list(reversed(numbers)))
+```
+Kullanıcı: Python'da iki listeyi birleştir.
+Asistan:
+```python
+first = [1, 2]
+second = [3, 4]
+combined = first + second
+print(combined)
+```
+Kullanıcı: Python'da listenin belirli bir parçasını al.
+Asistan:
+```python
+numbers = [10, 20, 30, 40, 50]
+print(numbers[1:4])
+```
+Kullanıcı: Python'da basit bir sözlük oluştur.
+Asistan:
+```python
+person = {"name": "Ayşe", "age": 25}
+print(person)
+```
+Kullanıcı: Python'da sözlükten değer oku.
+Asistan:
+```python
+person = {"name": "Ayşe", "age": 25}
+print(person["name"])
+```
+Kullanıcı: Python'da sözlüğe yeni anahtar ekle.
+Asistan:
+```python
+person = {"name": "Ayşe"}
+person["city"] = "İstanbul"
+print(person)
+```
+Kullanıcı: Python'da get ile güvenli sözlük okuma yap.
+Asistan:
+```python
+settings = {"theme": "dark"}
+language = settings.get("language", "tr")
+print(language)
+```
+Kullanıcı: Python'da sözlük anahtarlarını yazdır.
+Asistan:
+```python
+scores = {"Ali": 80, "Ayşe": 95}
+for name in scores.keys():
+    print(name)
+```
+Kullanıcı: Python'da sözlük değerlerini yazdır.
+Asistan:
+```python
+scores = {"Ali": 80, "Ayşe": 95}
+for score in scores.values():
+    print(score)
+```
+Kullanıcı: Python'da sözlükte anahtar var mı kontrol et.
+Asistan:
+```python
+person = {"name": "Ayşe"}
+if "name" in person:
+    print("name anahtarı var")
+```
+Kullanıcı: Python'da tekrarları kaldırmak için set kullan.
+Asistan:
+```python
+numbers = [1, 2, 2, 3, 3, 3]
+unique_numbers = set(numbers)
+print(unique_numbers)
+```
+Kullanıcı: Python'da iki kümenin kesişimini bul.
+Asistan:
+```python
+first = {"python", "ai", "data"}
+second = {"python", "web"}
+common = first & second
+print(common)
+```
+Kullanıcı: Python'da iki kümenin birleşimini bul.
+Asistan:
+```python
+first = {"a", "b"}
+second = {"b", "c"}
+print(first | second)
+```
+Kullanıcı: Python'da sete eleman ekle.
+Asistan:
+```python
+tags = {"python", "kod"}
+tags.add("veri")
+print(tags)
+```
+Kullanıcı: Python'da sette eleman var mı kontrol et.
+Asistan:
+```python
+tags = {"python", "kod"}
+if "python" in tags:
+    print("Bulundu")
+```
+Kullanıcı: Python'da tuple oluştur ve elemanlarını yazdır.
+Asistan:
+```python
+point = (10, 20)
+print(point[0], point[1])
+```
+Kullanıcı: Python'da tuple unpacking örneği yaz.
+Asistan:
+```python
+name, score = ("Ayşe", 95)
+print(name, score)
+```
+Kullanıcı: Python'da fonksiyondan iki değer döndür.
+Asistan:
+```python
+def min_max(numbers):
+    return min(numbers), max(numbers)
+smallest, biggest = min_max([3, 9, 1])
+print(smallest, biggest)
+```
+Kullanıcı: Python'da tuple listesini sırala.
+Asistan:
+```python
+students = [("Ali", 80), ("Ayşe", 95), ("Can", 70)]
+students.sort(key=lambda item: item[1])
+print(students)
+```
+Kullanıcı: Python'da değişmeyen koordinat bilgisi için tuple kullan.
+Asistan:
+```python
+location = (41.01, 28.97)
+latitude, longitude = location
+print(latitude, longitude)
+```
+Kullanıcı: Python'da metnin uzunluğunu bul.
+Asistan:
+```python
+text = "Merhaba"
+print(len(text))
+```
+Kullanıcı: Python'da metni küçük harfe çevir.
+Asistan:
+```python
+text = "DARKMIND"
+print(text.lower())
+```
+Kullanıcı: Python'da metni büyük harfe çevir.
+Asistan:
+```python
+text = "darkmind"
+print(text.upper())
+```
+Kullanıcı: Python'da metindeki boşlukları temizle.
+Asistan:
+```python
+text = "  merhaba  "
+print(text.strip())
+```
+Kullanıcı: Python'da metin içinde kelime ara.
+Asistan:
+```python
+text = "Python öğreniyorum"
+if "Python" in text:
+    print("Kelime bulundu")
+```
+Kullanıcı: Python'da metni kelimelere ayır.
+Asistan:
+```python
+text = "temiz veri önemlidir"
+words = text.split()
+print(words)
+```
+Kullanıcı: Python'da kelimeleri tek metinde birleştir.
+Asistan:
+```python
+words = ["temiz", "veri", "önemlidir"]
+sentence = " ".join(words)
+print(sentence)
+```
+Kullanıcı: Python'da f-string ile değerleri metne yerleştir.
+Asistan:
+```python
+name = "DarkMind"
+step = 1000
+print(f"{name} {step} adım eğitildi.")
+```
+Kullanıcı: Python'da list comprehension ile sayıların karesini al.
+Asistan:
+```python
+numbers = [1, 2, 3, 4]
+squares = [number * number for number in numbers]
+print(squares)
+```
+Kullanıcı: Python'da list comprehension ile çift sayıları seç.
+Asistan:
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+evens = [number for number in numbers if number % 2 == 0]
+print(evens)
+```
+Kullanıcı: Python'da metin listesini küçük harfe çevir.
+Asistan:
+```python
+words = ["PYTHON", "VERİ", "MODEL"]
+lower_words = [word.lower() for word in words]
+print(lower_words)
+```
+Kullanıcı: Python'da list comprehension ile uzun kelimeleri filtrele.
+Asistan:
+```python
+words = ["ai", "python", "veri", "transformer"]
+long_words = [word for word in words if len(word) > 4]
+print(long_words)
+```
+Kullanıcı: Python'da range ile liste comprehension kullan.
+Asistan:
+```python
+numbers = [number for number in range(1, 6)]
+print(numbers)
+```
+Kullanıcı: Python'da listedeki boş metinleri çıkar.
+Asistan:
+```python
+texts = ["merhaba", "", "veri", " "]
+clean_texts = [text.strip() for text in texts if text.strip()]
+print(clean_texts)
+```
+Kullanıcı: Python'da sayı listesinden pozitifleri seç.
+Asistan:
+```python
+numbers = [-2, 0, 4, 7]
+positive_numbers = [number for number in numbers if number > 0]
+print(positive_numbers)
+```
+Kullanıcı: Python'da kelime uzunluklarını liste olarak üret.
+Asistan:
+```python
+words = ["python", "kod", "veri"]
+lengths = [len(word) for word in words]
+print(lengths)
+```
+Kullanıcı: Python'da pathlib ile bir metin dosyası oku.
+Asistan:
+```python
+from pathlib import Path
+path = Path("notlar.txt")
+content = path.read_text(encoding="utf-8")
+print(content)
+```
+Kullanıcı: Python'da pathlib ile bir metin dosyası yaz.
+Asistan:
+```python
+from pathlib import Path
+path = Path("notlar.txt")
+path.write_text("Merhaba Python", encoding="utf-8")
+```
+Kullanıcı: Python'da dosya varsa içeriğini oku.
+Asistan:
+```python
+from pathlib import Path
+path = Path("notlar.txt")
+if path.exists():
+    print(path.read_text(encoding="utf-8"))
+```
+Kullanıcı: Python'da satırları liste olarak oku.
+Asistan:
+```python
+from pathlib import Path
+path = Path("notlar.txt")
+lines = path.read_text(encoding="utf-8").splitlines()
+print(lines)
+```
+Kullanıcı: Python'da listeyi satır satır dosyaya yaz.
+Asistan:
+```python
+from pathlib import Path
+lines = ["birinci satır", "ikinci satır"]
+Path("rapor.txt").write_text("\n".join(lines), encoding="utf-8")
+```
+Kullanıcı: Python'da dosya yolunu Path ile oluştur.
+Asistan:
+```python
+from pathlib import Path
+folder = Path("data")
+path = folder / "ornek.txt"
+print(path)
+```
+Kullanıcı: Python'da dosyanın karakter sayısını bul.
+Asistan:
+```python
+from pathlib import Path
+path = Path("notlar.txt")
+text = path.read_text(encoding="utf-8")
+print(len(text))
+```
+Kullanıcı: Python'da dosya içeriğini güvenli şekilde küçük harfe çevir.
+Asistan:
+```python
+from pathlib import Path
+path = Path("notlar.txt")
+if path.exists():
+    text = path.read_text(encoding="utf-8")
+    print(text.lower())
+```
+Kullanıcı: Python'da ValueError için try except örneği yaz.
+Asistan:
+```python
+value = "42"
+try:
+    number = int(value)
+    print(number)
+except ValueError:
+    print("Sayıya çevrilemedi")
+```
+Kullanıcı: Python'da dosya okurken FileNotFoundError yakala.
+Asistan:
+```python
+from pathlib import Path
+try:
+    text = Path("notlar.txt").read_text(encoding="utf-8")
+    print(text)
+except FileNotFoundError:
+    print("Dosya bulunamadı")
+```
+Kullanıcı: Python'da sıfıra bölme hatasını yakala.
+Asistan:
+```python
+try:
+    result = 10 / 0
+    print(result)
+except ZeroDivisionError:
+    print("Sıfıra bölme yapılamaz")
+```
+Kullanıcı: Python'da sözlük anahtarı yoksa KeyError yakala.
+Asistan:
+```python
+person = {"name": "Ayşe"}
+try:
+    print(person["age"])
+except KeyError:
+    print("age anahtarı yok")
+```
+Kullanıcı: Python'da liste index hatasını yakala.
+Asistan:
+```python
+items = ["a", "b"]
+try:
+    print(items[5])
+except IndexError:
+    print("Geçersiz index")
+```
+Kullanıcı: Python'da try except else örneği yaz.
+Asistan:
+```python
+text = "12"
+try:
+    number = int(text)
+except ValueError:
+    print("Hata oluştu")
+else:
+    print(number)
+```
+Kullanıcı: Python'da finally bloğu kullanılan örnek yaz.
+Asistan:
+```python
+try:
+    number = int("5")
+    print(number)
+except ValueError:
+    print("Hata")
+finally:
+    print("İşlem bitti")
+```
+Kullanıcı: Python'da tip kontrolüyle TypeError riskini azalt.
+Asistan:
+```python
+value = "10"
+if isinstance(value, int):
+    print(value + 5)
+else:
+    print("Değer int değil")
+```
+Kullanıcı: Python'da basit bir sınıf tanımla.
+Asistan:
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+user = User("Ayşe")
+print(user.name)
+```
+Kullanıcı: Python'da metot içeren basit sınıf yaz.
+Asistan:
+```python
+class Greeter:
+    def greet(self, name):
+        return f"Merhaba {name}"
+greeter = Greeter()
+print(greeter.greet("Ali"))
+```
+Kullanıcı: Python'da sayaç sınıfı yaz.
+Asistan:
+```python
+class Counter:
+    def __init__(self):
+        self.value = 0
+    def increase(self):
+        self.value += 1
+counter = Counter()
+counter.increase()
+print(counter.value)
+```
+Kullanıcı: Python'da ürün fiyatı tutan sınıf yaz.
+Asistan:
+```python
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+product = Product("Kitap", 120)
+print(product.price)
+```
+Kullanıcı: Python'da dikdörtgen alanı hesaplayan sınıf yaz.
+Asistan:
+```python
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    def area(self):
+        return self.width * self.height
+rectangle = Rectangle(4, 5)
+print(rectangle.area())
+```
+Kullanıcı: Python'da __str__ metodu kullanan sınıf yaz.
+Asistan:
+```python
+class Note:
+    def __init__(self, text):
+        self.text = text
+    def __str__(self):
+        return self.text
+note = Note("Temiz veri önemlidir")
+print(note)
+```
+Kullanıcı: Python'da basit model bilgisi tutan sınıf yaz.
+Asistan:
+```python
+class ModelInfo:
+    def __init__(self, name, parameter_count):
+        self.name = name
+        self.parameter_count = parameter_count
+info = ModelInfo("DarkMind", 30000000)
+print(info.name)
+```
+Kullanıcı: Python'da mutlak değer hesapla.
+Asistan:
+```python
+number = -12
+print(abs(number))
+```
+Kullanıcı: Python'da yuvarlama yap.
+Asistan:
+```python
+value = 3.14159
+print(round(value, 2))
+```
+Kullanıcı: Python'da listedeki en küçük sayıyı bul.
+Asistan:
+```python
+numbers = [8, 3, 11]
+print(min(numbers))
+```
+Kullanıcı: Python'da listedeki en büyük sayıyı bul.
+Asistan:
+```python
+numbers = [8, 3, 11]
+print(max(numbers))
+```
+Kullanıcı: Python'da toplam ve ortalama hesapla.
+Asistan:
+```python
+numbers = [10, 20, 30]
+total = sum(numbers)
+average = total / len(numbers)
+print(average)
+```
+Kullanıcı: Python'da üs alma işlemi yap.
+Asistan:
+```python
+base = 2
+power = 5
+print(base ** power)
+```
+Kullanıcı: Python'da bölme sonucunu iki ondalığa yuvarla.
+Asistan:
+```python
+result = 10 / 3
+print(round(result, 2))
+```
+Kullanıcı: Python'da kalan bulma işlemi yap.
+Asistan:
+```python
+number = 17
+remainder = number % 5
+print(remainder)
+```
+Kullanıcı: Python'da sayı listesini küçükten büyüğe sırala.
+Asistan:
+```python
+numbers = [5, 1, 9, 3]
+sorted_numbers = sorted(numbers)
+print(sorted_numbers)
+```
+Kullanıcı: Python'da sayı listesini büyükten küçüğe sırala.
+Asistan:
+```python
+numbers = [5, 1, 9, 3]
+sorted_numbers = sorted(numbers, reverse=True)
+print(sorted_numbers)
+```
+Kullanıcı: Python'da kelimeleri alfabetik sırala.
+Asistan:
+```python
+words = ["veri", "model", "python"]
+print(sorted(words))
+```
+Kullanıcı: Python'da kelimeleri uzunluğa göre sırala.
+Asistan:
+```python
+words = ["ai", "python", "transformer"]
+print(sorted(words, key=len))
+```
+Kullanıcı: Python'da sözlük listesini puana göre sırala.
+Asistan:
+```python
+students = [
+    {"name": "Ali", "score": 80},
+    {"name": "Ayşe", "score": 95},
+students = sorted(students, key=lambda item: item["score"])
+print(students)
+```
+Kullanıcı: Python'da tuple listesini ikinci elemana göre sırala.
+Asistan:
+```python
+pairs = [("a", 3), ("b", 1), ("c", 2)]
+print(sorted(pairs, key=lambda item: item[1]))
+```
+Kullanıcı: Python'da listeyi yerinde sırala.
+Asistan:
+```python
+numbers = [4, 2, 7]
+numbers.sort()
+print(numbers)
+```
+Kullanıcı: Python'da büyük küçük harf duyarsız sıralama yap.
+Asistan:
+```python
+words = ["Python", "ai", "Data"]
+print(sorted(words, key=str.lower))
+```
+Kullanıcı: Python'da listedeki çift sayıları filtrele.
+Asistan:
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+evens = [number for number in numbers if number % 2 == 0]
+print(evens)
+```
+Kullanıcı: Python'da kısa kelimeleri filtrele.
+Asistan:
+```python
+words = ["ai", "python", "kod", "transformer"]
+long_words = [word for word in words if len(word) >= 5]
+print(long_words)
+```
+Kullanıcı: Python'da boş metinleri listeden çıkar.
+Asistan:
+```python
+texts = ["merhaba", "", " ", "veri"]
+cleaned = [text for text in texts if text.strip()]
+print(cleaned)
+```
+Kullanıcı: Python'da belirli puanın üstündeki öğrencileri seç.
+Asistan:
+```python
+students = {"Ali": 80, "Ayşe": 95, "Can": 60}
+passed = {name: score for name, score in students.items() if score >= 70}
+print(passed)
+```
+Kullanıcı: Python'da pozitif sayıları filtrele.
+Asistan:
+```python
+numbers = [-3, 0, 2, 5]
+positive = [number for number in numbers if number > 0]
+print(positive)
+```
+Kullanıcı: Python'da belirli harfle başlayan kelimeleri seç.
+Asistan:
+```python
+words = ["model", "metin", "veri", "makine"]
+selected = [word for word in words if word.startswith("m")]
+print(selected)
+```
+Kullanıcı: Python'da tek sayıları filter fonksiyonuyla seç.
+Asistan:
+```python
+numbers = [1, 2, 3, 4, 5]
+odds = list(filter(lambda number: number % 2 == 1, numbers))
+print(odds)
+```
+Kullanıcı: Python'da None değerlerini listeden çıkar.
+Asistan:
+```python
+items = [1, None, 2, None, 3]
+clean_items = [item for item in items if item is not None]
+print(clean_items)
+```
+Kullanıcı: Python'da listedeki elemanları Counter ile say.
+Asistan:
+```python
+from collections import Counter
+words = ["veri", "model", "veri"]
+counts = Counter(words)
+print(counts)
+```
+Kullanıcı: Python'da metindeki harf sayısını hesapla.
+Asistan:
+```python
+text = "banana"
+count = text.count("a")
+print(count)
+```
+Kullanıcı: Python'da listedeki çift sayı adedini bul.
+Asistan:
+```python
+numbers = [1, 2, 3, 4, 6]
+count = sum(1 for number in numbers if number % 2 == 0)
+print(count)
+```
+Kullanıcı: Python'da kelime frekansı hesapla.
+Asistan:
+```python
+from collections import Counter
+text = "temiz veri temiz model"
+counts = Counter(text.split())
+print(counts)
+```
+Kullanıcı: Python'da sözlükle basit sayaç tut.
+Asistan:
+```python
+words = ["a", "b", "a"]
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+print(counts)
+```
+Kullanıcı: Python'da listedeki uzun kelime sayısını bul.
+Asistan:
+```python
+words = ["ai", "python", "transformer"]
+count = sum(1 for word in words if len(word) > 4)
+print(count)
+```
+Kullanıcı: Python'da toplam satır sayısını hesapla.
+Asistan:
+```python
+text = "birinci\nikinci\nüçüncü"
+line_count = len(text.splitlines())
+print(line_count)
+```
+Kullanıcı: Python'da kullanıcıdan isim alıp selam ver.
+Asistan:
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+Kullanıcı: Python'da kullanıcıdan iki sayı alıp topla.
+Asistan:
+```python
+first = int(input("İlk sayı: "))
+second = int(input("İkinci sayı: "))
+print(first + second)
+```
+Kullanıcı: Python'da kullanıcıdan yaş alıp yetişkin kontrolü yap.
+Asistan:
+```python
+age = int(input("Yaş: "))
+if age >= 18:
+    print("Yetişkin")
+else:
+    print("Çocuk")
+```
+Kullanıcı: Python'da kullanıcıdan metin alıp uzunluğunu yazdır.
+Asistan:
+```python
+text = input("Metin: ")
+print(len(text))
+```
+Kullanıcı: Python'da kullanıcıdan sayı alıp karesini yazdır.
+Asistan:
+```python
+number = int(input("Sayı: "))
+print(number * number)
+```
+Kullanıcı: Python'da kullanıcıdan virgüllü liste alıp parçalara ayır.
+Asistan:
+```python
+raw_text = input("Kelimeleri virgülle yaz: ")
+items = [item.strip() for item in raw_text.split(",") if item.strip()]
+print(items)
+```

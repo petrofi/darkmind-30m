@@ -296,7 +296,7 @@ def write_samples_jsonl(
     output_path: Path,
     prompt: str,
     settings: dict,
-    samples: list[str],
+    samples: list[dict[str, str]],
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -306,7 +306,8 @@ def write_samples_jsonl(
                 "sample_index": index,
                 "prompt": prompt,
                 "settings": settings,
-                "output": sample,
+                "raw_output": sample["raw_output"],
+                "answer": sample["answer"],
                 "created_at": datetime.now().astimezone().isoformat(timespec="seconds"),
             }
             file.write(json.dumps(row, ensure_ascii=False) + "\n")
@@ -361,6 +362,19 @@ def main() -> None:
         action="store_true",
         help="If enabled, stop generation when the next dialogue turn starts.",
     )
+    parser.add_argument(
+        "--stop_on_chat_turn",
+        dest="stop_on_chat_turn",
+        action="store_true",
+        default=True,
+        help="When chat format is enabled, stop when a new user turn starts.",
+    )
+    parser.add_argument(
+        "--no_stop_on_chat_turn",
+        dest="stop_on_chat_turn",
+        action="store_false",
+        help="Disable automatic chat-turn stopping for --chat_format.",
+    )
     args = parser.parse_args()
 
     num_return_sequences = (
@@ -383,7 +397,8 @@ def main() -> None:
         args.stop_at_next_user = True
     elif args.chat_format:
         args.prompt = f"Kullanıcı: {args.prompt.strip()}\nAsistan:"
-        args.stop_at_next_user = True
+        if args.stop_on_chat_turn:
+            args.stop_at_next_user = True
 
     checkpoint_path = resolve_path(args.checkpoint)
     config_path = resolve_path(args.config)
@@ -428,6 +443,7 @@ def main() -> None:
         "num_return_sequences": num_return_sequences,
         "seed": args.seed,
         "stop_at_next_user": args.stop_at_next_user,
+        "stop_on_chat_turn": args.stop_on_chat_turn,
         "chat_format": args.chat_format,
     }
 
@@ -435,7 +451,7 @@ def main() -> None:
 
     for sample_index in range(num_return_sequences):
         set_seed(args.seed + sample_index, device)
-        output_text = generate_with_controls(
+        raw_output = generate_with_controls(
             model=model,
             tokenizer=tokenizer,
             prompt_text=args.prompt,
@@ -448,8 +464,11 @@ def main() -> None:
             top_p=args.top_p,
             no_repeat_ngram_size=args.no_repeat_ngram_size,
         )
-        output_text = clean_generated_text(output_text)
-        samples.append(output_text or SAFE_FALLBACK)
+        answer = extract_answer(raw_output, args.prompt)
+        samples.append({
+            "raw_output": raw_output.strip() or SAFE_FALLBACK,
+            "answer": answer or SAFE_FALLBACK,
+        })
 
     if output_path:
         write_samples_jsonl(output_path, args.prompt, settings, samples)
@@ -460,8 +479,11 @@ def main() -> None:
 
     for index, sample in enumerate(samples, start=1):
         print("=" * 70)
-        print(f"OUTPUT {index}:")
-        print(sample)
+        print(f"RAW OUTPUT {index}:")
+        print(sample["raw_output"])
+        print("=" * 70)
+        print(f"ASSISTANT ANSWER {index}:")
+        print(sample["answer"])
 
     if output_path:
         print("=" * 70)

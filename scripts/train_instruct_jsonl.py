@@ -21,7 +21,7 @@ DEFAULT_BASE_CHECKPOINT = ROOT_DIR / "models" / "darkmind-30m-10k-step15000.pt"
 DEFAULT_CONFIG = ROOT_DIR / "configs" / "darkmind_30m_1000step.json"
 DEFAULT_TOKENIZER = ROOT_DIR / "tokenizer" / "darkmind-tokenizer"
 DEFAULT_SAVE_PATH = ROOT_DIR / "models" / "darkmind-30m-instruct-v0.1.pt"
-RUN_NAME = "darkmind_instruct_v0_1"
+DEFAULT_RUN_NAME = "darkmind_instruct_v0_3"
 
 
 def resolve_path(path_value: str) -> Path:
@@ -201,6 +201,7 @@ def main() -> None:
     parser.add_argument("--config", type=str, default=str(DEFAULT_CONFIG.relative_to(ROOT_DIR)))
     parser.add_argument("--tokenizer", type=str, default=str(DEFAULT_TOKENIZER.relative_to(ROOT_DIR)))
     parser.add_argument("--save_path", type=str, default=str(DEFAULT_SAVE_PATH.relative_to(ROOT_DIR)))
+    parser.add_argument("--run_name", type=str, default=DEFAULT_RUN_NAME)
     parser.add_argument("--epochs", type=int, default=10)
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--block_size", type=int, default=256)
@@ -282,7 +283,7 @@ def main() -> None:
     print("=" * 70)
     print("DarkMind instruction fine-tuning")
     print("=" * 70)
-    print(f"Run name: {RUN_NAME}")
+    print(f"Run name: {args.run_name}")
     print(f"Data: {data_path}")
     print(f"Base checkpoint: {base_checkpoint_path}")
     print(f"Config: {config_path}")
@@ -389,7 +390,7 @@ def main() -> None:
     save_path.parent.mkdir(parents=True, exist_ok=True)
     torch.save(
         {
-            "run_name": RUN_NAME,
+            "run_name": args.run_name,
             "model_state_dict": model.state_dict(),
             "optimizer_state_dict": optimizer.state_dict(),
             "config": config.__dict__,

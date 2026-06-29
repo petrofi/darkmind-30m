@@ -17,6 +17,8 @@ sys.path.append(str(ROOT_DIR))
 from model.gpt import GPTConfig, GPTLanguageModel, count_parameters
 
 
+DEFAULT_CHECKPOINT = ROOT_DIR / "models" / "darkmind-30m-10k.pt"
+DEFAULT_CONFIG = ROOT_DIR / "configs" / "darkmind_30m_1000step.json"
 TOKENIZER_DIR = ROOT_DIR / "tokenizer" / "darkmind-tokenizer"
 SPECIAL_STOP_TOKENS = ["</s>", "<s>", "<pad>", "<unk>", "<mask>", "<|end|>"]
 TURN_STOP_MARKERS = [
@@ -38,6 +40,11 @@ def resolve_path(path_value: str) -> Path:
         return path
 
     return ROOT_DIR / path
+
+
+def load_json(path: Path) -> dict:
+    with path.open("r", encoding="utf-8") as file:
+        return json.load(file)
 
 
 def set_seed(seed: int, device: str) -> None:
@@ -110,21 +117,51 @@ def load_tokenizer(tokenizer_dir: Path = TOKENIZER_DIR) -> ByteLevelBPETokenizer
     return ByteLevelBPETokenizer(str(vocab_path), str(merges_path))
 
 
+def build_config_from_file(config_path: Path, vocab_size: int) -> GPTConfig:
+    cfg = load_json(config_path)
+    model_cfg = cfg["model"]
+
+    return GPTConfig(
+        vocab_size=vocab_size,
+        block_size=model_cfg["block_size"],
+        n_layer=model_cfg["n_layer"],
+        n_head=model_cfg["n_head"],
+        n_embd=model_cfg["n_embd"],
+        dropout=model_cfg["dropout"],
+    )
+
+
 def load_checkpoint_model(
     checkpoint_path: Path,
     device: str,
+    config_path: Path | None = None,
+    vocab_size: int | None = None,
 ) -> tuple[GPTLanguageModel, dict]:
     if not checkpoint_path.exists():
         raise FileNotFoundError(f"Checkpoint not found: {checkpoint_path}")
 
     checkpoint = torch.load(checkpoint_path, map_location=device)
-    config = GPTConfig(**checkpoint["config"])
+    checkpoint_dict = checkpoint if isinstance(checkpoint, dict) else {}
+    state_dict = checkpoint_dict.get("model_state_dict", checkpoint)
+
+    if "config" in checkpoint_dict:
+        config = GPTConfig(**checkpoint_dict["config"])
+        config_source = "checkpoint"
+    else:
+        if config_path is None or vocab_size is None:
+            raise ValueError(
+                "Checkpoint has no embedded config. Provide --config and --tokenizer."
+            )
+
+        config = build_config_from_file(config_path, vocab_size)
+        config_source = str(config_path)
 
     model = GPTLanguageModel(config).to(device)
-    model.load_state_dict(checkpoint["model_state_dict"])
+    model.load_state_dict(state_dict)
     model.eval()
 
-    return model, checkpoint
+    checkpoint_dict["resolved_config_source"] = config_source
+    return model, checkpoint_dict
 
 
 def apply_repetition_penalty(
@@ -214,8 +251,20 @@ def main() -> None:
     parser.add_argument(
         "--checkpoint",
         type=str,
-        required=True,
+        default=str(DEFAULT_CHECKPOINT.relative_to(ROOT_DIR)),
         help="Checkpoint path. Example: checkpoints/darkmind_30m.pt",
+    )
+    parser.add_argument(
+        "--config",
+        type=str,
+        default=str(DEFAULT_CONFIG.relative_to(ROOT_DIR)),
+        help="DarkMind config used when the checkpoint has no embedded config.",
+    )
+    parser.add_argument(
+        "--tokenizer",
+        type=str,
+        default=str(TOKENIZER_DIR.relative_to(ROOT_DIR)),
+        help="Tokenizer directory.",
     )
     parser.add_argument("--prompt", type=str, default="DarkMind")
     parser.add_argument(
@@ -246,11 +295,19 @@ def main() -> None:
         args.stop_at_next_user = True
 
     checkpoint_path = resolve_path(args.checkpoint)
+    config_path = resolve_path(args.config)
+    tokenizer_dir = resolve_path(args.tokenizer)
     output_path = resolve_path(args.output_path) if args.output_path else None
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    tokenizer = load_tokenizer()
-    model, checkpoint = load_checkpoint_model(checkpoint_path, device)
+    tokenizer = load_tokenizer(tokenizer_dir)
+    vocab_size = len(load_json(tokenizer_dir / "vocab.json"))
+    model, checkpoint = load_checkpoint_model(
+        checkpoint_path=checkpoint_path,
+        device=device,
+        config_path=config_path,
+        vocab_size=vocab_size,
+    )
 
     print("=" * 70)
     print("DarkMind checkpoint generation")
@@ -261,6 +318,9 @@ def main() -> None:
         print(f"GPU: {torch.cuda.get_device_name(0)}")
 
     print(f"Checkpoint: {checkpoint_path}")
+    print(f"Config: {config_path}")
+    print(f"Tokenizer: {tokenizer_dir}")
+    print(f"Model config source: {checkpoint.get('resolved_config_source', 'unknown')}")
     print(f"Run name: {checkpoint.get('run_name', 'unknown')}")
     print(f"Model parameters: {count_parameters(model):,}")
     print(f"Vocab size: {model.config.vocab_size}")

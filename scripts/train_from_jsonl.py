@@ -114,6 +114,9 @@ def main() -> None:
         help="Legacy alias for --tokenizer.",
     )
     parser.add_argument("--max_steps", type=int, default=100)
+    parser.add_argument("--val_ratio", type=float, default=0.05)
+    parser.add_argument("--eval_interval", type=int, default=100)
+    parser.add_argument("--eval_batches", type=int, default=20)
     parser.add_argument("--resume_from", type=str, default=None)
     parser.add_argument("--n_layer", type=int, default=None)
     parser.add_argument("--n_head", type=int, default=None)
@@ -127,6 +130,15 @@ def main() -> None:
 
     if args.max_steps < 1:
         raise ValueError("--max_steps must be at least 1")
+
+    if not 0 <= args.val_ratio < 1:
+        raise ValueError("--val_ratio must be greater than or equal to 0 and less than 1")
+
+    if args.val_ratio > 0 and args.eval_interval < 1:
+        raise ValueError("--eval_interval must be at least 1")
+
+    if args.val_ratio > 0 and args.eval_batches < 1:
+        raise ValueError("--eval_batches must be at least 1")
 
     config_path = resolve_path(args.config)
 
@@ -187,6 +199,21 @@ def main() -> None:
         raise ValueError("Dataset is too small for the selected block_size.")
 
     tokens = torch.tensor(ids, dtype=torch.long)
+    split_idx = int(len(tokens) * (1.0 - args.val_ratio))
+
+    if args.val_ratio > 0:
+        train_data = tokens[:split_idx]
+        val_data = tokens[split_idx:]
+    else:
+        train_data = tokens
+        val_data = None
+
+    if len(train_data) <= block_size + 1:
+        raise ValueError("Train split is too small for the selected block_size.")
+
+    if val_data is not None and len(val_data) <= block_size + 1:
+        raise ValueError("Validation split is too small for the selected block_size.")
+
     config = GPTConfig(
         vocab_size=vocab_size,
         block_size=block_size,
@@ -210,7 +237,7 @@ def main() -> None:
         print(f"Resumed model weights from: {resume_path}")
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
-    steps_per_epoch = max(1, len(tokens) // (batch_size * block_size))
+    steps_per_epoch = max(1, len(train_data) // (batch_size * block_size))
     total_steps = min(args.max_steps, steps_per_epoch * args.epochs)
 
     print("=" * 70)
@@ -221,6 +248,8 @@ def main() -> None:
     print(f"Tokenizer: {tokenizer_dir}")
     print(f"Documents: {len(texts):,}")
     print(f"Tokens: {len(tokens):,}")
+    print(f"Train tokens: {len(train_data):,}")
+    print(f"Validation tokens: {len(val_data) if val_data is not None else 0:,}")
     print(f"Device: {device}")
     if device == "cuda":
         print(f"GPU: {torch.cuda.get_device_name(0)}")
@@ -239,29 +268,84 @@ def main() -> None:
         )
     print(f"Batch size: {batch_size}")
     print(f"Learning rate: {learning_rate}")
+    print(f"Validation ratio: {args.val_ratio}")
+    print(f"Eval interval: {args.eval_interval}")
+    print(f"Eval batches: {args.eval_batches}")
     print(f"Steps: {total_steps:,}")
     print(f"Save path: {save_path}")
     print("=" * 70)
 
-    def get_batch():
+    def get_batch(split: str = "train"):
+        data = train_data if split == "train" else val_data
+
+        if data is None:
+            raise ValueError("Validation data is not available.")
+
         ix = torch.randint(
-            len(tokens) - block_size - 1,
+            len(data) - block_size - 1,
             (batch_size,),
         )
-        x = torch.stack([tokens[i:i + block_size] for i in ix])
-        y = torch.stack([tokens[i + 1:i + block_size + 1] for i in ix])
+        x = torch.stack([data[i:i + block_size] for i in ix])
+        y = torch.stack([data[i + 1:i + block_size + 1] for i in ix])
         return x.to(device), y.to(device)
 
+    @torch.no_grad()
+    def estimate_losses() -> dict[str, float]:
+        model.eval()
+        losses = {}
+        splits = ["train"]
+
+        if val_data is not None:
+            splits.append("val")
+
+        for split in splits:
+            split_losses = []
+
+            for _ in range(args.eval_batches):
+                xb, yb = get_batch(split)
+                _, loss = model(xb, yb)
+                split_losses.append(loss.item())
+
+            losses[split] = sum(split_losses) / len(split_losses)
+
+        model.train()
+        return losses
+
     model.train()
-    final_loss = None
+    final_step_loss = None
+    final_train_loss = None
+    final_val_loss = None
 
     for step in tqdm(range(1, total_steps + 1), desc="training", unit="step"):
-        xb, yb = get_batch()
+        xb, yb = get_batch("train")
         _, loss = model(xb, yb)
         optimizer.zero_grad(set_to_none=True)
         loss.backward()
         optimizer.step()
-        final_loss = loss.item()
+        final_step_loss = loss.item()
+
+        should_eval = (
+            args.val_ratio > 0
+            and (step % args.eval_interval == 0 or step == total_steps)
+        )
+
+        if should_eval:
+            losses = estimate_losses()
+            final_train_loss = losses["train"]
+            final_val_loss = losses.get("val")
+            tqdm.write(
+                f"Step {step}: "
+                f"train loss={final_train_loss:.4f}, "
+                f"val loss={final_val_loss:.4f}"
+            )
+
+    if final_train_loss is None:
+        final_train_loss = final_step_loss
+
+    if args.val_ratio > 0 and final_val_loss is None:
+        losses = estimate_losses()
+        final_train_loss = losses["train"]
+        final_val_loss = losses.get("val")
 
     save_path.parent.mkdir(parents=True, exist_ok=True)
     torch.save(
@@ -279,11 +363,18 @@ def main() -> None:
                 "block_size": block_size,
                 "lr": learning_rate,
                 "max_steps": args.max_steps,
+                "val_ratio": args.val_ratio,
+                "eval_interval": args.eval_interval,
+                "eval_batches": args.eval_batches,
                 "seed": seed,
             },
+            "train_tokens": len(train_data),
+            "val_tokens": len(val_data) if val_data is not None else 0,
             "vocab_size": vocab_size,
             "parameter_count": parameter_count,
-            "final_train_loss": final_loss,
+            "final_step_loss": final_step_loss,
+            "final_train_loss": final_train_loss,
+            "final_val_loss": final_val_loss,
         },
         save_path,
     )
@@ -292,7 +383,8 @@ def main() -> None:
     print("Training completed.")
     print(f"Checkpoint saved: {save_path}")
     print(f"Parameter count: {parameter_count:,}")
-    print(f"Final train loss: {final_loss}")
+    print(f"Final train loss: {final_train_loss}")
+    print(f"Final val loss: {final_val_loss}")
     print("=" * 70)
 
 

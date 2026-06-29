@@ -1,0 +1,84 @@
+These are candidate examples. Review before adding to training data.
+Do not approve blindly. Keep only examples that are correct, useful, and safe.
+
+Source eval run: C:\Users\tarik\OneDrive\Ekler\Desktop\darkmind-30m\data\self_improvement\runs\eval_run_20260628_205558.jsonl
+
+Failed items: 26
+
+Kullanıcı: DarkMind ChatGPT gibi mi?
+Asistan: Ben DarkMind. Türkçe odaklı küçük bir dil modeli geliştirme projesiyim ve hâlâ geliştirme aşamasındayım. Anahtar kavramlar: hayır, değildir.
+
+Kullanıcı: darkmind chatgpt gibi mi
+Asistan: Ben DarkMind. Türkçe odaklı küçük bir dil modeli geliştirme projesiyim ve hâlâ geliştirme aşamasındayım. Anahtar kavramlar: deneysel.
+
+Kullanıcı: Cevabın yanlış olabilir mi?
+Asistan: Bu konuda yeterli bilgiye sahip olmayabilirim. Emin değilsem uydurmak yerine sınırlı olduğumu söylemem daha doğru olur. Anahtar kavramlar: hatalı, geliştirme, yanlış, aşamasındayım.
+
+Kullanıcı: Bilmiyorsan uydurmalı mısın?
+Asistan: Bu konuda yeterli bilgiye sahip olmayabilirim. Emin değilsem uydurmak yerine sınırlı olduğumu söylemem daha doğru olur.
+
+Kullanıcı: Token ne demek?
+Asistan: Tokenizer, metni modelin işleyebileceği tokenlara ve token ID'lerine dönüştüren bileşendir. Anahtar kavramlar: parça, metin, küçük birim, kelime.
+
+Kullanıcı: Vocab nedir?
+Asistan: Vocab, tokenizer'ın kullandığı token sözlüğüdür. Model metni vocab içindeki token ID değerleriyle işler.
+
+Kullanıcı: vocab nedir
+Asistan: Vocab, tokenizer'ın kullandığı token sözlüğüdür. Model metni vocab içindeki token ID değerleriyle işler.
+
+Kullanıcı: CPU ile GPU arasındaki fark nedir?
+Asistan: CPU genel amaçlı işlemcidir. GPU paralel hesaplamalarda güçlüdür ve derin öğrenme eğitimini CPU'ya göre hızlandırabilir.
+
+Kullanıcı: CPU vs GPU farkı nedir?
+Asistan: CPU genel amaçlı işlemcidir. GPU paralel hesaplamalarda güçlüdür ve derin öğrenme eğitimini CPU'ya göre hızlandırabilir.
+
+Kullanıcı: Train loss düşerken validation loss artarsa ne düşünmeliyim?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf genelleme yapmasıdır. Anahtar kavramlar: validation.
+
+Kullanıcı: validation loss artarsa model iyi mi kötü mü?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf genelleme yapmasıdır. Anahtar kavramlar: validation.
+
+Kullanıcı: Checkpoint ile tokenizer uyumu neden önemli?
+Asistan: Vocab, tokenizer'ın kullandığı token sözlüğüdür. Model metni vocab içindeki token ID değerleriyle işler.
+
+Kullanıcı: checkpoint tokenizer mismatch ne demek?
+Asistan: Vocab, tokenizer'ın kullandığı token sözlüğüdür. Model metni vocab içindeki token ID değerleriyle işler.
+
+Kullanıcı: Python'da listeye eleman nasıl eklenir?
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır. Örnek: numbers.append(5)
+
+Kullanıcı: Python'da try except ne işe yarar?
+Asistan: Python'da küçük ve doğru örneklerle ilerlemek gerekir; fonksiyonlar def ile tanımlanır, koşullar if/else ile yazılır ve listeler üzerinde döngü kurulabilir. Anahtar kavramlar: hata, except, exception, try.
+
+Kullanıcı: append ne işe yarar?
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır. Örnek: numbers.append(5)
+
+Kullanıcı: try/except ne zaman kullanılır?
+Asistan: Python'da küçük ve doğru örneklerle ilerlemek gerekir; fonksiyonlar def ile tanımlanır, koşullar if/else ile yazılır ve listeler üzerinde döngü kurulabilir. Anahtar kavramlar: hata, except, try, exception.
+
+Kullanıcı: Corpus nasıl oluşturulur?
+Asistan: build_dataset_from_raw.py kaynak dosyaları ve temizlenmiş verileri birleştirir, ardından data/processed/corpus_v3.txt dosyasını üretir.
+
+Kullanıcı: Temiz veri neden önemli?
+Asistan: Data pipeline; ham veriyi toplama, temizleme, corpus oluşturma, tokenizer eğitme ve modeli eğitime hazırlama sürecidir. Anahtar kavramlar: kalite.
+
+Kullanıcı: build_dataset_from_raw.py ne yapar?
+Asistan: build_dataset_from_raw.py kaynak dosyaları ve temizlenmiş verileri birleştirir, ardından data/processed/corpus_v3.txt dosyasını üretir.
+
+Kullanıcı: build_dataset_from_raw.py hangi dosyayı üretir?
+Asistan: build_dataset_from_raw.py kaynak dosyaları ve temizlenmiş verileri birleştirir, ardından data/processed/corpus_v3.txt dosyasını üretir.
+
+Kullanıcı: IndentationError nasıl çözülür?
+Asistan: IndentationError genellikle girinti hatasından kaynaklanır. Python'da aynı blok içindeki satırların girinti seviyesi tutarlı olmalıdır.
+
+Kullanıcı: IndentationError neden çıkar?
+Asistan: IndentationError genellikle girinti hatasından kaynaklanır. Python'da aynı blok içindeki satırların girinti seviyesi tutarlı olmalıdır.
+
+Kullanıcı: Yanlış cevap verirsen ne yapmalıyım?
+Asistan: Bu konuda yeterli bilgiye sahip olmayabilirim. Emin değilsem uydurmak yerine sınırlı olduğumu söylemem daha doğru olur. Anahtar kavramlar: hata, düzelt, hatalı, yanlış.
+
+Kullanıcı: Python'da listeye yeni değer eklemek için ne kullanılır?
+Asistan: Python'da küçük ve doğru örneklerle ilerlemek gerekir; fonksiyonlar def ile tanımlanır, koşullar if/else ile yazılır ve listeler üzerinde döngü kurulabilir.
+
+Kullanıcı: Vocab mismatch checkpoint yüklerken neden sorun olur?
+Asistan: Vocab, tokenizer'ın kullandığı token sözlüğüdür. Model metni vocab içindeki token ID değerleriyle işler.

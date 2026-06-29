@@ -1,17 +1,28 @@
 from pathlib import Path
 import argparse
+from datetime import datetime
+import json
 import re
 import sys
 
 import torch
-from tokenizers import ByteLevelBPETokenizer
 
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.append(str(ROOT_DIR))
+sys.path.append(str(ROOT_DIR / "scripts"))
 
-from generate_from_checkpoint import clean_special_tokens, fix_dialogue_spacing
-from model.gpt import GPTConfig, GPTLanguageModel, count_parameters
+from generate_from_checkpoint import (  # noqa: E402
+    SAFE_FALLBACK,
+    clean_generated_text,
+    extract_answer,
+    generate_with_controls,
+    load_checkpoint_model,
+    load_tokenizer,
+    resolve_path,
+    set_seed,
+)
+from model.gpt import count_parameters  # noqa: E402
 
 
 EXIT_COMMANDS = {"q", "quit", "exit", "çık"}
@@ -21,36 +32,102 @@ def normalize_user_input(user_input: str) -> str:
     return re.sub(r"[ \t]+", " ", user_input.strip())
 
 
-def resolve_path(path_value: str) -> Path:
-    path = Path(path_value)
-
-    if path.is_absolute():
-        return path
-
-    return ROOT_DIR / path
+def format_prompt(question: str) -> str:
+    normalized_question = normalize_user_input(question)
+    return f"Kullanıcı: {normalized_question}\nAsistan:"
 
 
-def load_tokenizer() -> ByteLevelBPETokenizer:
-    tokenizer_dir = ROOT_DIR / "tokenizer" / "darkmind-tokenizer"
-    vocab_path = tokenizer_dir / "vocab.json"
-    merges_path = tokenizer_dir / "merges.txt"
+def append_chat_log(path: Path, row: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
 
-    if not vocab_path.exists() or not merges_path.exists():
-        raise FileNotFoundError(f"Tokenizer files not found in {tokenizer_dir}")
-
-    return ByteLevelBPETokenizer(str(vocab_path), str(merges_path))
+    with path.open("a", encoding="utf-8", newline="\n") as file:
+        file.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
-def load_model(checkpoint_path: Path, device: str) -> GPTLanguageModel:
-    if not checkpoint_path.exists():
-        raise FileNotFoundError(f"Checkpoint not found: {checkpoint_path}")
+def generate_answer(
+    model,
+    tokenizer,
+    question: str,
+    device: str,
+    max_new_tokens: int,
+    temperature: float,
+    top_k: int,
+    repetition_penalty: float,
+    stop_on_user_marker: bool,
+    min_answer_chars: int,
+    debug_prompt: bool,
+) -> tuple[str, str]:
+    prompt = format_prompt(question)
 
-    checkpoint = torch.load(checkpoint_path, map_location=device)
-    config = GPTConfig(**checkpoint["config"])
+    if debug_prompt:
+        print("-" * 70)
+        print("DEBUG PROMPT:")
+        print(prompt)
+        print("-" * 70)
 
-    model = GPTLanguageModel(config).to(device)
-    model.load_state_dict(checkpoint["model_state_dict"])
-    model.eval()
+    output_text = generate_with_controls(
+        model=model,
+        tokenizer=tokenizer,
+        prompt_text=prompt,
+        device=device,
+        max_new_tokens=max_new_tokens,
+        temperature=temperature,
+        top_k=top_k,
+        repetition_penalty=repetition_penalty,
+        stop_on_user_marker=stop_on_user_marker,
+    )
+    answer = extract_answer(output_text, prompt)
+    answer = clean_generated_text(answer)
+
+    if len(answer) < min_answer_chars:
+        answer = SAFE_FALLBACK
+
+    return answer or SAFE_FALLBACK, prompt
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Run an interactive DarkMind terminal chat demo."
+    )
+    parser.add_argument(
+        "--checkpoint",
+        type=str,
+        required=True,
+        help="Checkpoint path. Example: checkpoints/darkmind_30m.pt",
+    )
+    parser.add_argument("--temperature", type=float, default=0.8)
+    parser.add_argument("--top_k", type=int, default=50)
+    parser.add_argument("--max_new_tokens", type=int, default=120)
+    parser.add_argument("--repetition_penalty", type=float, default=1.1)
+    parser.add_argument(
+        "--stop_on_user_marker",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Stop generation when a new Kullanıcı:/Sen: turn appears.",
+    )
+    parser.add_argument("--min_answer_chars", type=int, default=0)
+    parser.add_argument("--save_chat_log", type=str, default=None)
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--debug_prompt",
+        action="store_true",
+        help="Print the exact prompt sent to the model.",
+    )
+    args = parser.parse_args()
+
+    if args.temperature <= 0:
+        raise ValueError("--temperature must be greater than 0")
+
+    if args.min_answer_chars < 0:
+        raise ValueError("--min_answer_chars must be non-negative")
+
+    checkpoint_path = resolve_path(args.checkpoint)
+    chat_log_path = resolve_path(args.save_chat_log) if args.save_chat_log else None
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    set_seed(args.seed, device)
+
+    tokenizer = load_tokenizer()
+    model, checkpoint = load_checkpoint_model(checkpoint_path, device)
 
     print("=" * 70)
     print("DarkMind chat demo")
@@ -63,131 +140,8 @@ def load_model(checkpoint_path: Path, device: str) -> GPTLanguageModel:
     print(f"Checkpoint: {checkpoint_path}")
     print(f"Run name: {checkpoint.get('run_name', 'unknown')}")
     print(f"Model parameters: {count_parameters(model):,}")
+    print(f"Vocab size: {model.config.vocab_size}")
     print("=" * 70)
-
-    return model
-
-
-def extract_first_answer(output_text: str, prompt_text: str) -> str:
-    output_text = clean_special_tokens(output_text)
-
-    if output_text.startswith(prompt_text):
-        answer = output_text[len(prompt_text):]
-    else:
-        answer = output_text
-
-    stop_markers = [
-        "\n\nKullanıcı:",
-        "\nKullanıcı:",
-        "\n\nSoru:",
-        "\nSoru:",
-        "\n\nSen:",
-        "\nSen:",
-    ]
-
-    for marker in stop_markers:
-        if marker in answer:
-            answer = answer.split(marker)[0]
-            break
-
-    answer = fix_dialogue_spacing(answer).strip()
-
-    if answer.startswith("Asistan:"):
-        answer = answer[len("Asistan:"):].strip()
-
-    return answer
-
-
-def generate_answer(
-    model: GPTLanguageModel,
-    tokenizer: ByteLevelBPETokenizer,
-    question: str,
-    device: str,
-    max_new_tokens: int,
-    temperature: float,
-    top_k: int,
-    debug_prompt: bool,
-) -> str:
-    normalized_question = normalize_user_input(question)
-    prompt = f"Kullanıcı: {normalized_question}\nAsistan:"
-
-    if debug_prompt:
-        print("-" * 70)
-        print("DEBUG PROMPT:")
-        print(prompt)
-        print("-" * 70)
-
-    encoded = tokenizer.encode(prompt)
-
-    idx = torch.tensor(
-        [encoded.ids],
-        dtype=torch.long,
-        device=device,
-    )
-
-    if top_k <= 0:
-        generation_top_k = None
-    else:
-        generation_top_k = min(top_k, model.config.vocab_size)
-
-    with torch.no_grad():
-        generated = model.generate(
-            idx,
-            max_new_tokens=max_new_tokens,
-            temperature=temperature,
-            top_k=generation_top_k,
-        )
-
-    output_text = tokenizer.decode(generated[0].tolist())
-    answer = extract_first_answer(output_text, prompt)
-
-    return answer or "(boş cevap)"
-
-
-def main():
-    parser = argparse.ArgumentParser(
-        description="Run an interactive DarkMind terminal chat demo."
-    )
-    parser.add_argument(
-        "--checkpoint",
-        type=str,
-        required=True,
-        help="Checkpoint path. Example: checkpoints/darkmind_30m.pt",
-    )
-    parser.add_argument(
-        "--temperature",
-        type=float,
-        default=0.8,
-        help="Sampling temperature.",
-    )
-    parser.add_argument(
-        "--top_k",
-        type=int,
-        default=50,
-        help="Top-k sampling value. Use 0 to disable top-k.",
-    )
-    parser.add_argument(
-        "--max_new_tokens",
-        type=int,
-        default=120,
-        help="Maximum number of new tokens per answer.",
-    )
-    parser.add_argument(
-        "--debug_prompt",
-        action="store_true",
-        help="Print the exact prompt sent to the model.",
-    )
-    args = parser.parse_args()
-
-    if args.temperature <= 0:
-        raise ValueError("--temperature must be greater than 0")
-
-    checkpoint_path = resolve_path(args.checkpoint)
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-
-    tokenizer = load_tokenizer()
-    model = load_model(checkpoint_path, device)
-
     print("Çıkmak için q, quit, exit veya çık yaz.")
 
     while True:
@@ -203,7 +157,7 @@ def main():
         if user_input.lower() in EXIT_COMMANDS:
             break
 
-        answer = generate_answer(
+        answer, prompt = generate_answer(
             model=model,
             tokenizer=tokenizer,
             question=user_input,
@@ -211,10 +165,33 @@ def main():
             max_new_tokens=args.max_new_tokens,
             temperature=args.temperature,
             top_k=args.top_k,
+            repetition_penalty=args.repetition_penalty,
+            stop_on_user_marker=args.stop_on_user_marker,
+            min_answer_chars=args.min_answer_chars,
             debug_prompt=args.debug_prompt,
         )
 
         print(f"DarkMind: {answer}")
+
+        if chat_log_path:
+            append_chat_log(
+                chat_log_path,
+                {
+                    "timestamp": datetime.now().astimezone().isoformat(timespec="seconds"),
+                    "prompt": prompt,
+                    "user": user_input,
+                    "answer": answer,
+                    "checkpoint": str(checkpoint_path),
+                    "settings": {
+                        "temperature": args.temperature,
+                        "top_k": args.top_k,
+                        "max_new_tokens": args.max_new_tokens,
+                        "repetition_penalty": args.repetition_penalty,
+                        "stop_on_user_marker": args.stop_on_user_marker,
+                        "min_answer_chars": args.min_answer_chars,
+                    },
+                },
+            )
 
 
 if __name__ == "__main__":

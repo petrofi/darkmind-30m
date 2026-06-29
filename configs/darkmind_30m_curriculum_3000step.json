@@ -1,0 +1,24 @@
+{
+  "run_name": "darkmind_30m_curriculum_3000step",
+  "data_path": "data/processed/corpus_curriculum_v01.txt",
+  "tokenizer_dir": "tokenizer/darkmind-tokenizer",
+  "checkpoint_path": "checkpoints/darkmind_30m_curriculum_3000step_best.pt",
+  "seed": 42,
+  "model": {
+    "block_size": 256,
+    "n_layer": 8,
+    "n_head": 8,
+    "n_embd": 512,
+    "dropout": 0.1
+  },
+  "training": {
+    "batch_size": 6,
+    "gradient_accumulation_steps": 2,
+    "max_steps": 3000,
+    "eval_interval": 100,
+    "eval_iters": 10,
+    "learning_rate": 0.00025,
+    "train_ratio": 0.9,
+    "min_tokens": 300000
+  }
+}

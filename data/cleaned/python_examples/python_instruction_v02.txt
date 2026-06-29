@@ -1,0 +1,2456 @@
+Kullanıcı: Python'da değişken nasıl tanımlanır?
+Asistan: Python'da değişken tanımlamak için bir isme değer atanır.
+```python
+name = "DarkMind"
+age = 1
+print(name, age)
+```
+Kullanıcı: Python'da değişken nasıl tanımlanır? Kısa bir örnek göster.
+Asistan: Python'da değişken tanımlamak için bir isme değer atanır.
+```python
+name = "DarkMind"
+age = 1
+print(name, age)
+```
+Kullanıcı: Python'da değişken nasıl tanımlanır? Basit bir Python örneği yaz.
+Asistan: Python'da değişken tanımlamak için bir isme değer atanır.
+```python
+name = "DarkMind"
+age = 1
+print(name, age)
+```
+Kullanıcı: Python'da değişken nasıl tanımlanır? Yeni başlayan biri için açıkla.
+Asistan: Python'da değişken tanımlamak için bir isme değer atanır.
+```python
+name = "DarkMind"
+age = 1
+print(name, age)
+```
+Kullanıcı: Python'da değişken nasıl tanımlanır? Kodla göster.
+Asistan:
+```python
+name = "DarkMind"
+age = 1
+print(name, age)
+```
+Kullanıcı: Python'da değişken nasıl tanımlanır? Küçük ve çalışır bir örnek ver.
+Asistan: Python'da değişken tanımlamak için bir isme değer atanır.
+```python
+name = "DarkMind"
+age = 1
+print(name, age)
+```
+Kullanıcı: Python'da değişken nasıl tanımlanır? Türkçe açıklama ve kodla anlat.
+Asistan: Python'da değişken tanımlamak için bir isme değer atanır.
+```python
+name = "DarkMind"
+age = 1
+print(name, age)
+```
+Kullanıcı: Python'da değişken nasıl tanımlanır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+name = "DarkMind"
+age = 1
+print(name, age)
+```
+Kullanıcı: Python'da string işlemleri nasıl yapılır?
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Kısa bir örnek göster.
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Basit bir Python örneği yaz.
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Yeni başlayan biri için açıkla.
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Kodla göster.
+Asistan:
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Küçük ve çalışır bir örnek ver.
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Türkçe açıklama ve kodla anlat.
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+Kullanıcı: Python'da sayılarla temel matematik işlemleri nasıl yapılır?
+Asistan: Sayılar üzerinde toplama, çıkarma, çarpma ve bölme işlemleri yapılabilir.
+```python
+a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+```
+Kullanıcı: Python'da sayılarla temel matematik işlemleri nasıl yapılır? Kısa bir örnek göster.
+Asistan: Sayılar üzerinde toplama, çıkarma, çarpma ve bölme işlemleri yapılabilir.
+```python
+a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+```
+Kullanıcı: Python'da sayılarla temel matematik işlemleri nasıl yapılır? Basit bir Python örneği yaz.
+Asistan: Sayılar üzerinde toplama, çıkarma, çarpma ve bölme işlemleri yapılabilir.
+```python
+a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+```
+Kullanıcı: Python'da sayılarla temel matematik işlemleri nasıl yapılır? Yeni başlayan biri için açıkla.
+Asistan: Sayılar üzerinde toplama, çıkarma, çarpma ve bölme işlemleri yapılabilir.
+```python
+a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+```
+Kullanıcı: Python'da sayılarla temel matematik işlemleri nasıl yapılır? Kodla göster.
+Asistan:
+```python
+a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+```
+Kullanıcı: Python'da sayılarla temel matematik işlemleri nasıl yapılır? Küçük ve çalışır bir örnek ver.
+Asistan: Sayılar üzerinde toplama, çıkarma, çarpma ve bölme işlemleri yapılabilir.
+```python
+a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+```
+Kullanıcı: Python'da sayılarla temel matematik işlemleri nasıl yapılır? Türkçe açıklama ve kodla anlat.
+Asistan: Sayılar üzerinde toplama, çıkarma, çarpma ve bölme işlemleri yapılabilir.
+```python
+a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+```
+Kullanıcı: Python'da sayılarla temel matematik işlemleri nasıl yapılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+```
+Kullanıcı: Python'da fonksiyon nasıl yazılır?
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Kısa bir örnek göster.
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Basit bir Python örneği yaz.
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Yeni başlayan biri için açıkla.
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Kodla göster.
+Asistan:
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Küçük ve çalışır bir örnek ver.
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Türkçe açıklama ve kodla anlat.
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+Kullanıcı: Python'da return değeri olan fonksiyon nasıl yazılır?
+Asistan: return, fonksiyonun hesapladığı değeri dışarı döndürür.
+```python
+def add_numbers(a, b):
+    return a + b
+result = add_numbers(4, 6)
+print(result)
+```
+Kullanıcı: Python'da return değeri olan fonksiyon nasıl yazılır? Kısa bir örnek göster.
+Asistan: return, fonksiyonun hesapladığı değeri dışarı döndürür.
+```python
+def add_numbers(a, b):
+    return a + b
+result = add_numbers(4, 6)
+print(result)
+```
+Kullanıcı: Python'da return değeri olan fonksiyon nasıl yazılır? Basit bir Python örneği yaz.
+Asistan: return, fonksiyonun hesapladığı değeri dışarı döndürür.
+```python
+def add_numbers(a, b):
+    return a + b
+result = add_numbers(4, 6)
+print(result)
+```
+Kullanıcı: Python'da return değeri olan fonksiyon nasıl yazılır? Yeni başlayan biri için açıkla.
+Asistan: return, fonksiyonun hesapladığı değeri dışarı döndürür.
+```python
+def add_numbers(a, b):
+    return a + b
+result = add_numbers(4, 6)
+print(result)
+```
+Kullanıcı: Python'da return değeri olan fonksiyon nasıl yazılır? Kodla göster.
+Asistan:
+```python
+def add_numbers(a, b):
+    return a + b
+result = add_numbers(4, 6)
+print(result)
+```
+Kullanıcı: Python'da return değeri olan fonksiyon nasıl yazılır? Küçük ve çalışır bir örnek ver.
+Asistan: return, fonksiyonun hesapladığı değeri dışarı döndürür.
+```python
+def add_numbers(a, b):
+    return a + b
+result = add_numbers(4, 6)
+print(result)
+```
+Kullanıcı: Python'da return değeri olan fonksiyon nasıl yazılır? Türkçe açıklama ve kodla anlat.
+Asistan: return, fonksiyonun hesapladığı değeri dışarı döndürür.
+```python
+def add_numbers(a, b):
+    return a + b
+result = add_numbers(4, 6)
+print(result)
+```
+Kullanıcı: Python'da return değeri olan fonksiyon nasıl yazılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+def add_numbers(a, b):
+    return a + b
+result = add_numbers(4, 6)
+print(result)
+```
+Kullanıcı: Python'da if else nasıl kullanılır?
+Asistan: if/else, koşula göre farklı kod bloklarının çalışmasını sağlar.
+```python
+score = 72
+if score >= 50:
+    print("Geçti")
+else:
+    print("Kaldı")
+```
+Kullanıcı: Python'da if else nasıl kullanılır? Kısa bir örnek göster.
+Asistan: if/else, koşula göre farklı kod bloklarının çalışmasını sağlar.
+```python
+score = 72
+if score >= 50:
+    print("Geçti")
+else:
+    print("Kaldı")
+```
+Kullanıcı: Python'da if else nasıl kullanılır? Basit bir Python örneği yaz.
+Asistan: if/else, koşula göre farklı kod bloklarının çalışmasını sağlar.
+```python
+score = 72
+if score >= 50:
+    print("Geçti")
+else:
+    print("Kaldı")
+```
+Kullanıcı: Python'da if else nasıl kullanılır? Yeni başlayan biri için açıkla.
+Asistan: if/else, koşula göre farklı kod bloklarının çalışmasını sağlar.
+```python
+score = 72
+if score >= 50:
+    print("Geçti")
+else:
+    print("Kaldı")
+```
+Kullanıcı: Python'da if else nasıl kullanılır? Kodla göster.
+Asistan:
+```python
+score = 72
+if score >= 50:
+    print("Geçti")
+else:
+    print("Kaldı")
+```
+Kullanıcı: Python'da if else nasıl kullanılır? Küçük ve çalışır bir örnek ver.
+Asistan: if/else, koşula göre farklı kod bloklarının çalışmasını sağlar.
+```python
+score = 72
+if score >= 50:
+    print("Geçti")
+else:
+    print("Kaldı")
+```
+Kullanıcı: Python'da if else nasıl kullanılır? Türkçe açıklama ve kodla anlat.
+Asistan: if/else, koşula göre farklı kod bloklarının çalışmasını sağlar.
+```python
+score = 72
+if score >= 50:
+    print("Geçti")
+else:
+    print("Kaldı")
+```
+Kullanıcı: Python'da if else nasıl kullanılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+score = 72
+if score >= 50:
+    print("Geçti")
+else:
+    print("Kaldı")
+```
+Kullanıcı: Python'da for döngüsü nasıl kullanılır?
+Asistan: for döngüsü, bir koleksiyonun elemanlarını sırayla gezmek için kullanılır.
+```python
+names = ["Ali", "Ayşe", "Can"]
+for name in names:
+    print(name)
+```
+Kullanıcı: Python'da for döngüsü nasıl kullanılır? Kısa bir örnek göster.
+Asistan: for döngüsü, bir koleksiyonun elemanlarını sırayla gezmek için kullanılır.
+```python
+names = ["Ali", "Ayşe", "Can"]
+for name in names:
+    print(name)
+```
+Kullanıcı: Python'da for döngüsü nasıl kullanılır? Basit bir Python örneği yaz.
+Asistan: for döngüsü, bir koleksiyonun elemanlarını sırayla gezmek için kullanılır.
+```python
+names = ["Ali", "Ayşe", "Can"]
+for name in names:
+    print(name)
+```
+Kullanıcı: Python'da for döngüsü nasıl kullanılır? Yeni başlayan biri için açıkla.
+Asistan: for döngüsü, bir koleksiyonun elemanlarını sırayla gezmek için kullanılır.
+```python
+names = ["Ali", "Ayşe", "Can"]
+for name in names:
+    print(name)
+```
+Kullanıcı: Python'da for döngüsü nasıl kullanılır? Kodla göster.
+Asistan:
+```python
+names = ["Ali", "Ayşe", "Can"]
+for name in names:
+    print(name)
+```
+Kullanıcı: Python'da for döngüsü nasıl kullanılır? Küçük ve çalışır bir örnek ver.
+Asistan: for döngüsü, bir koleksiyonun elemanlarını sırayla gezmek için kullanılır.
+```python
+names = ["Ali", "Ayşe", "Can"]
+for name in names:
+    print(name)
+```
+Kullanıcı: Python'da for döngüsü nasıl kullanılır? Türkçe açıklama ve kodla anlat.
+Asistan: for döngüsü, bir koleksiyonun elemanlarını sırayla gezmek için kullanılır.
+```python
+names = ["Ali", "Ayşe", "Can"]
+for name in names:
+    print(name)
+```
+Kullanıcı: Python'da for döngüsü nasıl kullanılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+names = ["Ali", "Ayşe", "Can"]
+for name in names:
+    print(name)
+```
+Kullanıcı: Python'da while döngüsü nasıl kullanılır?
+Asistan: while döngüsü, koşul doğru olduğu sürece çalışır.
+```python
+counter = 1
+while counter <= 5:
+    print(counter)
+    counter += 1
+```
+Kullanıcı: Python'da while döngüsü nasıl kullanılır? Kısa bir örnek göster.
+Asistan: while döngüsü, koşul doğru olduğu sürece çalışır.
+```python
+counter = 1
+while counter <= 5:
+    print(counter)
+    counter += 1
+```
+Kullanıcı: Python'da while döngüsü nasıl kullanılır? Basit bir Python örneği yaz.
+Asistan: while döngüsü, koşul doğru olduğu sürece çalışır.
+```python
+counter = 1
+while counter <= 5:
+    print(counter)
+    counter += 1
+```
+Kullanıcı: Python'da while döngüsü nasıl kullanılır? Yeni başlayan biri için açıkla.
+Asistan: while döngüsü, koşul doğru olduğu sürece çalışır.
+```python
+counter = 1
+while counter <= 5:
+    print(counter)
+    counter += 1
+```
+Kullanıcı: Python'da while döngüsü nasıl kullanılır? Kodla göster.
+Asistan:
+```python
+counter = 1
+while counter <= 5:
+    print(counter)
+    counter += 1
+```
+Kullanıcı: Python'da while döngüsü nasıl kullanılır? Küçük ve çalışır bir örnek ver.
+Asistan: while döngüsü, koşul doğru olduğu sürece çalışır.
+```python
+counter = 1
+while counter <= 5:
+    print(counter)
+    counter += 1
+```
+Kullanıcı: Python'da while döngüsü nasıl kullanılır? Türkçe açıklama ve kodla anlat.
+Asistan: while döngüsü, koşul doğru olduğu sürece çalışır.
+```python
+counter = 1
+while counter <= 5:
+    print(counter)
+    counter += 1
+```
+Kullanıcı: Python'da while döngüsü nasıl kullanılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+counter = 1
+while counter <= 5:
+    print(counter)
+    counter += 1
+```
+Kullanıcı: Python'da listeye eleman nasıl eklenir?
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır.
+```python
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+```
+Kullanıcı: Python'da listeye eleman nasıl eklenir? Kısa bir örnek göster.
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır.
+```python
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+```
+Kullanıcı: Python'da listeye eleman nasıl eklenir? Basit bir Python örneği yaz.
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır.
+```python
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+```
+Kullanıcı: Python'da listeye eleman nasıl eklenir? Yeni başlayan biri için açıkla.
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır.
+```python
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+```
+Kullanıcı: Python'da listeye eleman nasıl eklenir? Kodla göster.
+Asistan:
+```python
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+```
+Kullanıcı: Python'da listeye eleman nasıl eklenir? Küçük ve çalışır bir örnek ver.
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır.
+```python
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+```
+Kullanıcı: Python'da listeye eleman nasıl eklenir? Türkçe açıklama ve kodla anlat.
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır.
+```python
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+```
+Kullanıcı: Python'da listeye eleman nasıl eklenir? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+```
+Kullanıcı: Python'da listeden eleman nasıl silinir?
+Asistan: remove, listedeki belirli bir değeri silmek için kullanılır.
+```python
+fruits = ["elma", "armut", "muz"]
+fruits.remove("armut")
+print(fruits)
+```
+Kullanıcı: Python'da listeden eleman nasıl silinir? Kısa bir örnek göster.
+Asistan: remove, listedeki belirli bir değeri silmek için kullanılır.
+```python
+fruits = ["elma", "armut", "muz"]
+fruits.remove("armut")
+print(fruits)
+```
+Kullanıcı: Python'da listeden eleman nasıl silinir? Basit bir Python örneği yaz.
+Asistan: remove, listedeki belirli bir değeri silmek için kullanılır.
+```python
+fruits = ["elma", "armut", "muz"]
+fruits.remove("armut")
+print(fruits)
+```
+Kullanıcı: Python'da listeden eleman nasıl silinir? Yeni başlayan biri için açıkla.
+Asistan: remove, listedeki belirli bir değeri silmek için kullanılır.
+```python
+fruits = ["elma", "armut", "muz"]
+fruits.remove("armut")
+print(fruits)
+```
+Kullanıcı: Python'da listeden eleman nasıl silinir? Kodla göster.
+Asistan:
+```python
+fruits = ["elma", "armut", "muz"]
+fruits.remove("armut")
+print(fruits)
+```
+Kullanıcı: Python'da listeden eleman nasıl silinir? Küçük ve çalışır bir örnek ver.
+Asistan: remove, listedeki belirli bir değeri silmek için kullanılır.
+```python
+fruits = ["elma", "armut", "muz"]
+fruits.remove("armut")
+print(fruits)
+```
+Kullanıcı: Python'da listeden eleman nasıl silinir? Türkçe açıklama ve kodla anlat.
+Asistan: remove, listedeki belirli bir değeri silmek için kullanılır.
+```python
+fruits = ["elma", "armut", "muz"]
+fruits.remove("armut")
+print(fruits)
+```
+Kullanıcı: Python'da listeden eleman nasıl silinir? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+fruits = ["elma", "armut", "muz"]
+fruits.remove("armut")
+print(fruits)
+```
+Kullanıcı: Python'da liste filtreleme nasıl yapılır?
+Asistan: Liste filtrelemek için koşullu list comprehension kullanılabilir.
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = [number for number in numbers if number % 2 == 0]
+print(even_numbers)
+```
+Kullanıcı: Python'da liste filtreleme nasıl yapılır? Kısa bir örnek göster.
+Asistan: Liste filtrelemek için koşullu list comprehension kullanılabilir.
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = [number for number in numbers if number % 2 == 0]
+print(even_numbers)
+```
+Kullanıcı: Python'da liste filtreleme nasıl yapılır? Basit bir Python örneği yaz.
+Asistan: Liste filtrelemek için koşullu list comprehension kullanılabilir.
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = [number for number in numbers if number % 2 == 0]
+print(even_numbers)
+```
+Kullanıcı: Python'da liste filtreleme nasıl yapılır? Yeni başlayan biri için açıkla.
+Asistan: Liste filtrelemek için koşullu list comprehension kullanılabilir.
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = [number for number in numbers if number % 2 == 0]
+print(even_numbers)
+```
+Kullanıcı: Python'da liste filtreleme nasıl yapılır? Kodla göster.
+Asistan:
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = [number for number in numbers if number % 2 == 0]
+print(even_numbers)
+```
+Kullanıcı: Python'da liste filtreleme nasıl yapılır? Küçük ve çalışır bir örnek ver.
+Asistan: Liste filtrelemek için koşullu list comprehension kullanılabilir.
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = [number for number in numbers if number % 2 == 0]
+print(even_numbers)
+```
+Kullanıcı: Python'da liste filtreleme nasıl yapılır? Türkçe açıklama ve kodla anlat.
+Asistan: Liste filtrelemek için koşullu list comprehension kullanılabilir.
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = [number for number in numbers if number % 2 == 0]
+print(even_numbers)
+```
+Kullanıcı: Python'da liste filtreleme nasıl yapılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = [number for number in numbers if number % 2 == 0]
+print(even_numbers)
+```
+Kullanıcı: Python'da list comprehension nasıl kullanılır?
+Asistan: List comprehension, yeni liste üretmek için kısa ve okunabilir bir yoldur.
+```python
+numbers = [1, 2, 3, 4]
+squares = [number * number for number in numbers]
+print(squares)
+```
+Kullanıcı: Python'da list comprehension nasıl kullanılır? Kısa bir örnek göster.
+Asistan: List comprehension, yeni liste üretmek için kısa ve okunabilir bir yoldur.
+```python
+numbers = [1, 2, 3, 4]
+squares = [number * number for number in numbers]
+print(squares)
+```
+Kullanıcı: Python'da list comprehension nasıl kullanılır? Basit bir Python örneği yaz.
+Asistan: List comprehension, yeni liste üretmek için kısa ve okunabilir bir yoldur.
+```python
+numbers = [1, 2, 3, 4]
+squares = [number * number for number in numbers]
+print(squares)
+```
+Kullanıcı: Python'da list comprehension nasıl kullanılır? Yeni başlayan biri için açıkla.
+Asistan: List comprehension, yeni liste üretmek için kısa ve okunabilir bir yoldur.
+```python
+numbers = [1, 2, 3, 4]
+squares = [number * number for number in numbers]
+print(squares)
+```
+Kullanıcı: Python'da list comprehension nasıl kullanılır? Kodla göster.
+Asistan:
+```python
+numbers = [1, 2, 3, 4]
+squares = [number * number for number in numbers]
+print(squares)
+```
+Kullanıcı: Python'da list comprehension nasıl kullanılır? Küçük ve çalışır bir örnek ver.
+Asistan: List comprehension, yeni liste üretmek için kısa ve okunabilir bir yoldur.
+```python
+numbers = [1, 2, 3, 4]
+squares = [number * number for number in numbers]
+print(squares)
+```
+Kullanıcı: Python'da list comprehension nasıl kullanılır? Türkçe açıklama ve kodla anlat.
+Asistan: List comprehension, yeni liste üretmek için kısa ve okunabilir bir yoldur.
+```python
+numbers = [1, 2, 3, 4]
+squares = [number * number for number in numbers]
+print(squares)
+```
+Kullanıcı: Python'da list comprehension nasıl kullanılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+numbers = [1, 2, 3, 4]
+squares = [number * number for number in numbers]
+print(squares)
+```
+Kullanıcı: Python'da sözlükten güvenli değer nasıl okunur?
+Asistan: Sözlükten güvenli okumak için get metodu kullanılabilir.
+```python
+person = {"name": "Ali"}
+age = person.get("age", 0)
+print(age)
+```
+Kullanıcı: Python'da sözlükten güvenli değer nasıl okunur? Kısa bir örnek göster.
+Asistan: Sözlükten güvenli okumak için get metodu kullanılabilir.
+```python
+person = {"name": "Ali"}
+age = person.get("age", 0)
+print(age)
+```
+Kullanıcı: Python'da sözlükten güvenli değer nasıl okunur? Basit bir Python örneği yaz.
+Asistan: Sözlükten güvenli okumak için get metodu kullanılabilir.
+```python
+person = {"name": "Ali"}
+age = person.get("age", 0)
+print(age)
+```
+Kullanıcı: Python'da sözlükten güvenli değer nasıl okunur? Yeni başlayan biri için açıkla.
+Asistan: Sözlükten güvenli okumak için get metodu kullanılabilir.
+```python
+person = {"name": "Ali"}
+age = person.get("age", 0)
+print(age)
+```
+Kullanıcı: Python'da sözlükten güvenli değer nasıl okunur? Kodla göster.
+Asistan:
+```python
+person = {"name": "Ali"}
+age = person.get("age", 0)
+print(age)
+```
+Kullanıcı: Python'da sözlükten güvenli değer nasıl okunur? Küçük ve çalışır bir örnek ver.
+Asistan: Sözlükten güvenli okumak için get metodu kullanılabilir.
+```python
+person = {"name": "Ali"}
+age = person.get("age", 0)
+print(age)
+```
+Kullanıcı: Python'da sözlükten güvenli değer nasıl okunur? Türkçe açıklama ve kodla anlat.
+Asistan: Sözlükten güvenli okumak için get metodu kullanılabilir.
+```python
+person = {"name": "Ali"}
+age = person.get("age", 0)
+print(age)
+```
+Kullanıcı: Python'da sözlükten güvenli değer nasıl okunur? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+person = {"name": "Ali"}
+age = person.get("age", 0)
+print(age)
+```
+Kullanıcı: Python'da sözlüğe değer nasıl eklenir?
+Asistan: Sözlükte yeni anahtar oluşturup değer atayabilirsin.
+```python
+person = {"name": "Ayşe"}
+person["city"] = "İstanbul"
+print(person)
+```
+Kullanıcı: Python'da sözlüğe değer nasıl eklenir? Kısa bir örnek göster.
+Asistan: Sözlükte yeni anahtar oluşturup değer atayabilirsin.
+```python
+person = {"name": "Ayşe"}
+person["city"] = "İstanbul"
+print(person)
+```
+Kullanıcı: Python'da sözlüğe değer nasıl eklenir? Basit bir Python örneği yaz.
+Asistan: Sözlükte yeni anahtar oluşturup değer atayabilirsin.
+```python
+person = {"name": "Ayşe"}
+person["city"] = "İstanbul"
+print(person)
+```
+Kullanıcı: Python'da sözlüğe değer nasıl eklenir? Yeni başlayan biri için açıkla.
+Asistan: Sözlükte yeni anahtar oluşturup değer atayabilirsin.
+```python
+person = {"name": "Ayşe"}
+person["city"] = "İstanbul"
+print(person)
+```
+Kullanıcı: Python'da sözlüğe değer nasıl eklenir? Kodla göster.
+Asistan:
+```python
+person = {"name": "Ayşe"}
+person["city"] = "İstanbul"
+print(person)
+```
+Kullanıcı: Python'da sözlüğe değer nasıl eklenir? Küçük ve çalışır bir örnek ver.
+Asistan: Sözlükte yeni anahtar oluşturup değer atayabilirsin.
+```python
+person = {"name": "Ayşe"}
+person["city"] = "İstanbul"
+print(person)
+```
+Kullanıcı: Python'da sözlüğe değer nasıl eklenir? Türkçe açıklama ve kodla anlat.
+Asistan: Sözlükte yeni anahtar oluşturup değer atayabilirsin.
+```python
+person = {"name": "Ayşe"}
+person["city"] = "İstanbul"
+print(person)
+```
+Kullanıcı: Python'da sözlüğe değer nasıl eklenir? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+person = {"name": "Ayşe"}
+person["city"] = "İstanbul"
+print(person)
+```
+Kullanıcı: Python'da sözlük ile kelime frekansı nasıl sayılır?
+Asistan: Sözlük, kelime sayacı gibi kullanılabilir.
+```python
+words = ["veri", "model", "veri"]
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+print(counts)
+```
+Kullanıcı: Python'da sözlük ile kelime frekansı nasıl sayılır? Kısa bir örnek göster.
+Asistan: Sözlük, kelime sayacı gibi kullanılabilir.
+```python
+words = ["veri", "model", "veri"]
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+print(counts)
+```
+Kullanıcı: Python'da sözlük ile kelime frekansı nasıl sayılır? Basit bir Python örneği yaz.
+Asistan: Sözlük, kelime sayacı gibi kullanılabilir.
+```python
+words = ["veri", "model", "veri"]
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+print(counts)
+```
+Kullanıcı: Python'da sözlük ile kelime frekansı nasıl sayılır? Yeni başlayan biri için açıkla.
+Asistan: Sözlük, kelime sayacı gibi kullanılabilir.
+```python
+words = ["veri", "model", "veri"]
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+print(counts)
+```
+Kullanıcı: Python'da sözlük ile kelime frekansı nasıl sayılır? Kodla göster.
+Asistan:
+```python
+words = ["veri", "model", "veri"]
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+print(counts)
+```
+Kullanıcı: Python'da sözlük ile kelime frekansı nasıl sayılır? Küçük ve çalışır bir örnek ver.
+Asistan: Sözlük, kelime sayacı gibi kullanılabilir.
+```python
+words = ["veri", "model", "veri"]
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+print(counts)
+```
+Kullanıcı: Python'da sözlük ile kelime frekansı nasıl sayılır? Türkçe açıklama ve kodla anlat.
+Asistan: Sözlük, kelime sayacı gibi kullanılabilir.
+```python
+words = ["veri", "model", "veri"]
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+print(counts)
+```
+Kullanıcı: Python'da sözlük ile kelime frekansı nasıl sayılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+words = ["veri", "model", "veri"]
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+print(counts)
+```
+Kullanıcı: Python'da set ile tekrarlar nasıl kaldırılır?
+Asistan: set, tekrar eden değerleri tekilleştirmek için kullanılabilir.
+```python
+numbers = [1, 2, 2, 3, 3]
+unique_numbers = set(numbers)
+print(unique_numbers)
+```
+Kullanıcı: Python'da set ile tekrarlar nasıl kaldırılır? Kısa bir örnek göster.
+Asistan: set, tekrar eden değerleri tekilleştirmek için kullanılabilir.
+```python
+numbers = [1, 2, 2, 3, 3]
+unique_numbers = set(numbers)
+print(unique_numbers)
+```
+Kullanıcı: Python'da set ile tekrarlar nasıl kaldırılır? Basit bir Python örneği yaz.
+Asistan: set, tekrar eden değerleri tekilleştirmek için kullanılabilir.
+```python
+numbers = [1, 2, 2, 3, 3]
+unique_numbers = set(numbers)
+print(unique_numbers)
+```
+Kullanıcı: Python'da set ile tekrarlar nasıl kaldırılır? Yeni başlayan biri için açıkla.
+Asistan: set, tekrar eden değerleri tekilleştirmek için kullanılabilir.
+```python
+numbers = [1, 2, 2, 3, 3]
+unique_numbers = set(numbers)
+print(unique_numbers)
+```
+Kullanıcı: Python'da set ile tekrarlar nasıl kaldırılır? Kodla göster.
+Asistan:
+```python
+numbers = [1, 2, 2, 3, 3]
+unique_numbers = set(numbers)
+print(unique_numbers)
+```
+Kullanıcı: Python'da set ile tekrarlar nasıl kaldırılır? Küçük ve çalışır bir örnek ver.
+Asistan: set, tekrar eden değerleri tekilleştirmek için kullanılabilir.
+```python
+numbers = [1, 2, 2, 3, 3]
+unique_numbers = set(numbers)
+print(unique_numbers)
+```
+Kullanıcı: Python'da set ile tekrarlar nasıl kaldırılır? Türkçe açıklama ve kodla anlat.
+Asistan: set, tekrar eden değerleri tekilleştirmek için kullanılabilir.
+```python
+numbers = [1, 2, 2, 3, 3]
+unique_numbers = set(numbers)
+print(unique_numbers)
+```
+Kullanıcı: Python'da set ile tekrarlar nasıl kaldırılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+numbers = [1, 2, 2, 3, 3]
+unique_numbers = set(numbers)
+print(unique_numbers)
+```
+Kullanıcı: Python'da tuple nasıl kullanılır?
+Asistan: Tuple, değişmemesi beklenen küçük veri grupları için kullanışlıdır.
+```python
+point = (10, 20)
+x, y = point
+print(x, y)
+```
+Kullanıcı: Python'da tuple nasıl kullanılır? Kısa bir örnek göster.
+Asistan: Tuple, değişmemesi beklenen küçük veri grupları için kullanışlıdır.
+```python
+point = (10, 20)
+x, y = point
+print(x, y)
+```
+Kullanıcı: Python'da tuple nasıl kullanılır? Basit bir Python örneği yaz.
+Asistan: Tuple, değişmemesi beklenen küçük veri grupları için kullanışlıdır.
+```python
+point = (10, 20)
+x, y = point
+print(x, y)
+```
+Kullanıcı: Python'da tuple nasıl kullanılır? Yeni başlayan biri için açıkla.
+Asistan: Tuple, değişmemesi beklenen küçük veri grupları için kullanışlıdır.
+```python
+point = (10, 20)
+x, y = point
+print(x, y)
+```
+Kullanıcı: Python'da tuple nasıl kullanılır? Kodla göster.
+Asistan:
+```python
+point = (10, 20)
+x, y = point
+print(x, y)
+```
+Kullanıcı: Python'da tuple nasıl kullanılır? Küçük ve çalışır bir örnek ver.
+Asistan: Tuple, değişmemesi beklenen küçük veri grupları için kullanışlıdır.
+```python
+point = (10, 20)
+x, y = point
+print(x, y)
+```
+Kullanıcı: Python'da tuple nasıl kullanılır? Türkçe açıklama ve kodla anlat.
+Asistan: Tuple, değişmemesi beklenen küçük veri grupları için kullanışlıdır.
+```python
+point = (10, 20)
+x, y = point
+print(x, y)
+```
+Kullanıcı: Python'da tuple nasıl kullanılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+point = (10, 20)
+x, y = point
+print(x, y)
+```
+Kullanıcı: Python'da liste nasıl sıralanır?
+Asistan: sorted, listeyi yeni bir sıralı liste olarak döndürür.
+```python
+items = [3, 1, 4, 2]
+sorted_items = sorted(items)
+print(sorted_items)
+```
+Kullanıcı: Python'da liste nasıl sıralanır? Kısa bir örnek göster.
+Asistan: sorted, listeyi yeni bir sıralı liste olarak döndürür.
+```python
+items = [3, 1, 4, 2]
+sorted_items = sorted(items)
+print(sorted_items)
+```
+Kullanıcı: Python'da liste nasıl sıralanır? Basit bir Python örneği yaz.
+Asistan: sorted, listeyi yeni bir sıralı liste olarak döndürür.
+```python
+items = [3, 1, 4, 2]
+sorted_items = sorted(items)
+print(sorted_items)
+```
+Kullanıcı: Python'da liste nasıl sıralanır? Yeni başlayan biri için açıkla.
+Asistan: sorted, listeyi yeni bir sıralı liste olarak döndürür.
+```python
+items = [3, 1, 4, 2]
+sorted_items = sorted(items)
+print(sorted_items)
+```
+Kullanıcı: Python'da liste nasıl sıralanır? Kodla göster.
+Asistan:
+```python
+items = [3, 1, 4, 2]
+sorted_items = sorted(items)
+print(sorted_items)
+```
+Kullanıcı: Python'da liste nasıl sıralanır? Küçük ve çalışır bir örnek ver.
+Asistan: sorted, listeyi yeni bir sıralı liste olarak döndürür.
+```python
+items = [3, 1, 4, 2]
+sorted_items = sorted(items)
+print(sorted_items)
+```
+Kullanıcı: Python'da liste nasıl sıralanır? Türkçe açıklama ve kodla anlat.
+Asistan: sorted, listeyi yeni bir sıralı liste olarak döndürür.
+```python
+items = [3, 1, 4, 2]
+sorted_items = sorted(items)
+print(sorted_items)
+```
+Kullanıcı: Python'da liste nasıl sıralanır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+items = [3, 1, 4, 2]
+sorted_items = sorted(items)
+print(sorted_items)
+```
+Kullanıcı: Python'da lambda temel olarak nasıl kullanılır?
+Asistan: lambda, küçük anonim fonksiyonlar yazmak için kullanılabilir.
+```python
+double = lambda number: number * 2
+print(double(5))
+```
+Kullanıcı: Python'da lambda temel olarak nasıl kullanılır? Kısa bir örnek göster.
+Asistan: lambda, küçük anonim fonksiyonlar yazmak için kullanılabilir.
+```python
+double = lambda number: number * 2
+print(double(5))
+```
+Kullanıcı: Python'da lambda temel olarak nasıl kullanılır? Basit bir Python örneği yaz.
+Asistan: lambda, küçük anonim fonksiyonlar yazmak için kullanılabilir.
+```python
+double = lambda number: number * 2
+print(double(5))
+```
+Kullanıcı: Python'da lambda temel olarak nasıl kullanılır? Yeni başlayan biri için açıkla.
+Asistan: lambda, küçük anonim fonksiyonlar yazmak için kullanılabilir.
+```python
+double = lambda number: number * 2
+print(double(5))
+```
+Kullanıcı: Python'da lambda temel olarak nasıl kullanılır? Kodla göster.
+Asistan:
+```python
+double = lambda number: number * 2
+print(double(5))
+```
+Kullanıcı: Python'da lambda temel olarak nasıl kullanılır? Küçük ve çalışır bir örnek ver.
+Asistan: lambda, küçük anonim fonksiyonlar yazmak için kullanılabilir.
+```python
+double = lambda number: number * 2
+print(double(5))
+```
+Kullanıcı: Python'da lambda temel olarak nasıl kullanılır? Türkçe açıklama ve kodla anlat.
+Asistan: lambda, küçük anonim fonksiyonlar yazmak için kullanılabilir.
+```python
+double = lambda number: number * 2
+print(double(5))
+```
+Kullanıcı: Python'da lambda temel olarak nasıl kullanılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+double = lambda number: number * 2
+print(double(5))
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl okunur?
+Asistan: Path.read_text, metin dosyasını okumak için kullanılabilir.
+```python
+from pathlib import Path
+text = Path("notlar.txt").read_text(encoding="utf-8")
+print(text)
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl okunur? Kısa bir örnek göster.
+Asistan: Path.read_text, metin dosyasını okumak için kullanılabilir.
+```python
+from pathlib import Path
+text = Path("notlar.txt").read_text(encoding="utf-8")
+print(text)
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl okunur? Basit bir Python örneği yaz.
+Asistan: Path.read_text, metin dosyasını okumak için kullanılabilir.
+```python
+from pathlib import Path
+text = Path("notlar.txt").read_text(encoding="utf-8")
+print(text)
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl okunur? Yeni başlayan biri için açıkla.
+Asistan: Path.read_text, metin dosyasını okumak için kullanılabilir.
+```python
+from pathlib import Path
+text = Path("notlar.txt").read_text(encoding="utf-8")
+print(text)
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl okunur? Kodla göster.
+Asistan:
+```python
+from pathlib import Path
+text = Path("notlar.txt").read_text(encoding="utf-8")
+print(text)
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl okunur? Küçük ve çalışır bir örnek ver.
+Asistan: Path.read_text, metin dosyasını okumak için kullanılabilir.
+```python
+from pathlib import Path
+text = Path("notlar.txt").read_text(encoding="utf-8")
+print(text)
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl okunur? Türkçe açıklama ve kodla anlat.
+Asistan: Path.read_text, metin dosyasını okumak için kullanılabilir.
+```python
+from pathlib import Path
+text = Path("notlar.txt").read_text(encoding="utf-8")
+print(text)
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl okunur? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+from pathlib import Path
+text = Path("notlar.txt").read_text(encoding="utf-8")
+print(text)
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır?
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Kısa bir örnek göster.
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Basit bir Python örneği yaz.
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Yeni başlayan biri için açıkla.
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Kodla göster.
+Asistan:
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Küçük ve çalışır bir örnek ver.
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Türkçe açıklama ve kodla anlat.
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+Kullanıcı: Python'da JSON metni nasıl okunur?
+Asistan: json.loads, JSON metnini Python sözlüğüne dönüştürür.
+```python
+import json
+raw_text = '{"name": "DarkMind", "version": 2}'
+data = json.loads(raw_text)
+print(data["name"])
+```
+Kullanıcı: Python'da JSON metni nasıl okunur? Kısa bir örnek göster.
+Asistan: json.loads, JSON metnini Python sözlüğüne dönüştürür.
+```python
+import json
+raw_text = '{"name": "DarkMind", "version": 2}'
+data = json.loads(raw_text)
+print(data["name"])
+```
+Kullanıcı: Python'da JSON metni nasıl okunur? Basit bir Python örneği yaz.
+Asistan: json.loads, JSON metnini Python sözlüğüne dönüştürür.
+```python
+import json
+raw_text = '{"name": "DarkMind", "version": 2}'
+data = json.loads(raw_text)
+print(data["name"])
+```
+Kullanıcı: Python'da JSON metni nasıl okunur? Yeni başlayan biri için açıkla.
+Asistan: json.loads, JSON metnini Python sözlüğüne dönüştürür.
+```python
+import json
+raw_text = '{"name": "DarkMind", "version": 2}'
+data = json.loads(raw_text)
+print(data["name"])
+```
+Kullanıcı: Python'da JSON metni nasıl okunur? Kodla göster.
+Asistan:
+```python
+import json
+raw_text = '{"name": "DarkMind", "version": 2}'
+data = json.loads(raw_text)
+print(data["name"])
+```
+Kullanıcı: Python'da JSON metni nasıl okunur? Küçük ve çalışır bir örnek ver.
+Asistan: json.loads, JSON metnini Python sözlüğüne dönüştürür.
+```python
+import json
+raw_text = '{"name": "DarkMind", "version": 2}'
+data = json.loads(raw_text)
+print(data["name"])
+```
+Kullanıcı: Python'da JSON metni nasıl okunur? Türkçe açıklama ve kodla anlat.
+Asistan: json.loads, JSON metnini Python sözlüğüne dönüştürür.
+```python
+import json
+raw_text = '{"name": "DarkMind", "version": 2}'
+data = json.loads(raw_text)
+print(data["name"])
+```
+Kullanıcı: Python'da JSON metni nasıl okunur? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+import json
+raw_text = '{"name": "DarkMind", "version": 2}'
+data = json.loads(raw_text)
+print(data["name"])
+```
+Kullanıcı: Python'da JSON nasıl yazılır?
+Asistan: json.dumps, Python verisini JSON metnine dönüştürür.
+```python
+import json
+data = {"name": "DarkMind", "language": "tr"}
+json_text = json.dumps(data, ensure_ascii=False)
+print(json_text)
+```
+Kullanıcı: Python'da JSON nasıl yazılır? Kısa bir örnek göster.
+Asistan: json.dumps, Python verisini JSON metnine dönüştürür.
+```python
+import json
+data = {"name": "DarkMind", "language": "tr"}
+json_text = json.dumps(data, ensure_ascii=False)
+print(json_text)
+```
+Kullanıcı: Python'da JSON nasıl yazılır? Basit bir Python örneği yaz.
+Asistan: json.dumps, Python verisini JSON metnine dönüştürür.
+```python
+import json
+data = {"name": "DarkMind", "language": "tr"}
+json_text = json.dumps(data, ensure_ascii=False)
+print(json_text)
+```
+Kullanıcı: Python'da JSON nasıl yazılır? Yeni başlayan biri için açıkla.
+Asistan: json.dumps, Python verisini JSON metnine dönüştürür.
+```python
+import json
+data = {"name": "DarkMind", "language": "tr"}
+json_text = json.dumps(data, ensure_ascii=False)
+print(json_text)
+```
+Kullanıcı: Python'da JSON nasıl yazılır? Kodla göster.
+Asistan:
+```python
+import json
+data = {"name": "DarkMind", "language": "tr"}
+json_text = json.dumps(data, ensure_ascii=False)
+print(json_text)
+```
+Kullanıcı: Python'da JSON nasıl yazılır? Küçük ve çalışır bir örnek ver.
+Asistan: json.dumps, Python verisini JSON metnine dönüştürür.
+```python
+import json
+data = {"name": "DarkMind", "language": "tr"}
+json_text = json.dumps(data, ensure_ascii=False)
+print(json_text)
+```
+Kullanıcı: Python'da JSON nasıl yazılır? Türkçe açıklama ve kodla anlat.
+Asistan: json.dumps, Python verisini JSON metnine dönüştürür.
+```python
+import json
+data = {"name": "DarkMind", "language": "tr"}
+json_text = json.dumps(data, ensure_ascii=False)
+print(json_text)
+```
+Kullanıcı: Python'da JSON nasıl yazılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+import json
+data = {"name": "DarkMind", "language": "tr"}
+json_text = json.dumps(data, ensure_ascii=False)
+print(json_text)
+```
+Kullanıcı: Python'da try except nasıl kullanılır?
+Asistan: try/except, hata oluşabilecek kodu güvenli şekilde ele almak için kullanılır.
+```python
+try:
+    number = int("42")
+    print(number)
+except ValueError as error:
+    print(f"Dönüşüm hatası: {error}")
+```
+Kullanıcı: Python'da try except nasıl kullanılır? Kısa bir örnek göster.
+Asistan: try/except, hata oluşabilecek kodu güvenli şekilde ele almak için kullanılır.
+```python
+try:
+    number = int("42")
+    print(number)
+except ValueError as error:
+    print(f"Dönüşüm hatası: {error}")
+```
+Kullanıcı: Python'da try except nasıl kullanılır? Basit bir Python örneği yaz.
+Asistan: try/except, hata oluşabilecek kodu güvenli şekilde ele almak için kullanılır.
+```python
+try:
+    number = int("42")
+    print(number)
+except ValueError as error:
+    print(f"Dönüşüm hatası: {error}")
+```
+Kullanıcı: Python'da try except nasıl kullanılır? Yeni başlayan biri için açıkla.
+Asistan: try/except, hata oluşabilecek kodu güvenli şekilde ele almak için kullanılır.
+```python
+try:
+    number = int("42")
+    print(number)
+except ValueError as error:
+    print(f"Dönüşüm hatası: {error}")
+```
+Kullanıcı: Python'da try except nasıl kullanılır? Kodla göster.
+Asistan:
+```python
+try:
+    number = int("42")
+    print(number)
+except ValueError as error:
+    print(f"Dönüşüm hatası: {error}")
+```
+Kullanıcı: Python'da try except nasıl kullanılır? Küçük ve çalışır bir örnek ver.
+Asistan: try/except, hata oluşabilecek kodu güvenli şekilde ele almak için kullanılır.
+```python
+try:
+    number = int("42")
+    print(number)
+except ValueError as error:
+    print(f"Dönüşüm hatası: {error}")
+```
+Kullanıcı: Python'da try except nasıl kullanılır? Türkçe açıklama ve kodla anlat.
+Asistan: try/except, hata oluşabilecek kodu güvenli şekilde ele almak için kullanılır.
+```python
+try:
+    number = int("42")
+    print(number)
+except ValueError as error:
+    print(f"Dönüşüm hatası: {error}")
+```
+Kullanıcı: Python'da try except nasıl kullanılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+try:
+    number = int("42")
+    print(number)
+except ValueError as error:
+    print(f"Dönüşüm hatası: {error}")
+```
+Kullanıcı: Python'da özel exception nasıl tanımlanır?
+Asistan: Kendi hata türünü Exception sınıfından türeterek tanımlayabilirsin.
+```python
+class InvalidScoreError(Exception):
+    pass
+def check_score(score):
+    if score < 0:
+        raise InvalidScoreError("Skor negatif olamaz")
+    return score
+```
+Kullanıcı: Python'da özel exception nasıl tanımlanır? Kısa bir örnek göster.
+Asistan: Kendi hata türünü Exception sınıfından türeterek tanımlayabilirsin.
+```python
+class InvalidScoreError(Exception):
+    pass
+def check_score(score):
+    if score < 0:
+        raise InvalidScoreError("Skor negatif olamaz")
+    return score
+```
+Kullanıcı: Python'da özel exception nasıl tanımlanır? Basit bir Python örneği yaz.
+Asistan: Kendi hata türünü Exception sınıfından türeterek tanımlayabilirsin.
+```python
+class InvalidScoreError(Exception):
+    pass
+def check_score(score):
+    if score < 0:
+        raise InvalidScoreError("Skor negatif olamaz")
+    return score
+```
+Kullanıcı: Python'da özel exception nasıl tanımlanır? Yeni başlayan biri için açıkla.
+Asistan: Kendi hata türünü Exception sınıfından türeterek tanımlayabilirsin.
+```python
+class InvalidScoreError(Exception):
+    pass
+def check_score(score):
+    if score < 0:
+        raise InvalidScoreError("Skor negatif olamaz")
+    return score
+```
+Kullanıcı: Python'da özel exception nasıl tanımlanır? Kodla göster.
+Asistan:
+```python
+class InvalidScoreError(Exception):
+    pass
+def check_score(score):
+    if score < 0:
+        raise InvalidScoreError("Skor negatif olamaz")
+    return score
+```
+Kullanıcı: Python'da özel exception nasıl tanımlanır? Küçük ve çalışır bir örnek ver.
+Asistan: Kendi hata türünü Exception sınıfından türeterek tanımlayabilirsin.
+```python
+class InvalidScoreError(Exception):
+    pass
+def check_score(score):
+    if score < 0:
+        raise InvalidScoreError("Skor negatif olamaz")
+    return score
+```
+Kullanıcı: Python'da özel exception nasıl tanımlanır? Türkçe açıklama ve kodla anlat.
+Asistan: Kendi hata türünü Exception sınıfından türeterek tanımlayabilirsin.
+```python
+class InvalidScoreError(Exception):
+    pass
+def check_score(score):
+    if score < 0:
+        raise InvalidScoreError("Skor negatif olamaz")
+    return score
+```
+Kullanıcı: Python'da özel exception nasıl tanımlanır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+class InvalidScoreError(Exception):
+    pass
+def check_score(score):
+    if score < 0:
+        raise InvalidScoreError("Skor negatif olamaz")
+    return score
+```
+Kullanıcı: Python'da basit class nasıl yazılır?
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+Kullanıcı: Python'da basit class nasıl yazılır? Kısa bir örnek göster.
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+Kullanıcı: Python'da basit class nasıl yazılır? Basit bir Python örneği yaz.
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+Kullanıcı: Python'da basit class nasıl yazılır? Yeni başlayan biri için açıkla.
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+Kullanıcı: Python'da basit class nasıl yazılır? Kodla göster.
+Asistan:
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+Kullanıcı: Python'da basit class nasıl yazılır? Küçük ve çalışır bir örnek ver.
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+Kullanıcı: Python'da basit class nasıl yazılır? Türkçe açıklama ve kodla anlat.
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+Kullanıcı: Python'da basit class nasıl yazılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+Kullanıcı: Python'da dataclass nasıl kullanılır?
+Asistan: dataclass, veri taşıyan basit sınıfları daha kısa yazmayı sağlar.
+```python
+from dataclasses import dataclass
+@dataclass
+class Product:
+    name: str
+    price: float
+product = Product("Kitap", 120.0)
+print(product.name)
+```
+Kullanıcı: Python'da dataclass nasıl kullanılır? Kısa bir örnek göster.
+Asistan: dataclass, veri taşıyan basit sınıfları daha kısa yazmayı sağlar.
+```python
+from dataclasses import dataclass
+@dataclass
+class Product:
+    name: str
+    price: float
+product = Product("Kitap", 120.0)
+print(product.name)
+```
+Kullanıcı: Python'da dataclass nasıl kullanılır? Basit bir Python örneği yaz.
+Asistan: dataclass, veri taşıyan basit sınıfları daha kısa yazmayı sağlar.
+```python
+from dataclasses import dataclass
+@dataclass
+class Product:
+    name: str
+    price: float
+product = Product("Kitap", 120.0)
+print(product.name)
+```
+Kullanıcı: Python'da dataclass nasıl kullanılır? Yeni başlayan biri için açıkla.
+Asistan: dataclass, veri taşıyan basit sınıfları daha kısa yazmayı sağlar.
+```python
+from dataclasses import dataclass
+@dataclass
+class Product:
+    name: str
+    price: float
+product = Product("Kitap", 120.0)
+print(product.name)
+```
+Kullanıcı: Python'da dataclass nasıl kullanılır? Kodla göster.
+Asistan:
+```python
+from dataclasses import dataclass
+@dataclass
+class Product:
+    name: str
+    price: float
+product = Product("Kitap", 120.0)
+print(product.name)
+```
+Kullanıcı: Python'da dataclass nasıl kullanılır? Küçük ve çalışır bir örnek ver.
+Asistan: dataclass, veri taşıyan basit sınıfları daha kısa yazmayı sağlar.
+```python
+from dataclasses import dataclass
+@dataclass
+class Product:
+    name: str
+    price: float
+product = Product("Kitap", 120.0)
+print(product.name)
+```
+Kullanıcı: Python'da dataclass nasıl kullanılır? Türkçe açıklama ve kodla anlat.
+Asistan: dataclass, veri taşıyan basit sınıfları daha kısa yazmayı sağlar.
+```python
+from dataclasses import dataclass
+@dataclass
+class Product:
+    name: str
+    price: float
+product = Product("Kitap", 120.0)
+print(product.name)
+```
+Kullanıcı: Python'da dataclass nasıl kullanılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+from dataclasses import dataclass
+@dataclass
+class Product:
+    name: str
+    price: float
+product = Product("Kitap", 120.0)
+print(product.name)
+```
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır?
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Kısa bir örnek göster.
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Basit bir Python örneği yaz.
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Yeni başlayan biri için açıkla.
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Kodla göster.
+Asistan:
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Küçük ve çalışır bir örnek ver.
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Türkçe açıklama ve kodla anlat.
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+Kullanıcı: Python'da basit hesap makinesi nasıl yazılır?
+Asistan: Basit hesap makinesi için sayıları ve işlem türünü kontrol edebilirsin.
+```python
+a = 10
+b = 5
+operation = "+"
+if operation == "+":
+    print(a + b)
+elif operation == "-":
+    print(a - b)
+```
+Kullanıcı: Python'da basit hesap makinesi nasıl yazılır? Kısa bir örnek göster.
+Asistan: Basit hesap makinesi için sayıları ve işlem türünü kontrol edebilirsin.
+```python
+a = 10
+b = 5
+operation = "+"
+if operation == "+":
+    print(a + b)
+elif operation == "-":
+    print(a - b)
+```
+Kullanıcı: Python'da basit hesap makinesi nasıl yazılır? Basit bir Python örneği yaz.
+Asistan: Basit hesap makinesi için sayıları ve işlem türünü kontrol edebilirsin.
+```python
+a = 10
+b = 5
+operation = "+"
+if operation == "+":
+    print(a + b)
+elif operation == "-":
+    print(a - b)
+```
+Kullanıcı: Python'da basit hesap makinesi nasıl yazılır? Yeni başlayan biri için açıkla.
+Asistan: Basit hesap makinesi için sayıları ve işlem türünü kontrol edebilirsin.
+```python
+a = 10
+b = 5
+operation = "+"
+if operation == "+":
+    print(a + b)
+elif operation == "-":
+    print(a - b)
+```
+Kullanıcı: Python'da basit hesap makinesi nasıl yazılır? Kodla göster.
+Asistan:
+```python
+a = 10
+b = 5
+operation = "+"
+if operation == "+":
+    print(a + b)
+elif operation == "-":
+    print(a - b)
+```
+Kullanıcı: Python'da basit hesap makinesi nasıl yazılır? Küçük ve çalışır bir örnek ver.
+Asistan: Basit hesap makinesi için sayıları ve işlem türünü kontrol edebilirsin.
+```python
+a = 10
+b = 5
+operation = "+"
+if operation == "+":
+    print(a + b)
+elif operation == "-":
+    print(a - b)
+```
+Kullanıcı: Python'da basit hesap makinesi nasıl yazılır? Türkçe açıklama ve kodla anlat.
+Asistan: Basit hesap makinesi için sayıları ve işlem türünü kontrol edebilirsin.
+```python
+a = 10
+b = 5
+operation = "+"
+if operation == "+":
+    print(a + b)
+elif operation == "-":
+    print(a - b)
+```
+Kullanıcı: Python'da basit hesap makinesi nasıl yazılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+a = 10
+b = 5
+operation = "+"
+if operation == "+":
+    print(a + b)
+elif operation == "-":
+    print(a - b)
+```
+Kullanıcı: Python'da bir metnin palindrom olup olmadığını kontrol eden fonksiyon yaz.
+Asistan: Palindrom kontrolünde metni sadeleştirip ters haliyle karşılaştırabilirsin.
+```python
+def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+print(is_palindrome("kazak"))
+```
+Kullanıcı: Python'da bir metnin palindrom olup olmadığını kontrol eden fonksiyon yaz. Kısa bir örnek göster.
+Asistan: Palindrom kontrolünde metni sadeleştirip ters haliyle karşılaştırabilirsin.
+```python
+def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+print(is_palindrome("kazak"))
+```
+Kullanıcı: Python'da bir metnin palindrom olup olmadığını kontrol eden fonksiyon yaz. Basit bir Python örneği yaz.
+Asistan: Palindrom kontrolünde metni sadeleştirip ters haliyle karşılaştırabilirsin.
+```python
+def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+print(is_palindrome("kazak"))
+```
+Kullanıcı: Python'da bir metnin palindrom olup olmadığını kontrol eden fonksiyon yaz. Yeni başlayan biri için açıkla.
+Asistan: Palindrom kontrolünde metni sadeleştirip ters haliyle karşılaştırabilirsin.
+```python
+def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+print(is_palindrome("kazak"))
+```
+Kullanıcı: Python'da bir metnin palindrom olup olmadığını kontrol eden fonksiyon yaz. Kodla göster.
+Asistan:
+```python
+def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+print(is_palindrome("kazak"))
+```
+Kullanıcı: Python'da bir metnin palindrom olup olmadığını kontrol eden fonksiyon yaz. Küçük ve çalışır bir örnek ver.
+Asistan: Palindrom kontrolünde metni sadeleştirip ters haliyle karşılaştırabilirsin.
+```python
+def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+print(is_palindrome("kazak"))
+```
+Kullanıcı: Python'da bir metnin palindrom olup olmadığını kontrol eden fonksiyon yaz. Türkçe açıklama ve kodla anlat.
+Asistan: Palindrom kontrolünde metni sadeleştirip ters haliyle karşılaştırabilirsin.
+```python
+def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+print(is_palindrome("kazak"))
+```
+Kullanıcı: Python'da bir metnin palindrom olup olmadığını kontrol eden fonksiyon yaz. Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+print(is_palindrome("kazak"))
+```
+Kullanıcı: Python'da asal sayı kontrolü nasıl yapılır?
+Asistan: Asal sayı kontrolünde 2'den kareköke kadar bölen aranabilir.
+```python
+def is_prime(number):
+    if number < 2:
+        return False
+    for divisor in range(2, int(number ** 0.5) + 1):
+        if number % divisor == 0:
+            return False
+    return True
+print(is_prime(17))
+```
+Kullanıcı: Python'da asal sayı kontrolü nasıl yapılır? Kısa bir örnek göster.
+Asistan: Asal sayı kontrolünde 2'den kareköke kadar bölen aranabilir.
+```python
+def is_prime(number):
+    if number < 2:
+        return False
+    for divisor in range(2, int(number ** 0.5) + 1):
+        if number % divisor == 0:
+            return False
+    return True
+print(is_prime(17))
+```
+Kullanıcı: Python'da asal sayı kontrolü nasıl yapılır? Basit bir Python örneği yaz.
+Asistan: Asal sayı kontrolünde 2'den kareköke kadar bölen aranabilir.
+```python
+def is_prime(number):
+    if number < 2:
+        return False
+    for divisor in range(2, int(number ** 0.5) + 1):
+        if number % divisor == 0:
+            return False
+    return True
+print(is_prime(17))
+```
+Kullanıcı: Python'da asal sayı kontrolü nasıl yapılır? Yeni başlayan biri için açıkla.
+Asistan: Asal sayı kontrolünde 2'den kareköke kadar bölen aranabilir.
+```python
+def is_prime(number):
+    if number < 2:
+        return False
+    for divisor in range(2, int(number ** 0.5) + 1):
+        if number % divisor == 0:
+            return False
+    return True
+print(is_prime(17))
+```
+Kullanıcı: Python'da asal sayı kontrolü nasıl yapılır? Kodla göster.
+Asistan:
+```python
+def is_prime(number):
+    if number < 2:
+        return False
+    for divisor in range(2, int(number ** 0.5) + 1):
+        if number % divisor == 0:
+            return False
+    return True
+print(is_prime(17))
+```
+Kullanıcı: Python'da asal sayı kontrolü nasıl yapılır? Küçük ve çalışır bir örnek ver.
+Asistan: Asal sayı kontrolünde 2'den kareköke kadar bölen aranabilir.
+```python
+def is_prime(number):
+    if number < 2:
+        return False
+    for divisor in range(2, int(number ** 0.5) + 1):
+        if number % divisor == 0:
+            return False
+    return True
+print(is_prime(17))
+```
+Kullanıcı: Python'da asal sayı kontrolü nasıl yapılır? Türkçe açıklama ve kodla anlat.
+Asistan: Asal sayı kontrolünde 2'den kareköke kadar bölen aranabilir.
+```python
+def is_prime(number):
+    if number < 2:
+        return False
+    for divisor in range(2, int(number ** 0.5) + 1):
+        if number % divisor == 0:
+            return False
+    return True
+print(is_prime(17))
+```
+Kullanıcı: Python'da asal sayı kontrolü nasıl yapılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+def is_prime(number):
+    if number < 2:
+        return False
+    for divisor in range(2, int(number ** 0.5) + 1):
+        if number % divisor == 0:
+            return False
+    return True
+print(is_prime(17))
+```
+Kullanıcı: Python'da fibonacci dizisi nasıl üretilir?
+Asistan: Fibonacci dizisinde her sayı kendinden önceki iki sayının toplamıdır.
+```python
+def fibonacci(count):
+    numbers = []
+    a, b = 0, 1
+    for _ in range(count):
+        numbers.append(a)
+        a, b = b, a + b
+    return numbers
+print(fibonacci(7))
+```
+Kullanıcı: Python'da fibonacci dizisi nasıl üretilir? Kısa bir örnek göster.
+Asistan: Fibonacci dizisinde her sayı kendinden önceki iki sayının toplamıdır.
+```python
+def fibonacci(count):
+    numbers = []
+    a, b = 0, 1
+    for _ in range(count):
+        numbers.append(a)
+        a, b = b, a + b
+    return numbers
+print(fibonacci(7))
+```
+Kullanıcı: Python'da fibonacci dizisi nasıl üretilir? Basit bir Python örneği yaz.
+Asistan: Fibonacci dizisinde her sayı kendinden önceki iki sayının toplamıdır.
+```python
+def fibonacci(count):
+    numbers = []
+    a, b = 0, 1
+    for _ in range(count):
+        numbers.append(a)
+        a, b = b, a + b
+    return numbers
+print(fibonacci(7))
+```
+Kullanıcı: Python'da fibonacci dizisi nasıl üretilir? Yeni başlayan biri için açıkla.
+Asistan: Fibonacci dizisinde her sayı kendinden önceki iki sayının toplamıdır.
+```python
+def fibonacci(count):
+    numbers = []
+    a, b = 0, 1
+    for _ in range(count):
+        numbers.append(a)
+        a, b = b, a + b
+    return numbers
+print(fibonacci(7))
+```
+Kullanıcı: Python'da fibonacci dizisi nasıl üretilir? Kodla göster.
+Asistan:
+```python
+def fibonacci(count):
+    numbers = []
+    a, b = 0, 1
+    for _ in range(count):
+        numbers.append(a)
+        a, b = b, a + b
+    return numbers
+print(fibonacci(7))
+```
+Kullanıcı: Python'da fibonacci dizisi nasıl üretilir? Küçük ve çalışır bir örnek ver.
+Asistan: Fibonacci dizisinde her sayı kendinden önceki iki sayının toplamıdır.
+```python
+def fibonacci(count):
+    numbers = []
+    a, b = 0, 1
+    for _ in range(count):
+        numbers.append(a)
+        a, b = b, a + b
+    return numbers
+print(fibonacci(7))
+```
+Kullanıcı: Python'da fibonacci dizisi nasıl üretilir? Türkçe açıklama ve kodla anlat.
+Asistan: Fibonacci dizisinde her sayı kendinden önceki iki sayının toplamıdır.
+```python
+def fibonacci(count):
+    numbers = []
+    a, b = 0, 1
+    for _ in range(count):
+        numbers.append(a)
+        a, b = b, a + b
+    return numbers
+print(fibonacci(7))
+```
+Kullanıcı: Python'da fibonacci dizisi nasıl üretilir? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+def fibonacci(count):
+    numbers = []
+    a, b = 0, 1
+    for _ in range(count):
+        numbers.append(a)
+        a, b = b, a + b
+    return numbers
+print(fibonacci(7))
+```
+Kullanıcı: Python'da faktöriyel nasıl hesaplanır?
+Asistan: Faktöriyel, 1'den n'e kadar sayıların çarpımıdır.
+```python
+def factorial(number):
+    result = 1
+    for value in range(2, number + 1):
+        result *= value
+    return result
+print(factorial(5))
+```
+Kullanıcı: Python'da faktöriyel nasıl hesaplanır? Kısa bir örnek göster.
+Asistan: Faktöriyel, 1'den n'e kadar sayıların çarpımıdır.
+```python
+def factorial(number):
+    result = 1
+    for value in range(2, number + 1):
+        result *= value
+    return result
+print(factorial(5))
+```
+Kullanıcı: Python'da faktöriyel nasıl hesaplanır? Basit bir Python örneği yaz.
+Asistan: Faktöriyel, 1'den n'e kadar sayıların çarpımıdır.
+```python
+def factorial(number):
+    result = 1
+    for value in range(2, number + 1):
+        result *= value
+    return result
+print(factorial(5))
+```
+Kullanıcı: Python'da faktöriyel nasıl hesaplanır? Yeni başlayan biri için açıkla.
+Asistan: Faktöriyel, 1'den n'e kadar sayıların çarpımıdır.
+```python
+def factorial(number):
+    result = 1
+    for value in range(2, number + 1):
+        result *= value
+    return result
+print(factorial(5))
+```
+Kullanıcı: Python'da faktöriyel nasıl hesaplanır? Kodla göster.
+Asistan:
+```python
+def factorial(number):
+    result = 1
+    for value in range(2, number + 1):
+        result *= value
+    return result
+print(factorial(5))
+```
+Kullanıcı: Python'da faktöriyel nasıl hesaplanır? Küçük ve çalışır bir örnek ver.
+Asistan: Faktöriyel, 1'den n'e kadar sayıların çarpımıdır.
+```python
+def factorial(number):
+    result = 1
+    for value in range(2, number + 1):
+        result *= value
+    return result
+print(factorial(5))
+```
+Kullanıcı: Python'da faktöriyel nasıl hesaplanır? Türkçe açıklama ve kodla anlat.
+Asistan: Faktöriyel, 1'den n'e kadar sayıların çarpımıdır.
+```python
+def factorial(number):
+    result = 1
+    for value in range(2, number + 1):
+        result *= value
+    return result
+print(factorial(5))
+```
+Kullanıcı: Python'da faktöriyel nasıl hesaplanır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+def factorial(number):
+    result = 1
+    for value in range(2, number + 1):
+        result *= value
+    return result
+print(factorial(5))
+```
+Kullanıcı: Python'da metindeki kelime sayısı nasıl bulunur?
+Asistan: split ile metni kelimelere ayırıp len ile sayabilirsin.
+```python
+text = "temiz veri güçlü model"
+word_count = len(text.split())
+print(word_count)
+```
+Kullanıcı: Python'da metindeki kelime sayısı nasıl bulunur? Kısa bir örnek göster.
+Asistan: split ile metni kelimelere ayırıp len ile sayabilirsin.
+```python
+text = "temiz veri güçlü model"
+word_count = len(text.split())
+print(word_count)
+```
+Kullanıcı: Python'da metindeki kelime sayısı nasıl bulunur? Basit bir Python örneği yaz.
+Asistan: split ile metni kelimelere ayırıp len ile sayabilirsin.
+```python
+text = "temiz veri güçlü model"
+word_count = len(text.split())
+print(word_count)
+```
+Kullanıcı: Python'da metindeki kelime sayısı nasıl bulunur? Yeni başlayan biri için açıkla.
+Asistan: split ile metni kelimelere ayırıp len ile sayabilirsin.
+```python
+text = "temiz veri güçlü model"
+word_count = len(text.split())
+print(word_count)
+```
+Kullanıcı: Python'da metindeki kelime sayısı nasıl bulunur? Kodla göster.
+Asistan:
+```python
+text = "temiz veri güçlü model"
+word_count = len(text.split())
+print(word_count)
+```
+Kullanıcı: Python'da metindeki kelime sayısı nasıl bulunur? Küçük ve çalışır bir örnek ver.
+Asistan: split ile metni kelimelere ayırıp len ile sayabilirsin.
+```python
+text = "temiz veri güçlü model"
+word_count = len(text.split())
+print(word_count)
+```
+Kullanıcı: Python'da metindeki kelime sayısı nasıl bulunur? Türkçe açıklama ve kodla anlat.
+Asistan: split ile metni kelimelere ayırıp len ile sayabilirsin.
+```python
+text = "temiz veri güçlü model"
+word_count = len(text.split())
+print(word_count)
+```
+Kullanıcı: Python'da metindeki kelime sayısı nasıl bulunur? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+text = "temiz veri güçlü model"
+word_count = len(text.split())
+print(word_count)
+```
+Kullanıcı: Python'da satır sayısı nasıl bulunur?
+Asistan: splitlines, metni satırlarına ayırır.
+```python
+text = "birinci satır\nikinci satır\nüçüncü satır"
+line_count = len(text.splitlines())
+print(line_count)
+```
+Kullanıcı: Python'da satır sayısı nasıl bulunur? Kısa bir örnek göster.
+Asistan: splitlines, metni satırlarına ayırır.
+```python
+text = "birinci satır\nikinci satır\nüçüncü satır"
+line_count = len(text.splitlines())
+print(line_count)
+```
+Kullanıcı: Python'da satır sayısı nasıl bulunur? Basit bir Python örneği yaz.
+Asistan: splitlines, metni satırlarına ayırır.
+```python
+text = "birinci satır\nikinci satır\nüçüncü satır"
+line_count = len(text.splitlines())
+print(line_count)
+```
+Kullanıcı: Python'da satır sayısı nasıl bulunur? Yeni başlayan biri için açıkla.
+Asistan: splitlines, metni satırlarına ayırır.
+```python
+text = "birinci satır\nikinci satır\nüçüncü satır"
+line_count = len(text.splitlines())
+print(line_count)
+```
+Kullanıcı: Python'da satır sayısı nasıl bulunur? Kodla göster.
+Asistan:
+```python
+text = "birinci satır\nikinci satır\nüçüncü satır"
+line_count = len(text.splitlines())
+print(line_count)
+```
+Kullanıcı: Python'da satır sayısı nasıl bulunur? Küçük ve çalışır bir örnek ver.
+Asistan: splitlines, metni satırlarına ayırır.
+```python
+text = "birinci satır\nikinci satır\nüçüncü satır"
+line_count = len(text.splitlines())
+print(line_count)
+```
+Kullanıcı: Python'da satır sayısı nasıl bulunur? Türkçe açıklama ve kodla anlat.
+Asistan: splitlines, metni satırlarına ayırır.
+```python
+text = "birinci satır\nikinci satır\nüçüncü satır"
+line_count = len(text.splitlines())
+print(line_count)
+```
+Kullanıcı: Python'da satır sayısı nasıl bulunur? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+text = "birinci satır\nikinci satır\nüçüncü satır"
+line_count = len(text.splitlines())
+print(line_count)
+```
+Kullanıcı: Python'da CSV benzeri metin nasıl parçalanır?
+Asistan: Dış bağımlılık olmadan virgüle göre split yapılabilir.
+```python
+line = "Ali,80,İstanbul"
+name, score, city = [part.strip() for part in line.split(",")]
+print(name, score, city)
+```
+Kullanıcı: Python'da CSV benzeri metin nasıl parçalanır? Kısa bir örnek göster.
+Asistan: Dış bağımlılık olmadan virgüle göre split yapılabilir.
+```python
+line = "Ali,80,İstanbul"
+name, score, city = [part.strip() for part in line.split(",")]
+print(name, score, city)
+```
+Kullanıcı: Python'da CSV benzeri metin nasıl parçalanır? Basit bir Python örneği yaz.
+Asistan: Dış bağımlılık olmadan virgüle göre split yapılabilir.
+```python
+line = "Ali,80,İstanbul"
+name, score, city = [part.strip() for part in line.split(",")]
+print(name, score, city)
+```
+Kullanıcı: Python'da CSV benzeri metin nasıl parçalanır? Yeni başlayan biri için açıkla.
+Asistan: Dış bağımlılık olmadan virgüle göre split yapılabilir.
+```python
+line = "Ali,80,İstanbul"
+name, score, city = [part.strip() for part in line.split(",")]
+print(name, score, city)
+```
+Kullanıcı: Python'da CSV benzeri metin nasıl parçalanır? Kodla göster.
+Asistan:
+```python
+line = "Ali,80,İstanbul"
+name, score, city = [part.strip() for part in line.split(",")]
+print(name, score, city)
+```
+Kullanıcı: Python'da CSV benzeri metin nasıl parçalanır? Küçük ve çalışır bir örnek ver.
+Asistan: Dış bağımlılık olmadan virgüle göre split yapılabilir.
+```python
+line = "Ali,80,İstanbul"
+name, score, city = [part.strip() for part in line.split(",")]
+print(name, score, city)
+```
+Kullanıcı: Python'da CSV benzeri metin nasıl parçalanır? Türkçe açıklama ve kodla anlat.
+Asistan: Dış bağımlılık olmadan virgüle göre split yapılabilir.
+```python
+line = "Ali,80,İstanbul"
+name, score, city = [part.strip() for part in line.split(",")]
+print(name, score, city)
+```
+Kullanıcı: Python'da CSV benzeri metin nasıl parçalanır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+line = "Ali,80,İstanbul"
+name, score, city = [part.strip() for part in line.split(",")]
+print(name, score, city)
+```
+Kullanıcı: Python'da basit assertion testi nasıl yazılır?
+Asistan: assert, beklenen değerin doğru olduğunu kontrol etmek için kullanılabilir.
+```python
+def add_numbers(a, b):
+    return a + b
+# Küçük bir kontrol testi
+assert add_numbers(2, 3) == 5
+assert add_numbers(-1, 1) == 0
+```
+Kullanıcı: Python'da basit assertion testi nasıl yazılır? Kısa bir örnek göster.
+Asistan: assert, beklenen değerin doğru olduğunu kontrol etmek için kullanılabilir.
+```python
+def add_numbers(a, b):
+    return a + b
+# Küçük bir kontrol testi
+assert add_numbers(2, 3) == 5
+assert add_numbers(-1, 1) == 0
+```
+Kullanıcı: Python'da basit assertion testi nasıl yazılır? Basit bir Python örneği yaz.
+Asistan: assert, beklenen değerin doğru olduğunu kontrol etmek için kullanılabilir.
+```python
+def add_numbers(a, b):
+    return a + b
+# Küçük bir kontrol testi
+assert add_numbers(2, 3) == 5
+assert add_numbers(-1, 1) == 0
+```
+Kullanıcı: Python'da basit assertion testi nasıl yazılır? Yeni başlayan biri için açıkla.
+Asistan: assert, beklenen değerin doğru olduğunu kontrol etmek için kullanılabilir.
+```python
+def add_numbers(a, b):
+    return a + b
+# Küçük bir kontrol testi
+assert add_numbers(2, 3) == 5
+assert add_numbers(-1, 1) == 0
+```
+Kullanıcı: Python'da basit assertion testi nasıl yazılır? Kodla göster.
+Asistan:
+```python
+def add_numbers(a, b):
+    return a + b
+# Küçük bir kontrol testi
+assert add_numbers(2, 3) == 5
+assert add_numbers(-1, 1) == 0
+```
+Kullanıcı: Python'da basit assertion testi nasıl yazılır? Küçük ve çalışır bir örnek ver.
+Asistan: assert, beklenen değerin doğru olduğunu kontrol etmek için kullanılabilir.
+```python
+def add_numbers(a, b):
+    return a + b
+# Küçük bir kontrol testi
+assert add_numbers(2, 3) == 5
+assert add_numbers(-1, 1) == 0
+```
+Kullanıcı: Python'da basit assertion testi nasıl yazılır? Türkçe açıklama ve kodla anlat.
+Asistan: assert, beklenen değerin doğru olduğunu kontrol etmek için kullanılabilir.
+```python
+def add_numbers(a, b):
+    return a + b
+# Küçük bir kontrol testi
+assert add_numbers(2, 3) == 5
+assert add_numbers(-1, 1) == 0
+```
+Kullanıcı: Python'da basit assertion testi nasıl yazılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+def add_numbers(a, b):
+    return a + b
+# Küçük bir kontrol testi
+assert add_numbers(2, 3) == 5
+assert add_numbers(-1, 1) == 0
+```
+Kullanıcı: Python'da enumerate ne işe yarar?
+Asistan: enumerate, döngüde hem sıra numarasını hem de elemanı verir.
+```python
+tasks = ["oku", "yaz", "test et"]
+for index, task in enumerate(tasks, start=1):
+    print(index, task)
+```
+Kullanıcı: Python'da enumerate ne işe yarar? Kısa bir örnek göster.
+Asistan: enumerate, döngüde hem sıra numarasını hem de elemanı verir.
+```python
+tasks = ["oku", "yaz", "test et"]
+for index, task in enumerate(tasks, start=1):
+    print(index, task)
+```
+Kullanıcı: Python'da enumerate ne işe yarar? Basit bir Python örneği yaz.
+Asistan: enumerate, döngüde hem sıra numarasını hem de elemanı verir.
+```python
+tasks = ["oku", "yaz", "test et"]
+for index, task in enumerate(tasks, start=1):
+    print(index, task)
+```
+Kullanıcı: Python'da enumerate ne işe yarar? Yeni başlayan biri için açıkla.
+Asistan: enumerate, döngüde hem sıra numarasını hem de elemanı verir.
+```python
+tasks = ["oku", "yaz", "test et"]
+for index, task in enumerate(tasks, start=1):
+    print(index, task)
+```
+Kullanıcı: Python'da enumerate ne işe yarar? Kodla göster.
+Asistan:
+```python
+tasks = ["oku", "yaz", "test et"]
+for index, task in enumerate(tasks, start=1):
+    print(index, task)
+```
+Kullanıcı: Python'da enumerate ne işe yarar? Küçük ve çalışır bir örnek ver.
+Asistan: enumerate, döngüde hem sıra numarasını hem de elemanı verir.
+```python
+tasks = ["oku", "yaz", "test et"]
+for index, task in enumerate(tasks, start=1):
+    print(index, task)
+```
+Kullanıcı: Python'da enumerate ne işe yarar? Türkçe açıklama ve kodla anlat.
+Asistan: enumerate, döngüde hem sıra numarasını hem de elemanı verir.
+```python
+tasks = ["oku", "yaz", "test et"]
+for index, task in enumerate(tasks, start=1):
+    print(index, task)
+```
+Kullanıcı: Python'da enumerate ne işe yarar? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+tasks = ["oku", "yaz", "test et"]
+for index, task in enumerate(tasks, start=1):
+    print(index, task)
+```

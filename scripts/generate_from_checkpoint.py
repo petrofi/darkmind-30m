@@ -181,6 +181,60 @@ def apply_repetition_penalty(
     return logits
 
 
+def apply_no_repeat_ngram_blocking(
+    logits: torch.Tensor,
+    generated_ids: torch.Tensor,
+    ngram_size: int,
+) -> torch.Tensor:
+    if ngram_size <= 0:
+        return logits
+
+    token_ids = generated_ids[0].tolist()
+
+    if len(token_ids) + 1 < ngram_size:
+        return logits
+
+    prefix_size = ngram_size - 1
+    current_prefix = tuple(token_ids[-prefix_size:]) if prefix_size > 0 else tuple()
+    banned_tokens = set()
+
+    for index in range(0, len(token_ids) - ngram_size + 1):
+        ngram = tuple(token_ids[index:index + ngram_size])
+
+        if ngram[:-1] == current_prefix:
+            banned_tokens.add(ngram[-1])
+
+    for token_id in banned_tokens:
+        logits[0, token_id] = -float("inf")
+
+    return logits
+
+
+def apply_top_p_filtering(logits: torch.Tensor, top_p: float | None) -> torch.Tensor:
+    if top_p is None or top_p >= 1.0:
+        return logits
+
+    if top_p <= 0:
+        raise ValueError("top_p must be greater than 0")
+
+    sorted_logits, sorted_indices = torch.sort(logits, descending=True, dim=-1)
+    sorted_probs = F.softmax(sorted_logits, dim=-1)
+    cumulative_probs = torch.cumsum(sorted_probs, dim=-1)
+
+    sorted_indices_to_remove = cumulative_probs > top_p
+    sorted_indices_to_remove[..., 1:] = sorted_indices_to_remove[..., :-1].clone()
+    sorted_indices_to_remove[..., 0] = False
+
+    indices_to_remove = torch.zeros_like(logits, dtype=torch.bool)
+    indices_to_remove.scatter_(
+        dim=-1,
+        index=sorted_indices,
+        src=sorted_indices_to_remove,
+    )
+
+    return logits.masked_fill(indices_to_remove, -float("inf"))
+
+
 @torch.no_grad()
 def generate_with_controls(
     model: GPTLanguageModel,
@@ -192,9 +246,17 @@ def generate_with_controls(
     top_k: int,
     repetition_penalty: float,
     stop_on_user_marker: bool = True,
+    top_p: float | None = 0.9,
+    no_repeat_ngram_size: int = 3,
 ) -> str:
     if temperature <= 0:
         raise ValueError("temperature must be greater than 0")
+
+    if top_p is not None and not 0 < top_p <= 1:
+        raise ValueError("top_p must be greater than 0 and less than or equal to 1")
+
+    if no_repeat_ngram_size < 0:
+        raise ValueError("no_repeat_ngram_size must be at least 0")
 
     encoded = tokenizer.encode(prompt_text)
     idx = torch.tensor([encoded.ids], dtype=torch.long, device=device)
@@ -205,11 +267,17 @@ def generate_with_controls(
         logits, _ = model(idx_cond)
         logits = logits[:, -1, :] / temperature
         logits = apply_repetition_penalty(logits, idx, repetition_penalty)
+        logits = apply_no_repeat_ngram_blocking(
+            logits,
+            idx,
+            no_repeat_ngram_size,
+        )
 
         if top_k_value is not None:
             values, _ = torch.topk(logits, top_k_value)
             logits[logits < values[:, [-1]]] = -float("inf")
 
+        logits = apply_top_p_filtering(logits, top_p)
         probs = F.softmax(logits, dim=-1)
         idx_next = torch.multinomial(probs, num_samples=1)
         idx = torch.cat((idx, idx_next), dim=1)
@@ -274,10 +342,13 @@ def main() -> None:
         help="Dialogue mode. Example: --dialogue 'DarkMind hazır bir model mi?'",
     )
     parser.add_argument("--max_new_tokens", type=int, default=120)
-    parser.add_argument("--temperature", type=float, default=0.8)
-    parser.add_argument("--top_k", type=int, default=50)
+    parser.add_argument("--temperature", type=float, default=0.5)
+    parser.add_argument("--top_k", type=int, default=40)
+    parser.add_argument("--top_p", type=float, default=0.9)
     parser.add_argument("--repetition_penalty", type=float, default=1.1)
-    parser.add_argument("--num_samples", type=int, default=1)
+    parser.add_argument("--no_repeat_ngram_size", type=int, default=3)
+    parser.add_argument("--num_return_sequences", type=int, default=1)
+    parser.add_argument("--num_samples", type=int, default=None)
     parser.add_argument("--output_path", type=str, default=None)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument(
@@ -287,8 +358,20 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    if args.num_samples < 1:
-        raise ValueError("--num_samples must be at least 1")
+    num_return_sequences = (
+        args.num_samples
+        if args.num_samples is not None
+        else args.num_return_sequences
+    )
+
+    if num_return_sequences < 1:
+        raise ValueError("--num_return_sequences must be at least 1")
+
+    if not 0 < args.top_p <= 1:
+        raise ValueError("--top_p must be greater than 0 and less than or equal to 1")
+
+    if args.no_repeat_ngram_size < 0:
+        raise ValueError("--no_repeat_ngram_size must be at least 0")
 
     if args.dialogue is not None:
         args.prompt = f"Kullanıcı: {args.dialogue.strip()}\nAsistan:"
@@ -330,16 +413,18 @@ def main() -> None:
         "checkpoint": str(checkpoint_path),
         "temperature": args.temperature,
         "top_k": args.top_k,
+        "top_p": args.top_p,
         "max_new_tokens": args.max_new_tokens,
         "repetition_penalty": args.repetition_penalty,
-        "num_samples": args.num_samples,
+        "no_repeat_ngram_size": args.no_repeat_ngram_size,
+        "num_return_sequences": num_return_sequences,
         "seed": args.seed,
         "stop_at_next_user": args.stop_at_next_user,
     }
 
     samples = []
 
-    for sample_index in range(args.num_samples):
+    for sample_index in range(num_return_sequences):
         set_seed(args.seed + sample_index, device)
         output_text = generate_with_controls(
             model=model,
@@ -351,6 +436,8 @@ def main() -> None:
             top_k=args.top_k,
             repetition_penalty=args.repetition_penalty,
             stop_on_user_marker=args.stop_at_next_user,
+            top_p=args.top_p,
+            no_repeat_ngram_size=args.no_repeat_ngram_size,
         )
         output_text = clean_generated_text(output_text)
         samples.append(output_text or SAFE_FALLBACK)

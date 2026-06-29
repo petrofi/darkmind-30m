@@ -116,6 +116,19 @@ python scripts/generate_from_checkpoint.py --checkpoint models/after.pt --prompt
 
 Compare both the output text and the training metadata. A better checkpoint should usually show lower validation loss and more coherent generations, but lower train loss alone is not enough because it can also indicate overfitting.
 
+## Base LM Versus Chat Behavior
+
+Base pretraining teaches DarkMind to continue text that looks like the training corpus. It does not automatically teach the model to follow instructions, answer questions directly, refuse unsafe requests, or stay in a clean user/assistant dialogue format.
+
+For question-answer behavior, the next stage should be instruct or chat fine-tuning with examples such as:
+
+```text
+Kullanici: Python nedir?
+Asistan: Python, okunabilir sozdizimine sahip genel amacli bir programlama dilidir.
+```
+
+A base model may handle a prompt like `Python nedir?` poorly because it is only predicting likely continuation tokens. It may continue with unrelated encyclopedia fragments, repeat phrases, or switch topics instead of producing a concise answer. Lower pretraining loss helps fluency, but reliable assistant behavior requires targeted supervised data and evaluation.
+
 ## Cleaning And Filtering
 
 The preparation script:

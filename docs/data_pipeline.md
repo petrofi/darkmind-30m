@@ -66,7 +66,26 @@ For a conservative local test:
 python scripts/train_from_jsonl.py --data data/processed/pretrain_corpus.jsonl --epochs 1 --batch_size 4 --block_size 256 --save_path models/darkmind-30m-pretrain.pt
 ```
 
-This uses the existing tokenizer and GPT model implementation. Defaults are intentionally small for CPU/local testing. A 30M-quality run needs more data, more steps, better evaluation, and careful checkpoint tracking.
+This uses the existing tokenizer and GPT model implementation. A 30M-quality run needs more data, more steps, better evaluation, and careful checkpoint tracking.
+
+## Verifying The Real Model Architecture
+
+`scripts/train_from_jsonl.py` reads `configs/darkmind_30m_1000step.json` by default and instantiates the real `GPTLanguageModel` from `model/gpt.py`. It should print the config path, tokenizer path, layer count, head count, embedding size, block size, vocab size, and parameter count before training starts.
+
+Run a one-step architecture check with the smoke dataset:
+
+```powershell
+python scripts/train_from_jsonl.py --data data/processed/pretrain_smoke.jsonl --epochs 1 --batch_size 4 --block_size 256 --max_steps 1 --save_path models/darkmind-30m-arch-check.pt
+```
+
+With the current `configs/darkmind_30m_1000step.json`, the expected architecture lines are:
+
+- Layers: 8
+- Heads: 8
+- Embedding size: 512
+- Block size: 256
+
+The exact parameter count depends on the tokenizer vocabulary size. If the script reports a much smaller model, check that `--config`, `--tokenizer`, and any manual `--n_layer`, `--n_head`, or `--n_embd` overrides are not pointing to a smaller experiment.
 
 ## Cleaning And Filtering
 

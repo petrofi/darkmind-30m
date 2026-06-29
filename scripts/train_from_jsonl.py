@@ -15,6 +15,7 @@ from model.gpt import GPTConfig, GPTLanguageModel, count_parameters
 
 
 DEFAULT_DATA = ROOT_DIR / "data" / "processed" / "pretrain_corpus.jsonl"
+DEFAULT_CONFIG = ROOT_DIR / "configs" / "darkmind_30m_1000step.json"
 DEFAULT_TOKENIZER_DIR = ROOT_DIR / "tokenizer" / "darkmind-tokenizer"
 DEFAULT_SAVE_PATH = ROOT_DIR / "models" / "darkmind-30m-pretrain.pt"
 
@@ -56,6 +57,16 @@ def load_texts(path: Path) -> list[str]:
     return texts
 
 
+def pick_value(cli_value, config_values: dict, key: str, fallback):
+    if cli_value is not None:
+        return cli_value
+
+    if key in config_values:
+        return config_values[key]
+
+    return fallback
+
+
 def encode_texts(texts: list[str], tokenizer: ByteLevelBPETokenizer) -> list[int]:
     ids: list[int] = []
 
@@ -68,33 +79,47 @@ def encode_texts(texts: list[str], tokenizer: ByteLevelBPETokenizer) -> list[int
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Train a small DarkMind GPT model from pretraining JSONL text."
+        description="Train the real DarkMind GPT model from pretraining JSONL text."
     )
     parser.add_argument(
         "--data",
         type=str,
         default=str(DEFAULT_DATA.relative_to(ROOT_DIR)),
     )
+    parser.add_argument(
+        "--config",
+        type=str,
+        default=str(DEFAULT_CONFIG.relative_to(ROOT_DIR)),
+        help="DarkMind config JSON used for the real model architecture.",
+    )
     parser.add_argument("--epochs", type=int, default=1)
-    parser.add_argument("--batch_size", type=int, default=2)
-    parser.add_argument("--block_size", type=int, default=128)
-    parser.add_argument("--lr", type=float, default=3e-4)
+    parser.add_argument("--batch_size", type=int, default=None)
+    parser.add_argument("--block_size", type=int, default=None)
+    parser.add_argument("--lr", type=float, default=None)
     parser.add_argument(
         "--save_path",
         type=str,
         default=str(DEFAULT_SAVE_PATH.relative_to(ROOT_DIR)),
     )
     parser.add_argument(
+        "--tokenizer",
+        type=str,
+        default=None,
+        help="Tokenizer directory override. Defaults to tokenizer_dir in --config.",
+    )
+    parser.add_argument(
         "--tokenizer_dir",
         type=str,
-        default=str(DEFAULT_TOKENIZER_DIR.relative_to(ROOT_DIR)),
+        default=None,
+        help="Legacy alias for --tokenizer.",
     )
     parser.add_argument("--max_steps", type=int, default=100)
-    parser.add_argument("--n_layer", type=int, default=4)
-    parser.add_argument("--n_head", type=int, default=4)
-    parser.add_argument("--n_embd", type=int, default=256)
-    parser.add_argument("--dropout", type=float, default=0.1)
-    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--resume_from", type=str, default=None)
+    parser.add_argument("--n_layer", type=int, default=None)
+    parser.add_argument("--n_head", type=int, default=None)
+    parser.add_argument("--n_embd", type=int, default=None)
+    parser.add_argument("--dropout", type=float, default=None)
+    parser.add_argument("--seed", type=int, default=None)
     args = parser.parse_args()
 
     if args.epochs < 1:
@@ -103,8 +128,25 @@ def main() -> None:
     if args.max_steps < 1:
         raise ValueError("--max_steps must be at least 1")
 
+    config_path = resolve_path(args.config)
+
+    if not config_path.exists():
+        raise FileNotFoundError(f"Config file not found: {config_path}")
+
+    cfg = load_json(config_path)
+    model_cfg = cfg.get("model", {})
+    training_cfg = cfg.get("training", {})
+
+    if not model_cfg:
+        raise ValueError(f"Config has no model section: {config_path}")
+
     data_path = resolve_path(args.data)
-    tokenizer_dir = resolve_path(args.tokenizer_dir)
+    tokenizer_arg = args.tokenizer or args.tokenizer_dir
+    tokenizer_value = tokenizer_arg or cfg.get(
+        "tokenizer_dir",
+        str(DEFAULT_TOKENIZER_DIR.relative_to(ROOT_DIR)),
+    )
+    tokenizer_dir = resolve_path(tokenizer_value)
     save_path = resolve_path(args.save_path)
     vocab_path = tokenizer_dir / "vocab.json"
     merges_path = tokenizer_dir / "merges.txt"
@@ -115,11 +157,13 @@ def main() -> None:
     if not vocab_path.exists() or not merges_path.exists():
         raise FileNotFoundError(f"Tokenizer files not found in {tokenizer_dir}")
 
-    torch.manual_seed(args.seed)
+    seed = pick_value(args.seed, cfg, "seed", 42)
+
+    torch.manual_seed(seed)
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     if device == "cuda":
-        torch.cuda.manual_seed_all(args.seed)
+        torch.cuda.manual_seed_all(seed)
         torch.set_float32_matmul_precision("high")
 
     tokenizer = ByteLevelBPETokenizer(str(vocab_path), str(merges_path))
@@ -131,42 +175,81 @@ def main() -> None:
 
     ids = encode_texts(texts, tokenizer)
 
-    if len(ids) <= args.block_size + 1:
+    block_size = pick_value(args.block_size, model_cfg, "block_size", 256)
+    n_layer = pick_value(args.n_layer, model_cfg, "n_layer", 8)
+    n_head = pick_value(args.n_head, model_cfg, "n_head", 8)
+    n_embd = pick_value(args.n_embd, model_cfg, "n_embd", 512)
+    dropout = pick_value(args.dropout, model_cfg, "dropout", 0.1)
+    batch_size = pick_value(args.batch_size, training_cfg, "batch_size", 4)
+    learning_rate = pick_value(args.lr, training_cfg, "learning_rate", 3e-4)
+
+    if len(ids) <= block_size + 1:
         raise ValueError("Dataset is too small for the selected block_size.")
 
     tokens = torch.tensor(ids, dtype=torch.long)
     config = GPTConfig(
         vocab_size=vocab_size,
-        block_size=args.block_size,
-        n_layer=args.n_layer,
-        n_head=args.n_head,
-        n_embd=args.n_embd,
-        dropout=args.dropout,
+        block_size=block_size,
+        n_layer=n_layer,
+        n_head=n_head,
+        n_embd=n_embd,
+        dropout=dropout,
     )
     model = GPTLanguageModel(config).to(device)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
-    steps_per_epoch = max(1, len(tokens) // (args.batch_size * args.block_size))
+    parameter_count = count_parameters(model)
+
+    if args.resume_from:
+        resume_path = resolve_path(args.resume_from)
+
+        if not resume_path.exists():
+            raise FileNotFoundError(f"Resume checkpoint not found: {resume_path}")
+
+        checkpoint = torch.load(resume_path, map_location=device)
+        state_dict = checkpoint.get("model_state_dict", checkpoint)
+        model.load_state_dict(state_dict)
+        print(f"Resumed model weights from: {resume_path}")
+
+    optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
+    steps_per_epoch = max(1, len(tokens) // (batch_size * block_size))
     total_steps = min(args.max_steps, steps_per_epoch * args.epochs)
 
     print("=" * 70)
     print("DarkMind JSONL pretraining")
     print("=" * 70)
+    print(f"Config: {config_path}")
     print(f"Data: {data_path}")
+    print(f"Tokenizer: {tokenizer_dir}")
     print(f"Documents: {len(texts):,}")
     print(f"Tokens: {len(tokens):,}")
     print(f"Device: {device}")
-    print(f"Parameters: {count_parameters(model):,}")
+    if device == "cuda":
+        print(f"GPU: {torch.cuda.get_device_name(0)}")
+    print("Architecture: real DarkMind GPTLanguageModel from model/gpt.py")
+    print(f"Layers: {config.n_layer}")
+    print(f"Heads: {config.n_head}")
+    print(f"Embedding size: {config.n_embd}")
+    print(f"Block size: {config.block_size}")
+    print(f"Dropout: {config.dropout}")
+    print(f"Vocab size: {config.vocab_size:,}")
+    print(f"Parameter count: {parameter_count:,}")
+    if parameter_count < 20_000_000:
+        print(
+            "Warning: this config defines fewer than 20M parameters. "
+            "Use a larger DarkMind config if a 30M-family run is expected."
+        )
+    print(f"Batch size: {batch_size}")
+    print(f"Learning rate: {learning_rate}")
     print(f"Steps: {total_steps:,}")
     print(f"Save path: {save_path}")
     print("=" * 70)
 
     def get_batch():
         ix = torch.randint(
-            len(tokens) - args.block_size - 1,
-            (args.batch_size,),
+            len(tokens) - block_size - 1,
+            (batch_size,),
         )
-        x = torch.stack([tokens[i:i + args.block_size] for i in ix])
-        y = torch.stack([tokens[i + 1:i + args.block_size + 1] for i in ix])
+        x = torch.stack([tokens[i:i + block_size] for i in ix])
+        y = torch.stack([tokens[i + 1:i + block_size + 1] for i in ix])
         return x.to(device), y.to(device)
 
     model.train()
@@ -185,17 +268,21 @@ def main() -> None:
         {
             "run_name": "darkmind_jsonl_pretrain",
             "model_state_dict": model.state_dict(),
+            "optimizer_state_dict": optimizer.state_dict(),
             "config": config.__dict__,
             "training_config": {
+                "config": str(config_path),
                 "data": str(data_path),
+                "tokenizer": str(tokenizer_dir),
                 "epochs": args.epochs,
-                "batch_size": args.batch_size,
-                "block_size": args.block_size,
-                "lr": args.lr,
+                "batch_size": batch_size,
+                "block_size": block_size,
+                "lr": learning_rate,
                 "max_steps": args.max_steps,
-                "seed": args.seed,
+                "seed": seed,
             },
             "vocab_size": vocab_size,
+            "parameter_count": parameter_count,
             "final_train_loss": final_loss,
         },
         save_path,
@@ -204,6 +291,7 @@ def main() -> None:
     print("=" * 70)
     print("Training completed.")
     print(f"Checkpoint saved: {save_path}")
+    print(f"Parameter count: {parameter_count:,}")
     print(f"Final train loss: {final_loss}")
     print("=" * 70)
 

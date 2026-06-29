@@ -30,3 +30,8 @@ checkpoints/
 
 # Dataset cache
 .cache/
+
+data/processed/*.jsonl
+models/*.pt
+models/*.pth
+models/*.ckpt

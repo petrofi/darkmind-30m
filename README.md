@@ -46,6 +46,34 @@ Run the interactive chat demo:
 python scripts/chat_demo.py --checkpoint checkpoints/darkmind_30m.pt --temperature 0.8 --top_k 50 --max_new_tokens 120
 ```
 
+## Streaming Pretraining Data
+
+Install optional data-ingestion dependencies:
+
+```powershell
+pip install -r requirements-data.txt
+```
+
+Run a tiny smoke test with Hugging Face streaming sources:
+
+```powershell
+python scripts/prepare_pretraining_data.py --max_docs 100 --out data/processed/pretrain_smoke.jsonl
+```
+
+Prepare a small local-scale pretraining corpus:
+
+```powershell
+python scripts/prepare_pretraining_data.py --max_docs 50000 --out data/processed/pretrain_corpus.jsonl
+```
+
+Train from JSONL with conservative local defaults:
+
+```powershell
+python scripts/train_from_jsonl.py --data data/processed/pretrain_corpus.jsonl --epochs 1 --batch_size 4 --block_size 256 --save_path models/darkmind-30m-pretrain.pt
+```
+
+Do not download full FineWeb, RedPajama, or The Stack locally. Use small streaming samples, respect licenses, and skip gated datasets unless access is explicitly approved. See [docs/data_pipeline.md](docs/data_pipeline.md).
+
 ## Automated Dataset Processing
 
 Run the full safe data preparation pipeline:

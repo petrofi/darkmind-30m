@@ -341,6 +341,11 @@ def main() -> None:
         default=None,
         help="Dialogue mode. Example: --dialogue 'DarkMind hazır bir model mi?'",
     )
+    parser.add_argument(
+        "--chat_format",
+        action="store_true",
+        help="Wrap --prompt as 'Kullanıcı: ...\\nAsistan:' before generation.",
+    )
     parser.add_argument("--max_new_tokens", type=int, default=120)
     parser.add_argument("--temperature", type=float, default=0.5)
     parser.add_argument("--top_k", type=int, default=40)
@@ -375,6 +380,9 @@ def main() -> None:
 
     if args.dialogue is not None:
         args.prompt = f"Kullanıcı: {args.dialogue.strip()}\nAsistan:"
+        args.stop_at_next_user = True
+    elif args.chat_format:
+        args.prompt = f"Kullanıcı: {args.prompt.strip()}\nAsistan:"
         args.stop_at_next_user = True
 
     checkpoint_path = resolve_path(args.checkpoint)
@@ -420,6 +428,7 @@ def main() -> None:
         "num_return_sequences": num_return_sequences,
         "seed": args.seed,
         "stop_at_next_user": args.stop_at_next_user,
+        "chat_format": args.chat_format,
     }
 
     samples = []

@@ -15,3 +15,21 @@ Notes:
 - Model is still a base LM, not an instruct/chat model.
 - Repetition loops still appear.
 - Next step is instruct fine-tuning.
+
+# DarkMind-30M Instruct v0.1
+
+- Dataset size: TBD
+- Base checkpoint: models/darkmind-30m-10k-step15000.pt
+- Training loss: TBD
+- Validation loss: TBD
+- Test prompts:
+  - Merhaba, sen kimsin?
+  - Python nedir?
+  - Bugün kendimi kötü hissediyorum.
+- Before/after examples: TBD
+
+Notes:
+
+- This run is intended to teach basic Turkish question-answer behavior.
+- It starts from the Base v0.1 checkpoint, not from random weights.
+- It is not expected to make the model ChatGPT-level.

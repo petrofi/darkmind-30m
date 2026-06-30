@@ -30,8 +30,13 @@ checkpoints/
 
 # Dataset cache
 .cache/
+.cache/huggingface/
 
 data/processed/*.jsonl
+data/instruct/*.jsonl
+data/instruct/*.meta.json
+data/instruct/darkmind_instruct_external_*.jsonl
+data/instruct/darkmind_instruct_external_*.meta.json
 data/instruct/darkmind_instruct_v0_3*.jsonl
 data/instruct/darkmind_instruct_v0_3*.meta.json
 reports/*.md

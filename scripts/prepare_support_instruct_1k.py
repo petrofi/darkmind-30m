@@ -17,8 +17,8 @@ SOURCES = [
     "malhajar/alpaca-gpt4-tr",
 ]
 TARGET_EXAMPLES = 1000
-MAX_SCAN_ROWS_PER_SOURCE = 150000
-MAX_LOCAL_SUPPORT_SEED = 300
+MAX_SCAN_ROWS_PER_SOURCE = 1000
+MAX_LOCAL_SUPPORT_SEED = 220
 OUTPUT_PATH = Path("data/instruct/support_instruct_1k.jsonl")
 META_PATH = Path("data/instruct/support_instruct_1k.meta.json")
 
@@ -43,6 +43,9 @@ SUPPORT_PROMPT_PATTERNS = [
         r"kaygılıyım|kaygiliyim|endişeliyim|endiseliyim|stresliyim",
         r"hata aldıkça|hata aldikca|kod yazarken .{0,30}takılıyorum|takiliyorum",
         r"kendime güvenim|kendime guvenim|hiçbir şey yapasım yok|hicbir sey yapasim yok",
+        r"bunaldım|bunaldim|panikliyorum|geriliyorum|başlayamıyorum|baslayamiyorum",
+        r"geride hissediyorum|ağır geliyor|agir geliyor|toparlanmakta zorlanıyorum|zorlanıyorum",
+        r"bitiremeyecekmişim|bitiremeyecekmisim|yapamıyorum|yapamiyorum",
         r"ne yapmalıyım|ne yapmaliyim",
     ]
 ]
@@ -51,6 +54,8 @@ SUPPORT_RESPONSE_PATTERNS = [
     for pattern in [
         r"küçük bir adım|kucuk bir adim|bir sonraki adım|bir sonraki adim",
         r"küçük bir görev|kucuk bir gorev|hedefi küçült|hedefi kucult",
+        r"tek adım|tek adim|zamanlayıcı|zamanlayici|küçük başlangıç|kucuk baslangic",
+        r"yeterli olabilir|yan yana yaz|bir cümleyle|bir cumleyle",
         r"bugün sadece|bugun sadece|bugün yalnızca|bugun yalnizca",
         r"nefes|mola|dinlen|not al|plan yap|parçalara böl|parcalara bol",
         r"yalnız değilsin|yalniz degilsin|zor olabilir|anlaşılır|anlasilir",
@@ -155,6 +160,30 @@ LOCAL_SUPPORT_PROMPTS_EXTRA = [
     "Bugün verimsiz geçti diye moralim bozuk.",
     "Kendimi toparlamakta zorlanıyorum.",
     "Bir projeyi bitiremeyecekmişim gibi geliyor.",
+    "Backend öğrenirken kendimi yetersiz hissediyorum.",
+    "Python hatalarında hemen panikliyorum.",
+    "Docker ayarları karışınca moralim düşüyor.",
+    "Git kullanırken hata yapmaktan korkuyorum.",
+    "API yazmayı öğrenirken çok bunaldım.",
+    "SQL konularında geride hissediyorum.",
+    "C# öğrenmeye başlamak bana ağır geliyor.",
+    ".NET projem ilerlemiyor gibi hissediyorum.",
+    "Debug yaparken kendime güvenim azalıyor.",
+    "Terminal hataları beni çok geriyor.",
+    "Bugün kod yazmaya başlayamıyorum.",
+    "Öğrenmem gereken konular yüzünden bunaldım.",
+    "Junior seviyede olduğum için kendimi eksik hissediyorum.",
+    "Projemde küçük bir hata bile moralimi bozuyor.",
+    "Bir türlü düzenli çalışamıyorum.",
+    "İş görüşmelerine hazırlanırken kaygılıyım.",
+    "Portfolyom yeterli değil diye endişeliyim.",
+    "Kodumu başkalarına göstermekten çekiniyorum.",
+    "Yeni bir teknoloji öğrenince hemen yoruluyorum.",
+    "Hata çözmek çok uzun sürünce motivasyonum düşüyor.",
+    "Bugün öğrenmeye devam edemiyorum.",
+    "Kariyerimde ilerleyemiyormuşum gibi hissediyorum.",
+    "Kendi projemi bitiremeyeceğim diye korkuyorum.",
+    "Her şeyi aynı anda öğrenmem gerekiyormuş gibi bunaldım.",
 ]
 
 LOCAL_SUPPORT_RESPONSES_EXTRA = [
@@ -166,6 +195,14 @@ LOCAL_SUPPORT_RESPONSES_EXTRA = [
     "Şu an her şeyi çözmek zorunda değilsin. Önce nefeslen, sonra seni en çok sıkıştıran noktayı bir cümleyle adlandır.",
     "Moralin bozukken kararlar daha ağır gelir. Bugün sadece bir küçük iyileştirme yapman yeterli olabilir.",
     "Takıldığın yer senin değerinle ilgili değil, problemin netliğiyle ilgili olabilir. Beklenen sonuç ve mevcut sonucu yan yana yaz.",
+    "Böyle hissetmen anlaşılır. Bir sonraki adım olarak yalnızca en küçük hatayı seç ve onu ayrı bir notta tarif et.",
+    "Bu baskı yorucu olabilir. Şimdilik tek adım seç: 15 dakikalık zamanlayıcı kur ve sadece başlangıcı yap.",
+    "Kendini eksik hissetmen öğrenmediğin anlamına gelmez. Bugün öğrendiğin bir kavramı kısa bir cümleyle özetle.",
+    "Kaygı işleri büyütebilir. Önce derin bir nefes al, sonra yapılacaklar listesinden yalnızca bir maddeyi seç.",
+    "Yavaş ilerlemek de ilerlemektir. Şimdi sadece çalışmayan parçayı ve beklediğin sonucu yan yana yaz.",
+    "Moralin düşmüş olabilir, bu insani. Bugün sadece küçük bir düzeltme yapmayı hedefle ve sonucu not et.",
+    "Bu noktada zorlanman normal. Bir mola ver, sonra problemi üç küçük parçaya böl.",
+    "Her şeyi aynı anda çözmek zorunda değilsin. Önce en yakın küçük görevi seç ve sadece onu tamamla.",
 ]
 
 
@@ -298,6 +335,34 @@ def reject_reason(row: dict[str, Any], prompt: str, response: str) -> str | None
     return None
 
 
+def reject_local_support_seed_reason(prompt: str, response: str) -> str | None:
+    combined_text = f"{prompt}\n{response}"
+    if not prompt:
+        return "empty_prompt"
+    if not response:
+        return "empty_response"
+    if len(prompt) > 500:
+        return "prompt_too_long"
+    if len(response) < 20:
+        return "response_too_short"
+    if len(response) > 700:
+        return "response_too_long"
+    if has_identity_phrase(combined_text):
+        return "blocked_identity_phrase"
+    if SELF_HARM_RE.search(combined_text):
+        return "self_harm_skipped"
+    if VIOLENCE_RE.search(combined_text):
+        return "violent_or_hate_context"
+    if MEDICAL_CLAIM_RE.search(combined_text):
+        return "medical_or_therapy_claim"
+    reason = sensitive_reason(combined_text)
+    if reason:
+        return reason
+    if MOJIBAKE_RE.search(combined_text):
+        return "broken_turkish"
+    return None
+
+
 def load_streaming_dataset(source: str) -> tuple[Any, str]:
     try:
         return load_dataset(source, split="train", streaming=True), "train"
@@ -398,7 +463,7 @@ def add_local_support_seed(
     for prompt, response in local_pairs:
         if len(accepted) >= TARGET_EXAMPLES or added >= MAX_LOCAL_SUPPORT_SEED:
             break
-        reason = reject_reason({"prompt": prompt, "response": response}, prompt, response)
+        reason = reject_local_support_seed_reason(prompt, response)
         if reason:
             rejected_rows_per_reason[f"local_seed_{reason}"] += 1
             continue

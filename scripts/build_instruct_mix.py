@@ -13,21 +13,21 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 INPUT_PATHS = [
     ROOT_DIR / "data" / "instruct" / "openorca_tr_1k.jsonl",
     ROOT_DIR / "data" / "instruct" / "software_instruct_1k.jsonl",
+    ROOT_DIR / "data" / "instruct" / "ai_instruct_seed.jsonl",
     ROOT_DIR / "data" / "instruct" / "support_instruct_1k.jsonl",
     ROOT_DIR / "data" / "instruct" / "identity_anchor_300.jsonl",
     ROOT_DIR / "data" / "instruct" / "darkmind_instruct_seed.jsonl",
 ]
 OUTPUT_PATH = ROOT_DIR / "data" / "instruct" / "darkmind_instruct_mix_v0_4.jsonl"
 META_PATH = ROOT_DIR / "data" / "instruct" / "darkmind_instruct_mix_v0_4.meta.json"
-TARGET_RATIOS = {
-    "programming": 0.40,
-    "ai": 0.15,
-    "emotional_support": 0.15,
-    "general": 0.20,
-    "identity": 0.10,
+TARGET_COUNTS = {
+    "programming": 400,
+    "general": 200,
+    "ai": 150,
+    "emotional_support": 150,
+    "identity": 100,
 }
 MAX_IDENTITY_RATIO = 0.12
-MAX_TARGET_ROWS = 2500
 SEED = 42
 
 IDENTITY_PATTERNS = [
@@ -56,15 +56,54 @@ AI_RE = re.compile(
     r"fine-?tuning|embedding)\b",
     re.IGNORECASE,
 )
+LOCAL_AI_PROGRAMMING_RE = re.compile(
+    r"\b(pytorch|cuda|jsonl|tokenizer|checkpoint|dataset cleaning|dataset temizleme|"
+    r"veri temizleme|veri seti temizleme)\b",
+    re.IGNORECASE,
+)
 SOFTWARE_STRONG_RE = re.compile(
     r"\b(python|docker|github|api|http|json|sql|backend|frontend|javascript|"
     r"typescript|terminal|error|exception|debug|debugging|linux|pip|npm|"
     r"controller|dto|authentication|jwt|endpoint|pytorch|cuda|tokenizer|"
-    r"checkpoint|programlama|yazılım|yazilim)\b|\.net|c#|entity framework",
+    r"checkpoint|jsonl|dataset cleaning|dataset temizleme|veri temizleme|"
+    r"programlama|yazılım|yazilim)\b|\.net|c#|entity framework",
     re.IGNORECASE,
 )
 SOFTWARE_FALSE_POSITIVE_RE = re.compile(
-    r"monty python|python ve kutsal kase|\btrna\b|\bmrna\b|amino asit|protein sentezi|ribozom|genetik kod",
+    r"monty python|python ve kutsal kase|\btrna\b|\bmrna\b|amino asit|protein sentezi|ribozom|genetik kod|"
+    r"\buçak\b.*\bterminal\b|\bterminal\b.*\buçak\b|hava liman.*terminal|terminal.*hava liman|"
+    r"\bpip\b.*\bkar\b|\bkar\b.*\bpip\b|ticaret.*\bpip\b|programlama hedef",
+    re.IGNORECASE,
+)
+SOFTWARE_TASK_NOISE_RE = re.compile(
+    r"ürün incelemesi|urun incelemesi|olumlu veya olumlu|olumsuz veya olumlu|"
+    r"hangi dil|çevir|cevir|başlık yaz|baslik yaz|makalenin.*özeti|makalenin.*ozeti|"
+    r"bu metin ne hakkında|bu metin ne hakkinda|konuyu seç|konuyu sec|"
+    r"seçenekler|secenekler|seçenek:|secenek:|cevabınızı seçin|cevabinizi secin|"
+    r"çoktan seçmeli|coktan secmeli|"
+    r"önceki metin göz önüne|onceki metin goz onune|takip ediyor mu|"
+    r"duygusu nedir|tonu var mı|tonu var mi|diyaloğu.*özet|diyalogu.*ozet|"
+    r"kelimeleri bölümlere ayır|kelimeleri bolumlere ayir|bu karakterleri kullanan bir cümle|"
+    r"bu karakterleri kullanan bir cumle|karakterleri kullanarak.*cümle|karakterleri kullanarak.*cumle|"
+    r"iyi bir başlık|iyi bir baslik|başlık nedir|baslik nedir|"
+    r"ispanyolca kullanarak söyle|ispanyolca kullanarak soyle|almanca mı|almanca mi|"
+    r"fransızca kullanarak söyle|fransizca kullanarak soyle|rumenceye mi|"
+    r"müşterinin.*yorum|musterinin.*yorum|memnun olduğunu mu|memnun oldugunu mu|"
+    r"dosya uzant|dosyanızın açılmaması|dosyanizin acilmamasi|dosyanızı açmanın|dosyanizi acmanin|"
+    r"noktalama işaret|noktalama isaret|boşluklar eksik|bosluklar eksik|"
+    r"hepsi küçük harf|hepsi kucuk harf|büyük/küçük harf|buyuk/kucuk harf|paylaşılan yazılım|paylasilan yazilim",
+    re.IGNORECASE,
+)
+PROGRAMMING_PREFERRED_RE = re.compile(
+    r"\b(python|docker|git commit|git branch|git push|git pull|github|api|rest|http|"
+    r"json|sql|database|veritabanı|veritabani|backend|frontend|c#|\.net|javascript|"
+    r"typescript|terminal error|terminal hatası|terminal hatasi|debug|debugging|"
+    r"exception|pip install|npm|controller|service|dto|entity framework|authentication|"
+    r"jwt|endpoint|server|client|request|response|pytorch|cuda|jsonl|tokenizer|"
+    r"checkpoint|dataset cleaning|dataset temizleme|veri temizleme|"
+    r"yazılım|yazilim|programlama|"
+    r"programcı|programci|dosya uzantısı|dosya uzantisi|anahtar.?değer|anahtar.?deger|"
+    r"sözlük|sozluk|veri formu|veri yapısı|veri yapisi)\b",
     re.IGNORECASE,
 )
 SUPPORT_PROMPT_RE = re.compile(
@@ -165,6 +204,10 @@ def infer_category(row: dict[str, str]) -> str:
         return "identity"
     if category == "emotional_support" or row["source"] == "local_support_seed":
         return "emotional_support"
+    if row["source"] == "local_ai_seed" and LOCAL_AI_PROGRAMMING_RE.search(text):
+        return "programming"
+    if category == "ai" or row["source"] == "local_ai_seed":
+        return "ai"
     if AI_RE.search(text):
         return "ai"
     if category == "programming" or SOFTWARE_STRONG_RE.search(text):
@@ -197,9 +240,17 @@ def clean_enough(row: dict[str, str], category: str) -> str | None:
         return "unsafe_content"
     if category == "programming" and SOFTWARE_FALSE_POSITIVE_RE.search(text):
         return "software_false_positive"
+    if category == "programming" and "terminal" in text.lower() and "uçak" in text.lower():
+        return "software_false_positive"
+    if category == "programming" and SOFTWARE_TASK_NOISE_RE.search(prompt):
+        return "software_task_noise"
     if category == "programming" and not SOFTWARE_STRONG_RE.search(text):
         return "not_programming_related"
+    if category == "programming" and programming_score(row)[0] <= 0:
+        return "weak_programming_signal"
     if category == "emotional_support":
+        if row["source"] == "local_support_seed":
+            return None
         if SUPPORT_TASK_NOISE_RE.search(prompt):
             return "support_task_noise"
         if not (SUPPORT_PROMPT_RE.search(prompt) and SUPPORT_RESPONSE_RE.search(response)):
@@ -210,6 +261,32 @@ def clean_enough(row: dict[str, str], category: str) -> str | None:
 def pick_rows(pool: list[dict[str, str]], count: int, rng: random.Random) -> list[dict[str, str]]:
     shuffled = list(pool)
     rng.shuffle(shuffled)
+    return shuffled[: min(count, len(shuffled))]
+
+
+def programming_score(row: dict[str, str]) -> tuple[int, str]:
+    text = f"{row['prompt']}\n{row['response']}"
+    prompt = row["prompt"]
+    score = len(PROGRAMMING_PREFERRED_RE.findall(text)) * 3
+    if re.search(r"```|\{.*:.*\}|\bdef\b|\bclass\b|\bimport\b", text, re.IGNORECASE):
+        score += 4
+    if re.search(r"\b(hata|error|exception|debug|terminal)\b", prompt, re.IGNORECASE):
+        score += 3
+    if re.search(r"\b(json|sql|api|python|docker|git|c#|\.net)\b", prompt, re.IGNORECASE):
+        score += 3
+    if re.search(r"\b(restoran|kahve dükkanı|müşteri puanı|eatType|yiyecek)\b", prompt, re.IGNORECASE):
+        score -= 2
+    return score, row["prompt"]
+
+
+def pick_programming_rows(
+    pool: list[dict[str, str]],
+    count: int,
+    rng: random.Random,
+) -> list[dict[str, str]]:
+    shuffled = list(pool)
+    rng.shuffle(shuffled)
+    shuffled.sort(key=programming_score, reverse=True)
     return shuffled[: min(count, len(shuffled))]
 
 
@@ -254,21 +331,7 @@ def main() -> None:
         pools[category].append(cleaned)
 
     available_counts = {category: len(rows) for category, rows in pools.items()}
-    feasible_totals = [MAX_TARGET_ROWS]
-    for category, ratio in TARGET_RATIOS.items():
-        available = len(pools.get(category, []))
-        if available > 0:
-            feasible_totals.append(int(available / ratio))
-    target_total = max(1, min(feasible_totals))
-
-    desired_counts = {
-        category: int(target_total * ratio)
-        for category, ratio in TARGET_RATIOS.items()
-    }
-    desired_counts["identity"] = min(
-        desired_counts["identity"],
-        int(target_total * MAX_IDENTITY_RATIO),
-    )
+    desired_counts = dict(TARGET_COUNTS)
 
     selected: list[dict[str, str]] = []
     selected_keys: set[tuple[str, str]] = set()
@@ -276,7 +339,10 @@ def main() -> None:
 
     for category in ["programming", "ai", "emotional_support", "general", "identity"]:
         wanted = desired_counts.get(category, 0)
-        picked = pick_rows(pools.get(category, []), wanted, rng)
+        if category == "programming":
+            picked = pick_programming_rows(pools.get(category, []), wanted, rng)
+        else:
+            picked = pick_rows(pools.get(category, []), wanted, rng)
         if len(picked) < wanted:
             shortages[category] = wanted - len(picked)
         for row in picked:
@@ -285,20 +351,6 @@ def main() -> None:
                 continue
             selected_keys.add(key)
             selected.append(row)
-
-    fill_order = ["programming", "ai", "general", "emotional_support"]
-    target_without_identity_pressure = min(MAX_TARGET_ROWS, sum(len(rows) for rows in pools.values()))
-    for category in fill_order:
-        if len(selected) >= target_without_identity_pressure:
-            break
-        for row in pick_rows(pools.get(category, []), len(pools.get(category, [])), rng):
-            key = row_key(row)
-            if key in selected_keys:
-                continue
-            selected_keys.add(key)
-            selected.append(row)
-            if len(selected) >= target_without_identity_pressure:
-                break
 
     rng.shuffle(selected)
     category_counts = Counter(row["category"] for row in selected)
@@ -316,7 +368,7 @@ def main() -> None:
         "inputs": [str(path.relative_to(ROOT_DIR)) for path in INPUT_PATHS],
         "missing_inputs": missing_inputs,
         "input_counts": dict(input_counts),
-        "target_ratios": TARGET_RATIOS,
+        "target_counts": TARGET_COUNTS,
         "max_identity_ratio": MAX_IDENTITY_RATIO,
         "selected_rows": len(selected),
         "available_rows_by_category_after_filter": available_counts,
@@ -329,14 +381,18 @@ def main() -> None:
         "shortages": shortages,
         "first_10_samples": selected[:10],
         "completed": (
-            len(selected) > 0
-            and category_counts.get("programming", 0) > 0
-            and category_counts.get("emotional_support", 0) > 0
-            and identity_ratio <= MAX_IDENTITY_RATIO
+            len(selected) >= 1000
+            and not shortages
+            and category_counts.get("programming", 0) == desired_counts["programming"]
+            and category_counts.get("ai", 0) == desired_counts["ai"]
+            and category_counts.get("emotional_support", 0) == desired_counts["emotional_support"]
+            and category_counts.get("general", 0) == desired_counts["general"]
+            and category_counts.get("identity", 0) == desired_counts["identity"]
+            and 0.08 <= identity_ratio <= MAX_IDENTITY_RATIO
         ),
         "require_external": False,
         "min_external_ratio": 0.0,
-        "local_sources_allowed": ["local_identity_anchor", "local_support_seed"],
+        "local_sources_allowed": ["local_identity_anchor", "local_support_seed", "local_ai_seed"],
     }
     with META_PATH.open("w", encoding="utf-8") as meta_file:
         json.dump(metadata, meta_file, ensure_ascii=False, indent=2)

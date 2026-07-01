@@ -43,3 +43,15 @@ reports/*.md
 models/*.pt
 models/*.pth
 models/*.ckpt
+
+# DarkMind Code Assistant local/runtime files
+darkmind_assistant/config.json
+darkmind_assistant/data/*.jsonl
+darkmind_assistant/data/*.meta.json
+
+# DarkMind teacher-student distillation local/runtime files
+darkmind_distill/config.json
+darkmind_distill/data/*.jsonl
+darkmind_distill/data/*.meta.json
+darkmind_distill/models/*.pt
+darkmind_distill/reports/*.md

@@ -1,0 +1,20 @@
+{
+  "deterministic": {
+    "temperature": 0.2,
+    "top_k": 5,
+    "max_new_tokens": 80,
+    "repetition_penalty": 1.1
+  },
+  "creative": {
+    "temperature": 0.8,
+    "top_k": 40,
+    "max_new_tokens": 120,
+    "repetition_penalty": 1.05
+  },
+  "code": {
+    "temperature": 0.15,
+    "top_k": 5,
+    "max_new_tokens": 160,
+    "repetition_penalty": 1.1
+  }
+}

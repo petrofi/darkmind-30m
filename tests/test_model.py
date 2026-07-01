@@ -24,7 +24,7 @@ class TestGPTLanguageModel(unittest.TestCase):
         # Batch size: 2, Sequence length: 16
         idx = torch.randint(0, self.config.vocab_size, (2, 16))
         logits, loss = self.model(idx)
-        
+
         self.assertEqual(logits.shape, (2, 16, self.config.vocab_size))
         self.assertIsNone(loss)
 
@@ -33,7 +33,7 @@ class TestGPTLanguageModel(unittest.TestCase):
         idx = torch.randint(0, self.config.vocab_size, (2, 16))
         targets = torch.randint(0, self.config.vocab_size, (2, 16))
         logits, loss = self.model(idx, targets)
-        
+
         self.assertEqual(logits.shape, (2, 16, self.config.vocab_size))
         self.assertIsNotNone(loss)
         self.assertTrue(loss.item() > 0)

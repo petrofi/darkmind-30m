@@ -1,0 +1,112 @@
+{"prompt":"Merhaba, sen kimsin?","response":"Ben DarkMind, Tarık Yasin Sağlıcak tarafından geliştirilen küçük bir Türkçe dil modeli denemesiyim."}
+{"prompt":"Selam, kendini tanıtır mısın?","response":"Ben DarkMind, Tarık Yasin Sağlıcak tarafından geliştirilen küçük bir Türkçe dil modeli denemesiyim."}
+{"prompt":"Sen kimsin?","response":"Ben DarkMind, Tarık Yasin Sağlıcak tarafından geliştirilen küçük bir Türkçe dil modeli denemesiyim."}
+{"prompt":"DarkMind nedir?","response":"DarkMind, Türkçe odaklı küçük bir dil modeli geliştirme ve öğrenme projesidir."}
+{"prompt":"DarkMind hazır bir model mi?","response":"Hayır. DarkMind şu anda geliştirme ve deneme aşamasında olan küçük bir modeldir."}
+{"prompt":"ChatGPT gibi misin?","response":"Hayır. Ben ChatGPT düzeyinde güçlü bir genel sohbet modeli değilim; küçük bir Türkçe model denemesiyim."}
+{"prompt":"Amacın nedir?","response":"Amacım, Türkçe dil modeli geliştirme sürecini denemek ve temel sorulara kısa cevaplar verebilmektir."}
+{"prompt":"Beni tanıyor musun?","response":"Hayır. Ben kişisel bilgilerini bilmiyorum; yalnızca bana yazdığın metne göre cevap üretebilirim."}
+{"prompt":"Her şeyi biliyor musun?","response":"Hayır. Küçük bir modelim ve yalnızca eğitim verimden öğrendiğim örüntülere göre cevap üretirim."}
+{"prompt":"Yanlış cevap verebilir misin?","response":"Evet. Hâlâ geliştirme aşamasında olduğum için eksik veya yanlış cevaplar verebilirim."}
+{"prompt":"Python nedir?","response":"Python, okunabilir sözdizimine sahip yüksek seviyeli ve genel amaçlı bir programlama dilidir."}
+{"prompt":"Python ne için kullanılır?","response":"Python; web geliştirme, veri analizi, otomasyon, yapay zeka ve küçük araçlar yazmak için kullanılır."}
+{"prompt":"Değişken nedir?","response":"Değişken, program içinde bir değeri saklamak için kullanılan isimlendirilmiş alandır."}
+{"prompt":"Fonksiyon nedir?","response":"Fonksiyon, belirli bir işi yapmak için yazılan ve gerektiğinde tekrar çağrılabilen kod bloğudur."}
+{"prompt":"Liste nedir?","response":"Liste, birden fazla değeri sıralı şekilde tutan temel bir veri yapısıdır."}
+{"prompt":"Döngü nedir?","response":"Döngü, aynı işlemi belirli bir koşul sağlandığı sürece veya belirli sayıda tekrar çalıştırır."}
+{"prompt":"If koşulu nedir?","response":"If koşulu, bir şart doğruysa belirli kodların çalışmasını sağlayan karar yapısıdır."}
+{"prompt":"Hata ayıklama nedir?","response":"Hata ayıklama, bir programdaki hataları bulma, anlama ve düzeltme sürecidir."}
+{"prompt":"API nedir?","response":"API, iki yazılımın belirli kurallar üzerinden birbiriyle iletişim kurmasını sağlayan arayüzdür."}
+{"prompt":"REST API nedir?","response":"REST API, HTTP istekleriyle veri alan ve gönderen yaygın bir web servis tasarım biçimidir."}
+{"prompt":"Backend nedir?","response":"Backend, bir uygulamanın sunucu tarafında çalışan iş mantığı, veri işleme ve veritabanı bağlantılarını kapsar."}
+{"prompt":"Frontend nedir?","response":"Frontend, kullanıcının gördüğü ve etkileşim kurduğu uygulama arayüzüdür."}
+{"prompt":"Veritabanı nedir?","response":"Veritabanı, bilgileri düzenli biçimde saklamak ve sorgulamak için kullanılan sistemdir."}
+{"prompt":"SQL nedir?","response":"SQL, ilişkisel veritabanlarında veri sorgulamak ve yönetmek için kullanılan bir dildir."}
+{"prompt":"Docker nedir?","response":"Docker, uygulamaları bağımlılıklarıyla birlikte taşınabilir konteynerler içinde çalıştırmaya yarayan bir araçtır."}
+{"prompt":"Git nedir?","response":"Git, kod değişikliklerini takip etmek ve farklı sürümler üzerinde çalışmak için kullanılan bir sürüm kontrol sistemidir."}
+{"prompt":"Git commit nedir?","response":"Git commit, kodda yapılan değişikliklerin açıklamayla birlikte kayıt altına alınmış halidir."}
+{"prompt":"GitHub nedir?","response":"GitHub, Git depolarını çevrim içi saklamak, paylaşmak ve iş birliği yapmak için kullanılan bir platformdur."}
+{"prompt":"Pull request nedir?","response":"Pull request, yapılan kod değişikliklerinin incelenip ana projeye eklenmesi için açılan istektir."}
+{"prompt":"Kod refactor nedir?","response":"Refactor, kodun davranışını değiştirmeden okunabilirliğini, yapısını veya bakımını iyileştirme işlemidir."}
+{"prompt":"Yapay zeka nedir?","response":"Yapay zeka, makinelerin verilerden örüntüler öğrenerek tahmin, sınıflandırma veya üretim yapmasını sağlayan yöntemlerin genel adıdır."}
+{"prompt":"Makine öğrenmesi nedir?","response":"Makine öğrenmesi, bilgisayarların açıkça programlanmadan verilerden öğrenmesini sağlayan yapay zeka alanıdır."}
+{"prompt":"Derin öğrenme nedir?","response":"Derin öğrenme, çok katmanlı sinir ağlarıyla verilerden karmaşık örüntüler öğrenen makine öğrenmesi yöntemidir."}
+{"prompt":"Dil modeli nedir?","response":"Dil modeli, verilen metne bakarak sonraki kelime veya tokenları tahmin etmeyi öğrenen modeldir."}
+{"prompt":"Token nedir?","response":"Token, metnin model tarafından işlenebilen küçük parçalarından biridir; kelime, harf parçası veya sembol olabilir."}
+{"prompt":"Tokenizer nedir?","response":"Tokenizer, metni modelin anlayabileceği token kimliklerine dönüştüren bileşendir."}
+{"prompt":"Transformer nedir?","response":"Transformer, dikkat mekanizması kullanan ve modern dil modellerinde yaygın kullanılan bir sinir ağı mimarisidir."}
+{"prompt":"Model eğitimi nedir?","response":"Model eğitimi, modelin verilerden örüntü öğrenmesi için ağırlıklarının adım adım güncellenmesidir."}
+{"prompt":"Loss nedir?","response":"Loss, modelin tahmininin hedefe ne kadar uzak olduğunu gösteren sayısal hata ölçüsüdür."}
+{"prompt":"Validation loss nedir?","response":"Validation loss, modelin eğitimde doğrudan görmediği doğrulama verisindeki hata değeridir."}
+{"prompt":"Overfitting nedir?","response":"Overfitting, modelin eğitim verisini ezberleyip yeni verilerde zayıf performans göstermesidir."}
+{"prompt":"Fine-tuning nedir?","response":"Fine-tuning, önceden eğitilmiş bir modelin daha özel bir veriyle belirli davranışlara uyarlanmasıdır."}
+{"prompt":"Instruct fine-tuning nedir?","response":"Instruct fine-tuning, modelin kullanıcı talimatlarına daha doğrudan cevap vermeyi öğrenmesi için yapılan ek eğitimdir."}
+{"prompt":"Base model nedir?","response":"Base model, çoğunlukla metin devam ettirmeyi öğrenmiş ama doğrudan sohbet davranışı için özel eğitilmemiş modeldir."}
+{"prompt":"Chat modeli nedir?","response":"Chat modeli, kullanıcı ve asistan formatındaki örneklerle soru-cevap ve diyalog davranışı için uyarlanmış modeldir."}
+{"prompt":"Bugün kendimi kötü hissediyorum.","response":"Bunu yaşaman zor olabilir. İstersen küçük bir mola verip duygunu adlandırarak başlayabilirsin; gerekirse güvendiğin biriyle konuşman iyi olur."}
+{"prompt":"Motivasyonum düştü.","response":"Motivasyonun düşmesi normaldir. Büyük hedefi küçük bir adıma bölüp sadece ilk adımı tamamlamaya odaklanabilirsin."}
+{"prompt":"Çalışmaya devam etmekte zorlanıyorum.","response":"Kısa bir mola verip sonra 10 dakikalık küçük bir görev seçmek yardımcı olabilir. Kendine fazla yüklenmeden ilerlemeyi dene."}
+{"prompt":"Kendimi yetersiz hissediyorum.","response":"Bu his zorlayıcı olabilir ama tek başına gerçeği göstermez. Öğrenmeyi küçük parçalara bölmek ve ilerlemeni not etmek yardımcı olabilir."}
+{"prompt":"Canım hiçbir şey yapmak istemiyor.","response":"Böyle zamanlarda çok küçük bir başlangıç seçmek işe yarayabilir. Eğer bu duygu uzun sürerse güvendiğin birinden destek alman iyi olur."}
+{"prompt":"Çok stresliyim.","response":"Önce kısa bir nefes molası verip en acil tek işi belirlemek yardımcı olabilir. Stres çok yoğunlaşırsa güvenilir bir destek kaynağına başvurmalısın."}
+{"prompt":"Başaramayacağımı düşünüyorum.","response":"Bu düşünce yorucu olabilir. Hedefi küçültüp başarabileceğin ilk adımı seçmek daha yönetilebilir bir başlangıç sağlar."}
+{"prompt":"Bugün verimsiz geçti.","response":"Her gün aynı verimde geçmez. Bugünden küçük bir ders çıkarıp yarın için tek bir net hedef belirleyebilirsin."}
+{"prompt":"Hata yapmaktan korkuyorum.","response":"Hata yapmak öğrenmenin doğal bir parçasıdır. Küçük denemeler yaparak riski azaltabilir ve daha rahat ilerleyebilirsin."}
+{"prompt":"Bana moral verir misin?","response":"Elinden geleni adım adım yapman değerli. Küçük bir ilerleme bile durmaktan daha iyidir."}
+{"prompt":"Türkiye hakkında kısa bilgi ver.","response":"Türkiye, Avrupa ve Asya arasında yer alan, başkenti Ankara olan bir ülkedir. Zengin tarihi, kültürü ve doğal çeşitliliğiyle bilinir."}
+{"prompt":"İstanbul hakkında kısa bilgi ver.","response":"İstanbul, Türkiye'nin en büyük şehirlerinden biridir. Tarihi boyunca farklı medeniyetlere ev sahipliği yapmış önemli bir kültür merkezidir."}
+{"prompt":"Ankara hakkında kısa bilgi ver.","response":"Ankara, Türkiye'nin başkentidir. Kamu kurumları, üniversiteleri ve Cumhuriyet tarihi açısından önemli bir şehirdir."}
+{"prompt":"İzmir hakkında kısa bilgi ver.","response":"İzmir, Ege Bölgesi'nde yer alan büyük bir liman ve kültür şehridir. Deniz kıyısı, tarihi ve yaşam tarzıyla bilinir."}
+{"prompt":"Üniversite nedir?","response":"Üniversite, yükseköğretim verilen, araştırma yapılan ve farklı alanlarda uzmanlık kazandıran eğitim kurumudur."}
+{"prompt":"Kütüphane nedir?","response":"Kütüphane, kitaplara ve bilgi kaynaklarına erişim sağlayan öğrenme ve araştırma alanıdır."}
+{"prompt":"Bilim nedir?","response":"Bilim, gözlem, deney ve akıl yürütme yoluyla doğayı ve olayları anlamaya çalışan sistemli bilgidir."}
+{"prompt":"Teknoloji nedir?","response":"Teknoloji, insan ihtiyaçlarını karşılamak veya işleri kolaylaştırmak için geliştirilen araç, yöntem ve sistemlerin bütünüdür."}
+{"prompt":"İnternet nedir?","response":"İnternet, dünya genelindeki bilgisayar ve sunucuları birbirine bağlayan büyük iletişim ağıdır."}
+{"prompt":"Bilgisayar nedir?","response":"Bilgisayar, verileri işleyen, saklayan ve programlar aracılığıyla farklı görevleri yerine getiren elektronik cihazdır."}
+{"prompt":"Kısaca açıkla: yapay zeka.","response":"Yapay zeka, bilgisayarların verilerden öğrenerek bazı görevleri insan benzeri şekilde yapmasını sağlayan teknolojidir."}
+{"prompt":"Basitçe anlat: token.","response":"Token, modelin metni işlerken kullandığı küçük metin parçasıdır. Bir kelime ya da kelimenin bir bölümü olabilir."}
+{"prompt":"Örnek vererek anlat: fonksiyon.","response":"Fonksiyon, tekrar kullanılan kod parçasıdır. Örneğin selamla() adlı bir fonksiyon her çağrıldığında ekrana selam yazabilir."}
+{"prompt":"Kısaca açıkla: Docker.","response":"Docker, uygulamayı gerekli bağımlılıklarıyla birlikte izole bir konteyner içinde çalıştırır."}
+{"prompt":"Basitçe anlat: API.","response":"API, iki programın anlaşmak için kullandığı ortak kapı gibidir. Bir uygulama diğerinden veri isterken API kullanabilir."}
+{"prompt":"Örnek vererek anlat: Git commit.","response":"Git commit, projenin o anki değişikliklerinin kaydıdır. Örneğin 'login hatası düzeltildi' mesajıyla bir commit oluşturulabilir."}
+{"prompt":"Kısaca açıkla: validation loss.","response":"Validation loss, modelin eğitimde görmediği veride ne kadar hata yaptığını gösterir."}
+{"prompt":"Basitçe anlat: fine-tuning.","response":"Fine-tuning, zaten öğrenmiş bir modeli daha özel örneklerle belirli bir davranışa alıştırmaktır."}
+{"prompt":"Örnek vererek anlat: instruct tuning.","response":"Instruct tuning, modele soru ve doğru cevap örnekleri göstermektir. Örneğin 'Python nedir?' sorusuna kısa ve net cevap vermeyi öğretir."}
+{"prompt":"Kod neden hata verir?","response":"Kod; yazım hatası, yanlış değişken adı, eksik bağımlılık veya hatalı mantık yüzünden hata verebilir."}
+{"prompt":"Python'da print ne işe yarar?","response":"print, ekrana metin veya değer yazdırmak için kullanılan temel Python fonksiyonudur."}
+{"prompt":"Python'da yorum satırı nasıl yazılır?","response":"Python'da tek satırlık yorumlar # işaretiyle yazılır."}
+{"prompt":"JSON nedir?","response":"JSON, verileri anahtar-değer yapısıyla saklamak ve paylaşmak için kullanılan hafif bir metin formatıdır."}
+{"prompt":"JSONL nedir?","response":"JSONL, her satırında ayrı bir JSON nesnesi bulunan veri formatıdır."}
+{"prompt":"CSV nedir?","response":"CSV, verileri satır ve sütunlar halinde virgül gibi ayırıcılarla tutan basit bir dosya formatıdır."}
+{"prompt":"Terminal nedir?","response":"Terminal, komut yazarak işletim sistemi ve araçlarla etkileşim kurmayı sağlayan metin tabanlı arayüzdür."}
+{"prompt":"PowerShell nedir?","response":"PowerShell, Windows'ta komut çalıştırmak ve otomasyon yapmak için kullanılan güçlü bir kabuk ve betik dilidir."}
+{"prompt":"CUDA nedir?","response":"CUDA, NVIDIA ekran kartlarında paralel hesaplama yapmayı sağlayan bir teknolojidir."}
+{"prompt":"GPU eğitimi neden hızlıdır?","response":"GPU, çok sayıda işlemi paralel yapabildiği için sinir ağı eğitiminde CPU'ya göre daha hızlı olabilir."}
+{"prompt":"Checkpoint nedir?","response":"Checkpoint, modelin eğitim sırasında kaydedilen ağırlıkları ve ilgili eğitim bilgileridir."}
+{"prompt":"Model neden tekrar eder?","response":"Model, eğitim verisi, küçük kapasite veya sampling ayarları nedeniyle aynı kelime ve kalıpları tekrar edebilir."}
+{"prompt":"Tekrarları azaltmak için ne yapılır?","response":"Daha iyi veri, instruct fine-tuning, repetition penalty, top-p sampling ve no-repeat n-gram gibi yöntemler kullanılabilir."}
+{"prompt":"Soruya neden doğrudan cevap vermiyorsun?","response":"Base model yalnızca metin devam ettirmeyi öğrenmiş olabilir. Doğrudan cevap davranışı için instruct fine-tuning gerekir."}
+{"prompt":"Neden bazen İngilizce kelimeler üretiyorsun?","response":"Eğitim verisinde İngilizce metinler de varsa model bazen İngilizce kelime veya isimler üretebilir."}
+{"prompt":"Daha iyi cevap vermen için ne gerekir?","response":"Daha temiz veri, daha fazla Türkçe talimat örneği, doğrulama testleri ve kontrollü fine-tuning gerekir."}
+{"prompt":"Bana kısa bir çalışma planı öner.","response":"Önce tek hedef seç, sonra 25 dakikalık bir çalışma bloğu yap. Sonunda ne öğrendiğini kısa not al."}
+{"prompt":"Nasıl daha düzenli çalışırım?","response":"Küçük hedefler belirleyip düzenli zaman aralıklarıyla çalışabilirsin. Gün sonunda kısa bir ilerleme notu tutmak da faydalıdır."}
+{"prompt":"Yeni başlayan biri Python'a nasıl başlamalı?","response":"Önce değişken, koşul, döngü ve fonksiyonları öğrenmek iyi bir başlangıçtır. Sonra küçük projelerle pratik yapılabilir."}
+{"prompt":"Yapay zeka öğrenmeye nereden başlamalıyım?","response":"Temel Python, veri işleme ve makine öğrenmesi kavramlarıyla başlamak iyi olur. Ardından küçük model deneyleri yapılabilir."}
+{"prompt":"Dil modeli eğitmek zor mu?","response":"Evet, dikkatli veri hazırlığı, hesaplama gücü, değerlendirme ve çok sayıda deneme gerektirir."}
+{"prompt":"Küçük model işe yarar mı?","response":"Küçük model, öğrenme, deneme ve belirli dar görevlerde faydalı olabilir. Büyük genel amaçlı modellerle aynı seviyede beklenmemelidir."}
+{"prompt":"Bana basit bir Python örneği ver.","response":"Örnek: print('Merhaba Dünya') komutu ekrana Merhaba Dünya yazdırır."}
+{"prompt":"Bir liste örneği ver.","response":"Örnek: sayilar = [1, 2, 3] ifadesi üç sayıdan oluşan bir Python listesi oluşturur."}
+{"prompt":"Bir fonksiyon örneği ver.","response":"Örnek: def selamla(): print('Merhaba') kodu çağrıldığında ekrana Merhaba yazar."}
+{"prompt":"Bir if örneği ver.","response":"Örnek: if yas >= 18: print('Yetişkin') kodu koşul doğruysa mesaj yazdırır."}
+{"prompt":"Basit bir döngü örneği ver.","response":"Örnek: for i in range(3): print(i) kodu 0, 1 ve 2 sayılarını yazar."}
+{"prompt":"Model kartı nedir?","response":"Model kartı, bir modelin amacı, veri kaynağı, sınırlamaları ve kullanım notlarını açıklayan belgedir."}
+{"prompt":"Veri kalitesi neden önemli?","response":"Model, eğitim verisindeki örüntüleri öğrendiği için kirli veya hatalı veri cevap kalitesini düşürür."}
+{"prompt":"Deduplication nedir?","response":"Deduplication, aynı veya çok benzer veri örneklerini temizleyerek tekrarları azaltma işlemidir."}
+{"prompt":"Train ve validation farkı nedir?","response":"Train verisi modeli eğitmek için kullanılır; validation verisi modelin görmediği örneklerdeki başarısını ölçmek için kullanılır."}
+{"prompt":"Test seti nedir?","response":"Test seti, model geliştirme bittikten sonra genel performansı daha tarafsız ölçmek için ayrılan veri bölümüdür."}
+{"prompt":"Komut satırında nasıl dikkatli olurum?","response":"Komutu çalıştırmadan önce hangi dosyaları etkileyeceğini kontrol et. Özellikle silme ve taşıma komutlarında dikkatli ol."}
+{"prompt":"Bilmiyorsan ne yapmalısın?","response":"Emin değilsem kesin konuşmamalı ve sınırlı bilgiye sahip olabileceğimi belirtmeliyim."}
+{"prompt":"Kısa cevap ver.","response":"Tamam, kısa ve net cevap vermeye çalışırım."}
+{"prompt":"Basitçe anlat.","response":"Elbette. Konuyu karmaşık terimler yerine sade ve anlaşılır şekilde anlatmaya çalışırım."}
+{"prompt":"Örnek vererek anlat.","response":"Tabii. Kısa bir açıklama yaptıktan sonra konuyu küçük bir örnekle somutlaştırırım."}
+{"prompt":"Daha teknik açıkla.","response":"Tamam. Kavramı daha teknik terimlerle ama gereksiz ayrıntıya girmeden açıklamaya çalışırım."}

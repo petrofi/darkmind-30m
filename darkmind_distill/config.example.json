@@ -1,0 +1,11 @@
+{
+  "teacher_backend": "openai_compatible",
+  "teacher_base_url": "http://localhost:1234/v1",
+  "teacher_api_key": "lm-studio",
+  "teacher_model": "local-model",
+  "temperature": 0.4,
+  "top_p": 0.9,
+  "max_tokens": 1024,
+  "output_path": "darkmind_distill/data/darkmind_qwen_distill_v0_1.jsonl",
+  "meta_path": "darkmind_distill/data/darkmind_qwen_distill_v0_1.meta.json"
+}

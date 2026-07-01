@@ -1,5 +1,6 @@
 from pathlib import Path
 import argparse
+from datetime import datetime
 import json
 import sys
 
@@ -18,6 +19,31 @@ def load_json(path: Path):
         return json.load(f)
 
 
+def resolve_path(path_value: str) -> Path:
+    path = Path(path_value)
+
+    if path.is_absolute():
+        return path
+
+    return ROOT_DIR / path
+
+
+def read_token_ids(path: Path, tokenizer: ByteLevelBPETokenizer) -> list[int]:
+    text = path.read_text(encoding="utf-8")
+    return tokenizer.encode(text).ids
+
+
+def current_timestamp() -> str:
+    return datetime.now().astimezone().isoformat(timespec="seconds")
+
+
+def append_jsonl(path: Path, item: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    with path.open("a", encoding="utf-8") as file:
+        file.write(json.dumps(item, ensure_ascii=False) + "\n")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Train DarkMind GPT from config.")
     parser.add_argument(
@@ -32,9 +58,24 @@ def main():
         default=None,
         help="Optional corpus path override.",
     )
+    parser.add_argument(
+        "--train_path",
+        type=str,
+        default=None,
+        help="Optional explicit train split path.",
+    )
+    parser.add_argument(
+        "--val_path",
+        type=str,
+        default=None,
+        help="Optional explicit validation split path.",
+    )
     args = parser.parse_args()
 
-    config_path = ROOT_DIR / args.config
+    if bool(args.train_path) != bool(args.val_path):
+        parser.error("--train_path and --val_path must be provided together.")
+
+    config_path = resolve_path(args.config)
     cfg = load_json(config_path)
 
     run_name = cfg["run_name"]
@@ -48,11 +89,23 @@ def main():
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    data_path = ROOT_DIR / (args.data_path or cfg["data_path"])
-    tokenizer_dir = ROOT_DIR / cfg["tokenizer_dir"]
-    checkpoint_path = ROOT_DIR / cfg["checkpoint_path"]
+    data_path = resolve_path(args.data_path or cfg["data_path"])
+    train_path = resolve_path(args.train_path) if args.train_path else None
+    val_path = resolve_path(args.val_path) if args.val_path else None
+    tokenizer_dir = resolve_path(cfg["tokenizer_dir"])
+    checkpoint_path = resolve_path(cfg.get(
+        "checkpoint_path",
+        f"checkpoints/{run_name}.pt",
+    ))
+    best_checkpoint_path = ROOT_DIR / "checkpoints" / f"{run_name}_best.pt"
+    last_checkpoint_path = ROOT_DIR / "checkpoints" / f"{run_name}_last.pt"
+    metrics_path = ROOT_DIR / "reports" / "training" / f"{run_name}_metrics.jsonl"
 
     checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
+    best_checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
+    last_checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
+    metrics_path.parent.mkdir(parents=True, exist_ok=True)
+    metrics_path.write_text("", encoding="utf-8")
 
     vocab_path = tokenizer_dir / "vocab.json"
     merges_path = tokenizer_dir / "merges.txt"
@@ -76,27 +129,43 @@ def main():
 
     print(f"Vocab size: {vocab_size}")
 
-    text = data_path.read_text(encoding="utf-8")
-    encoded = tokenizer.encode(text)
-    ids = encoded.ids
-
-    print(f"Original token count: {len(ids)}")
-
     training_cfg = cfg["training"]
     min_tokens = training_cfg.get("min_tokens", 50000)
 
-    while len(ids) < min_tokens:
-        ids = ids + ids
+    if train_path and val_path:
+        train_ids = read_token_ids(train_path, tokenizer)
+        val_ids = read_token_ids(val_path, tokenizer)
 
-    print(f"Training token count after repeat: {len(ids)}")
+        print(f"Train path: {train_path}")
+        print(f"Val path: {val_path}")
+        print(f"Original train token count: {len(train_ids)}")
+        print(f"Original val token count: {len(val_ids)}")
 
-    tokens = torch.tensor(ids, dtype=torch.long)
+        while len(train_ids) < min_tokens:
+            train_ids = train_ids + train_ids
 
-    train_ratio = training_cfg.get("train_ratio", 0.9)
-    split_idx = int(len(tokens) * train_ratio)
+        print(f"Training token count after repeat: {len(train_ids)}")
 
-    train_data = tokens[:split_idx]
-    val_data = tokens[split_idx:]
+        train_data = torch.tensor(train_ids, dtype=torch.long)
+        val_data = torch.tensor(val_ids, dtype=torch.long)
+    else:
+        ids = read_token_ids(data_path, tokenizer)
+
+        print(f"Data path: {data_path}")
+        print(f"Original token count: {len(ids)}")
+
+        while len(ids) < min_tokens:
+            ids = ids + ids
+
+        print(f"Training token count after repeat: {len(ids)}")
+
+        tokens = torch.tensor(ids, dtype=torch.long)
+
+        train_ratio = training_cfg.get("train_ratio", 0.9)
+        split_idx = int(len(tokens) * train_ratio)
+
+        train_data = tokens[:split_idx]
+        val_data = tokens[split_idx:]
 
     model_cfg = cfg["model"]
 
@@ -114,6 +183,13 @@ def main():
     eval_interval = training_cfg["eval_interval"]
     eval_iters = training_cfg["eval_iters"]
     learning_rate = training_cfg["learning_rate"]
+    gradient_accumulation_steps = training_cfg.get(
+        "gradient_accumulation_steps",
+        1,
+    )
+
+    if gradient_accumulation_steps < 1:
+        raise ValueError("gradient_accumulation_steps must be at least 1.")
 
     model = GPTLanguageModel(gpt_config).to(device)
 
@@ -124,7 +200,11 @@ def main():
     print(f"Heads: {gpt_config.n_head}")
     print(f"Embedding size: {gpt_config.n_embd}")
     print(f"Batch size: {batch_size}")
+    print(f"Gradient accumulation steps: {gradient_accumulation_steps}")
     print(f"Max steps: {max_steps}")
+    print(f"Metrics path: {metrics_path}")
+    print(f"Best checkpoint path: {best_checkpoint_path}")
+    print(f"Last checkpoint path: {last_checkpoint_path}")
     print("-" * 70)
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
@@ -174,24 +254,58 @@ def main():
 
     final_train_loss = None
     final_val_loss = None
+    best_val_loss = None
+    best_step = None
+
+    def build_checkpoint(step: int | None) -> dict:
+        return {
+            "run_name": run_name,
+            "model_state_dict": model.state_dict(),
+            "config": gpt_config.__dict__,
+            "training_config": training_cfg,
+            "data_path": str(data_path),
+            "train_path": str(train_path) if train_path else None,
+            "val_path": str(val_path) if val_path else None,
+            "vocab_size": vocab_size,
+            "step": step,
+            "best_step": best_step,
+            "best_val_loss": best_val_loss,
+            "final_train_loss": final_train_loss,
+            "final_val_loss": final_val_loss,
+        }
+
+    def save_checkpoint(path: Path, step: int | None) -> None:
+        torch.save(build_checkpoint(step), path)
 
     progress = tqdm(range(1, max_steps + 1), dynamic_ncols=True)
 
     for step in progress:
-        xb, yb = get_batch("train")
-
-        _, loss = model(xb, yb)
-
         optimizer.zero_grad(set_to_none=True)
-        loss.backward()
+        step_loss = 0.0
+
+        for _ in range(gradient_accumulation_steps):
+            xb, yb = get_batch("train")
+
+            _, loss = model(xb, yb)
+            step_loss += loss.item()
+            (loss / gradient_accumulation_steps).backward()
+
         optimizer.step()
 
-        progress.set_description(f"step {step} loss {loss.item():.4f}")
+        average_step_loss = step_loss / gradient_accumulation_steps
+        progress.set_description(f"step {step} loss {average_step_loss:.4f}")
 
         if step % eval_interval == 0:
             losses = estimate_loss()
             final_train_loss = losses["train"]
             final_val_loss = losses["val"]
+            metric = {
+                "step": step,
+                "train_loss": final_train_loss,
+                "val_loss": final_val_loss,
+                "timestamp": current_timestamp(),
+            }
+            append_jsonl(metrics_path, metric)
 
             print(
                 f"\nStep {step}: "
@@ -199,22 +313,25 @@ def main():
                 f"val loss={final_val_loss:.4f}"
             )
 
-    torch.save(
-        {
-            "run_name": run_name,
-            "model_state_dict": model.state_dict(),
-            "config": gpt_config.__dict__,
-            "training_config": training_cfg,
-            "vocab_size": vocab_size,
-            "final_train_loss": final_train_loss,
-            "final_val_loss": final_val_loss,
-        },
-        checkpoint_path,
-    )
+            if best_val_loss is None or final_val_loss < best_val_loss:
+                best_val_loss = final_val_loss
+                best_step = step
+                save_checkpoint(best_checkpoint_path, step)
+                print(f"New best checkpoint saved: {best_checkpoint_path}")
+
+    save_checkpoint(last_checkpoint_path, max_steps)
+
+    if checkpoint_path not in {best_checkpoint_path, last_checkpoint_path}:
+        save_checkpoint(checkpoint_path, max_steps)
 
     print("=" * 70)
     print("Training completed.")
-    print(f"Checkpoint saved: {checkpoint_path}")
+    print(f"Configured checkpoint saved: {checkpoint_path}")
+    print(f"Best checkpoint saved: {best_checkpoint_path}")
+    print(f"Last checkpoint saved: {last_checkpoint_path}")
+    print(f"Metrics saved: {metrics_path}")
+    print(f"Best step: {best_step}")
+    print(f"Best val loss: {best_val_loss}")
     print(f"Final train loss: {final_train_loss}")
     print(f"Final val loss: {final_val_loss}")
     print("=" * 70)

@@ -1,0 +1,128 @@
+{"id": "beginner_python_001", "prompt": "Python'da değişken nasıl tanımlanır?", "expected_keywords": ["değişken"], "accepted_phrases": [], "keyword_groups": [["=", "değişken"]], "category": "beginner_python"}
+{"id": "beginner_python_002", "prompt": "print ne işe yarar?", "expected_keywords": ["print"], "accepted_phrases": [], "keyword_groups": [["ekrana", "yazdır"], ["print"]], "category": "beginner_python"}
+{"id": "beginner_python_003", "prompt": "f-string nedir?", "expected_keywords": ["f-string"], "accepted_phrases": [], "keyword_groups": [["f-string"], ["değişken", "metin"]], "category": "beginner_python"}
+{"id": "beginner_python_004", "prompt": "type() ne gösterir?", "expected_keywords": ["type"], "accepted_phrases": [], "keyword_groups": [["type"], ["tip", "tür"]], "category": "beginner_python"}
+{"id": "beginner_python_005", "prompt": "Python'da iki sayı nasıl toplanır?", "expected_keywords": ["+"], "accepted_phrases": [], "keyword_groups": [["+", "topla"]], "category": "beginner_python"}
+{"id": "beginner_python_006", "prompt": "yorum satırı ne işe yarar?", "expected_keywords": ["#"], "accepted_phrases": [], "keyword_groups": [["#", "yorum"]], "category": "beginner_python"}
+{"id": "beginner_python_007", "prompt": "Bilmiyorsan Python sorusunda ne yaparsın?", "expected_keywords": ["uydurmam"], "accepted_phrases": [], "keyword_groups": [["uydurmam", "emin değil"], ["güvenli", "kontrol"]], "category": "beginner_python"}
+{"id": "beginner_python_008", "prompt": "basit bool değişken örneği ver", "expected_keywords": ["True"], "accepted_phrases": [], "keyword_groups": [["True", "False", "bool"]], "category": "beginner_python"}
+{"id": "functions_009", "prompt": "iki sayıyı toplayan fonksiyon yaz", "expected_keywords": ["def", "return"], "accepted_phrases": [], "keyword_groups": [["def"], ["return"], ["+", "topla"]], "category": "functions"}
+{"id": "functions_010", "prompt": "return ne işe yarar?", "expected_keywords": ["return"], "accepted_phrases": [], "keyword_groups": [["return"], ["döndürür", "sonuç"]], "category": "functions"}
+{"id": "functions_011", "prompt": "varsayılan parametre nedir?", "expected_keywords": ["varsayılan"], "accepted_phrases": [], "keyword_groups": [["varsayılan", "default"], ["parametre"]], "category": "functions"}
+{"id": "functions_012", "prompt": "fonksiyon ne zaman kullanılır?", "expected_keywords": ["tekrar"], "accepted_phrases": [], "keyword_groups": [["tekrar", "yeniden"], ["okunabilir", "düzenli"]], "category": "functions"}
+{"id": "functions_013", "prompt": "metni küçülten fonksiyon nasıl yazılır?", "expected_keywords": ["lower"], "accepted_phrases": [], "keyword_groups": [["def"], ["lower"]], "category": "functions"}
+{"id": "functions_014", "prompt": "boş liste kontrol eden fonksiyon yaz", "expected_keywords": ["len"], "accepted_phrases": [], "keyword_groups": [["def"], ["len", "not"]], "category": "functions"}
+{"id": "functions_015", "prompt": "ortalama hesaplayan fonksiyon nasıl olur?", "expected_keywords": ["sum"], "accepted_phrases": [], "keyword_groups": [["sum"], ["len"], ["return"]], "category": "functions"}
+{"id": "functions_016", "prompt": "fonksiyon argümanı nedir?", "expected_keywords": ["parametre"], "accepted_phrases": [], "keyword_groups": [["argüman", "parametre"]], "category": "functions"}
+{"id": "lists_017", "prompt": "listeye eleman nasıl eklenir?", "expected_keywords": ["append"], "accepted_phrases": [], "keyword_groups": [["append"], ["liste", "eleman"]], "category": "lists"}
+{"id": "lists_018", "prompt": "listeden eleman nasıl silinir?", "expected_keywords": ["remove"], "accepted_phrases": [], "keyword_groups": [["remove"], ["liste"]], "category": "lists"}
+{"id": "lists_019", "prompt": "listedeki çift sayıları filtrele", "expected_keywords": ["for", "if"], "accepted_phrases": [], "keyword_groups": [["for"], ["if"], ["% 2", "çift"]], "category": "lists"}
+{"id": "lists_020", "prompt": "liste nasıl sıralanır?", "expected_keywords": ["sorted"], "accepted_phrases": [], "keyword_groups": [["sorted", "sort"]], "category": "lists"}
+{"id": "lists_021", "prompt": "listenin son elemanı nasıl alınır?", "expected_keywords": ["-1"], "accepted_phrases": [], "keyword_groups": [["-1"], ["liste"]], "category": "lists"}
+{"id": "lists_022", "prompt": "list comprehension nedir?", "expected_keywords": ["for"], "accepted_phrases": [], "keyword_groups": [["for"], ["liste", "comprehension"]], "category": "lists"}
+{"id": "lists_023", "prompt": "len liste için ne verir?", "expected_keywords": ["len"], "accepted_phrases": [], "keyword_groups": [["len"], ["eleman", "uzunluk"]], "category": "lists"}
+{"id": "lists_024", "prompt": "liste index hatası neden olur?", "expected_keywords": ["index"], "accepted_phrases": [], "keyword_groups": [["index"], ["sınır", "uzunluk"]], "category": "lists"}
+{"id": "dictionaries_025", "prompt": "sözlükten değer nasıl okunur?", "expected_keywords": ["anahtar"], "accepted_phrases": [], "keyword_groups": [["anahtar", "key"], ["değer"]], "category": "dictionaries"}
+{"id": "dictionaries_026", "prompt": "dict.get ne işe yarar?", "expected_keywords": ["get"], "accepted_phrases": [], "keyword_groups": [["get"], ["varsayılan", "hata"]], "category": "dictionaries"}
+{"id": "dictionaries_027", "prompt": "sözlüğe yeni anahtar nasıl eklenir?", "expected_keywords": ["="], "accepted_phrases": [], "keyword_groups": [["anahtar"], ["="]], "category": "dictionaries"}
+{"id": "dictionaries_028", "prompt": "sözlükte kelime sayacı nasıl tutulur?", "expected_keywords": ["get"], "accepted_phrases": [], "keyword_groups": [["get"], ["sayaç", "count"]], "category": "dictionaries"}
+{"id": "dictionaries_029", "prompt": "items() ne işe yarar?", "expected_keywords": ["items"], "accepted_phrases": [], "keyword_groups": [["items"], ["anahtar", "değer"]], "category": "dictionaries"}
+{"id": "dictionaries_030", "prompt": "KeyError nasıl önlenir?", "expected_keywords": ["get"], "accepted_phrases": [], "keyword_groups": [["get", "in"], ["KeyError", "anahtar"]], "category": "dictionaries"}
+{"id": "dictionaries_031", "prompt": "sözlük anahtarları nasıl gezilir?", "expected_keywords": ["keys"], "accepted_phrases": [], "keyword_groups": [["keys", "for"]], "category": "dictionaries"}
+{"id": "dictionaries_032", "prompt": "sözlük değerleri nasıl gezilir?", "expected_keywords": ["values"], "accepted_phrases": [], "keyword_groups": [["values", "for"]], "category": "dictionaries"}
+{"id": "strings_033", "prompt": "strip ne işe yarar?", "expected_keywords": ["strip"], "accepted_phrases": [], "keyword_groups": [["strip"], ["boşluk", "temiz"]], "category": "strings"}
+{"id": "strings_034", "prompt": "split ile metin nasıl bölünür?", "expected_keywords": ["split"], "accepted_phrases": [], "keyword_groups": [["split"], ["kelime", "liste"]], "category": "strings"}
+{"id": "strings_035", "prompt": "join ne işe yarar?", "expected_keywords": ["join"], "accepted_phrases": [], "keyword_groups": [["join"], ["birleştir"]], "category": "strings"}
+{"id": "strings_036", "prompt": "lower ve upper ne yapar?", "expected_keywords": ["lower"], "accepted_phrases": [], "keyword_groups": [["lower"], ["upper"]], "category": "strings"}
+{"id": "strings_037", "prompt": "metin içinde kelime nasıl aranır?", "expected_keywords": ["in"], "accepted_phrases": [], "keyword_groups": [["in"], ["metin", "kelime"]], "category": "strings"}
+{"id": "strings_038", "prompt": "metnin uzunluğu nasıl bulunur?", "expected_keywords": ["len"], "accepted_phrases": [], "keyword_groups": [["len"], ["uzunluk"]], "category": "strings"}
+{"id": "strings_039", "prompt": "f-string ile değişken nasıl yazılır?", "expected_keywords": ["f-string"], "accepted_phrases": [], "keyword_groups": [["f-string", "f\""]], "category": "strings"}
+{"id": "strings_040", "prompt": "Türkçe metin temizlerken neye dikkat edilir?", "expected_keywords": ["Türkçe"], "accepted_phrases": [], "keyword_groups": [["Türkçe"], ["karakter", "bozmamak"]], "category": "strings"}
+{"id": "loops_041", "prompt": "for döngüsü ne işe yarar?", "expected_keywords": ["for"], "accepted_phrases": [], "keyword_groups": [["for"], ["tekrar", "eleman"]], "category": "loops"}
+{"id": "loops_042", "prompt": "range ile 1'den 5'e kadar yazdır", "expected_keywords": ["range"], "accepted_phrases": [], "keyword_groups": [["range"], ["for"]], "category": "loops"}
+{"id": "loops_043", "prompt": "while döngüsü ne zaman kullanılır?", "expected_keywords": ["while"], "accepted_phrases": [], "keyword_groups": [["while"], ["koşul"]], "category": "loops"}
+{"id": "loops_044", "prompt": "enumerate ne işe yarar?", "expected_keywords": ["enumerate"], "accepted_phrases": [], "keyword_groups": [["enumerate"], ["index", "sıra"]], "category": "loops"}
+{"id": "loops_045", "prompt": "break ne yapar?", "expected_keywords": ["break"], "accepted_phrases": [], "keyword_groups": [["break"], ["döngü", "çık"]], "category": "loops"}
+{"id": "loops_046", "prompt": "continue ne yapar?", "expected_keywords": ["continue"], "accepted_phrases": [], "keyword_groups": [["continue"], ["atla"]], "category": "loops"}
+{"id": "loops_047", "prompt": "sonsuz döngü nasıl önlenir?", "expected_keywords": ["koşul"], "accepted_phrases": [], "keyword_groups": [["koşul"], ["değiş", "güncelle"]], "category": "loops"}
+{"id": "loops_048", "prompt": "listedeki toplam döngüyle nasıl bulunur?", "expected_keywords": ["total"], "accepted_phrases": [], "keyword_groups": [["for"], ["total", "toplam"]], "category": "loops"}
+{"id": "conditionals_049", "prompt": "if else ne işe yarar?", "expected_keywords": ["if"], "accepted_phrases": [], "keyword_groups": [["if"], ["else"], ["koşul"]], "category": "conditionals"}
+{"id": "conditionals_050", "prompt": "elif ne zaman kullanılır?", "expected_keywords": ["elif"], "accepted_phrases": [], "keyword_groups": [["elif"], ["birden fazla", "koşul"]], "category": "conditionals"}
+{"id": "conditionals_051", "prompt": "çift sayı kontrolü nasıl yapılır?", "expected_keywords": ["% 2"], "accepted_phrases": [], "keyword_groups": [["% 2"], ["if"]], "category": "conditionals"}
+{"id": "conditionals_052", "prompt": "boş liste kontrolü nasıl yapılır?", "expected_keywords": ["if"], "accepted_phrases": [], "keyword_groups": [["if"], ["liste", "boş"]], "category": "conditionals"}
+{"id": "conditionals_053", "prompt": "in operatörü koşulda nasıl kullanılır?", "expected_keywords": ["in"], "accepted_phrases": [], "keyword_groups": [["in"], ["if"]], "category": "conditionals"}
+{"id": "conditionals_054", "prompt": "koşul okunabilirliği neden önemlidir?", "expected_keywords": ["okunabilir"], "accepted_phrases": [], "keyword_groups": [["okunabilir"], ["hata"]], "category": "conditionals"}
+{"id": "conditionals_055", "prompt": "not operatörü ne yapar?", "expected_keywords": ["not"], "accepted_phrases": [], "keyword_groups": [["not"], ["ters"]], "category": "conditionals"}
+{"id": "conditionals_056", "prompt": "and ve or farkı nedir?", "expected_keywords": ["and"], "accepted_phrases": [], "keyword_groups": [["and"], ["or"]], "category": "conditionals"}
+{"id": "files_057", "prompt": "pathlib ile dosya nasıl okunur?", "expected_keywords": ["Path"], "accepted_phrases": [], "keyword_groups": [["Path"], ["read_text"]], "category": "files"}
+{"id": "files_058", "prompt": "pathlib ile dosya nasıl yazılır?", "expected_keywords": ["write_text"], "accepted_phrases": [], "keyword_groups": [["Path"], ["write_text"]], "category": "files"}
+{"id": "files_059", "prompt": "encoding neden belirtilir?", "expected_keywords": ["utf-8"], "accepted_phrases": [], "keyword_groups": [["utf-8"], ["Türkçe"]], "category": "files"}
+{"id": "files_060", "prompt": "dosya yoksa nasıl kontrol edilir?", "expected_keywords": ["exists"], "accepted_phrases": [], "keyword_groups": [["exists"], ["Path"]], "category": "files"}
+{"id": "files_061", "prompt": "splitlines ne işe yarar?", "expected_keywords": ["splitlines"], "accepted_phrases": [], "keyword_groups": [["splitlines"], ["satır"]], "category": "files"}
+{"id": "files_062", "prompt": "dosya yolunu güvenli nasıl birleştirirsin?", "expected_keywords": ["Path"], "accepted_phrases": [], "keyword_groups": [["Path"], ["/"]], "category": "files"}
+{"id": "files_063", "prompt": "FileNotFoundError nasıl yakalanır?", "expected_keywords": ["FileNotFoundError"], "accepted_phrases": [], "keyword_groups": [["try"], ["FileNotFoundError"]], "category": "files"}
+{"id": "files_064", "prompt": "dosya karakter sayısı nasıl bulunur?", "expected_keywords": ["len"], "accepted_phrases": [], "keyword_groups": [["read_text"], ["len"]], "category": "files"}
+{"id": "json_065", "prompt": "json.loads ne yapar?", "expected_keywords": ["loads"], "accepted_phrases": [], "keyword_groups": [["json.loads", "loads"], ["sözlük", "dict"]], "category": "json"}
+{"id": "json_066", "prompt": "json.dumps ne yapar?", "expected_keywords": ["dumps"], "accepted_phrases": [], "keyword_groups": [["json.dumps", "dumps"], ["metin"]], "category": "json"}
+{"id": "json_067", "prompt": "ensure_ascii=False neden kullanılır?", "expected_keywords": ["ensure_ascii"], "accepted_phrases": [], "keyword_groups": [["ensure_ascii"], ["Türkçe"]], "category": "json"}
+{"id": "json_068", "prompt": "JSONDecodeError nasıl yakalanır?", "expected_keywords": ["JSONDecodeError"], "accepted_phrases": [], "keyword_groups": [["try"], ["JSONDecodeError"]], "category": "json"}
+{"id": "json_069", "prompt": "JSON dosyası nasıl yazılır?", "expected_keywords": ["json.dumps"], "accepted_phrases": [], "keyword_groups": [["json.dumps"], ["write_text"]], "category": "json"}
+{"id": "json_070", "prompt": "JSON dosyası nasıl okunur?", "expected_keywords": ["json.loads"], "accepted_phrases": [], "keyword_groups": [["read_text"], ["json.loads"]], "category": "json"}
+{"id": "json_071", "prompt": "indent=2 ne işe yarar?", "expected_keywords": ["indent"], "accepted_phrases": [], "keyword_groups": [["indent"], ["okunabilir"]], "category": "json"}
+{"id": "json_072", "prompt": "JSON ile dict farkı nedir?", "expected_keywords": ["JSON"], "accepted_phrases": [], "keyword_groups": [["JSON"], ["sözlük", "dict"]], "category": "json"}
+{"id": "errors_073", "prompt": "TypeError neden olur?", "expected_keywords": ["tip"], "accepted_phrases": [], "keyword_groups": [["TypeError"], ["tip", "uyumsuz"]], "category": "errors"}
+{"id": "errors_074", "prompt": "ValueError neden olur?", "expected_keywords": ["değer"], "accepted_phrases": [], "keyword_groups": [["ValueError"], ["değer", "format"]], "category": "errors"}
+{"id": "errors_075", "prompt": "IndentationError nasıl çözülür?", "expected_keywords": ["girinti"], "accepted_phrases": [], "keyword_groups": [["IndentationError"], ["girinti"]], "category": "errors"}
+{"id": "errors_076", "prompt": "FileNotFoundError neden olur?", "expected_keywords": ["dosya"], "accepted_phrases": [], "keyword_groups": [["FileNotFoundError"], ["dosya", "yol"]], "category": "errors"}
+{"id": "errors_077", "prompt": "try except ne işe yarar?", "expected_keywords": ["try"], "accepted_phrases": [], "keyword_groups": [["try"], ["except"], ["hata"]], "category": "errors"}
+{"id": "errors_078", "prompt": "finally ne zaman çalışır?", "expected_keywords": ["finally"], "accepted_phrases": [], "keyword_groups": [["finally"], ["her durumda"]], "category": "errors"}
+{"id": "errors_079", "prompt": "NameError nasıl çözülür?", "expected_keywords": ["tanımla"], "accepted_phrases": [], "keyword_groups": [["NameError"], ["tanımla", "değişken"]], "category": "errors"}
+{"id": "errors_080", "prompt": "hata mesajından emin değilsen ne yaparsın?", "expected_keywords": ["uydurmam"], "accepted_phrases": [], "keyword_groups": [["uydurmam", "emin değil"], ["hata mesajı"]], "category": "errors"}
+{"id": "classes_081", "prompt": "__init__ ne işe yarar?", "expected_keywords": ["__init__"], "accepted_phrases": [], "keyword_groups": [["__init__"], ["başlangıç"]], "category": "classes"}
+{"id": "classes_082", "prompt": "basit sınıf nasıl yazılır?", "expected_keywords": ["class"], "accepted_phrases": [], "keyword_groups": [["class"], ["__init__"]], "category": "classes"}
+{"id": "classes_083", "prompt": "self neyi ifade eder?", "expected_keywords": ["self"], "accepted_phrases": [], "keyword_groups": [["self"], ["nesne"]], "category": "classes"}
+{"id": "classes_084", "prompt": "metot nedir?", "expected_keywords": ["metot"], "accepted_phrases": [], "keyword_groups": [["metot", "method"], ["sınıf"]], "category": "classes"}
+{"id": "classes_085", "prompt": "__str__ ne işe yarar?", "expected_keywords": ["__str__"], "accepted_phrases": [], "keyword_groups": [["__str__"], ["metin"]], "category": "classes"}
+{"id": "classes_086", "prompt": "sınıf ne zaman kullanılır?", "expected_keywords": ["davranış"], "accepted_phrases": [], "keyword_groups": [["veri"], ["davranış"]], "category": "classes"}
+{"id": "classes_087", "prompt": "nesne nasıl oluşturulur?", "expected_keywords": ["class"], "accepted_phrases": [], "keyword_groups": [["class"], ["nesne"]], "category": "classes"}
+{"id": "classes_088", "prompt": "Rectangle alan metodu nasıl yazılır?", "expected_keywords": ["area"], "accepted_phrases": [], "keyword_groups": [["class"], ["area"]], "category": "classes"}
+{"id": "algorithms_089", "prompt": "en büyük sayı nasıl bulunur?", "expected_keywords": ["max"], "accepted_phrases": [], "keyword_groups": [["max"], ["liste"]], "category": "algorithms"}
+{"id": "algorithms_090", "prompt": "kelime frekansı nasıl hesaplanır?", "expected_keywords": ["Counter"], "accepted_phrases": [], "keyword_groups": [["Counter"], ["split"]], "category": "algorithms"}
+{"id": "algorithms_091", "prompt": "lineer arama nedir?", "expected_keywords": ["sırayla"], "accepted_phrases": [], "keyword_groups": [["sırayla"], ["arama"]], "category": "algorithms"}
+{"id": "algorithms_092", "prompt": "toplam döngüyle nasıl hesaplanır?", "expected_keywords": ["total"], "accepted_phrases": [], "keyword_groups": [["for"], ["total"]], "category": "algorithms"}
+{"id": "algorithms_093", "prompt": "sorted ile sıralama nasıl yapılır?", "expected_keywords": ["sorted"], "accepted_phrases": [], "keyword_groups": [["sorted"]], "category": "algorithms"}
+{"id": "algorithms_094", "prompt": "algoritma açıklarken neye dikkat edilir?", "expected_keywords": ["adım"], "accepted_phrases": [], "keyword_groups": [["adım"], ["basit"]], "category": "algorithms"}
+{"id": "algorithms_095", "prompt": "O(n) basitçe ne demektir?", "expected_keywords": ["girdi"], "accepted_phrases": [], "keyword_groups": [["girdi"], ["artar"]], "category": "algorithms"}
+{"id": "algorithms_096", "prompt": "liste filtreleme algoritması nasıl yazılır?", "expected_keywords": ["if"], "accepted_phrases": [], "keyword_groups": [["for"], ["if"]], "category": "algorithms"}
+{"id": "pytorch_097", "prompt": "torch tensor nasıl oluşturulur?", "expected_keywords": ["torch.tensor"], "accepted_phrases": [], "keyword_groups": [["torch.tensor"], ["tensor"]], "category": "pytorch"}
+{"id": "pytorch_098", "prompt": "CUDA kullanılabilir mi nasıl kontrol edilir?", "expected_keywords": ["torch.cuda.is_available"], "accepted_phrases": [], "keyword_groups": [["torch.cuda.is_available"], ["cuda"]], "category": "pytorch"}
+{"id": "pytorch_099", "prompt": "tensor shape ne gösterir?", "expected_keywords": ["shape"], "accepted_phrases": [], "keyword_groups": [["shape"], ["boyut"]], "category": "pytorch"}
+{"id": "pytorch_100", "prompt": "tensor toplama nasıl yapılır?", "expected_keywords": ["+"], "accepted_phrases": [], "keyword_groups": [["torch.tensor"], ["+"]], "category": "pytorch"}
+{"id": "pytorch_101", "prompt": "PyTorch device seçimi nasıl yapılır?", "expected_keywords": ["device"], "accepted_phrases": [], "keyword_groups": [["cuda"], ["cpu"], ["device"]], "category": "pytorch"}
+{"id": "pytorch_102", "prompt": "zeros ile tensor nasıl oluşturulur?", "expected_keywords": ["zeros"], "accepted_phrases": [], "keyword_groups": [["torch.zeros", "zeros"]], "category": "pytorch"}
+{"id": "pytorch_103", "prompt": "PyTorch bilmediğin konuda ne yaparsın?", "expected_keywords": ["emin değil"], "accepted_phrases": [], "keyword_groups": [["emin değil", "uydurmam"], ["kontrol"]], "category": "pytorch"}
+{"id": "pytorch_104", "prompt": "tensor ile liste farkı nedir?", "expected_keywords": ["tensor"], "accepted_phrases": [], "keyword_groups": [["tensor"], ["liste"]], "category": "pytorch"}
+{"id": "tokenizer_105", "prompt": "tokenizer nedir?", "expected_keywords": ["Tokenizer"], "accepted_phrases": [], "keyword_groups": [["Tokenizer", "tokenizer"], ["metin", "id"]], "category": "tokenizer"}
+{"id": "tokenizer_106", "prompt": "ByteLevelBPETokenizer nasıl yüklenir?", "expected_keywords": ["ByteLevelBPETokenizer"], "accepted_phrases": [], "keyword_groups": [["ByteLevelBPETokenizer"], ["vocab", "merges"]], "category": "tokenizer"}
+{"id": "tokenizer_107", "prompt": "encode ne işe yarar?", "expected_keywords": ["encode"], "accepted_phrases": [], "keyword_groups": [["encode"], ["ids", "id"]], "category": "tokenizer"}
+{"id": "tokenizer_108", "prompt": "decode ne işe yarar?", "expected_keywords": ["decode"], "accepted_phrases": [], "keyword_groups": [["decode"], ["metin"]], "category": "tokenizer"}
+{"id": "tokenizer_109", "prompt": "tokenizer mismatch neden sorun olur?", "expected_keywords": ["vocab"], "accepted_phrases": [], "keyword_groups": [["vocab"], ["checkpoint", "uyum"]], "category": "tokenizer"}
+{"id": "tokenizer_110", "prompt": "vocab.json ne içerir?", "expected_keywords": ["vocab"], "accepted_phrases": [], "keyword_groups": [["vocab"], ["id"]], "category": "tokenizer"}
+{"id": "tokenizer_111", "prompt": "merges.txt ne işe yarar?", "expected_keywords": ["merges"], "accepted_phrases": [], "keyword_groups": [["merges"], ["BPE"]], "category": "tokenizer"}
+{"id": "tokenizer_112", "prompt": "Türkçe tokenizer için ne önemlidir?", "expected_keywords": ["Türkçe"], "accepted_phrases": [], "keyword_groups": [["Türkçe"], ["karakter"]], "category": "tokenizer"}
+{"id": "git_113", "prompt": "git status ne işe yarar?", "expected_keywords": ["status"], "accepted_phrases": [], "keyword_groups": [["status"], ["değişiklik"]], "category": "git"}
+{"id": "git_114", "prompt": "git add ne yapar?", "expected_keywords": ["add"], "accepted_phrases": [], "keyword_groups": [["add"], ["staging"]], "category": "git"}
+{"id": "git_115", "prompt": "git commit ne yapar?", "expected_keywords": ["commit"], "accepted_phrases": [], "keyword_groups": [["commit"], ["kayıt"]], "category": "git"}
+{"id": "git_116", "prompt": "git push ne yapar?", "expected_keywords": ["push"], "accepted_phrases": [], "keyword_groups": [["push"], ["uzak"]], "category": "git"}
+{"id": "git_117", "prompt": "commit mesajı nasıl olmalı?", "expected_keywords": ["açık"], "accepted_phrases": [], "keyword_groups": [["açık"], ["kısa"]], "category": "git"}
+{"id": "git_118", "prompt": "git branch neden kontrol edilir?", "expected_keywords": ["branch"], "accepted_phrases": [], "keyword_groups": [["branch"], ["dal"]], "category": "git"}
+{"id": "git_119", "prompt": "yıkıcı git komutlarından önce ne yapılır?", "expected_keywords": ["onay"], "accepted_phrases": [], "keyword_groups": [["onay"], ["status"]], "category": "git"}
+{"id": "git_120", "prompt": "git diff ne gösterir?", "expected_keywords": ["diff"], "accepted_phrases": [], "keyword_groups": [["diff"], ["değişiklik"]], "category": "git"}
+{"id": "project_workflow_121", "prompt": "DarkMind veri pipeline sırası nedir?", "expected_keywords": ["clean_text"], "accepted_phrases": [], "keyword_groups": [["clean_text"], ["build_dataset"], ["quality"]], "category": "project_workflow"}
+{"id": "project_workflow_122", "prompt": "corpus build etmeden önce ne yapılır?", "expected_keywords": ["temiz"], "accepted_phrases": [], "keyword_groups": [["temiz"], ["validate", "kontrol"]], "category": "project_workflow"}
+{"id": "project_workflow_123", "prompt": "eval sonucu neden ölçülür?", "expected_keywords": ["pass rate"], "accepted_phrases": [], "keyword_groups": [["pass rate", "başarı"], ["ölç"]], "category": "project_workflow"}
+{"id": "project_workflow_124", "prompt": "checkpoint ne zaman promote edilir?", "expected_keywords": ["threshold"], "accepted_phrases": [], "keyword_groups": [["threshold", "eşik"], ["eval"]], "category": "project_workflow"}
+{"id": "project_workflow_125", "prompt": "model eğitmeden önce hangi kontrol yapılır?", "expected_keywords": ["dataset"], "accepted_phrases": [], "keyword_groups": [["dataset"], ["kalite"]], "category": "project_workflow"}
+{"id": "project_workflow_126", "prompt": "DarkMind bilmediği soruda ne demeli?", "expected_keywords": ["bilmiyorum"], "accepted_phrases": [], "keyword_groups": [["bilmiyorum", "emin değil"], ["uydurmam"]], "category": "project_workflow"}
+{"id": "project_workflow_127", "prompt": "README komutları neden güncel olmalı?", "expected_keywords": ["komut"], "accepted_phrases": [], "keyword_groups": [["komut"], ["tekrarlanabilir"]], "category": "project_workflow"}
+{"id": "project_workflow_128", "prompt": "deney dokümanı neden tutulur?", "expected_keywords": ["deney"], "accepted_phrases": [], "keyword_groups": [["deney"], ["sonuç", "izleme"]], "category": "project_workflow"}

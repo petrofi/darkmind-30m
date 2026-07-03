@@ -1,504 +1,355 @@
 # DarkMind-30M
 
-![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.11-ee4c2c?logo=pytorch&logoColor=white)
-![CUDA](https://img.shields.io/badge/CUDA-12.8-76b900?logo=nvidia&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Stars](https://img.shields.io/github/stars/petrofi/darkmind-30m?style=social)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-CUDA%20ready-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-research%20prototype-orange)](#project-status)
 
-> 🇹🇷 Türkçe odaklı mini LLM projesi — Sıfırdan tokenizer, decoder-only Transformer ve eğitim pipeline'ı.
+DarkMind-30M is a Turkish-focused small language model research project. It includes a local tokenizer, GPT-style decoder-only Transformer models, data preparation tools, instruction-tuning experiments, evaluation scripts, and a teacher-student distillation track.
 
-DarkMind is a Turkish-focused small LLM research and learning project, not a production-grade assistant.
+This repository is intended for learning, controlled experimentation, and transparent iteration. It is not a production assistant and should not be treated as a high-stakes model.
 
-Project references:
+## Project Status
 
-- [MODEL_CARD.md](MODEL_CARD.md)
-- [ROADMAP.md](ROADMAP.md)
-- [experiments/README.md](experiments/README.md)
+DarkMind is an active research prototype.
+
+- Architecture: GPT-style decoder-only Transformer implemented in PyTorch.
+- Scale: 30M-family experiments, roughly 27M-30M parameters depending on tokenizer vocabulary size.
+- Primary language target: Turkish, with software-assistant behavior as the main applied track.
+- Current training strategy: continue from compatible checkpoints and use inspected instruction/distillation data.
+- Safety posture: no blind self-training, no unreviewed web scraping, no high-stakes use claims.
+
+Important limitation: existing checkpoints and tokenizer compatibility matter. Do not replace the tokenizer for checkpoint-compatible pilot experiments unless the experiment explicitly calls for it.
+
+## Repository Layout
+
+```text
+.
+|-- configs/              Model and training configuration files
+|-- data/                 Local corpora, processed text, eval prompts, and generated data
+|-- darkmind_assistant/   Assistant/runtime experiments
+|-- darkmind_distill/     Qwen teacher-student distillation pipeline
+|-- docs/                 Experiment notes and pipeline documentation
+|-- experiments/          Experiment index and historical notes
+|-- model/                GPT model implementation
+|-- scripts/              Training, data, eval, tokenizer, and utility scripts
+|-- tests/                Unit tests
+|-- tokenizer/            Local ByteLevel BPE tokenizer files
+```
+
+Large runtime artifacts such as checkpoints, generated JSONL datasets, local configs, logs, and reports are intentionally ignored by git.
+
+## Quick Start
+
+Create and activate a virtual environment:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+Run the unit tests:
+
+```powershell
+python -m pytest tests
+```
+
+Check that a Python file compiles:
+
+```powershell
+python -m py_compile scripts/train_from_config.py model/gpt.py
+```
+
+## Model Training
+
+Train from a config and a plain text corpus:
+
+```powershell
+python scripts/train_from_config.py `
+  --config configs/darkmind_30m_1000step.json `
+  --data_path data/processed/corpus_v3.txt
+```
+
+Train from JSONL pretraining data:
+
+```powershell
+python scripts/train_from_jsonl.py `
+  --data data/processed/pretrain_corpus.jsonl `
+  --epochs 1 `
+  --batch_size 4 `
+  --block_size 256 `
+  --save_path models/darkmind-30m-pretrain.pt
+```
+
+Instruction fine-tuning from JSONL:
+
+```powershell
+python scripts/train_instruct_jsonl.py `
+  --data data/instruct/darkmind_instruct_seed.jsonl `
+  --base_checkpoint models/darkmind-30m-10k-step15000.pt `
+  --epochs 2 `
+  --batch_size 4 `
+  --block_size 256 `
+  --max_steps 250 `
+  --lr 0.000015 `
+  --save_path models/darkmind-30m-instruct-v0.1.pt
+```
+
+For GPU-only training, use:
+
+```powershell
+python scripts/train_instruct_jsonl.py --require-cuda ...
+```
+
+With `--require-cuda`, the script refuses to fall back to CPU/RAM training if PyTorch cannot see CUDA.
+
+## Inference
+
+Generate text from a checkpoint:
+
+```powershell
+python scripts/generate_from_checkpoint.py `
+  --checkpoint models/darkmind-30m-10k-step15000.pt `
+  --prompt "Kullanici: Python'da liste nedir?\nAsistan:" `
+  --max_new_tokens 120 `
+  --temperature 0.8 `
+  --top_k 50
+```
+
+Run the older chat demo flow:
+
+```powershell
+python scripts/chat_demo.py `
+  --checkpoint checkpoints/darkmind_30m.pt `
+  --temperature 0.8 `
+  --top_k 50 `
+  --max_new_tokens 120
+```
 
 ## Data Pipeline
 
-Clean raw collected text files:
+Clean raw local text:
 
 ```powershell
 python scripts/clean_text.py
 ```
 
-Build the combined v3 corpus from `data/sources/*.txt` and `data/cleaned/**/*.txt`:
+Build the combined corpus:
 
 ```powershell
 python scripts/build_dataset_from_raw.py
 ```
 
-Run a dataset quality check:
+Run quality checks:
 
 ```powershell
-python scripts/dataset_quality_check.py
+python scripts/dataset_quality_check.py --path data/processed/corpus_v3.txt
 ```
 
-Train the tokenizer on `corpus_v3.txt`:
-
-```powershell
-python scripts/train_tokenizer.py --data_path data/processed/corpus_v3.txt
-```
-
-Train the model with the v3 corpus:
-
-```powershell
-python scripts/train_from_config.py --config configs/darkmind_30m.json --data_path data/processed/corpus_v3.txt
-```
-
-Run the interactive chat demo:
-
-```powershell
-python scripts/chat_demo.py --checkpoint checkpoints/darkmind_30m.pt --temperature 0.8 --top_k 50 --max_new_tokens 120
-```
-
-## Streaming Pretraining Data
-
-Install optional data-ingestion dependencies:
-
-```powershell
-pip install -r requirements-data.txt
-```
-
-Run a tiny smoke test with Hugging Face streaming sources:
-
-```powershell
-python scripts/prepare_pretraining_data.py --max_docs 100 --out data/processed/pretrain_smoke.jsonl
-```
-
-Prepare a small local-scale pretraining corpus:
-
-```powershell
-python scripts/prepare_pretraining_data.py --max_docs 50000 --out data/processed/pretrain_corpus.jsonl
-```
-
-Train from JSONL with conservative local defaults:
-
-```powershell
-python scripts/train_from_jsonl.py --data data/processed/pretrain_corpus.jsonl --epochs 1 --batch_size 4 --block_size 256 --save_path models/darkmind-30m-pretrain.pt
-```
-
-Do not download full FineWeb, RedPajama, or The Stack locally. Use small streaming samples, respect licenses, and skip gated datasets unless access is explicitly approved. See [docs/data_pipeline.md](docs/data_pipeline.md).
-
-## Automated Dataset Processing
-
-Run the full safe data preparation pipeline:
-
-```powershell
-python scripts/auto_prepare_dataset.py
-```
-
-Score cleaned examples and write accepted/rejected outputs:
-
-```powershell
-python scripts/score_dataset_examples.py
-```
-
-Build the curriculum corpus from scored examples:
-
-```powershell
-python scripts/build_curriculum_dataset.py
-```
-
-Check the final curriculum corpus:
-
-```powershell
-python scripts/dataset_quality_check.py --path data/processed/corpus_curriculum_v01.txt
-```
-
-Train tokenizer manually after reviewing the dataset:
-
-```powershell
-python scripts/train_tokenizer.py --data_path data/processed/corpus_curriculum_v01.txt
-```
-
-Train the model manually:
-
-```powershell
-python scripts/train_from_config.py --config configs/darkmind_30m_1000step.json --data_path data/processed/corpus_curriculum_v01.txt
-```
-
-See [docs/experiment_016_automated_dataset_processing.md](docs/experiment_016_automated_dataset_processing.md) for scoring logic, rejected examples, curriculum ordering, and limitations.
-
-## Dataset Quality and Splits
-
-Build or refresh the dataset source manifest:
-
-```powershell
-python scripts/build_dataset_manifest.py
-```
-
-Clean raw data, deduplicate cleaned text, and rebuild `corpus_v3.txt` from deduped data:
-
-```powershell
-python scripts/clean_text.py
-python scripts/deduplicate_dataset.py
-python scripts/build_dataset_from_raw.py --input_dir data/deduped
-```
-
-Build document-level train/validation/test splits:
+Build train/validation/test splits:
 
 ```powershell
 python scripts/build_train_val_test.py
 ```
 
-Check whether eval prompts or expected snippets leaked into train data:
-
-```powershell
-python scripts/check_eval_leakage.py --eval_path data/evals/darkmind_eval_v02.jsonl
-```
-
-Train tokenizer only on the train split:
+Train the tokenizer on a reviewed corpus:
 
 ```powershell
 python scripts/train_tokenizer.py --data_path data/processed/splits/train.txt
 ```
 
-Train the model with explicit train/validation files:
+Check eval leakage:
 
 ```powershell
-python scripts/train_from_config.py --config configs/darkmind_30m_1000step.json --train_path data/processed/splits/train.txt --val_path data/processed/splits/val.txt
+python scripts/check_eval_leakage.py --eval_path data/evals/darkmind_eval_v02.jsonl
 ```
 
-See [docs/experiment_013_dataset_quality_and_splits.md](docs/experiment_013_dataset_quality_and_splits.md) for the reasoning and limitations.
+## Streaming Data
 
-## Dataset Generation
-
-Generate deterministic Turkish Python coding examples:
+Optional streaming-data dependencies:
 
 ```powershell
-python scripts/generate_python_examples.py
+pip install -r requirements-data.txt
 ```
 
-Generate Turkish coding error explanation examples:
+Smoke test Hugging Face streaming ingestion:
 
 ```powershell
-python scripts/generate_coding_error_examples.py
+python scripts/prepare_pretraining_data.py `
+  --max_docs 100 `
+  --out data/processed/pretrain_smoke.jsonl
 ```
 
-Generate QA variants for core DarkMind concepts:
+Prepare a small local-scale corpus:
 
 ```powershell
-python scripts/generate_qa_variants.py
+python scripts/prepare_pretraining_data.py `
+  --max_docs 50000 `
+  --out data/processed/pretrain_corpus.jsonl
 ```
 
-Run all dataset generators:
+Do not download full FineWeb, RedPajama, The Stack, or gated datasets locally unless the licensing, storage, and compute plan has been reviewed.
 
-```powershell
-python scripts/generate_dataset_v01.py
-```
+## Instruction and Self-Improvement Pipeline
 
-Rebuild `corpus_v3.txt` after generating and cleaning raw data:
+DarkMind includes a human-in-the-loop self-improvement workflow. It evaluates a checkpoint, creates candidate correction examples, and waits for explicit review before examples enter training data.
 
-```powershell
-python scripts/clean_text.py
-python scripts/build_dataset_from_raw.py
-python scripts/dataset_quality_check.py --path data/processed/corpus_v3.txt
-```
-
-Train tokenizer with `corpus_v3.txt`:
-
-```powershell
-python scripts/train_tokenizer.py --data_path data/processed/corpus_v3.txt
-```
-
-Train model with `corpus_v3.txt`:
-
-```powershell
-python scripts/train_from_config.py --config configs/darkmind_30m_1000step.json --data_path data/processed/corpus_v3.txt
-```
-
-Run chat demo:
-
-```powershell
-python scripts/chat_demo.py --checkpoint checkpoints/darkmind_30m.pt --temperature 0.8 --top_k 50 --max_new_tokens 120
-```
-
-## Self-Improvement Pipeline
-
-This is not fully autonomous self-training. DarkMind does not blindly train on its own outputs. The loop only finds weak answers and creates candidate examples for human review.
-
-Run evaluation prompts against a checkpoint:
+Run evaluation prompts:
 
 ```powershell
 python scripts/eval_model.py --checkpoint checkpoints/darkmind_30m.pt
 ```
 
-Generate correction candidates from the latest eval run:
+Generate correction candidates:
 
 ```powershell
 python scripts/generate_correction_candidates.py
 ```
 
-Run the convenience loop. This runs eval and creates pending candidates, but does not approve, rebuild, or train:
+Run the convenience loop:
 
 ```powershell
 python scripts/self_improve_loop.py --checkpoint checkpoints/darkmind_30m.pt
 ```
 
-Review the pending candidate file manually. If the examples are correct and useful, approve them explicitly:
+Approve candidates only after manual review:
 
 ```powershell
-python scripts/approve_candidates.py --input_path data/self_improvement/pending_review/correction_candidates_YYYYMMDD_HHMMSS.txt --approve_all
+python scripts/approve_candidates.py `
+  --input_path data/self_improvement/pending_review/correction_candidates_YYYYMMDD_HHMMSS.txt `
+  --approve_all
 ```
 
-Rebuild the normal dataset after approval:
+## Teacher-Student Distillation
+
+The `darkmind_distill/` directory contains a Qwen teacher-student distillation workflow. The goal is to generate synthetic instruction-response data with a stronger local teacher model, inspect it strictly, then train DarkMind as the student only when quality gates pass.
+
+Expected local teacher server:
+
+```text
+http://localhost:1234/v1
+model: local-model
+```
+
+Generate a small smoke dataset:
 
 ```powershell
-python scripts/clean_text.py
-python scripts/build_dataset_from_raw.py
-python scripts/dataset_quality_check.py --path data/processed/corpus_v3.txt
+python darkmind_distill/generate_qwen_distill_dataset.py --smoke
 ```
 
-Then tokenizer and model training remain manual:
+Generate controlled chunks:
 
 ```powershell
-python scripts/train_tokenizer.py --data_path data/processed/corpus_v3.txt
-python scripts/train_from_config.py --config configs/darkmind_30m_1000step.json --data_path data/processed/corpus_v3.txt
+python darkmind_distill/generate_qwen_distill_dataset.py --max-new 100
+python darkmind_distill/generate_qwen_distill_dataset.py --target-total 300
+python darkmind_distill/generate_qwen_distill_dataset.py --categories programming,debugging --languages tr,en --max-new 50
 ```
 
-## Safe Web Data Collection
-
-DarkMind web data collection is allowlist-based. Do not scrape random websites. A source must be added to `configs/web_sources_allowlist.json`, its license must be reviewed, and fetched text must stay in `pending_review` until a human approves it.
-
-Check whether a URL is allowed:
+Inspect staged milestones:
 
 ```powershell
-python scripts/check_web_source_policy.py --url "https://example.com/page"
+python darkmind_distill/inspect_distill_dataset.py --target-mode staged --min-total 300
+python darkmind_distill/inspect_distill_dataset.py --target-mode full
 ```
 
-Fetch one allowlisted URL into pending review with metadata:
+Current Pilot500 TR/EN v2 workflow:
 
 ```powershell
-python scripts/fetch_web_text.py --url "https://example.com/page"
+python darkmind_distill/build_pilot500_tr_en_v2.py --batch-size 3
+python darkmind_distill/audit_pilot500_tr_en_v2.py
+python darkmind_distill/audit_multilingual_tokenizer.py `
+  --data darkmind_distill/data/darkmind_qwen_distill_pilot500_tr_en_v2.jsonl `
+  --report darkmind_distill/reports/pilot500_tr_en_v2_tokenizer_audit.md `
+  --block-size 256
 ```
 
-Review the fetched text manually:
+Training is intentionally gated. Do not train on a distillation dataset until duplicate, contamination, tokenizer, eval-overlap, and distribution checks pass.
+
+## DarkMind-30M Pilot500 Failure Analysis
+
+Pilot500 TR/EN v2 was a controlled teacher-student distillation experiment, not a production release. The student used a 28,127,232 parameter DarkMind model and a 500-example Turkish-English Qwen teacher dataset.
+
+Final training metrics improved numerically, with train loss `3.4495` and validation loss `3.7017`, but generation quality failed. The base checkpoint failed `8/8` deterministic greedy generation tests, and the Pilot500 student produced mixed-script, corrupted, and semantically invalid output. The tokenizer audit found mojibake and encoding artifacts in the vocabulary, including forms like `TÃƒÂ¼rkiye` and `KullanÃ„Â±cÃ„Â±`.
+
+The SFT formatting, prompt masking, response supervision, EOS supervision, and label alignment were audited and verified as correct. The Pilot500 student checkpoint was not continued. This failure is kept as an engineering milestone and led to the DarkMind v2 base-pipeline redesign.
+
+See:
+
+- [darkmind_distill/reports/pilot500_failure_diagnosis.md](darkmind_distill/reports/pilot500_failure_diagnosis.md)
+- [docs/darkmind-v2-base-pipeline.md](docs/darkmind-v2-base-pipeline.md)
+
+## Evaluation
+
+Core evaluation scripts:
 
 ```powershell
-notepad data/raw_collected/web_text/pending_review/<file>.txt
+python scripts/eval_model.py --checkpoint checkpoints/darkmind_30m.pt
+python scripts/eval_instruct_prompts.py --checkpoint models/darkmind-30m-instruct-v0.1.pt
+python scripts/compare_eval_runs.py --before reports/before.jsonl --after reports/after.jsonl
 ```
 
-Approve only after checking license and quality:
+Pilot500 evaluation:
 
 ```powershell
-python scripts/approve_web_text.py --input_path data/raw_collected/web_text/pending_review/<file>.txt --approve_all
+python darkmind_distill/run_pilot500_eval.py eval `
+  --prompts darkmind_distill/data/pilot500_tr_en_v2_eval_prompts.jsonl `
+  --checkpoint models/darkmind-30m-10k-step15000.pt `
+  --out darkmind_distill/reports/pilot500_tr_en_v2_base_eval.md `
+  --json-out darkmind_distill/reports/pilot500_tr_en_v2_base_eval.jsonl
 ```
 
-Inspect approved web data before corpus build:
+## Safety and Data Policy
+
+DarkMind follows a conservative research workflow:
+
+- No blind internet scraping.
+- No Reddit training data.
+- No automatic training on model outputs.
+- No unreviewed self-improvement examples.
+- No high-stakes medical, legal, financial, or security-sensitive claims.
+- No claims of ChatGPT-level capability.
+- Human review is required before generated examples enter training.
+
+See also:
+
+- [MODEL_CARD.md](MODEL_CARD.md)
+- [ROADMAP.md](ROADMAP.md)
+- [docs/data_pipeline.md](docs/data_pipeline.md)
+- [docs/experiments.md](docs/experiments.md)
+- [darkmind_distill/README.md](darkmind_distill/README.md)
+
+## Development Notes
+
+Check repository status:
 
 ```powershell
-python scripts/web_data_quality_check.py
+git status --short --branch
 ```
 
-Clean and rebuild corpus after approval:
+Run tests:
 
 ```powershell
-python scripts/clean_text.py
-python scripts/build_dataset_from_raw.py
+python -m pytest tests
 ```
 
-`scripts/clean_text.py` intentionally skips `data/raw_collected/web_text/pending_review/` so unreviewed web text does not enter training data automatically.
-
-## Turkish Coding Ability Track
-
-Generate the stronger Turkish Python instruction dataset:
+Compile changed Python files:
 
 ```powershell
-python scripts/generate_python_instruction_v02.py
+python -m py_compile scripts/train_instruct_jsonl.py darkmind_distill/generate_qwen_distill_dataset.py
 ```
 
-Validate Python code blocks without executing them:
+Sync release artifacts to Hugging Face only after reviewing the target repository and files:
 
 ```powershell
-python scripts/validate_python_examples.py --strict
+python scripts/hf_hub_sync.py --help
 ```
 
-Rebuild corpus after generation:
+## License
 
-```powershell
-python scripts/clean_text.py
-python scripts/build_dataset_from_raw.py
-```
+This project is released under the [MIT License](LICENSE).
 
-Train tokenizer and model manually:
+## Contributing
 
-```powershell
-python scripts/train_tokenizer.py --data_path data/processed/corpus_v3.txt
-python scripts/train_from_config.py --config configs/darkmind_30m_1000step.json --data_path data/processed/corpus_v3.txt
-```
-
-Run the Turkish coding eval:
-
-```powershell
-python scripts/eval_model.py --checkpoint checkpoints/darkmind_30m_1000step.pt --eval_path data/evals/darkmind_code_eval_v01.jsonl
-```
-
-Run the safe coding self-improvement loop. This only evaluates and creates pending review candidates:
-
-```powershell
-python scripts/run_code_eval_cycle.py --checkpoint checkpoints/darkmind_30m_1000step.pt
-```
-
-## Turkish Code Data Factory
-
-Generate, validate, clean, and rebuild the larger Turkish coding dataset without training the model:
-
-```powershell
-python scripts/auto_code_dataset_cycle.py
-```
-
-Validate the generated coding dataset directly:
-
-```powershell
-python scripts/validate_code_dataset_quality.py --strict
-```
-
-Train tokenizer manually after reviewing the generated corpus:
-
-```powershell
-python scripts/train_tokenizer.py --data_path data/processed/corpus_curriculum_v01.txt
-```
-
-Train the model manually:
-
-```powershell
-python scripts/train_from_config.py --config configs/darkmind_30m_1000step.json --data_path data/processed/corpus_curriculum_v01.txt
-```
-
-Run the stronger Turkish coding eval:
-
-```powershell
-python scripts/eval_model.py --checkpoint checkpoints/darkmind_30m_1000step.pt --eval_path data/evals/darkmind_code_eval_v02.jsonl
-```
-
-See [docs/experiment_017_turkish_code_data_factory.md](docs/experiment_017_turkish_code_data_factory.md) for safety checks, syntax validation, and limitations.
-
-## Inference Quality and Checkpoint Metadata
-
-Check whether a checkpoint appears compatible with the current tokenizer:
-
-```powershell
-python scripts/check_checkpoint_compatibility.py --checkpoint checkpoints/darkmind_30m_1000step.pt
-```
-
-Write checkpoint metadata without modifying the checkpoint:
-
-```powershell
-python scripts/write_checkpoint_metadata.py --checkpoint checkpoints/darkmind_30m_1000step.pt --config configs/darkmind_30m_1000step.json --eval_run data/self_improvement/runs/<eval_run>.jsonl
-```
-
-Run a small deterministic inference smoke suite:
-
-```powershell
-python scripts/run_inference_suite.py --checkpoint checkpoints/darkmind_30m_1000step.pt --preset deterministic
-```
-
-Run the chat demo with cleaner inference controls:
-
-```powershell
-python scripts/chat_demo.py --checkpoint checkpoints/darkmind_30m_1000step.pt --temperature 0.2 --top_k 5 --max_new_tokens 80 --repetition_penalty 1.1
-```
-
-See [docs/experiment_015_inference_quality_and_versioning.md](docs/experiment_015_inference_quality_and_versioning.md) for inference cleanup, metadata, presets, chat logging, and limitations.
-
-## Experiment Tracking
-
-Log a real experiment after training/evaluation:
-
-```powershell
-python scripts/log_experiment.py --experiment_id exp_012 --name "LLM development framework baseline" --eval_path data/evals/darkmind_eval_v02.jsonl --eval_path data/evals/darkmind_code_eval_v01.jsonl --notes "Fill with real run details after evaluation."
-```
-
-Compare two eval runs:
-
-```powershell
-python scripts/compare_eval_runs.py --before data/self_improvement/runs/eval_run_BEFORE.jsonl --after data/self_improvement/runs/eval_run_AFTER.jsonl
-```
-
-Show the latest eval run summaries:
-
-```powershell
-python scripts/latest_eval_summary.py --limit 10
-```
-
-Longer 30M training config:
-
-```powershell
-python scripts/train_from_config.py --config configs/darkmind_30m_longer_train.json
-```
-
-Experimental 50M config warning:
-
-```powershell
-python scripts/train_from_config.py --config configs/darkmind_50m_experimental.json
-```
-
-The 50M config may be too heavy for the current machine. Test carefully with short runs before any long training.
-
-## Training Strategy and Model Selection
-
-Run the safest next curriculum training plan for the RTX 4060 Laptop GPU:
-
-```powershell
-python scripts/run_training_plan.py --config configs/darkmind_30m_curriculum_3000step.json --data_path data/processed/corpus_curriculum_v01.txt --eval_path data/evals/darkmind_eval_v02.jsonl --eval_path data/evals/darkmind_code_eval_v02.jsonl
-```
-
-Benchmark the best checkpoint from that run:
-
-```powershell
-python scripts/benchmark_suite.py --checkpoint checkpoints/darkmind_30m_curriculum_3000step_best.pt
-```
-
-Promote a checkpoint only after reviewing a real eval run:
-
-```powershell
-python scripts/promote_checkpoint.py --candidate_checkpoint checkpoints/darkmind_30m_curriculum_3000step_best.pt --eval_run data/self_improvement/runs/<eval_run>.jsonl --min_pass_rate 0.70
-```
-
-The 30M curriculum path should be tried before the experimental 50M config. The 50M config may be heavy for laptop GPU VRAM and should only be run after the 30M benchmark results justify it.
-
-See [docs/experiment_018_training_strategy_and_model_selection.md](docs/experiment_018_training_strategy_and_model_selection.md) for the recommended model-selection order.
-
-DarkMind-30M, Türkçe odaklı küçük bir dil modeli geliştirme projesidir.
-
-Bu proje, hazır bir modeli fine-tune etmek yerine sıfırdan bir mini decoder-only Transformer mimarisi kurmayı, kendi tokenizer'ını eğitmeyi ve kendi training loop'u ile model eğitmeyi amaçlar.
-
-## Hedef
-
-- Türkçe odaklı mini LLM geliştirmek
-- Kendi tokenizer'ını eğitmek
-- Decoder-only Transformer mimarisini sıfırdan yazmak
-- CUDA destekli eğitim pipeline'ı kurmak
-- Küçük modelden başlayarak DarkMind-5M ve DarkMind-30M seviyesine ilerlemek
-
-## Mevcut Durum
-
-- Byte-Level BPE tokenizer eğitildi
-- Tiny GPT mimarisi yazıldı
-- CUDA aktif edildi
-- İlk checkpoint üretildi
-- Eğitim pipeline'ı başarıyla çalıştırıldı
-
-## Sistem
-
-- Python: 3.13.12
-- PyTorch: 2.11.0+cu128
-- GPU: NVIDIA GeForce RTX 4060 Laptop GPU
-- RAM: 32 GB
-
-## Proje Yapısı
-
-```txt
-darkmind-30m/
-├── configs/
-├── data/
-├── docs/
-├── model/
-├── scripts/
-├── tokenizer/
-├── training/
-├── checkpoints/
-└── README.md
+Contributions should preserve the research discipline of the project: small scoped changes, documented experiments, explicit data provenance, and honest evaluation. See [CONTRIBUTING.md](CONTRIBUTING.md).

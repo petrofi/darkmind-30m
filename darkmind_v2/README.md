@@ -33,6 +33,23 @@ The corpus manifest records input hashes, normalized output hashes, language cou
 
 This directory is safe validation infrastructure. It intentionally contains no tokenizer training script, no corpus downloader, and no model training launcher.
 
+## Phase 1A Source And Tokenizer Planning
+
+Phase 1A extends the validation-first design with corpus-source approval and tokenizer experiment planning. It still does not download a corpus, train a tokenizer, pretrain a model, run instruction tuning, or generate teacher data.
+
+New Phase 1A artifacts:
+
+- `corpus/source_registry.schema.json` defines required source, license, attribution, redistribution, commercial-use, modification, version, checksum, cap, approval, and risk fields.
+- `corpus/source_registry.example.json` records currently reviewable official-source candidates.
+- `corpus/validate_source_registry.py` fails closed on missing license evidence, unofficial URLs, ambiguous licenses, unapproved sources, unsupported languages, missing version/snapshot data, missing retrieval caps, Common Crawl auto-approval, and social/private/leaked/personal datasets.
+- `config/tokenizer_pilot_corpus.json` defines a 30M-60M character pilot target, with the current plan set to 50M normalized characters, Turkish 60%, English 40%, train/validation/test 90/5/5, source cap <= 40%, and hard download cap 1GB.
+- `config/tokenizer_candidates.json` defines four tokenizer candidates: SentencePiece BPE 12k, BPE 16k, Unigram 16k, and BPE 24k with shared special tokens.
+- `tokenizer/estimate_vocab_parameter_cost.py` estimates embedding/output vocabulary parameter cost for 384 and 512 dimensions, tied and untied output heads, FP32/FP16 storage, and 45M/60M model targets.
+- `config/tokenizer_acceptance_gates.json` defines hard failures and weighted scoring for future tokenizer experiments.
+- `tokenizer/tokenizer_eval_samples.jsonl` provides 200 controlled eval samples covering Turkish, English, technical/code-adjacent text, source-code snippets, and hostile encoding fixtures.
+
+The next gate is explicit source approval. A future Phase 1B run must validate the approved registry before retrieval, then validate the prepared local corpus before any tokenizer training is considered.
+
 ## Next Gate
 
 The next gate before tokenizer training is a reviewed corpus smoke test:

@@ -1,0 +1,74 @@
+{
+  "candidate_matrix_version": "darkmind-v2-phase1a-tokenizer-candidates",
+  "purpose": "Tokenizer experiment design only; this file does not authorize tokenizer training.",
+  "shared_requirements": {
+    "normalization": "NFC",
+    "byte_fallback_or_equivalent": true,
+    "reject_mojibake_before_training": true,
+    "reject_replacement_characters_before_training": true,
+    "immutable_after_pretraining": true,
+    "training_input_manifest_required": true,
+    "special_tokens": [
+      "<pad>",
+      "<unk>",
+      "<s>",
+      "</s>",
+      "<|system|>",
+      "<|user|>",
+      "<|assistant|>",
+      "<|end|>"
+    ],
+    "special_token_ids": {
+      "<pad>": 0,
+      "<unk>": 1,
+      "<s>": 2,
+      "</s>": 3,
+      "<|system|>": 4,
+      "<|user|>": 5,
+      "<|assistant|>": 6,
+      "<|end|>": 7
+    },
+    "minimum_eval_sample_count": 200,
+    "required_eval_categories": [
+      "turkish",
+      "english",
+      "technical_code_adjacent",
+      "source_code",
+      "hostile_encoding"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "A",
+      "algorithm": "sentencepiece_bpe",
+      "vocab_size": 12000,
+      "training_character_target": 50000000,
+      "expected_tradeoff": "Lowest embedding/output parameter cost, but higher risk of longer Turkish and English sequences.",
+      "selection_status": "evaluate"
+    },
+    {
+      "id": "B",
+      "algorithm": "sentencepiece_bpe",
+      "vocab_size": 16000,
+      "training_character_target": 50000000,
+      "expected_tradeoff": "Balanced small-model cost and sequence compression; likely first candidate for tiny smoke tests.",
+      "selection_status": "evaluate"
+    },
+    {
+      "id": "C",
+      "algorithm": "sentencepiece_unigram",
+      "vocab_size": 16000,
+      "training_character_target": 50000000,
+      "expected_tradeoff": "Same vocabulary size as B with a different segmentation objective; useful for Turkish suffix behavior comparison.",
+      "selection_status": "evaluate"
+    },
+    {
+      "id": "D",
+      "algorithm": "sentencepiece_bpe",
+      "vocab_size": 24000,
+      "training_character_target": 50000000,
+      "expected_tradeoff": "Closer to the original v2 design target with better compression, but higher parameter and storage cost.",
+      "selection_status": "evaluate"
+    }
+  ]
+}

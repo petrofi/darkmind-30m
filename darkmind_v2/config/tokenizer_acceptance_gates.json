@@ -1,0 +1,95 @@
+{
+  "gate_version": "darkmind-v2-phase1a-tokenizer-acceptance-gates",
+  "purpose": "Acceptance criteria for future tokenizer experiments; no tokenizer is trained in Phase 1A.",
+  "hard_fail_conditions": [
+    {
+      "id": "non_utf8_input",
+      "rule": "Any invalid UTF-8 input enters tokenizer training.",
+      "threshold": 0
+    },
+    {
+      "id": "mojibake_input",
+      "rule": "Any mojibake detection exists in approved training text.",
+      "threshold": 0
+    },
+    {
+      "id": "replacement_character_input",
+      "rule": "Any U+FFFD replacement character exists in approved training text.",
+      "threshold": 0
+    },
+    {
+      "id": "unapproved_source",
+      "rule": "Any training document lacks an approved source_registry entry.",
+      "threshold": 0
+    },
+    {
+      "id": "license_evidence_missing",
+      "rule": "Any source lacks official license evidence and attribution/redistribution notes.",
+      "threshold": 0
+    },
+    {
+      "id": "language_outside_scope",
+      "rule": "Any accepted training document is outside Turkish or English.",
+      "threshold": 0
+    },
+    {
+      "id": "special_token_mismatch",
+      "rule": "Special token list or IDs differ from tokenizer_candidates.json.",
+      "threshold": 0
+    },
+    {
+      "id": "roundtrip_failure",
+      "rule": "Any valid eval sample fails exact encode/decode round trip.",
+      "threshold": 0
+    },
+    {
+      "id": "hostile_fixture_leak",
+      "rule": "Any hostile encoding or malformed eval-only sample is included in tokenizer training data.",
+      "threshold": 0
+    },
+    {
+      "id": "manifest_nondeterminism",
+      "rule": "Same input/config produces different corpus or tokenizer manifests.",
+      "threshold": 0
+    }
+  ],
+  "minimum_metric_targets": {
+    "valid_eval_roundtrip_pass_ratio": 1.0,
+    "turkish_eval_roundtrip_pass_ratio": 1.0,
+    "english_eval_roundtrip_pass_ratio": 1.0,
+    "max_unknown_token_ratio_on_valid_samples": 0.001,
+    "max_turkish_tokens_per_character_ratio": 0.75,
+    "max_english_tokens_per_character_ratio": 0.65,
+    "max_duplicate_document_ratio": 0.01,
+    "max_near_duplicate_document_ratio": 0.03,
+    "max_single_source_ratio": 0.4
+  },
+  "scoring_weights": {
+    "turkish_segmentation_quality": 20,
+    "english_segmentation_quality": 14,
+    "technical_and_code_adjacent_behavior": 12,
+    "source_code_snippet_behavior": 8,
+    "hostile_encoding_rejection": 12,
+    "roundtrip_and_special_tokens": 12,
+    "vocab_parameter_cost": 10,
+    "manifest_reproducibility": 7,
+    "corpus_balance": 5
+  },
+  "tie_breakers": [
+    "Prefer the smaller vocabulary if total weighted scores are within 2 points.",
+    "Prefer the candidate with lower Turkish tokens-per-character if scores are tied exactly.",
+    "Reject any candidate that improves compression by admitting mojibake or replacement-character tokens."
+  ],
+  "reporting_required": [
+    "candidate id and algorithm",
+    "vocabulary size",
+    "training corpus manifest hash",
+    "tokenizer file hashes",
+    "special token ids",
+    "eval sample pass/fail counts",
+    "tokens-per-character percentiles by category and language",
+    "unknown token ratio by category and language",
+    "parameter and storage cost from estimate_vocab_parameter_cost.py",
+    "final recommendation"
+  ]
+}

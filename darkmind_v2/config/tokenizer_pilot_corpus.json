@@ -1,0 +1,124 @@
+{
+  "corpus_plan_version": "darkmind-v2-phase1a-tokenizer-pilot-corpus",
+  "purpose": "Design-only tokenizer pilot corpus plan; no download or tokenizer training is authorized by this file.",
+  "hard_download_cap_bytes": 1073741824,
+  "normalization": {
+    "unicode_form": "NFC",
+    "repair_invalid_utf8": false,
+    "reject_mojibake": true,
+    "reject_replacement_characters": true,
+    "strip_unapproved_markup": true
+  },
+  "target_normalized_characters": 50000000,
+  "language_mix": {
+    "tr": {
+      "target_ratio": 0.6,
+      "target_characters": 30000000
+    },
+    "en": {
+      "target_ratio": 0.4,
+      "target_characters": 20000000
+    }
+  },
+  "splits": {
+    "seed": 20260704,
+    "train": {
+      "ratio": 0.9,
+      "target_characters": 45000000
+    },
+    "validation": {
+      "ratio": 0.05,
+      "target_characters": 2500000
+    },
+    "test": {
+      "ratio": 0.05,
+      "target_characters": 2500000
+    }
+  },
+  "content_mix": {
+    "encyclopedic_articles": {
+      "target_ratio": 0.42,
+      "notes": "Clean paragraph text only; remove templates, tables, navigation, and metadata."
+    },
+    "technical_documentation": {
+      "target_ratio": 0.28,
+      "notes": "Official documentation prose, short code-adjacent text, and API explanations."
+    },
+    "short_sentences": {
+      "target_ratio": 0.12,
+      "notes": "Small sentence-style supplement; deduplicate aggressively."
+    },
+    "public_domain_or_permissive_books": {
+      "target_ratio": 0.1,
+      "notes": "Deferred until exact public-domain and jurisdiction checks are recorded."
+    },
+    "source_code_snippets": {
+      "target_ratio": 0.08,
+      "notes": "Only permissively licensed official-doc examples; no repository mining in Phase 1A."
+    }
+  },
+  "eval_only_mix": {
+    "hostile_encoding": {
+      "minimum_samples": 10,
+      "notes": "Validation samples only; never train tokenizer on malformed text."
+    }
+  },
+  "source_caps": {
+    "max_single_source_ratio": 0.4,
+    "max_single_source_characters": 20000000,
+    "max_download_bytes_per_source": 1073741824
+  },
+  "quality_gates": {
+    "allowed_languages": ["tr", "en"],
+    "max_duplicate_document_ratio": 0.01,
+    "max_near_duplicate_document_ratio": 0.03,
+    "max_unknown_language_ratio": 0.0,
+    "max_mojibake_detections": 0,
+    "max_replacement_characters": 0,
+    "max_utf8_failures": 0,
+    "min_document_characters": 40,
+    "max_document_characters": 20000,
+    "required_manifest_hashes": true,
+    "required_source_registry_approval": true
+  },
+  "candidate_sources": [
+    {
+      "source_id": "wikimedia_trwiki_articles_split",
+      "planned_characters": 18000000,
+      "role": "primary Turkish general prose"
+    },
+    {
+      "source_id": "python_docs_tr",
+      "planned_characters": 6000000,
+      "role": "Turkish technical prose"
+    },
+    {
+      "source_id": "python_docs_en",
+      "planned_characters": 6000000,
+      "role": "English technical prose"
+    },
+    {
+      "source_id": "tatoeba_tr_en_sentences",
+      "planned_characters": 3000000,
+      "role": "short TR/EN sentence coverage"
+    }
+  ],
+  "deferred_source_slots": [
+    {
+      "slot": "english_general_prose",
+      "planned_characters": 14000000,
+      "required_before_use": "Approve an official English source under the source registry; English Wikipedia chunks and Project Gutenberg public-domain texts need separate pinned-source review."
+    },
+    {
+      "slot": "turkish_public_domain_or_permissive_prose",
+      "planned_characters": 6000000,
+      "required_before_use": "Approve a Turkish permissive or public-domain source with official license evidence and jurisdiction notes."
+    }
+  ],
+  "non_goals": [
+    "No corpus download in Phase 1A.",
+    "No tokenizer training in Phase 1A.",
+    "No Common Crawl-derived dataset auto-approval.",
+    "No social, leaked, private, personal, or Reddit-derived data."
+  ]
+}

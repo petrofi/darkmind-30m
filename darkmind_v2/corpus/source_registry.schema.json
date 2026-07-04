@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/darkmind-v2/source_registry.schema.json",
+  "title": "DarkMind v2 approved corpus source registry",
+  "type": "object",
+  "required": [
+    "registry_version",
+    "reviewed_at",
+    "hard_download_cap_bytes",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "registry_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewed_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hard_download_cap_bytes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "source_name",
+          "official_homepage",
+          "official_domains",
+          "language",
+          "content_type",
+          "license_id",
+          "official_license_url",
+          "attribution_requirements",
+          "redistribution_requirements",
+          "commercial_use_status",
+          "modification_status",
+          "jurisdiction_warning",
+          "source_version",
+          "snapshot_date",
+          "estimated_download_size",
+          "estimated_download_size_bytes",
+          "intended_sample_size_characters",
+          "checksum_available",
+          "retrieval_method",
+          "max_download_bytes",
+          "max_sample_characters",
+          "approved",
+          "approval_reason",
+          "risk_level",
+          "notes"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "source_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "official_homepage": {
+            "type": "string",
+            "format": "uri"
+          },
+          "official_download_url": {
+            "type": ["string", "null"],
+            "format": "uri"
+          },
+          "documented_retrieval_method": {
+            "type": "string"
+          },
+          "official_domains": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "language": {
+            "type": "string",
+            "enum": ["tr", "en", "mixed_tr_en"]
+          },
+          "content_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "license_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "official_license_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "attribution_requirements": {
+            "type": "string",
+            "minLength": 1
+          },
+          "redistribution_requirements": {
+            "type": "string",
+            "minLength": 1
+          },
+          "commercial_use_status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "modification_status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "jurisdiction_warning": {
+            "type": "string"
+          },
+          "source_version": {
+            "type": "string"
+          },
+          "snapshot_date": {
+            "type": "string"
+          },
+          "estimated_download_size": {
+            "type": "string",
+            "minLength": 1
+          },
+          "estimated_download_size_bytes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "intended_sample_size_characters": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "checksum_available": {
+            "type": "boolean"
+          },
+          "checksum_url": {
+            "type": ["string", "null"],
+            "format": "uri"
+          },
+          "retrieval_method": {
+            "type": "string",
+            "enum": [
+              "direct_download",
+              "chunked_download",
+              "documented_manual_sample",
+              "official_api",
+              "local_fixture_only"
+            ]
+          },
+          "max_download_bytes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "max_sample_characters": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "approved": {
+            "type": "boolean"
+          },
+          "approval_reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "risk_level": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "rejected"]
+          },
+          "notes": {
+            "type": "string"
+          },
+          "evidence_urls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      }
+    }
+  }
+}

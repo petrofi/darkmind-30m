@@ -29,6 +29,7 @@ Important limitation: existing checkpoints and tokenizer compatibility matter. D
 |-- data/                 Local corpora, processed text, eval prompts, and generated data
 |-- darkmind_assistant/   Assistant/runtime experiments
 |-- darkmind_distill/     Qwen teacher-student distillation pipeline
+|-- darkmind_v2/          Phase 0 tokenizer, corpus, and base-eval validation infrastructure
 |-- docs/                 Experiment notes and pipeline documentation
 |-- experiments/          Experiment index and historical notes
 |-- model/                GPT model implementation
@@ -279,6 +280,7 @@ See:
 
 - [darkmind_distill/reports/pilot500_failure_diagnosis.md](darkmind_distill/reports/pilot500_failure_diagnosis.md)
 - [docs/darkmind-v2-base-pipeline.md](docs/darkmind-v2-base-pipeline.md)
+- [darkmind_v2/README.md](darkmind_v2/README.md)
 
 ## Evaluation
 

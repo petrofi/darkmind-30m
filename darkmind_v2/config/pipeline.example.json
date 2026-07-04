@@ -1,0 +1,33 @@
+{
+  "pipeline_version": "darkmind-v2-phase0",
+  "normalization": {
+    "unicode_form": "NFC",
+    "normalize_line_endings": true,
+    "remove_null_bytes": true,
+    "remove_unsafe_control_characters": true,
+    "repair_invalid_utf8": false
+  },
+  "corpus": {
+    "allowed_languages": ["tr", "en"],
+    "required_metadata_fields": ["source", "license"],
+    "very_short_document_chars": 40,
+    "very_long_document_chars": 20000
+  },
+  "deduplication": {
+    "shingle_size": 5,
+    "near_duplicate_threshold": 0.85
+  },
+  "splits": {
+    "seed": 20260703,
+    "train_ratio": 0.98,
+    "validation_ratio": 0.01,
+    "test_ratio": 0.01
+  },
+  "tokenizer": {
+    "target_vocab_size": 24000,
+    "recommended_type": "SentencePiece BPE or Unigram",
+    "byte_fallback": true,
+    "immutable_after_pretraining": true
+  }
+}
+

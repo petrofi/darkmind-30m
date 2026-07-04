@@ -1,0 +1,7 @@
+datasets
+huggingface_hub
+tqdm
+beautifulsoup4
+regex
+ftfy
+langdetect

@@ -1,0 +1,177 @@
+<s>
+Kullanıcı: git status komutunun ne yaptığını açıkla.
+Asistan:
+git status çalışma ağacındaki değiştirilmiş, staged ve untracked dosyaları gösterir. Commit atmadan önce ilk kontrol komutudur.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle git status komutunun ne yaptığını açıkla.
+Asistan:
+git status çalışma ağacındaki değiştirilmiş, staged ve untracked dosyaları gösterir. Commit atmadan önce ilk kontrol komutudur.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için git status komutunun ne yaptığını açıkla.
+Asistan:
+git status çalışma ağacındaki değiştirilmiş, staged ve untracked dosyaları gösterir. Commit atmadan önce ilk kontrol komutudur.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla git status komutunun ne yaptığını açıkla.
+Asistan:
+git status çalışma ağacındaki değiştirilmiş, staged ve untracked dosyaları gösterir. Commit atmadan önce ilk kontrol komutudur.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için git status komutunun ne yaptığını açıkla.
+Asistan:
+git status çalışma ağacındaki değiştirilmiş, staged ve untracked dosyaları gösterir. Commit atmadan önce ilk kontrol komutudur.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek git status komutunun ne yaptığını açıkla.
+Asistan:
+git status çalışma ağacındaki değiştirilmiş, staged ve untracked dosyaları gösterir. Commit atmadan önce ilk kontrol komutudur.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde git status komutunun ne yaptığını açıkla.
+Asistan:
+git status çalışma ağacındaki değiştirilmiş, staged ve untracked dosyaları gösterir. Commit atmadan önce ilk kontrol komutudur.
+</s>
+
+<s>
+Kullanıcı: git add ve git commit farkını açıkla.
+Asistan:
+git add dosyaları staging alanına alır. git commit ise staged değişiklikleri kalıcı bir kayıt haline getirir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle git add ve git commit farkını açıkla.
+Asistan:
+git add dosyaları staging alanına alır. git commit ise staged değişiklikleri kalıcı bir kayıt haline getirir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için git add ve git commit farkını açıkla.
+Asistan:
+git add dosyaları staging alanına alır. git commit ise staged değişiklikleri kalıcı bir kayıt haline getirir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla git add ve git commit farkını açıkla.
+Asistan:
+git add dosyaları staging alanına alır. git commit ise staged değişiklikleri kalıcı bir kayıt haline getirir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için git add ve git commit farkını açıkla.
+Asistan:
+git add dosyaları staging alanına alır. git commit ise staged değişiklikleri kalıcı bir kayıt haline getirir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek git add ve git commit farkını açıkla.
+Asistan:
+git add dosyaları staging alanına alır. git commit ise staged değişiklikleri kalıcı bir kayıt haline getirir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde git add ve git commit farkını açıkla.
+Asistan:
+git add dosyaları staging alanına alır. git commit ise staged değişiklikleri kalıcı bir kayıt haline getirir.
+</s>
+
+<s>
+Kullanıcı: git push ne zaman kullanılır açıkla.
+Asistan:
+git push yerel commitleri uzak depoya göndermek için kullanılır. Önce doğru branchte olduğunu ve commit içeriğini kontrol etmek gerekir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle git push ne zaman kullanılır açıkla.
+Asistan:
+git push yerel commitleri uzak depoya göndermek için kullanılır. Önce doğru branchte olduğunu ve commit içeriğini kontrol etmek gerekir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için git push ne zaman kullanılır açıkla.
+Asistan:
+git push yerel commitleri uzak depoya göndermek için kullanılır. Önce doğru branchte olduğunu ve commit içeriğini kontrol etmek gerekir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla git push ne zaman kullanılır açıkla.
+Asistan:
+git push yerel commitleri uzak depoya göndermek için kullanılır. Önce doğru branchte olduğunu ve commit içeriğini kontrol etmek gerekir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için git push ne zaman kullanılır açıkla.
+Asistan:
+git push yerel commitleri uzak depoya göndermek için kullanılır. Önce doğru branchte olduğunu ve commit içeriğini kontrol etmek gerekir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek git push ne zaman kullanılır açıkla.
+Asistan:
+git push yerel commitleri uzak depoya göndermek için kullanılır. Önce doğru branchte olduğunu ve commit içeriğini kontrol etmek gerekir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde git push ne zaman kullanılır açıkla.
+Asistan:
+git push yerel commitleri uzak depoya göndermek için kullanılır. Önce doğru branchte olduğunu ve commit içeriğini kontrol etmek gerekir.
+</s>
+
+<s>
+Kullanıcı: commit mesajı yazarken nelere dikkat edilir anlat.
+Asistan:
+Commit mesajı kısa, açık ve yapılan değişikliği anlatan bir cümle olmalıdır. Örneğin: add Turkish code data factory.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle commit mesajı yazarken nelere dikkat edilir anlat.
+Asistan:
+Commit mesajı kısa, açık ve yapılan değişikliği anlatan bir cümle olmalıdır. Örneğin: add Turkish code data factory.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için commit mesajı yazarken nelere dikkat edilir anlat.
+Asistan:
+Commit mesajı kısa, açık ve yapılan değişikliği anlatan bir cümle olmalıdır. Örneğin: add Turkish code data factory.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla commit mesajı yazarken nelere dikkat edilir anlat.
+Asistan:
+Commit mesajı kısa, açık ve yapılan değişikliği anlatan bir cümle olmalıdır. Örneğin: add Turkish code data factory.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için commit mesajı yazarken nelere dikkat edilir anlat.
+Asistan:
+Commit mesajı kısa, açık ve yapılan değişikliği anlatan bir cümle olmalıdır. Örneğin: add Turkish code data factory.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek commit mesajı yazarken nelere dikkat edilir anlat.
+Asistan:
+Commit mesajı kısa, açık ve yapılan değişikliği anlatan bir cümle olmalıdır. Örneğin: add Turkish code data factory.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde commit mesajı yazarken nelere dikkat edilir anlat.
+Asistan:
+Commit mesajı kısa, açık ve yapılan değişikliği anlatan bir cümle olmalıdır. Örneğin: add Turkish code data factory.
+</s>
+
+<s>
+Kullanıcı: git status ne yapar?
+Asistan: git status, çalışma alanındaki değiştirilmiş, staged ve untracked dosyaları gösterir.
+</s>
+
+<s>
+Kullanıcı: git add commit push sırası nedir?
+Asistan: Genelde önce git status ile kontrol edilir, sonra git add ile dosyalar stage edilir, git commit ile kayıt alınır, git push ile uzak depoya gönderilir.
+</s>

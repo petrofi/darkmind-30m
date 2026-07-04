@@ -1,0 +1,256 @@
+Kullanıcı: Python'da listeye eleman nasıl eklenir?
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır.
+```python
+numbers = [1, 2, 3]
+numbers.append(5)
+print(numbers)
+```
+Kullanıcı: append ne işe yarar?
+Asistan: append, Python listesine yeni eleman eklemek için kullanılır.
+```python
+items = ["a", "b"]
+items.append("c")
+print(items)
+```
+Kullanıcı: Python'da try/except nasıl kullanılır?
+Asistan: try/except, hata oluşabilecek kodu güvenli şekilde ele almak için kullanılır.
+```python
+try:
+    number = int("42")
+    print(number)
+except Exception as error:
+    print(f"Hata: {error}")
+```
+Kullanıcı: try except ne zaman kullanılır?
+Asistan: Hata beklenen bir işlem varsa try/except kullanılır.
+```python
+try:
+    value = int("abc")
+except Exception as error:
+    print(f"Dönüşüm başarısız: {error}")
+```
+Kullanıcı: IndentationError nasıl çözülür?
+Asistan: IndentationError genellikle girinti hatasından kaynaklanır. Aynı blok içindeki satırların girinti seviyesi tutarlı olmalıdır.
+```python
+if True:
+    print("Bu satır blok içinde girintilidir")
+```
+Kullanıcı: indentationerror neden olur?
+Asistan: Python'da blok yapısı girinti ile belirlendiği için tutarsız girinti IndentationError üretir.
+```python
+for number in [1, 2, 3]:
+    print(number)
+```
+Kullanıcı: TypeError neden olur?
+Asistan: TypeError genellikle uyumsuz veri tipleriyle işlem yapılınca oluşur.
+```python
+value = "10"
+number = int(value)
+print(number + 5)
+```
+Kullanıcı: TypeError nasıl çözülür?
+Asistan: Değerlerin tipini kontrol edip gerekiyorsa dönüşüm yapmalısın.
+```python
+age_text = "20"
+age = int(age_text)
+print(age + 1)
+```
+Kullanıcı: FileNotFoundError nasıl çözülür?
+Asistan: Dosya yolunu kontrol etmek ve dosya var mı bakmak gerekir.
+```python
+from pathlib import Path
+path = Path("notlar.txt")
+if path.exists():
+    print(path.read_text(encoding="utf-8"))
+else:
+    print("Dosya bulunamadı")
+```
+Kullanıcı: Dosya bulunamadı hatası neden olur?
+Asistan: FileNotFoundError, belirtilen dosya yolu gerçekten yoksa oluşur.
+```python
+from pathlib import Path
+path = Path("data.txt")
+print(path.exists())
+```
+Kullanıcı: Python'da dictionary key lookup nasıl yapılır?
+Asistan: Sözlükten güvenli değer okumak için get metodu kullanılabilir.
+```python
+my_dict = {"name": "DarkMind"}
+name = my_dict.get("name")
+print(name)
+```
+Kullanıcı: KeyError yerine ne kullanabilirim?
+Asistan: KeyError riskini azaltmak için my_dict.get("key") kullanılabilir.
+```python
+my_dict = {"language": "tr"}
+version = my_dict.get("version", "unknown")
+print(version)
+```
+Kullanıcı: Python'da list comprehension nasıl kullanılır?
+Asistan: List comprehension, koşullu veya dönüşümlü yeni liste üretmek için kullanılır.
+```python
+numbers = [1, 2, 3, 4]
+squares = [number * number for number in numbers]
+print(squares)
+```
+Kullanıcı: Çift sayıları list comprehension ile nasıl filtrelerim?
+Asistan: if koşulu ekleyerek sadece çift sayıları seçebilirsin.
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+evens = [number for number in numbers if number % 2 == 0]
+print(evens)
+```
+Kullanıcı: Python'da return kullanan fonksiyon yaz.
+Asistan: return, fonksiyonun sonucunu dışarı döndürür.
+```python
+def add_numbers(a, b):
+    return a + b
+print(add_numbers(2, 3))
+```
+Kullanıcı: İki sayıyı toplayan fonksiyon yaz.
+Asistan: def ile fonksiyon tanımlanır ve return ile sonuç döndürülür.
+```python
+def add_numbers(a, b):
+    return a + b
+```
+Kullanıcı: Python'da class __init__ nasıl kullanılır?
+Asistan: __init__, nesne oluşturulurken başlangıç değerlerini ayarlamak için kullanılır.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+user = User("Ayşe")
+print(user.name)
+```
+Kullanıcı: Python'da basit class yaz.
+Asistan: class ile veri ve davranışı bir arada tutabilirsin.
+```python
+class Counter:
+    def __init__(self):
+        self.value = 0
+    def increase(self):
+        self.value += 1
+```
+Kullanıcı: pathlib read_text nasıl kullanılır?
+Asistan: Path("file.txt").read_text(encoding="utf-8") metin dosyasını okumak için kullanılır.
+```python
+from pathlib import Path
+text = Path("file.txt").read_text(encoding="utf-8")
+print(text)
+```
+Kullanıcı: Python'da dosya nasıl okunur?
+Asistan: pathlib kullanarak dosya yolunu Path ile temsil edebilirsin.
+```python
+from pathlib import Path
+path = Path("notlar.txt")
+content = path.read_text(encoding="utf-8")
+print(content)
+```
+Kullanıcı: json.loads ve json.dumps ne işe yarar?
+Asistan: json.loads JSON metnini Python verisine, json.dumps Python verisini JSON metnine çevirir.
+```python
+import json
+data = json.loads('{"name": "DarkMind"}')
+text = json.dumps(data, ensure_ascii=False)
+print(text)
+```
+Kullanıcı: Python'da JSON nasıl okunur ve yazılır?
+Asistan: json.loads okuma, json.dumps yazma tarafında temel dönüşüm sağlar.
+```python
+import json
+raw_text = '{"score": 10}'
+data = json.loads(raw_text)
+print(json.dumps(data))
+```
+Kullanıcı: Python'da liste nasıl sıralanır?
+Asistan: sorted(items), listeyi sıralı yeni bir liste olarak döndürür.
+```python
+items = [3, 1, 2]
+sorted_items = sorted(items)
+print(sorted_items)
+```
+Kullanıcı: sorted ne işe yarar?
+Asistan: sorted, verileri sıralamak için kullanılır.
+```python
+names = ["Zeynep", "Ali", "Mehmet"]
+print(sorted(names))
+```
+Kullanıcı: Python'da çift sayılar nasıl filtrelenir?
+Asistan: Çift sayılar için number % 2 == 0 koşulu kullanılabilir.
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+evens = [number for number in numbers if number % 2 == 0]
+print(evens)
+```
+Kullanıcı: Listedeki sadece çift sayıları seç.
+Asistan: if koşulu ile çift sayıları filtreleyebilirsin.
+```python
+numbers = [10, 11, 12]
+evens = [number for number in numbers if number % 2 == 0]
+```
+Kullanıcı: Python'da kelime sayısı nasıl bulunur?
+Asistan: Metni split ile kelimelere ayırıp len ile sayabilirsin.
+```python
+text = "temiz veri güçlü model"
+word_count = len(text.split())
+print(word_count)
+```
+Kullanıcı: Word count fonksiyonu yaz.
+Asistan: split ve len kullanarak kelime sayısı döndüren fonksiyon yazılabilir.
+```python
+def count_words(text):
+    return len(text.split())
+```
+Kullanıcı: Python'da faktöriyel nasıl hesaplanır?
+Asistan: Faktöriyel, 1'den n'e kadar sayıların çarpımıdır.
+```python
+def factorial(number):
+    result = 1
+    for value in range(2, number + 1):
+        result *= value
+    return result
+```
+Kullanıcı: Factorial fonksiyonu yaz.
+Asistan: Döngü ve return kullanarak factorial fonksiyonu yazılabilir.
+```python
+def factorial(number):
+    result = 1
+    for value in range(1, number + 1):
+        result *= value
+    return result
+```
+Kullanıcı: Python'da palindrom kontrolü nasıl yapılır?
+Asistan: Metni sadeleştirip ters haliyle karşılaştırabilirsin.
+```python
+def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
+```
+Kullanıcı: Palindrome fonksiyonu yaz.
+Asistan: Python'da ters dilimleme için [::-1] kullanılabilir.
+```python
+def is_palindrome(text):
+    return text == text[::-1]
+```
+Kullanıcı: Python'da asal sayı kontrolü nasıl yapılır?
+Asistan: Asal sayı kontrolünde bölen olup olmadığına bakılır.
+```python
+def is_prime(number):
+    if number < 2:
+        return False
+    for divisor in range(2, int(number ** 0.5) + 1):
+        if number % divisor == 0:
+            return False
+    return True
+```
+Kullanıcı: Prime check fonksiyonu yaz.
+Asistan: 2'den kareköke kadar bölen aramak yeterlidir.
+```python
+def is_prime(number):
+    if number < 2:
+        return False
+    for divisor in range(2, int(number ** 0.5) + 1):
+        if number % divisor == 0:
+            return False
+    return True
+```

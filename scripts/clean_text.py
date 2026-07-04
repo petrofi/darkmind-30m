@@ -5,6 +5,10 @@ import re
 ROOT_DIR = Path(__file__).resolve().parents[1]
 RAW_DIR = ROOT_DIR / "data" / "raw_collected"
 CLEANED_DIR = ROOT_DIR / "data" / "cleaned"
+EXCLUDED_RAW_DIRS = [
+    RAW_DIR / "web_text" / "pending_review",
+    RAW_DIR / "web_text" / "rejected",
+]
 
 
 def normalize_line(line: str, in_code_block: bool) -> str:
@@ -50,11 +54,32 @@ def clean_file(path: Path) -> tuple[Path, int, int]:
     return output_path, len(raw_text), len(cleaned)
 
 
+def is_excluded_raw_file(path: Path) -> bool:
+    return any(
+        path.is_relative_to(excluded_dir)
+        for excluded_dir in EXCLUDED_RAW_DIRS
+    )
+
+
+def collect_raw_files() -> tuple[list[Path], list[Path]]:
+    all_files = sorted(RAW_DIR.rglob("*.txt"))
+    included_files = []
+    skipped_files = []
+
+    for path in all_files:
+        if is_excluded_raw_file(path):
+            skipped_files.append(path)
+        else:
+            included_files.append(path)
+
+    return included_files, skipped_files
+
+
 def main():
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     CLEANED_DIR.mkdir(parents=True, exist_ok=True)
 
-    raw_files = sorted(RAW_DIR.rglob("*.txt"))
+    raw_files, skipped_files = collect_raw_files()
 
     if not raw_files:
         print(f"No .txt files found in {RAW_DIR}")
@@ -76,9 +101,18 @@ def main():
 
     print("=" * 70)
     print(f"Files cleaned: {len(raw_files)}")
+    print(f"Files skipped: {len(skipped_files)}")
     print(f"Raw characters: {total_raw_chars:,}")
     print(f"Cleaned characters: {total_cleaned_chars:,}")
     print(f"Output directory: {CLEANED_DIR}")
+
+    if skipped_files:
+        print("-" * 70)
+        print("Skipped files:")
+
+        for path in skipped_files:
+            print(f"- {path.relative_to(ROOT_DIR)}")
+
     print("=" * 70)
 
 

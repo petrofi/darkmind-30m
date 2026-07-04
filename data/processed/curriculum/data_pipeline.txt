@@ -1,0 +1,91 @@
+<s>
+Kullanıcı: model eğitmeden önce neden dataset kalite kontrolü yapılır açıkla.
+Asistan:
+Kalitesiz veya tekrar eden veri küçük modeli ezbere yöneltebilir. Eğitimden önce karakter sayısı, tekrar eden satırlar ve dosya dağılımı kontrol edilmelidir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle model eğitmeden önce neden dataset kalite kontrolü yapılır açıkla.
+Asistan:
+Kalitesiz veya tekrar eden veri küçük modeli ezbere yöneltebilir. Eğitimden önce karakter sayısı, tekrar eden satırlar ve dosya dağılımı kontrol edilmelidir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için model eğitmeden önce neden dataset kalite kontrolü yapılır açıkla.
+Asistan:
+Kalitesiz veya tekrar eden veri küçük modeli ezbere yöneltebilir. Eğitimden önce karakter sayısı, tekrar eden satırlar ve dosya dağılımı kontrol edilmelidir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla model eğitmeden önce neden dataset kalite kontrolü yapılır açıkla.
+Asistan:
+Kalitesiz veya tekrar eden veri küçük modeli ezbere yöneltebilir. Eğitimden önce karakter sayısı, tekrar eden satırlar ve dosya dağılımı kontrol edilmelidir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için model eğitmeden önce neden dataset kalite kontrolü yapılır açıkla.
+Asistan:
+Kalitesiz veya tekrar eden veri küçük modeli ezbere yöneltebilir. Eğitimden önce karakter sayısı, tekrar eden satırlar ve dosya dağılımı kontrol edilmelidir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek model eğitmeden önce neden dataset kalite kontrolü yapılır açıkla.
+Asistan:
+Kalitesiz veya tekrar eden veri küçük modeli ezbere yöneltebilir. Eğitimden önce karakter sayısı, tekrar eden satırlar ve dosya dağılımı kontrol edilmelidir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde model eğitmeden önce neden dataset kalite kontrolü yapılır açıkla.
+Asistan:
+Kalitesiz veya tekrar eden veri küçük modeli ezbere yöneltebilir. Eğitimden önce karakter sayısı, tekrar eden satırlar ve dosya dağılımı kontrol edilmelidir.
+</s>
+
+<s>
+Kullanıcı: data pipeline nedir
+Asistan: Data pipeline, ham veriyi toplama, temizleme, corpus oluşturma ve eğitim için hazır hale getirme sürecidir.
+</s>
+
+<s>
+Kullanıcı: Data pipeline nedir?
+Asistan: Data pipeline, ham veriyi toplama, temizleme, corpus oluşturma ve eğitim için hazır hale getirme sürecidir.
+</s>
+
+<s>
+Kullanıcı: Veri pipeline'ı ne işe yarar?
+Asistan: Data pipeline, ham veriyi toplama, temizleme, corpus oluşturma ve eğitim için hazır hale getirme sürecidir.
+</s>
+
+<s>
+Kullanıcı: Ham veri nasıl eğitime hazırlanır?
+Asistan: Data pipeline, ham veriyi toplama, temizleme, corpus oluşturma ve eğitim için hazır hale getirme sürecidir.
+</s>
+
+<s>
+Kullanıcı: DarkMind veri pipeline'ı ne yapar?
+Asistan: Data pipeline, ham veriyi toplama, temizleme, corpus oluşturma ve eğitim için hazır hale getirme sürecidir.
+</s>
+
+<s>
+Kullanıcı: Clean text ve build corpus neden var?
+Asistan: Data pipeline, ham veriyi toplama, temizleme, corpus oluşturma ve eğitim için hazır hale getirme sürecidir.
+</s>
+
+<s>
+Kullanıcı: Dataset büyütme süreci nedir?
+Asistan: Data pipeline, ham veriyi toplama, temizleme, corpus oluşturma ve eğitim için hazır hale getirme sürecidir.
+</s>
+
+<s>
+Kullanıcı: build_dataset_from_raw.py ne yapar?
+Asistan: build_dataset_from_raw.py kaynak dosyaları ve temizlenmiş verileri birleştirir, ardından data/processed/corpus_v3.txt dosyasını üretir.
+</s>
+
+<s>
+Kullanıcı: build_dataset_from_raw.py ne yapar
+Asistan: build_dataset_from_raw.py kaynak dosyaları ve temizlenmiş verileri birleştirir, ardından data/processed/corpus_v3.txt dosyasını üretir.
+</s>
+
+<s>
+Kullanıcı: Corpus v3 dosyasını hangi script üretir?
+Asistan: build_dataset_from_raw.py kaynak dosyaları ve temizlenmiş verileri birleştirir, ardından data/processed/corpus_v3.txt dosyasını üretir.
+</s>

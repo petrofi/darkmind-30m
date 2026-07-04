@@ -1,0 +1,472 @@
+<s>
+Kullanıcı: DarkMind veri pipeline adımlarını kısaca açıkla.
+Asistan:
+Önce raw veri üretilir veya toplanır. Sonra clean_text ile temizlenir, corpus build edilir, kalite kontrol yapılır, tokenizer eğitilir ve model eğitimi ayrı komutla başlatılır.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle DarkMind veri pipeline adımlarını kısaca açıkla.
+Asistan:
+Önce raw veri üretilir veya toplanır. Sonra clean_text ile temizlenir, corpus build edilir, kalite kontrol yapılır, tokenizer eğitilir ve model eğitimi ayrı komutla başlatılır.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için DarkMind veri pipeline adımlarını kısaca açıkla.
+Asistan:
+Önce raw veri üretilir veya toplanır. Sonra clean_text ile temizlenir, corpus build edilir, kalite kontrol yapılır, tokenizer eğitilir ve model eğitimi ayrı komutla başlatılır.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla DarkMind veri pipeline adımlarını kısaca açıkla.
+Asistan:
+Önce raw veri üretilir veya toplanır. Sonra clean_text ile temizlenir, corpus build edilir, kalite kontrol yapılır, tokenizer eğitilir ve model eğitimi ayrı komutla başlatılır.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için DarkMind veri pipeline adımlarını kısaca açıkla.
+Asistan:
+Önce raw veri üretilir veya toplanır. Sonra clean_text ile temizlenir, corpus build edilir, kalite kontrol yapılır, tokenizer eğitilir ve model eğitimi ayrı komutla başlatılır.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek DarkMind veri pipeline adımlarını kısaca açıkla.
+Asistan:
+Önce raw veri üretilir veya toplanır. Sonra clean_text ile temizlenir, corpus build edilir, kalite kontrol yapılır, tokenizer eğitilir ve model eğitimi ayrı komutla başlatılır.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde DarkMind veri pipeline adımlarını kısaca açıkla.
+Asistan:
+Önce raw veri üretilir veya toplanır. Sonra clean_text ile temizlenir, corpus build edilir, kalite kontrol yapılır, tokenizer eğitilir ve model eğitimi ayrı komutla başlatılır.
+</s>
+
+<s>
+Kullanıcı: eval sonucuna göre nasıl karar verileceğini anlat.
+Asistan:
+Yeni checkpoint ancak eval pass rate ve kategori sonuçları eski koşudan daha iyiyse güçlü aday sayılmalıdır. Tek bir iyi cevap genel kalite kanıtı değildir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle eval sonucuna göre nasıl karar verileceğini anlat.
+Asistan:
+Yeni checkpoint ancak eval pass rate ve kategori sonuçları eski koşudan daha iyiyse güçlü aday sayılmalıdır. Tek bir iyi cevap genel kalite kanıtı değildir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için eval sonucuna göre nasıl karar verileceğini anlat.
+Asistan:
+Yeni checkpoint ancak eval pass rate ve kategori sonuçları eski koşudan daha iyiyse güçlü aday sayılmalıdır. Tek bir iyi cevap genel kalite kanıtı değildir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla eval sonucuna göre nasıl karar verileceğini anlat.
+Asistan:
+Yeni checkpoint ancak eval pass rate ve kategori sonuçları eski koşudan daha iyiyse güçlü aday sayılmalıdır. Tek bir iyi cevap genel kalite kanıtı değildir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için eval sonucuna göre nasıl karar verileceğini anlat.
+Asistan:
+Yeni checkpoint ancak eval pass rate ve kategori sonuçları eski koşudan daha iyiyse güçlü aday sayılmalıdır. Tek bir iyi cevap genel kalite kanıtı değildir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek eval sonucuna göre nasıl karar verileceğini anlat.
+Asistan:
+Yeni checkpoint ancak eval pass rate ve kategori sonuçları eski koşudan daha iyiyse güçlü aday sayılmalıdır. Tek bir iyi cevap genel kalite kanıtı değildir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde eval sonucuna göre nasıl karar verileceğini anlat.
+Asistan:
+Yeni checkpoint ancak eval pass rate ve kategori sonuçları eski koşudan daha iyiyse güçlü aday sayılmalıdır. Tek bir iyi cevap genel kalite kanıtı değildir.
+</s>
+
+<s>
+Kullanıcı: checkpoint dosyalarına neden dikkatli davranılması gerektiğini açıkla.
+Asistan:
+Checkpointler büyük dosyalardır ve deney kayıtları için önemlidir. Otomatik scriptler checkpoint silmemeli veya üzerine yazma riskini açıkça kontrol etmelidir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle checkpoint dosyalarına neden dikkatli davranılması gerektiğini açıkla.
+Asistan:
+Checkpointler büyük dosyalardır ve deney kayıtları için önemlidir. Otomatik scriptler checkpoint silmemeli veya üzerine yazma riskini açıkça kontrol etmelidir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için checkpoint dosyalarına neden dikkatli davranılması gerektiğini açıkla.
+Asistan:
+Checkpointler büyük dosyalardır ve deney kayıtları için önemlidir. Otomatik scriptler checkpoint silmemeli veya üzerine yazma riskini açıkça kontrol etmelidir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla checkpoint dosyalarına neden dikkatli davranılması gerektiğini açıkla.
+Asistan:
+Checkpointler büyük dosyalardır ve deney kayıtları için önemlidir. Otomatik scriptler checkpoint silmemeli veya üzerine yazma riskini açıkça kontrol etmelidir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için checkpoint dosyalarına neden dikkatli davranılması gerektiğini açıkla.
+Asistan:
+Checkpointler büyük dosyalardır ve deney kayıtları için önemlidir. Otomatik scriptler checkpoint silmemeli veya üzerine yazma riskini açıkça kontrol etmelidir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek checkpoint dosyalarına neden dikkatli davranılması gerektiğini açıkla.
+Asistan:
+Checkpointler büyük dosyalardır ve deney kayıtları için önemlidir. Otomatik scriptler checkpoint silmemeli veya üzerine yazma riskini açıkça kontrol etmelidir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde checkpoint dosyalarına neden dikkatli davranılması gerektiğini açıkla.
+Asistan:
+Checkpointler büyük dosyalardır ve deney kayıtları için önemlidir. Otomatik scriptler checkpoint silmemeli veya üzerine yazma riskini açıkça kontrol etmelidir.
+</s>
+
+<s>
+# bucket: tokenizer_basics
+# difficulty: medium
+</s>
+
+<s>
+Kullanıcı: tokenizer kavramını Türkçe açıkla.
+Asistan:
+Tokenizer, metni modelin anlayacağı sayısal parçalara dönüştüren bileşendir. Küçük dil modellerinde tokenizer ve checkpoint uyumu çok önemlidir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle tokenizer kavramını Türkçe açıkla.
+Asistan:
+Tokenizer, metni modelin anlayacağı sayısal parçalara dönüştüren bileşendir. Küçük dil modellerinde tokenizer ve checkpoint uyumu çok önemlidir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için tokenizer kavramını Türkçe açıkla.
+Asistan:
+Tokenizer, metni modelin anlayacağı sayısal parçalara dönüştüren bileşendir. Küçük dil modellerinde tokenizer ve checkpoint uyumu çok önemlidir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla tokenizer kavramını Türkçe açıkla.
+Asistan:
+Tokenizer, metni modelin anlayacağı sayısal parçalara dönüştüren bileşendir. Küçük dil modellerinde tokenizer ve checkpoint uyumu çok önemlidir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için tokenizer kavramını Türkçe açıkla.
+Asistan:
+Tokenizer, metni modelin anlayacağı sayısal parçalara dönüştüren bileşendir. Küçük dil modellerinde tokenizer ve checkpoint uyumu çok önemlidir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek tokenizer kavramını Türkçe açıkla.
+Asistan:
+Tokenizer, metni modelin anlayacağı sayısal parçalara dönüştüren bileşendir. Küçük dil modellerinde tokenizer ve checkpoint uyumu çok önemlidir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde tokenizer kavramını Türkçe açıkla.
+Asistan:
+Tokenizer, metni modelin anlayacağı sayısal parçalara dönüştüren bileşendir. Küçük dil modellerinde tokenizer ve checkpoint uyumu çok önemlidir.
+</s>
+
+<s>
+Kullanıcı: Dil modeli nedir?
+Asistan: Dil modeli, verilen metnin devamını tahmin etmeyi öğrenen bir yapay zeka modelidir.
+</s>
+
+<s>
+Kullanıcı: Senin amacın ne?
+Asistan: Benim amacım, küçük bir Türkçe dil modelinin nasıl geliştirildiğini adım adım göstermek ve zamanla daha iyi teknik cevaplar verebilmektir.
+</s>
+
+<s>
+Kullanıcı: kendini tanıtır mısın
+Asistan: Ben DarkMind. Türkçe odaklı küçük bir dil modeli geliştirme projesiyim.
+</s>
+
+<s>
+Kullanıcı: Kendini tanıtır mısın?
+Asistan: Ben DarkMind. Türkçe odaklı küçük bir dil modeli geliştirme projesiyim.
+</s>
+
+<s>
+Kullanıcı: DarkMind kimdir?
+Asistan: Ben DarkMind. Türkçe odaklı küçük bir dil modeli geliştirme projesiyim.
+</s>
+
+<s>
+Kullanıcı: sen ne modelisin
+Asistan: Ben DarkMind. Türkçe odaklı küçük bir dil modeli geliştirme projesiyim.
+</s>
+
+<s>
+Kullanıcı: Sen nasıl bir modelsin?
+Asistan: Ben DarkMind. Türkçe odaklı küçük bir dil modeli geliştirme projesiyim.
+</s>
+
+<s>
+Kullanıcı: DarkMind ne işe yarar?
+Asistan: DarkMind, tokenizer, Transformer mimarisi ve eğitim pipeline'ı sıfırdan kurulan küçük bir Türkçe dil modeli projesidir.
+</s>
+
+<s>
+Kullanıcı: darkmind projesi ne
+Asistan: DarkMind, tokenizer, Transformer mimarisi ve eğitim pipeline'ı sıfırdan kurulan küçük bir Türkçe dil modeli projesidir.
+</s>
+
+<s>
+Kullanıcı: Bu proje nedir?
+Asistan: DarkMind, tokenizer, Transformer mimarisi ve eğitim pipeline'ı sıfırdan kurulan küçük bir Türkçe dil modeli projesidir.
+</s>
+
+<s>
+Kullanıcı: DarkMind'i açıklar mısın?
+Asistan: DarkMind, tokenizer, Transformer mimarisi ve eğitim pipeline'ı sıfırdan kurulan küçük bir Türkçe dil modeli projesidir.
+</s>
+
+<s>
+Kullanıcı: DarkMind nasıl bir proje?
+Asistan: DarkMind, tokenizer, Transformer mimarisi ve eğitim pipeline'ı sıfırdan kurulan küçük bir Türkçe dil modeli projesidir.
+</s>
+
+<s>
+Kullanıcı: tokenizer nedir
+Asistan: Tokenizer, metni modelin anlayabileceği token adı verilen küçük parçalara dönüştüren bileşendir.
+</s>
+
+<s>
+Kullanıcı: Tokenizer nedir?
+Asistan: Tokenizer, metni modelin anlayabileceği token adı verilen küçük parçalara dönüştüren bileşendir.
+</s>
+
+<s>
+Kullanıcı: Tokenizer ne işe yarar?
+Asistan: Tokenizer, metni modelin anlayabileceği token adı verilen küçük parçalara dönüştüren bileşendir.
+</s>
+
+<s>
+Kullanıcı: Token ne demek?
+Asistan: Tokenizer, metni modelin anlayabileceği token adı verilen küçük parçalara dönüştüren bileşendir.
+</s>
+
+<s>
+Kullanıcı: Metin neden tokenlara ayrılır?
+Asistan: Tokenizer, metni modelin anlayabileceği token adı verilen küçük parçalara dönüştüren bileşendir.
+</s>
+
+<s>
+Kullanıcı: Tokenizer neden önemli?
+Asistan: Tokenizer, metni modelin anlayabileceği token adı verilen küçük parçalara dönüştüren bileşendir.
+</s>
+
+<s>
+Kullanıcı: DarkMind tokenizer kullanıyor mu?
+Asistan: Tokenizer, metni modelin anlayabileceği token adı verilen küçük parçalara dönüştüren bileşendir.
+</s>
+
+<s>
+Kullanıcı: transformer nedir
+Asistan: Transformer, attention mekanizmasıyla tokenlar arasındaki ilişkileri öğrenen modern bir sinir ağı mimarisidir.
+</s>
+
+<s>
+Kullanıcı: Transformer nedir?
+Asistan: Transformer, attention mekanizmasıyla tokenlar arasındaki ilişkileri öğrenen modern bir sinir ağı mimarisidir.
+</s>
+
+<s>
+Kullanıcı: Transformer ne işe yarar?
+Asistan: Transformer, attention mekanizmasıyla tokenlar arasındaki ilişkileri öğrenen modern bir sinir ağı mimarisidir.
+</s>
+
+<s>
+Kullanıcı: Dil modellerinde Transformer neden kullanılır?
+Asistan: Transformer, attention mekanizmasıyla tokenlar arasındaki ilişkileri öğrenen modern bir sinir ağı mimarisidir.
+</s>
+
+<s>
+Kullanıcı: DarkMind Transformer mı kullanıyor?
+Asistan: Transformer, attention mekanizmasıyla tokenlar arasındaki ilişkileri öğrenen modern bir sinir ağı mimarisidir.
+</s>
+
+<s>
+Kullanıcı: Transformer mimarisi ne demek?
+Asistan: Transformer, attention mekanizmasıyla tokenlar arasındaki ilişkileri öğrenen modern bir sinir ağı mimarisidir.
+</s>
+
+<s>
+Kullanıcı: Transformer'ı kısa anlatır mısın?
+Asistan: Transformer, attention mekanizmasıyla tokenlar arasındaki ilişkileri öğrenen modern bir sinir ağı mimarisidir.
+</s>
+
+<s>
+Kullanıcı: checkpoint nedir
+Asistan: Checkpoint, model ağırlıklarının ve eğitim bilgilerinin kaydedildiği dosyadır; daha sonra üretim veya devam eğitimi için kullanılır.
+</s>
+
+<s>
+Kullanıcı: Checkpoint nedir?
+Asistan: Checkpoint, model ağırlıklarının ve eğitim bilgilerinin kaydedildiği dosyadır; daha sonra üretim veya devam eğitimi için kullanılır.
+</s>
+
+<s>
+Kullanıcı: Checkpoint ne işe yarar?
+Asistan: Checkpoint, model ağırlıklarının ve eğitim bilgilerinin kaydedildiği dosyadır; daha sonra üretim veya devam eğitimi için kullanılır.
+</s>
+
+<s>
+Kullanıcı: Model neden checkpoint kaydeder?
+Asistan: Checkpoint, model ağırlıklarının ve eğitim bilgilerinin kaydedildiği dosyadır; daha sonra üretim veya devam eğitimi için kullanılır.
+</s>
+
+<s>
+Kullanıcı: Checkpoint dosyası ne içerir?
+Asistan: Checkpoint, model ağırlıklarının ve eğitim bilgilerinin kaydedildiği dosyadır; daha sonra üretim veya devam eğitimi için kullanılır.
+</s>
+
+<s>
+Kullanıcı: Eğitimden sonra modeli nasıl saklarız?
+Asistan: Checkpoint, model ağırlıklarının ve eğitim bilgilerinin kaydedildiği dosyadır; daha sonra üretim veya devam eğitimi için kullanılır.
+</s>
+
+<s>
+Kullanıcı: Checkpoint ile tokenizer uyumlu olmalı mı?
+Asistan: Checkpoint, model ağırlıklarının ve eğitim bilgilerinin kaydedildiği dosyadır; daha sonra üretim veya devam eğitimi için kullanılır.
+</s>
+
+<s>
+Kullanıcı: corpus nedir
+Asistan: Corpus, tokenizer ve model eğitimi için birleştirilmiş metin veri setidir.
+</s>
+
+<s>
+Kullanıcı: Corpus nedir?
+Asistan: Corpus, tokenizer ve model eğitimi için birleştirilmiş metin veri setidir.
+</s>
+
+<s>
+Kullanıcı: corpus_v3 ne işe yarar
+Asistan: Corpus, tokenizer ve model eğitimi için birleştirilmiş metin veri setidir.
+</s>
+
+<s>
+Kullanıcı: Eğitim corpusu ne demek?
+Asistan: Corpus, tokenizer ve model eğitimi için birleştirilmiş metin veri setidir.
+</s>
+
+<s>
+Kullanıcı: Model hangi metinden öğrenir?
+Asistan: Corpus, tokenizer ve model eğitimi için birleştirilmiş metin veri setidir.
+</s>
+
+<s>
+Kullanıcı: Corpus neden temiz olmalı?
+Asistan: Corpus, tokenizer ve model eğitimi için birleştirilmiş metin veri setidir.
+</s>
+
+<s>
+Kullanıcı: Corpus nasıl oluşturulur?
+Asistan: Corpus, tokenizer ve model eğitimi için birleştirilmiş metin veri setidir.
+</s>
+
+<s>
+Kullanıcı: chat demo nedir
+Asistan: Chat demo, eğitilmiş checkpoint ile terminalde soru sorup modelden kısa cevap almak için kullanılan basit arayüzdür.
+</s>
+
+<s>
+Kullanıcı: Chat demo nedir?
+Asistan: Chat demo, eğitilmiş checkpoint ile terminalde soru sorup modelden kısa cevap almak için kullanılan basit arayüzdür.
+</s>
+
+<s>
+Kullanıcı: chat_demo.py ne yapar
+Asistan: Chat demo, eğitilmiş checkpoint ile terminalde soru sorup modelden kısa cevap almak için kullanılan basit arayüzdür.
+</s>
+
+<s>
+Kullanıcı: DarkMind ile nasıl konuşurum?
+Asistan: Chat demo, eğitilmiş checkpoint ile terminalde soru sorup modelden kısa cevap almak için kullanılan basit arayüzdür.
+</s>
+
+<s>
+Kullanıcı: Terminalden sohbet nasıl çalışır?
+Asistan: Chat demo, eğitilmiş checkpoint ile terminalde soru sorup modelden kısa cevap almak için kullanılan basit arayüzdür.
+</s>
+
+<s>
+Kullanıcı: Chat demo hangi promptu kullanır?
+Asistan: Chat demo, eğitilmiş checkpoint ile terminalde soru sorup modelden kısa cevap almak için kullanılan basit arayüzdür.
+</s>
+
+<s>
+Kullanıcı: Model cevabını nasıl test ederim?
+Asistan: Chat demo, eğitilmiş checkpoint ile terminalde soru sorup modelden kısa cevap almak için kullanılan basit arayüzdür.
+</s>
+
+<s>
+Kullanıcı: Tokenizer neden önemli?
+Asistan: Tokenizer, metni modelin işleyebileceği tokenlara ve token ID'lerine dönüştüren bileşendir.
+</s>
+
+<s>
+Kullanıcı: Token ne demek?
+Asistan: Tokenizer, metni modelin işleyebileceği tokenlara ve token ID'lerine dönüştüren bileşendir.
+</s>
+
+<s>
+Kullanıcı: Metni tokenlara ayırmak ne işe yarar?
+Asistan: Tokenizer, metni modelin işleyebileceği tokenlara ve token ID'lerine dönüştüren bileşendir.
+</s>
+
+<s>
+Kullanıcı: Checkpoint ne işe yarar?
+Asistan: Checkpoint, model ağırlıklarını, config bilgisini ve eğitim durumunu daha sonra kullanmak için kaydeden dosyadır.
+</s>
+
+<s>
+Kullanıcı: Checkpoint ile tokenizer uyumu neden önemli?
+Asistan: Checkpoint, model ağırlıklarını, config bilgisini ve eğitim durumunu daha sonra kullanmak için kaydeden dosyadır.
+</s>
+
+<s>
+Kullanıcı: Eğitimden sonra model nasıl saklanır?
+Asistan: Checkpoint, model ağırlıklarını, config bilgisini ve eğitim durumunu daha sonra kullanmak için kaydeden dosyadır.
+</s>
+
+<s>
+Kullanıcı: Corpus nasıl oluşturulur?
+Asistan: Data pipeline; ham veriyi toplama, temizleme, corpus oluşturma, tokenizer eğitme ve modeli eğitime hazırlama sürecidir.
+</s>
+
+<s>
+Kullanıcı: Temiz veri neden önemli?
+Asistan: Data pipeline; ham veriyi toplama, temizleme, corpus oluşturma, tokenizer eğitme ve modeli eğitime hazırlama sürecidir.
+</s>
+
+<s>
+Kullanıcı: clean_text.py ne yapar?
+Asistan: Data pipeline; ham veriyi toplama, temizleme, corpus oluşturma, tokenizer eğitme ve modeli eğitime hazırlama sürecidir.
+</s>
+
+<s>
+Kullanıcı: Vocab nedir?
+Asistan: Tokenizer, metni modelin işleyebileceği tokenlara ve token ID'lerine dönüştüren bileşendir.
+</s>
+
+<s>
+Kullanıcı: Checkpoint dosyası ne içerir?
+Asistan: Checkpoint, model ağırlıklarını, config bilgisini ve eğitim durumunu daha sonra kullanmak için kaydeden dosyadır.
+</s>
+
+<s>
+Kullanıcı: build_dataset_from_raw.py ne yapar?
+Asistan: Data pipeline; ham veriyi toplama, temizleme, corpus oluşturma, tokenizer eğitme ve modeli eğitime hazırlama sürecidir.
+</s>
+
+<s>
+Kullanıcı: tokenizer nedir?
+Asistan: Tokenizer, metni modelin kullanacağı sayısal id dizilerine çeviren bileşendir. Modelin eğitildiği tokenizer ile üretimde kullanılan tokenizer aynı olmalıdır.
+</s>

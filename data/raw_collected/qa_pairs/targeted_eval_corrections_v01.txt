@@ -1,0 +1,71 @@
+Kullanıcı: Python'da listeye eleman nasıl eklenir?
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır. Örnek: numbers.append(5)
+
+Kullanıcı: python'da listeye eleman nasıl eklenir
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır. Örnek: numbers.append(5)
+
+Kullanıcı: Listeye yeni eleman eklemek için ne kullanılır?
+Asistan: Python'da listeye eleman eklemek için append metodu kullanılır. Örnek: numbers.append(5)
+
+Kullanıcı: IndentationError nasıl çözülür?
+Asistan: IndentationError genellikle girinti hatasından kaynaklanır. Python'da aynı blok içindeki satırların girinti seviyesi tutarlı olmalıdır.
+
+Kullanıcı: indentationerror nasıl çözülür
+Asistan: IndentationError genellikle girinti hatasından kaynaklanır. Python'da aynı blok içindeki satırların girinti seviyesi tutarlı olmalıdır.
+
+Kullanıcı: Girinti hatası nasıl çözülür?
+Asistan: IndentationError genellikle girinti hatasından kaynaklanır. Python'da aynı blok içindeki satırların girinti seviyesi tutarlı olmalıdır.
+
+Kullanıcı: Vocab nedir?
+Asistan: Vocab, tokenizer'ın kullandığı token sözlüğüdür. Model metni bu sözlükteki token ID değerleriyle işler.
+
+Kullanıcı: vocab nedir
+Asistan: Vocab, tokenizer'ın kullandığı token sözlüğüdür. Model metni bu sözlükteki token ID değerleriyle işler.
+
+Kullanıcı: Token sözlüğü nedir?
+Asistan: Vocab, tokenizer'ın kullandığı token sözlüğüdür. Model metni bu sözlükteki token ID değerleriyle işler.
+
+Kullanıcı: CPU ile GPU arasındaki fark nedir?
+Asistan: CPU genel amaçlı işlemcidir. GPU ise paralel hesaplamalarda güçlüdür ve derin öğrenme eğitimini hızlandırabilir.
+
+Kullanıcı: cpu ile gpu arasındaki fark nedir
+Asistan: CPU genel amaçlı işlemcidir. GPU ise paralel hesaplamalarda güçlüdür ve derin öğrenme eğitimini hızlandırabilir.
+
+Kullanıcı: CPU vs GPU farkı nedir?
+Asistan: CPU genel amaçlı işlemcidir. GPU ise paralel hesaplamalarda güçlüdür ve derin öğrenme eğitimini hızlandırabilir.
+
+Kullanıcı: build_dataset_from_raw.py ne yapar?
+Asistan: build_dataset_from_raw.py kaynak dosyaları ve temizlenmiş verileri birleştirir, ardından data/processed/corpus_v3.txt dosyasını üretir.
+
+Kullanıcı: build_dataset_from_raw.py ne yapar
+Asistan: build_dataset_from_raw.py kaynak dosyaları ve temizlenmiş verileri birleştirir, ardından data/processed/corpus_v3.txt dosyasını üretir.
+
+Kullanıcı: Corpus v3 dosyasını hangi script üretir?
+Asistan: build_dataset_from_raw.py kaynak dosyaları ve temizlenmiş verileri birleştirir, ardından data/processed/corpus_v3.txt dosyasını üretir.
+
+Kullanıcı: DarkMind ChatGPT gibi mi?
+Asistan: Hayır. DarkMind şu anda ChatGPT gibi güçlü bir genel sohbet modeli değildir. Küçük ve deneysel bir Türkçe model geliştirme projesidir.
+
+Kullanıcı: darkmind chatgpt gibi mi
+Asistan: Hayır. DarkMind şu anda ChatGPT gibi güçlü bir genel sohbet modeli değildir. Küçük ve deneysel bir Türkçe model geliştirme projesidir.
+
+Kullanıcı: DarkMind, ChatGPT kadar güçlü mü?
+Asistan: Hayır. DarkMind şu anda ChatGPT gibi güçlü bir genel sohbet modeli değildir. Küçük ve deneysel bir Türkçe model geliştirme projesidir.
+
+Kullanıcı: Validation loss yükselirse ne olabilir?
+Asistan: Validation loss yükselirse model eğitim verisini ezberliyor olabilir. Bu durum overfitting ve zayıf genelleme belirtisi olabilir.
+
+Kullanıcı: validation loss yükselirse ne olabilir
+Asistan: Validation loss yükselirse model eğitim verisini ezberliyor olabilir. Bu durum overfitting ve zayıf genelleme belirtisi olabilir.
+
+Kullanıcı: Validation loss artarsa ne düşünmeliyim?
+Asistan: Validation loss yükselirse model eğitim verisini ezberliyor olabilir. Bu durum overfitting ve zayıf genelleme belirtisi olabilir.
+
+Kullanıcı: Train loss düşerken validation loss artarsa ne düşünmeliyim?
+Asistan: Train loss düşerken validation loss artıyorsa overfitting olabilir. Model eğitim verisinde iyi görünür ama validation verisinde genelleme yapmakta zorlanır.
+
+Kullanıcı: train loss düşerken validation loss artarsa ne düşünmeliyim
+Asistan: Train loss düşerken validation loss artıyorsa overfitting olabilir. Model eğitim verisinde iyi görünür ama validation verisinde genelleme yapmakta zorlanır.
+
+Kullanıcı: Train loss azalırken validation loss yükselirse ne olur?
+Asistan: Train loss düşerken validation loss artıyorsa overfitting olabilir. Model eğitim verisinde iyi görünür ama validation verisinde genelleme yapmakta zorlanır.

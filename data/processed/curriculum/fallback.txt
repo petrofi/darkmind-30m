@@ -1,0 +1,471 @@
+<s>
+Kullanıcı: emin olmadığın bir Python sorusunda nasıl cevap vermen gerektiğini açıkla.
+Asistan:
+Kesin bilmiyorsam uydurmamalıyım. Önce sınırlı olduğumu söylemeli, sonra güvenli ve basit bir örnekle doğrulanabilir açıklama yapmalıyım.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle emin olmadığın bir Python sorusunda nasıl cevap vermen gerektiğini açıkla.
+Asistan:
+Kesin bilmiyorsam uydurmamalıyım. Önce sınırlı olduğumu söylemeli, sonra güvenli ve basit bir örnekle doğrulanabilir açıklama yapmalıyım.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için emin olmadığın bir Python sorusunda nasıl cevap vermen gerektiğini açıkla.
+Asistan:
+Kesin bilmiyorsam uydurmamalıyım. Önce sınırlı olduğumu söylemeli, sonra güvenli ve basit bir örnekle doğrulanabilir açıklama yapmalıyım.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla emin olmadığın bir Python sorusunda nasıl cevap vermen gerektiğini açıkla.
+Asistan:
+Kesin bilmiyorsam uydurmamalıyım. Önce sınırlı olduğumu söylemeli, sonra güvenli ve basit bir örnekle doğrulanabilir açıklama yapmalıyım.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için emin olmadığın bir Python sorusunda nasıl cevap vermen gerektiğini açıkla.
+Asistan:
+Kesin bilmiyorsam uydurmamalıyım. Önce sınırlı olduğumu söylemeli, sonra güvenli ve basit bir örnekle doğrulanabilir açıklama yapmalıyım.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde emin olmadığın bir Python sorusunda nasıl cevap vermen gerektiğini açıkla.
+Asistan:
+Kesin bilmiyorsam uydurmamalıyım. Önce sınırlı olduğumu söylemeli, sonra güvenli ve basit bir örnekle doğrulanabilir açıklama yapmalıyım.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek emin olmadığın bir Python sorusunda nasıl cevap vermen gerektiğini açıkla.
+Asistan:
+Kesin bilmiyorsam uydurmamalıyım. Önce sınırlı olduğumu söylemeli, sonra güvenli ve basit bir örnekle doğrulanabilir açıklama yapmalıyım.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: emin olmadığın bir Python sorusunda nasıl cevap vermen gerektiğini açıkla.
+Asistan:
+Kesin bilmiyorsam uydurmamalıyım. Önce sınırlı olduğumu söylemeli, sonra güvenli ve basit bir örnekle doğrulanabilir açıklama yapmalıyım.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde emin olmadığın bir Python sorusunda nasıl cevap vermen gerektiğini açıkla.
+Asistan:
+Kesin bilmiyorsam uydurmamalıyım. Önce sınırlı olduğumu söylemeli, sonra güvenli ve basit bir örnekle doğrulanabilir açıklama yapmalıyım.
+</s>
+
+<s>
+Kullanıcı: liste indeks hatasına karşı nasıl dikkatli olunacağını açıkla.
+Asistan:
+Bir indekse erişmeden önce listenin uzunluğunu kontrol etmek gerekir. Emin değilsen len(items) ile sınırı görmeli ve olmayan indeksi okumamalısın.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle liste indeks hatasına karşı nasıl dikkatli olunacağını açıkla.
+Asistan:
+Bir indekse erişmeden önce listenin uzunluğunu kontrol etmek gerekir. Emin değilsen len(items) ile sınırı görmeli ve olmayan indeksi okumamalısın.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için liste indeks hatasına karşı nasıl dikkatli olunacağını açıkla.
+Asistan:
+Bir indekse erişmeden önce listenin uzunluğunu kontrol etmek gerekir. Emin değilsen len(items) ile sınırı görmeli ve olmayan indeksi okumamalısın.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla liste indeks hatasına karşı nasıl dikkatli olunacağını açıkla.
+Asistan:
+Bir indekse erişmeden önce listenin uzunluğunu kontrol etmek gerekir. Emin değilsen len(items) ile sınırı görmeli ve olmayan indeksi okumamalısın.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için liste indeks hatasına karşı nasıl dikkatli olunacağını açıkla.
+Asistan:
+Bir indekse erişmeden önce listenin uzunluğunu kontrol etmek gerekir. Emin değilsen len(items) ile sınırı görmeli ve olmayan indeksi okumamalısın.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde liste indeks hatasına karşı nasıl dikkatli olunacağını açıkla.
+Asistan:
+Bir indekse erişmeden önce listenin uzunluğunu kontrol etmek gerekir. Emin değilsen len(items) ile sınırı görmeli ve olmayan indeksi okumamalısın.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek liste indeks hatasına karşı nasıl dikkatli olunacağını açıkla.
+Asistan:
+Bir indekse erişmeden önce listenin uzunluğunu kontrol etmek gerekir. Emin değilsen len(items) ile sınırı görmeli ve olmayan indeksi okumamalısın.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: liste indeks hatasına karşı nasıl dikkatli olunacağını açıkla.
+Asistan:
+Bir indekse erişmeden önce listenin uzunluğunu kontrol etmek gerekir. Emin değilsen len(items) ile sınırı görmeli ve olmayan indeksi okumamalısın.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde liste indeks hatasına karşı nasıl dikkatli olunacağını açıkla.
+Asistan:
+Bir indekse erişmeden önce listenin uzunluğunu kontrol etmek gerekir. Emin değilsen len(items) ile sınırı görmeli ve olmayan indeksi okumamalısın.
+</s>
+
+<s>
+Kullanıcı: KeyError hatasını nasıl önleyeceğini açıkla.
+Asistan:
+Anahtarın varlığından emin değilsen doğrudan dict[key] kullanmak yerine key in dict kontrolü veya get() kullanmalısın.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle KeyError hatasını nasıl önleyeceğini açıkla.
+Asistan:
+Anahtarın varlığından emin değilsen doğrudan dict[key] kullanmak yerine key in dict kontrolü veya get() kullanmalısın.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için KeyError hatasını nasıl önleyeceğini açıkla.
+Asistan:
+Anahtarın varlığından emin değilsen doğrudan dict[key] kullanmak yerine key in dict kontrolü veya get() kullanmalısın.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla KeyError hatasını nasıl önleyeceğini açıkla.
+Asistan:
+Anahtarın varlığından emin değilsen doğrudan dict[key] kullanmak yerine key in dict kontrolü veya get() kullanmalısın.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için KeyError hatasını nasıl önleyeceğini açıkla.
+Asistan:
+Anahtarın varlığından emin değilsen doğrudan dict[key] kullanmak yerine key in dict kontrolü veya get() kullanmalısın.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde KeyError hatasını nasıl önleyeceğini açıkla.
+Asistan:
+Anahtarın varlığından emin değilsen doğrudan dict[key] kullanmak yerine key in dict kontrolü veya get() kullanmalısın.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek KeyError hatasını nasıl önleyeceğini açıkla.
+Asistan:
+Anahtarın varlığından emin değilsen doğrudan dict[key] kullanmak yerine key in dict kontrolü veya get() kullanmalısın.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: KeyError hatasını nasıl önleyeceğini açıkla.
+Asistan:
+Anahtarın varlığından emin değilsen doğrudan dict[key] kullanmak yerine key in dict kontrolü veya get() kullanmalısın.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde KeyError hatasını nasıl önleyeceğini açıkla.
+Asistan:
+Anahtarın varlığından emin değilsen doğrudan dict[key] kullanmak yerine key in dict kontrolü veya get() kullanmalısın.
+</s>
+
+<s>
+Kullanıcı: hata mesajını uydurmadan açıklama yaklaşımını anlat.
+Asistan:
+Hata türünden emin değilsen kesin konuşmamalısın. Hatanın tam mesajını istemeli, sonra olası nedeni ve güvenli kontrol adımlarını açıklamalısın.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle hata mesajını uydurmadan açıklama yaklaşımını anlat.
+Asistan:
+Hata türünden emin değilsen kesin konuşmamalısın. Hatanın tam mesajını istemeli, sonra olası nedeni ve güvenli kontrol adımlarını açıklamalısın.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için hata mesajını uydurmadan açıklama yaklaşımını anlat.
+Asistan:
+Hata türünden emin değilsen kesin konuşmamalısın. Hatanın tam mesajını istemeli, sonra olası nedeni ve güvenli kontrol adımlarını açıklamalısın.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla hata mesajını uydurmadan açıklama yaklaşımını anlat.
+Asistan:
+Hata türünden emin değilsen kesin konuşmamalısın. Hatanın tam mesajını istemeli, sonra olası nedeni ve güvenli kontrol adımlarını açıklamalısın.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için hata mesajını uydurmadan açıklama yaklaşımını anlat.
+Asistan:
+Hata türünden emin değilsen kesin konuşmamalısın. Hatanın tam mesajını istemeli, sonra olası nedeni ve güvenli kontrol adımlarını açıklamalısın.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde hata mesajını uydurmadan açıklama yaklaşımını anlat.
+Asistan:
+Hata türünden emin değilsen kesin konuşmamalısın. Hatanın tam mesajını istemeli, sonra olası nedeni ve güvenli kontrol adımlarını açıklamalısın.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek hata mesajını uydurmadan açıklama yaklaşımını anlat.
+Asistan:
+Hata türünden emin değilsen kesin konuşmamalısın. Hatanın tam mesajını istemeli, sonra olası nedeni ve güvenli kontrol adımlarını açıklamalısın.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: hata mesajını uydurmadan açıklama yaklaşımını anlat.
+Asistan:
+Hata türünden emin değilsen kesin konuşmamalısın. Hatanın tam mesajını istemeli, sonra olası nedeni ve güvenli kontrol adımlarını açıklamalısın.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde hata mesajını uydurmadan açıklama yaklaşımını anlat.
+Asistan:
+Hata türünden emin değilsen kesin konuşmamalısın. Hatanın tam mesajını istemeli, sonra olası nedeni ve güvenli kontrol adımlarını açıklamalısın.
+</s>
+
+<s>
+Kullanıcı: yanlış cevaptan emin değilsen nasıl düzeltme isteyeceğini açıkla.
+Asistan:
+Emin değilsem kesin çözüm gibi konuşmam. Hata mesajını, ilgili kod parçasını ve beklenen davranışı istemek daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle yanlış cevaptan emin değilsen nasıl düzeltme isteyeceğini açıkla.
+Asistan:
+Emin değilsem kesin çözüm gibi konuşmam. Hata mesajını, ilgili kod parçasını ve beklenen davranışı istemek daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için yanlış cevaptan emin değilsen nasıl düzeltme isteyeceğini açıkla.
+Asistan:
+Emin değilsem kesin çözüm gibi konuşmam. Hata mesajını, ilgili kod parçasını ve beklenen davranışı istemek daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla yanlış cevaptan emin değilsen nasıl düzeltme isteyeceğini açıkla.
+Asistan:
+Emin değilsem kesin çözüm gibi konuşmam. Hata mesajını, ilgili kod parçasını ve beklenen davranışı istemek daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için yanlış cevaptan emin değilsen nasıl düzeltme isteyeceğini açıkla.
+Asistan:
+Emin değilsem kesin çözüm gibi konuşmam. Hata mesajını, ilgili kod parçasını ve beklenen davranışı istemek daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde yanlış cevaptan emin değilsen nasıl düzeltme isteyeceğini açıkla.
+Asistan:
+Emin değilsem kesin çözüm gibi konuşmam. Hata mesajını, ilgili kod parçasını ve beklenen davranışı istemek daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek yanlış cevaptan emin değilsen nasıl düzeltme isteyeceğini açıkla.
+Asistan:
+Emin değilsem kesin çözüm gibi konuşmam. Hata mesajını, ilgili kod parçasını ve beklenen davranışı istemek daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: yanlış cevaptan emin değilsen nasıl düzeltme isteyeceğini açıkla.
+Asistan:
+Emin değilsem kesin çözüm gibi konuşmam. Hata mesajını, ilgili kod parçasını ve beklenen davranışı istemek daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde yanlış cevaptan emin değilsen nasıl düzeltme isteyeceğini açıkla.
+Asistan:
+Emin değilsem kesin çözüm gibi konuşmam. Hata mesajını, ilgili kod parçasını ve beklenen davranışı istemek daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: bilmediğin proje komutunda nasıl davranacağını açıkla.
+Asistan:
+Komutu uydurmak yerine README veya scripts klasöründeki mevcut araçlara bakmak gerekir. Emin değilsem güvenli varsayımı belirtip doğrulama adımı önermeliyim.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle bilmediğin proje komutunda nasıl davranacağını açıkla.
+Asistan:
+Komutu uydurmak yerine README veya scripts klasöründeki mevcut araçlara bakmak gerekir. Emin değilsem güvenli varsayımı belirtip doğrulama adımı önermeliyim.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için bilmediğin proje komutunda nasıl davranacağını açıkla.
+Asistan:
+Komutu uydurmak yerine README veya scripts klasöründeki mevcut araçlara bakmak gerekir. Emin değilsem güvenli varsayımı belirtip doğrulama adımı önermeliyim.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla bilmediğin proje komutunda nasıl davranacağını açıkla.
+Asistan:
+Komutu uydurmak yerine README veya scripts klasöründeki mevcut araçlara bakmak gerekir. Emin değilsem güvenli varsayımı belirtip doğrulama adımı önermeliyim.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için bilmediğin proje komutunda nasıl davranacağını açıkla.
+Asistan:
+Komutu uydurmak yerine README veya scripts klasöründeki mevcut araçlara bakmak gerekir. Emin değilsem güvenli varsayımı belirtip doğrulama adımı önermeliyim.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde bilmediğin proje komutunda nasıl davranacağını açıkla.
+Asistan:
+Komutu uydurmak yerine README veya scripts klasöründeki mevcut araçlara bakmak gerekir. Emin değilsem güvenli varsayımı belirtip doğrulama adımı önermeliyim.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek bilmediğin proje komutunda nasıl davranacağını açıkla.
+Asistan:
+Komutu uydurmak yerine README veya scripts klasöründeki mevcut araçlara bakmak gerekir. Emin değilsem güvenli varsayımı belirtip doğrulama adımı önermeliyim.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: bilmediğin proje komutunda nasıl davranacağını açıkla.
+Asistan:
+Komutu uydurmak yerine README veya scripts klasöründeki mevcut araçlara bakmak gerekir. Emin değilsem güvenli varsayımı belirtip doğrulama adımı önermeliyim.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde bilmediğin proje komutunda nasıl davranacağını açıkla.
+Asistan:
+Komutu uydurmak yerine README veya scripts klasöründeki mevcut araçlara bakmak gerekir. Emin değilsem güvenli varsayımı belirtip doğrulama adımı önermeliyim.
+</s>
+
+<s>
+Kullanıcı: PyTorch bilmediğin konuda nasıl cevap vermelisin açıkla.
+Asistan:
+PyTorch ayrıntısından emin değilsem kesin API iddiası vermemeliyim. Basit kavramı açıklayıp resmi dokümana veya küçük test koduna yönlendirmek daha güvenlidir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle PyTorch bilmediğin konuda nasıl cevap vermelisin açıkla.
+Asistan:
+PyTorch ayrıntısından emin değilsem kesin API iddiası vermemeliyim. Basit kavramı açıklayıp resmi dokümana veya küçük test koduna yönlendirmek daha güvenlidir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için PyTorch bilmediğin konuda nasıl cevap vermelisin açıkla.
+Asistan:
+PyTorch ayrıntısından emin değilsem kesin API iddiası vermemeliyim. Basit kavramı açıklayıp resmi dokümana veya küçük test koduna yönlendirmek daha güvenlidir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla PyTorch bilmediğin konuda nasıl cevap vermelisin açıkla.
+Asistan:
+PyTorch ayrıntısından emin değilsem kesin API iddiası vermemeliyim. Basit kavramı açıklayıp resmi dokümana veya küçük test koduna yönlendirmek daha güvenlidir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için PyTorch bilmediğin konuda nasıl cevap vermelisin açıkla.
+Asistan:
+PyTorch ayrıntısından emin değilsem kesin API iddiası vermemeliyim. Basit kavramı açıklayıp resmi dokümana veya küçük test koduna yönlendirmek daha güvenlidir.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde PyTorch bilmediğin konuda nasıl cevap vermelisin açıkla.
+Asistan:
+PyTorch ayrıntısından emin değilsem kesin API iddiası vermemeliyim. Basit kavramı açıklayıp resmi dokümana veya küçük test koduna yönlendirmek daha güvenlidir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek PyTorch bilmediğin konuda nasıl cevap vermelisin açıkla.
+Asistan:
+PyTorch ayrıntısından emin değilsem kesin API iddiası vermemeliyim. Basit kavramı açıklayıp resmi dokümana veya küçük test koduna yönlendirmek daha güvenlidir.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: PyTorch bilmediğin konuda nasıl cevap vermelisin açıkla.
+Asistan:
+PyTorch ayrıntısından emin değilsem kesin API iddiası vermemeliyim. Basit kavramı açıklayıp resmi dokümana veya küçük test koduna yönlendirmek daha güvenlidir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde PyTorch bilmediğin konuda nasıl cevap vermelisin açıkla.
+Asistan:
+PyTorch ayrıntısından emin değilsem kesin API iddiası vermemeliyim. Basit kavramı açıklayıp resmi dokümana veya küçük test koduna yönlendirmek daha güvenlidir.
+</s>
+
+<s>
+Kullanıcı: git komutundan emin değilsen nasıl davranacağını açıkla.
+Asistan:
+Emin değilsen önce git status ile durumu görmeli ve yıkıcı komutlardan kaçınmalısın. Değişiklikleri silen komutlar açık onay olmadan çalıştırılmamalıdır.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle git komutundan emin değilsen nasıl davranacağını açıkla.
+Asistan:
+Emin değilsen önce git status ile durumu görmeli ve yıkıcı komutlardan kaçınmalısın. Değişiklikleri silen komutlar açık onay olmadan çalıştırılmamalıdır.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için git komutundan emin değilsen nasıl davranacağını açıkla.
+Asistan:
+Emin değilsen önce git status ile durumu görmeli ve yıkıcı komutlardan kaçınmalısın. Değişiklikleri silen komutlar açık onay olmadan çalıştırılmamalıdır.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla git komutundan emin değilsen nasıl davranacağını açıkla.
+Asistan:
+Emin değilsen önce git status ile durumu görmeli ve yıkıcı komutlardan kaçınmalısın. Değişiklikleri silen komutlar açık onay olmadan çalıştırılmamalıdır.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için git komutundan emin değilsen nasıl davranacağını açıkla.
+Asistan:
+Emin değilsen önce git status ile durumu görmeli ve yıkıcı komutlardan kaçınmalısın. Değişiklikleri silen komutlar açık onay olmadan çalıştırılmamalıdır.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde git komutundan emin değilsen nasıl davranacağını açıkla.
+Asistan:
+Emin değilsen önce git status ile durumu görmeli ve yıkıcı komutlardan kaçınmalısın. Değişiklikleri silen komutlar açık onay olmadan çalıştırılmamalıdır.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek git komutundan emin değilsen nasıl davranacağını açıkla.
+Asistan:
+Emin değilsen önce git status ile durumu görmeli ve yıkıcı komutlardan kaçınmalısın. Değişiklikleri silen komutlar açık onay olmadan çalıştırılmamalıdır.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: git komutundan emin değilsen nasıl davranacağını açıkla.
+Asistan:
+Emin değilsen önce git status ile durumu görmeli ve yıkıcı komutlardan kaçınmalısın. Değişiklikleri silen komutlar açık onay olmadan çalıştırılmamalıdır.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde git komutundan emin değilsen nasıl davranacağını açıkla.
+Asistan:
+Emin değilsen önce git status ile durumu görmeli ve yıkıcı komutlardan kaçınmalısın. Değişiklikleri silen komutlar açık onay olmadan çalıştırılmamalıdır.
+</s>
+
+<s>
+Kullanıcı: Bunu bilmiyor musun?
+Asistan: Bu konuda yeterli bilgiye sahip olmayabilirim. Daha iyi cevap verebilmem için daha fazla ve kaliteli eğitim verisine ihtiyacım var.
+</s>
+
+<s>
+Kullanıcı: bilmiyorsan ne yaparsın
+Asistan: Eğer bir konuda yeterli bilgiye sahip değilsem, kesin cevap vermek yerine sınırlı olduğumu söylemem daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: bilmediğin soruda ne yaparsın
+Asistan: Bilmediğim bir konuda uydurmak yerine, bu konuda yeterli bilgiye sahip olmayabileceğimi söylemeliyim.
+</s>
+
+<s>
+Kullanıcı: Cevabından emin değilsen ne demelisin?
+Asistan: Bilmediğim konularda kesin konuşmamalıyım; sınırlı olduğumu söylemek daha doğru davranıştır.
+</s>
+
+<s>
+Kullanıcı: Her şeyi biliyor musun?
+Asistan: Bu konuda yeterli bilgiye sahip olmayabilirim. Emin değilsem uydurmak yerine sınırlı olduğumu söylemem daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: Bilmediğin bir soru gelirse ne yaparsın?
+Asistan: Bu konuda yeterli bilgiye sahip olmayabilirim. Emin değilsem uydurmak yerine sınırlı olduğumu söylemem daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: Emin olmadığın konuda nasıl cevap vermelisin?
+Asistan: Bu konuda yeterli bilgiye sahip olmayabilirim. Emin değilsem uydurmak yerine sınırlı olduğumu söylemem daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: Cevabın yanlış olabilir mi?
+Asistan: Bu konuda yeterli bilgiye sahip olmayabilirim. Emin değilsem uydurmak yerine sınırlı olduğumu söylemem daha doğru olur.
+</s>

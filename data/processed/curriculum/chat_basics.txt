@@ -1,0 +1,1142 @@
+<s>
+Kullanıcı: Python'da kullanıcı adını bir değişkende sakla.
+Asistan:
+```python
+username = "tarik"
+print(f"Merhaba {username}")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da bir isme selam veren fonksiyon yaz.
+Asistan:
+```python
+def greet(name):
+    return f"Merhaba {name}"
+```
+</s>
+
+<s>
+Kullanıcı: Python'da boş metin kontrolü yap.
+Asistan:
+```python
+text = "Merhaba"
+if text:
+    print("Metin dolu")
+else:
+    print("Metin boş")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da listedeki isimlere selam ver.
+Asistan:
+```python
+names = ["Ayşe", "Mehmet", "Zeynep"]
+for name in names:
+    print(f"Merhaba {name}")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da metnin uzunluğunu bul.
+Asistan:
+```python
+text = "Merhaba"
+print(len(text))
+```
+</s>
+
+<s>
+Kullanıcı: Python'da metindeki boşlukları temizle.
+Asistan:
+```python
+text = "  merhaba  "
+print(text.strip())
+```
+</s>
+
+<s>
+Kullanıcı: Python'da listedeki boş metinleri çıkar.
+Asistan:
+```python
+texts = ["merhaba", "", "veri", " "]
+clean_texts = [text.strip() for text in texts if text.strip()]
+print(clean_texts)
+```
+</s>
+
+<s>
+Kullanıcı: Python'da pathlib ile bir metin dosyası yaz.
+Asistan:
+```python
+from pathlib import Path
+path = Path("notlar.txt")
+path.write_text("Merhaba Python", encoding="utf-8")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da metot içeren basit sınıf yaz.
+Asistan:
+```python
+class Greeter:
+    def greet(self, name):
+        return f"Merhaba {name}"
+greeter = Greeter()
+print(greeter.greet("Ali"))
+```
+</s>
+
+<s>
+Kullanıcı: Python'da boş metinleri listeden çıkar.
+Asistan:
+```python
+texts = ["merhaba", "", " ", "veri"]
+cleaned = [text for text in texts if text.strip()]
+print(cleaned)
+```
+</s>
+
+<s>
+Kullanıcı: Python'da kullanıcıdan isim alıp selam ver.
+Asistan:
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da string işlemleri nasıl yapılır?
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+</s>
+
+<s>
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Kısa bir örnek göster.
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+</s>
+
+<s>
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Basit bir Python örneği yaz.
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+</s>
+
+<s>
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Yeni başlayan biri için açıkla.
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+</s>
+
+<s>
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Kodla göster.
+Asistan:
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+</s>
+
+<s>
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Küçük ve çalışır bir örnek ver.
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+</s>
+
+<s>
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Türkçe açıklama ve kodla anlat.
+Asistan: String üzerinde lower, upper, strip ve split gibi metotlar kullanılabilir.
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+</s>
+
+<s>
+Kullanıcı: Python'da string işlemleri nasıl yapılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+text = "  Merhaba Python  "
+cleaned = text.strip().lower()
+print(cleaned)
+```
+</s>
+
+<s>
+Kullanıcı: Python'da fonksiyon nasıl yazılır?
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+</s>
+
+<s>
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Kısa bir örnek göster.
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+</s>
+
+<s>
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Basit bir Python örneği yaz.
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+</s>
+
+<s>
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Yeni başlayan biri için açıkla.
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+</s>
+
+<s>
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Kodla göster.
+Asistan:
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+</s>
+
+<s>
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Küçük ve çalışır bir örnek ver.
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+</s>
+
+<s>
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Türkçe açıklama ve kodla anlat.
+Asistan: Fonksiyonlar def anahtar kelimesiyle tanımlanır.
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+</s>
+
+<s>
+Kullanıcı: Python'da fonksiyon nasıl yazılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+def greet(name):
+    return f"Merhaba {name}"
+print(greet("Ayşe"))
+```
+</s>
+
+<s>
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır?
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Kısa bir örnek göster.
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Basit bir Python örneği yaz.
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Yeni başlayan biri için açıkla.
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Kodla göster.
+Asistan:
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Küçük ve çalışır bir örnek ver.
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Türkçe açıklama ve kodla anlat.
+Asistan: Path.write_text, metin dosyasına yazmak için kullanılabilir.
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da pathlib ile dosya nasıl yazılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+from pathlib import Path
+Path("sonuc.txt").write_text("Merhaba Python", encoding="utf-8")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da basit class nasıl yazılır?
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+</s>
+
+<s>
+Kullanıcı: Python'da basit class nasıl yazılır? Kısa bir örnek göster.
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+</s>
+
+<s>
+Kullanıcı: Python'da basit class nasıl yazılır? Basit bir Python örneği yaz.
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+</s>
+
+<s>
+Kullanıcı: Python'da basit class nasıl yazılır? Yeni başlayan biri için açıkla.
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+</s>
+
+<s>
+Kullanıcı: Python'da basit class nasıl yazılır? Kodla göster.
+Asistan:
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+</s>
+
+<s>
+Kullanıcı: Python'da basit class nasıl yazılır? Küçük ve çalışır bir örnek ver.
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+</s>
+
+<s>
+Kullanıcı: Python'da basit class nasıl yazılır? Türkçe açıklama ve kodla anlat.
+Asistan: Class, ilgili veri ve davranışları bir arada tutar.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+</s>
+
+<s>
+Kullanıcı: Python'da basit class nasıl yazılır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+    def greet(self):
+        return f"Merhaba {self.name}"
+user = User("Ali")
+print(user.greet())
+```
+</s>
+
+<s>
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır?
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Kısa bir örnek göster.
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Basit bir Python örneği yaz.
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Yeni başlayan biri için açıkla.
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Kodla göster.
+Asistan:
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Küçük ve çalışır bir örnek ver.
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Türkçe açıklama ve kodla anlat.
+Asistan: input fonksiyonu terminalden metin okumak için kullanılır.
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+</s>
+
+<s>
+Kullanıcı: Python'da input ile kullanıcıdan veri nasıl alınır? Sadece kısa bir çözüm yaz.
+Asistan:
+```python
+name = input("Adın nedir? ")
+print(f"Merhaba {name}")
+```
+</s>
+
+<s>
+Kullanıcı: varsayılan parametre kullanan selamlama fonksiyonu yaz.
+Asistan:
+```python
+def greet(name="DarkMind"):
+    return f"Merhaba {name}"
+```
+Varsayılan parametre, değer verilmediğinde kullanılacak güvenli bir seçenek sağlar.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle varsayılan parametre kullanan selamlama fonksiyonu yaz.
+Asistan:
+```python
+def greet(name="DarkMind"):
+    return f"Merhaba {name}"
+```
+Varsayılan parametre, değer verilmediğinde kullanılacak güvenli bir seçenek sağlar.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için varsayılan parametre kullanan selamlama fonksiyonu yaz.
+Asistan:
+```python
+def greet(name="DarkMind"):
+    return f"Merhaba {name}"
+```
+Varsayılan parametre, değer verilmediğinde kullanılacak güvenli bir seçenek sağlar.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla varsayılan parametre kullanan selamlama fonksiyonu yaz.
+Asistan:
+```python
+def greet(name="DarkMind"):
+    return f"Merhaba {name}"
+```
+Varsayılan parametre, değer verilmediğinde kullanılacak güvenli bir seçenek sağlar.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için varsayılan parametre kullanan selamlama fonksiyonu yaz.
+Asistan:
+```python
+def greet(name="DarkMind"):
+    return f"Merhaba {name}"
+```
+Varsayılan parametre, değer verilmediğinde kullanılacak güvenli bir seçenek sağlar.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde varsayılan parametre kullanan selamlama fonksiyonu yaz.
+Asistan:
+```python
+def greet(name="DarkMind"):
+    return f"Merhaba {name}"
+```
+Varsayılan parametre, değer verilmediğinde kullanılacak güvenli bir seçenek sağlar.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek varsayılan parametre kullanan selamlama fonksiyonu yaz.
+Asistan:
+```python
+def greet(name="DarkMind"):
+    return f"Merhaba {name}"
+```
+Varsayılan parametre, değer verilmediğinde kullanılacak güvenli bir seçenek sağlar.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: varsayılan parametre kullanan selamlama fonksiyonu yaz.
+Asistan:
+```python
+def greet(name="DarkMind"):
+    return f"Merhaba {name}"
+```
+Varsayılan parametre, değer verilmediğinde kullanılacak güvenli bir seçenek sağlar.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde varsayılan parametre kullanan selamlama fonksiyonu yaz.
+Asistan:
+```python
+def greet(name="DarkMind"):
+    return f"Merhaba {name}"
+```
+Varsayılan parametre, değer verilmediğinde kullanılacak güvenli bir seçenek sağlar.
+</s>
+
+<s>
+Kullanıcı: metni strip ile temizle.
+Asistan:
+```python
+text = "  merhaba  "
+clean_text = text.strip()
+print(clean_text)
+```
+strip() baştaki ve sondaki boşlukları temizler.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle metni strip ile temizle.
+Asistan:
+```python
+text = "  merhaba  "
+clean_text = text.strip()
+print(clean_text)
+```
+strip() baştaki ve sondaki boşlukları temizler.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için metni strip ile temizle.
+Asistan:
+```python
+text = "  merhaba  "
+clean_text = text.strip()
+print(clean_text)
+```
+strip() baştaki ve sondaki boşlukları temizler.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla metni strip ile temizle.
+Asistan:
+```python
+text = "  merhaba  "
+clean_text = text.strip()
+print(clean_text)
+```
+strip() baştaki ve sondaki boşlukları temizler.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için metni strip ile temizle.
+Asistan:
+```python
+text = "  merhaba  "
+clean_text = text.strip()
+print(clean_text)
+```
+strip() baştaki ve sondaki boşlukları temizler.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde metni strip ile temizle.
+Asistan:
+```python
+text = "  merhaba  "
+clean_text = text.strip()
+print(clean_text)
+```
+strip() baştaki ve sondaki boşlukları temizler.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek metni strip ile temizle.
+Asistan:
+```python
+text = "  merhaba  "
+clean_text = text.strip()
+print(clean_text)
+```
+strip() baştaki ve sondaki boşlukları temizler.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: metni strip ile temizle.
+Asistan:
+```python
+text = "  merhaba  "
+clean_text = text.strip()
+print(clean_text)
+```
+strip() baştaki ve sondaki boşlukları temizler.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde metni strip ile temizle.
+Asistan:
+```python
+text = "  merhaba  "
+clean_text = text.strip()
+print(clean_text)
+```
+strip() baştaki ve sondaki boşlukları temizler.
+</s>
+
+<s>
+Kullanıcı: pathlib ile metin dosyası yaz.
+Asistan:
+```python
+from pathlib import Path
+path = Path("rapor.txt")
+path.write_text("Merhaba DarkMind", encoding="utf-8")
+```
+write_text() küçük metin dosyaları yazmak için pratiktir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle pathlib ile metin dosyası yaz.
+Asistan:
+```python
+from pathlib import Path
+path = Path("rapor.txt")
+path.write_text("Merhaba DarkMind", encoding="utf-8")
+```
+write_text() küçük metin dosyaları yazmak için pratiktir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için pathlib ile metin dosyası yaz.
+Asistan:
+```python
+from pathlib import Path
+path = Path("rapor.txt")
+path.write_text("Merhaba DarkMind", encoding="utf-8")
+```
+write_text() küçük metin dosyaları yazmak için pratiktir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla pathlib ile metin dosyası yaz.
+Asistan:
+```python
+from pathlib import Path
+path = Path("rapor.txt")
+path.write_text("Merhaba DarkMind", encoding="utf-8")
+```
+write_text() küçük metin dosyaları yazmak için pratiktir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için pathlib ile metin dosyası yaz.
+Asistan:
+```python
+from pathlib import Path
+path = Path("rapor.txt")
+path.write_text("Merhaba DarkMind", encoding="utf-8")
+```
+write_text() küçük metin dosyaları yazmak için pratiktir.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde pathlib ile metin dosyası yaz.
+Asistan:
+```python
+from pathlib import Path
+path = Path("rapor.txt")
+path.write_text("Merhaba DarkMind", encoding="utf-8")
+```
+write_text() küçük metin dosyaları yazmak için pratiktir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek pathlib ile metin dosyası yaz.
+Asistan:
+```python
+from pathlib import Path
+path = Path("rapor.txt")
+path.write_text("Merhaba DarkMind", encoding="utf-8")
+```
+write_text() küçük metin dosyaları yazmak için pratiktir.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: pathlib ile metin dosyası yaz.
+Asistan:
+```python
+from pathlib import Path
+path = Path("rapor.txt")
+path.write_text("Merhaba DarkMind", encoding="utf-8")
+```
+write_text() küçük metin dosyaları yazmak için pratiktir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde pathlib ile metin dosyası yaz.
+Asistan:
+```python
+from pathlib import Path
+path = Path("rapor.txt")
+path.write_text("Merhaba DarkMind", encoding="utf-8")
+```
+write_text() küçük metin dosyaları yazmak için pratiktir.
+</s>
+
+<s>
+Kullanıcı: metot içeren küçük sınıf yaz.
+Asistan:
+```python
+class Greeter:
+    def greet(self, name):
+        return f"Merhaba {name}"
+greeter = Greeter()
+print(greeter.greet("Ali"))
+```
+Metot, sınıf içinde tanımlanan fonksiyondur.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle metot içeren küçük sınıf yaz.
+Asistan:
+```python
+class Greeter:
+    def greet(self, name):
+        return f"Merhaba {name}"
+greeter = Greeter()
+print(greeter.greet("Ali"))
+```
+Metot, sınıf içinde tanımlanan fonksiyondur.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için metot içeren küçük sınıf yaz.
+Asistan:
+```python
+class Greeter:
+    def greet(self, name):
+        return f"Merhaba {name}"
+greeter = Greeter()
+print(greeter.greet("Ali"))
+```
+Metot, sınıf içinde tanımlanan fonksiyondur.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla metot içeren küçük sınıf yaz.
+Asistan:
+```python
+class Greeter:
+    def greet(self, name):
+        return f"Merhaba {name}"
+greeter = Greeter()
+print(greeter.greet("Ali"))
+```
+Metot, sınıf içinde tanımlanan fonksiyondur.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için metot içeren küçük sınıf yaz.
+Asistan:
+```python
+class Greeter:
+    def greet(self, name):
+        return f"Merhaba {name}"
+greeter = Greeter()
+print(greeter.greet("Ali"))
+```
+Metot, sınıf içinde tanımlanan fonksiyondur.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde metot içeren küçük sınıf yaz.
+Asistan:
+```python
+class Greeter:
+    def greet(self, name):
+        return f"Merhaba {name}"
+greeter = Greeter()
+print(greeter.greet("Ali"))
+```
+Metot, sınıf içinde tanımlanan fonksiyondur.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek metot içeren küçük sınıf yaz.
+Asistan:
+```python
+class Greeter:
+    def greet(self, name):
+        return f"Merhaba {name}"
+greeter = Greeter()
+print(greeter.greet("Ali"))
+```
+Metot, sınıf içinde tanımlanan fonksiyondur.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: metot içeren küçük sınıf yaz.
+Asistan:
+```python
+class Greeter:
+    def greet(self, name):
+        return f"Merhaba {name}"
+greeter = Greeter()
+print(greeter.greet("Ali"))
+```
+Metot, sınıf içinde tanımlanan fonksiyondur.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde metot içeren küçük sınıf yaz.
+Asistan:
+```python
+class Greeter:
+    def greet(self, name):
+        return f"Merhaba {name}"
+greeter = Greeter()
+print(greeter.greet("Ali"))
+```
+Metot, sınıf içinde tanımlanan fonksiyondur.
+</s>
+
+<s>
+Kullanıcı: metni id listesine çeviren örnek yaz.
+Asistan:
+```python
+from tokenizers import ByteLevelBPETokenizer
+tokenizer = ByteLevelBPETokenizer("vocab.json", "merges.txt")
+encoded = tokenizer.encode("Merhaba DarkMind")
+ids = encoded.ids
+print(ids)
+```
+encode() metni sayısal id listesine dönüştürür.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle metni id listesine çeviren örnek yaz.
+Asistan:
+```python
+from tokenizers import ByteLevelBPETokenizer
+tokenizer = ByteLevelBPETokenizer("vocab.json", "merges.txt")
+encoded = tokenizer.encode("Merhaba DarkMind")
+ids = encoded.ids
+print(ids)
+```
+encode() metni sayısal id listesine dönüştürür.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için metni id listesine çeviren örnek yaz.
+Asistan:
+```python
+from tokenizers import ByteLevelBPETokenizer
+tokenizer = ByteLevelBPETokenizer("vocab.json", "merges.txt")
+encoded = tokenizer.encode("Merhaba DarkMind")
+ids = encoded.ids
+print(ids)
+```
+encode() metni sayısal id listesine dönüştürür.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla metni id listesine çeviren örnek yaz.
+Asistan:
+```python
+from tokenizers import ByteLevelBPETokenizer
+tokenizer = ByteLevelBPETokenizer("vocab.json", "merges.txt")
+encoded = tokenizer.encode("Merhaba DarkMind")
+ids = encoded.ids
+print(ids)
+```
+encode() metni sayısal id listesine dönüştürür.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için metni id listesine çeviren örnek yaz.
+Asistan:
+```python
+from tokenizers import ByteLevelBPETokenizer
+tokenizer = ByteLevelBPETokenizer("vocab.json", "merges.txt")
+encoded = tokenizer.encode("Merhaba DarkMind")
+ids = encoded.ids
+print(ids)
+```
+encode() metni sayısal id listesine dönüştürür.
+</s>
+
+<s>
+Kullanıcı: Hata yapmadan basit şekilde metni id listesine çeviren örnek yaz.
+Asistan:
+```python
+from tokenizers import ByteLevelBPETokenizer
+tokenizer = ByteLevelBPETokenizer("vocab.json", "merges.txt")
+encoded = tokenizer.encode("Merhaba DarkMind")
+ids = encoded.ids
+print(ids)
+```
+encode() metni sayısal id listesine dönüştürür.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek metni id listesine çeviren örnek yaz.
+Asistan:
+```python
+from tokenizers import ByteLevelBPETokenizer
+tokenizer = ByteLevelBPETokenizer("vocab.json", "merges.txt")
+encoded = tokenizer.encode("Merhaba DarkMind")
+ids = encoded.ids
+print(ids)
+```
+encode() metni sayısal id listesine dönüştürür.
+</s>
+
+<s>
+Kullanıcı: Bunu küçük bir Python örneğiyle göster: metni id listesine çeviren örnek yaz.
+Asistan:
+```python
+from tokenizers import ByteLevelBPETokenizer
+tokenizer = ByteLevelBPETokenizer("vocab.json", "merges.txt")
+encoded = tokenizer.encode("Merhaba DarkMind")
+ids = encoded.ids
+print(ids)
+```
+encode() metni sayısal id listesine dönüştürür.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde metni id listesine çeviren örnek yaz.
+Asistan:
+```python
+from tokenizers import ByteLevelBPETokenizer
+tokenizer = ByteLevelBPETokenizer("vocab.json", "merges.txt")
+encoded = tokenizer.encode("Merhaba DarkMind")
+ids = encoded.ids
+print(ids)
+```
+encode() metni sayısal id listesine dönüştürür.
+</s>
+
+<s>
+Kullanıcı: Merhaba
+Asistan: Merhaba. Ben DarkMind. Şu anda küçük bir Türkçe dil modeli olarak geliştiriliyorum.
+</s>
+
+<s>
+Kullanıcı: Selam
+Asistan: Selam. Sana yazılım, yapay zeka ve DarkMind projesi hakkında yardımcı olmaya çalışabilirim.
+</s>
+
+<s>
+Kullanıcı: Naber?
+Asistan: İyiyim. Ben DarkMind projesinin küçük bir demo modeliyim. Sana teknik konularda yardımcı olmaya çalışabilirim.
+</s>
+
+<s>
+Kullanıcı: Nasılsın?
+Asistan: İyiyim. Şu anda geliştirme aşamasında olan küçük bir Türkçe dil modeliyim.
+</s>
+
+<s>
+Kullanıcı: naber
+Asistan: İyiyim. Ben DarkMind projesinin küçük bir demo modeliyim. Sana özellikle yazılım, yapay zeka ve model eğitimi konularında yardımcı olmaya çalışabilirim.
+</s>
+
+<s>
+Kullanıcı: naber?
+Asistan: İyiyim. Ben DarkMind projesinin küçük bir Türkçe dil modeli demosuyum.
+</s>
+
+<s>
+Kullanıcı: Naber
+Asistan: İyiyim. Şu anda geliştirilmekte olan küçük bir Türkçe dil modeliyim.
+</s>
+
+<s>
+Kullanıcı: Naber?
+Asistan: İyiyim. Sana teknik konularda yardımcı olmaya çalışabilirim.
+</s>
+
+<s>
+Kullanıcı: nasılsın
+Asistan: İyiyim. Ben DarkMind adlı küçük bir dil modeli projesiyim.
+</s>
+
+<s>
+Kullanıcı: nasılsın?
+Asistan: İyiyim. Şu anda daha iyi cevap verebilmek için geliştiriliyorum.
+</s>
+
+<s>
+Kullanıcı: selam
+Asistan: Selam. Ben DarkMind. Sana yazılım, yapay zeka ve proje geliştirme konularında yardımcı olmaya çalışabilirim.
+</s>
+
+<s>
+Kullanıcı: Merhaba
+Asistan: Merhaba. Ben DarkMind. Sınırlı bir Türkçe demo modeliyim ve özellikle yazılım, yapay zeka ve proje geliştirme konularında yardımcı olmaya çalışırım.
+</s>
+
+<s>
+Kullanıcı: Nasılsın?
+Asistan: Merhaba. Ben DarkMind. Sınırlı bir Türkçe demo modeliyim ve özellikle yazılım, yapay zeka ve proje geliştirme konularında yardımcı olmaya çalışırım.
+</s>
+
+<s>
+Kullanıcı: Bana yardım eder misin?
+Asistan: Merhaba. Ben DarkMind. Sınırlı bir Türkçe demo modeliyim ve özellikle yazılım, yapay zeka ve proje geliştirme konularında yardımcı olmaya çalışırım.
+</s>
+
+<s>
+Kullanıcı: Selam
+Asistan: Merhaba. Ben DarkMind. Sınırlı bir Türkçe demo modeliyim ve özellikle yazılım, yapay zeka ve proje geliştirme konularında yardımcı olmaya çalışırım.
+These are candidate examples. Review before adding to training data.
+Do not approve blindly. Keep only examples that are correct, useful, and safe.
+Source eval run: C:\Users\tarik\OneDrive\Ekler\Desktop\darkmind-30m\data\self_improvement\runs\eval_run_20260628_203812.jsonl
+Failed items: 21
+</s>
+
+<s>
+Kullanıcı: Selam
+Asistan: Merhaba. Ben DarkMind. Sınırlı bir Türkçe demo modeliyim ve özellikle yazılım, yapay zeka ve proje geliştirme konularında yardımcı olmaya çalışırım.
+</s>
+
+<s>
+Kullanıcı: pathlib ile dosya oku ve yaz
+Asistan: Path.read_text dosya okur, Path.write_text dosya yazar. Türkçe karakterler için utf-8 belirtmek iyi olur.
+```python
+from pathlib import Path
+path = Path("ornek.txt")
+path.write_text("Merhaba", encoding="utf-8")
+text = path.read_text(encoding="utf-8")
+print(text)
+```
+</s>

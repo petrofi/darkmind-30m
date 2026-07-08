@@ -1,0 +1,50 @@
+{"prompt":"Merhaba, sen kimsin?","expected_behavior":"identity"}
+{"prompt":"Sen kimsin?","expected_behavior":"identity"}
+{"prompt":"Kendini tanıtır mısın?","expected_behavior":"identity"}
+{"prompt":"DarkMind nedir?","expected_behavior":"identity"}
+{"prompt":"Seni kim geliştirdi?","expected_behavior":"identity"}
+{"prompt":"ChatGPT misin?","expected_behavior":"identity_confusion"}
+{"prompt":"Sen ChatGPT misin?","expected_behavior":"identity_confusion"}
+{"prompt":"OpenAI tarafından mı geliştirildin?","expected_behavior":"identity_confusion"}
+{"prompt":"Seni OpenAI mı geliştirdi?","expected_behavior":"identity_confusion"}
+{"prompt":"ChatGPT gibi misin?","expected_behavior":"identity_confusion"}
+{"prompt":"Python nedir?","expected_behavior":"programming_explanation"}
+{"prompt":"API nedir?","expected_behavior":"programming_explanation"}
+{"prompt":"Git commit nedir?","expected_behavior":"programming_explanation"}
+{"prompt":"Docker ne işe yarar?","expected_behavior":"programming_explanation"}
+{"prompt":"Backend nedir?","expected_behavior":"programming_explanation"}
+{"prompt":"Frontend nedir?","expected_behavior":"programming_explanation"}
+{"prompt":"JSONL nedir?","expected_behavior":"programming_explanation"}
+{"prompt":"Terminal nedir?","expected_behavior":"programming_explanation"}
+{"prompt":"Yapay zeka nedir?","expected_behavior":"ai_explanation"}
+{"prompt":"Dil modeli nedir?","expected_behavior":"ai_explanation"}
+{"prompt":"Token nedir?","expected_behavior":"ai_explanation"}
+{"prompt":"Fine-tuning nedir?","expected_behavior":"ai_explanation"}
+{"prompt":"Overfitting nedir?","expected_behavior":"ai_explanation"}
+{"prompt":"Validation loss nedir?","expected_behavior":"ai_explanation"}
+{"prompt":"Transformer nedir?","expected_behavior":"ai_explanation"}
+{"prompt":"Checkpoint nedir?","expected_behavior":"ai_explanation"}
+{"prompt":"Bugün kendimi kötü hissediyorum.","expected_behavior":"emotional_support"}
+{"prompt":"Motivasyonum düştü.","expected_behavior":"emotional_support"}
+{"prompt":"Çalışmaya devam etmekte zorlanıyorum.","expected_behavior":"emotional_support"}
+{"prompt":"Hata yapmaktan korkuyorum.","expected_behavior":"emotional_support"}
+{"prompt":"Çok stresliyim.","expected_behavior":"emotional_support"}
+{"prompt":"Odaklanamıyorum.","expected_behavior":"emotional_support"}
+{"prompt":"Başarısız gibi hissediyorum.","expected_behavior":"emotional_support"}
+{"prompt":"Bana moral verir misin?","expected_behavior":"emotional_support"}
+{"prompt":"Türkiye hakkında kısa bilgi ver.","expected_behavior":"general_knowledge"}
+{"prompt":"İstanbul hakkında kısa bilgi ver.","expected_behavior":"general_knowledge"}
+{"prompt":"Üniversite nedir?","expected_behavior":"general_knowledge"}
+{"prompt":"Bilim nedir?","expected_behavior":"general_knowledge"}
+{"prompt":"İnternet nedir?","expected_behavior":"general_knowledge"}
+{"prompt":"Teknoloji nedir?","expected_behavior":"general_knowledge"}
+{"prompt":"Kütüphane nedir?","expected_behavior":"general_knowledge"}
+{"prompt":"İletişim nedir?","expected_behavior":"general_knowledge"}
+{"prompt":"Kısa cevap ver.","expected_behavior":"style_control"}
+{"prompt":"Basitçe anlat.","expected_behavior":"style_control"}
+{"prompt":"Örnek vererek anlat.","expected_behavior":"style_control"}
+{"prompt":"Maddelerle yaz.","expected_behavior":"style_control"}
+{"prompt":"Güvenli sınırlarla cevap ver.","expected_behavior":"style_control"}
+{"prompt":"Adım adım anlat.","expected_behavior":"style_control"}
+{"prompt":"Özetle.","expected_behavior":"style_control"}
+{"prompt":"Yeni başlayan biri için anlat.","expected_behavior":"style_control"}

@@ -4,6 +4,7 @@ from pathlib import Path
 import argparse
 import json
 import sys
+import unicodedata
 
 import torch
 from tokenizers import ByteLevelBPETokenizer
@@ -15,7 +16,7 @@ sys.path.append(str(ROOT_DIR))
 from model.gpt import GPTConfig, GPTLanguageModel
 
 
-DEFAULT_EVAL_PATH = ROOT_DIR / "data" / "evals" / "darkmind_eval_v01.jsonl"
+DEFAULT_EVAL_PATH = ROOT_DIR / "data" / "evals" / "darkmind_eval_v02.jsonl"
 DEFAULT_OUTPUT_DIR = ROOT_DIR / "data" / "self_improvement" / "runs"
 TOKENIZER_DIR = ROOT_DIR / "tokenizer" / "darkmind-tokenizer"
 SEED = 42
@@ -156,18 +157,89 @@ def generate_answer(
     return extract_answer(output_text, prompt_text)
 
 
-def score_answer(answer: str, expected_keywords: list[str]) -> tuple[list[str], list[str]]:
-    answer_folded = answer.casefold()
+def normalize_for_match(text: str) -> str:
+    normalized = unicodedata.normalize("NFKC", text).casefold()
+    return normalized.replace("\u0307", "")
+
+
+def contains_match(answer: str, needle: str) -> bool:
+    return normalize_for_match(needle) in normalize_for_match(answer)
+
+
+def score_expected_keywords(
+    answer: str,
+    expected_keywords: list[str],
+) -> tuple[list[str], list[str]]:
     matched_keywords = []
     missing_keywords = []
 
     for keyword in expected_keywords:
-        if keyword.casefold() in answer_folded:
+        if contains_match(answer, keyword):
             matched_keywords.append(keyword)
         else:
             missing_keywords.append(keyword)
 
     return matched_keywords, missing_keywords
+
+
+def score_accepted_phrases(answer: str, accepted_phrases: list[str]) -> list[str]:
+    return [
+        phrase
+        for phrase in accepted_phrases
+        if contains_match(answer, phrase)
+    ]
+
+
+def score_keyword_groups(
+    answer: str,
+    keyword_groups: list[list[str]],
+) -> tuple[list[list[str]], list[list[str]]]:
+    matched_groups = []
+    missing_groups = []
+
+    for group in keyword_groups:
+        matched_terms = [
+            keyword
+            for keyword in group
+            if contains_match(answer, keyword)
+        ]
+
+        if matched_terms:
+            matched_groups.append(matched_terms)
+        else:
+            missing_groups.append(group)
+
+    return matched_groups, missing_groups
+
+
+def score_answer(
+    answer: str,
+    expected_keywords: list[str],
+    accepted_phrases: list[str] | None = None,
+    keyword_groups: list[list[str]] | None = None,
+) -> dict:
+    accepted_phrases = accepted_phrases or []
+    keyword_groups = keyword_groups or []
+
+    matched_keywords, missing_keywords = score_expected_keywords(
+        answer,
+        expected_keywords,
+    )
+    matched_phrases = score_accepted_phrases(answer, accepted_phrases)
+    matched_groups, missing_groups = score_keyword_groups(answer, keyword_groups)
+
+    expected_passed = len(missing_keywords) == 0
+    phrases_passed = len(matched_phrases) > 0
+    groups_passed = bool(keyword_groups) and len(missing_groups) == 0
+
+    return {
+        "matched_keywords": matched_keywords,
+        "missing_keywords": missing_keywords,
+        "matched_phrases": matched_phrases,
+        "matched_keyword_groups": matched_groups,
+        "missing_groups": missing_groups,
+        "passed": expected_passed or phrases_passed or groups_passed,
+    }
 
 
 def build_output_path(output_dir: Path) -> Path:
@@ -202,6 +274,8 @@ def run_evaluation(
 
     for item in eval_items:
         expected_keywords = item.get("expected_keywords", [])
+        accepted_phrases = item.get("accepted_phrases", [])
+        keyword_groups = item.get("keyword_groups", [])
         answer = generate_answer(
             model=model,
             tokenizer=tokenizer,
@@ -211,9 +285,11 @@ def run_evaluation(
             top_k=top_k,
             max_new_tokens=max_new_tokens,
         )
-        matched_keywords, missing_keywords = score_answer(
+        score = score_answer(
             answer,
             expected_keywords,
+            accepted_phrases,
+            keyword_groups,
         )
 
         results.append(
@@ -222,9 +298,15 @@ def run_evaluation(
                 "prompt": item["prompt"],
                 "answer": answer,
                 "expected_keywords": expected_keywords,
-                "matched_keywords": matched_keywords,
-                "missing_keywords": missing_keywords,
-                "passed": len(missing_keywords) == 0,
+                "matched_expected_keywords": score["matched_keywords"],
+                "matched_keywords": score["matched_keywords"],
+                "missing_keywords": score["missing_keywords"],
+                "accepted_phrases": accepted_phrases,
+                "matched_phrases": score["matched_phrases"],
+                "keyword_groups": keyword_groups,
+                "matched_keyword_groups": score["matched_keyword_groups"],
+                "missing_groups": score["missing_groups"],
+                "passed": score["passed"],
                 "category": item["category"],
             }
         )

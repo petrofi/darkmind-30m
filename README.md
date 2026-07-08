@@ -81,7 +81,7 @@ python scripts/train_tokenizer.py --data_path data/processed/corpus_v3.txt
 
 ### 3. Model Training
 ```powershell
-python scripts/train_from_config.py --config configs/darkmind_30m_1000step.json --data_path data/processed/corpus_v3.txt
+python scripts/train_tokenizer.py --data_path data/processed/splits/train.txt
 ```
 
 ---

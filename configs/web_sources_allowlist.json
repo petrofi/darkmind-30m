@@ -1,0 +1,19 @@
+{
+  "sources": [
+    {
+      "name": "example_source",
+      "base_url": "https://example.com",
+      "allowed_paths": [
+        "/"
+      ],
+      "license": "unknown",
+      "usage_status": "pending_review",
+      "notes": "Replace with a real allowed source before use."
+    }
+  ],
+  "global_settings": {
+    "rate_limit_seconds": 2,
+    "max_pages_per_run": 10,
+    "user_agent": "DarkMindResearchBot/0.1 educational dataset collection"
+  }
+}

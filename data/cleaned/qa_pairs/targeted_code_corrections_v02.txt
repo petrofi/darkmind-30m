@@ -1,0 +1,183 @@
+# bucket: targeted_code_corrections
+# difficulty: easy
+Kullanıcı: append ne işe yarar?
+Asistan: append, Python listesine sona yeni eleman ekler.
+```python
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)
+```
+Kullanıcı: python'da listeye eleman ekle
+Asistan: Listeye eleman eklemek için append kullanılır.
+```python
+items = ["a", "b"]
+items.append("c")
+print(items)
+```
+Kullanıcı: remove ne işe yarar?
+Asistan: remove, listede bulunan ilk eşleşen değeri siler. Değer listede yoksa hata oluşabilir.
+```python
+fruits = ["elma", "armut", "muz"]
+fruits.remove("armut")
+print(fruits)
+```
+Kullanıcı: listeden eleman siler misin?
+Asistan: Evet. Değeri biliyorsan remove kullanabilirsin.
+```python
+names = ["Ali", "Ayşe", "Can"]
+names.remove("Can")
+print(names)
+```
+Kullanıcı: sorted ne yapar?
+Asistan: sorted, verilen koleksiyondan yeni bir sıralı liste üretir. Orijinal listeyi değiştirmez.
+```python
+scores = [90, 70, 85]
+ordered_scores = sorted(scores)
+print(ordered_scores)
+```
+Kullanıcı: listeyi büyükten küçüğe sırala
+Asistan: sorted içinde reverse=True kullanabilirsin.
+```python
+numbers = [5, 1, 9]
+print(sorted(numbers, reverse=True))
+```
+Kullanıcı: dictionary get ne işe yarar?
+Asistan: get, sözlükte anahtar yoksa hata vermeden varsayılan değer döndürür.
+```python
+settings = {"theme": "dark"}
+language = settings.get("language", "tr")
+print(language)
+```
+Kullanıcı: sözlükte olmayan anahtarı güvenli oku
+Asistan: Bunun için get kullanmak iyi bir seçimdir.
+```python
+person = {"name": "Ayşe"}
+age = person.get("age", 0)
+print(age)
+```
+Kullanıcı: word count nasıl yapılır?
+Asistan: Metni kelimelere bölüp Counter ile sayabilirsin.
+```python
+from collections import Counter
+text = "temiz veri temiz model"
+counts = Counter(text.split())
+print(counts)
+```
+Kullanıcı: kelime sayacı örneği ver
+Asistan: Sözlükle de basit sayaç tutulabilir.
+```python
+words = ["veri", "model", "veri"]
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+print(counts)
+```
+Kullanıcı: list comprehension nedir?
+Asistan: List comprehension, döngü ve koşulu kısa şekilde kullanarak yeni liste üretme yöntemidir.
+```python
+numbers = [1, 2, 3, 4]
+evens = [number for number in numbers if number % 2 == 0]
+print(evens)
+```
+Kullanıcı: çift sayıları list comprehension ile seç
+Asistan: for ve if aynı satırda kullanılabilir.
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+evens = [number for number in numbers if number % 2 == 0]
+print(evens)
+```
+Kullanıcı: try except ne işe yarar?
+Asistan: try except, hata oluşabilecek kodu güvenli şekilde çalıştırmak için kullanılır.
+```python
+try:
+    number = int("42")
+    print(number)
+except ValueError:
+    print("Sayıya çevrilemedi")
+```
+Kullanıcı: TypeError neden olur?
+Asistan: TypeError genellikle uyumsuz veri tipleriyle işlem yapınca oluşur. Örneğin metin ile sayıyı doğrudan toplamak hatalıdır.
+```python
+value = "10"
+if isinstance(value, int):
+    print(value + 5)
+else:
+    print("Değer int değil")
+```
+Kullanıcı: ValueError nedir?
+Asistan: ValueError, tip doğru olsa bile değer beklenen formata uymadığında oluşur. Mesela "abc" metni int'e çevrilemez.
+```python
+try:
+    number = int("abc")
+except ValueError:
+    print("Geçerli sayı değil")
+```
+Kullanıcı: FileNotFoundError nasıl çözülür?
+Asistan: Dosya yolunu kontrol etmeli veya dosya yoksa güvenli davranmalısın.
+```python
+from pathlib import Path
+path = Path("notlar.txt")
+if path.exists():
+    print(path.read_text(encoding="utf-8"))
+else:
+    print("Dosya bulunamadı")
+```
+Kullanıcı: IndentationError neden olur?
+Asistan: IndentationError, Python bloklarında girinti eksik veya tutarsız olduğunda oluşur. if, for, def ve class satırlarından sonra içerik girintili olmalıdır.
+```python
+if True:
+    print("Girinti doğru")
+```
+Kullanıcı: class __init__ nedir?
+Asistan: __init__, sınıftan nesne oluşturulurken başlangıç değerlerini ayarlayan özel metottur.
+```python
+class User:
+    def __init__(self, name):
+        self.name = name
+user = User("Ayşe")
+print(user.name)
+```
+Kullanıcı: pathlib ile dosya oku ve yaz
+Asistan: Path.read_text dosya okur, Path.write_text dosya yazar. Türkçe karakterler için utf-8 belirtmek iyi olur.
+```python
+from pathlib import Path
+path = Path("ornek.txt")
+path.write_text("Merhaba", encoding="utf-8")
+text = path.read_text(encoding="utf-8")
+print(text)
+```
+Kullanıcı: json loads dumps farkı nedir?
+Asistan: json.loads JSON metnini Python verisine çevirir. json.dumps Python verisini JSON metnine çevirir.
+```python
+import json
+data = json.loads('{"name": "DarkMind"}')
+text = json.dumps(data, ensure_ascii=False)
+print(text)
+```
+Kullanıcı: simple pytorch tensor örneği ver
+Asistan: PyTorch'ta tensor oluşturmak için torch.tensor kullanılır.
+```python
+import torch
+values = torch.tensor([1, 2, 3])
+print(values)
+```
+Kullanıcı: tokenizer nedir?
+Asistan: Tokenizer, metni modelin kullanacağı sayısal id dizilerine çeviren bileşendir. Modelin eğitildiği tokenizer ile üretimde kullanılan tokenizer aynı olmalıdır.
+Kullanıcı: tokenizer definition yap
+Asistan: Kısa tanım: tokenizer metni parçalara ayırır, bu parçaları id değerlerine dönüştürür ve gerektiğinde id listesini tekrar metne çevirebilir.
+Kullanıcı: git status ne yapar?
+Asistan: git status, çalışma alanındaki değiştirilmiş, staged ve untracked dosyaları gösterir.
+Kullanıcı: git add commit push sırası nedir?
+Asistan: Genelde önce git status ile kontrol edilir, sonra git add ile dosyalar stage edilir, git commit ile kayıt alınır, git push ile uzak depoya gönderilir.
+Kullanıcı: venv activation windows nasıl yapılır?
+Asistan: PowerShell'de proje kök dizinindeyken sanal ortamı şöyle aktifleştirebilirsin:
+```python
+# PowerShell komutu olarak çalıştır:
+# .\.venv\Scripts\Activate.ps1
+```
+Kullanıcı: cuda check nasıl yapılır?
+Asistan: PyTorch ile CUDA kullanılabilirliğini torch.cuda.is_available() ile kontrol edebilirsin.
+```python
+import torch
+print(torch.cuda.is_available())
+```

@@ -1,0 +1,573 @@
+<s>
+Kullanıcı: fonksiyonun ne zaman kullanılacağını Türkçe açıkla.
+Asistan:
+Aynı işlemi birden fazla yerde yapıyorsan fonksiyon kullanmak iyi olur. Böylece kod daha okunabilir, test edilebilir ve tekrar kullanılabilir hale gelir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle fonksiyonun ne zaman kullanılacağını Türkçe açıkla.
+Asistan:
+Aynı işlemi birden fazla yerde yapıyorsan fonksiyon kullanmak iyi olur. Böylece kod daha okunabilir, test edilebilir ve tekrar kullanılabilir hale gelir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için fonksiyonun ne zaman kullanılacağını Türkçe açıkla.
+Asistan:
+Aynı işlemi birden fazla yerde yapıyorsan fonksiyon kullanmak iyi olur. Böylece kod daha okunabilir, test edilebilir ve tekrar kullanılabilir hale gelir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla fonksiyonun ne zaman kullanılacağını Türkçe açıkla.
+Asistan:
+Aynı işlemi birden fazla yerde yapıyorsan fonksiyon kullanmak iyi olur. Böylece kod daha okunabilir, test edilebilir ve tekrar kullanılabilir hale gelir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için fonksiyonun ne zaman kullanılacağını Türkçe açıkla.
+Asistan:
+Aynı işlemi birden fazla yerde yapıyorsan fonksiyon kullanmak iyi olur. Böylece kod daha okunabilir, test edilebilir ve tekrar kullanılabilir hale gelir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek fonksiyonun ne zaman kullanılacağını Türkçe açıkla.
+Asistan:
+Aynı işlemi birden fazla yerde yapıyorsan fonksiyon kullanmak iyi olur. Böylece kod daha okunabilir, test edilebilir ve tekrar kullanılabilir hale gelir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde fonksiyonun ne zaman kullanılacağını Türkçe açıkla.
+Asistan:
+Aynı işlemi birden fazla yerde yapıyorsan fonksiyon kullanmak iyi olur. Böylece kod daha okunabilir, test edilebilir ve tekrar kullanılabilir hale gelir.
+</s>
+
+<s>
+Kullanıcı: metin normalizasyonunu neden dikkatli yapmak gerektiğini açıkla.
+Asistan:
+Metni temizlerken Türkçe karakterleri bozmamak gerekir. Gereksiz boşlukları azaltmak faydalıdır ama anlamlı karakterleri silmek veri kalitesini düşürür.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle metin normalizasyonunu neden dikkatli yapmak gerektiğini açıkla.
+Asistan:
+Metni temizlerken Türkçe karakterleri bozmamak gerekir. Gereksiz boşlukları azaltmak faydalıdır ama anlamlı karakterleri silmek veri kalitesini düşürür.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için metin normalizasyonunu neden dikkatli yapmak gerektiğini açıkla.
+Asistan:
+Metni temizlerken Türkçe karakterleri bozmamak gerekir. Gereksiz boşlukları azaltmak faydalıdır ama anlamlı karakterleri silmek veri kalitesini düşürür.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla metin normalizasyonunu neden dikkatli yapmak gerektiğini açıkla.
+Asistan:
+Metni temizlerken Türkçe karakterleri bozmamak gerekir. Gereksiz boşlukları azaltmak faydalıdır ama anlamlı karakterleri silmek veri kalitesini düşürür.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için metin normalizasyonunu neden dikkatli yapmak gerektiğini açıkla.
+Asistan:
+Metni temizlerken Türkçe karakterleri bozmamak gerekir. Gereksiz boşlukları azaltmak faydalıdır ama anlamlı karakterleri silmek veri kalitesini düşürür.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek metin normalizasyonunu neden dikkatli yapmak gerektiğini açıkla.
+Asistan:
+Metni temizlerken Türkçe karakterleri bozmamak gerekir. Gereksiz boşlukları azaltmak faydalıdır ama anlamlı karakterleri silmek veri kalitesini düşürür.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde metin normalizasyonunu neden dikkatli yapmak gerektiğini açıkla.
+Asistan:
+Metni temizlerken Türkçe karakterleri bozmamak gerekir. Gereksiz boşlukları azaltmak faydalıdır ama anlamlı karakterleri silmek veri kalitesini düşürür.
+</s>
+
+<s>
+Kullanıcı: sonsuz döngü riskini açıkla.
+Asistan:
+while kullanırken koşulun bir noktada değiştiğinden emin olmalısın. Aksi halde program sonsuz döngüde kalabilir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle sonsuz döngü riskini açıkla.
+Asistan:
+while kullanırken koşulun bir noktada değiştiğinden emin olmalısın. Aksi halde program sonsuz döngüde kalabilir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için sonsuz döngü riskini açıkla.
+Asistan:
+while kullanırken koşulun bir noktada değiştiğinden emin olmalısın. Aksi halde program sonsuz döngüde kalabilir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla sonsuz döngü riskini açıkla.
+Asistan:
+while kullanırken koşulun bir noktada değiştiğinden emin olmalısın. Aksi halde program sonsuz döngüde kalabilir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için sonsuz döngü riskini açıkla.
+Asistan:
+while kullanırken koşulun bir noktada değiştiğinden emin olmalısın. Aksi halde program sonsuz döngüde kalabilir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek sonsuz döngü riskini açıkla.
+Asistan:
+while kullanırken koşulun bir noktada değiştiğinden emin olmalısın. Aksi halde program sonsuz döngüde kalabilir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde sonsuz döngü riskini açıkla.
+Asistan:
+while kullanırken koşulun bir noktada değiştiğinden emin olmalısın. Aksi halde program sonsuz döngüde kalabilir.
+</s>
+
+<s>
+Kullanıcı: dosya işlemlerinde neden encoding belirtmek gerektiğini açıkla.
+Asistan:
+Türkçe karakterlerin bozulmaması için dosya okuma ve yazmada encoding="utf-8" belirtmek güvenli bir alışkanlıktır.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle dosya işlemlerinde neden encoding belirtmek gerektiğini açıkla.
+Asistan:
+Türkçe karakterlerin bozulmaması için dosya okuma ve yazmada encoding="utf-8" belirtmek güvenli bir alışkanlıktır.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için dosya işlemlerinde neden encoding belirtmek gerektiğini açıkla.
+Asistan:
+Türkçe karakterlerin bozulmaması için dosya okuma ve yazmada encoding="utf-8" belirtmek güvenli bir alışkanlıktır.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla dosya işlemlerinde neden encoding belirtmek gerektiğini açıkla.
+Asistan:
+Türkçe karakterlerin bozulmaması için dosya okuma ve yazmada encoding="utf-8" belirtmek güvenli bir alışkanlıktır.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için dosya işlemlerinde neden encoding belirtmek gerektiğini açıkla.
+Asistan:
+Türkçe karakterlerin bozulmaması için dosya okuma ve yazmada encoding="utf-8" belirtmek güvenli bir alışkanlıktır.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek dosya işlemlerinde neden encoding belirtmek gerektiğini açıkla.
+Asistan:
+Türkçe karakterlerin bozulmaması için dosya okuma ve yazmada encoding="utf-8" belirtmek güvenli bir alışkanlıktır.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde dosya işlemlerinde neden encoding belirtmek gerektiğini açıkla.
+Asistan:
+Türkçe karakterlerin bozulmaması için dosya okuma ve yazmada encoding="utf-8" belirtmek güvenli bir alışkanlıktır.
+</s>
+
+<s>
+Kullanıcı: sınıf kullanmanın ne zaman mantıklı olduğunu açıkla.
+Asistan:
+Bir verinin birden fazla özelliği ve o veriyle ilişkili davranışları varsa sınıf kullanmak mantıklıdır. Çok küçük işlemler için fonksiyon yeterli olabilir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle sınıf kullanmanın ne zaman mantıklı olduğunu açıkla.
+Asistan:
+Bir verinin birden fazla özelliği ve o veriyle ilişkili davranışları varsa sınıf kullanmak mantıklıdır. Çok küçük işlemler için fonksiyon yeterli olabilir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için sınıf kullanmanın ne zaman mantıklı olduğunu açıkla.
+Asistan:
+Bir verinin birden fazla özelliği ve o veriyle ilişkili davranışları varsa sınıf kullanmak mantıklıdır. Çok küçük işlemler için fonksiyon yeterli olabilir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla sınıf kullanmanın ne zaman mantıklı olduğunu açıkla.
+Asistan:
+Bir verinin birden fazla özelliği ve o veriyle ilişkili davranışları varsa sınıf kullanmak mantıklıdır. Çok küçük işlemler için fonksiyon yeterli olabilir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için sınıf kullanmanın ne zaman mantıklı olduğunu açıkla.
+Asistan:
+Bir verinin birden fazla özelliği ve o veriyle ilişkili davranışları varsa sınıf kullanmak mantıklıdır. Çok küçük işlemler için fonksiyon yeterli olabilir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek sınıf kullanmanın ne zaman mantıklı olduğunu açıkla.
+Asistan:
+Bir verinin birden fazla özelliği ve o veriyle ilişkili davranışları varsa sınıf kullanmak mantıklıdır. Çok küçük işlemler için fonksiyon yeterli olabilir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde sınıf kullanmanın ne zaman mantıklı olduğunu açıkla.
+Asistan:
+Bir verinin birden fazla özelliği ve o veriyle ilişkili davranışları varsa sınıf kullanmak mantıklıdır. Çok küçük işlemler için fonksiyon yeterli olabilir.
+</s>
+
+<s>
+Kullanıcı: algoritma açıklarken karmaşıklığı nasıl sade anlatacağını açıkla.
+Asistan:
+Önce algoritmanın ne yaptığını, sonra hangi adımları izlediğini söylemelisin. Karmaşıklığı anlatırken küçük veri ve büyük veri farkını basit örnekle açıklamak yeterlidir.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle algoritma açıklarken karmaşıklığı nasıl sade anlatacağını açıkla.
+Asistan:
+Önce algoritmanın ne yaptığını, sonra hangi adımları izlediğini söylemelisin. Karmaşıklığı anlatırken küçük veri ve büyük veri farkını basit örnekle açıklamak yeterlidir.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için algoritma açıklarken karmaşıklığı nasıl sade anlatacağını açıkla.
+Asistan:
+Önce algoritmanın ne yaptığını, sonra hangi adımları izlediğini söylemelisin. Karmaşıklığı anlatırken küçük veri ve büyük veri farkını basit örnekle açıklamak yeterlidir.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla algoritma açıklarken karmaşıklığı nasıl sade anlatacağını açıkla.
+Asistan:
+Önce algoritmanın ne yaptığını, sonra hangi adımları izlediğini söylemelisin. Karmaşıklığı anlatırken küçük veri ve büyük veri farkını basit örnekle açıklamak yeterlidir.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için algoritma açıklarken karmaşıklığı nasıl sade anlatacağını açıkla.
+Asistan:
+Önce algoritmanın ne yaptığını, sonra hangi adımları izlediğini söylemelisin. Karmaşıklığı anlatırken küçük veri ve büyük veri farkını basit örnekle açıklamak yeterlidir.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek algoritma açıklarken karmaşıklığı nasıl sade anlatacağını açıkla.
+Asistan:
+Önce algoritmanın ne yaptığını, sonra hangi adımları izlediğini söylemelisin. Karmaşıklığı anlatırken küçük veri ve büyük veri farkını basit örnekle açıklamak yeterlidir.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde algoritma açıklarken karmaşıklığı nasıl sade anlatacağını açıkla.
+Asistan:
+Önce algoritmanın ne yaptığını, sonra hangi adımları izlediğini söylemelisin. Karmaşıklığı anlatırken küçük veri ve büyük veri farkını basit örnekle açıklamak yeterlidir.
+</s>
+
+<s>
+# bucket: pytorch_basics
+# difficulty: medium
+</s>
+
+<s>
+Kullanıcı: CLI aracında --help neden önemlidir açıkla.
+Asistan:
+--help çıktısı aracın hangi argümanları aldığını gösterir. Bu, yanlış komut çalıştırma riskini azaltır.
+</s>
+
+<s>
+Kullanıcı: Kısa bir örnekle CLI aracında --help neden önemlidir açıkla.
+Asistan:
+--help çıktısı aracın hangi argümanları aldığını gösterir. Bu, yanlış komut çalıştırma riskini azaltır.
+</s>
+
+<s>
+Kullanıcı: Yeni başlayan biri için CLI aracında --help neden önemlidir açıkla.
+Asistan:
+--help çıktısı aracın hangi argümanları aldığını gösterir. Bu, yanlış komut çalıştırma riskini azaltır.
+</s>
+
+<s>
+Kullanıcı: Türkçe açıklamayla CLI aracında --help neden önemlidir açıkla.
+Asistan:
+--help çıktısı aracın hangi argümanları aldığını gösterir. Bu, yanlış komut çalıştırma riskini azaltır.
+</s>
+
+<s>
+Kullanıcı: DarkMind eğitim verisi için CLI aracında --help neden önemlidir açıkla.
+Asistan:
+--help çıktısı aracın hangi argümanları aldığını gösterir. Bu, yanlış komut çalıştırma riskini azaltır.
+</s>
+
+<s>
+Kullanıcı: Kodun okunabilir olmasına dikkat ederek CLI aracında --help neden önemlidir açıkla.
+Asistan:
+--help çıktısı aracın hangi argümanları aldığını gösterir. Bu, yanlış komut çalıştırma riskini azaltır.
+</s>
+
+<s>
+Kullanıcı: Bilmiyorsan ne yaparsın? Yine de güvenli şekilde CLI aracında --help neden önemlidir açıkla.
+Asistan:
+--help çıktısı aracın hangi argümanları aldığını gösterir. Bu, yanlış komut çalıştırma riskini azaltır.
+</s>
+
+<s>
+Kullanıcı: Normal sohbet edebilir misin?
+Asistan: Şu anda sınırlı şekilde cevap verebilirim. Daha iyi sohbet edebilmem için daha büyük ve temiz bir veri setiyle eğitilmem gerekir.
+</s>
+
+<s>
+Kullanıcı: Her şeyi biliyor musun?
+Asistan: Hayır. Ben küçük bir modelim ve sadece eğitildiğim veri kadar cevap üretebilirim.
+</s>
+
+<s>
+Kullanıcı: Bilmediğin bir soru gelirse ne yaparsın?
+Asistan: Eğer konuyu bilmiyorsam kesin cevap vermek yerine sınırlı olduğumu söylemem daha doğru olur.
+</s>
+
+<s>
+Kullanıcı: Yapay zeka nedir?
+Asistan: Yapay zeka, makinelerin verilerden örüntüler öğrenerek tahmin, sınıflandırma veya üretim yapmasını sağlayan yöntemlerin genel adıdır.
+</s>
+
+<s>
+Kullanıcı: Şu an neden yanlış cevap veriyorsun?
+Asistan: Çünkü veri setim hâlâ küçük. Bazı kavramları karıştırabiliyorum. Daha fazla hedefli veriyle eğitildikçe cevaplarım iyileşebilir.
+</s>
+
+<s>
+Kullanıcı: cevapların neden yanlış
+Asistan: Çünkü hâlâ küçük bir modelim ve veri setim sınırlı. Daha fazla temiz ve hedefli veriyle eğitildikçe cevaplarım iyileşebilir.
+</s>
+
+<s>
+Kullanıcı: yanlış cevap verdin
+Asistan: Haklı olabilirsin. Ben hâlâ geliştirme aşamasındayım ve bazı sorularda yanlış konuya kayabilirim.
+</s>
+
+<s>
+Kullanıcı: darkmind hazır mı
+Asistan: Hayır. DarkMind bitmiş veya güçlü bir genel sohbet modeli değildir; geliştirme ve öğrenme amaçlı küçük bir projedir.
+</s>
+
+<s>
+Kullanıcı: Bu model tamamlandı mı?
+Asistan: Hayır. DarkMind bitmiş veya güçlü bir genel sohbet modeli değildir; geliştirme ve öğrenme amaçlı küçük bir projedir.
+</s>
+
+<s>
+Kullanıcı: DarkMind üretime hazır mı?
+Asistan: Hayır. DarkMind bitmiş veya güçlü bir genel sohbet modeli değildir; geliştirme ve öğrenme amaçlı küçük bir projedir.
+</s>
+
+<s>
+Kullanıcı: Sen bitmiş bir yapay zeka mısın?
+Asistan: Hayır. DarkMind bitmiş veya güçlü bir genel sohbet modeli değildir; geliştirme ve öğrenme amaçlı küçük bir projedir.
+</s>
+
+<s>
+Kullanıcı: Bu model gerçek üründe kullanılabilir mi?
+Asistan: Hayır. DarkMind bitmiş veya güçlü bir genel sohbet modeli değildir; geliştirme ve öğrenme amaçlı küçük bir projedir.
+</s>
+
+<s>
+Kullanıcı: causal mask nedir
+Asistan: Causal mask, modelin gelecek tokenları görmesini engeller ve sadece geçmiş bağlama göre tahmin yapmasını sağlar.
+</s>
+
+<s>
+Kullanıcı: Causal mask nedir?
+Asistan: Causal mask, modelin gelecek tokenları görmesini engeller ve sadece geçmiş bağlama göre tahmin yapmasını sağlar.
+</s>
+
+<s>
+Kullanıcı: Causal mask neden kullanılır?
+Asistan: Causal mask, modelin gelecek tokenları görmesini engeller ve sadece geçmiş bağlama göre tahmin yapmasını sağlar.
+</s>
+
+<s>
+Kullanıcı: Model neden geleceği görmemeli?
+Asistan: Causal mask, modelin gelecek tokenları görmesini engeller ve sadece geçmiş bağlama göre tahmin yapmasını sağlar.
+</s>
+
+<s>
+Kullanıcı: Causal mask ne işe yarar?
+Asistan: Causal mask, modelin gelecek tokenları görmesini engeller ve sadece geçmiş bağlama göre tahmin yapmasını sağlar.
+</s>
+
+<s>
+Kullanıcı: GPT'de maskeleme ne demek?
+Asistan: Causal mask, modelin gelecek tokenları görmesini engeller ve sadece geçmiş bağlama göre tahmin yapmasını sağlar.
+</s>
+
+<s>
+Kullanıcı: Gelecek tokenları kapatmak neden önemli?
+Asistan: Causal mask, modelin gelecek tokenları görmesini engeller ve sadece geçmiş bağlama göre tahmin yapmasını sağlar.
+</s>
+
+<s>
+Kullanıcı: attention nedir
+Asistan: Attention, modelin üretim yaparken hangi tokenlara daha fazla önem vereceğini öğrenmesini sağlayan mekanizmadır.
+</s>
+
+<s>
+Kullanıcı: Attention nedir?
+Asistan: Attention, modelin üretim yaparken hangi tokenlara daha fazla önem vereceğini öğrenmesini sağlayan mekanizmadır.
+</s>
+
+<s>
+Kullanıcı: Attention ne işe yarar?
+Asistan: Attention, modelin üretim yaparken hangi tokenlara daha fazla önem vereceğini öğrenmesini sağlayan mekanizmadır.
+</s>
+
+<s>
+Kullanıcı: Self attention ne demek?
+Asistan: Attention, modelin üretim yaparken hangi tokenlara daha fazla önem vereceğini öğrenmesini sağlayan mekanizmadır.
+</s>
+
+<s>
+Kullanıcı: Model hangi kelimeye bakacağını nasıl öğrenir?
+Asistan: Attention, modelin üretim yaparken hangi tokenlara daha fazla önem vereceğini öğrenmesini sağlayan mekanizmadır.
+</s>
+
+<s>
+Kullanıcı: Attention mekanizmasını açıkla
+Asistan: Attention, modelin üretim yaparken hangi tokenlara daha fazla önem vereceğini öğrenmesini sağlayan mekanizmadır.
+</s>
+
+<s>
+Kullanıcı: Attention neden önemli?
+Asistan: Attention, modelin üretim yaparken hangi tokenlara daha fazla önem vereceğini öğrenmesini sağlayan mekanizmadır.
+</s>
+
+<s>
+Kullanıcı: overfitting nedir
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf performans göstermesidir.
+</s>
+
+<s>
+Kullanıcı: Overfitting nedir?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf performans göstermesidir.
+</s>
+
+<s>
+Kullanıcı: Aşırı öğrenme ne demek?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf performans göstermesidir.
+</s>
+
+<s>
+Kullanıcı: Model neden ezberler?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf performans göstermesidir.
+</s>
+
+<s>
+Kullanıcı: Overfitting nasıl anlaşılır?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf performans göstermesidir.
+</s>
+
+<s>
+Kullanıcı: Train loss düşüp val loss yükselirse ne olur?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf performans göstermesidir.
+</s>
+
+<s>
+Kullanıcı: DarkMind overfit olabilir mi?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf performans göstermesidir.
+</s>
+
+<s>
+Kullanıcı: temiz veri nedir
+Asistan: Temiz veri; tekrarları, bozuk satırları ve gereksiz gürültüyü azaltılmış, okunabilir eğitim metnidir.
+</s>
+
+<s>
+Kullanıcı: Temiz veri nedir?
+Asistan: Temiz veri; tekrarları, bozuk satırları ve gereksiz gürültüyü azaltılmış, okunabilir eğitim metnidir.
+</s>
+
+<s>
+Kullanıcı: Clean data neden önemli?
+Asistan: Temiz veri; tekrarları, bozuk satırları ve gereksiz gürültüyü azaltılmış, okunabilir eğitim metnidir.
+</s>
+
+<s>
+Kullanıcı: Kirli veri modeli bozar mı?
+Asistan: Temiz veri; tekrarları, bozuk satırları ve gereksiz gürültüyü azaltılmış, okunabilir eğitim metnidir.
+</s>
+
+<s>
+Kullanıcı: Veri temizlemek ne işe yarar?
+Asistan: Temiz veri; tekrarları, bozuk satırları ve gereksiz gürültüyü azaltılmış, okunabilir eğitim metnidir.
+</s>
+
+<s>
+Kullanıcı: Boş satırlar neden temizlenir?
+Asistan: Temiz veri; tekrarları, bozuk satırları ve gereksiz gürültüyü azaltılmış, okunabilir eğitim metnidir.
+</s>
+
+<s>
+Kullanıcı: Kaliteli veri neden gerekli?
+Asistan: Temiz veri; tekrarları, bozuk satırları ve gereksiz gürültüyü azaltılmış, okunabilir eğitim metnidir.
+</s>
+
+<s>
+Kullanıcı: bilmiyorsan ne yaparsın
+Asistan: Bilmediğim konularda kesin konuşmamalıyım; sınırlı olduğumu söylemek daha doğru davranıştır.
+</s>
+
+<s>
+Kullanıcı: Bilmediğin soruda ne yaparsın?
+Asistan: Bilmediğim konularda kesin konuşmamalıyım; sınırlı olduğumu söylemek daha doğru davranıştır.
+</s>
+
+<s>
+Kullanıcı: Her şeyi biliyor musun?
+Asistan: Bilmediğim konularda kesin konuşmamalıyım; sınırlı olduğumu söylemek daha doğru davranıştır.
+</s>
+
+<s>
+Kullanıcı: Yanlış cevap verirsen ne olur?
+Asistan: Bilmediğim konularda kesin konuşmamalıyım; sınırlı olduğumu söylemek daha doğru davranıştır.
+</s>
+
+<s>
+Kullanıcı: Sana her konuda güvenebilir miyim?
+Asistan: Bilmediğim konularda kesin konuşmamalıyım; sınırlı olduğumu söylemek daha doğru davranıştır.
+</s>
+
+<s>
+Kullanıcı: Bilinmeyen sorularda nasıl davranmalısın?
+Asistan: Bilmediğim konularda kesin konuşmamalıyım; sınırlı olduğumu söylemek daha doğru davranıştır.
+</s>
+
+<s>
+Kullanıcı: Overfitting nedir?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf genelleme yapmasıdır.
+</s>
+
+<s>
+Kullanıcı: Validation loss yükselirse ne olabilir?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf genelleme yapmasıdır.
+</s>
+
+<s>
+Kullanıcı: Train loss düşerken validation loss artarsa ne düşünmeliyim?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf genelleme yapmasıdır.
+</s>
+
+<s>
+Kullanıcı: Validation loss yükselirse ne olabilir?
+Asistan: Validation loss yükselirse model eğitim verisini ezberliyor olabilir. Bu durum overfitting ve zayıf genelleme belirtisi olabilir.
+</s>
+
+<s>
+Kullanıcı: validation loss yükselirse ne olabilir
+Asistan: Validation loss yükselirse model eğitim verisini ezberliyor olabilir. Bu durum overfitting ve zayıf genelleme belirtisi olabilir.
+</s>
+
+<s>
+Kullanıcı: Validation loss artarsa ne düşünmeliyim?
+Asistan: Validation loss yükselirse model eğitim verisini ezberliyor olabilir. Bu durum overfitting ve zayıf genelleme belirtisi olabilir.
+</s>
+
+<s>
+Kullanıcı: Train loss düşerken validation loss artarsa ne düşünmeliyim?
+Asistan: Train loss düşerken validation loss artıyorsa overfitting olabilir. Model eğitim verisinde iyi görünür ama validation verisinde genelleme yapmakta zorlanır.
+</s>
+
+<s>
+Kullanıcı: train loss düşerken validation loss artarsa ne düşünmeliyim
+Asistan: Train loss düşerken validation loss artıyorsa overfitting olabilir. Model eğitim verisinde iyi görünür ama validation verisinde genelleme yapmakta zorlanır.
+</s>
+
+<s>
+Kullanıcı: Train loss azalırken validation loss yükselirse ne olur?
+Asistan: Train loss düşerken validation loss artıyorsa overfitting olabilir. Model eğitim verisinde iyi görünür ama validation verisinde genelleme yapmakta zorlanır.
+</s>

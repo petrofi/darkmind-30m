@@ -1,0 +1,7467 @@
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: beginner_python
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: functions
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: lists
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: dictionaries
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: strings
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: loops
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: conditionals
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: file_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: json_operations
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: error_handling
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: classes
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: algorithms
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: debugging
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: project_workflow
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: pytorch_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+# bucket: tokenizer_basics
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: cli_tools
+# difficulty: medium
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/python_examples/turkish_code_factory_v01.txt
+# score: 1
+# rejection_reasons: low score
+
+# bucket: git_basics
+# difficulty: easy
+
+---
+
+# source: data/cleaned/qa_pairs/chat_basics_variants_tr.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: merhaba
+Asistan: Merhaba. Ben DarkMind. Şu anda küçük bir Türkçe dil modeli olarak geliştiriliyorum.
+
+---
+
+# source: data/cleaned/qa_pairs/generated_qa_variants_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: sen kimsin
+Asistan: Ben DarkMind. Türkçe odaklı küçük bir dil modeli geliştirme projesiyim.
+
+---
+
+# source: data/cleaned/qa_pairs/generated_qa_variants_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Sen kimsin?
+Asistan: Ben DarkMind. Türkçe odaklı küçük bir dil modeli geliştirme projesiyim.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Her şeyi biliyor musun?
+Asistan: Bu konuda yeterli bilgiye sahip olmayabilirim. Emin değilsem uydurmak yerine sınırlı olduğumu söylemem daha doğru olur.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Bilmediğin bir soru gelirse ne yaparsın?
+Asistan: Bu konuda yeterli bilgiye sahip olmayabilirim. Emin değilsem uydurmak yerine sınırlı olduğumu söylemem daha doğru olur.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Tokenizer neden önemli?
+Asistan: Tokenizer, metni modelin işleyebileceği tokenlara ve token ID'lerine dönüştüren bileşendir.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Token ne demek?
+Asistan: Tokenizer, metni modelin işleyebileceği tokenlara ve token ID'lerine dönüştüren bileşendir.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: GPU eğitimde ne işe yarar?
+Asistan: CUDA, NVIDIA GPU üzerinde derin öğrenme işlemlerini hızlandırmak için kullanılan altyapıdır.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Checkpoint ile tokenizer uyumu neden önemli?
+Asistan: Checkpoint, model ağırlıklarını, config bilgisini ve eğitim durumunu daha sonra kullanmak için kaydeden dosyadır.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Python'da listeye eleman nasıl eklenir?
+Asistan: Python'da küçük ve doğru örneklerle ilerlemek gerekir; fonksiyonlar def ile tanımlanır, koşullar if/else ile yazılır ve listeler üzerinde döngü kurulabilir.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Corpus nasıl oluşturulur?
+Asistan: Data pipeline; ham veriyi toplama, temizleme, corpus oluşturma, tokenizer eğitme ve modeli eğitime hazırlama sürecidir.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Temiz veri neden önemli?
+Asistan: Data pipeline; ham veriyi toplama, temizleme, corpus oluşturma, tokenizer eğitme ve modeli eğitime hazırlama sürecidir.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: IndentationError nasıl çözülür?
+Asistan: Kod hatalarında önce hata mesajını okumalı, aktif sanal ortamı, doğru Python yorumlayıcısını, paketleri ve dosya yolunu kontrol etmelisin.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Nasılsın?
+Asistan: Merhaba. Ben DarkMind. Sınırlı bir Türkçe demo modeliyim ve özellikle yazılım, yapay zeka ve proje geliştirme konularında yardımcı olmaya çalışırım.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Cevabın yanlış olabilir mi?
+Asistan: Bu konuda yeterli bilgiye sahip olmayabilirim. Emin değilsem uydurmak yerine sınırlı olduğumu söylemem daha doğru olur.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Vocab nedir?
+Asistan: Tokenizer, metni modelin işleyebileceği tokenlara ve token ID'lerine dönüştüren bileşendir.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: CPU ile GPU arasındaki fark nedir?
+Asistan: CUDA, NVIDIA GPU üzerinde derin öğrenme işlemlerini hızlandırmak için kullanılan altyapıdır.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Train loss düşerken validation loss artarsa ne düşünmeliyim?
+Asistan: Overfitting, modelin eğitim verisini ezberleyip yeni örneklerde zayıf genelleme yapmasıdır.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Checkpoint dosyası ne içerir?
+Asistan: Checkpoint, model ağırlıklarını, config bilgisini ve eğitim durumunu daha sonra kullanmak için kaydeden dosyadır.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Python'da try except ne işe yarar?
+Asistan: Python'da küçük ve doğru örneklerle ilerlemek gerekir; fonksiyonlar def ile tanımlanır, koşullar if/else ile yazılır ve listeler üzerinde döngü kurulabilir.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: build_dataset_from_raw.py ne yapar?
+Asistan: Data pipeline; ham veriyi toplama, temizleme, corpus oluşturma, tokenizer eğitme ve modeli eğitime hazırlama sürecidir.
+
+---
+
+# source: data/cleaned/qa_pairs/self_improvement_approved_v01.txt
+# score: 0
+# rejection_reasons: duplicated exact example
+
+Kullanıcı: Yanlış Python interpreter kullanırsam ne olur?
+Asistan: Kod hatalarında önce hata mesajını okumalı, aktif sanal ortamı, doğru Python yorumlayıcısını, paketleri ve dosya yolunu kontrol etmelisin.
+
+---
+
+# source: data/cleaned/qa_pairs/targeted_code_corrections_v02.txt
+# score: 0
+# rejection_reasons: low score
+
+# bucket: targeted_code_corrections
+# difficulty: easy

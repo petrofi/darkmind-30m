@@ -1,357 +1,126 @@
-# DarkMind-30M
+# DarkMind-30M 🧠
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-CUDA%20ready-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/status-research%20prototype-orange)](#project-status)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/petrofi/darkmind-30m/blob/main/notebooks/Quick_Start.ipynb)
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.11-ee4c2c?logo=pytorch&logoColor=white)
+![CUDA](https://img.shields.io/badge/CUDA-12.8-76b900?logo=nvidia&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Stars](https://img.shields.io/github/stars/petrofi/darkmind-30m?style=social)
 
-DarkMind-30M is a Turkish-focused small language model research project. It includes a local tokenizer, GPT-style decoder-only Transformer models, data preparation tools, instruction-tuning experiments, evaluation scripts, and a teacher-student distillation track.
+> **A small-scale, decoder-only Large Language Model (LLM) built entirely from scratch in PyTorch.**
 
-This repository is intended for learning, controlled experimentation, and transparent iteration. It is not a production assistant and should not be treated as a high-stakes model.
+DarkMind-30M is a project aimed at demystifying the architecture behind modern LLMs (like GPT). Instead of fine-tuning an existing model, this repository contains a complete pipeline to build a mini-LLM from the ground up: from creating a custom Byte-Level BPE tokenizer to writing the Transformer architecture and executing a custom CUDA-accelerated training loop.
 
-## Project Status
+## 🌟 Key Features
+- **From-Scratch Architecture:** A custom Tiny-GPT style decoder-only Transformer model.
+- **Custom Tokenizer:** Includes scripts to train a Byte-Level BPE tokenizer on raw text data.
+- **End-to-End Pipeline:** Scripts for data cleaning, corpus generation, tokenization, model training, and interactive inference.
+- **CUDA Support:** Fully utilizes GPU acceleration for training (`PyTorch 2.11+cu128`).
+- **Unit Tested:** Built-in validation to ensure tensor shapes and forward passes remain stable.
 
-DarkMind is an active research prototype.
+---
 
-- Architecture: GPT-style decoder-only Transformer implemented in PyTorch.
-- Scale: 30M-family experiments, roughly 27M-30M parameters depending on tokenizer vocabulary size.
-- Primary language target: Turkish, with software-assistant behavior as the main applied track.
-- Current training strategy: continue from compatible checkpoints and use inspected instruction/distillation data.
-- Safety posture: no blind self-training, no unreviewed web scraping, no high-stakes use claims.
+## 🏗️ Architecture & Pipeline
 
-Important limitation: existing checkpoints and tokenizer compatibility matter. Do not replace the tokenizer for checkpoint-compatible pilot experiments unless the experiment explicitly calls for it.
-
-## Repository Layout
-
-```text
-.
-|-- configs/              Model and training configuration files
-|-- data/                 Local corpora, processed text, eval prompts, and generated data
-|-- darkmind_assistant/   Assistant/runtime experiments
-|-- darkmind_distill/     Qwen teacher-student distillation pipeline
-|-- darkmind_v2/          Phase 0 tokenizer, corpus, and base-eval validation infrastructure
-|-- docs/                 Experiment notes and pipeline documentation
-|-- experiments/          Experiment index and historical notes
-|-- model/                GPT model implementation
-|-- scripts/              Training, data, eval, tokenizer, and utility scripts
-|-- tests/                Unit tests
-|-- tokenizer/            Local ByteLevel BPE tokenizer files
+```mermaid
+graph TD
+    A[Raw Text Data] -->|clean_text.py| B(Cleaned Corpus)
+    B -->|build_dataset_from_raw.py| C(Corpus V3)
+    
+    C -->|train_tokenizer.py| D[Custom BPE Tokenizer]
+    C -->|train_from_config.py| E[Decoder-only Transformer]
+    
+    D --> E
+    E -->|CUDA Training Loop| F((darkmind_30m.pt))
+    
+    F -->|chat_demo.py| G[Interactive Inference]
 ```
 
-Large runtime artifacts such as checkpoints, generated JSONL datasets, local configs, logs, and reports are intentionally ignored by git.
+---
 
-## Quick Start
+## 🚀 Quick Start
 
-Create and activate a virtual environment:
+The fastest way to test the model architecture without setting up a local environment is via our Google Colab Notebook:
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/petrofi/darkmind-30m/blob/main/notebooks/Quick_Start.ipynb)
+
+### Local Installation
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/petrofi/darkmind-30m.git
+cd darkmind-30m
+```
+
+2. **Install requirements:**
+```bash
 pip install -r requirements.txt
 ```
 
-Run the unit tests:
-
-```powershell
-python -m pytest tests
+3. **Run the interactive chat demo:**
+*(Ensure you have a trained checkpoint at `checkpoints/darkmind_30m.pt`)*
+```bash
+python scripts/chat_demo.py --checkpoint checkpoints/darkmind_30m.pt --temperature 0.8
 ```
 
-Check that a Python file compiles:
+---
 
-```powershell
-python -m py_compile scripts/train_from_config.py model/gpt.py
-```
+## 🛠️ Data Pipeline Details
 
-## Model Training
-
-Train from a config and a plain text corpus:
-
-```powershell
-python scripts/train_from_config.py `
-  --config configs/darkmind_30m_1000step.json `
-  --data_path data/processed/corpus_v3.txt
-```
-
-Train from JSONL pretraining data:
-
-```powershell
-python scripts/train_from_jsonl.py `
-  --data data/processed/pretrain_corpus.jsonl `
-  --epochs 1 `
-  --batch_size 4 `
-  --block_size 256 `
-  --save_path models/darkmind-30m-pretrain.pt
-```
-
-Instruction fine-tuning from JSONL:
-
-```powershell
-python scripts/train_instruct_jsonl.py `
-  --data data/instruct/darkmind_instruct_seed.jsonl `
-  --base_checkpoint models/darkmind-30m-10k-step15000.pt `
-  --epochs 2 `
-  --batch_size 4 `
-  --block_size 256 `
-  --max_steps 250 `
-  --lr 0.000015 `
-  --save_path models/darkmind-30m-instruct-v0.1.pt
-```
-
-For GPU-only training, use:
-
-```powershell
-python scripts/train_instruct_jsonl.py --require-cuda ...
-```
-
-With `--require-cuda`, the script refuses to fall back to CPU/RAM training if PyTorch cannot see CUDA.
-
-## Inference
-
-Generate text from a checkpoint:
-
-```powershell
-python scripts/generate_from_checkpoint.py `
-  --checkpoint models/darkmind-30m-10k-step15000.pt `
-  --prompt "Kullanici: Python'da liste nedir?\nAsistan:" `
-  --max_new_tokens 120 `
-  --temperature 0.8 `
-  --top_k 50
-```
-
-Run the older chat demo flow:
-
-```powershell
-python scripts/chat_demo.py `
-  --checkpoint checkpoints/darkmind_30m.pt `
-  --temperature 0.8 `
-  --top_k 50 `
-  --max_new_tokens 120
-```
-
-## Data Pipeline
-
-Clean raw local text:
-
+### 1. Data Cleaning and Corpus Building
 ```powershell
 python scripts/clean_text.py
-```
-
-Build the combined corpus:
-
-```powershell
 python scripts/build_dataset_from_raw.py
+python scripts/dataset_quality_check.py
 ```
 
-Run quality checks:
-
+### 2. Tokenizer Training
 ```powershell
-python scripts/dataset_quality_check.py --path data/processed/corpus_v3.txt
+python scripts/train_tokenizer.py --data_path data/processed/corpus_v3.txt
 ```
 
-Build train/validation/test splits:
-
-```powershell
-python scripts/build_train_val_test.py
-```
-
-Train the tokenizer on a reviewed corpus:
-
+### 3. Model Training
 ```powershell
 python scripts/train_tokenizer.py --data_path data/processed/splits/train.txt
 ```
 
-Check eval leakage:
+---
+
+## 🤖 Self-Improvement Pipeline
+
+DarkMind uses a unique self-improvement loop that identifies weak answers, creates correction candidates, and awaits human approval before retraining.
 
 ```powershell
-python scripts/check_eval_leakage.py --eval_path data/evals/darkmind_eval_v02.jsonl
-```
-
-## Streaming Data
-
-Optional streaming-data dependencies:
-
-```powershell
-pip install -r requirements-data.txt
-```
-
-Smoke test Hugging Face streaming ingestion:
-
-```powershell
-python scripts/prepare_pretraining_data.py `
-  --max_docs 100 `
-  --out data/processed/pretrain_smoke.jsonl
-```
-
-Prepare a small local-scale corpus:
-
-```powershell
-python scripts/prepare_pretraining_data.py `
-  --max_docs 50000 `
-  --out data/processed/pretrain_corpus.jsonl
-```
-
-Do not download full FineWeb, RedPajama, The Stack, or gated datasets locally unless the licensing, storage, and compute plan has been reviewed.
-
-## Instruction and Self-Improvement Pipeline
-
-DarkMind includes a human-in-the-loop self-improvement workflow. It evaluates a checkpoint, creates candidate correction examples, and waits for explicit review before examples enter training data.
-
-Run evaluation prompts:
-
-```powershell
+# Evaluate model
 python scripts/eval_model.py --checkpoint checkpoints/darkmind_30m.pt
-```
 
-Generate correction candidates:
-
-```powershell
+# Generate and review candidates
 python scripts/generate_correction_candidates.py
+python scripts/approve_candidates.py --input_path data/self_improvement/pending_review/correction_candidates.txt --approve_all
 ```
 
-Run the convenience loop:
+---
 
-```powershell
-python scripts/self_improve_loop.py --checkpoint checkpoints/darkmind_30m.pt
-```
+<details>
+<summary>🇹🇷 Türkçe Dökümantasyon (Turkish Documentation)</summary>
 
-Approve candidates only after manual review:
+DarkMind-30M, Türkçe odaklı küçük bir dil modeli geliştirme projesidir. 
 
-```powershell
-python scripts/approve_candidates.py `
-  --input_path data/self_improvement/pending_review/correction_candidates_YYYYMMDD_HHMMSS.txt `
-  --approve_all
-```
+Hazır bir modeli fine-tune etmek yerine sıfırdan bir mini decoder-only Transformer mimarisi kurmayı, kendi tokenizer'ını eğitmeyi ve kendi training loop'u ile model eğitmeyi amaçlar.
 
-## Teacher-Student Distillation
+### Hedefler
+- Türkçe odaklı mini LLM geliştirmek
+- Kendi tokenizer'ını eğitmek
+- Decoder-only Transformer mimarisini sıfırdan yazmak
+- CUDA destekli eğitim pipeline'ı kurmak
 
-The `darkmind_distill/` directory contains a Qwen teacher-student distillation workflow. The goal is to generate synthetic instruction-response data with a stronger local teacher model, inspect it strictly, then train DarkMind as the student only when quality gates pass.
+### Mevcut Durum
+- Byte-Level BPE tokenizer eğitildi
+- Tiny GPT mimarisi yazıldı
+- CUDA aktif edildi
+- İlk checkpoint üretildi
+- Eğitim pipeline'ı başarıyla çalıştırıldı
+</details>
 
-Expected local teacher server:
-
-```text
-http://localhost:1234/v1
-model: local-model
-```
-
-Generate a small smoke dataset:
-
-```powershell
-python darkmind_distill/generate_qwen_distill_dataset.py --smoke
-```
-
-Generate controlled chunks:
-
-```powershell
-python darkmind_distill/generate_qwen_distill_dataset.py --max-new 100
-python darkmind_distill/generate_qwen_distill_dataset.py --target-total 300
-python darkmind_distill/generate_qwen_distill_dataset.py --categories programming,debugging --languages tr,en --max-new 50
-```
-
-Inspect staged milestones:
-
-```powershell
-python darkmind_distill/inspect_distill_dataset.py --target-mode staged --min-total 300
-python darkmind_distill/inspect_distill_dataset.py --target-mode full
-```
-
-Current Pilot500 TR/EN v2 workflow:
-
-```powershell
-python darkmind_distill/build_pilot500_tr_en_v2.py --batch-size 3
-python darkmind_distill/audit_pilot500_tr_en_v2.py
-python darkmind_distill/audit_multilingual_tokenizer.py `
-  --data darkmind_distill/data/darkmind_qwen_distill_pilot500_tr_en_v2.jsonl `
-  --report darkmind_distill/reports/pilot500_tr_en_v2_tokenizer_audit.md `
-  --block-size 256
-```
-
-Training is intentionally gated. Do not train on a distillation dataset until duplicate, contamination, tokenizer, eval-overlap, and distribution checks pass.
-
-## DarkMind-30M Pilot500 Failure Analysis
-
-Pilot500 TR/EN v2 was a controlled teacher-student distillation experiment, not a production release. The student used a 28,127,232 parameter DarkMind model and a 500-example Turkish-English Qwen teacher dataset.
-
-Final training metrics improved numerically, with train loss `3.4495` and validation loss `3.7017`, but generation quality failed. The base checkpoint failed `8/8` deterministic greedy generation tests, and the Pilot500 student produced mixed-script, corrupted, and semantically invalid output. The tokenizer audit found mojibake and encoding artifacts in the vocabulary, including forms like `TÃƒÂ¼rkiye` and `KullanÃ„Â±cÃ„Â±`.
-
-The SFT formatting, prompt masking, response supervision, EOS supervision, and label alignment were audited and verified as correct. The Pilot500 student checkpoint was not continued. This failure is kept as an engineering milestone and led to the DarkMind v2 base-pipeline redesign.
-
-See:
-
-- [darkmind_distill/reports/pilot500_failure_diagnosis.md](darkmind_distill/reports/pilot500_failure_diagnosis.md)
-- [docs/darkmind-v2-base-pipeline.md](docs/darkmind-v2-base-pipeline.md)
-- [darkmind_v2/README.md](darkmind_v2/README.md)
-
-## Evaluation
-
-Core evaluation scripts:
-
-```powershell
-python scripts/eval_model.py --checkpoint checkpoints/darkmind_30m.pt
-python scripts/eval_instruct_prompts.py --checkpoint models/darkmind-30m-instruct-v0.1.pt
-python scripts/compare_eval_runs.py --before reports/before.jsonl --after reports/after.jsonl
-```
-
-Pilot500 evaluation:
-
-```powershell
-python darkmind_distill/run_pilot500_eval.py eval `
-  --prompts darkmind_distill/data/pilot500_tr_en_v2_eval_prompts.jsonl `
-  --checkpoint models/darkmind-30m-10k-step15000.pt `
-  --out darkmind_distill/reports/pilot500_tr_en_v2_base_eval.md `
-  --json-out darkmind_distill/reports/pilot500_tr_en_v2_base_eval.jsonl
-```
-
-## Safety and Data Policy
-
-DarkMind follows a conservative research workflow:
-
-- No blind internet scraping.
-- No Reddit training data.
-- No automatic training on model outputs.
-- No unreviewed self-improvement examples.
-- No high-stakes medical, legal, financial, or security-sensitive claims.
-- No claims of ChatGPT-level capability.
-- Human review is required before generated examples enter training.
-
-See also:
-
-- [MODEL_CARD.md](MODEL_CARD.md)
-- [ROADMAP.md](ROADMAP.md)
-- [docs/data_pipeline.md](docs/data_pipeline.md)
-- [docs/experiments.md](docs/experiments.md)
-- [darkmind_distill/README.md](darkmind_distill/README.md)
-
-## Development Notes
-
-Check repository status:
-
-```powershell
-git status --short --branch
-```
-
-Run tests:
-
-```powershell
-python -m pytest tests
-```
-
-Compile changed Python files:
-
-```powershell
-python -m py_compile scripts/train_instruct_jsonl.py darkmind_distill/generate_qwen_distill_dataset.py
-```
-
-Sync release artifacts to Hugging Face only after reviewing the target repository and files:
-
-```powershell
-python scripts/hf_hub_sync.py --help
-```
-
-## License
-
-This project is released under the [MIT License](LICENSE).
-
-## Contributing
-
-Contributions should preserve the research discipline of the project: small scoped changes, documented experiments, explicit data provenance, and honest evaluation. See [CONTRIBUTING.md](CONTRIBUTING.md).
+## 📄 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

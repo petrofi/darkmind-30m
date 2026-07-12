@@ -1,0 +1,69 @@
+{
+  "schema_version": "darkmind-v2-public-research-preview-gates-v1",
+  "scope": {
+    "checkpoint": "step_000256_tokens_001048576",
+    "checkpoint_model_sha256": "5e2fd69d4775940629926a7bf659e36beafe4c1cd544feb8d97beeae6537b097",
+    "use": "Selected final Stage-1 checkpoint and future local Hugging Face research-preview package only"
+  },
+  "hard_failures": [
+    "tokenizer_hash_mismatch",
+    "tokenizer_artifact_mutation",
+    "checkpoint_hash_mismatch",
+    "model_config_mismatch",
+    "tokenized_corpus_provenance_mismatch",
+    "token_range_violation",
+    "invalid_unicode",
+    "generated_invalid_utf8_byte_sequence",
+    "replacement_character_from_generated_bytes",
+    "replacement_character",
+    "normal_piece_mojibake",
+    "confirmed_text_mojibake",
+    "decoder_exception",
+    "non_finite_logits",
+    "corrupted_safetensors",
+    "failed_auto_model_reload",
+    "failed_auto_tokenizer_reload",
+    "missing_model_card_disclosure",
+    "missing_corpus_attribution",
+    "missing_license_information"
+  ],
+  "quality_warnings": [
+    "repetition",
+    "unexpected_script",
+    "mixed_script",
+    "special_token_leakage",
+    "empty_output",
+    "very_short_output",
+    "incoherent_text",
+    "factual_unreliability",
+    "code_generation_failure"
+  ],
+  "generation": {
+    "greedy_max_new_tokens": 32,
+    "eos_aware": true,
+    "raw_output_retained": true,
+    "sanitization_allowed": false,
+    "sampling_profiles": {
+      "A": {"temperature": 0.7, "top_p": 0.9, "top_k": 40},
+      "B": {"temperature": 0.9, "top_p": 0.95, "top_k": 50}
+    },
+    "sampling_seeds": [20260712, 20260713, 20260714, 20260715, 20260716],
+    "minimum_greedy_generations": 200,
+    "minimum_seeded_generations": 500
+  },
+  "eligibility": {
+    "hard_failure_count_required": 0,
+    "offline_huggingface_reload_required": true,
+    "model_card_disclosures_required": true,
+    "corpus_attribution_required": true,
+    "license_information_required": true,
+    "quality_warnings_must_be_measured_and_disclosed": true
+  },
+  "prohibited_claims": [
+    "conversational",
+    "production-ready",
+    "fluent",
+    "safe",
+    "instruction-following"
+  ]
+}

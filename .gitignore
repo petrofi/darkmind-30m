@@ -60,3 +60,8 @@ darkmind_distill/reports/*.md
 darkmind_v2/data/phase1b/
 darkmind_v2/reports/phase1b_source_inventory.md
 darkmind_v2/reports/phase1b_source_gap_report.md
+
+# DarkMind v2 Phase 2A local/runtime artifacts
+darkmind_v2/data/phase2a/
+darkmind_v2/tests/fixtures/phase2a_export_output/
+darkmind_v2/reports/phase2a_runtime/

@@ -71,3 +71,32 @@ The next gate before tokenizer training is a reviewed corpus smoke test:
 
 The next phase is tiny base smoke planning for pipeline compatibility, not full pretraining. Any real base configuration must calculate its exact parameter count first and use tied input/output embeddings by default.
 
+## Phase 2A Pipeline Preparation
+
+Phase 1B is complete and the tokenizer under
+`tokenizer/frozen/darkmind_v2_sp_bpe24k_v1/` is immutable. Phase 2A prepares
+the tiny decoder-only model, frozen-tokenizer adapter, deterministic uint16
+fixture shards, checkpoint/resume path, base evaluation health checks, hardware
+probe, and local Hugging Face package validation.
+
+The tiny smoke architecture has 9,369,088 parameters with tied input/output
+embeddings. Fixture-only forward/backward and overfit checks validate plumbing,
+not language quality.
+
+## Phase 2B First Checkpoint Result
+
+The first real Stage-1 checkpoint completed 256 optimizer steps over 1,048,576
+training tokens. Full validation loss improved from 10.123761 to 7.096028 and
+eval loss reached 7.081271. Checkpoint reload, real process restart/resume,
+tokenizer/corpus provenance, and the local Hugging Face package all passed
+their mechanical integrity gates.
+
+The checkpoint is not publicly released. Its public research-preview audit
+failed: 89.5% of greedy outputs received repetition warnings, 65.5% contained
+exact repeated n-gram loops, and representative Turkish, English, technical,
+and code continuations remained largely incoherent. Model weights are not part
+of the source repository, and no Hugging Face upload occurred.
+
+Additional base pretraining and model-quality work are required. No SFT,
+teacher-data generation, or public release is allowed from this checkpoint.
+

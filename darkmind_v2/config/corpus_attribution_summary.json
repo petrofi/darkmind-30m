@@ -1,0 +1,58 @@
+{
+  "schema_version": "darkmind-v2-corpus-attribution-summary-v1",
+  "corpus_manifest_sha256": "283869111766281c89fb75f7cae43c1cdcb07d4bdbd5770f6685f6da4f74a4f1",
+  "corpus_deterministic_content_sha256": "b3c236af8020bdc414083dcdf36880dbedd82371331271ea42eb546ecf2934a2",
+  "full_attribution_manifest_sha256": "b820ec56a0c173604a5a97663c1ca510c7c78800d3e559722b23ffb74eb3120f",
+  "note": "This summary does not replace the full per-document attribution manifest. Redistribution must preserve source-specific attribution and license obligations.",
+  "sources": [
+    {
+      "source_id": "wikimedia_trwiki_20260601_articles_p1p1500000",
+      "name": "Turkish Wikipedia 2026-06-01 pages-articles split",
+      "license_id": "CC-BY-SA-4.0-and-GFDL",
+      "license_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+      "homepage": "https://tr.wikipedia.org/"
+    },
+    {
+      "source_id": "python_docs_en_3_14_6_text",
+      "name": "Python 3.14.6 English documentation",
+      "license_id": "PSF-2.0-docs-and-0BSD-examples",
+      "license_url": "https://docs.python.org/3/license.html",
+      "homepage": "https://docs.python.org/3/"
+    },
+    {
+      "source_id": "python_docs_tr_3_14_6_text",
+      "name": "Python 3.14.6 Turkish documentation",
+      "license_id": "PSF-2.0-docs-and-0BSD-examples",
+      "license_url": "https://docs.python.org/3/license.html",
+      "homepage": "https://docs.python.org/tr/3/"
+    },
+    {
+      "source_id": "tatoeba_sentences_detailed_20260704",
+      "name": "Tatoeba detailed sentence export",
+      "license_id": "CC-BY-2.0-FR",
+      "license_url": "https://tatoeba.org/en/terms_of_use",
+      "homepage": "https://tatoeba.org/"
+    },
+    {
+      "source_id": "wikimedia_enwikiversity_20260601_articles",
+      "name": "English Wikiversity 2026-06-01 pages-articles",
+      "license_id": "CC-BY-SA-4.0-and-GFDL",
+      "license_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+      "homepage": "https://en.wikiversity.org/"
+    },
+    {
+      "source_id": "wikimedia_trwikibooks_20260601_articles",
+      "name": "Turkish Wikibooks 2026-06-01 pages-articles",
+      "license_id": "CC-BY-SA-4.0",
+      "license_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+      "homepage": "https://tr.wikibooks.org/"
+    },
+    {
+      "source_id": "wikimedia_trwikivoyage_20260601_articles",
+      "name": "Turkish Wikivoyage 2026-06-01 pages-articles",
+      "license_id": "CC-BY-SA-4.0",
+      "license_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+      "homepage": "https://tr.wikivoyage.org/"
+    }
+  ]
+}

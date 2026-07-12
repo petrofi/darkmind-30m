@@ -1,0 +1,45 @@
+{
+  "checkpointing": {
+    "enabled": true,
+    "output_dir": "darkmind_v2/data/phase2a/checkpoints",
+    "save_optimizer_state": true,
+    "save_rng_state": true
+  },
+  "data": {
+    "manifest_path": "darkmind_v2/data/phase2a/tokenized/tokenized_corpus_manifest.json",
+    "sequence_length": 256
+  },
+  "device": "auto",
+  "evaluation": {
+    "generation_interval": 10,
+    "validation_interval": 5
+  },
+  "fixture_smoke": {
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.001,
+    "max_steps": 12,
+    "micro_batch_size": 1,
+    "sequence_length": 32
+  },
+  "gradient_clipping": 1.0,
+  "mixed_precision": "auto",
+  "model_config": "darkmind_v2/config/model_tiny_smoke.json",
+  "optimizer": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "name": "AdamW",
+    "weight_decay": 0.1
+  },
+  "planned_full_run": {
+    "learning_rate": null,
+    "micro_batch_size": null,
+    "requires_benchmark_approval": true
+  },
+  "schedule": {
+    "name": "warmup_cosine",
+    "warmup_steps": 2
+  },
+  "schema_version": "darkmind-v2-training-config-v1",
+  "seed": 20260712,
+  "tied_embeddings_required": true
+}

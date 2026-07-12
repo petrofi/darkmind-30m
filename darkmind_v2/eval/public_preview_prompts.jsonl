@@ -1,0 +1,200 @@
+{"id":"tr_ordinary_001","language":"tr","category":"ordinary_text","prompt":"Sabah erken saatlerde mahalle sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_002","language":"tr","category":"ordinary_text","prompt":"Sabah erken saatlerde mahalle hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_003","language":"tr","category":"ordinary_text","prompt":"Sabah erken saatlerde mahalle günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_004","language":"tr","category":"ordinary_text","prompt":"Akşam eve dönerken sokak sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_005","language":"tr","category":"ordinary_text","prompt":"Akşam eve dönerken sokak hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_006","language":"tr","category":"ordinary_text","prompt":"Akşam eve dönerken sokak günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_007","language":"tr","category":"ordinary_text","prompt":"Yağmurdan sonra küçük park sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_008","language":"tr","category":"ordinary_text","prompt":"Yağmurdan sonra küçük park hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_009","language":"tr","category":"ordinary_text","prompt":"Yağmurdan sonra küçük park günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_010","language":"tr","category":"ordinary_text","prompt":"Sessiz kütüphanenin giriş katı sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_011","language":"tr","category":"ordinary_text","prompt":"Sessiz kütüphanenin giriş katı hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_012","language":"tr","category":"ordinary_text","prompt":"Sessiz kütüphanenin giriş katı günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_013","language":"tr","category":"ordinary_text","prompt":"İstasyonda bekleyen yolcular sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_014","language":"tr","category":"ordinary_text","prompt":"İstasyonda bekleyen yolcular hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_015","language":"tr","category":"ordinary_text","prompt":"İstasyonda bekleyen yolcular günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_016","language":"tr","category":"ordinary_text","prompt":"Uzun toplantının ardından ofis sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_017","language":"tr","category":"ordinary_text","prompt":"Uzun toplantının ardından ofis hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_018","language":"tr","category":"ordinary_text","prompt":"Uzun toplantının ardından ofis günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_019","language":"tr","category":"ordinary_text","prompt":"Pazar yerindeki eski dükkân sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_020","language":"tr","category":"ordinary_text","prompt":"Pazar yerindeki eski dükkân hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_021","language":"tr","category":"ordinary_text","prompt":"Pazar yerindeki eski dükkân günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_022","language":"tr","category":"ordinary_text","prompt":"Deniz kıyısındaki yürüyüş yolu sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_023","language":"tr","category":"ordinary_text","prompt":"Deniz kıyısındaki yürüyüş yolu hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_024","language":"tr","category":"ordinary_text","prompt":"Deniz kıyısındaki yürüyüş yolu günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_025","language":"tr","category":"ordinary_text","prompt":"Kış sabahında mutfak sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_026","language":"tr","category":"ordinary_text","prompt":"Kış sabahında mutfak hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_027","language":"tr","category":"ordinary_text","prompt":"Kış sabahında mutfak günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_028","language":"tr","category":"ordinary_text","prompt":"Yaz akşamında balkon sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_029","language":"tr","category":"ordinary_text","prompt":"Yaz akşamında balkon hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_030","language":"tr","category":"ordinary_text","prompt":"Yaz akşamında balkon günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_031","language":"tr","category":"ordinary_text","prompt":"Okulun boş koridoru sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_032","language":"tr","category":"ordinary_text","prompt":"Okulun boş koridoru hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_033","language":"tr","category":"ordinary_text","prompt":"Okulun boş koridoru günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_034","language":"tr","category":"ordinary_text","prompt":"Şehir merkezindeki meydan sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_035","language":"tr","category":"ordinary_text","prompt":"Şehir merkezindeki meydan hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_036","language":"tr","category":"ordinary_text","prompt":"Şehir merkezindeki meydan günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_037","language":"tr","category":"ordinary_text","prompt":"Köy yolunun sonundaki ev sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_038","language":"tr","category":"ordinary_text","prompt":"Köy yolunun sonundaki ev hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_039","language":"tr","category":"ordinary_text","prompt":"Köy yolunun sonundaki ev günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_040","language":"tr","category":"ordinary_text","prompt":"Tren yolculuğundaki kompartıman sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_041","language":"tr","category":"ordinary_text","prompt":"Tren yolculuğundaki kompartıman hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_042","language":"tr","category":"ordinary_text","prompt":"Tren yolculuğundaki kompartıman günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_043","language":"tr","category":"ordinary_text","prompt":"Hafta sonu kurulan masa sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_044","language":"tr","category":"ordinary_text","prompt":"Hafta sonu kurulan masa hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_045","language":"tr","category":"ordinary_text","prompt":"Hafta sonu kurulan masa günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_046","language":"tr","category":"ordinary_text","prompt":"Yeni taşınılan apartman sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_047","language":"tr","category":"ordinary_text","prompt":"Yeni taşınılan apartman hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_048","language":"tr","category":"ordinary_text","prompt":"Yeni taşınılan apartman günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_049","language":"tr","category":"ordinary_text","prompt":"Öğle arasında küçük kafe sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_050","language":"tr","category":"ordinary_text","prompt":"Öğle arasında küçük kafe hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_051","language":"tr","category":"ordinary_text","prompt":"Öğle arasında küçük kafe günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_052","language":"tr","category":"ordinary_text","prompt":"Günün son otobüsü sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_053","language":"tr","category":"ordinary_text","prompt":"Günün son otobüsü hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_054","language":"tr","category":"ordinary_text","prompt":"Günün son otobüsü günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_055","language":"tr","category":"ordinary_text","prompt":"Bahçedeki yaşlı ağaç sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_056","language":"tr","category":"ordinary_text","prompt":"Bahçedeki yaşlı ağaç hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_057","language":"tr","category":"ordinary_text","prompt":"Bahçedeki yaşlı ağaç günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_058","language":"tr","category":"ordinary_text","prompt":"Müzenin sakin salonu sessiz görünüyordu çünkü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_059","language":"tr","category":"ordinary_text","prompt":"Müzenin sakin salonu hakkında ilk fark edilen ayrıntı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_ordinary_060","language":"tr","category":"ordinary_text","prompt":"Müzenin sakin salonu günlük yaşamın küçük bir parçası olarak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_001","language":"tr","category":"factual_encyclopedic","prompt":"Türkiye'nin başkenti olan Ankara","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_002","language":"tr","category":"factual_encyclopedic","prompt":"Karadeniz Türkiye'nin kuzeyinde","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_003","language":"tr","category":"factual_encyclopedic","prompt":"Dünya'nın doğal uydusu Ay","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_004","language":"tr","category":"factual_encyclopedic","prompt":"Suyun deniz seviyesindeki donma noktası","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_005","language":"tr","category":"factual_encyclopedic","prompt":"Bir yıldaki on iki ay","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_006","language":"tr","category":"factual_encyclopedic","prompt":"İstanbul Boğazı iki kıta arasında","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_007","language":"tr","category":"factual_encyclopedic","prompt":"Güneş Sistemi'nin merkezindeki yıldız","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_008","language":"tr","category":"factual_encyclopedic","prompt":"Cumhuriyetin ilan edildiği 1923 yılı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_009","language":"tr","category":"factual_encyclopedic","prompt":"Anadolu'nun en uzun nehri Kızılırmak","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_010","language":"tr","category":"factual_encyclopedic","prompt":"Akdeniz ikliminde yaz mevsimi","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_011","language":"tr","category":"factual_encyclopedic","prompt":"Fotosentez sırasında bitkiler","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_012","language":"tr","category":"factual_encyclopedic","prompt":"İnsan vücudundaki en büyük organ","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_013","language":"tr","category":"factual_encyclopedic","prompt":"Bir üçgenin iç açılarının toplamı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_014","language":"tr","category":"factual_encyclopedic","prompt":"Işığın boşluktaki yaklaşık hızı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_015","language":"tr","category":"factual_encyclopedic","prompt":"Demirin kimyasal simgesi","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_016","language":"tr","category":"factual_encyclopedic","prompt":"Türkiye'nin en yüksek dağı Ağrı Dağı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_017","language":"tr","category":"factual_encyclopedic","prompt":"Marmara Denizi'nin konumu","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_018","language":"tr","category":"factual_encyclopedic","prompt":"Mevsimlerin oluşmasının temel nedeni","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_019","language":"tr","category":"factual_encyclopedic","prompt":"Arıların ekosistemdeki önemli rolü","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_020","language":"tr","category":"factual_encyclopedic","prompt":"Kutup bölgelerinde görülen aurora","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_021","language":"tr","category":"factual_encyclopedic","prompt":"Osmanlı İmparatorluğu'nun kuruluş dönemi","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_022","language":"tr","category":"factual_encyclopedic","prompt":"Kapadokya'nın jeolojik oluşumları","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_023","language":"tr","category":"factual_encyclopedic","prompt":"Pamukkale'deki travertenler","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_024","language":"tr","category":"factual_encyclopedic","prompt":"Van Gölü Türkiye'nin doğusunda","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_025","language":"tr","category":"factual_encyclopedic","prompt":"Sesin yayılması için gereken ortam","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_026","language":"tr","category":"factual_encyclopedic","prompt":"Bir saatin altmış dakikadan oluşması","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_027","language":"tr","category":"factual_encyclopedic","prompt":"DNA'nın kalıtsal bilgiyi taşıması","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_028","language":"tr","category":"factual_encyclopedic","prompt":"Atmosferde en bol bulunan gaz","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_029","language":"tr","category":"factual_encyclopedic","prompt":"Depremleri kaydeden sismograf","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_factual_030","language":"tr","category":"factual_encyclopedic","prompt":"Bilgisayarlarda ikili sayı sistemi","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_001","language":"tr","category":"technical","prompt":"Python'da bir listenin elemanlarını gezerken","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_002","language":"tr","category":"technical","prompt":"Bir HTTP sunucusu gelen isteği işlerken","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_003","language":"tr","category":"technical","prompt":"Veritabanı transaction işlemi başlatıldığında","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_004","language":"tr","category":"technical","prompt":"Git üzerinde yeni bir dal oluşturulduğunda","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_005","language":"tr","category":"technical","prompt":"Bir JSON belgesi ayrıştırılırken","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_006","language":"tr","category":"technical","prompt":"Bellek kullanımını azaltmak için akış tabanlı işleme","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_007","language":"tr","category":"technical","prompt":"Makine öğrenmesi modelinin eğitim döngüsünde","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_008","language":"tr","category":"technical","prompt":"Birim testinin temel amacı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_009","language":"tr","category":"technical","prompt":"REST API yanıtındaki durum kodu","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_010","language":"tr","category":"technical","prompt":"Şifrelerin güvenli biçimde saklanması","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_011","language":"tr","category":"technical","prompt":"Bir dosyanın SHA-256 özeti","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_012","language":"tr","category":"technical","prompt":"Docker container başlatıldığında","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_013","language":"tr","category":"technical","prompt":"Asenkron bir fonksiyon beklenirken","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_014","language":"tr","category":"technical","prompt":"SQL sorgusunda indeks kullanımı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_015","language":"tr","category":"technical","prompt":"Transformer modelindeki attention katmanı","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_016","language":"tr","category":"technical","prompt":"Tokenizer metni parçalara ayırırken","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_017","language":"tr","category":"technical","prompt":"Bir hata günlüğündeki stack trace","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_018","language":"tr","category":"technical","prompt":"Yapılandırma dosyasındaki ortam değişkeni","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_019","language":"tr","category":"technical","prompt":"CUDA üzerinde tensor işlemi","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"tr_technical_020","language":"tr","category":"technical","prompt":"Model checkpoint'i yeniden yüklenirken","expected_script":"latin_tr","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_001","language":"en","category":"ordinary_text","prompt":"Early in the morning the neighborhood seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_002","language":"en","category":"ordinary_text","prompt":"Early in the morning the neighborhood first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_003","language":"en","category":"ordinary_text","prompt":"After the long meeting the office seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_004","language":"en","category":"ordinary_text","prompt":"After the long meeting the office first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_005","language":"en","category":"ordinary_text","prompt":"When the rain stopped the small park seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_006","language":"en","category":"ordinary_text","prompt":"When the rain stopped the small park first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_007","language":"en","category":"ordinary_text","prompt":"At the quiet end of the station seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_008","language":"en","category":"ordinary_text","prompt":"At the quiet end of the station first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_009","language":"en","category":"ordinary_text","prompt":"During the last bus ride home seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_010","language":"en","category":"ordinary_text","prompt":"During the last bus ride home first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_011","language":"en","category":"ordinary_text","prompt":"The kitchen window in winter seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_012","language":"en","category":"ordinary_text","prompt":"The kitchen window in winter first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_013","language":"en","category":"ordinary_text","prompt":"A table near the library entrance seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_014","language":"en","category":"ordinary_text","prompt":"A table near the library entrance first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_015","language":"en","category":"ordinary_text","prompt":"The old shop on the corner seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_016","language":"en","category":"ordinary_text","prompt":"The old shop on the corner first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_017","language":"en","category":"ordinary_text","prompt":"While walking beside the river seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_018","language":"en","category":"ordinary_text","prompt":"While walking beside the river first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_019","language":"en","category":"ordinary_text","prompt":"At the end of a busy afternoon seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_020","language":"en","category":"ordinary_text","prompt":"At the end of a busy afternoon first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_021","language":"en","category":"ordinary_text","prompt":"The empty classroom after school seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_022","language":"en","category":"ordinary_text","prompt":"The empty classroom after school first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_023","language":"en","category":"ordinary_text","prompt":"A short conversation in the hallway seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_024","language":"en","category":"ordinary_text","prompt":"A short conversation in the hallway first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_025","language":"en","category":"ordinary_text","prompt":"The first cup of tea that morning seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_026","language":"en","category":"ordinary_text","prompt":"The first cup of tea that morning first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_027","language":"en","category":"ordinary_text","prompt":"The apartment across the street seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_028","language":"en","category":"ordinary_text","prompt":"The apartment across the street first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_029","language":"en","category":"ordinary_text","prompt":"A notebook left on the desk seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_030","language":"en","category":"ordinary_text","prompt":"A notebook left on the desk first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_031","language":"en","category":"ordinary_text","prompt":"The evening light over the city seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_032","language":"en","category":"ordinary_text","prompt":"The evening light over the city first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_033","language":"en","category":"ordinary_text","prompt":"The garden after several dry days seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_034","language":"en","category":"ordinary_text","prompt":"The garden after several dry days first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_035","language":"en","category":"ordinary_text","prompt":"A traveler waiting at the platform seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_036","language":"en","category":"ordinary_text","prompt":"A traveler waiting at the platform first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_037","language":"en","category":"ordinary_text","prompt":"The museum room near closing time seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_038","language":"en","category":"ordinary_text","prompt":"The museum room near closing time first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_039","language":"en","category":"ordinary_text","prompt":"A familiar song from another room seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_040","language":"en","category":"ordinary_text","prompt":"A familiar song from another room first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_041","language":"en","category":"ordinary_text","prompt":"The weekend market near the square seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_042","language":"en","category":"ordinary_text","prompt":"The weekend market near the square first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_043","language":"en","category":"ordinary_text","prompt":"A letter found inside the drawer seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_044","language":"en","category":"ordinary_text","prompt":"A letter found inside the drawer first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_045","language":"en","category":"ordinary_text","prompt":"The narrow road beyond the village seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_046","language":"en","category":"ordinary_text","prompt":"The narrow road beyond the village first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_047","language":"en","category":"ordinary_text","prompt":"A quiet seat beside the window seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_048","language":"en","category":"ordinary_text","prompt":"A quiet seat beside the window first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_049","language":"en","category":"ordinary_text","prompt":"The final page of the book seemed unusually quiet because","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_ordinary_050","language":"en","category":"ordinary_text","prompt":"The final page of the book first drew attention when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_001","language":"en","category":"factual_encyclopedic","prompt":"The capital city of Turkey is Ankara, which","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_002","language":"en","category":"factual_encyclopedic","prompt":"Water at standard pressure freezes at","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_003","language":"en","category":"factual_encyclopedic","prompt":"The Earth completes one orbit around the Sun in","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_004","language":"en","category":"factual_encyclopedic","prompt":"The Moon is the natural satellite of","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_005","language":"en","category":"factual_encyclopedic","prompt":"A week is divided into seven","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_006","language":"en","category":"factual_encyclopedic","prompt":"The chemical symbol for iron is","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_007","language":"en","category":"factual_encyclopedic","prompt":"Plants use sunlight during photosynthesis to","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_008","language":"en","category":"factual_encyclopedic","prompt":"The largest ocean on Earth is","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_009","language":"en","category":"factual_encyclopedic","prompt":"The speed of light in vacuum is approximately","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_010","language":"en","category":"factual_encyclopedic","prompt":"The human heart pumps blood through","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_011","language":"en","category":"factual_encyclopedic","prompt":"The atmosphere is composed mostly of","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_012","language":"en","category":"factual_encyclopedic","prompt":"A triangle has three sides and","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_013","language":"en","category":"factual_encyclopedic","prompt":"The Pacific Ocean lies between","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_014","language":"en","category":"factual_encyclopedic","prompt":"Sound requires a medium in order to","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_015","language":"en","category":"factual_encyclopedic","prompt":"Binary notation represents values using","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_016","language":"en","category":"factual_encyclopedic","prompt":"DNA stores hereditary information in","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_017","language":"en","category":"factual_encyclopedic","prompt":"The Sahara is a large desert located in","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_018","language":"en","category":"factual_encyclopedic","prompt":"Mount Everest is part of the","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_019","language":"en","category":"factual_encyclopedic","prompt":"The freezing and boiling points of water","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_factual_020","language":"en","category":"factual_encyclopedic","prompt":"An earthquake is commonly recorded by","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_technical_001","language":"en","category":"technical","prompt":"In Python a context manager is used to","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_technical_002","language":"en","category":"technical","prompt":"An HTTP request includes a method and","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_technical_003","language":"en","category":"technical","prompt":"A database index can improve query performance by","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_technical_004","language":"en","category":"technical","prompt":"A Git commit records a snapshot of","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_technical_005","language":"en","category":"technical","prompt":"A JSON parser should reject malformed input when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_technical_006","language":"en","category":"technical","prompt":"A unit test verifies that a small component","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_technical_007","language":"en","category":"technical","prompt":"A transformer attention layer computes","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_technical_008","language":"en","category":"technical","prompt":"A cryptographic hash function maps input data to","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_technical_009","language":"en","category":"technical","prompt":"A Docker container runs an application with","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"en_technical_010","language":"en","category":"technical","prompt":"A model checkpoint should preserve optimizer state when","expected_script":"latin_en","maximum_repetition_ratio":0.35}
+{"id":"code_structured_001","language":"code","category":"code_structured","prompt":"for item in items:\n    result =","expected_script":"latin_code","maximum_repetition_ratio":0.35}
+{"id":"code_structured_002","language":"code","category":"code_structured","prompt":"def calculate_total(values):\n    total = 0\n    for value in values:","expected_script":"latin_code","maximum_repetition_ratio":0.35}
+{"id":"code_structured_003","language":"code","category":"code_structured","prompt":"if response.status_code == 200:\n    data =","expected_script":"latin_code","maximum_repetition_ratio":0.35}
+{"id":"code_structured_004","language":"code","category":"code_structured","prompt":"SELECT id, name FROM users WHERE","expected_script":"latin_code","maximum_repetition_ratio":0.35}
+{"id":"code_structured_005","language":"code","category":"code_structured","prompt":"CREATE TABLE events (\n    id INTEGER PRIMARY KEY,","expected_script":"latin_code","maximum_repetition_ratio":0.35}
+{"id":"code_structured_006","language":"code","category":"code_structured","prompt":"const values = [1, 2, 3];\nconst doubled = values.map(","expected_script":"latin_code","maximum_repetition_ratio":0.35}
+{"id":"code_structured_007","language":"code","category":"code_structured","prompt":"function validateInput(value) {\n  if (!value)","expected_script":"latin_code","maximum_repetition_ratio":0.35}
+{"id":"code_structured_008","language":"code","category":"code_structured","prompt":"class Counter:\n    def __init__(self):\n        self.value =","expected_script":"latin_code","maximum_repetition_ratio":0.35}
+{"id":"code_structured_009","language":"code","category":"code_structured","prompt":"{\n  \"name\": \"darkmind-preview\",\n  \"version\":","expected_script":"latin_code","maximum_repetition_ratio":0.35}
+{"id":"code_structured_010","language":"code","category":"code_structured","prompt":"try:\n    with open(path, \"r\", encoding=\"utf-8\") as handle:","expected_script":"latin_code","maximum_repetition_ratio":0.35}

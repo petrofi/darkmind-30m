@@ -1,0 +1,44 @@
+{
+  "byte_fallback": true,
+  "creation_command": "SentencePieceTrainer.train({\"add_dummy_prefix\": false, \"bos_id\": 2, \"bos_piece\": \"<s>\", \"byte_fallback\": true, \"character_coverage\": 1.0, \"eos_id\": 3, \"eos_piece\": \"</s>\", \"hard_vocab_limit\": true, \"input\": \"C:\\\\Users\\\\tarik\\\\OneDrive\\\\Ekler\\\\Desktop\\\\darkmind-v2-phase1b\\\\darkmind_v2\\\\data\\\\phase1b\\\\processed\\\\tokenizer_train.txt\", \"input_sentence_size\": 0, \"max_sentence_length\": 65536, \"model_prefix\": \"C:\\\\Users\\\\tarik\\\\OneDrive\\\\Ekler\\\\Desktop\\\\darkmind-v2-phase1b\\\\darkmind_v2\\\\data\\\\phase1b\\\\tokenizers\\\\candidate_d_bpe24k\\\\tokenizer\", \"model_type\": \"bpe\", \"normalization_rule_name\": \"identity\", \"num_threads\": 1, \"pad_id\": 0, \"pad_piece\": \"<pad>\", \"remove_extra_whitespaces\": false, \"shuffle_input_sentence\": false, \"split_digits\": true, \"unk_id\": 1, \"unk_piece\": \"<unk>\", \"user_defined_symbols\": [\"<|system|>\", \"<|user|>\", \"<|assistant|>\", \"<|end|>\"], \"vocab_size\": 24000})",
+  "deterministic_content_hash": "76e93ba195665fe281a83a25af39ce5c0442d1c3332a69bd8a62bbb6159d5f36",
+  "generation_timestamp": "2026-07-11T07:02:34+00:00",
+  "immutable": true,
+  "normalization_rules": {
+    "add_dummy_prefix": false,
+    "remove_extra_whitespaces": false,
+    "sentencepiece_rule": "identity",
+    "unicode": "NFC"
+  },
+  "special_token_ids": {
+    "</s>": 3,
+    "<pad>": 0,
+    "<s>": 2,
+    "<unk>": 1,
+    "<|assistant|>": 6,
+    "<|end|>": 7,
+    "<|system|>": 4,
+    "<|user|>": 5
+  },
+  "special_tokens": [
+    "<pad>",
+    "<unk>",
+    "<s>",
+    "</s>",
+    "<|system|>",
+    "<|user|>",
+    "<|assistant|>",
+    "<|end|>"
+  ],
+  "tokenizer_file_hashes": {
+    "tokenizer.model": "db116d4bcf315a6d2a7c5191cbea719d5751c9ba839778eba7e243d520253445",
+    "tokenizer.vocab": "f098fecdd4f610ce5b150be09e56e7648211e1ecb076ad6f38af71cee25344ed",
+    "training_config.json": "a050dfe83ef0bf3a4cafeddf3287762539b43521d3b2430a162104c79b75ba55",
+    "training_log.txt": "146e4ecac7f135b72b61b03763005b842bdf68898e3928e0ad1d3dacf1119a46"
+  },
+  "tokenizer_type": "SentencePiece",
+  "tokenizer_version": "phase1b-candidate-d-sentencepiece_bpe-24000",
+  "training_corpus_manifest_hash": "283869111766281c89fb75f7cae43c1cdcb07d4bdbd5770f6685f6da4f74a4f1",
+  "unknown_token_behavior": "explicit <unk> token; byte fallback for unseen UTF-8 bytes",
+  "vocabulary_size": 24000
+}

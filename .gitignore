@@ -55,3 +55,8 @@ darkmind_distill/data/*.jsonl
 darkmind_distill/data/*.meta.json
 darkmind_distill/models/*.pt
 darkmind_distill/reports/*.md
+
+# DarkMind v2 Phase 1B local/runtime artifacts
+darkmind_v2/data/phase1b/
+darkmind_v2/reports/phase1b_source_inventory.md
+darkmind_v2/reports/phase1b_source_gap_report.md

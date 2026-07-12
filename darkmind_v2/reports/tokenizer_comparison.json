@@ -1,0 +1,756 @@
+{
+  "candidates": [
+    {
+      "algorithm": "sentencepiece_bpe",
+      "byte_fallback": {
+        "byte_piece_count": 256,
+        "enabled": true
+      },
+      "candidate_id": "A",
+      "deterministic_manifest_verification": {
+        "candidate_id": "A",
+        "format": "darkmind-v2-phase1b-tokenizer-determinism-v1",
+        "manifest_content_stable": true,
+        "manifest_second_pass_sha256": "cb7de723b1ee54a2485e7d79f143df04ad9edb90deb2eee118d565e82773c58a",
+        "result": "PASS",
+        "tokenizer_manifest_sha256": "cb7de723b1ee54a2485e7d79f143df04ad9edb90deb2eee118d565e82773c58a",
+        "tokenizer_model_sha256": "d769a7950794e582303990bbacd3d684c179c923dc700975d76b2164db27cb69",
+        "tokenizer_vocab_sha256": "621d17c073f75a8d1abb6f84152752979a32112b49ed20c022a72000b50e9fe3",
+        "training_determinism_note": "SentencePiece was configured with one thread, fixed input order, and no sampling; the trained candidate artifact is immutable after creation."
+      },
+      "hard_gate_checks": {
+        "byte_fallback": true,
+        "english_efficiency": true,
+        "hostile_fixture_leak": true,
+        "manifest_hash_mismatch": true,
+        "manifest_nondeterminism": true,
+        "processed_corpus_gates": true,
+        "roundtrip_failure": true,
+        "special_token_mismatch": true,
+        "turkish_efficiency": true,
+        "unknown_token_ratio": true,
+        "vocabulary_cleanliness": true
+      },
+      "hard_gate_failures": [],
+      "hard_gate_result": "PASS",
+      "hostile_fixture_leak_count": 0,
+      "malformed_tokens": [],
+      "manifest_hash_match": true,
+      "metrics": {
+        "code_operator_fragmentation": 1.024390243902439,
+        "english_tokens_per_character": 0.2770664291873172,
+        "english_word_fragmentation": 1.972,
+        "technical_code_tokens_per_character": 0.3613861386138614,
+        "tokens_per_word": 1.8846024078212513,
+        "turkish_suffix_fragmentation": 4.35,
+        "turkish_tokens_per_character": 0.28883264800066283
+      },
+      "mixed_script_risk": {
+        "ratio": 0.0,
+        "token_count": 0
+      },
+      "mojibake_vocabulary_tokens": [],
+      "parameter_costs": [
+        {
+          "combined_parameters": 4608000,
+          "embedding_dim": 384,
+          "embedding_parameters": 4608000,
+          "fp16_storage_bytes": 9216000,
+          "fp32_storage_bytes": 18432000,
+          "output_head_parameters": 0,
+          "percent_of_45m": 10.24,
+          "percent_of_60m": 7.68,
+          "tied_output": true,
+          "vocab_size": 12000
+        },
+        {
+          "combined_parameters": 9216000,
+          "embedding_dim": 384,
+          "embedding_parameters": 4608000,
+          "fp16_storage_bytes": 18432000,
+          "fp32_storage_bytes": 36864000,
+          "output_head_parameters": 4608000,
+          "percent_of_45m": 20.48,
+          "percent_of_60m": 15.36,
+          "tied_output": false,
+          "vocab_size": 12000
+        },
+        {
+          "combined_parameters": 6144000,
+          "embedding_dim": 512,
+          "embedding_parameters": 6144000,
+          "fp16_storage_bytes": 12288000,
+          "fp32_storage_bytes": 24576000,
+          "output_head_parameters": 0,
+          "percent_of_45m": 13.6533,
+          "percent_of_60m": 10.24,
+          "tied_output": true,
+          "vocab_size": 12000
+        },
+        {
+          "combined_parameters": 12288000,
+          "embedding_dim": 512,
+          "embedding_parameters": 6144000,
+          "fp16_storage_bytes": 24576000,
+          "fp32_storage_bytes": 49152000,
+          "output_head_parameters": 6144000,
+          "percent_of_45m": 27.3067,
+          "percent_of_60m": 20.48,
+          "tied_output": false,
+          "vocab_size": 12000
+        }
+      ],
+      "replacement_character_tokens": [],
+      "round_trip_by_language": {
+        "code": 20,
+        "en": 19840,
+        "mixed_tr_en": 30,
+        "tr": 15863
+      },
+      "round_trip_failure_count": 0,
+      "round_trip_failures": [],
+      "round_trip_failures_by_language": {},
+      "round_trip_samples": 35753,
+      "schema_version": "darkmind-v2-phase1b-tokenizer-audit-v1",
+      "sequence_length_percentiles": {
+        "maximum": 6182,
+        "p50": 15,
+        "p90": 49,
+        "p95": 91,
+        "p99": 552
+      },
+      "special_token_ids": {
+        "</s>": 3,
+        "<pad>": 0,
+        "<s>": 2,
+        "<unk>": 1,
+        "<|assistant|>": 6,
+        "<|end|>": 7,
+        "<|system|>": 4,
+        "<|user|>": 5
+      },
+      "tokenizer_file_hashes": {
+        "tokenizer.model": "d769a7950794e582303990bbacd3d684c179c923dc700975d76b2164db27cb69",
+        "tokenizer.vocab": "621d17c073f75a8d1abb6f84152752979a32112b49ed20c022a72000b50e9fe3",
+        "training_config.json": "37c21301e28afeba1a11c900204892986ae1533a4be878f43a39f085079c620c",
+        "training_log.txt": "2c90cbf30f31fa378305a6b9f0ac833bd78c43780bbc2d7e8ba94e55c4551ddb"
+      },
+      "tokenizer_manifest_content_hash": "dd0eff1a4feaa838629231a588f65d0d144bba4568c7ce6fff080250206447e3",
+      "tokenizer_manifest_sha256": "cb7de723b1ee54a2485e7d79f143df04ad9edb90deb2eee118d565e82773c58a",
+      "unknown_token_count": 0,
+      "unknown_token_ratio": 0.0,
+      "vocabulary_script_distribution": {
+        "arabic": 68,
+        "cjk_or_japanese": 610,
+        "cyrillic": 96,
+        "digit": 600,
+        "english_ascii": 43236,
+        "hebrew": 42,
+        "other": 8157,
+        "space": 1,
+        "turkish_latin": 3042
+      },
+      "vocabulary_size": 12000
+    },
+    {
+      "algorithm": "sentencepiece_bpe",
+      "byte_fallback": {
+        "byte_piece_count": 256,
+        "enabled": true
+      },
+      "candidate_id": "B",
+      "deterministic_manifest_verification": {
+        "candidate_id": "B",
+        "format": "darkmind-v2-phase1b-tokenizer-determinism-v1",
+        "manifest_content_stable": true,
+        "manifest_second_pass_sha256": "2ea4f3fe22f20bb60137a61e27d8d2d1ab030e3e7b34a20965bb4dc1734bef76",
+        "result": "PASS",
+        "tokenizer_manifest_sha256": "2ea4f3fe22f20bb60137a61e27d8d2d1ab030e3e7b34a20965bb4dc1734bef76",
+        "tokenizer_model_sha256": "abd86cbbf884b06ed9ed612f660f27e7d57c49165199c756dd0a26927afa0430",
+        "tokenizer_vocab_sha256": "87348015aac5bad490dbc36a075edaae343e0608b6f515c2484a2e9454937c8f",
+        "training_determinism_note": "SentencePiece was configured with one thread, fixed input order, and no sampling; the trained candidate artifact is immutable after creation."
+      },
+      "hard_gate_checks": {
+        "byte_fallback": true,
+        "english_efficiency": true,
+        "hostile_fixture_leak": true,
+        "manifest_hash_mismatch": true,
+        "manifest_nondeterminism": true,
+        "processed_corpus_gates": true,
+        "roundtrip_failure": true,
+        "special_token_mismatch": true,
+        "turkish_efficiency": true,
+        "unknown_token_ratio": true,
+        "vocabulary_cleanliness": true
+      },
+      "hard_gate_failures": [],
+      "hard_gate_result": "PASS",
+      "hostile_fixture_leak_count": 0,
+      "malformed_tokens": [],
+      "manifest_hash_match": true,
+      "metrics": {
+        "code_operator_fragmentation": 1.024390243902439,
+        "english_tokens_per_character": 0.2645537810870341,
+        "english_word_fragmentation": 1.896,
+        "technical_code_tokens_per_character": 0.3415841584158416,
+        "tokens_per_word": 1.7903311382704385,
+        "turkish_suffix_fragmentation": 4.15,
+        "turkish_tokens_per_character": 0.27350698762043935
+      },
+      "mixed_script_risk": {
+        "ratio": 0.0,
+        "token_count": 0
+      },
+      "mojibake_vocabulary_tokens": [],
+      "parameter_costs": [
+        {
+          "combined_parameters": 6144000,
+          "embedding_dim": 384,
+          "embedding_parameters": 6144000,
+          "fp16_storage_bytes": 12288000,
+          "fp32_storage_bytes": 24576000,
+          "output_head_parameters": 0,
+          "percent_of_45m": 13.6533,
+          "percent_of_60m": 10.24,
+          "tied_output": true,
+          "vocab_size": 16000
+        },
+        {
+          "combined_parameters": 12288000,
+          "embedding_dim": 384,
+          "embedding_parameters": 6144000,
+          "fp16_storage_bytes": 24576000,
+          "fp32_storage_bytes": 49152000,
+          "output_head_parameters": 6144000,
+          "percent_of_45m": 27.3067,
+          "percent_of_60m": 20.48,
+          "tied_output": false,
+          "vocab_size": 16000
+        },
+        {
+          "combined_parameters": 8192000,
+          "embedding_dim": 512,
+          "embedding_parameters": 8192000,
+          "fp16_storage_bytes": 16384000,
+          "fp32_storage_bytes": 32768000,
+          "output_head_parameters": 0,
+          "percent_of_45m": 18.2044,
+          "percent_of_60m": 13.6533,
+          "tied_output": true,
+          "vocab_size": 16000
+        },
+        {
+          "combined_parameters": 16384000,
+          "embedding_dim": 512,
+          "embedding_parameters": 8192000,
+          "fp16_storage_bytes": 32768000,
+          "fp32_storage_bytes": 65536000,
+          "output_head_parameters": 8192000,
+          "percent_of_45m": 36.4089,
+          "percent_of_60m": 27.3067,
+          "tied_output": false,
+          "vocab_size": 16000
+        }
+      ],
+      "replacement_character_tokens": [],
+      "round_trip_by_language": {
+        "code": 20,
+        "en": 19840,
+        "mixed_tr_en": 30,
+        "tr": 15863
+      },
+      "round_trip_failure_count": 0,
+      "round_trip_failures": [],
+      "round_trip_failures_by_language": {},
+      "round_trip_samples": 35753,
+      "schema_version": "darkmind-v2-phase1b-tokenizer-audit-v1",
+      "sequence_length_percentiles": {
+        "maximum": 5968,
+        "p50": 15,
+        "p90": 47,
+        "p95": 86,
+        "p99": 523
+      },
+      "special_token_ids": {
+        "</s>": 3,
+        "<pad>": 0,
+        "<s>": 2,
+        "<unk>": 1,
+        "<|assistant|>": 6,
+        "<|end|>": 7,
+        "<|system|>": 4,
+        "<|user|>": 5
+      },
+      "tokenizer_file_hashes": {
+        "tokenizer.model": "abd86cbbf884b06ed9ed612f660f27e7d57c49165199c756dd0a26927afa0430",
+        "tokenizer.vocab": "87348015aac5bad490dbc36a075edaae343e0608b6f515c2484a2e9454937c8f",
+        "training_config.json": "02ee617e6bff0d235dd798b79d4a202437070430c7982f09f5b59882e1863c8a",
+        "training_log.txt": "bebd513f40a430fe33754205fef6c8768b52f0926eaffae32dc1926e33a9925e"
+      },
+      "tokenizer_manifest_content_hash": "60dab0fb9caba15cb74bf9966ea5de1d10b2a9fc41d4e2c79a2b2af5d44adb66",
+      "tokenizer_manifest_sha256": "2ea4f3fe22f20bb60137a61e27d8d2d1ab030e3e7b34a20965bb4dc1734bef76",
+      "unknown_token_count": 0,
+      "unknown_token_ratio": 0.0,
+      "vocabulary_script_distribution": {
+        "arabic": 68,
+        "cjk_or_japanese": 610,
+        "cyrillic": 96,
+        "digit": 600,
+        "english_ascii": 64307,
+        "hebrew": 42,
+        "other": 11050,
+        "space": 1,
+        "turkish_latin": 4433
+      },
+      "vocabulary_size": 16000
+    },
+    {
+      "algorithm": "sentencepiece_unigram",
+      "byte_fallback": {
+        "byte_piece_count": 256,
+        "enabled": true
+      },
+      "candidate_id": "C",
+      "deterministic_manifest_verification": {
+        "candidate_id": "C",
+        "format": "darkmind-v2-phase1b-tokenizer-determinism-v1",
+        "manifest_content_stable": true,
+        "manifest_second_pass_sha256": "47e1e00e6a7929feaedf00b27db22fc8b17ce4fe408d324b8f09330c2df34138",
+        "result": "PASS",
+        "tokenizer_manifest_sha256": "47e1e00e6a7929feaedf00b27db22fc8b17ce4fe408d324b8f09330c2df34138",
+        "tokenizer_model_sha256": "1e45678a9e63bb45f8847a05a376fdea5918dd78f2f8c737c142ee7560f7e931",
+        "tokenizer_vocab_sha256": "5f37d63e9033514c7606327313dd1959863d6c9fec7c9e255256727a59c3073b",
+        "training_determinism_note": "SentencePiece was configured with one thread, fixed input order, and no sampling; the trained candidate artifact is immutable after creation."
+      },
+      "hard_gate_checks": {
+        "byte_fallback": true,
+        "english_efficiency": true,
+        "hostile_fixture_leak": true,
+        "manifest_hash_mismatch": true,
+        "manifest_nondeterminism": true,
+        "processed_corpus_gates": true,
+        "roundtrip_failure": true,
+        "special_token_mismatch": true,
+        "turkish_efficiency": true,
+        "unknown_token_ratio": true,
+        "vocabulary_cleanliness": true
+      },
+      "hard_gate_failures": [],
+      "hard_gate_result": "PASS",
+      "hostile_fixture_leak_count": 0,
+      "malformed_tokens": [],
+      "manifest_hash_match": true,
+      "metrics": {
+        "code_operator_fragmentation": 1.024390243902439,
+        "english_tokens_per_character": 0.2676787842459003,
+        "english_word_fragmentation": 1.9733333333333334,
+        "technical_code_tokens_per_character": 0.35488861386138615,
+        "tokens_per_word": 1.7856036158335615,
+        "turkish_suffix_fragmentation": 3.9,
+        "turkish_tokens_per_character": 0.2702723846639086
+      },
+      "mixed_script_risk": {
+        "ratio": 0.0,
+        "token_count": 0
+      },
+      "mojibake_vocabulary_tokens": [],
+      "parameter_costs": [
+        {
+          "combined_parameters": 6144000,
+          "embedding_dim": 384,
+          "embedding_parameters": 6144000,
+          "fp16_storage_bytes": 12288000,
+          "fp32_storage_bytes": 24576000,
+          "output_head_parameters": 0,
+          "percent_of_45m": 13.6533,
+          "percent_of_60m": 10.24,
+          "tied_output": true,
+          "vocab_size": 16000
+        },
+        {
+          "combined_parameters": 12288000,
+          "embedding_dim": 384,
+          "embedding_parameters": 6144000,
+          "fp16_storage_bytes": 24576000,
+          "fp32_storage_bytes": 49152000,
+          "output_head_parameters": 6144000,
+          "percent_of_45m": 27.3067,
+          "percent_of_60m": 20.48,
+          "tied_output": false,
+          "vocab_size": 16000
+        },
+        {
+          "combined_parameters": 8192000,
+          "embedding_dim": 512,
+          "embedding_parameters": 8192000,
+          "fp16_storage_bytes": 16384000,
+          "fp32_storage_bytes": 32768000,
+          "output_head_parameters": 0,
+          "percent_of_45m": 18.2044,
+          "percent_of_60m": 13.6533,
+          "tied_output": true,
+          "vocab_size": 16000
+        },
+        {
+          "combined_parameters": 16384000,
+          "embedding_dim": 512,
+          "embedding_parameters": 8192000,
+          "fp16_storage_bytes": 32768000,
+          "fp32_storage_bytes": 65536000,
+          "output_head_parameters": 8192000,
+          "percent_of_45m": 36.4089,
+          "percent_of_60m": 27.3067,
+          "tied_output": false,
+          "vocab_size": 16000
+        }
+      ],
+      "replacement_character_tokens": [],
+      "round_trip_by_language": {
+        "code": 20,
+        "en": 19840,
+        "mixed_tr_en": 30,
+        "tr": 15863
+      },
+      "round_trip_failure_count": 0,
+      "round_trip_failures": [],
+      "round_trip_failures_by_language": {},
+      "round_trip_samples": 35753,
+      "schema_version": "darkmind-v2-phase1b-tokenizer-audit-v1",
+      "sequence_length_percentiles": {
+        "maximum": 5932,
+        "p50": 15,
+        "p90": 47,
+        "p95": 87,
+        "p99": 514
+      },
+      "special_token_ids": {
+        "</s>": 3,
+        "<pad>": 0,
+        "<s>": 2,
+        "<unk>": 1,
+        "<|assistant|>": 6,
+        "<|end|>": 7,
+        "<|system|>": 4,
+        "<|user|>": 5
+      },
+      "tokenizer_file_hashes": {
+        "tokenizer.model": "1e45678a9e63bb45f8847a05a376fdea5918dd78f2f8c737c142ee7560f7e931",
+        "tokenizer.vocab": "5f37d63e9033514c7606327313dd1959863d6c9fec7c9e255256727a59c3073b",
+        "training_config.json": "75a54b9a3c814810623fb30558c33ee616a44cea76f0b198fce88d2109820705",
+        "training_log.txt": "6e1df6c5ea33dcfd0d8d8df842422e8345153a37b096d2b880ae901d0aacacd6"
+      },
+      "tokenizer_manifest_content_hash": "a2b4c009f32e69855ddf01d51981db11950340378453c1e52ec7fd41d6184553",
+      "tokenizer_manifest_sha256": "47e1e00e6a7929feaedf00b27db22fc8b17ce4fe408d324b8f09330c2df34138",
+      "unknown_token_count": 0,
+      "unknown_token_ratio": 0.0,
+      "vocabulary_script_distribution": {
+        "arabic": 70,
+        "cjk_or_japanese": 610,
+        "cyrillic": 96,
+        "digit": 600,
+        "english_ascii": 76028,
+        "hebrew": 42,
+        "other": 12469,
+        "space": 1,
+        "turkish_latin": 5879
+      },
+      "vocabulary_size": 16000
+    },
+    {
+      "algorithm": "sentencepiece_bpe",
+      "byte_fallback": {
+        "byte_piece_count": 256,
+        "enabled": true
+      },
+      "candidate_id": "D",
+      "deterministic_manifest_verification": {
+        "candidate_id": "D",
+        "format": "darkmind-v2-phase1b-tokenizer-determinism-v1",
+        "manifest_content_stable": true,
+        "manifest_second_pass_sha256": "ee09b79e988fe3f14748873f874348574e2229ea92af178e2de63c46d86978d2",
+        "result": "PASS",
+        "tokenizer_manifest_sha256": "ee09b79e988fe3f14748873f874348574e2229ea92af178e2de63c46d86978d2",
+        "tokenizer_model_sha256": "db116d4bcf315a6d2a7c5191cbea719d5751c9ba839778eba7e243d520253445",
+        "tokenizer_vocab_sha256": "f098fecdd4f610ce5b150be09e56e7648211e1ecb076ad6f38af71cee25344ed",
+        "training_determinism_note": "SentencePiece was configured with one thread, fixed input order, and no sampling; the trained candidate artifact is immutable after creation."
+      },
+      "hard_gate_checks": {
+        "byte_fallback": true,
+        "english_efficiency": true,
+        "hostile_fixture_leak": true,
+        "manifest_hash_mismatch": true,
+        "manifest_nondeterminism": true,
+        "processed_corpus_gates": true,
+        "roundtrip_failure": true,
+        "special_token_mismatch": true,
+        "turkish_efficiency": true,
+        "unknown_token_ratio": true,
+        "vocabulary_cleanliness": true
+      },
+      "hard_gate_failures": [],
+      "hard_gate_result": "PASS",
+      "hostile_fixture_leak_count": 0,
+      "malformed_tokens": [],
+      "manifest_hash_match": true,
+      "metrics": {
+        "code_operator_fragmentation": 1.024390243902439,
+        "english_tokens_per_character": 0.2516908779019872,
+        "english_word_fragmentation": 1.7813333333333334,
+        "technical_code_tokens_per_character": 0.3186881188118812,
+        "tokens_per_word": 1.6853015465997696,
+        "turkish_suffix_fragmentation": 3.85,
+        "turkish_tokens_per_character": 0.2557293800250806
+      },
+      "mixed_script_risk": {
+        "ratio": 0.0,
+        "token_count": 0
+      },
+      "mojibake_vocabulary_tokens": [],
+      "parameter_costs": [
+        {
+          "combined_parameters": 9216000,
+          "embedding_dim": 384,
+          "embedding_parameters": 9216000,
+          "fp16_storage_bytes": 18432000,
+          "fp32_storage_bytes": 36864000,
+          "output_head_parameters": 0,
+          "percent_of_45m": 20.48,
+          "percent_of_60m": 15.36,
+          "tied_output": true,
+          "vocab_size": 24000
+        },
+        {
+          "combined_parameters": 18432000,
+          "embedding_dim": 384,
+          "embedding_parameters": 9216000,
+          "fp16_storage_bytes": 36864000,
+          "fp32_storage_bytes": 73728000,
+          "output_head_parameters": 9216000,
+          "percent_of_45m": 40.96,
+          "percent_of_60m": 30.72,
+          "tied_output": false,
+          "vocab_size": 24000
+        },
+        {
+          "combined_parameters": 12288000,
+          "embedding_dim": 512,
+          "embedding_parameters": 12288000,
+          "fp16_storage_bytes": 24576000,
+          "fp32_storage_bytes": 49152000,
+          "output_head_parameters": 0,
+          "percent_of_45m": 27.3067,
+          "percent_of_60m": 20.48,
+          "tied_output": true,
+          "vocab_size": 24000
+        },
+        {
+          "combined_parameters": 24576000,
+          "embedding_dim": 512,
+          "embedding_parameters": 12288000,
+          "fp16_storage_bytes": 49152000,
+          "fp32_storage_bytes": 98304000,
+          "output_head_parameters": 12288000,
+          "percent_of_45m": 54.6133,
+          "percent_of_60m": 40.96,
+          "tied_output": false,
+          "vocab_size": 24000
+        }
+      ],
+      "replacement_character_tokens": [],
+      "round_trip_by_language": {
+        "code": 20,
+        "en": 19840,
+        "mixed_tr_en": 30,
+        "tr": 15863
+      },
+      "round_trip_failure_count": 0,
+      "round_trip_failures": [],
+      "round_trip_failures_by_language": {},
+      "round_trip_samples": 35753,
+      "schema_version": "darkmind-v2-phase1b-tokenizer-audit-v1",
+      "sequence_length_percentiles": {
+        "maximum": 5737,
+        "p50": 14,
+        "p90": 44,
+        "p95": 81,
+        "p99": 484
+      },
+      "special_token_ids": {
+        "</s>": 3,
+        "<pad>": 0,
+        "<s>": 2,
+        "<unk>": 1,
+        "<|assistant|>": 6,
+        "<|end|>": 7,
+        "<|system|>": 4,
+        "<|user|>": 5
+      },
+      "tokenizer_file_hashes": {
+        "tokenizer.model": "db116d4bcf315a6d2a7c5191cbea719d5751c9ba839778eba7e243d520253445",
+        "tokenizer.vocab": "f098fecdd4f610ce5b150be09e56e7648211e1ecb076ad6f38af71cee25344ed",
+        "training_config.json": "a050dfe83ef0bf3a4cafeddf3287762539b43521d3b2430a162104c79b75ba55",
+        "training_log.txt": "146e4ecac7f135b72b61b03763005b842bdf68898e3928e0ad1d3dacf1119a46"
+      },
+      "tokenizer_manifest_content_hash": "76e93ba195665fe281a83a25af39ce5c0442d1c3332a69bd8a62bbb6159d5f36",
+      "tokenizer_manifest_sha256": "ee09b79e988fe3f14748873f874348574e2229ea92af178e2de63c46d86978d2",
+      "unknown_token_count": 0,
+      "unknown_token_ratio": 0.0,
+      "vocabulary_script_distribution": {
+        "arabic": 70,
+        "cjk_or_japanese": 610,
+        "cyrillic": 96,
+        "digit": 601,
+        "english_ascii": 108170,
+        "hebrew": 42,
+        "other": 16978,
+        "space": 1,
+        "turkish_latin": 7659
+      },
+      "vocabulary_size": 24000
+    }
+  ],
+  "corpus_validation": {
+    "corpus_manifest_hash_match": true,
+    "deterministic_verification": true,
+    "failures": [],
+    "language_characters": {
+      "en": 19999962,
+      "tr": 29999974
+    },
+    "missing_attribution_metadata": 0,
+    "missing_license_metadata": 0,
+    "mojibake_detections": 0,
+    "replacement_characters": 0,
+    "result": "PASS",
+    "source_cap_violations": [],
+    "split_characters": {
+      "eval": 2499693,
+      "train": 45001542,
+      "validation": 2498701
+    },
+    "split_documents": {
+      "eval": 17597,
+      "train": 313296,
+      "validation": 17966
+    },
+    "split_hashes_match": true,
+    "total_characters": 49999936,
+    "total_documents": 348859,
+    "unresolved_exact_duplicates": 0,
+    "unresolved_near_duplicate_clusters": 0,
+    "utf8_failures": 0
+  },
+  "final_tokenizer_frozen": false,
+  "format": "darkmind-v2-phase1b-tokenizer-comparison-v1",
+  "recommendation": {
+    "candidate_id": "D",
+    "contenders_within_2_points": [
+      "D"
+    ],
+    "reason": "The leading eligible candidate was more than 2 points ahead.",
+    "strength": "strong"
+  },
+  "result": "PASS",
+  "scores": [
+    {
+      "candidate_id": "D",
+      "eligible": true,
+      "hard_gate_result": "PASS",
+      "raw_metrics": {
+        "english_efficiency": 0.2516908779019872,
+        "parameter_cost": 9216000.0,
+        "tail_sequence_lengths": 282.5,
+        "technical_code_efficiency": 0.3186881188118812,
+        "turkish_efficiency": 0.2557293800250806,
+        "vocabulary_cleanliness": 0.0
+      },
+      "score_components": {
+        "english_efficiency": 20.0,
+        "parameter_cost": 0.0,
+        "tail_sequence_lengths": 15.0,
+        "technical_code_efficiency": 15.0,
+        "turkish_efficiency": 30.0,
+        "vocabulary_cleanliness": 10.0
+      },
+      "vocabulary_size": 24000,
+      "weighted_score": 90.0
+    },
+    {
+      "candidate_id": "B",
+      "eligible": true,
+      "hard_gate_result": "PASS",
+      "raw_metrics": {
+        "english_efficiency": 0.2645537810870341,
+        "parameter_cost": 6144000.0,
+        "tail_sequence_lengths": 304.5,
+        "technical_code_efficiency": 0.3415841584158416,
+        "turkish_efficiency": 0.27350698762043935,
+        "vocabulary_cleanliness": 0.0
+      },
+      "score_components": {
+        "english_efficiency": 9.861971,
+        "parameter_cost": 6.666667,
+        "tail_sequence_lengths": 6.538462,
+        "technical_code_efficiency": 6.956522,
+        "turkish_efficiency": 13.888955,
+        "vocabulary_cleanliness": 10.0
+      },
+      "vocabulary_size": 16000,
+      "weighted_score": 53.912577
+    },
+    {
+      "candidate_id": "C",
+      "eligible": true,
+      "hard_gate_result": "PASS",
+      "raw_metrics": {
+        "english_efficiency": 0.2676787842459003,
+        "parameter_cost": 6144000.0,
+        "tail_sequence_lengths": 300.5,
+        "technical_code_efficiency": 0.35488861386138615,
+        "turkish_efficiency": 0.2702723846639086,
+        "vocabulary_cleanliness": 0.0
+      },
+      "score_components": {
+        "english_efficiency": 7.398968,
+        "parameter_cost": 6.666667,
+        "tail_sequence_lengths": 8.076923,
+        "technical_code_efficiency": 2.282609,
+        "turkish_efficiency": 16.82033,
+        "vocabulary_cleanliness": 10.0
+      },
+      "vocabulary_size": 16000,
+      "weighted_score": 51.245497
+    },
+    {
+      "candidate_id": "A",
+      "eligible": true,
+      "hard_gate_result": "PASS",
+      "raw_metrics": {
+        "english_efficiency": 0.2770664291873172,
+        "parameter_cost": 4608000.0,
+        "tail_sequence_lengths": 321.5,
+        "technical_code_efficiency": 0.3613861386138614,
+        "turkish_efficiency": 0.28883264800066283,
+        "vocabulary_cleanliness": 0.0
+      },
+      "score_components": {
+        "english_efficiency": 0.0,
+        "parameter_cost": 10.0,
+        "tail_sequence_lengths": 0.0,
+        "technical_code_efficiency": 0.0,
+        "turkish_efficiency": 0.0,
+        "vocabulary_cleanliness": 10.0
+      },
+      "vocabulary_size": 12000,
+      "weighted_score": 20.0
+    }
+  ],
+  "weights": {
+    "english_efficiency": 20.0,
+    "parameter_cost": 10.0,
+    "tail_sequence_lengths": 15.0,
+    "technical_code_efficiency": 15.0,
+    "turkish_efficiency": 30.0,
+    "vocabulary_cleanliness": 10.0
+  }
+}

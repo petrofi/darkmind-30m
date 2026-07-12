@@ -1,0 +1,52 @@
+{
+  "candidate": {
+    "algorithm": "sentencepiece_bpe",
+    "expected_tradeoff": "Closer to the original v2 design target with better compression, but higher parameter and storage cost.",
+    "id": "D",
+    "selection_status": "evaluate",
+    "training_character_target": 50000000,
+    "vocab_size": 24000
+  },
+  "candidate_matrix_version": "darkmind-v2-phase1a-tokenizer-candidates",
+  "corpus_manifest_sha256": "283869111766281c89fb75f7cae43c1cdcb07d4bdbd5770f6685f6da4f74a4f1",
+  "created_at": "2026-07-11T07:02:34+00:00",
+  "final_tokenizer_frozen": false,
+  "format": "darkmind-v2-phase1b-tokenizer-training-v1",
+  "sentencepiece_options": {
+    "add_dummy_prefix": false,
+    "bos_id": 2,
+    "bos_piece": "<s>",
+    "byte_fallback": true,
+    "character_coverage": 1.0,
+    "eos_id": 3,
+    "eos_piece": "</s>",
+    "hard_vocab_limit": true,
+    "input": "C:\\Users\\tarik\\OneDrive\\Ekler\\Desktop\\darkmind-v2-phase1b\\darkmind_v2\\data\\phase1b\\processed\\tokenizer_train.txt",
+    "input_sentence_size": 0,
+    "max_sentence_length": 65536,
+    "model_prefix": "C:\\Users\\tarik\\OneDrive\\Ekler\\Desktop\\darkmind-v2-phase1b\\darkmind_v2\\data\\phase1b\\tokenizers\\candidate_d_bpe24k\\tokenizer",
+    "model_type": "bpe",
+    "normalization_rule_name": "identity",
+    "num_threads": 1,
+    "pad_id": 0,
+    "pad_piece": "<pad>",
+    "remove_extra_whitespaces": false,
+    "shuffle_input_sentence": false,
+    "split_digits": true,
+    "unk_id": 1,
+    "unk_piece": "<unk>",
+    "user_defined_symbols": [
+      "<|system|>",
+      "<|user|>",
+      "<|assistant|>",
+      "<|end|>"
+    ],
+    "vocab_size": 24000
+  },
+  "training_input": {
+    "bytes": 47668207,
+    "characters": 45628133,
+    "path": "darkmind_v2\\data\\phase1b\\processed\\tokenizer_train.txt",
+    "sha256": "f1ac92acd9faf5a4ef909f400f7bfdb0b0093d96085834877cdeb0d0d5b1152f"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "attribution_manifest_sha256": "b820ec56a0c173604a5a97663c1ca510c7c78800d3e559722b23ffb74eb3120f",
+  "byte_fallback": true,
+  "candidate_d_report_sha256": "1d36bc00e7c9e1cce541c574dff75c7162cc6a445762552481693fcbc887461f",
+  "frozen_at_policy_note": "Frozen after Phase 1B corpus, candidate audit, hard-gate, weighted comparison, and deterministic hash validation passed; no model training was authorized.",
+  "immutable_after_freeze": true,
+  "model_file": "tokenizer.model",
+  "model_sha256": "db116d4bcf315a6d2a7c5191cbea719d5751c9ba839778eba7e243d520253445",
+  "processed_corpus_manifest_sha256": "283869111766281c89fb75f7cae43c1cdcb07d4bdbd5770f6685f6da4f74a4f1",
+  "required_model_embedding_policy": "tied_input_output_embeddings",
+  "sentencepiece_version": "0.2.1",
+  "source_candidate": "D",
+  "source_candidate_manifest_sha256": "ee09b79e988fe3f14748873f874348574e2229ea92af178e2de63c46d86978d2",
+  "special_token_ids": {
+    "</s>": 3,
+    "<pad>": 0,
+    "<s>": 2,
+    "<unk>": 1,
+    "<|assistant|>": 6,
+    "<|end|>": 7,
+    "<|system|>": 4,
+    "<|user|>": 5
+  },
+  "special_tokens": [
+    "<pad>",
+    "<unk>",
+    "<s>",
+    "</s>",
+    "<|system|>",
+    "<|user|>",
+    "<|assistant|>",
+    "<|end|>"
+  ],
+  "split_manifest_sha256": "959f7f56ef503b991b8860722468fba8040561b249518dc312ce2ab4565344f3",
+  "tokenizer_comparison_report_sha256": "9b462137b66deb21a0e9248bb00508ba6a339427b57f60f48cc5aaaa6c1f603e",
+  "tokenizer_name": "darkmind_v2_sp_bpe24k_v1",
+  "tokenizer_type": "SentencePiece BPE",
+  "tokenizer_version": "1",
+  "training_config_sha256": "a050dfe83ef0bf3a4cafeddf3287762539b43521d3b2430a162104c79b75ba55",
+  "vocab_file": "tokenizer.vocab",
+  "vocab_sha256": "f098fecdd4f610ce5b150be09e56e7648211e1ecb076ad6f38af71cee25344ed",
+  "vocab_size": 24000
+}

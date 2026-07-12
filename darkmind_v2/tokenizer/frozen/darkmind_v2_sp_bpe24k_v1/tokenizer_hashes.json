@@ -1,0 +1,20 @@
+{
+  "format": "darkmind-v2-tokenizer-freeze-hashes-v1",
+  "frozen_files": {
+    "selected_tokenizer_decision.md": "9c41bf4ebd71f5c1b0ab31135c1631ff32d4a0a9754a838f0a588f1b8f568ba1",
+    "tokenizer.model": "db116d4bcf315a6d2a7c5191cbea719d5751c9ba839778eba7e243d520253445",
+    "tokenizer.vocab": "f098fecdd4f610ce5b150be09e56e7648211e1ecb076ad6f38af71cee25344ed",
+    "tokenizer_freeze_manifest.json": "8e452c049f05ef1c6a94cb5fb42b6accdd1c18b76edebdb9d68bd85fbdfe538e",
+    "tokenizer_manifest.json": "ee09b79e988fe3f14748873f874348574e2229ea92af178e2de63c46d86978d2",
+    "training_config.json": "a050dfe83ef0bf3a4cafeddf3287762539b43521d3b2430a162104c79b75ba55",
+    "training_log.txt": "146e4ecac7f135b72b61b03763005b842bdf68898e3928e0ad1d3dacf1119a46"
+  },
+  "provenance_references": {
+    "attribution_manifest.jsonl": "b820ec56a0c173604a5a97663c1ca510c7c78800d3e559722b23ffb74eb3120f",
+    "candidate_d_report.md": "1d36bc00e7c9e1cce541c574dff75c7162cc6a445762552481693fcbc887461f",
+    "corpus_manifest.json": "283869111766281c89fb75f7cae43c1cdcb07d4bdbd5770f6685f6da4f74a4f1",
+    "split_manifest.json": "959f7f56ef503b991b8860722468fba8040561b249518dc312ce2ab4565344f3",
+    "tokenizer_comparison.json": "9b462137b66deb21a0e9248bb00508ba6a339427b57f60f48cc5aaaa6c1f603e"
+  },
+  "self_hash_excluded": "tokenizer_hashes.json is intentionally excluded to avoid a self-referential digest"
+}

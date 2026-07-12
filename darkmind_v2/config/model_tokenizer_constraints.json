@@ -1,0 +1,10 @@
+{
+  "default_embedding_policy": "tied",
+  "exact_parameter_calculator_required_before_training": true,
+  "minimum_recommended_real_base_target": "60M-class",
+  "no_sft_before_base_quality_gates_pass": true,
+  "selected_tokenizer": "darkmind_v2_sp_bpe24k_v1",
+  "tiny_smoke_models_policy": "allowed_only_for_pipeline_validation",
+  "untied_lm_head_allowed": false,
+  "vocab_size": 24000
+}

@@ -282,6 +282,8 @@ See:
 - [docs/darkmind-v2-base-pipeline.md](docs/darkmind-v2-base-pipeline.md)
 - [darkmind_v2/README.md](darkmind_v2/README.md)
 
+DarkMind v2 Phase 1B has since built and validated the 50M-character tokenizer corpus, compared four SentencePiece candidates, and frozen Candidate D BPE 24k. No DarkMind v2 model training has started; the next step is tiny base smoke planning with tied embeddings.
+
 ## Evaluation
 
 Core evaluation scripts:

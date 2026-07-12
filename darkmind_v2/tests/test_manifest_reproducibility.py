@@ -62,6 +62,7 @@ def test_tokenizer_manifest_file_hashes_are_reproducible(tmp_path: Path) -> None
     )
     assert first["tokenizer_file_hashes"] == second["tokenizer_file_hashes"]
     assert first["special_token_ids"] == second["special_token_ids"]
+    assert first["deterministic_content_hash"] == second["deterministic_content_hash"]
 
 
 def test_fixed_prompt_schema_validation() -> None:

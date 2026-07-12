@@ -1,0 +1,8 @@
+{"id":"train-tr-001","split":"train","language":"tr","text":"Bugun temiz ve kisa bir egitim ornegi hazirliyoruz."}
+{"id":"train-tr-002","split":"train","language":"tr","text":"Model bir sonraki kelimeyi tahmin etmeyi ogreniyor."}
+{"id":"train-en-001","split":"train","language":"en","text":"This tiny fixture validates the language model pipeline."}
+{"id":"train-en-002","split":"train","language":"en","text":"The model learns to predict the next token."}
+{"id":"validation-tr-001","split":"validation","language":"tr","text":"Dogrulama kaybi sonlu olmali."}
+{"id":"validation-en-001","split":"validation","language":"en","text":"Validation loss must remain finite."}
+{"id":"eval-tr-001","split":"eval","language":"tr","text":"Sabit istem uretimi calismali."}
+{"id":"eval-en-001","split":"eval","language":"en","text":"Fixed prompt generation must execute."}

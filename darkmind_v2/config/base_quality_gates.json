@@ -1,0 +1,82 @@
+{
+  "checkpoint_integrity": {
+    "checkpoint_reload_required": true,
+    "model_config_hash_match_required": true,
+    "tokenizer_hash_match_required": true
+  },
+  "generation_health": {
+    "allow_empty_output": false,
+    "allow_invalid_unicode": false,
+    "allow_mojibake": false,
+    "allow_replacement_character": false,
+    "maximum_repetition_ratio": 0.35,
+    "maximum_special_token_leakage_ratio": 0.0,
+    "unexpected_scripts_allowed": false
+  },
+  "stage_aware_generation_policy": {
+    "hard_failures_all_stages": [
+      "invalid_unicode",
+      "tokenizer_corruption",
+      "decoder_defect",
+      "normal_piece_mojibake",
+      "confirmed_text_mojibake",
+      "token_range_violation",
+      "tokenizer_hash_mismatch",
+      "tokenizer_artifact_mutation",
+      "model_config_hash_mismatch",
+      "corpus_manifest_mismatch",
+      "invalid_corpus_unicode",
+      "non_finite_logits",
+      "non_finite_loss",
+      "corrupted_checkpoint",
+      "checkpoint_reload_failure"
+    ],
+    "initialization_warnings": [
+      "generated_invalid_utf8_byte_sequence",
+      "replacement_character_from_generated_bytes",
+      "unexpected_script",
+      "mixed_script",
+      "repetition",
+      "empty_output",
+      "special_token_leakage",
+      "incoherent_output",
+      "excessively_short_output",
+      "excessively_long_output"
+    ],
+    "stage1_checkpoint_warnings": [
+      "generated_invalid_utf8_byte_sequence",
+      "replacement_character_from_generated_bytes",
+      "unexpected_script",
+      "mixed_script",
+      "repetition",
+      "empty_output",
+      "special_token_leakage"
+    ],
+    "public_release_promoted_hard_failures": [
+      "generated_invalid_utf8_byte_sequence",
+      "replacement_character_from_generated_bytes",
+      "unexpected_script",
+      "mixed_script",
+      "repetition",
+      "empty_output",
+      "special_token_leakage"
+    ],
+    "scope_note": "Origin-traced invalid sampled byte sequences and other generation-quality warnings are tolerated only for controlled early Stage-1 pretraining; they remain visible and public-release gates remain stricter."
+  },
+  "loss": {
+    "finite_required": true,
+    "must_decrease_during_approved_training": true,
+    "perplexity_must_be_finite": true
+  },
+  "notes": {
+    "language_quality_threshold": null,
+    "language_quality_threshold_rationale": "Deferred until a trained base checkpoint and human-reviewed baseline exist.",
+    "phase2a_scope": "Pipeline-health gates only; no claim of language quality."
+  },
+  "reproducibility": {
+    "fixed_prompt_manifest_required": true,
+    "seeded_sampling_required": true,
+    "stable_settings_required": true
+  },
+  "schema_version": "darkmind-v2-base-quality-gates-v1"
+}

@@ -1,0 +1,74 @@
+{
+  "checkpointing": {
+    "checkpoint_interval_steps": 64,
+    "enabled": true,
+    "keep_last": 3,
+    "keep_best_validation": true,
+    "no_overwrite": true
+  },
+  "compile": {
+    "enabled": false,
+    "reason": "Disabled until separately benchmarked and proven stable."
+  },
+  "data": {
+    "effective_tokens_per_optimizer_step": 4096,
+    "sequence_length": 256,
+    "tokenized_dir": "darkmind_v2/data/phase2a/tokenized/full_v1"
+  },
+  "device": "cuda",
+  "evaluation": {
+    "fixed_prompt_generation_interval_steps": 64,
+    "generation_max_new_tokens": 16,
+    "validation_interval_steps": 32,
+    "validation_sequences": 128
+  },
+  "gradient_clipping": 1.0,
+  "maximum_total_training_tokens": 1048576,
+  "mixed_precision": "bf16",
+  "model_config": "darkmind_v2/config/model_tiny_smoke.json",
+  "optimizer": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "name": "AdamW",
+    "peak_learning_rate": 0.0003,
+    "weight_decay": 0.1
+  },
+  "profiles": [
+    {
+      "gradient_accumulation_steps": 4,
+      "micro_batch_size": 4,
+      "name": "balanced",
+      "priority": 1
+    },
+    {
+      "gradient_accumulation_steps": 8,
+      "micro_batch_size": 2,
+      "name": "fallback_2",
+      "priority": 2
+    },
+    {
+      "gradient_accumulation_steps": 16,
+      "micro_batch_size": 1,
+      "name": "fallback_1",
+      "priority": 3
+    }
+  ],
+  "run": {
+    "aborted_predecessor": "darkmind_v2/data/phase2a/runs/tiny_stage1_seed20260712/",
+    "aborted_predecessor_optimizer_steps": 0,
+    "aborted_predecessor_training_tokens": 0,
+    "lineage_note": "The predecessor stopped before checkpoint creation because initialization unexpected-script warnings were incorrectly treated as pipeline hard failures. Gate policy was corrected before R2; no predecessor weights are reused.",
+    "name": "tiny_stage1_seed20260712_r2",
+    "output_dir": "darkmind_v2/data/phase2a/runs/tiny_stage1_seed20260712_r2"
+  },
+  "schedule": {
+    "minimum_learning_rate": 0.00003,
+    "name": "warmup_cosine",
+    "warmup_optimizer_steps": 20
+  },
+  "schema_version": "darkmind-v2-stage1-training-config-v1",
+  "seed": 20260712,
+  "segment_a_target_tokens": 524288,
+  "segment_b_target_tokens": 1048576,
+  "tied_embeddings_required": true
+}

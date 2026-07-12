@@ -1,0 +1,6 @@
+# Frozen tokenizer artifacts are byte-immutable and use their recorded EOLs.
+darkmind_v2/tokenizer/frozen/**/tokenizer.model -text
+darkmind_v2/tokenizer/frozen/**/tokenizer.vocab text eol=crlf
+darkmind_v2/tokenizer/frozen/**/*.json text eol=lf
+darkmind_v2/tokenizer/frozen/**/*.md text eol=lf
+darkmind_v2/tokenizer/frozen/**/*.txt text eol=lf

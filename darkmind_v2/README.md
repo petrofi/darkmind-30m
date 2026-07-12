@@ -29,9 +29,9 @@ Once DarkMind v2 pretraining begins, the tokenizer is immutable. Any tokenizer f
 
 The corpus manifest records input hashes, normalized output hashes, language counts, document counts, filtering statistics, deduplication settings, split seed, and deterministic train/validation/test hashes. Two runs with the same input and config must produce identical content hashes.
 
-## No-Training Status
+## Phase 0 No-Training Status
 
-This directory is safe validation infrastructure. It intentionally contains no tokenizer training script, no corpus downloader, and no model training launcher.
+Phase 0 originally contained validation infrastructure only. Phase 1B later added controlled corpus and tokenizer-candidate tooling, but no model training launcher has been authorized or run.
 
 ## Phase 1A Source And Tokenizer Planning
 
@@ -60,4 +60,14 @@ The next gate before tokenizer training is a reviewed corpus smoke test:
 4. confirm complete source and license metadata,
 5. produce deterministic manifest hashes,
 6. only then consider a tiny tokenizer experiment.
+
+## Phase 1B Result
+
+- The final tokenizer pilot corpus contains 49,999,936 normalized characters with the approved Turkish/English balance and passed every corpus gate.
+- Four SentencePiece candidates were trained and audited against fixed samples plus the complete validation/eval splits.
+- Candidate D, SentencePiece BPE with a 24,000-token vocabulary, passed all hard gates and was selected with a weighted score of 90.00.
+- The tokenizer is frozen under `tokenizer/frozen/darkmind_v2_sp_bpe24k_v1/` with deterministic hashes and tied-embedding constraints.
+- Model training and SFT have not started.
+
+The next phase is tiny base smoke planning for pipeline compatibility, not full pretraining. Any real base configuration must calculate its exact parameter count first and use tied input/output embeddings by default.
 

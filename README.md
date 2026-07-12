@@ -26,13 +26,13 @@ DarkMind-30M is a project aimed at demystifying the architecture behind modern L
 graph TD
     A[Raw Text Data] -->|clean_text.py| B(Cleaned Corpus)
     B -->|build_dataset_from_raw.py| C(Corpus V3)
-    
+
     C -->|train_tokenizer.py| D[Custom BPE Tokenizer]
     C -->|train_from_config.py| E[Decoder-only Transformer]
-    
+
     D --> E
     E -->|CUDA Training Loop| F((darkmind_30m.pt))
-    
+
     F -->|chat_demo.py| G[Interactive Inference]
 ```
 
@@ -104,7 +104,7 @@ python scripts/approve_candidates.py --input_path data/self_improvement/pending_
 <details>
 <summary>🇹🇷 Türkçe Dökümantasyon (Turkish Documentation)</summary>
 
-DarkMind-30M, Türkçe odaklı küçük bir dil modeli geliştirme projesidir. 
+DarkMind-30M, Türkçe odaklı küçük bir dil modeli geliştirme projesidir.
 
 Hazır bir modeli fine-tune etmek yerine sıfırdan bir mini decoder-only Transformer mimarisi kurmayı, kendi tokenizer'ını eğitmeyi ve kendi training loop'u ile model eğitmeyi amaçlar.
 
@@ -121,6 +121,14 @@ Hazır bir modeli fine-tune etmek yerine sıfırdan bir mini decoder-only Transf
 - İlk checkpoint üretildi
 - Eğitim pipeline'ı başarıyla çalıştırıldı
 </details>
+
+## DarkMind v2 Phase 1B Milestone
+
+DarkMind v2 Phase 1B built and validated the 50M-character tokenizer corpus, compared four SentencePiece candidates, and selected Candidate D BPE 24k. The frozen tokenizer package is stored at `darkmind_v2/tokenizer/frozen/darkmind_v2_sp_bpe24k_v1/`.
+
+The DarkMind v2 model must use tied input and output embeddings. No DarkMind v2 model training has started; the next phase is tiny base smoke planning.
+
+See [DarkMind v2 documentation](darkmind_v2/README.md) for corpus provenance, candidate evaluation, and frozen-package details.
 
 ## 📄 License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

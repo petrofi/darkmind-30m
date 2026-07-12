@@ -12,6 +12,15 @@ from pathlib import Path
 from typing import Any
 
 
+TRACKED_TOKENIZER_FILES = {
+    "tokenizer.json",
+    "vocab.json",
+    "merges.txt",
+    "training_config.json",
+    "training_log.txt",
+}
+
+
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -23,7 +32,7 @@ def sha256_file(path: Path) -> str:
 def discover_tokenizer_files(tokenizer_path: Path) -> dict[str, str]:
     files: dict[str, str] = {}
     for path in sorted(tokenizer_path.rglob("*")):
-        if path.is_file():
+        if path.is_file() and (path.name in TRACKED_TOKENIZER_FILES or path.suffix in {".model", ".vocab"}):
             files[str(path.relative_to(tokenizer_path)).replace("\\", "/")] = sha256_file(path)
     return files
 
@@ -39,6 +48,14 @@ def load_vocab(tokenizer_path: Path) -> dict[str, int]:
         vocab = payload.get("model", {}).get("vocab", {})
         if isinstance(vocab, dict):
             return {str(key): int(value) for key, value in vocab.items()}
+    model_paths = sorted(tokenizer_path.glob("*.model"))
+    if model_paths:
+        try:
+            import sentencepiece as spm
+        except ImportError as exc:  # pragma: no cover - depends on local environment
+            raise RuntimeError("The 'sentencepiece' package is required to read a SentencePiece vocabulary.") from exc
+        processor = spm.SentencePieceProcessor(model_file=str(model_paths[0]))
+        return {processor.id_to_piece(index): index for index in range(processor.get_piece_size())}
     return {}
 
 
@@ -69,7 +86,7 @@ def build_manifest(
 ) -> dict[str, Any]:
     vocab = load_vocab(tokenizer_path)
     special_token_ids = {token: vocab[token] for token in special_tokens if token in vocab}
-    return {
+    manifest = {
         "tokenizer_type": infer_tokenizer_type(tokenizer_path),
         "vocabulary_size": len(vocab) if vocab else None,
         "tokenizer_file_hashes": discover_tokenizer_files(tokenizer_path),
@@ -84,6 +101,11 @@ def build_manifest(
         "immutable": immutable,
         "generation_timestamp": timestamp or datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
+    deterministic_payload = {key: value for key, value in manifest.items() if key != "generation_timestamp"}
+    manifest["deterministic_content_hash"] = hashlib.sha256(
+        json.dumps(deterministic_payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    ).hexdigest()
+    return manifest
 
 
 def main() -> None:

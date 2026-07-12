@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import sys
 import unicodedata
 from collections import Counter
 from pathlib import Path
@@ -15,8 +16,9 @@ try:
     from .test_roundtrip import encoding_ids, load_tokenizer, read_samples, run_roundtrip
     from ..corpus.detect_mojibake import detect_text, looks_like_mojibake
 except ImportError:  # pragma: no cover - CLI fallback
-    from build_tokenizer_manifest import discover_tokenizer_files, load_vocab
-    from test_roundtrip import encoding_ids, load_tokenizer, read_samples, run_roundtrip
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+    from darkmind_v2.tokenizer.build_tokenizer_manifest import discover_tokenizer_files, load_vocab
+    from darkmind_v2.tokenizer.test_roundtrip import encoding_ids, load_tokenizer, read_samples, run_roundtrip
     from darkmind_v2.corpus.detect_mojibake import detect_text, looks_like_mojibake
 
 

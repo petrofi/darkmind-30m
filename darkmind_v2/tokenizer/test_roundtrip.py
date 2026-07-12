@@ -36,6 +36,14 @@ def encoding_ids(encoded: Any) -> list[int]:
 
 
 def load_tokenizer(tokenizer_path: Path) -> TokenizerLike:
+    model_paths = sorted(tokenizer_path.glob("*.model"))
+    if model_paths:
+        try:
+            import sentencepiece as spm
+        except ImportError as exc:  # pragma: no cover - depends on local environment
+            raise RuntimeError("The 'sentencepiece' package is required to load SentencePiece models.") from exc
+        return spm.SentencePieceProcessor(model_file=str(model_paths[0]))
+
     try:
         from tokenizers import ByteLevelBPETokenizer, Tokenizer
     except ImportError as exc:  # pragma: no cover - depends on local environment
@@ -50,7 +58,7 @@ def load_tokenizer(tokenizer_path: Path) -> TokenizerLike:
     if vocab_json.exists() and merges_txt.exists():
         return ByteLevelBPETokenizer(str(vocab_json), str(merges_txt))
 
-    raise FileNotFoundError(f"No tokenizer.json or vocab.json+merges.txt found under {tokenizer_path}")
+    raise FileNotFoundError(f"No SentencePiece model, tokenizer.json, or vocab.json+merges.txt found under {tokenizer_path}")
 
 
 def run_roundtrip(tokenizer: TokenizerLike, samples: list[str]) -> list[RoundTripResult]:

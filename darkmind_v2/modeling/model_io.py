@@ -48,12 +48,23 @@ def save_model_package(
 
 def load_model_package(path: Path, *, device: str = "cpu") -> DarkMindV2ForCausalLM:
     try:
+        from safetensors import safe_open
         from safetensors.torch import load_model
     except ImportError as exc:
         raise RuntimeError("safetensors is required for DarkMind v2 model weights") from exc
     config = DarkMindV2Config.from_json_file(path / "config.json")
-    model = DarkMindV2ForCausalLM(config).to(device)
-    load_model(model, str(path / "model.safetensors"), device=device)
+    weights_path = path / "model.safetensors"
+    with safe_open(weights_path, framework="pt", device="cpu") as weights:
+        stored_dtype = None
+        for key in weights.keys():
+            candidate_dtype = weights.get_tensor(key).dtype
+            if candidate_dtype.is_floating_point:
+                stored_dtype = candidate_dtype
+                break
+        if stored_dtype is None:
+            raise ValueError("model package contains no floating-point weights")
+    model = DarkMindV2ForCausalLM(config).to(device=device, dtype=stored_dtype)
+    load_model(model, str(weights_path), device=device)
     model.tie_weights()
     model.eval()
     return model

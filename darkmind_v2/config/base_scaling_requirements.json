@@ -1,0 +1,49 @@
+{
+  "schema_version": "darkmind-v2-base-scaling-requirements-v1",
+  "phase": "3A",
+  "status": "planning_and_benchmark_only",
+  "tokenizer": {
+    "name": "darkmind_v2_sp_bpe24k_v1",
+    "vocabulary_size": 24000,
+    "frozen": true,
+    "dynamic_token_addition": false,
+    "tokenizer_change_allowed": false
+  },
+  "architecture": {
+    "type": "decoder_only_causal",
+    "normalization": "pre_layer_norm",
+    "attention": "causal_self_attention",
+    "activation": "gelu",
+    "initial_mlp_expansion_ratio": 4,
+    "initial_context_length": 512,
+    "tie_input_output_embeddings": true,
+    "untied_lm_head": "rejected",
+    "target_attention_head_dimension": 64,
+    "target_parameter_classes": [60000000, 80000000, 100000000, 120000000]
+  },
+  "training": {
+    "precision": "bf16",
+    "fp32_fallback": true,
+    "gradient_accumulation": true,
+    "gradient_checkpointing": true,
+    "checkpoint_resume": true,
+    "model_weight_format": "safetensors",
+    "target_hardware": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "kv_cache_required_for_training": false
+  },
+  "selection_gates": {
+    "preferred_max_vocabulary_share_percent": 20.0,
+    "hard_max_vocabulary_share_percent": 25.0,
+    "candidate_class_tolerance_percent": 5.0,
+    "embedding_dimension_must_divide_by_heads": true,
+    "exact_count_from_implementation": true,
+    "same_tokenizer_and_context_for_all_candidates": true,
+    "transformer_body_must_exceed_tiny_body_parameters": 3225088
+  },
+  "release_gates": {
+    "sft_before_base_quality_approval": false,
+    "strict_generation_audit_required": true,
+    "license_approval_required": true,
+    "public_model_must_not_be_presented_as_chat_without_instruct_approval": true
+  }
+}

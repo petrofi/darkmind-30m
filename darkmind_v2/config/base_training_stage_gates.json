@@ -1,0 +1,85 @@
+{
+  "schema_version": "darkmind-v2-base-training-stage-gates-v1",
+  "tokenizer": "darkmind_v2_sp_bpe24k_v1",
+  "sft_allowed_before_required_base_stage": false,
+  "stages": [
+    {
+      "id": "stage_0_initialization",
+      "tokens": 0,
+      "blocking": true,
+      "checks": [
+        "finite_logits",
+        "checkpoint_save_reload",
+        "tokenizer_compatibility",
+        "corpus_manifest_compatibility",
+        "pipeline_integrity"
+      ]
+    },
+    {
+      "id": "stage_1_5m",
+      "tokens": 5000000,
+      "blocking": true,
+      "checks": [
+        "finite_loss_and_gradients",
+        "validation_improvement",
+        "checkpoint_resume",
+        "tokenizer_hash_unchanged",
+        "generation_health_pipeline"
+      ]
+    },
+    {
+      "id": "stage_2_25m",
+      "tokens": 25000000,
+      "blocking": true,
+      "checks": [
+        "continued_validation_improvement",
+        "repetition_trend_improving",
+        "language_consistency_improving",
+        "no_catastrophic_loops",
+        "no_overfitting_evidence"
+      ]
+    },
+    {
+      "id": "stage_3_100m",
+      "tokens": 100000000,
+      "blocking": true,
+      "checks": [
+        "meaningful_turkish_continuations",
+        "stable_english_continuation",
+        "technical_text_improvement",
+        "strict_generation_audit",
+        "human_readable_review"
+      ]
+    },
+    {
+      "id": "stage_4_250m",
+      "tokens": 250000000,
+      "blocking": true,
+      "checks": [
+        "broad_base_language_quality",
+        "repetition_below_documented_threshold",
+        "stable_eos_behavior",
+        "no_public_release_hard_failures",
+        "500m_continuation_decision"
+      ]
+    },
+    {
+      "id": "stage_5_500m",
+      "tokens": 500000000,
+      "blocking": true,
+      "checks": [
+        "final_base_checkpoint_comparison",
+        "strict_public_base_model_audit",
+        "contamination_review",
+        "model_weight_license_resolved",
+        "local_huggingface_release_validation"
+      ]
+    }
+  ],
+  "release_policy": {
+    "stage_failure_stops_automatic_continuation": true,
+    "public_release_requires_stage_5": true,
+    "instruct_training_requires_explicit_base_checkpoint_approval": true,
+    "human_review_languages": ["tr", "en"]
+  }
+}

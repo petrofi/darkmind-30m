@@ -9,6 +9,7 @@ from typing import Any
 import torch
 from torch import nn
 from torch.nn import functional as F
+from torch.utils.checkpoint import checkpoint
 
 try:
     from .configuration_darkmind_v2 import DarkMindV2Config
@@ -49,12 +50,26 @@ class CausalSelfAttention(nn.Module):
         self.n_head = config.n_head
         self.n_embd = config.n_embd
         self.head_dim = config.n_embd // config.n_head
+        self.attention_implementation = config.attention_implementation
         self.qkv = nn.Linear(config.n_embd, 3 * config.n_embd, bias=config.bias)
         self.proj = nn.Linear(config.n_embd, config.n_embd, bias=config.bias)
         self.attn_dropout = nn.Dropout(config.dropout)
         self.resid_dropout = nn.Dropout(config.dropout)
         mask = torch.tril(torch.ones(config.block_size, config.block_size, dtype=torch.bool))
         self.register_buffer("causal_mask", mask.view(1, 1, config.block_size, config.block_size))
+
+    def _allowed_mask(
+        self,
+        batch_size: int,
+        sequence_length: int,
+        attention_mask: torch.Tensor | None,
+    ) -> torch.Tensor:
+        allowed = self.causal_mask[:, :, :sequence_length, :sequence_length]
+        if attention_mask is not None:
+            if attention_mask.shape != (batch_size, sequence_length):
+                raise ValueError("attention_mask must have shape batch x sequence")
+            allowed = allowed & attention_mask[:, None, None, :].to(dtype=torch.bool)
+        return allowed
 
     def forward(
         self,
@@ -69,12 +84,29 @@ class CausalSelfAttention(nn.Module):
             return tensor.view(batch_size, sequence_length, self.n_head, self.head_dim).transpose(1, 2)
 
         query, key, value = map(split_heads, (query, key, value))
+        use_sdpa = self.attention_implementation in {"auto", "sdpa"} and hasattr(
+            F, "scaled_dot_product_attention"
+        )
+        if self.attention_implementation == "sdpa" and not use_sdpa:
+            raise RuntimeError("scaled-dot-product attention is unavailable in this PyTorch build")
+        if use_sdpa:
+            attention_bias = None
+            is_causal = attention_mask is None
+            if attention_mask is not None:
+                attention_bias = self._allowed_mask(batch_size, sequence_length, attention_mask)
+            output = F.scaled_dot_product_attention(
+                query,
+                key,
+                value,
+                attn_mask=attention_bias,
+                dropout_p=self.attn_dropout.p if self.training else 0.0,
+                is_causal=is_causal,
+            )
+            output = output.transpose(1, 2).contiguous().view(batch_size, sequence_length, self.n_embd)
+            return self.resid_dropout(self.proj(output))
+
         scores = query @ key.transpose(-2, -1) / math.sqrt(self.head_dim)
-        allowed = self.causal_mask[:, :, :sequence_length, :sequence_length]
-        if attention_mask is not None:
-            if attention_mask.shape != (batch_size, sequence_length):
-                raise ValueError("attention_mask must have shape batch x sequence")
-            allowed = allowed & attention_mask[:, None, None, :].to(dtype=torch.bool)
+        allowed = self._allowed_mask(batch_size, sequence_length, attention_mask)
         scores = scores.masked_fill(~allowed, torch.finfo(scores.dtype).min)
         weights = self.attn_dropout(F.softmax(scores, dim=-1))
         output = weights @ value
@@ -85,7 +117,7 @@ class CausalSelfAttention(nn.Module):
 class MLP(nn.Module):
     def __init__(self, config: DarkMindV2Config) -> None:
         super().__init__()
-        hidden_size = config.mlp_ratio * config.n_embd
+        hidden_size = config.effective_mlp_hidden_size
         self.fc = nn.Linear(config.n_embd, hidden_size, bias=config.bias)
         self.proj = nn.Linear(hidden_size, config.n_embd, bias=config.bias)
         self.dropout = nn.Dropout(config.dropout)
@@ -117,6 +149,7 @@ class DarkMindV2ForCausalLM(PreTrainedModel):
     config_class = DarkMindV2Config
     base_model_prefix = "darkmind_v2"
     _tied_weights_keys = ["lm_head.weight"]
+    supports_gradient_checkpointing = True
 
     def __init__(self, config: DarkMindV2Config) -> None:
         config.validate()
@@ -127,6 +160,7 @@ class DarkMindV2ForCausalLM(PreTrainedModel):
         self.blocks = nn.ModuleList([TransformerBlock(config) for _ in range(config.n_layer)])
         self.final_norm = LayerNorm(config.n_embd, config.bias)
         self.lm_head = nn.Linear(config.n_embd, config.vocab_size, bias=False)
+        self.gradient_checkpointing = config.gradient_checkpointing
         self._initialize_deterministically(config.seed)
         self.tie_weights()
 
@@ -163,6 +197,16 @@ class DarkMindV2ForCausalLM(PreTrainedModel):
     def embeddings_are_tied(self) -> bool:
         return self.token_embedding.weight is self.lm_head.weight
 
+    def gradient_checkpointing_enable(self, gradient_checkpointing_kwargs: dict[str, Any] | None = None) -> None:
+        if gradient_checkpointing_kwargs not in (None, {}, {"use_reentrant": False}):
+            raise ValueError("only non-reentrant gradient checkpointing is supported")
+        self.gradient_checkpointing = True
+        self.config.gradient_checkpointing = True
+
+    def gradient_checkpointing_disable(self) -> None:
+        self.gradient_checkpointing = False
+        self.config.gradient_checkpointing = False
+
     def parameter_count(self) -> int:
         return sum(parameter.numel() for parameter in self.parameters())
 
@@ -190,7 +234,14 @@ class DarkMindV2ForCausalLM(PreTrainedModel):
         hidden_states = self.token_embedding(input_ids) + self.position_embedding(positions)[None, :, :]
         hidden_states = self.dropout(hidden_states)
         for block in self.blocks:
-            hidden_states = block(hidden_states, attention_mask)
+            if self.gradient_checkpointing and self.training and torch.is_grad_enabled():
+                hidden_states = checkpoint(
+                    lambda states, current_block=block: current_block(states, attention_mask),
+                    hidden_states,
+                    use_reentrant=False,
+                )
+            else:
+                hidden_states = block(hidden_states, attention_mask)
         logits = self.lm_head(self.final_norm(hidden_states))
 
         loss = None

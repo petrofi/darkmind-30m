@@ -45,12 +45,15 @@ class DarkMindV2Config(PretrainedConfig):
         n_head: int = 4,
         n_embd: int = 256,
         mlp_ratio: int = 4,
+        mlp_hidden_size: int | None = None,
         dropout: float = 0.0,
         bias: bool = True,
         activation: str = "gelu",
         normalization: str = "pre_layer_norm",
         position_embedding_type: str = "learned_absolute",
         attention_type: str = "causal_self_attention",
+        attention_implementation: str = "auto",
+        gradient_checkpointing: bool = False,
         tie_word_embeddings: bool = True,
         tokenizer_name: str = TOKENIZER_NAME,
         schema_version: str = SCHEMA_VERSION,
@@ -79,12 +82,15 @@ class DarkMindV2Config(PretrainedConfig):
         self.n_head = n_head
         self.n_embd = n_embd
         self.mlp_ratio = mlp_ratio
+        self.mlp_hidden_size = mlp_hidden_size
         self.dropout = dropout
         self.bias = bias
         self.activation = activation
         self.normalization = normalization
         self.position_embedding_type = position_embedding_type
         self.attention_type = attention_type
+        self.attention_implementation = attention_implementation
+        self.gradient_checkpointing = gradient_checkpointing
         self.tie_word_embeddings = tie_word_embeddings
         self.tokenizer_name = tokenizer_name
         self.schema_version = schema_version
@@ -115,6 +121,10 @@ class DarkMindV2Config(PretrainedConfig):
                 raise ValueError(f"{name} must be a positive integer")
         if self.n_embd % self.n_head:
             raise ValueError("n_embd must be divisible by n_head")
+        if self.mlp_hidden_size is not None and (
+            not isinstance(self.mlp_hidden_size, int) or self.mlp_hidden_size <= 0
+        ):
+            raise ValueError("mlp_hidden_size must be a positive integer when provided")
         if self.vocab_size != 24000:
             raise ValueError("vocab_size must match the frozen 24,000-token vocabulary")
         if self.schema_version != SCHEMA_VERSION:
@@ -133,8 +143,20 @@ class DarkMindV2Config(PretrainedConfig):
             raise ValueError("only learned absolute positional embeddings are supported")
         if self.attention_type != "causal_self_attention":
             raise ValueError("only causal self-attention is supported")
+        if self.attention_implementation not in {"auto", "sdpa", "fallback"}:
+            raise ValueError("attention_implementation must be auto, sdpa, or fallback")
+        if not isinstance(self.gradient_checkpointing, bool):
+            raise ValueError("gradient_checkpointing must be a boolean")
         if self.special_token_ids != SPECIAL_TOKEN_IDS:
             raise ValueError("special-token IDs do not match the frozen tokenizer")
+
+    @property
+    def head_dimension(self) -> int:
+        return self.n_embd // self.n_head
+
+    @property
+    def effective_mlp_hidden_size(self) -> int:
+        return self.mlp_hidden_size or self.mlp_ratio * self.n_embd
 
     def architecture_dict(self) -> dict[str, Any]:
         keys = (
@@ -158,6 +180,12 @@ class DarkMindV2Config(PretrainedConfig):
             "vocab_size",
         )
         payload = {key: getattr(self, key) for key in keys}
+        if self.attention_implementation != "auto":
+            payload["attention_implementation"] = self.attention_implementation
+        if self.gradient_checkpointing:
+            payload["gradient_checkpointing"] = True
+        if self.mlp_hidden_size is not None:
+            payload["mlp_hidden_size"] = self.mlp_hidden_size
         payload.update(self.special_token_ids)
         return payload
 

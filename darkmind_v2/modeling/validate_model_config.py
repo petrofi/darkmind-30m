@@ -20,6 +20,7 @@ def validate_model_config(path: Path) -> dict:
         block_size=config.block_size,
         tied_embeddings=config.tie_word_embeddings,
         bias=config.bias,
+        mlp_hidden_size=config.effective_mlp_hidden_size,
     )
     return {
         "result": "PASS",
@@ -27,7 +28,9 @@ def validate_model_config(path: Path) -> dict:
         "tokenizer_name": config.tokenizer_name,
         "tied_embeddings": config.tie_word_embeddings,
         "total_parameters": estimate.total_params,
+        "transformer_body_parameters": estimate.transformer_body_params,
         "vocab_related_percentage": estimate.vocab_related_percentage,
+        "head_dimension": estimate.head_dimension,
     }
 
 

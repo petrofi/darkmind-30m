@@ -121,6 +121,7 @@ def generate_record(
     temperature: float = 1.0,
     top_p: float | None = None,
     top_k: int | None = None,
+    checkpoint_stage: str = "research_preview",
 ) -> dict[str, Any]:
     device = next(model.parameters()).device
     prompt_ids = tokenizer.encode(prompt["prompt"], add_bos=True)
@@ -153,7 +154,7 @@ def generate_record(
     policy = classify_generation_health(
         output,
         token_ids,
-        checkpoint_stage="research_preview",
+        checkpoint_stage=checkpoint_stage,
         maximum_repetition_ratio=float(prompt.get("maximum_repetition_ratio", 0.35)),
         decode_exception=decode_exception,
         logits_finite=bool(torch.isfinite(initial_logits).all()),
@@ -186,6 +187,7 @@ def generate_record(
             "top_k": top_k,
             "max_new_tokens": max_new_tokens,
             "eos_aware": True,
+            "checkpoint_stage": checkpoint_stage,
         },
         "output": output,
         "output_escaped": ascii(output),

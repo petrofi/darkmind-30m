@@ -1,0 +1,80 @@
+{
+  "checkpointing": {
+    "enabled": true,
+    "milestone_steps": [0, 256, 717, 1434, 2150, 2867],
+    "no_overwrite": true,
+    "save_optimizer_state": true,
+    "save_rng_state": true,
+    "save_scheduler_state": true
+  },
+  "compile": {
+    "enabled": false,
+    "reason": "Disabled unless separately benchmarked and proven deterministic."
+  },
+  "data": {
+    "data_order_seed": 20260712,
+    "deterministic_traversal": "contiguous_no_shuffle",
+    "effective_tokens_per_optimizer_step": 4096,
+    "excluded_tail_tokens": 994,
+    "no_data_repetition": true,
+    "no_sample_replacement": true,
+    "sequence_length": 256,
+    "tokenized_dir": "darkmind_v2/data/phase2a/tokenized/full_v1",
+    "train_corpus_tokens": 11744226
+  },
+  "device": "cuda",
+  "evaluation": {
+    "generation_max_new_tokens": 32,
+    "milestone_steps": [0, 256, 717, 1434, 2150, 2867],
+    "use_complete_eval_split": true,
+    "use_complete_validation_split": true
+  },
+  "gradient_clipping": 1.0,
+  "initialization_seed": 20260712,
+  "maximum_optimizer_steps": 2867,
+  "maximum_total_training_tokens": 11743232,
+  "mixed_precision": "bf16",
+  "model_config": "darkmind_v2/config/model_tiny_smoke.json",
+  "optimizer": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "name": "AdamW",
+    "peak_learning_rate": 0.0003,
+    "weight_decay": 0.1
+  },
+  "profiles": [
+    {
+      "gradient_accumulation_steps": 4,
+      "micro_batch_size": 4,
+      "name": "balanced",
+      "priority": 1
+    },
+    {
+      "gradient_accumulation_steps": 8,
+      "micro_batch_size": 2,
+      "name": "fallback_2",
+      "priority": 2
+    },
+    {
+      "gradient_accumulation_steps": 16,
+      "micro_batch_size": 1,
+      "name": "fallback_1",
+      "priority": 3
+    }
+  ],
+  "run": {
+    "name": "tiny_full_epoch_seed20260712_v1",
+    "output_dir": "darkmind_v2/data/phase2c/runs/tiny_full_epoch_seed20260712_v1"
+  },
+  "schedule": {
+    "minimum_learning_rate": 0.00003,
+    "name": "warmup_cosine",
+    "planned_optimizer_steps": 2867,
+    "warmup_optimizer_steps": 100
+  },
+  "schema_version": "darkmind-v2-full-epoch-training-config-v1",
+  "segment_a_target_step": 1434,
+  "segment_b_target_step": 2867,
+  "tied_embeddings_required": true,
+  "vocabulary_size": 24000
+}

@@ -1,0 +1,70 @@
+{
+  "decision": {
+    "d_materially_better_validation": false,
+    "materiality_definition": "Candidate D must have at least 2% lower final validation loss than C, or a clearly better loss slope without a stability penalty.",
+    "rows": [
+      {
+        "candidate": "C",
+        "component_scores": {
+          "checkpoint_resume_reliability": 50.0,
+          "eval_improvement": 100.0,
+          "generation_health_trend": 100.0,
+          "implementation_backend_reliability": 50.0,
+          "long_run_stability": 100.0,
+          "loss_improvement_per_hour": 100.0,
+          "transformer_body_capacity": 85.77089115016959,
+          "validation_improvement": 100.0,
+          "vram_headroom": 100.0
+        },
+        "eligible": false,
+        "hard_failures": [
+          "repeated process crash in recommended non-checkpointing profile"
+        ],
+        "raw_metrics": {
+          "checkpoint_resume_reliability": 50.0,
+          "eval_improvement": 4.145136320019742,
+          "generation_health_trend": 0.2208853529969268,
+          "implementation_backend_reliability": 50.0,
+          "long_run_stability": 100.0,
+          "loss_improvement_per_hour": 53.53020428190221,
+          "transformer_body_capacity": 85449216.0,
+          "validation_improvement": 4.124148024183376,
+          "vram_headroom": 83.21832061068702
+        },
+        "weighted_score": 93.57708911501696
+      },
+      {
+        "candidate": "D",
+        "component_scores": {
+          "checkpoint_resume_reliability": 100.0,
+          "eval_improvement": 99.58380662874636,
+          "generation_health_trend": 73.6259599912371,
+          "implementation_backend_reliability": 100.0,
+          "long_run_stability": 100.0,
+          "loss_improvement_per_hour": 88.52498764803653,
+          "transformer_body_capacity": 100.0,
+          "validation_improvement": 99.61850510500622,
+          "vram_headroom": 97.91590225288031
+        },
+        "eligible": true,
+        "hard_failures": [],
+        "raw_metrics": {
+          "checkpoint_resume_reliability": 100.0,
+          "eval_improvement": 4.127884537426393,
+          "generation_health_trend": 0.16262896162402013,
+          "implementation_backend_reliability": 100.0,
+          "long_run_stability": 100.0,
+          "loss_improvement_per_hour": 47.387606728522655,
+          "transformer_body_capacity": 99624960.0,
+          "validation_improvement": 4.10841461000913,
+          "vram_headroom": 81.48396946564885
+        },
+        "weighted_score": 95.8488822597789
+      }
+    ],
+    "selected": "D",
+    "tie_break_applied": false
+  },
+  "pilot_tokens_per_candidate": 4997120,
+  "schema_version": "darkmind-v2-phase3b-finalist-decision-v1"
+}

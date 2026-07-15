@@ -1,0 +1,54 @@
+{
+  "architecture_hash": "3a2dda86293ceae23ca4e50ea47c840b7fc46021d293c862d330110851ac8305",
+  "architecture_name": "darkmind-v2-base-v1",
+  "architecture_version": 1,
+  "config_path": "darkmind_v2/config/model_base_v1.json",
+  "config_sha256": "8e9775721b0173a92e88de15c2195428932b3aa5beec57d568674c25887c5e39",
+  "future_version_conditions": [
+    "a change to any immutable architecture field",
+    "a tokenizer identity or vocabulary-size change",
+    "a context-length or position-embedding change",
+    "a backend policy that changes numerical or checkpoint compatibility",
+    "new evidence that the frozen architecture cannot meet approved quality gates"
+  ],
+  "immutable_after_freeze": true,
+  "immutable_fields": {
+    "activation": "gelu",
+    "bias": true,
+    "block_size": 512,
+    "mlp_hidden_size": 3072,
+    "n_embd": 768,
+    "n_head": 12,
+    "n_layer": 14,
+    "normalization": "pre_layer_norm",
+    "position_embedding_type": "learned_absolute",
+    "tie_word_embeddings": true,
+    "tokenizer_name": "darkmind_v2_sp_bpe24k_v1",
+    "vocab_size": 24000
+  },
+  "known_limitations": [
+    "Candidate C is rejected on Windows with PyTorch 2.4.1+cu121 after repeated intermittent process terminations in the checkpointing-off profile.",
+    "The frozen D architecture was only trained for a 4,997,120-token pilot and is not a finished language model.",
+    "PyTorch 2.4.1+cu121 on Windows reports that flash attention is unavailable for this SDPA path."
+  ],
+  "parameter_counts": {
+    "total": 118056960,
+    "transformer_body": 99624960,
+    "vocabulary_share_percent": 15.6128
+  },
+  "runtime_policies": {
+    "attention_implementation": "sdpa",
+    "gradient_checkpointing": "disabled for base v1 production runs",
+    "micro_batch_size": 2,
+    "precision": "bf16",
+    "sequence_length": 512
+  },
+  "schema_version": "darkmind-v2-model-base-v1-constraints-v1",
+  "source_finalist": "Candidate D",
+  "tokenizer": {
+    "freeze_manifest_sha256": "8e452c049f05ef1c6a94cb5fb42b6accdd1c18b76edebdb9d68bd85fbdfe538e",
+    "identity": "darkmind_v2_sp_bpe24k_v1",
+    "model_sha256": "db116d4bcf315a6d2a7c5191cbea719d5751c9ba839778eba7e243d520253445",
+    "vocab_sha256": "f098fecdd4f610ce5b150be09e56e7648211e1ecb076ad6f38af71cee25344ed"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "architecture": "darkmind-v2-base-v1",
+  "continuation_policy": "After every stage, stop unless all gates pass and the user approves the next budget.",
+  "early_stop_rules": [
+    "stop on non-finite loss or gradients",
+    "stop on checkpoint, resume, or data-position mismatch",
+    "stop when validation loss degrades across two scheduled gates without a documented recovery",
+    "stop when repetition, Unicode, or meaningful-continuation health materially regresses",
+    "stop when train-validation divergence or source-specific memorization exceeds the approved threshold"
+  ],
+  "model_parameters": 118056960,
+  "overfitting_controls": [
+    "document-boundary-aware split isolation",
+    "deduplication and contamination audit before tokenization",
+    "source-cap and per-source held-out evaluation",
+    "canary and near-verbatim memorization checks",
+    "deterministic epoch and sequence-order manifests"
+  ],
+  "projection_basis": {
+    "candidate": "D",
+    "measured_long_run_tokens_per_second": 14542.114258990738,
+    "multiplier_scope": "15% evaluation/checkpoint overhead and 20% interruption/thermal allowance",
+    "wall_clock_multiplier": 1.38
+  },
+  "repetition_policy": "Prefer additional unique high-quality data. Any repeated epoch must use a recorded deterministic reshuffle.",
+  "scaling_law_caveat": "General large-model scaling ratios are planning references, not an exact law for this small bilingual model. Two billion tokens are neither mandatory nor guaranteed sufficient.",
+  "schema_version": "darkmind-v2-production-training-token-plan-v1",
+  "token_to_parameter_ratios": {
+    "1b": 8.470487466389105,
+    "2b": 16.94097493277821,
+    "500m": 4.235243733194553
+  },
+  "total_seen_token_stages": [
+    {
+      "active_training_hours": 0.09550804402669309,
+      "conservative_wall_clock_hours": 0.13180110075683646,
+      "gate": "full validation/eval loss, generation health, memorization, source exposure, checkpoint integrity, and human go/no-go review",
+      "optional": false,
+      "requires_user_approval": true,
+      "tokens": 5000000
+    },
+    {
+      "active_training_hours": 0.47754022013346553,
+      "conservative_wall_clock_hours": 0.6590055037841824,
+      "gate": "full validation/eval loss, generation health, memorization, source exposure, checkpoint integrity, and human go/no-go review",
+      "optional": false,
+      "requires_user_approval": true,
+      "tokens": 25000000
+    },
+    {
+      "active_training_hours": 1.9101608805338621,
+      "conservative_wall_clock_hours": 2.6360220151367297,
+      "gate": "full validation/eval loss, generation health, memorization, source exposure, checkpoint integrity, and human go/no-go review",
+      "optional": false,
+      "requires_user_approval": true,
+      "tokens": 100000000
+    },
+    {
+      "active_training_hours": 4.775402201334654,
+      "conservative_wall_clock_hours": 6.590055037841823,
+      "gate": "full validation/eval loss, generation health, memorization, source exposure, checkpoint integrity, and human go/no-go review",
+      "optional": false,
+      "requires_user_approval": true,
+      "tokens": 250000000
+    },
+    {
+      "active_training_hours": 9.550804402669309,
+      "conservative_wall_clock_hours": 13.180110075683645,
+      "gate": "full validation/eval loss, generation health, memorization, source exposure, checkpoint integrity, and human go/no-go review",
+      "optional": false,
+      "requires_user_approval": true,
+      "tokens": 500000000
+    },
+    {
+      "active_training_hours": 19.101608805338618,
+      "conservative_wall_clock_hours": 26.36022015136729,
+      "gate": "full validation/eval loss, generation health, memorization, source exposure, checkpoint integrity, and human go/no-go review",
+      "optional": true,
+      "requires_user_approval": true,
+      "tokens": 1000000000
+    },
+    {
+      "active_training_hours": 38.203217610677235,
+      "conservative_wall_clock_hours": 52.72044030273458,
+      "gate": "full validation/eval loss, generation health, memorization, source exposure, checkpoint integrity, and human go/no-go review",
+      "optional": true,
+      "requires_user_approval": true,
+      "tokens": 2000000000
+    }
+  ],
+  "unique_clean_corpus_targets": {
+    "minimum_serious_tokens": 500000000,
+    "preferred_stretch_tokens": 1000000000
+  }
+}

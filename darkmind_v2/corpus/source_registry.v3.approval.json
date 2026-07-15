@@ -1,0 +1,846 @@
+{
+  "approval_policy": "A source status authorizes planning only. Download requires a separate user approval after dated snapshot, license evidence, attribution, and checksum review.",
+  "decision_date": "2026-07-13",
+  "download_authorized": false,
+  "first_100m_language_mix": {
+    "en": 40000000,
+    "tr": 60000000
+  },
+  "first_100m_tranche": [
+    {
+      "source_id": "wikimedia_trwiki_20260701",
+      "tokens": 55000000
+    },
+    {
+      "source_id": "wikimedia_enwiki_20260701",
+      "tokens": 30000000
+    },
+    {
+      "source_id": "python_docs_tr_3_14_6",
+      "tokens": 5000000
+    },
+    {
+      "source_id": "python_docs_en_3_14_6",
+      "tokens": 10000000
+    }
+  ],
+  "schema_version": "darkmind-v2-source-registry-v3-approval-v1",
+  "sources": [
+    {
+      "approval_reason": "Ready after official dump hashes and page-level attribution are captured.",
+      "approval_status": "approved",
+      "attribution_requirements": "Retain project, snapshot, article URL or stable attribution route, and license in the corpus manifest.",
+      "canonical_name": "Turkish Wikipedia pages-articles",
+      "checksum_availability": "official Wikimedia md5sums and sha1sums files",
+      "contamination_risks": [
+        "benchmark passages",
+        "widely mirrored reference text"
+      ],
+      "content_category": "general_prose",
+      "duplication_risks": [
+        "mirrors",
+        "translated overlap",
+        "repeated templates"
+      ],
+      "edition": "2026-07-01",
+      "expected_download_bytes": 3200000000,
+      "expected_usable_tokens": 175000000,
+      "extraction_implementation_readiness": "ready_after_snapshot_and_checksum_verification",
+      "extraction_method": "stream BZ2 and iterative MediaWiki XML parsing; main namespace only",
+      "id": "wikimedia_trwiki_20260701",
+      "language": "tr",
+      "license": "CC BY-SA 4.0 and GFDL; imported text may carry compatible additional attribution",
+      "license_evidence_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use/en#7._Licensing_of_Content",
+      "maximum_source_cap_tokens": 175000000,
+      "official_url": "https://dumps.wikimedia.org/trwiki/20260701/trwiki-20260701-pages-articles-multistream.xml.bz2",
+      "phase3a_approval_status": "approved",
+      "pii_privacy_risks": [
+        "biographical personal data",
+        "revision text may contain transient PII"
+      ],
+      "publisher": "Wikimedia Foundation",
+      "quality_risks": [
+        "templates",
+        "lists",
+        "citation debris",
+        "uneven article quality"
+      ],
+      "quality_tier": "A",
+      "redistribution_terms": "Preserve source and license notices; comply with page-level imported-content notices."
+    },
+    {
+      "approval_reason": "Ready as a deterministic capped Wikimedia snapshot with attribution.",
+      "approval_status": "approved",
+      "attribution_requirements": "Retain project, snapshot, article URL or stable attribution route, and license in the corpus manifest.",
+      "canonical_name": "English Wikipedia pages-articles",
+      "checksum_availability": "official Wikimedia md5sums and sha1sums files",
+      "contamination_risks": [
+        "benchmark passages",
+        "widely mirrored reference text"
+      ],
+      "content_category": "general_prose",
+      "duplication_risks": [
+        "mirrors",
+        "translated overlap",
+        "repeated templates"
+      ],
+      "edition": "2026-07-01",
+      "expected_download_bytes": 24000000000,
+      "expected_usable_tokens": 100000000,
+      "extraction_implementation_readiness": "ready_after_snapshot_and_checksum_verification",
+      "extraction_method": "stream BZ2 and iterative MediaWiki XML parsing; deterministic capped sample",
+      "id": "wikimedia_enwiki_20260701",
+      "language": "en",
+      "license": "CC BY-SA 4.0 and GFDL; imported text may carry compatible additional attribution",
+      "license_evidence_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use/en#7._Licensing_of_Content",
+      "maximum_source_cap_tokens": 100000000,
+      "official_url": "https://dumps.wikimedia.org/enwiki/20260701/enwiki-20260701-pages-articles-multistream.xml.bz2",
+      "phase3a_approval_status": "approved",
+      "pii_privacy_risks": [
+        "biographical personal data",
+        "revision text may contain transient PII"
+      ],
+      "publisher": "Wikimedia Foundation",
+      "quality_risks": [
+        "templates",
+        "lists",
+        "citation debris",
+        "source concentration"
+      ],
+      "quality_tier": "A",
+      "redistribution_terms": "Preserve source and license notices; comply with page-level imported-content notices."
+    },
+    {
+      "approval_reason": "Ready as a capped educational source after deduplication against enwiki.",
+      "approval_status": "approved",
+      "attribution_requirements": "Retain project, snapshot, article attribution route, and license.",
+      "canonical_name": "Simple English Wikipedia pages-articles",
+      "checksum_availability": "official Wikimedia md5sums and sha1sums files",
+      "contamination_risks": [
+        "exercise solutions",
+        "benchmark-like instructional questions"
+      ],
+      "content_category": "educational_prose",
+      "duplication_risks": [
+        "topic overlap with English Wikipedia"
+      ],
+      "edition": "2026-07-01",
+      "expected_download_bytes": 350000000,
+      "expected_usable_tokens": 25000000,
+      "extraction_implementation_readiness": "ready_after_snapshot_and_checksum_verification",
+      "extraction_method": "stream BZ2 and iterative MediaWiki XML parsing",
+      "id": "wikimedia_simplewiki_20260701",
+      "language": "en",
+      "license": "CC BY-SA 4.0 and GFDL; imported text may carry compatible additional attribution",
+      "license_evidence_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use/en#7._Licensing_of_Content",
+      "maximum_source_cap_tokens": 25000000,
+      "official_url": "https://dumps.wikimedia.org/simplewiki/20260701/simplewiki-20260701-pages-articles-multistream.xml.bz2",
+      "phase3a_approval_status": "approved",
+      "pii_privacy_risks": [
+        "biographical personal data"
+      ],
+      "publisher": "Wikimedia Foundation",
+      "quality_risks": [
+        "simplified style",
+        "short articles",
+        "templates"
+      ],
+      "quality_tier": "A",
+      "redistribution_terms": "Preserve source and license notices and imported-content attribution."
+    },
+    {
+      "approval_reason": "Ready after namespace filtering and page-level attribution.",
+      "approval_status": "approved",
+      "attribution_requirements": "Retain project, page attribution route, snapshot, and license.",
+      "canonical_name": "Turkish Wikibooks pages-articles",
+      "checksum_availability": "official Wikimedia md5sums and sha1sums files",
+      "contamination_risks": [
+        "exercise solutions",
+        "benchmark-like instructional questions"
+      ],
+      "content_category": "educational_prose",
+      "duplication_risks": [
+        "copied Wikipedia introductions",
+        "book templates"
+      ],
+      "edition": "2026-07-01",
+      "expected_download_bytes": 65000000,
+      "expected_usable_tokens": 10000000,
+      "extraction_implementation_readiness": "ready_after_snapshot_and_checksum_verification",
+      "extraction_method": "stream BZ2 and iterative MediaWiki XML parsing",
+      "id": "wikimedia_trwikibooks_20260701",
+      "language": "tr",
+      "license": "CC BY-SA 4.0 and GFDL; page-specific notices must be retained",
+      "license_evidence_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use/en#7._Licensing_of_Content",
+      "maximum_source_cap_tokens": 10000000,
+      "official_url": "https://dumps.wikimedia.org/trwikibooks/20260701/trwikibooks-20260701-pages-articles-multistream.xml.bz2",
+      "phase3a_approval_status": "approved",
+      "pii_privacy_risks": [
+        "low; still apply entity and contact filters"
+      ],
+      "publisher": "Wikimedia Foundation",
+      "quality_risks": [
+        "unfinished books",
+        "navigation text",
+        "exercise answer leakage"
+      ],
+      "quality_tier": "A",
+      "redistribution_terms": "Share-alike and attribution requirements remain attached to reused text."
+    },
+    {
+      "approval_reason": "Requires aggressive address, phone, commercial-listing, and template filters.",
+      "approval_status": "conditional",
+      "attribution_requirements": "Retain project, page attribution route, snapshot, and license.",
+      "canonical_name": "Turkish Wikivoyage pages-articles",
+      "checksum_availability": "official Wikimedia md5sums and sha1sums files",
+      "contamination_risks": [
+        "benchmark passages",
+        "widely mirrored reference text"
+      ],
+      "content_category": "general_prose",
+      "duplication_risks": [
+        "destination templates",
+        "Wikipedia overlap"
+      ],
+      "edition": "2026-07-01",
+      "expected_download_bytes": 90000000,
+      "expected_usable_tokens": 15000000,
+      "extraction_implementation_readiness": "blocked_by_named_license_quality_or_attribution_condition",
+      "extraction_method": "stream BZ2 and iterative MediaWiki XML parsing",
+      "id": "wikimedia_trwikivoyage_20260701",
+      "language": "tr",
+      "license": "CC BY-SA 4.0 and GFDL; page-specific notices must be retained",
+      "license_evidence_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use/en#7._Licensing_of_Content",
+      "maximum_source_cap_tokens": 15000000,
+      "official_url": "https://dumps.wikimedia.org/trwikivoyage/20260701/trwikivoyage-20260701-pages-articles-multistream.xml.bz2",
+      "phase3a_approval_status": "approved",
+      "pii_privacy_risks": [
+        "phone numbers",
+        "addresses",
+        "named small businesses"
+      ],
+      "publisher": "Wikimedia Foundation",
+      "quality_risks": [
+        "list-heavy text",
+        "addresses",
+        "commercial listings",
+        "stale travel facts"
+      ],
+      "quality_tier": "B",
+      "redistribution_terms": "Share-alike and attribution requirements remain attached to reused text."
+    },
+    {
+      "approval_reason": "Ready after namespace and contact-detail filtering.",
+      "approval_status": "approved",
+      "attribution_requirements": "Retain project, page attribution route, snapshot, and license.",
+      "canonical_name": "English Wikiversity pages-articles",
+      "checksum_availability": "official Wikimedia md5sums and sha1sums files",
+      "contamination_risks": [
+        "exercise solutions",
+        "benchmark-like instructional questions"
+      ],
+      "content_category": "educational_prose",
+      "duplication_risks": [
+        "Wikipedia imports",
+        "course templates"
+      ],
+      "edition": "2026-07-01",
+      "expected_download_bytes": 1600000000,
+      "expected_usable_tokens": 25000000,
+      "extraction_implementation_readiness": "ready_after_snapshot_and_checksum_verification",
+      "extraction_method": "stream BZ2 and iterative MediaWiki XML parsing",
+      "id": "wikimedia_enwikiversity_20260701",
+      "language": "en",
+      "license": "CC BY-SA 4.0 and GFDL; page-specific notices must be retained",
+      "license_evidence_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use/en#7._Licensing_of_Content",
+      "maximum_source_cap_tokens": 25000000,
+      "official_url": "https://dumps.wikimedia.org/enwikiversity/20260701/enwikiversity-20260701-pages-articles-multistream.xml.bz2",
+      "phase3a_approval_status": "approved",
+      "pii_privacy_risks": [
+        "student or instructor names",
+        "contact details"
+      ],
+      "publisher": "Wikimedia Foundation",
+      "quality_risks": [
+        "student drafts",
+        "course navigation",
+        "uneven editorial review"
+      ],
+      "quality_tier": "B",
+      "redistribution_terms": "Share-alike and attribution requirements remain attached to reused text."
+    },
+    {
+      "approval_reason": "Ready after namespace filtering and enwiki overlap deduplication.",
+      "approval_status": "approved",
+      "attribution_requirements": "Retain project, page attribution route, snapshot, and license.",
+      "canonical_name": "English Wikibooks pages-articles",
+      "checksum_availability": "official Wikimedia md5sums and sha1sums files",
+      "contamination_risks": [
+        "exercise solutions",
+        "benchmark-like instructional questions"
+      ],
+      "content_category": "educational_prose",
+      "duplication_risks": [
+        "Wikipedia imports",
+        "book templates"
+      ],
+      "edition": "2026-07-01",
+      "expected_download_bytes": 1400000000,
+      "expected_usable_tokens": 15000000,
+      "extraction_implementation_readiness": "ready_after_snapshot_and_checksum_verification",
+      "extraction_method": "stream BZ2 and iterative MediaWiki XML parsing",
+      "id": "wikimedia_enwikibooks_20260701",
+      "language": "en",
+      "license": "CC BY-SA 4.0 and GFDL; page-specific notices must be retained",
+      "license_evidence_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use/en#7._Licensing_of_Content",
+      "maximum_source_cap_tokens": 15000000,
+      "official_url": "https://dumps.wikimedia.org/enwikibooks/20260701/enwikibooks-20260701-pages-articles-multistream.xml.bz2",
+      "phase3a_approval_status": "approved",
+      "pii_privacy_risks": [
+        "low; still apply contact filters"
+      ],
+      "publisher": "Wikimedia Foundation",
+      "quality_risks": [
+        "unfinished books",
+        "navigation text",
+        "mixed technical depth"
+      ],
+      "quality_tier": "B",
+      "redistribution_terms": "Share-alike and attribution requirements remain attached to reused text."
+    },
+    {
+      "approval_reason": "Ready with the exact Python 3.14.6 archive, PSF attribution, and example-code license metadata.",
+      "approval_status": "approved",
+      "attribution_requirements": "Python Software Foundation, version, documentation URL, and license notice.",
+      "canonical_name": "Python 3.14.6 Turkish documentation",
+      "checksum_availability": "no official archive checksum observed; capture SHA-256 immediately after approved download",
+      "contamination_risks": [
+        "code benchmark snippets",
+        "documentation copied into Q&A sites"
+      ],
+      "content_category": "technical_documentation",
+      "duplication_risks": [
+        "English source alignment",
+        "repeated signatures"
+      ],
+      "edition": "3.14.6, 2026-07-09 documentation build",
+      "expected_download_bytes": 6000000,
+      "expected_usable_tokens": 5000000,
+      "extraction_implementation_readiness": "ready_after_snapshot_and_checksum_verification",
+      "extraction_method": "ZIP member streaming with path allowlist and strict UTF-8 text decoding",
+      "id": "python_docs_tr_3_14_6",
+      "language": "tr",
+      "license": "Python Software Foundation License Version 2; code examples additionally Zero-Clause BSD",
+      "license_evidence_url": "https://docs.python.org/3.14/license.html",
+      "maximum_source_cap_tokens": 5000000,
+      "official_url": "https://docs.python.org/tr/3.14/archives/python-3.14.6-docs-text.zip",
+      "phase3a_approval_status": "approved",
+      "pii_privacy_risks": [
+        "author names and emails in acknowledgements"
+      ],
+      "publisher": "Python Software Foundation",
+      "quality_risks": [
+        "translation incompleteness",
+        "markup",
+        "API index repetition"
+      ],
+      "quality_tier": "A",
+      "redistribution_terms": "Retain PSF copyright and license notices; identify separately licensed examples."
+    },
+    {
+      "approval_reason": "Ready with the exact Python 3.14.6 archive, PSF attribution, and example-code license metadata.",
+      "approval_status": "approved",
+      "attribution_requirements": "Python Software Foundation, version, documentation URL, and license notice.",
+      "canonical_name": "Python 3.14.6 English documentation",
+      "checksum_availability": "no official archive checksum observed; capture SHA-256 immediately after approved download",
+      "contamination_risks": [
+        "code benchmark snippets",
+        "documentation copied into Q&A sites"
+      ],
+      "content_category": "technical_documentation",
+      "duplication_risks": [
+        "Turkish translation alignment",
+        "repeated signatures"
+      ],
+      "edition": "3.14.6, 2026-07-09 documentation build",
+      "expected_download_bytes": 8000000,
+      "expected_usable_tokens": 10000000,
+      "extraction_implementation_readiness": "ready_after_snapshot_and_checksum_verification",
+      "extraction_method": "ZIP member streaming with path allowlist and strict UTF-8 text decoding",
+      "id": "python_docs_en_3_14_6",
+      "language": "en",
+      "license": "Python Software Foundation License Version 2; code examples additionally Zero-Clause BSD",
+      "license_evidence_url": "https://docs.python.org/3.14/license.html",
+      "maximum_source_cap_tokens": 10000000,
+      "official_url": "https://docs.python.org/3.14/archives/python-3.14.6-docs-text.zip",
+      "phase3a_approval_status": "approved",
+      "pii_privacy_risks": [
+        "author names and emails in acknowledgements"
+      ],
+      "publisher": "Python Software Foundation",
+      "quality_risks": [
+        "markup",
+        "API index repetition",
+        "generated reference tables"
+      ],
+      "quality_tier": "A",
+      "redistribution_terms": "Retain PSF copyright and license notices; identify separately licensed examples."
+    },
+    {
+      "approval_reason": "Requires sentence and translation-chain attribution plus license completeness enforcement.",
+      "approval_status": "conditional",
+      "attribution_requirements": "Persist sentence ID, contributor, license, language, export date, and Tatoeba URL.",
+      "canonical_name": "Tatoeba Turkish-English detailed sentence export",
+      "checksum_availability": "no stable official checksum; capture SHA-256 and export timestamp",
+      "contamination_risks": [
+        "translation benchmark overlap",
+        "reused sentence pairs"
+      ],
+      "content_category": "controlled_bilingual_dialogue",
+      "duplication_risks": [
+        "translation pairs",
+        "near-identical sentence variants"
+      ],
+      "edition": "planned 2026-07-13 export with captured SHA-256",
+      "expected_download_bytes": 400000000,
+      "expected_usable_tokens": 10000000,
+      "extraction_implementation_readiness": "blocked_by_named_license_quality_or_attribution_condition",
+      "extraction_method": "stream TSV rows; prefilter Turkish and English; persist attribution incrementally",
+      "id": "tatoeba_tr_en_20260713",
+      "language": "tr-en",
+      "license": "CC BY 2.0 FR per sentence export; some sentences also CC0",
+      "license_evidence_url": "https://tatoeba.org/en/terms_of_use",
+      "maximum_source_cap_tokens": 10000000,
+      "official_url": "https://tatoeba.org/en/downloads",
+      "phase3a_approval_status": "approved",
+      "pii_privacy_risks": [
+        "user-written names or contact fragments"
+      ],
+      "publisher": "Association Tatoeba",
+      "quality_risks": [
+        "short-sentence bias",
+        "incorrect translations",
+        "offensive or copied sentences"
+      ],
+      "quality_tier": "C",
+      "redistribution_terms": "Preserve sentence-level license and author attribution; do not include audio."
+    },
+    {
+      "approval_reason": "Page-level public-domain and contributor-license filtering is not implemented.",
+      "approval_status": "deferred",
+      "attribution_requirements": "Author, title, edition, work rights template, source page, snapshot, and Wikimedia attribution.",
+      "canonical_name": "Turkish Wikisource pages-articles",
+      "checksum_availability": "official Wikimedia md5sums and sha1sums files",
+      "contamination_risks": [
+        "literary benchmark overlap",
+        "multiple editions of the same work"
+      ],
+      "content_category": "public_domain_books",
+      "duplication_risks": [
+        "multiple editions",
+        "Project Gutenberg overlap"
+      ],
+      "edition": "2026-07-01",
+      "expected_download_bytes": 1500000000,
+      "expected_usable_tokens": 50000000,
+      "extraction_implementation_readiness": "not_ready",
+      "extraction_method": "stream XML; accept only pages with machine-verifiable rights templates",
+      "id": "wikimedia_trwikisource_20260701",
+      "language": "tr",
+      "license": "work-specific public-domain or free-license status plus Wikimedia site terms",
+      "license_evidence_url": "https://tr.wikisource.org/wiki/Vikikaynak:Telif_haklar%C4%B1",
+      "maximum_source_cap_tokens": 50000000,
+      "official_url": "https://dumps.wikimedia.org/trwikisource/20260701/trwikisource-20260701-pages-articles-multistream.xml.bz2",
+      "phase3a_approval_status": "deferred",
+      "pii_privacy_risks": [
+        "historical personal data"
+      ],
+      "publisher": "Wikimedia Foundation",
+      "quality_risks": [
+        "OCR errors",
+        "archaic Turkish",
+        "page headers",
+        "mixed work status"
+      ],
+      "quality_tier": "B",
+      "redistribution_terms": "Every work requires retained work-level rights metadata and jurisdiction review."
+    },
+    {
+      "approval_reason": "Work-level copyright jurisdiction and page filtering are not implemented.",
+      "approval_status": "deferred",
+      "attribution_requirements": "Author, title, edition, work rights template, source page, snapshot, and Wikimedia attribution.",
+      "canonical_name": "English Wikisource pages-articles",
+      "checksum_availability": "official Wikimedia md5sums and sha1sums files",
+      "contamination_risks": [
+        "literary benchmark overlap",
+        "multiple editions of the same work"
+      ],
+      "content_category": "public_domain_books",
+      "duplication_risks": [
+        "multiple editions",
+        "Project Gutenberg overlap"
+      ],
+      "edition": "2026-07-01",
+      "expected_download_bytes": 8000000000,
+      "expected_usable_tokens": 20000000,
+      "extraction_implementation_readiness": "not_ready",
+      "extraction_method": "stream XML; accept only pages with machine-verifiable rights templates",
+      "id": "wikimedia_enwikisource_20260701",
+      "language": "en",
+      "license": "work-specific public-domain or free-license status plus Wikimedia site terms",
+      "license_evidence_url": "https://en.wikisource.org/wiki/Wikisource:Copyright_policy",
+      "maximum_source_cap_tokens": 20000000,
+      "official_url": "https://dumps.wikimedia.org/enwikisource/20260701/enwikisource-20260701-pages-articles-multistream.xml.bz2",
+      "phase3a_approval_status": "deferred",
+      "pii_privacy_risks": [
+        "historical personal data"
+      ],
+      "publisher": "Wikimedia Foundation",
+      "quality_risks": [
+        "OCR errors",
+        "archaic language",
+        "page headers",
+        "mixed work status"
+      ],
+      "quality_tier": "B",
+      "redistribution_terms": "Every work requires retained work-level rights metadata and jurisdiction review."
+    },
+    {
+      "approval_reason": "Requires file-level prose/code license separation and pre-2010 code handling.",
+      "approval_status": "conditional",
+      "attribution_requirements": "Page title, URL, Mozilla Contributors, contributors list where reasonable, license, and modification notice.",
+      "canonical_name": "MDN Web Docs English content repository",
+      "checksum_availability": "Git commit SHA after pinning",
+      "contamination_risks": [
+        "code benchmark snippets",
+        "documentation copied into Q&A sites"
+      ],
+      "content_category": "technical_documentation",
+      "duplication_risks": [
+        "web platform specifications",
+        "copied examples"
+      ],
+      "edition": "2026-07-13 candidate snapshot; exact commit SHA required before approval",
+      "expected_download_bytes": 1800000000,
+      "expected_usable_tokens": 20000000,
+      "extraction_implementation_readiness": "blocked_by_named_license_quality_or_attribution_condition",
+      "extraction_method": "pinned Git tree; parse frontmatter and Markdown; separate prose and code licenses",
+      "id": "mdn_content_20260713",
+      "language": "en",
+      "license": "documentation generally CC BY-SA 2.5 or later; code samples CC0 or legacy MIT",
+      "license_evidence_url": "https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license",
+      "maximum_source_cap_tokens": 20000000,
+      "official_url": "https://github.com/mdn/content",
+      "phase3a_approval_status": "deferred",
+      "pii_privacy_risks": [
+        "contributor names",
+        "example contact data"
+      ],
+      "publisher": "Mozilla and MDN contributors",
+      "quality_risks": [
+        "generated compatibility tables",
+        "frontmatter",
+        "mixed prose and code licensing"
+      ],
+      "quality_tier": "A",
+      "redistribution_terms": "Preserve page attribution, modifications, and license distinctions for prose and code."
+    },
+    {
+      "approval_reason": "Requires work-level public-domain checks for the training jurisdiction and header cleanup.",
+      "approval_status": "conditional",
+      "attribution_requirements": "Work title, author, ebook ID, rights statement, access date, and jurisdiction note.",
+      "canonical_name": "Project Gutenberg selected English public-domain texts",
+      "checksum_availability": "per-file SHA-256 must be captured; official checksum coverage varies",
+      "contamination_risks": [
+        "literary benchmark overlap",
+        "multiple editions of the same work"
+      ],
+      "content_category": "public_domain_books",
+      "duplication_risks": [
+        "Wikisource overlap",
+        "multiple editions"
+      ],
+      "edition": "2026-07-13 catalog candidate; per-work snapshot required",
+      "expected_download_bytes": 6000000000,
+      "expected_usable_tokens": 30000000,
+      "extraction_implementation_readiness": "blocked_by_named_license_quality_or_attribution_condition",
+      "extraction_method": "approved per-work manifest only; strip Gutenberg headers while retaining provenance",
+      "id": "project_gutenberg_en_20260713",
+      "language": "en",
+      "license": "mostly public domain in the United States with Project Gutenberg trademark/license conditions",
+      "license_evidence_url": "https://www.gutenberg.org/policy/license.html",
+      "maximum_source_cap_tokens": 30000000,
+      "official_url": "https://www.gutenberg.org/",
+      "phase3a_approval_status": "deferred",
+      "pii_privacy_risks": [
+        "historical personal data"
+      ],
+      "publisher": "Project Gutenberg Literary Archive Foundation",
+      "quality_risks": [
+        "OCR",
+        "archaic language",
+        "boilerplate",
+        "jurisdiction mismatch"
+      ],
+      "quality_tier": "B",
+      "redistribution_terms": "Per-work rights verification and Project Gutenberg trademark/license compliance are required."
+    },
+    {
+      "approval_reason": "Requires revision-date license versioning, user attribution, and code/content separation.",
+      "approval_status": "conditional",
+      "attribution_requirements": "Site, post ID, author, post URL, revision date, and applicable CC BY-SA version.",
+      "canonical_name": "Selected Stack Exchange technical sites data dump",
+      "checksum_availability": "Internet Archive item checksums; verify each selected archive",
+      "contamination_risks": [
+        "coding benchmark answers",
+        "documentation and repository overlap"
+      ],
+      "content_category": "technical_and_code",
+      "duplication_risks": [
+        "quoted documentation",
+        "cross-posts",
+        "repeated code"
+      ],
+      "edition": "2026-07-01 candidate dump",
+      "expected_download_bytes": 8000000000,
+      "expected_usable_tokens": 20000000,
+      "extraction_implementation_readiness": "blocked_by_named_license_quality_or_attribution_condition",
+      "extraction_method": "stream selected site XML; retain revision/license metadata; strip user profiles",
+      "id": "stack_exchange_20260701",
+      "language": "en",
+      "license": "revision-date-dependent CC BY-SA 2.5, 3.0, or 4.0",
+      "license_evidence_url": "https://stackoverflow.com/help/licensing",
+      "maximum_source_cap_tokens": 20000000,
+      "official_url": "https://archive.org/details/stackexchange",
+      "phase3a_approval_status": "deferred",
+      "pii_privacy_risks": [
+        "usernames",
+        "emails in code",
+        "personal troubleshooting details"
+      ],
+      "publisher": "Stack Exchange, Inc. and individual contributors",
+      "quality_risks": [
+        "incorrect answers",
+        "code-license ambiguity",
+        "hostile text"
+      ],
+      "quality_tier": "C",
+      "redistribution_terms": "Revision-level license and attribution must be retained; share-alike implications require review."
+    },
+    {
+      "approval_reason": "Redistribution clearance, stable bulk access, checksums, and extraction are unresolved.",
+      "approval_status": "deferred",
+      "attribution_requirements": "Publication date, issue number, document title, official URL, and issuing institution if approved.",
+      "canonical_name": "T.C. Resmi Gazete archive",
+      "checksum_availability": "no corpus-level checksum plan",
+      "contamination_risks": [
+        "legal evaluation overlap",
+        "near-duplicate amendments"
+      ],
+      "content_category": "institutional_prose",
+      "duplication_risks": [
+        "repeated legal clauses",
+        "consolidated legislation overlap"
+      ],
+      "edition": "archive through 2026-07-01",
+      "expected_download_bytes": 12000000000,
+      "expected_usable_tokens": 40000000,
+      "extraction_implementation_readiness": "not_ready",
+      "extraction_method": "deferred; likely PDF/HTML with OCR and structured metadata",
+      "id": "resmi_gazete_archive_20260701",
+      "language": "tr",
+      "license": "bulk ML reuse and redistribution terms not established",
+      "license_evidence_url": "https://www.resmigazete.gov.tr/",
+      "maximum_source_cap_tokens": 40000000,
+      "official_url": "https://www.resmigazete.gov.tr/",
+      "phase3a_approval_status": "deferred",
+      "pii_privacy_risks": [
+        "appointments",
+        "company and individual names",
+        "official notices"
+      ],
+      "publisher": "T.C. Cumhurba\u015fkanl\u0131\u011f\u0131",
+      "quality_risks": [
+        "OCR",
+        "tables",
+        "legal boilerplate",
+        "amending-text duplication"
+      ],
+      "quality_tier": "B",
+      "redistribution_terms": "Unknown pending written terms review; no download authorized."
+    },
+    {
+      "approval_reason": "Redistribution clearance, dated bulk snapshot, checksums, and extraction are unresolved.",
+      "approval_status": "deferred",
+      "attribution_requirements": "Legislation identifier, title, consolidation date, official URL, and issuing institution if approved.",
+      "canonical_name": "T.C. Mevzuat Bilgi Sistemi consolidated legislation",
+      "checksum_availability": "no corpus-level checksum plan",
+      "contamination_risks": [
+        "legal evaluation overlap",
+        "near-duplicate amendments"
+      ],
+      "content_category": "institutional_prose",
+      "duplication_risks": [
+        "Resmi Gazete overlap",
+        "repeated legal clauses"
+      ],
+      "edition": "snapshot candidate dated 2026-07-01",
+      "expected_download_bytes": 5000000000,
+      "expected_usable_tokens": 30000000,
+      "extraction_implementation_readiness": "not_ready",
+      "extraction_method": "deferred; official structured export preferred over scraping",
+      "id": "mevzuat_archive_20260701",
+      "language": "tr",
+      "license": "bulk ML reuse and redistribution terms not established",
+      "license_evidence_url": "https://www.mevzuat.gov.tr/",
+      "maximum_source_cap_tokens": 30000000,
+      "official_url": "https://www.mevzuat.gov.tr/",
+      "phase3a_approval_status": "deferred",
+      "pii_privacy_risks": [
+        "named parties in annexes",
+        "institutional contact data"
+      ],
+      "publisher": "T.C. Cumhurba\u015fkanl\u0131\u011f\u0131 Hukuk ve Mevzuat Genel M\u00fcd\u00fcrl\u00fc\u011f\u00fc",
+      "quality_risks": [
+        "legal boilerplate",
+        "tables",
+        "cross references",
+        "version drift"
+      ],
+      "quality_tier": "B",
+      "redistribution_terms": "Unknown pending written terms review; no download authorized."
+    },
+    {
+      "approval_reason": "Bulk document rights, privacy, attribution, and quality remain unresolvable for this plan.",
+      "approval_status": "rejected",
+      "attribution_requirements": "Not tractable at bulk scale under the current project design.",
+      "canonical_name": "Common Crawl bulk web crawl",
+      "checksum_availability": "crawl manifests exist but do not resolve underlying rights",
+      "contamination_risks": [
+        "unbounded benchmark and test-set contamination"
+      ],
+      "content_category": "web_crawl",
+      "duplication_risks": [
+        "extreme web duplication",
+        "mirrors"
+      ],
+      "edition": "not selected",
+      "expected_download_bytes": 0,
+      "expected_usable_tokens": 0,
+      "extraction_implementation_readiness": "not_applicable",
+      "extraction_method": "none",
+      "id": "common_crawl_bulk",
+      "language": "multilingual",
+      "license": "underlying crawled content retains third-party rights and terms",
+      "license_evidence_url": "https://commoncrawl.org/terms-of-use",
+      "maximum_source_cap_tokens": 0,
+      "official_url": "https://commoncrawl.org/",
+      "phase3a_approval_status": "rejected",
+      "pii_privacy_risks": [
+        "high and uncontrolled"
+      ],
+      "publisher": "Common Crawl Foundation",
+      "quality_risks": [
+        "spam",
+        "malware text",
+        "low quality",
+        "copyright ambiguity"
+      ],
+      "quality_tier": "rejected",
+      "redistribution_terms": "Source-by-source rights are not normalized by the crawl."
+    },
+    {
+      "approval_reason": "No approved training and redistribution grant exists for user content.",
+      "approval_status": "rejected",
+      "attribution_requirements": "Not applicable because source is rejected.",
+      "canonical_name": "Reddit user content",
+      "checksum_availability": "not applicable",
+      "contamination_risks": [
+        "unbounded benchmark leakage",
+        "quoted copyrighted text"
+      ],
+      "content_category": "social_media",
+      "duplication_risks": [
+        "cross-posts",
+        "quotes",
+        "bot content"
+      ],
+      "edition": "not selected",
+      "expected_download_bytes": 0,
+      "expected_usable_tokens": 0,
+      "extraction_implementation_readiness": "not_applicable",
+      "extraction_method": "none",
+      "id": "reddit_user_content",
+      "language": "multilingual",
+      "license": "user-owned content; Reddit terms do not grant general ML training rights",
+      "license_evidence_url": "https://redditinc.com/policies/data-api-terms",
+      "maximum_source_cap_tokens": 0,
+      "official_url": "https://www.reddit.com/",
+      "phase3a_approval_status": "rejected",
+      "pii_privacy_risks": [
+        "high; usernames, life events, locations, private-context disclosures"
+      ],
+      "publisher": "Reddit, Inc. and individual users",
+      "quality_risks": [
+        "unmoderated claims",
+        "toxicity",
+        "deleted-content drift"
+      ],
+      "quality_tier": "rejected",
+      "redistribution_terms": "No approved training or redistribution grant."
+    },
+    {
+      "approval_reason": "Document-level rights, attribution, privacy, and redistribution evidence are insufficient.",
+      "approval_status": "rejected",
+      "attribution_requirements": "Not tractable at document level under the current project design.",
+      "canonical_name": "OSCAR multilingual web corpus",
+      "checksum_availability": "dataset artifacts may have hashes but rights remain unresolved",
+      "contamination_risks": [
+        "unbounded benchmark and test-set contamination"
+      ],
+      "content_category": "web_crawl",
+      "duplication_risks": [
+        "Common Crawl overlap",
+        "mirrors",
+        "cross-language duplicates"
+      ],
+      "edition": "not selected",
+      "expected_download_bytes": 0,
+      "expected_usable_tokens": 0,
+      "extraction_implementation_readiness": "not_applicable",
+      "extraction_method": "none",
+      "id": "oscar_web_corpus",
+      "language": "multilingual",
+      "license": "derived from web crawl with unresolved underlying document rights",
+      "license_evidence_url": "https://oscar-project.org/",
+      "maximum_source_cap_tokens": 0,
+      "official_url": "https://oscar-project.org/",
+      "phase3a_approval_status": "rejected",
+      "pii_privacy_risks": [
+        "high and uncontrolled"
+      ],
+      "publisher": "OSCAR project",
+      "quality_risks": [
+        "web noise",
+        "machine-generated text",
+        "language misclassification"
+      ],
+      "quality_tier": "rejected",
+      "redistribution_terms": "Dataset-level availability does not establish document-level redistribution rights."
+    }
+  ],
+  "summary": {
+    "approved_gap_to_1b": 635000000,
+    "approved_gap_to_500m": 135000000,
+    "approved_plus_conditional_gap_to_1b": 540000000,
+    "approved_plus_conditional_gap_to_500m": 40000000,
+    "approved_unique_tokens": 365000000,
+    "conditional_unique_tokens": 95000000,
+    "status_counts": {
+      "approved": 8,
+      "conditional": 5,
+      "deferred": 4,
+      "rejected": 3
+    }
+  }
+}

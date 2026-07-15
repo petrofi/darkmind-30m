@@ -1,0 +1,60 @@
+{
+  "attention_implementation": "sdpa",
+  "calibration": {
+    "learning_rates": [0.0001, 0.0002, 0.0003],
+    "optimizer_steps": 64,
+    "tokens": 524288,
+    "validation_subset_tokens": 131072,
+    "warmup_optimizer_steps": 8
+  },
+  "candidates": {
+    "C": "darkmind_v2/config/model_base_candidate_c_100m.json",
+    "D": "darkmind_v2/config/model_base_candidate_d_120m.json"
+  },
+  "data": {
+    "data_order_seed": 20260712,
+    "deterministic_traversal": "contiguous_no_shuffle",
+    "effective_tokens_per_optimizer_step": 8192,
+    "gradient_accumulation_steps": 8,
+    "micro_batch_size": 2,
+    "no_data_repetition": true,
+    "no_sample_replacement": true,
+    "sequence_length": 512,
+    "tokenized_dir": "darkmind_v2/data/phase2a/tokenized/full_v1",
+    "train_corpus_tokens": 11744226
+  },
+  "gradient_checkpointing": false,
+  "initialization_seed": 20260712,
+  "materiality": {
+    "final_validation_relative_advantage_percent": 2.0,
+    "score_tie_percent": 2.0
+  },
+  "optimizer": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "gradient_clipping": 1.0,
+    "name": "AdamW",
+    "weight_decay": 0.1
+  },
+  "pilot": {
+    "checkpoint_steps": [0, 152, 305, 458, 610],
+    "maximum_optimizer_steps": 610,
+    "maximum_total_training_tokens": 4997120,
+    "requested_token_ceiling": 5000000,
+    "segment_a_target_step": 305,
+    "segment_b_target_step": 610
+  },
+  "precision": "bf16",
+  "runs": {
+    "C": "darkmind_v2/data/phase3b/runs/candidate_c_5m_v1",
+    "D": "darkmind_v2/data/phase3b/runs/candidate_d_5m_v1"
+  },
+  "schedule": {
+    "minimum_learning_rate_ratio": 0.1,
+    "name": "warmup_cosine",
+    "warmup_optimizer_steps": 20
+  },
+  "schema_version": "darkmind-v2-phase3b-finalist-pilot-v1",
+  "tied_embeddings_required": true,
+  "vocabulary_size": 24000
+}

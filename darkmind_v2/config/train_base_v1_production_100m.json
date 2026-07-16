@@ -1,0 +1,92 @@
+{
+  "attention_implementation": "sdpa",
+  "authorization": {
+    "maximum_optimizer_steps": 610,
+    "maximum_training_tokens": 4997120,
+    "phase_25m_authorized": false,
+    "phase_100m_authorized": false
+  },
+  "calibration": {
+    "measured_optimizer_steps": 30,
+    "output_dir": "darkmind_v2/data/phase4a/calibration/base_v1_real_data_seed20260712_v1",
+    "warmup_optimizer_steps": 10
+  },
+  "corpus": {
+    "corpus_hash": "e75c4aa4f39cc7a3cb4fe754e2a0e85268ced300f8504a86d443540eb609e1c5",
+    "eval_tokens": 982329,
+    "shard_checksums_hash": "997ec0fe50a398e7cde90169e0c3ac94b55a8107b305444b08dbe0086148ee76",
+    "tokenized_dir": "darkmind_v2/data/phase3c1/tokenized/tranche1_v2",
+    "tokenized_manifest_hash": "1296caacf09d49b1c48c0fee7d5f5a523a0019e8e7e0e70132fbf68d8f023c82",
+    "train_complete_sequence_tokens": 98081792,
+    "train_tail_tokens": 328,
+    "train_tokens": 98082120,
+    "validation_tokens": 937640
+  },
+  "data": {
+    "data_order_seed": 20260712,
+    "effective_tokens_per_optimizer_step": 8192,
+    "gradient_accumulation_steps": 8,
+    "micro_batch_size": 2,
+    "no_data_wrap": true,
+    "no_replacement_sampling": true,
+    "no_sequence_repetition": true,
+    "sequence_length": 512,
+    "sequence_order": "contiguous_complete_train_sequences_from_offset_zero"
+  },
+  "evaluation": {
+    "authoritative_greedy_generations": 200,
+    "authoritative_seeded_generations": 500,
+    "authoritative_steps": [0, 610],
+    "milestone_steps": [0, 128, 305, 458, 610],
+    "raw_outputs_retained": true,
+    "sanitization_performed": false,
+    "subset_generations": 50
+  },
+  "export_dir": "darkmind_v2/data/phase4a/exports/darkmind-v2-base-v1-stage1-5m",
+  "fused_optimizer": false,
+  "gradient_checkpointing": false,
+  "initialization_seed": 20260712,
+  "model_config": "darkmind_v2/config/model_base_v1.json",
+  "model_config_sha256": "8e9775721b0173a92e88de15c2195428932b3aa5beec57d568674c25887c5e39",
+  "model_name": "darkmind-v2-base-v1",
+  "optimizer": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "epsilon": 1e-08,
+    "gradient_clipping": 1.0,
+    "name": "AdamW",
+    "weight_decay": 0.1
+  },
+  "precision": "bf16",
+  "run_dir": "darkmind_v2/data/phase4a/runs/base_v1_stage1_5m_seed20260712_v1",
+  "safetensors_weights": true,
+  "schedule": {
+    "minimum_learning_rate": 0.00003,
+    "name": "warmup_cosine",
+    "peak_learning_rate": 0.0003,
+    "scheduler_horizon_optimizer_steps": 12207,
+    "scheduler_horizon_tokens": 99999744,
+    "scheduler_restart": false,
+    "warmup_optimizer_steps": 100
+  },
+  "schema_version": "darkmind-v2-base-v1-production-100m-v1",
+  "stage_gates": {
+    "100m": {
+      "authorized": false,
+      "optimizer_steps": 12207,
+      "tokens": 99999744
+    },
+    "25m": {
+      "authorized": false,
+      "optimizer_steps": 3051,
+      "tokens": 24993792
+    },
+    "5m": {
+      "authorized": true,
+      "optimizer_steps": 610,
+      "tokens": 4997120
+    }
+  },
+  "training_compile": false,
+  "vocabulary_size": 24000
+}

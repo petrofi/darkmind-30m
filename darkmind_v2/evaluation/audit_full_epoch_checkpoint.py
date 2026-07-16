@@ -30,6 +30,7 @@ def audit_checkpoint(
     *,
     checkpoint_stage: str,
     expected_model_hash: str | None = None,
+    tokenizer_dir: Path | None = None,
 ) -> dict[str, Any]:
     if output_dir.exists() and any(output_dir.iterdir()):
         raise FileExistsError(f"refusing to reuse immutable audit directory: {output_dir}")
@@ -39,11 +40,11 @@ def audit_checkpoint(
     actual_hash = sha256_file(checkpoint / "model" / "model.safetensors")
     if expected_model_hash is not None and actual_hash != expected_model_hash:
         raise ValueError("explicit checkpoint hash mismatch")
-    verify_frozen_tokenizer()
+    verify_frozen_tokenizer() if tokenizer_dir is None else verify_frozen_tokenizer(tokenizer_dir)
     prompts = load_audit_prompts(prompts_path)
     prompt_hash = hashlib.sha256(prompts_path.read_bytes()).hexdigest()
     model = load_model_package(checkpoint / "model", device="cuda")
-    tokenizer = FrozenTokenizer()
+    tokenizer = FrozenTokenizer() if tokenizer_dir is None else FrozenTokenizer(tokenizer_dir)
     max_new_tokens = gates["generation"]["greedy_max_new_tokens"]
 
     greedy_records = []
@@ -152,6 +153,7 @@ def main() -> None:
         required=True,
     )
     parser.add_argument("--expected-model-hash")
+    parser.add_argument("--tokenizer-dir", type=Path)
     args = parser.parse_args()
     report = audit_checkpoint(
         args.checkpoint,
@@ -160,6 +162,7 @@ def main() -> None:
         args.output_dir,
         checkpoint_stage=args.checkpoint_stage,
         expected_model_hash=args.expected_model_hash,
+        tokenizer_dir=args.tokenizer_dir,
     )
     print(json.dumps(report, indent=2, sort_keys=True))
 

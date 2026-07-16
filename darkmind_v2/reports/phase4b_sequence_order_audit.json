@@ -1,0 +1,398 @@
+{
+  "classification": "severely clustered",
+  "legacy_order": "legacy_order_v1",
+  "predeclared_thresholds": {
+    "material_contiguous_source_run_sequences": 64,
+    "material_language_or_category_percentage_points": 10.0,
+    "material_source_jsd_bits": 0.1,
+    "severe_contiguous_source_run_sequences": 512,
+    "severe_language_or_category_percentage_points": 25.0,
+    "severe_source_jsd_bits": 0.25
+  },
+  "references": {
+    "eval": {
+      "average_document_tokens": 221.69465132024374,
+      "category_percent": {
+        "prose": 86.59329002808632,
+        "technical": 13.406709971913687
+      },
+      "document_count": 4431,
+      "eos_density_per_1000_tokens": 4.5107087340392065,
+      "language_percent": {
+        "en": 36.243356350061944,
+        "tr": 63.756643649938056
+      },
+      "p50_document_tokens": 18,
+      "p95_document_tokens": 929.5,
+      "source_percent": {
+        "python_docs_en_3_14_6": 3.71240185314696,
+        "python_docs_en_3_14_6_text": 1.8700455753622258,
+        "python_docs_tr_3_14_6": 0.024533532044763006,
+        "python_docs_tr_3_14_6_text": 0.6738068406816861,
+        "tatoeba_sentences_detailed_20260704": 3.7198331719820956,
+        "wikimedia_enwiki_20260701": 22.39646798577666,
+        "wikimedia_enwikibooks_20260701": 0.8497153194092815,
+        "wikimedia_enwikiversity_20260201": 3.4720546782188046,
+        "wikimedia_enwikiversity_20260601_articles": 1.9042500017814805,
+        "wikimedia_trwiki_20260601_articles_p1p1500000": 6.500368002980672,
+        "wikimedia_trwiki_20260701": 53.97092012961034,
+        "wikimedia_trwikibooks_20260601_articles": 0.04998325408289891,
+        "wikimedia_trwikibooks_20260701": 0.8499189171855865,
+        "wikimedia_trwikivoyage_20260601_articles": 0.005700737736542442
+      },
+      "token_count": 982329,
+      "unique_document_count": 4431
+    },
+    "train": {
+      "average_document_tokens": 223.8014854365609,
+      "category_percent": {
+        "prose": 84.98014826759454,
+        "technical": 15.019851732405458
+      },
+      "document_count": 438255,
+      "eos_density_per_1000_tokens": 4.468245588492581,
+      "language_percent": {
+        "en": 40.032465652251396,
+        "tr": 59.967534347748604
+      },
+      "p50_document_tokens": 18,
+      "p95_document_tokens": 933.0,
+      "source_percent": {
+        "python_docs_en_3_14_6": 2.8315527845442165,
+        "python_docs_en_3_14_6_text": 1.8214961095865383,
+        "python_docs_tr_3_14_6": 0.06212243373206044,
+        "python_docs_tr_3_14_6_text": 0.5938962167620357,
+        "tatoeba_sentences_detailed_20260704": 3.746463677579563,
+        "wikimedia_enwiki_20260701": 24.723015774944507,
+        "wikimedia_enwikibooks_20260701": 3.6533457882027833,
+        "wikimedia_enwikiversity_20260201": 3.6393544511476708,
+        "wikimedia_enwikiversity_20260601_articles": 1.2569171628835103,
+        "wikimedia_trwiki_20260601_articles_p1p1500000": 5.173918549068882,
+        "wikimedia_trwiki_20260701": 51.17126546612165,
+        "wikimedia_trwikibooks_20260601_articles": 0.2620936415322181,
+        "wikimedia_trwikibooks_20260701": 0.8990731440144238,
+        "wikimedia_trwikivoyage_20260601_articles": 0.16548479987993733
+      },
+      "token_count": 98082120,
+      "unique_document_count": 438255
+    },
+    "validation": {
+      "average_document_tokens": 211.13262778653456,
+      "category_percent": {
+        "prose": 85.43812124056141,
+        "technical": 14.56187875943859
+      },
+      "document_count": 4441,
+      "eos_density_per_1000_tokens": 4.73635937033403,
+      "language_percent": {
+        "en": 40.621027259929186,
+        "tr": 59.378972740070814
+      },
+      "p50_document_tokens": 17,
+      "p95_document_tokens": 924.0,
+      "source_percent": {
+        "python_docs_en_3_14_6": 3.4538842199564863,
+        "python_docs_en_3_14_6_text": 2.0760633078793567,
+        "python_docs_tr_3_14_6_text": 0.5753807431423574,
+        "tatoeba_sentences_detailed_20260704": 3.9806322255876454,
+        "wikimedia_enwiki_20260701": 25.34864126957041,
+        "wikimedia_enwikibooks_20260701": 3.023335181946163,
+        "wikimedia_enwikiversity_20260201": 3.023335181946163,
+        "wikimedia_enwikiversity_20260601_articles": 1.4914039503434153,
+        "wikimedia_trwiki_20260601_articles_p1p1500000": 5.5296275756153745,
+        "wikimedia_trwiki_20260701": 50.30203489612218,
+        "wikimedia_trwikibooks_20260601_articles": 0.4695832089074698,
+        "wikimedia_trwikibooks_20260701": 0.4488929653171793,
+        "wikimedia_trwikivoyage_20260601_articles": 0.27718527366579926
+      },
+      "token_count": 937640,
+      "unique_document_count": 4441
+    }
+  },
+  "result": "PASS",
+  "run_metric": "consecutive dominant sequence labels",
+  "schema_version": "darkmind-v2-phase4b-sequence-order-audit-v1",
+  "sequence_label_rule": "dominant token overlap; deterministic lexical tie break",
+  "windows": {
+    "steps_129_305": {
+      "average_document_tokens": 37.755448509308685,
+      "category_percent": {
+        "prose": 69.8510466322387,
+        "technical": 30.1489533677613
+      },
+      "comparisons": {
+        "eval": {
+          "category_percentage_point_difference": {
+            "prose": -16.74224339584761,
+            "technical": 16.742243395847616
+          },
+          "language_percentage_point_difference": {
+            "en": 3.695222282529862,
+            "tr": -3.695222282529862
+          },
+          "maximum_absolute_language_or_category_pp": 16.742243395847616,
+          "source_jensen_shannon_divergence_bits": 0.6850238403950988
+        },
+        "train": {
+          "category_percentage_point_difference": {
+            "prose": -15.129101635355838,
+            "technical": 15.129101635355843
+          },
+          "language_percentage_point_difference": {
+            "en": -0.09388701965959001,
+            "tr": 0.09388701965959001
+          },
+          "maximum_absolute_language_or_category_pp": 15.129101635355843,
+          "source_jensen_shannon_divergence_bits": 0.7088548278716875
+        },
+        "validation": {
+          "category_percentage_point_difference": {
+            "prose": -15.587074608322709,
+            "technical": 15.58707460832271
+          },
+          "language_percentage_point_difference": {
+            "en": -0.6824486273373793,
+            "tr": 0.6824486273373793
+          },
+          "maximum_absolute_language_or_category_pp": 15.58707460832271,
+          "source_jensen_shannon_divergence_bits": 0.6887685671733543
+        }
+      },
+      "document_count": 38405,
+      "eos_density_per_1000_tokens": 26.48580949858757,
+      "language_percent": {
+        "en": 39.938578632591806,
+        "tr": 60.061421367408194
+      },
+      "longest_contiguous_language_run_sequences": 19,
+      "longest_contiguous_source_family_run_sequences": 19,
+      "p50_document_tokens": 15,
+      "p95_document_tokens": 87.0,
+      "sequence_range": [
+        2048,
+        4880
+      ],
+      "source_percent": {
+        "python_docs_en_3_14_6_text": 13.897256797316384,
+        "python_docs_tr_3_14_6_text": 4.664741128177966,
+        "tatoeba_sentences_detailed_20260704": 28.3471403822387,
+        "wikimedia_enwikiversity_20260601_articles": 10.14066362111582,
+        "wikimedia_trwiki_20260601_articles_p1p1500000": 40.439135880120055,
+        "wikimedia_trwikibooks_20260601_articles": 1.44629182115113,
+        "wikimedia_trwikivoyage_20260601_articles": 1.0647703698799436
+      },
+      "token_count": 1449984,
+      "unique_document_count": 38405
+    },
+    "steps_1_128": {
+      "average_document_tokens": 36.36994901321494,
+      "category_percent": {
+        "prose": 68.89476776123047,
+        "technical": 31.10523223876953
+      },
+      "comparisons": {
+        "eval": {
+          "category_percentage_point_difference": {
+            "prose": -17.698522266855846,
+            "technical": 17.698522266855846
+          },
+          "language_percentage_point_difference": {
+            "en": 4.206167575719306,
+            "tr": -4.206167575719306
+          },
+          "maximum_absolute_language_or_category_pp": 17.698522266855846,
+          "source_jensen_shannon_divergence_bits": 0.6871817521158226
+        },
+        "train": {
+          "category_percentage_point_difference": {
+            "prose": -16.085380506364075,
+            "technical": 16.085380506364075
+          },
+          "language_percentage_point_difference": {
+            "en": 0.4170582735298538,
+            "tr": -0.4170582735298538
+          },
+          "maximum_absolute_language_or_category_pp": 16.085380506364075,
+          "source_jensen_shannon_divergence_bits": 0.7089040121335657
+        },
+        "validation": {
+          "category_percentage_point_difference": {
+            "prose": -16.543353479330946,
+            "technical": 16.54335347933094
+          },
+          "language_percentage_point_difference": {
+            "en": -0.1715033341479355,
+            "tr": 0.1715033341479355
+          },
+          "maximum_absolute_language_or_category_pp": 16.543353479330946,
+          "source_jensen_shannon_divergence_bits": 0.6879225621959242
+        }
+      },
+      "document_count": 28831,
+      "eos_density_per_1000_tokens": 27.494430541992188,
+      "language_percent": {
+        "en": 40.44952392578125,
+        "tr": 59.55047607421875
+      },
+      "longest_contiguous_language_run_sequences": 21,
+      "longest_contiguous_source_family_run_sequences": 19,
+      "p50_document_tokens": 15,
+      "p95_document_tokens": 86.0,
+      "sequence_range": [
+        0,
+        2048
+      ],
+      "source_percent": {
+        "python_docs_en_3_14_6_text": 14.246940612792969,
+        "python_docs_tr_3_14_6_text": 4.6688079833984375,
+        "tatoeba_sentences_detailed_20260704": 29.622173309326172,
+        "wikimedia_enwikiversity_20260601_articles": 9.675407409667969,
+        "wikimedia_trwiki_20260601_articles_p1p1500000": 37.55064010620117,
+        "wikimedia_trwikibooks_20260601_articles": 2.5140762329101562,
+        "wikimedia_trwikivoyage_20260601_articles": 1.721954345703125
+      },
+      "token_count": 1048576,
+      "unique_document_count": 28831
+    },
+    "steps_306_458": {
+      "average_document_tokens": 37.70719013237064,
+      "category_percent": {
+        "prose": 70.19409977532679,
+        "technical": 29.805900224673202
+      },
+      "comparisons": {
+        "eval": {
+          "category_percentage_point_difference": {
+            "prose": -16.399190252759524,
+            "technical": 16.399190252759517
+          },
+          "language_percentage_point_difference": {
+            "en": 3.0282588715475356,
+            "tr": -3.0282588715475356
+          },
+          "maximum_absolute_language_or_category_pp": 16.399190252759524,
+          "source_jensen_shannon_divergence_bits": 0.6866487545192259
+        },
+        "train": {
+          "category_percentage_point_difference": {
+            "prose": -14.786048492267753,
+            "technical": 14.786048492267744
+          },
+          "language_percentage_point_difference": {
+            "en": -0.7608504306419164,
+            "tr": 0.7608504306419164
+          },
+          "maximum_absolute_language_or_category_pp": 14.786048492267753,
+          "source_jensen_shannon_divergence_bits": 0.7088324431003159
+        },
+        "validation": {
+          "category_percentage_point_difference": {
+            "prose": -15.244021465234624,
+            "technical": 15.244021465234612
+          },
+          "language_percentage_point_difference": {
+            "en": -1.3494120383197057,
+            "tr": 1.3494120383197057
+          },
+          "maximum_absolute_language_or_category_pp": 15.244021465234624,
+          "source_jensen_shannon_divergence_bits": 0.688019049381212
+        }
+      },
+      "document_count": 33240,
+      "eos_density_per_1000_tokens": 26.519575929330067,
+      "language_percent": {
+        "en": 39.27161522160948,
+        "tr": 60.72838477839052
+      },
+      "longest_contiguous_language_run_sequences": 20,
+      "longest_contiguous_source_family_run_sequences": 20,
+      "p50_document_tokens": 15.0,
+      "p95_document_tokens": 84.0,
+      "sequence_range": [
+        4880,
+        7328
+      ],
+      "source_percent": {
+        "python_docs_en_3_14_6_text": 14.025001276552288,
+        "python_docs_tr_3_14_6_text": 4.419264450571895,
+        "tatoeba_sentences_detailed_20260704": 28.305073657066995,
+        "wikimedia_enwikiversity_20260601_articles": 9.167400684232026,
+        "wikimedia_trwiki_20260601_articles_p1p1500000": 40.102890114379086,
+        "wikimedia_trwikibooks_20260601_articles": 2.1942338133169934,
+        "wikimedia_trwikivoyage_20260601_articles": 1.786136003880719
+      },
+      "token_count": 1253376,
+      "unique_document_count": 33240
+    },
+    "steps_459_610": {
+      "average_document_tokens": 37.48209018120522,
+      "category_percent": {
+        "prose": 70.85394608347039,
+        "technical": 29.146053916529606
+      },
+      "comparisons": {
+        "eval": {
+          "category_percentage_point_difference": {
+            "prose": -15.739343944615925,
+            "technical": 15.73934394461592
+          },
+          "language_percentage_point_difference": {
+            "en": 2.1837355496091106,
+            "tr": -2.1837355496091106
+          },
+          "maximum_absolute_language_or_category_pp": 15.739343944615925,
+          "source_jensen_shannon_divergence_bits": 0.6861723179175104
+        },
+        "train": {
+          "category_percentage_point_difference": {
+            "prose": -14.126202184124153,
+            "technical": 14.126202184124148
+          },
+          "language_percentage_point_difference": {
+            "en": -1.6053737525803413,
+            "tr": 1.6053737525803413
+          },
+          "maximum_absolute_language_or_category_pp": 14.126202184124153,
+          "source_jensen_shannon_divergence_bits": 0.7088220976223445
+        },
+        "validation": {
+          "category_percentage_point_difference": {
+            "prose": -14.584175157091025,
+            "technical": 14.584175157091016
+          },
+          "language_percentage_point_difference": {
+            "en": -2.1939353602581306,
+            "tr": 2.1939353602581306
+          },
+          "maximum_absolute_language_or_category_pp": 14.584175157091025,
+          "source_jensen_shannon_divergence_bits": 0.6884438757513479
+        }
+      },
+      "document_count": 33222,
+      "eos_density_per_1000_tokens": 26.679591128700658,
+      "language_percent": {
+        "en": 38.427091899671055,
+        "tr": 61.572908100328945
+      },
+      "longest_contiguous_language_run_sequences": 23,
+      "longest_contiguous_source_family_run_sequences": 21,
+      "p50_document_tokens": 15.0,
+      "p95_document_tokens": 85.94999999999709,
+      "sequence_range": [
+        7328,
+        9760
+      ],
+      "source_percent": {
+        "python_docs_en_3_14_6_text": 13.963639108758224,
+        "python_docs_tr_3_14_6_text": 4.698100842927632,
+        "tatoeba_sentences_detailed_20260704": 28.49490517064145,
+        "wikimedia_enwikiversity_20260601_articles": 8.512075323807565,
+        "wikimedia_trwiki_20260601_articles_p1p1500000": 41.09296296772204,
+        "wikimedia_trwikibooks_20260601_articles": 1.9722386410361843,
+        "wikimedia_trwikivoyage_20260601_articles": 1.266077945106908
+      },
+      "token_count": 1245184,
+      "unique_document_count": 33222
+    }
+  }
+}

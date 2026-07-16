@@ -1,0 +1,340 @@
+{
+  "schema_version": "darkmind-v2-corpus-v3-tranche-revision1-v1",
+  "tranche_name": "corpus-v3-tranche1-revision1",
+  "tranche_version": "1.1.0",
+  "description": "Aggregate-quota correction using the validated Phase 1B seed and measured source capacity.",
+  "approval_registry": "darkmind_v2/corpus/source_registry.v3.approval.json",
+  "runtime_root": "darkmind_v2/data/phase3c1",
+  "reports_root": "darkmind_v2/reports",
+  "maximum_raw_download_bytes": 8000000000,
+  "already_verified_phase3c_bytes": 6779020,
+  "allowed_hosts": [
+    "docs.python.org",
+    "dumps.wikimedia.org"
+  ],
+  "rate_limit_policy": {
+    "user_agent": "DarkMind-v2-CorpusV3/1.1 (petrofi/darkmind-30m)",
+    "metadata_concurrency": 1,
+    "maximum_wikimedia_transfers": 2,
+    "default_wikimedia_transfers": 1,
+    "maximum_attempts": 5,
+    "initial_backoff_seconds": 2.0,
+    "maximum_backoff_seconds": 120.0,
+    "jitter_fraction": 0.2,
+    "honor_retry_after": true
+  },
+  "tokenizer": {
+    "name": "darkmind_v2_sp_bpe24k_v1",
+    "path": "darkmind_v2/tokenizer/frozen/darkmind_v2_sp_bpe24k_v1",
+    "vocab_size": 24000,
+    "eos_token_id": 3,
+    "model_sha256": "db116d4bcf315a6d2a7c5191cbea719d5751c9ba839778eba7e243d520253445",
+    "vocab_sha256": "f098fecdd4f610ce5b150be09e56e7648211e1ecb076ad6f38af71cee25344ed",
+    "freeze_manifest_sha256": "8e452c049f05ef1c6a94cb5fb42b6accdd1c18b76edebdb9d68bd85fbdfe538e"
+  },
+  "base_v1": {
+    "config_path": "darkmind_v2/config/model_base_v1.json",
+    "config_sha256": "8e9775721b0173a92e88de15c2195428932b3aa5beec57d568674c25887c5e39"
+  },
+  "targets": {
+    "total_tokens": 100000000,
+    "total_tolerance_percent": 1,
+    "languages": {
+      "tr": 60000000,
+      "en": 40000000
+    },
+    "language_tolerance_percent": 1,
+    "categories": {
+      "general_prose": 85000000,
+      "technical_educational": 15000000
+    },
+    "technical_tolerance_percent": 2
+  },
+  "split_policy": {
+    "seed": "darkmind-v2-corpus-v3-tranche1-revision1-split-v1",
+    "train_percent": 98,
+    "validation_percent": 1,
+    "eval_percent": 1,
+    "document_level": true,
+    "duplicate_cluster_isolation": true
+  },
+  "allocation_policy": {
+    "source_minimums_enabled": false,
+    "preserve_phase1b_seed": true,
+    "preserve_new_python": true,
+    "priority_order": [
+      "phase1b_seed",
+      "python_docs_tr_3_14_6",
+      "python_docs_en_3_14_6",
+      "wikimedia_trwikibooks_20260701",
+      "wikimedia_enwikiversity_20260201",
+      "wikimedia_enwikibooks_20260701",
+      "wikimedia_trwiki_20260701",
+      "wikimedia_enwiki_20260701"
+    ],
+    "stable_document_priority": "quality tier, source priority, normalized content hash, document id",
+    "never_duplicate_to_fill": true
+  },
+  "deduplication_policy": {
+    "normalization": "Unicode NFC, casefold, collapsed whitespace",
+    "exact_content_hash": "sha256",
+    "paragraph_hash": "sha256",
+    "near_duplicate_algorithm": "64-bit SimHash over 5-token shingles with four 16-bit LSH bands",
+    "near_duplicate_max_hamming_distance": 3,
+    "minimum_historical_paragraph_characters": 80,
+    "seed_cross_dedup": true,
+    "new_python_cross_dedup": true
+  },
+  "contamination_policy": {
+    "prompt_manifests": [
+      "darkmind_v2/eval/fixed_base_prompts.jsonl",
+      "darkmind_v2/eval/public_preview_prompts.jsonl"
+    ],
+    "normalized_exact_match": true,
+    "normalized_substring_match": true,
+    "minimum_substring_characters": 40,
+    "accepted_contamination_records": 0
+  },
+  "quality_policy": {
+    "unicode_normalization": "NFC",
+    "strict_utf8": true,
+    "reject_replacement_character": true,
+    "reject_control_characters": true,
+    "reject_malformed_surrogates": true,
+    "reject_mojibake": true,
+    "language_confidence_minimum": 0.55,
+    "minimum_document_characters": 120,
+    "maximum_document_characters": 100000,
+    "accepted_high_risk_pii_records": 0
+  },
+  "tokenization_policy": {
+    "dtype": "uint16-le",
+    "shard_token_cap": 5000000,
+    "add_bos": false,
+    "append_eos_to_every_document": true,
+    "allow_truncation": false,
+    "deterministic_document_order": "split, source priority, normalized hash, document id"
+  },
+  "seed_inputs": {
+    "runtime_cli_required": true,
+    "phase1b_processed_argument": "--phase1b-processed",
+    "phase2a_tokenized_argument": "--phase2a-tokenized",
+    "expected_documents": 348859,
+    "expected_total_tokens": 13050214,
+    "expected_content_hash": "23e92169ae6ef3b0b0f11c4d0ca327ef60d59b0d8b697a1c4261218a233cce28",
+    "expected_boundary_hash": "b15ab6da0c30a8c7da53475c4435d1b0640828817381c15c35e83bde8387cb5a",
+    "technical_content_types": [
+      "technical_documentation",
+      "educational_articles",
+      "instructional_books"
+    ]
+  },
+  "existing_python_inputs": {
+    "phase3c_runtime_argument": "--phase3c-runtime",
+    "accepted_documents_relative_path": "source_gate/deduplicated/accepted_documents.jsonl",
+    "required_archive_sha256": {
+      "python_docs_tr_3_14_6": "c403c0b36eef6a9c98645ba58fee07233da9813036485a7e7c5403f3fe7de12c",
+      "python_docs_en_3_14_6": "2a264492120fd6896356406c4cb1d699bc9400dba869687e481bb494cf521e16"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "phase1b_seed",
+      "approval_status": "approved",
+      "source_priority": 0,
+      "quality_tier": "A",
+      "language": "mixed",
+      "category": "document_metadata",
+      "maximum_source_cap_tokens": 13050214,
+      "acquisition": "immutable_local_seed"
+    },
+    {
+      "source_id": "python_docs_tr_3_14_6",
+      "approval_status": "approved",
+      "source_priority": 10,
+      "quality_tier": "A",
+      "language": "tr",
+      "category": "technical_educational",
+      "maximum_source_cap_tokens": 5000000,
+      "acquisition": "reuse_verified_phase3c"
+    },
+    {
+      "source_id": "python_docs_en_3_14_6",
+      "approval_status": "approved",
+      "source_priority": 20,
+      "quality_tier": "A",
+      "language": "en",
+      "category": "technical_educational",
+      "maximum_source_cap_tokens": 10000000,
+      "acquisition": "reuse_verified_phase3c"
+    },
+    {
+      "source_id": "wikimedia_trwikibooks_20260701",
+      "approval_registry_id": "wikimedia_trwikibooks_20260701",
+      "approval_status": "approved",
+      "snapshot": "2026-07-01",
+      "source_priority": 30,
+      "quality_tier": "A",
+      "language": "tr",
+      "category": "technical_educational",
+      "maximum_source_cap_tokens": 10000000,
+      "inventory_stop_tokens": 12000000,
+      "official_host": "dumps.wikimedia.org",
+      "extraction_format": "streaming-bzip2-mediawiki-xml",
+      "license": "CC BY-SA 4.0 and GFDL; page-specific notices must be retained",
+      "attribution_requirements": "Retain project, page attribution route, snapshot, and license.",
+      "redistribution_notes": "Share-alike and attribution requirements remain attached to reused text.",
+      "files": [
+        {
+          "filename": "trwikibooks-20260701-pages-articles.xml.bz2",
+          "url": "https://dumps.wikimedia.org/trwikibooks/20260701/trwikibooks-20260701-pages-articles.xml.bz2",
+          "expected_bytes": 3029122,
+          "maximum_expected_extracted_bytes": 60582440,
+          "estimated_usable_tokens": 10000000,
+          "md5": "627653907bcb15f6e2bd964b2660c10d",
+          "sha1": "dfcf6a28b11fab210a46b50400e7aacf681b4e7d"
+        }
+      ]
+    },
+    {
+      "source_id": "wikimedia_enwikiversity_20260201",
+      "approval_registry_id": "wikimedia_enwikiversity_20260701",
+      "approval_status": "approved",
+      "snapshot": "2026-02-01",
+      "snapshot_authorization": "Phase 3C.1 prompt explicitly requires inspection and permits this complete dated snapshot.",
+      "source_priority": 40,
+      "quality_tier": "B",
+      "language": "en",
+      "category": "technical_educational",
+      "maximum_source_cap_tokens": 25000000,
+      "inventory_stop_tokens": 30000000,
+      "official_host": "dumps.wikimedia.org",
+      "extraction_format": "streaming-bzip2-mediawiki-xml",
+      "license": "CC BY-SA 4.0 and GFDL; page-specific notices must be retained",
+      "attribution_requirements": "Retain project, page attribution route, snapshot, and license.",
+      "redistribution_notes": "Share-alike and attribution requirements remain attached to reused text.",
+      "files": [
+        {
+          "filename": "enwikiversity-20260201-pages-articles.xml.bz2",
+          "url": "https://dumps.wikimedia.org/enwikiversity/20260201/enwikiversity-20260201-pages-articles.xml.bz2",
+          "expected_bytes": 112905404,
+          "maximum_expected_extracted_bytes": 2258108080,
+          "estimated_usable_tokens": 25000000,
+          "md5": "e66af1209c8702173c0ba249a78bceb8",
+          "sha1": "88f8640d59e408b2796cbdd585dc792a3ba14585"
+        }
+      ]
+    },
+    {
+      "source_id": "wikimedia_enwikibooks_20260701",
+      "approval_registry_id": "wikimedia_enwikibooks_20260701",
+      "approval_status": "approved",
+      "snapshot": "2026-07-01",
+      "source_priority": 50,
+      "quality_tier": "B",
+      "language": "en",
+      "category": "technical_educational",
+      "maximum_source_cap_tokens": 15000000,
+      "inventory_stop_tokens": 18000000,
+      "official_host": "dumps.wikimedia.org",
+      "extraction_format": "streaming-bzip2-mediawiki-xml",
+      "license": "CC BY-SA 4.0 and GFDL; page-specific notices must be retained",
+      "attribution_requirements": "Retain project, page attribution route, snapshot, and license.",
+      "redistribution_notes": "Share-alike and attribution requirements remain attached to reused text.",
+      "files": [
+        {
+          "filename": "enwikibooks-20260701-pages-articles.xml.bz2",
+          "url": "https://dumps.wikimedia.org/enwikibooks/20260701/enwikibooks-20260701-pages-articles.xml.bz2",
+          "expected_bytes": 202864457,
+          "maximum_expected_extracted_bytes": 4057289140,
+          "estimated_usable_tokens": 15000000,
+          "md5": "7d7c95e342d7359d33530077b4053c36",
+          "sha1": "36a6836e3a964a56b30c0f71dae08a6b12836c01"
+        }
+      ]
+    },
+    {
+      "source_id": "wikimedia_trwiki_20260701",
+      "approval_registry_id": "wikimedia_trwiki_20260701",
+      "approval_status": "approved",
+      "snapshot": "2026-07-01",
+      "source_priority": 100,
+      "quality_tier": "A",
+      "language": "tr",
+      "category": "general_prose",
+      "maximum_source_cap_tokens": 175000000,
+      "inventory_stop_tokens": 70000000,
+      "official_host": "dumps.wikimedia.org",
+      "extraction_format": "streaming-bzip2-mediawiki-xml",
+      "license": "CC BY-SA 4.0 and GFDL; imported text may carry compatible additional attribution",
+      "attribution_requirements": "Retain project, snapshot, article URL or stable attribution route, and license in the corpus manifest.",
+      "redistribution_notes": "Preserve source and license notices; comply with page-level imported-content notices.",
+      "files": [
+        {
+          "filename": "trwiki-20260701-pages-articles-multistream1.xml-p1p1500000.bz2",
+          "url": "https://dumps.wikimedia.org/trwiki/20260701/trwiki-20260701-pages-articles-multistream1.xml-p1p1500000.bz2",
+          "expected_bytes": 381155966,
+          "md5": "3deaa9908917b2448fdb87d541c80d01",
+          "sha1": "9f015c97ab12ec7d8da2e5cbd030306cb1053a11"
+        },
+        {
+          "filename": "trwiki-20260701-pages-articles-multistream1.xml-p1500001p3000000.bz2",
+          "url": "https://dumps.wikimedia.org/trwiki/20260701/trwiki-20260701-pages-articles-multistream1.xml-p1500001p3000000.bz2",
+          "expected_bytes": 406014080,
+          "md5": "94bd577f34d7a08949cc7ea9c5078782",
+          "sha1": "570cd046f5d812179a8e63c6c14fda935597c70a"
+        }
+      ]
+    },
+    {
+      "source_id": "wikimedia_enwiki_20260701",
+      "approval_registry_id": "wikimedia_enwiki_20260701",
+      "approval_status": "approved",
+      "snapshot": "2026-07-01",
+      "source_priority": 110,
+      "quality_tier": "A",
+      "language": "en",
+      "category": "general_prose",
+      "maximum_source_cap_tokens": 100000000,
+      "inventory_stop_tokens": 40000000,
+      "official_host": "dumps.wikimedia.org",
+      "extraction_format": "streaming-bzip2-mediawiki-xml",
+      "license": "CC BY-SA 4.0 and GFDL; imported text may carry compatible additional attribution",
+      "attribution_requirements": "Retain project, snapshot, article URL or stable attribution route, and license in the corpus manifest.",
+      "redistribution_notes": "Preserve source and license notices; comply with page-level imported-content notices.",
+      "files": [
+        {
+          "filename": "enwiki-20260701-pages-articles-multistream1.xml-p1p41242.bz2",
+          "url": "https://dumps.wikimedia.org/enwiki/20260701/enwiki-20260701-pages-articles-multistream1.xml-p1p41242.bz2",
+          "expected_bytes": 298405218,
+          "md5": "01398fb4880d0a89d7b8ec97b1d0b2b0",
+          "sha1": "3b8f125d9f2084449e30ca68ef312a65f903a50f"
+        },
+        {
+          "filename": "enwiki-20260701-pages-articles-multistream2.xml-p41243p151573.bz2",
+          "url": "https://dumps.wikimedia.org/enwiki/20260701/enwiki-20260701-pages-articles-multistream2.xml-p41243p151573.bz2",
+          "expected_bytes": 404434503,
+          "md5": "b971d460d8a21e41b955345691d44115",
+          "sha1": "789ee9f4f9713e1c2093da91178f9f87bfc886ee"
+        }
+      ]
+    }
+  ],
+  "metadata_files": [
+    {"project": "trwikibooks", "snapshot": "20260701", "filename": "trwikibooks-20260701-md5sums.txt", "expected_bytes": 2896, "kind": "md5"},
+    {"project": "trwikibooks", "snapshot": "20260701", "filename": "trwikibooks-20260701-sha1sums.txt", "expected_bytes": 3200, "kind": "sha1"},
+    {"project": "trwikibooks", "snapshot": "20260701", "filename": "dumpstatus.json", "local_filename": "trwikibooks-20260701-dumpstatus.json", "expected_bytes": 11764, "kind": "dumpstatus"},
+    {"project": "enwikiversity", "snapshot": "20260201", "filename": "enwikiversity-20260201-md5sums.txt", "expected_bytes": 2972, "kind": "md5"},
+    {"project": "enwikiversity", "snapshot": "20260201", "filename": "enwikiversity-20260201-sha1sums.txt", "expected_bytes": 3276, "kind": "sha1"},
+    {"project": "enwikiversity", "snapshot": "20260201", "filename": "dumpstatus.json", "local_filename": "enwikiversity-20260201-dumpstatus.json", "expected_bytes": 12044, "kind": "dumpstatus"},
+    {"project": "enwikibooks", "snapshot": "20260701", "filename": "enwikibooks-20260701-md5sums.txt", "expected_bytes": 3293, "kind": "md5"},
+    {"project": "enwikibooks", "snapshot": "20260701", "filename": "enwikibooks-20260701-sha1sums.txt", "expected_bytes": 3637, "kind": "sha1"},
+    {"project": "enwikibooks", "snapshot": "20260701", "filename": "dumpstatus.json", "local_filename": "enwikibooks-20260701-dumpstatus.json", "expected_bytes": 13462, "kind": "dumpstatus"},
+    {"project": "trwiki", "snapshot": "20260701", "filename": "trwiki-20260701-md5sums.txt", "expected_bytes": 9432, "kind": "md5"},
+    {"project": "trwiki", "snapshot": "20260701", "filename": "trwiki-20260701-sha1sums.txt", "expected_bytes": 10328, "kind": "sha1"},
+    {"project": "trwiki", "snapshot": "20260701", "filename": "dumpstatus.json", "local_filename": "trwiki-20260701-dumpstatus.json", "expected_bytes": 31399, "kind": "dumpstatus"},
+    {"project": "enwiki", "snapshot": "20260701", "filename": "enwiki-20260701-md5sums.txt", "expected_bytes": 37548, "kind": "md5"},
+    {"project": "enwiki", "snapshot": "20260701", "filename": "enwiki-20260701-sha1sums.txt", "expected_bytes": 40756, "kind": "sha1"},
+    {"project": "enwiki", "snapshot": "20260701", "filename": "dumpstatus.json", "local_filename": "enwiki-20260701-dumpstatus.json", "expected_bytes": 111379, "kind": "dumpstatus"}
+  ]
+}

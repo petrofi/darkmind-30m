@@ -1,0 +1,40 @@
+{
+  "schema_version": "darkmind-v2-base-v1-stage2-25m-authorization-v1",
+  "v2_config": "darkmind_v2/config/train_base_v1_production_100m_v2.json",
+  "v2_config_sha256": "9358b8b33a87729ef2f19cfad76acbe370ed44ada911fa21512e4085eccf52ea",
+  "architecture_hash": "3a2dda86293ceae23ca4e50ea47c840b7fc46021d293c862d330110851ac8305",
+  "model_config_sha256": "8e9775721b0173a92e88de15c2195428932b3aa5beec57d568674c25887c5e39",
+  "tokenizer_hashes": {
+    "tokenizer.model": "db116d4bcf315a6d2a7c5191cbea719d5751c9ba839778eba7e243d520253445",
+    "tokenizer.vocab": "f098fecdd4f610ce5b150be09e56e7648211e1ecb076ad6f38af71cee25344ed",
+    "tokenizer_freeze_manifest.json": "8e452c049f05ef1c6a94cb5fb42b6accdd1c18b76edebdb9d68bd85fbdfe538e"
+  },
+  "corpus_hashes": {
+    "corpus": "e75c4aa4f39cc7a3cb4fe754e2a0e85268ced300f8504a86d443540eb609e1c5",
+    "tokenized_manifest_content": "1296caacf09d49b1c48c0fee7d5f5a523a0019e8e7e0e70132fbf68d8f023c82",
+    "tokenized_manifest_file": "85532a6933f04f7983e0b98bae5ec0c33f3110709eb248c9116858a5bcc8ab37",
+    "document_boundaries": "3daae663c766575cd7526487baf713d6cfd83fdce5767cfea04722848418cdd8",
+    "shard_checksums": "997ec0fe50a398e7cde90169e0c3ac94b55a8107b305444b08dbe0086148ee76",
+    "sequence_order": "4d31d6cf5532cd1729b35528a649c52b4552d8959a10b5813ce9851bb714ffd1"
+  },
+  "source_checkpoint": "C:\\DarkMindRuntime\\phase4c\\runs\\base_v1_stage1_5m_v2_confirmation\\checkpoints\\step_000610_tokens_004997120",
+  "source_checkpoint_model_sha256": "9222e15c8f3dc3972f6df6a747a87ad54cb37e59e06bf6f63ad8a5c3ef52d3b4",
+  "current_optimizer_step": 610,
+  "target_optimizer_step": 3051,
+  "maximum_authorized_step": 3051,
+  "current_tokens": 4997120,
+  "target_tokens": 24993792,
+  "maximum_authorized_tokens": 24993792,
+  "current_sequence_index": 9760,
+  "target_sequence_index": 48816,
+  "continuation_authorized": true,
+  "continuation_100m_authorized": false,
+  "scheduler_reset": false,
+  "optimizer_reset": false,
+  "rng_reset": false,
+  "data_order_reset": false,
+  "training_segments": [
+    {"start_step": 611, "end_step": 1831},
+    {"start_step": 1832, "end_step": 3051}
+  ]
+}

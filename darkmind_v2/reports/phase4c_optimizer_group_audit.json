@@ -1,0 +1,3701 @@
+{
+  "all_trainable_parameters_exactly_once": true,
+  "corrected_grouping_experiment_required": true,
+  "current_policy": "single AdamW group; weight decay 0.1 on every trainable parameter",
+  "duplicate_optimizer_state_for_tied_embedding": false,
+  "finding": "Current code decays bias, LayerNorm, token embedding, positional embedding, and the tied LM head storage.",
+  "frozen_parameters_in_optimizer": false,
+  "optimizer_state_parameter_count": 172,
+  "optimizer_state_tensor_count": 516,
+  "parameters": [
+    {
+      "aliases": [
+        "blocks.0.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.0.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051024896,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.0.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.0.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534063595776,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.0.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.0.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051078144,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.0.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.0.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534055207168,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.0.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.0.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051021824,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.0.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.0.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051018752,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.0.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.0.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051031040,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.0.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.0.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051027968,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.0.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.0.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051143680,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.0.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.0.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534071984384,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.0.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.0.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051034112,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.0.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.0.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534084567296,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.1.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051043328,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.1.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534105538816,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.1.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051088384,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.1.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534097150208,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.1.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051040256,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.1.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051037184,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.1.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051049472,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.1.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051046400,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.1.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051155968,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.1.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534109733120,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.1.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051052544,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.1.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.1.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534122316032,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.10.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051474432,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.10.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534445277440,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.10.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051381248,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.10.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534436888832,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.10.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051471360,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.10.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051467264,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.10.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051480576,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.10.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051477504,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.10.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051536896,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.10.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534449471744,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.10.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051483648,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.10.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.10.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534462054656,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.11.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051492864,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.11.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534483026176,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.11.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051391488,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.11.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534474637568,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.11.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051489792,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.11.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051486720,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.11.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051499008,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.11.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051495936,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.11.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051549184,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.11.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534491414784,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.11.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051502080,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.11.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.11.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534503997696,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.12.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051511296,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.12.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534524969216,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.12.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051602432,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.12.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534516580608,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.12.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051508224,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.12.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051505152,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.12.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051517440,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.12.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051514368,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.12.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051561472,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.12.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534529163520,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.12.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051520512,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.12.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.12.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534541746432,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.13.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051529728,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.13.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534562717952,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.13.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051612672,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.13.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534554329344,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.13.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051526656,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.13.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051523584,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.13.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051667968,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.13.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051532800,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.13.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051573760,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.13.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534566912256,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.13.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051671040,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.13.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.13.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534579495168,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.2.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051061760,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.2.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534143287552,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.2.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051098624,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.2.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534134898944,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.2.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051058688,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.2.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051055616,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.2.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051067904,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.2.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051064832,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.2.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051168256,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.2.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534147481856,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.2.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051070976,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.2.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.2.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534160064768,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.3.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051212288,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.3.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534181036288,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.3.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051108864,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.3.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534172647680,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.3.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051209216,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.3.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051074048,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.3.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051218432,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.3.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051215360,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.3.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051180544,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.3.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534185230592,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.3.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051221504,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.3.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.3.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534197813504,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.4.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051230720,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.4.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534218785024,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.4.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051119104,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.4.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534210396416,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.4.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051227648,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.4.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051224576,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.4.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051236864,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.4.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051233792,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.4.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051192832,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.4.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534222979328,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.4.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051239936,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.4.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.4.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534235562240,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.5.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051249152,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.5.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534256533760,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.5.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051129344,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.5.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534248145152,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.5.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051246080,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.5.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051243008,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.5.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051255296,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.5.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051252224,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.5.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051274752,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.5.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534260728064,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.5.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051258368,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.5.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.5.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534273310976,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.6.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051267584,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.6.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534294282496,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.6.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051340288,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.6.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534285893888,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.6.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051264512,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.6.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051261440,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.6.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051405824,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.6.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051270656,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.6.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051287040,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.6.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534298476800,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.6.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051408896,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.6.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.6.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534311059712,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.7.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051418112,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.7.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534332031232,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.7.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051350528,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.7.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534323642624,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.7.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051415040,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.7.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051411968,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.7.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051424256,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.7.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051421184,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.7.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051299328,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.7.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534336225536,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.7.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051427328,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.7.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.7.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534348808448,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.8.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051436544,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.8.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534369779968,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.8.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051360768,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.8.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534361391360,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.8.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051433472,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.8.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051430400,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.8.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051442688,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.8.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051439616,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.8.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051311616,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.8.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534373974272,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.8.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051445760,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.8.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.8.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534386557184,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.attn.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.9.attn.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051454976,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.attn.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 589824,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.9.attn.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        768
+      ],
+      "storage_identity": 4534407528704,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.attn.qkv.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2304,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.9.attn.qkv.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        2304
+      ],
+      "storage_identity": 4534051371008,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.attn.qkv.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 1769472,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.9.attn.qkv.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        2304,
+        768
+      ],
+      "storage_identity": 4534399140096,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.ln_1.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.9.ln_1.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051451904,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.ln_1.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.9.ln_1.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051448832,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.ln_2.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.9.ln_2.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051461120,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.ln_2.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "blocks.9.ln_2.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051458048,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.mlp.fc.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 3072,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.9.mlp.fc.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        3072
+      ],
+      "storage_identity": 4534051323904,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.mlp.fc.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.9.mlp.fc.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        3072,
+        768
+      ],
+      "storage_identity": 4534411723008,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.mlp.proj.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.9.mlp.proj.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051464192,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "blocks.9.mlp.proj.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 2359296,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Linear",
+      "name": "blocks.9.mlp.proj.weight",
+      "recommended_optimizer_group": "decay",
+      "recommended_weight_decay": 0.1,
+      "requires_grad": true,
+      "shape": [
+        768,
+        3072
+      ],
+      "storage_identity": 4534424305920,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "final_norm.bias"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "final_norm.bias",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051677184,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "final_norm.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 768,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "LayerNorm",
+      "name": "final_norm.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        768
+      ],
+      "storage_identity": 4534051674112,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "position_embedding.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": false,
+      "elements": 393216,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Embedding",
+      "name": "position_embedding.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        512,
+        768
+      ],
+      "storage_identity": 4534046818560,
+      "tied_parameter_identity": false
+    },
+    {
+      "aliases": [
+        "token_embedding.weight",
+        "lm_head.weight"
+      ],
+      "current_optimizer_group": "decay_all",
+      "current_weight_decay": 0.1,
+      "dtype": "torch.float32",
+      "duplicate_storage_identity": true,
+      "elements": 18432000,
+      "learning_rate_multiplier": 1.0,
+      "module_type": "Embedding",
+      "name": "token_embedding.weight",
+      "recommended_optimizer_group": "no_decay",
+      "recommended_weight_decay": 0.0,
+      "requires_grad": true,
+      "shape": [
+        24000,
+        768
+      ],
+      "storage_identity": 4533967126784,
+      "tied_parameter_identity": true
+    }
+  ],
+  "result": "PASS",
+  "schema_version": "darkmind-v2-phase4c-optimizer-group-audit-v1",
+  "summary": {
+    "decay_elements_current": 118056960,
+    "decay_elements_recommended": 99090432,
+    "duplicate_unique_parameters": 0,
+    "no_decay_elements_current": 0,
+    "no_decay_elements_recommended": 18966528,
+    "tied_embedding_aliases": [
+      [
+        "token_embedding.weight",
+        "lm_head.weight"
+      ]
+    ],
+    "unique_trainable_elements": 118056960,
+    "unique_trainable_parameters": 172
+  },
+  "tied_embedding_registered_once": true
+}

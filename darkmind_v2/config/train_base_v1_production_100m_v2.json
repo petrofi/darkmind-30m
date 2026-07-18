@@ -1,0 +1,110 @@
+{
+  "architecture_hash": "3a2dda86293ceae23ca4e50ea47c840b7fc46021d293c862d330110851ac8305",
+  "attention_implementation": "sdpa",
+  "authorization": {
+    "maximum_optimizer_steps": 610,
+    "maximum_training_tokens": 4997120,
+    "phase_100m_authorized": false,
+    "phase_25m_authorized": false
+  },
+  "confirmation": {
+    "forced_midpoint_restart_step": 305,
+    "fresh_process_resume_required": true,
+    "optimizer_steps": 610,
+    "reuse_exploratory_run": false,
+    "tokens": 4997120
+  },
+  "continuation": {
+    "next_learning_rate_after_5m": 9.969276541491926e-05,
+    "next_optimizer_step_after_5m": 611,
+    "resume_exact_checkpoint_state": true,
+    "scheduler_restart": false
+  },
+  "corpus": {
+    "corpus_hash": "e75c4aa4f39cc7a3cb4fe754e2a0e85268ced300f8504a86d443540eb609e1c5",
+    "tokenized_dir": "C:\\DarkMindRuntime\\phase4b\\inputs\\corpus_v3_tokenized",
+    "tokenized_manifest_hash": "1296caacf09d49b1c48c0fee7d5f5a523a0019e8e7e0e70132fbf68d8f023c82",
+    "train_complete_sequence_tokens": 98081792,
+    "train_tail_tokens": 328
+  },
+  "data": {
+    "data_order_seed": 20260712,
+    "effective_tokens_per_optimizer_step": 8192,
+    "gradient_accumulation_steps": 8,
+    "micro_batch_size": 2,
+    "no_replacement": true,
+    "no_wrap": true,
+    "sequence_length": 512,
+    "sequence_order": "deterministic_stratified_v1"
+  },
+  "deterministic_content_hash": "40a479d829b490227ce0332777ce55460af012c82967cf8d9fc3a61b644c321d",
+  "evaluation_steps": [
+    0,
+    64,
+    128,
+    192,
+    256,
+    384,
+    512,
+    610
+  ],
+  "fused_optimizer": false,
+  "gradient_checkpointing": false,
+  "initialization_policy": "base_v1_standard_v1",
+  "initialization_seed": 20260712,
+  "model_config": "C:\\DarkMindRuntime\\phase4b\\inputs\\model\\model_base_v1.json",
+  "model_config_sha256": "8e9775721b0173a92e88de15c2195428932b3aa5beec57d568674c25887c5e39",
+  "model_name": "darkmind-v2-base-v1",
+  "optimizer": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "epsilon": 1e-08,
+    "gradient_clipping": 1.0,
+    "grouping": "corrected_adamw_v1",
+    "name": "AdamW",
+    "weight_decay": 0.1
+  },
+  "precision": "bf16",
+  "run_dir": "C:\\DarkMindRuntime\\phase4c\\runs\\base_v1_stage1_5m_v2_confirmation",
+  "runtime_root": "C:\\DarkMindRuntime\\phase4c",
+  "schedule": {
+    "learning_rate_milestones": {
+      "100m_step_12207": 3e-05,
+      "25m_step_3051": 9.023038731667841e-05,
+      "5m_step_610": 9.969396496826799e-05
+    },
+    "minimum_learning_rate": 3e-05,
+    "name": "warmup_cosine_global",
+    "peak_learning_rate": 0.0001,
+    "scheduler_horizon_optimizer_steps": 12207,
+    "scheduler_horizon_tokens": 99999744,
+    "scheduler_restart": false,
+    "warmup_optimizer_steps": 100
+  },
+  "schema_version": "darkmind-v2-base-v1-production-100m-v2",
+  "sequence_order_manifest": "C:\\DarkMindRuntime\\phase4b\\inputs\\sequence_orders\\deterministic_stratified_v1.json",
+  "stage_gates": {
+    "100m": {
+      "authorized": false,
+      "optimizer_steps": 12207,
+      "tokens": 99999744
+    },
+    "25m": {
+      "authorized": false,
+      "optimizer_steps": 3051,
+      "tokens": 24993792
+    },
+    "5m": {
+      "authorized": true,
+      "optimizer_steps": 610,
+      "tokens": 4997120
+    }
+  },
+  "tokenizer_dir": "C:\\DarkMindRuntime\\phase4b\\inputs\\tokenizer\\darkmind_v2_sp_bpe24k_v1",
+  "tokenizer_hashes": {
+    "tokenizer.model": "db116d4bcf315a6d2a7c5191cbea719d5751c9ba839778eba7e243d520253445",
+    "tokenizer.vocab": "f098fecdd4f610ce5b150be09e56e7648211e1ecb076ad6f38af71cee25344ed",
+    "tokenizer_freeze_manifest.json": "8e452c049f05ef1c6a94cb5fb42b6accdd1c18b76edebdb9d68bd85fbdfe538e"
+  },
+  "training_compile": false
+}

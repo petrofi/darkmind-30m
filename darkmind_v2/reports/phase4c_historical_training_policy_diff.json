@@ -1,0 +1,148 @@
+{
+  "curve_shape": {
+    "interpretation": "Phase 3B continued improving under local decay; Phase 4B rebounded while global LR stayed near peak.",
+    "phase3b_candidate_d_eval": {
+      "0": 10.285346,
+      "152": 6.784964,
+      "305": 6.352909,
+      "458": 6.190742,
+      "610": 6.157462
+    },
+    "phase3b_candidate_d_validation": {
+      "0": 10.283829,
+      "152": 6.802695,
+      "305": 6.371558,
+      "458": 6.209152,
+      "610": 6.175414
+    },
+    "phase4b_best_eval": {
+      "0": 10.243818,
+      "128": 7.2965610922,
+      "610": 7.5421794918
+    },
+    "phase4b_best_validation": {
+      "0": 10.246471,
+      "128": 7.3558259354,
+      "610": 7.6181460219
+    }
+  },
+  "data": {
+    "effective_tokens_per_step": 8192,
+    "gradient_accumulation_steps": 8,
+    "micro_batch_size": 2,
+    "phase3b_corpus": "darkmind_v2/data/phase2a/tokenized/full_v1",
+    "phase3b_order": "contiguous_no_shuffle",
+    "phase4_corpus_hash": "e75c4aa4f39cc7a3cb4fe754e2a0e85268ced300f8504a86d443540eb609e1c5",
+    "phase4a_order": "contiguous_complete_train_sequences_from_offset_zero",
+    "phase4b_order": "deterministic_stratified_v1",
+    "sequence_length": 512
+  },
+  "deterministic_content_hash": "2e35867f815794373a8328895c2d259643eab0c39a5c02c848d3370ea254caab",
+  "model": {
+    "dimensions_equal": true,
+    "initialization_code": "DarkMindV2ForCausalLM._initialize_deterministically",
+    "initialization_seed_phase3b": 20260712,
+    "initialization_seed_phase4": 20260712,
+    "phase3b_candidate_d_parameters": 118056960,
+    "phase3b_initial_safetensors_hash_retained_in_source": false,
+    "phase4_base_v1_parameters": 118056960,
+    "recorded_phase4b_safetensors_hash": "f1da070885650b70dc999f22b6ef8a438bb47fe7479020dc46ebdf68ae3d9c6b",
+    "rederived_initialization_identity": true,
+    "rederived_phase3b_tensor_hash": "d65dfad5177db78cbdb2ff1f912d70cdc3de390ff951bfb480cdfd1225ecbb6f",
+    "rederived_phase4_tensor_hash": "d65dfad5177db78cbdb2ff1f912d70cdc3de390ff951bfb480cdfd1225ecbb6f"
+  },
+  "numerics": {
+    "attention": "SDPA",
+    "checkpoint_reload": "model, optimizer, scheduler, RNG, and training state",
+    "gradient_scaler": "none (BF16)",
+    "loss": "model forward shifts logits left and labels right, then one mean cross entropy",
+    "padding_ignore_index": 0,
+    "precision": "bf16"
+  },
+  "optimizer": {
+    "implementation": "torch.optim.AdamW(foreach=False, fused=False)",
+    "phase3b": {
+      "beta1": 0.9,
+      "beta2": 0.95,
+      "epsilon": "PyTorch default 1e-8",
+      "gradient_clipping": 1.0,
+      "name": "AdamW",
+      "parameter_groups": "single group: all model.parameters()",
+      "weight_decay": 0.1
+    },
+    "phase4": {
+      "beta1": 0.9,
+      "beta2": 0.95,
+      "epsilon": 1e-08,
+      "gradient_clipping": 1.0,
+      "name": "AdamW",
+      "parameter_groups": "single group: all model.parameters()",
+      "weight_decay": 0.1
+    }
+  },
+  "result": "PASS",
+  "schedule": {
+    "phase3b": {
+      "horizon": 610,
+      "lr": {
+        "1": 1.4999999999999999e-05,
+        "100": 0.0002879356943354133,
+        "128": 0.00027828573337538535,
+        "192": 0.0002472303092672385,
+        "20": 0.0003,
+        "256": 0.00020671729424061788,
+        "305": 0.0001721849936036941,
+        "384": 0.00011650849687453078,
+        "458": 7.185509976108054e-05,
+        "512": 4.796694820919524e-05,
+        "610": 2.9999999999999997e-05,
+        "64": 0.00029631177534073004
+      },
+      "minimum": 3e-05,
+      "peak": 0.0003,
+      "type": "5M-local warmup cosine",
+      "warmup": 20
+    },
+    "phase3b_used_5m_local_while_phase4_used_100m_global": true,
+    "phase4a": {
+      "horizon": 12207,
+      "lr": {
+        "100": 0.0003,
+        "12207": 3e-05,
+        "128": 0.0002999964367640154,
+        "192": 0.0002999615332528785,
+        "256": 0.00029988940886226887,
+        "3051": 0.0002623172082214738,
+        "384": 0.00029963358726664416,
+        "512": 0.00029922925416860855,
+        "610": 0.0002988195791633194,
+        "64": 0.00019199999999999998
+      },
+      "minimum": 3e-05,
+      "peak": 0.0003,
+      "type": "100M-global warmup cosine",
+      "warmup": 100
+    },
+    "phase4b_best": {
+      "horizon": 12207,
+      "lr": {
+        "100": 0.00015,
+        "12207": 3e-05,
+        "128": 0.00014999841633956242,
+        "192": 0.000149982903667946,
+        "256": 0.00014995084838323062,
+        "3051": 0.00013325209254287727,
+        "384": 0.0001498371498962863,
+        "512": 0.00014965744629715937,
+        "610": 0.00014947536851703082,
+        "64": 9.599999999999999e-05
+      },
+      "minimum": 3e-05,
+      "peak": 0.00015,
+      "type": "100M-global warmup cosine",
+      "warmup": 100
+    }
+  },
+  "schema_version": "darkmind-v2-phase4c-historical-policy-diff-v1",
+  "warning": "Absolute losses are not compared because Phase 3B and Phase 4 use different corpora and splits."
+}

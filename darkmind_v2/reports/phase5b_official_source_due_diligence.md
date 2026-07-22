@@ -1,0 +1,38 @@
+# Phase 5B official-source due diligence
+
+## Scope and evidence rule
+
+Access date is 2026-07-22. This is a technical and provenance review, not legal advice. Only official project, publisher, government, or artifact pages were used. A site footer or search snippet was not accepted as an artifact license. No corpus body, bulk archive, or sample was downloaded, and no website was scraped.
+
+The registry records 20/20 candidates with artifact, content and database-license distinctions, snapshot state, acquisition mechanism, rights, attribution, restrictions, rate-limit status, inventory, size, document-count and language evidence. The final counts are 3 approved, 11 conditional, 3 deferred and 3 rejected.
+
+## Candidate decisions
+
+| Candidate | Official primary evidence | Final state | Material finding |
+| --- | --- | --- | --- |
+| GOV.UK | [reuse terms](https://www.gov.uk/help/reuse-govuk-content), [Content API](https://www.api.gov.uk/gds/gov-uk-content/), [OGL v3](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) | Conditional | OGL-covered content is reusable, but a dated URL/right/response manifest is not pinned. Use the API, not page scraping. |
+| MDN English docs | [official repository](https://github.com/mdn/content), [MDN licensing](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license) | Approved | Commit 3b763f8f076c053b7a44e261c3a19a1879bc11ff is pinned. Approved scope excludes code blocks, avoiding MDN legacy code-sample license ambiguity. |
+| Rust 1.90 docs | [official repository](https://github.com/rust-lang/rust), [Rust license policy](https://rust-lang.org/policies/licenses/) | Approved | Release commit 1159e78c4747b02ef996e55082b704c09b970588 is reproducible under Apache-2.0 OR MIT; vendor, generated and test paths are excluded. |
+| PostgreSQL 18.0 docs | [official archive](https://ftp.postgresql.org/pub/source/v18.0/), [license](https://www.postgresql.org/about/licence/), [official SHA-256](https://ftp.postgresql.org/pub/source/v18.0/postgresql-18.0.tar.bz2.sha256) | Approved | Exact 22,412,570-byte archive and SHA-256 are pinned. The original 3M estimate was reduced because the full archive is only about 22.4 MB. |
+| Turk Kutuphaneciligi | [journal](https://dergipark.org.tr/tr/pub/tk), [policy](https://dergipark.org.tr/tr/pub/tk/policy) | Conditional | The policy states CC BY 4.0, but article-level coverage, collection terms, OAI access and an immutable article inventory remain unresolved. |
+| NIST publications | [copyright notice](https://www.nist.gov/copyrights-disclaimers), [technical-series guidance](https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications) | Conditional | NIST employee works and Technical Series can be reusable, but third-party authors/material require item-level exclusion and a named subcollection. |
+| EUR-Lex | [legal notice](https://eur-lex.europa.eu/content/legal-notice/legal-notice.html?locale=en), [data reuse](https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=en) | Conditional | Legal documents, editorial content and metadata have different reuse bases. A CELEX sector/language/dump manifest and special-rights exclusions are still needed. |
+| DGT-Acquis | [official artifact page](https://joint-research-centre.ec.europa.eu/language-technology-resources/dgt-acquis_en) | Deferred | The artifact is reproducible and reusable, but the official inventory does not establish Turkish coverage. It cannot close the Turkish-English bilingual gap and has high EUR-Lex overlap. |
+| Broad DergiPark subset | [platform policy](https://dergipark.org.tr/en/pub/page/dergipark-politikasi) | Conditional | DergiPark requires journals to publish their own policies; it is not a platform-wide CC BY grant. Article-level commercial-use licensing and bulk terms are required. |
+| Project Gutenberg Turkish | [license](https://www.gutenberg.org/policy/license.html), [access policy](https://www.gutenberg.org/policy/) | Conditional | U.S. public-domain status does not settle Turkish/EU rights. A work-ID allowlist, local-jurisdiction review and trademark/boilerplate handling are mandatory. |
+| PMC OA subset | [OA file list](https://pmc.ncbi.nlm.nih.gov/tools/openftlist/), [OA service](https://pmc.ncbi.nlm.nih.gov/tools/oa-service/) | Conditional | Only CC0, CC BY and CC BY-SA records are proposed. CC BY-ND is excluded even when listed in the commercial-use group because training creates transformations. |
+| OpenStax legacy editions | [license transition](https://openstax.org/blog/openstax-licensing) | Conditional | OpenStax moved most new/updated books to CC BY-NC-SA in 2026. Only exact legacy files with embedded CC BY notices can qualify. |
+| Stack Exchange dump | [content licensing](https://stackoverflow.com/help/licensing), [API terms](https://stackoverflow.com/legal/api-terms-of-use) | Conditional | CC BY-SA version depends on contribution date. A revision-aware attribution graph, dump checksum and high-PII mitigation must be proven. |
+| GitHub repository allowlist | [repository licensing](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository), [License API limits](https://docs.github.com/en/rest/licenses/licenses) | Conditional | Public visibility is not permission. Repository and file licenses, immutable commits, vendor/generated/test removal, secret scans and fork dedup are required. |
+| arXiv explicit-CC subset | [license choices](https://info.arxiv.org/help/license/index.html), [official S3 bulk data](https://info.arxiv.org/help/bulk_data_s3.html) | Conditional | Most papers use the default arXiv license, which is excluded. An OAI-derived explicit-CC allowlist must precede any requester-pays S3 acquisition. |
+| Turkiye Open Data Portal | [official portal](https://veri.gov.tr/) | Deferred | No named text artifact or blanket content/database license was verified. Future datasets must return as individual candidates with artifact-specific evidence. |
+| Incremental Python docs | [official archives](https://docs.python.org/3/download.html), [license](https://docs.python.org/3/license.html) | Deferred | Corpus V3 already uses Python 3.14.6 Turkish and English docs. Current marginal unique capacity is near zero after version-diff filtering. |
+| Common Crawl | [terms](https://commoncrawl.org/terms-of-use) | Rejected | Crawl manifests do not license third-party page content or make rights, PII and attribution manageable for this tranche. |
+| Social-media scraping | [X developer policy](https://docs.x.com/developer-terms/policy) | Rejected | Full-text redistribution, deletion compliance, privacy and reproducible consent are incompatible with the planned corpus. |
+| Unbounded generated-dataset sweep | [Hub license metadata](https://huggingface.co/docs/hub/repositories-licenses), [dataset cards](https://huggingface.co/docs/hub/datasets-cards) | Rejected | Platform metadata is user-declared and dataset specific. An unbounded sweep cannot establish artifact rights, provenance or non-synthetic quality. |
+
+## Cross-source controls
+
+Every admitted document must pass source extraction, license allowlisting, language classification, quality scoring, PII/secret scanning, exact deduplication, near deduplication, Corpus V3 overlap filtering, benchmark filtering, exclusive category allocation, attribution generation and deterministic sharding. Conditional capacity is never included in approved totals.
+
+No high-PII source is approved. Stack Exchange and GitHub remain conditional until their explicit mitigation and sampling gates pass.

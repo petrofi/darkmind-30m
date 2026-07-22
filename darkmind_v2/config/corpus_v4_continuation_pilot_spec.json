@@ -1,0 +1,83 @@
+{
+  "schema_version": "darkmind-v2-corpus-v4-continuation-pilot-v1",
+  "pilot_id": "base-v1-corpus-v4-equal-10m-policy-comparison",
+  "planning_only": true,
+  "training_authorized": false,
+  "source_lock_required": "LOCKED",
+  "source_checkpoint": {
+    "path": "C:\\DarkMindRuntime\\phase4f\\runs\\base_v1_first_corpus_pass_completion_v2\\checkpoints\\step_011972_tokens_098074624",
+    "model_sha256": "458816257836a60d804a373c17c617642c99e413c6c190d4fd1e2f73b95fd993",
+    "resume_state_sha256": "39e0f3e5aebb469aa9bb0ceefcbae324c0d4c0bfece71d20b012090f1380a587",
+    "consumed_training_tokens": 98074624,
+    "consumed_sequences": 191552,
+    "ending_applied_learning_rate": 0.000030065052779045817,
+    "model_weights_must_match": true,
+    "optimizer_state_must_match": true
+  },
+  "pilot_data": {
+    "unique_tokens": 10000000,
+    "same_exact_slice_for_every_policy": true,
+    "balanced_across_final_corpus_v4_categories": true,
+    "corpus_v3_repetition_allowed": false,
+    "deterministic_sequence_order": true,
+    "fixed_validation_and_eval_sets": true,
+    "held_out_corpus_v4_validation_required": true,
+    "retain_corpus_v3_validation_and_eval_for_forgetting": true,
+    "slice_build_authorized": false
+  },
+  "policies": [
+    {
+      "id": "P1",
+      "name": "preserved_optimizer_no_rewarm",
+      "authorized_by_default_after_source_lock": true,
+      "model_weights": "preserve",
+      "optimizer_moments": "preserve",
+      "start_learning_rate": 0.000030065052779045817,
+      "maximum_learning_rate": 0.000030065052779045817,
+      "scheduler": "new cosine horizon tied to approved Corpus V4 token budget",
+      "rewarm_steps": 0,
+      "abrupt_learning_rate_jump": false
+    },
+    {
+      "id": "P2",
+      "name": "preserved_optimizer_controlled_rewarm",
+      "authorized_by_default_after_source_lock": true,
+      "model_weights": "preserve",
+      "optimizer_moments": "preserve",
+      "start_learning_rate": 0.000030065052779045817,
+      "maximum_learning_rate": 0.00005,
+      "scheduler": "controlled rewarm then cosine over approved unique-data horizon",
+      "rewarm_steps": 64,
+      "abrupt_learning_rate_jump": false
+    },
+    {
+      "id": "P3",
+      "name": "optimizer_moment_reset_diagnostic",
+      "authorized_by_default_after_source_lock": false,
+      "activation_condition": "optimizer-moment diagnostics from P1/P2 demonstrate adaptation problems",
+      "model_weights": "preserve",
+      "optimizer_moments": "preserved-versus-reset controlled subarms",
+      "start_learning_rate": 0.000030065052779045817,
+      "maximum_learning_rate": 0.00005,
+      "scheduler": "matched between subarms",
+      "rewarm_steps": 64,
+      "abrupt_learning_rate_jump": false
+    }
+  ],
+  "success_gates": {
+    "new_corpus_v4_validation": "must improve",
+    "old_corpus_v3_validation": "must not catastrophically regress",
+    "repetition_and_exact_loops": "must not worsen materially",
+    "eos_and_completion": "prefer improvement",
+    "optimizer_update_health": "must remain controlled",
+    "integrity_or_memorization_hard_failure": false
+  },
+  "comparison_rules": {
+    "same_checkpoint": true,
+    "same_10m_slice": true,
+    "same_sequence_order": true,
+    "same_token_budget": true,
+    "same_evaluation_probes": true,
+    "one_policy_factor_at_a_time": true
+  }
+}

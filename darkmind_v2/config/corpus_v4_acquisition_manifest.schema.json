@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://darkmind.local/schemas/corpus_v4_acquisition_manifest.schema.json",
+  "title": "DarkMind v2 Corpus V4 acquisition plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "plan_id",
+    "created_date",
+    "planning_only",
+    "downloads_performed",
+    "scraping_performed",
+    "execution_authorized",
+    "authorized_root_template",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {"const": "darkmind-v2-corpus-v4-acquisition-plan-v1"},
+    "plan_id": {"type": "string", "minLength": 1},
+    "created_date": {"type": "string", "format": "date"},
+    "planning_only": {"const": true},
+    "downloads_performed": {"const": false},
+    "scraping_performed": {"const": false},
+    "execution_authorized": {"const": false},
+    "authorized_root_template": {"type": "string", "pattern": "EXTERNAL_SSD_ROOT"},
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/acquisitionEntry"}
+    }
+  },
+  "$defs": {
+    "acquisitionEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_family",
+        "official_url",
+        "snapshot_version",
+        "expected_filename",
+        "expected_size",
+        "expected_checksum",
+        "license_identity",
+        "license_evidence_url",
+        "attribution_record",
+        "download_command_template",
+        "retry_policy",
+        "rate_limit",
+        "destination_path",
+        "classification",
+        "approval",
+        "post_filter_cap_tokens",
+        "single_code_ecosystem",
+        "bilingual_source",
+        "generated_text"
+      ],
+      "properties": {
+        "source_id": {"type": "string", "minLength": 1},
+        "source_family": {"type": "string", "minLength": 1},
+        "official_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+        "snapshot_version": {"type": "string", "minLength": 1},
+        "expected_filename": {"type": "string", "minLength": 1},
+        "expected_size": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["min_bytes", "max_bytes"],
+          "properties": {
+            "min_bytes": {"type": "integer", "minimum": 1},
+            "max_bytes": {"type": "integer", "minimum": 1}
+          }
+        },
+        "expected_checksum": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["algorithm", "value"],
+          "properties": {
+            "algorithm": {"enum": ["sha256", "git_commit"]},
+            "value": {"type": "string", "minLength": 40}
+          }
+        },
+        "license_identity": {"type": "string", "minLength": 1},
+        "license_evidence_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+        "attribution_record": {"type": "object", "minProperties": 1},
+        "download_command_template": {"type": "string", "minLength": 1},
+        "retry_policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["max_attempts", "backoff_seconds", "resume_partial"],
+          "properties": {
+            "max_attempts": {"type": "integer", "minimum": 1, "maximum": 5},
+            "backoff_seconds": {"type": "integer", "minimum": 0},
+            "resume_partial": {"type": "boolean"}
+          }
+        },
+        "rate_limit": {"type": "string", "minLength": 1},
+        "destination_path": {"type": "string", "pattern": "EXTERNAL_SSD_ROOT"},
+        "classification": {"const": "immutable_raw"},
+        "approval": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_state", "evidence_review", "review_date", "execution_approved"],
+          "properties": {
+            "source_state": {"const": "approved"},
+            "evidence_review": {"type": "string", "minLength": 1},
+            "review_date": {"type": "string", "format": "date"},
+            "execution_approved": {"const": false}
+          }
+        },
+        "post_filter_cap_tokens": {"type": "integer", "minimum": 0, "maximum": 30000000},
+        "single_code_ecosystem": {"type": "boolean"},
+        "bilingual_source": {"type": "boolean"},
+        "generated_text": {"const": false}
+      }
+    }
+  }
+}

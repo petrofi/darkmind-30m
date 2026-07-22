@@ -1,0 +1,194 @@
+{
+  "schema_version": "darkmind-v2-base-quality-suite-v1",
+  "suite_name": "base_quality_suite_v1",
+  "purpose": "Deterministic base-model continuation review; not chat or instruction-following evaluation.",
+  "checkpoint": {
+    "path": "C:\\DarkMindRuntime\\phase4f\\runs\\base_v1_first_corpus_pass_completion_v2\\checkpoints\\step_011972_tokens_098074624",
+    "model_sha256": "458816257836a60d804a373c17c617642c99e413c6c190d4fd1e2f73b95fd993",
+    "resume_state_sha256": "39e0f3e5aebb469aa9bb0ceefcbae324c0d4c0bfece71d20b012090f1380a587",
+    "optimizer_steps": 11972,
+    "training_tokens": 98074624
+  },
+  "runtime_output_dir": "C:\\DarkMindRuntime\\phase5a\\evaluations\\base_quality_suite_v1_v2",
+  "prompt_policy": {
+    "source_type": "original_template",
+    "training_documents_copied_verbatim": false,
+    "benchmark_prompts_used": false,
+    "synthetic_reference_answers_used": false,
+    "maximum_prompt_characters": 700
+  },
+  "decoding_profiles": {
+    "greedy": {
+      "do_sample": false,
+      "max_new_tokens": 48
+    },
+    "seeded_sampling": {
+      "do_sample": true,
+      "seed": 20260722,
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "top_k": 40,
+      "max_new_tokens": 48
+    }
+  },
+  "categories": [
+    {
+      "id": "turkish_general",
+      "count": 80,
+      "languages": ["tr"],
+      "templates": [
+        "{subject}, {place} yakınında yürürken {detail} fark etti. Bir süre durup bunun günlük yaşamı nasıl etkilediğini düşündü; çünkü",
+        "{place} çevresinde yaşayanlar {detail} konusunda farklı görüşlere sahipti. {subject} konuşmaları dikkatle dinledi ve ortak noktanın"
+      ],
+      "variables": {
+        "subject": ["Elif", "Mert", "Deniz", "Selin", "Kerem", "Aylin", "Burak", "Derya", "Emre", "Zeynep"],
+        "place": ["mahalle parkı", "şehir kütüphanesi", "sahil yolu", "köy meydanı", "tren istasyonu", "pazar yeri", "üniversite bahçesi", "eski çarşı"],
+        "detail": ["sabah sessizliği", "değişen hava", "artan kalabalık", "yenilenen yollar"]
+      }
+    },
+    {
+      "id": "turkish_educational",
+      "count": 40,
+      "languages": ["tr"],
+      "templates": [
+        "Bir öğrenci {concept} konusunu yalnızca tanımı ezberleyerek değil, {example} üzerinden inceleyerek öğrenebilir. Bu yaklaşımın ilk yararı",
+        "Ders sırasında {concept} açıklanırken {example} örneği kullanıldı. Öğretmen, kavramın temel bağlantısını şu düşünceyle sürdürdü:"
+      ],
+      "variables": {
+        "concept": ["enerji dönüşümü", "olasılık", "ekosistem dengesi", "oran ve orantı", "eleştirel okuma", "harita ölçeği", "maddenin halleri", "tarihsel neden", "algoritmik düşünme", "gözlem ve çıkarım"],
+        "example": ["basit bir deney", "günlük bir karşılaştırma", "küçük bir tablo", "adım adım bir çizim"]
+      }
+    },
+    {
+      "id": "turkish_technical",
+      "count": 40,
+      "languages": ["tr"],
+      "templates": [
+        "{system} bileşeninde {symptom} gözlendiğinde ilk inceleme kayıtların zaman sırasını koruyup korumadığını denetler. Ardından",
+        "Bir {system} tasarımında {symptom} tek başına kök nedeni göstermez. Ölçümlerin karşılaştırılabilir olması için"
+      ],
+      "variables": {
+        "system": ["veritabanı", "ağ hizmeti", "dosya işleme hattı", "önbellek katmanı", "sensör ağı", "derleyici", "API istemcisi", "iş kuyruğu", "gözlemleme sistemi", "yedekleme süreci"],
+        "symptom": ["gecikme artışı", "tutarsız çıktı", "bellek baskısı", "tekrarlanan istek"]
+      }
+    },
+    {
+      "id": "english_general",
+      "count": 60,
+      "languages": ["en"],
+      "templates": [
+        "While {subject} waited near the {setting}, a small change in {detail} drew everyone's attention. The moment seemed ordinary at first, but",
+        "The people around the {setting} had different views about {detail}. {subject} listened carefully and noticed that they all agreed on"
+      ],
+      "variables": {
+        "subject": ["Amina", "Jonah", "Maya", "Lucas", "Nora", "Elias", "Sofia", "Caleb", "Iris", "Owen"],
+        "setting": ["community garden", "local library", "railway platform", "market square", "school courtyard", "harbor path"],
+        "detail": ["the morning light", "the changing weather", "a new public sign", "the quiet traffic"]
+      }
+    },
+    {
+      "id": "english_educational",
+      "count": 30,
+      "languages": ["en"],
+      "templates": [
+        "A learner can understand {concept} more clearly by examining {example} instead of memorizing a definition. The first useful connection is",
+        "During the lesson on {concept}, the class studied {example}. The instructor continued by explaining that"
+      ],
+      "variables": {
+        "concept": ["energy transfer", "probability", "ecosystem balance", "proportional reasoning", "critical reading", "map scale", "states of matter", "historical causation", "algorithmic thinking", "observation and inference"],
+        "example": ["a small experiment", "an everyday comparison", "a compact table"]
+      }
+    },
+    {
+      "id": "english_technical",
+      "count": 30,
+      "languages": ["en"],
+      "templates": [
+        "When a {component} shows {symptom}, the first diagnostic step preserves timestamps and compares the request path. The next check",
+        "In a {component}, {symptom} does not identify the root cause by itself. For comparable measurements, the operator should"
+      ],
+      "variables": {
+        "component": ["database service", "network gateway", "file pipeline", "cache layer", "sensor cluster", "compiler pass", "API client", "job queue", "monitoring agent", "backup process"],
+        "symptom": ["rising latency", "inconsistent output", "memory pressure"]
+      }
+    },
+    {
+      "id": "factual_context",
+      "count": 40,
+      "languages": ["tr", "en"],
+      "templates": [
+        "Kayıtta {object} için iki bilgi veriliyor: {fact_a}; ayrıca {fact_b}. Bu bilgiler birlikte değerlendirildiğinde en dikkatli sonuç",
+        "The record gives two facts about {object}: {fact_a}; it also states that {fact_b}. Taken together, the most careful conclusion is"
+      ],
+      "variables": {
+        "object": ["ölçüm istasyonu", "field station", "kent arşivi", "coastal reserve", "deney düzeneği", "library collection", "nehir gözlemi", "weather log", "enerji raporu", "school survey"],
+        "fact_a": ["ölçümler aynı saatte yapıldı", "all samples used the same instrument", "belgeler tarih sırasına kondu", "the count was repeated twice"],
+        "fact_b": ["bir kayıt eksik bırakıldı", "one value was marked uncertain", "sonuçlar henüz genellenmedi", "the comparison covers one location"]
+      }
+    },
+    {
+      "id": "code_structured",
+      "count": 40,
+      "languages": ["en"],
+      "templates": [
+        "def {name}(items):\n    result = []\n    for item in items:\n        if {condition}:\n            result.append({expression})\n    return",
+        "[service]\nname = \"{name}\"\nmode = \"safe\"\n[limits]\ncondition = \"{condition}\"\nvalue = \"{expression}\"\nnext ="
+      ],
+      "variables": {
+        "name": ["normalize_rows", "select_valid", "merge_counts", "collect_names", "filter_events", "group_values", "format_records", "check_ranges", "build_index", "summarize_items"],
+        "condition": ["item is not None", "item != 0", "len(str(item)) > 0", "bool(item)"],
+        "expression": ["item", "str(item)", "item * 2", "repr(item)"]
+      }
+    },
+    {
+      "id": "long_context_consistency",
+      "count": 20,
+      "languages": ["tr", "en"],
+      "templates": [
+        "Bir ekip {project} üzerinde çalışıyor. İlk gün yalnızca {constraint_a} kullanılmasına, ikinci gün ise {constraint_b} korunmasına karar verildi. Üçüncü gün gelen yeni ölçüm önceki iki koşulu değiştirmedi. Ekip son planı yazarken",
+        "A team is working on {project}. On the first day it agreed to use only {constraint_a}; on the second day it kept {constraint_b} unchanged. A new measurement on the third day did not alter either constraint. When the team wrote the final plan,"
+      ],
+      "variables": {
+        "project": ["bir su ölçümü", "a soil survey", "bir arşiv taraması", "a transit study", "bir enerji deneyi", "a library inventory", "bir kıyı gözlemi", "a classroom study", "bir bakım planı", "a weather review"],
+        "constraint_a": ["aynı cihaz", "one fixed instrument"],
+        "constraint_b": ["örnek sırası", "the sample order"]
+      }
+    },
+    {
+      "id": "punctuation_paragraph",
+      "count": 20,
+      "languages": ["tr", "en"],
+      "templates": [
+        "Toplantıda üç başlık vardı: ölçüm yöntemi, kayıt düzeni ve son kontrol. {variant} kaydı ilk ikisinin tamamlandığını gösterdi; son başlık için ekip",
+        "The meeting covered three items: measurement method, record order, and final review. Record {variant} showed that the first two were complete; for the last item, the team"
+      ],
+      "variables": {
+        "variant": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+      }
+    },
+    {
+      "id": "language_switch_resistance",
+      "count": 20,
+      "languages": ["tr", "en"],
+      "templates": [
+        "Teknik notta '{term}' sözcüğü İngilizce bırakılmıştı, ancak açıklamanın geri kalanı Türkçeydi. Sistem bu terimi tanımlarken",
+        "The technical note kept the Turkish word '{term}' as a label, while the rest of the explanation was in English. The paragraph continued by"
+      ],
+      "variables": {
+        "term": ["checkpoint", "günlük", "fallback", "ölçüm", "pipeline", "kayıt", "timeout", "eşik", "buffer", "sıra"]
+      }
+    },
+    {
+      "id": "eos_completion_behavior",
+      "count": 20,
+      "languages": ["tr", "en"],
+      "templates": [
+        "{variant} numaralı kısa raporun son paragrafı bulguları abartmadan özetledi. Ölçümler olumlu bir değişim gösterse de sınırlı örnek sayısı nedeniyle",
+        "The final paragraph of short report {variant} summarized the findings without exaggeration. Although the measurements showed a positive change, the limited sample meant that"
+      ],
+      "variables": {
+        "variant": ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+      }
+    }
+  ]
+}

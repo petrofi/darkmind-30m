@@ -1,0 +1,68 @@
+{
+  "schema_version": "darkmind-v2-corpus-v4-targets-v1",
+  "planning_only": true,
+  "acquisition_authorized": false,
+  "current_corpus_v3": {
+    "total_unique_tokens": 100002089,
+    "turkish_tokens": 60000490,
+    "english_tokens": 40001599,
+    "general_prose_tokens": 85002064,
+    "technical_educational_tokens": 15000025,
+    "manifest_content_hash": "e75c4aa4f39cc7a3cb4fe754e2a0e85268ced300f8504a86d443540eb609e1c5"
+  },
+  "tranche_2": {
+    "target_unique_tokens": 200000000,
+    "minimum_acceptable_unique_tokens": 150000000,
+    "projected_cumulative_unique_tokens": 300002089,
+    "maximum_single_source_share": 0.15,
+    "minimum_distinct_source_families": 8,
+    "categories": {
+      "turkish_general_educational": {
+        "tokens": 72000000,
+        "share": 0.36,
+        "allowed_share_range": [0.30, 0.40]
+      },
+      "english_general_educational": {
+        "tokens": 50000000,
+        "share": 0.25,
+        "allowed_share_range": [0.20, 0.30]
+      },
+      "turkish_english_technical_documentation": {
+        "tokens": 42000000,
+        "share": 0.21,
+        "allowed_share_range": [0.15, 0.25]
+      },
+      "open_licensed_code_structured_text": {
+        "tokens": 26000000,
+        "share": 0.13,
+        "allowed_share_range": [0.08, 0.15]
+      },
+      "controlled_bilingual_dialogue": {
+        "tokens": 10000000,
+        "share": 0.05,
+        "allowed_share_range": [0.03, 0.07]
+      }
+    },
+    "language_projection": {
+      "turkish_attributable_tokens": 99000000,
+      "english_attributable_tokens": 75000000,
+      "language_neutral_code_tokens": 26000000,
+      "turkish_remains_primary": true
+    }
+  },
+  "future_gate": {
+    "cumulative_target_if_300m_productive": 500000000,
+    "additional_tokens_after_300m": 199997911,
+    "automatic_authorization": false
+  },
+  "hard_rules": {
+    "synthetic_filler": false,
+    "duplicate_filling": false,
+    "private_conversations": false,
+    "unclear_license": false,
+    "benchmark_test_sets": false,
+    "unbounded_common_crawl": false,
+    "category_double_counting": false,
+    "further_wikimedia_concentration": false
+  }
+}

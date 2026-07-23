@@ -118,8 +118,8 @@ def test_corpus_v4_targets_are_complete_and_planning_only() -> None:
 
 def test_source_registry_v4_candidate_contract() -> None:
     result = validate_registry(load_json(CORPUS / "source_registry.v4.candidates.json"))
-    assert result["candidate_sources"] == 20
-    assert result["approval_counts"] == {"approved": 3, "conditional": 11, "deferred": 3, "rejected": 3}
+    assert result["candidate_sources"] == 28
+    assert result["approval_counts"] == {"approved": 3, "conditional": 12, "deferred": 6, "rejected": 7}
     assert result["approved_expected_tokens"] == 10_000_000
     assert result["approved_conservative_tokens"] == 6_300_000
     assert result["source_lock_classification"] == "PARTIALLY LOCKED"

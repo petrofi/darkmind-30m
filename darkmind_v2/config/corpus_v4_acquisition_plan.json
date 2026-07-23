@@ -1,6 +1,6 @@
 {
-  "schema_version": "darkmind-v2-corpus-v4-acquisition-plan-v1",
-  "plan_id": "darkmind-v2-corpus-v4-approved-sources-20260722",
+  "schema_version": "darkmind-v2-corpus-v4-acquisition-plan-v2",
+  "plan_id": "darkmind-v2-corpus-v4-approved-sources-phase5c-20260722",
   "created_date": "2026-07-22",
   "planning_only": true,
   "downloads_performed": false,
@@ -14,7 +14,10 @@
       "official_url": "https://github.com/mdn/content",
       "snapshot_version": "3b763f8f076c053b7a44e261c3a19a1879bc11ff",
       "expected_filename": "mdn-content-3b763f8f076c053b7a44e261c3a19a1879bc11ff.tar",
-      "expected_size": {"min_bytes": 100000000, "max_bytes": 700000000},
+      "expected_size": {
+        "min_bytes": 100000000,
+        "max_bytes": 700000000
+      },
       "expected_checksum": {
         "algorithm": "git_commit",
         "value": "3b763f8f076c053b7a44e261c3a19a1879bc11ff"
@@ -29,20 +32,28 @@
         "modification_notice_required": true
       },
       "download_command_template": "git clone --filter=blob:none --no-checkout https://github.com/mdn/content.git {staging_dir} ; git -C {staging_dir} checkout 3b763f8f076c053b7a44e261c3a19a1879bc11ff ; git -C {staging_dir} archive --format=tar --output={destination} 3b763f8f076c053b7a44e261c3a19a1879bc11ff files/en-us",
-      "retry_policy": {"max_attempts": 3, "backoff_seconds": 30, "resume_partial": false},
+      "retry_policy": {
+        "max_attempts": 3,
+        "backoff_seconds": 30,
+        "resume_partial": false
+      },
       "rate_limit": "one serial Git clone/archive; no API crawl",
       "destination_path": "$EXTERNAL_SSD_ROOT\\DarkMindArchive\\corpus-v4\\raw\\mdn_content_20260722\\mdn-content-3b763f8f076c053b7a44e261c3a19a1879bc11ff.tar",
       "classification": "immutable_raw",
       "approval": {
         "source_state": "approved",
-        "evidence_review": "phase5b official-source review",
+        "evidence_review": "Phase 5C inherited approval; no execution authorization",
         "review_date": "2026-07-22",
         "execution_approved": false
       },
       "post_filter_cap_tokens": 10000000,
       "single_code_ecosystem": true,
       "bilingual_source": false,
-      "generated_text": false
+      "generated_text": false,
+      "allowed_redirect_hosts": [
+        "github.com"
+      ],
+      "content_execution_allowed": false
     },
     {
       "source_id": "rust_official_docs_1_90",
@@ -50,7 +61,10 @@
       "official_url": "https://github.com/rust-lang/rust",
       "snapshot_version": "1159e78c4747b02ef996e55082b704c09b970588",
       "expected_filename": "rust-1.90.0-doc-source-1159e78c4747b02ef996e55082b704c09b970588.tar",
-      "expected_size": {"min_bytes": 150000000, "max_bytes": 500000000},
+      "expected_size": {
+        "min_bytes": 150000000,
+        "max_bytes": 500000000
+      },
       "expected_checksum": {
         "algorithm": "git_commit",
         "value": "1159e78c4747b02ef996e55082b704c09b970588"
@@ -64,20 +78,28 @@
         "notices_required": true
       },
       "download_command_template": "git clone --filter=blob:none --no-checkout https://github.com/rust-lang/rust.git {staging_dir} ; git -C {staging_dir} checkout 1159e78c4747b02ef996e55082b704c09b970588 ; git -C {staging_dir} archive --format=tar --output={destination} 1159e78c4747b02ef996e55082b704c09b970588 src/doc library",
-      "retry_policy": {"max_attempts": 3, "backoff_seconds": 60, "resume_partial": false},
+      "retry_policy": {
+        "max_attempts": 3,
+        "backoff_seconds": 60,
+        "resume_partial": false
+      },
       "rate_limit": "one serial filtered Git clone/archive",
       "destination_path": "$EXTERNAL_SSD_ROOT\\DarkMindArchive\\corpus-v4\\raw\\rust_official_docs_1_90\\rust-1.90.0-doc-source-1159e78c4747b02ef996e55082b704c09b970588.tar",
       "classification": "immutable_raw",
       "approval": {
         "source_state": "approved",
-        "evidence_review": "phase5b official-source review",
+        "evidence_review": "Phase 5C inherited approval; no execution authorization",
         "review_date": "2026-07-22",
         "execution_approved": false
       },
       "post_filter_cap_tokens": 2000000,
       "single_code_ecosystem": true,
       "bilingual_source": false,
-      "generated_text": false
+      "generated_text": false,
+      "allowed_redirect_hosts": [
+        "github.com"
+      ],
+      "content_execution_allowed": false
     },
     {
       "source_id": "postgresql_docs_18",
@@ -85,7 +107,10 @@
       "official_url": "https://ftp.postgresql.org/pub/source/v18.0/postgresql-18.0.tar.bz2",
       "snapshot_version": "PostgreSQL 18.0",
       "expected_filename": "postgresql-18.0.tar.bz2",
-      "expected_size": {"min_bytes": 22412570, "max_bytes": 22412570},
+      "expected_size": {
+        "min_bytes": 22412570,
+        "max_bytes": 22412570
+      },
       "expected_checksum": {
         "algorithm": "sha256",
         "value": "0d5b903b1e5fe361bca7aa9507519933773eb34266b1357c4e7780fdee6d6078"
@@ -99,20 +124,46 @@
         "notices_required": true
       },
       "download_command_template": "curl --fail --location --retry 2 --output {destination} https://ftp.postgresql.org/pub/source/v18.0/postgresql-18.0.tar.bz2",
-      "retry_policy": {"max_attempts": 3, "backoff_seconds": 30, "resume_partial": true},
+      "retry_policy": {
+        "max_attempts": 3,
+        "backoff_seconds": 30,
+        "resume_partial": true
+      },
       "rate_limit": "one HTTPS archive request",
       "destination_path": "$EXTERNAL_SSD_ROOT\\DarkMindArchive\\corpus-v4\\raw\\postgresql_docs_18\\postgresql-18.0.tar.bz2",
       "classification": "immutable_raw",
       "approval": {
         "source_state": "approved",
-        "evidence_review": "phase5b official-source review",
+        "evidence_review": "Phase 5C inherited approval; no execution authorization",
         "review_date": "2026-07-22",
         "execution_approved": false
       },
       "post_filter_cap_tokens": 1000000,
       "single_code_ecosystem": false,
       "bilingual_source": false,
-      "generated_text": false
+      "generated_text": false,
+      "allowed_redirect_hosts": [
+        "ftp.postgresql.org"
+      ],
+      "content_execution_allowed": false
     }
-  ]
+  ],
+  "revised_date": "2026-07-22",
+  "predecessor": {
+    "plan_id": "darkmind-v2-corpus-v4-approved-sources-20260722",
+    "sha256": "017af8d60071d47fb2e5cf3a5a40f598a95296586253ce24aba14a73b6626f68"
+  },
+  "acquisition_enabled": false,
+  "conditional_sources_allowed": false,
+  "allowed_source_states": [
+    "approved"
+  ],
+  "execution_controls": {
+    "requires_separate_human_authorization": true,
+    "verify_expected_size_before_commit": true,
+    "verify_checksum_before_extraction": true,
+    "redirects_must_remain_on_official_host": true,
+    "extract_or_execute_downloaded_content": false,
+    "maximum_total_bytes": 1222412570
+  }
 }

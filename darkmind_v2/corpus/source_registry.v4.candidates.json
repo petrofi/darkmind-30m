@@ -1,6 +1,6 @@
 {
-  "schema_version": "darkmind-v2-source-registry-v4-candidates-v2",
-  "registry_id": "corpus-v4-phase5b-official-evidence-20260722",
+  "schema_version": "darkmind-v2-source-registry-v4-candidates-v3",
+  "registry_id": "corpus-v4-phase5c-source-resolution-20260722",
   "access_date": "2026-07-22",
   "planning_only": true,
   "downloads_performed": false,
@@ -13,9 +13,9 @@
     "approved_conservative_tokens": 200000000
   },
   "concentration_policy": {
-    "source_family_max_share": 0.20,
+    "source_family_max_share": 0.2,
     "exact_dataset_max_share": 0.15,
-    "wikimedia_max_share": 0.20,
+    "wikimedia_max_share": 0.2,
     "single_code_ecosystem_max_share": 0.05,
     "bilingual_source_max_share": 0.05,
     "generated_text_share": 0.0
@@ -66,8 +66,12 @@
       "official_source_name": "GOV.UK public content",
       "official_url": "https://www.gov.uk/help/reuse-govuk-content",
       "snapshot_or_version": "Content API inventory not yet pinned",
-      "language": ["en"],
-      "category": ["english_general_educational"],
+      "language": [
+        "en"
+      ],
+      "category": [
+        "english_general_educational"
+      ],
       "license": "Open Government Licence v3.0 where expressly applied",
       "license_evidence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
       "source_cap_tokens": 25000000,
@@ -78,7 +82,10 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://www.api.gov.uk/gds/gov-uk-content/",
-        "official_license_urls": ["https://www.gov.uk/help/reuse-govuk-content", "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"],
+        "official_license_urls": [
+          "https://www.gov.uk/help/reuse-govuk-content",
+          "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+        ],
         "artifact_license": "OGL v3 only where the page states Crown copyright/OGL coverage",
         "content_license": "OGL v3 with listed personal-data, logo, identity, patent, and third-party exclusions",
         "database_license": "not_applicable_to_page_content",
@@ -96,7 +103,9 @@
         "official_file_inventory": "Content API endpoint inventory not yet materialized",
         "expected_raw_size": "2-12 GB after URL and rights filtering",
         "expected_document_count": "unknown pending API inventory",
-        "expected_language_distribution": {"en": 1.0},
+        "expected_language_distribution": {
+          "en": 1.0
+        },
         "update_status": "live continuously updated service"
       },
       "acceptance_gates": {
@@ -127,18 +136,60 @@
         "spam": "low"
       },
       "resolution_steps": [
-        "Create a dated Content API URL inventory without fetching article bodies.",
-        "Record item-level OGL/third-party-rights decisions and response validators.",
-        "Run a small authorized sample to replace the low-confidence capacity estimate."
-      ]
+        "Pin a Content API URL inventory and exclude third-party or personal-data pages."
+      ],
+      "phase5b_approval_state": "conditional",
+      "phase5c_resolution": {
+        "review_date": "2026-07-22",
+        "question_count": 15,
+        "answers": {
+          "exact_downloadable_artifact": "Content API endpoint inventory not yet materialized",
+          "exact_snapshot_release_dump_tag_or_commit": "unresolved_Content_API_URL_inventory_and_response_hashes",
+          "content_license_explicit": "OGL v3 with listed personal-data, logo, identity, patent, and third-party exclusions",
+          "collection_or_database_license_explicit": "not_applicable_to_page_content",
+          "redistribution_rights_explicit": "commercial reuse permitted for covered public-sector information",
+          "modification_and_derivative_processing_rights_explicit": "adaptation permitted with source acknowledgement and no misleading status",
+          "machine_processing_or_model_training_prohibited": "none identified in OGL",
+          "attribution_obligations_executable": "OGL attribution plus provider-specific statements",
+          "official_acquisition_reproducible": "official GOV.UK Content API; no HTML scraping",
+          "checksum_or_signed_manifest_available": "must generate immutable URL, ETag, last-modified, byte-size, and SHA-256 manifest before approval",
+          "language_composition_officially_supported": {
+            "en": 1.0
+          },
+          "corpus_v3_relationship_understood": "new English institutional prose",
+          "conservative_capacity_estimable_without_download": "Phase 5A estimate reduced for rights exclusions, templates, live-page drift, language and cross-page deduplication",
+          "source_concentration_violation": false,
+          "benchmark_pii_private_or_contamination_concerns": {
+            "pii": "medium",
+            "private_data": "low",
+            "unsafe_content": "low",
+            "benchmark_contamination": "low",
+            "copyrighted_long_form": "medium",
+            "boilerplate": "high",
+            "spam": "low"
+          }
+        },
+        "resolution_type": "metadata_resolvable",
+        "final_status": "conditional",
+        "decision_reason": "Pin a Content API URL inventory and exclude third-party or personal-data pages.",
+        "remaining_blockers": [
+          "Pin a Content API URL inventory and exclude third-party or personal-data pages."
+        ],
+        "next_action": "Pin a Content API URL inventory and exclude third-party or personal-data pages."
+      }
     },
     {
       "id": "mdn_content_20260722",
       "official_source_name": "MDN Web Docs English content repository",
       "official_url": "https://github.com/mdn/content",
       "snapshot_or_version": "git commit 3b763f8f076c053b7a44e261c3a19a1879bc11ff",
-      "language": ["en"],
-      "category": ["technical_documentation", "code_structured"],
+      "language": [
+        "en"
+      ],
+      "category": [
+        "technical_documentation",
+        "code_structured"
+      ],
       "license": "CC BY-SA 2.5 or later documentation; code blocks excluded in this approved scope",
       "license_evidence_url": "https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license",
       "source_cap_tokens": 10000000,
@@ -149,7 +200,10 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://github.com/mdn/content",
-        "official_license_urls": ["https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license", "https://github.com/mdn/content/blob/3b763f8f076c053b7a44e261c3a19a1879bc11ff/LICENSE.md"],
+        "official_license_urls": [
+          "https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license",
+          "https://github.com/mdn/content/blob/3b763f8f076c053b7a44e261c3a19a1879bc11ff/LICENSE.md"
+        ],
         "artifact_license": "CC BY-SA 2.5 or later for files/en-us prose; code examples excluded",
         "content_license": "CC BY-SA 2.5 or later",
         "database_license": "not_applicable",
@@ -167,7 +221,9 @@
         "official_file_inventory": "files/en-us Markdown tree in official mdn/content repository",
         "expected_raw_size": "100-700 MB",
         "expected_document_count": "more than 14,000 documentation pages before filtering",
-        "expected_language_distribution": {"en": 1.0},
+        "expected_language_distribution": {
+          "en": 1.0
+        },
         "update_status": "active; immutable Phase 5B commit selected"
       },
       "acceptance_gates": {
@@ -189,8 +245,14 @@
         "basis": "14,000-plus-page official inventory discounted for code-block exclusion, templates, repeated API tables and near duplicates"
       },
       "approved_category_capacity": {
-        "technical_documentation": {"expected_tokens": 5000000, "conservative_tokens": 3000000},
-        "code_structured_text": {"expected_tokens": 3000000, "conservative_tokens": 2000000}
+        "technical_documentation": {
+          "expected_tokens": 5000000,
+          "conservative_tokens": 3000000
+        },
+        "code_structured_text": {
+          "expected_tokens": 3000000,
+          "conservative_tokens": 2000000
+        }
       },
       "risk": {
         "pii": "low",
@@ -223,17 +285,23 @@
         "fork_dedup": "not applicable to single official repository; hash duplicate pages",
         "benchmark_solution_filter": true,
         "max_files_per_project": 20000,
-        "max_code_to_natural_language_ratio": 0.40
+        "max_code_to_natural_language_ratio": 0.4
       },
-      "resolution_steps": []
+      "resolution_steps": [],
+      "phase5b_approval_state": "approved"
     },
     {
       "id": "rust_official_docs_1_90",
       "official_source_name": "Rust 1.90 official documentation source",
       "official_url": "https://github.com/rust-lang/rust",
       "snapshot_or_version": "Rust 1.90.0 commit 1159e78c4747b02ef996e55082b704c09b970588",
-      "language": ["en"],
-      "category": ["technical_documentation", "code_structured"],
+      "language": [
+        "en"
+      ],
+      "category": [
+        "technical_documentation",
+        "code_structured"
+      ],
       "license": "Apache-2.0 OR MIT",
       "license_evidence_url": "https://rust-lang.org/policies/licenses/",
       "source_cap_tokens": 2000000,
@@ -244,7 +312,10 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://github.com/rust-lang/rust",
-        "official_license_urls": ["https://rust-lang.org/policies/licenses/", "https://github.com/rust-lang/rust/blob/1159e78c4747b02ef996e55082b704c09b970588/COPYRIGHT"],
+        "official_license_urls": [
+          "https://rust-lang.org/policies/licenses/",
+          "https://github.com/rust-lang/rust/blob/1159e78c4747b02ef996e55082b704c09b970588/COPYRIGHT"
+        ],
         "artifact_license": "Apache-2.0 OR MIT for the selected Rust repository paths",
         "content_license": "Apache-2.0 OR MIT",
         "database_license": "not_applicable",
@@ -262,7 +333,10 @@
         "official_file_inventory": "src/doc, library/std/src documentation comments and selected examples; vendors excluded",
         "expected_raw_size": "150-500 MB for selected paths",
         "expected_document_count": "path inventory generated from pinned tree before extraction",
-        "expected_language_distribution": {"en": 0.70, "code": 0.30},
+        "expected_language_distribution": {
+          "en": 0.7,
+          "code": 0.3
+        },
         "update_status": "version 1.90.0 frozen; later releases excluded"
       },
       "acceptance_gates": {
@@ -284,8 +358,14 @@
         "basis": "version-pinned documentation paths discounted for repeated API material, tests, generated output and code-quality filters"
       },
       "approved_category_capacity": {
-        "technical_documentation": {"expected_tokens": 800000, "conservative_tokens": 500000},
-        "code_structured_text": {"expected_tokens": 700000, "conservative_tokens": 500000}
+        "technical_documentation": {
+          "expected_tokens": 800000,
+          "conservative_tokens": 500000
+        },
+        "code_structured_text": {
+          "expected_tokens": 700000,
+          "conservative_tokens": 500000
+        }
       },
       "risk": {
         "pii": "low",
@@ -318,17 +398,22 @@
         "fork_dedup": "single official repository plus content-hash deduplication",
         "benchmark_solution_filter": true,
         "max_files_per_project": 15000,
-        "max_code_to_natural_language_ratio": 0.50
+        "max_code_to_natural_language_ratio": 0.5
       },
-      "resolution_steps": []
+      "resolution_steps": [],
+      "phase5b_approval_state": "approved"
     },
     {
       "id": "postgresql_docs_18",
       "official_source_name": "PostgreSQL 18.0 documentation",
       "official_url": "https://www.postgresql.org/docs/18/",
       "snapshot_or_version": "postgresql-18.0.tar.bz2",
-      "language": ["en"],
-      "category": ["technical_documentation"],
+      "language": [
+        "en"
+      ],
+      "category": [
+        "technical_documentation"
+      ],
       "license": "PostgreSQL License",
       "license_evidence_url": "https://www.postgresql.org/about/licence/",
       "source_cap_tokens": 1000000,
@@ -339,7 +424,10 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://ftp.postgresql.org/pub/source/v18.0/postgresql-18.0.tar.bz2",
-        "official_license_urls": ["https://www.postgresql.org/about/licence/", "https://ftp.postgresql.org/pub/source/v18.0/postgresql-18.0.tar.bz2.sha256"],
+        "official_license_urls": [
+          "https://www.postgresql.org/about/licence/",
+          "https://ftp.postgresql.org/pub/source/v18.0/postgresql-18.0.tar.bz2.sha256"
+        ],
         "artifact_license": "PostgreSQL License in version 18.0 source archive",
         "content_license": "PostgreSQL License covers software and documentation",
         "database_license": "not_applicable",
@@ -357,7 +445,9 @@
         "official_file_inventory": "22,412,570-byte version 18.0 source archive including doc/src",
         "expected_raw_size": "exact 22,412,570 bytes",
         "expected_document_count": "documentation files enumerated after checksum-verified extraction",
-        "expected_language_distribution": {"en": 1.0},
+        "expected_language_distribution": {
+          "en": 1.0
+        },
         "update_status": "18.0 immutable release; newer point releases excluded"
       },
       "acceptance_gates": {
@@ -379,7 +469,10 @@
         "basis": "official 22.4 MB release size discounted to documentation paths, then for tables, indexes and repeated reference structure"
       },
       "approved_category_capacity": {
-        "technical_documentation": {"expected_tokens": 500000, "conservative_tokens": 300000}
+        "technical_documentation": {
+          "expected_tokens": 500000,
+          "conservative_tokens": 300000
+        }
       },
       "risk": {
         "pii": "low",
@@ -401,15 +494,21 @@
         "corpus_v3_python_docs": "expected low; compare generic SQL and DB-API terms",
         "benchmark": "exclude regression-test inputs, expected outputs and benchmark examples"
       },
-      "resolution_steps": []
+      "resolution_steps": [],
+      "phase5b_approval_state": "approved"
     },
     {
       "id": "turk_kutuphaneciligi_ccby_20260722",
       "official_source_name": "Turk Kutuphaneciligi journal",
       "official_url": "https://dergipark.org.tr/tr/pub/tk",
       "snapshot_or_version": "OAI/article manifest not yet pinned",
-      "language": ["tr", "en"],
-      "category": ["turkish_general_educational"],
+      "language": [
+        "tr",
+        "en"
+      ],
+      "category": [
+        "turkish_general_educational"
+      ],
       "license": "journal policy states CC BY 4.0; article coverage requires manifest confirmation",
       "license_evidence_url": "https://dergipark.org.tr/tr/pub/tk/policy",
       "source_cap_tokens": 5000000,
@@ -420,7 +519,10 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://dergipark.org.tr/tr/pub/tk",
-        "official_license_urls": ["https://dergipark.org.tr/tr/pub/tk/policy", "https://dergipark.org.tr/tr/pub/tk/archive"],
+        "official_license_urls": [
+          "https://dergipark.org.tr/tr/pub/tk/policy",
+          "https://dergipark.org.tr/tr/pub/tk/archive"
+        ],
         "artifact_license": "article-level CC BY 4.0 must be captured",
         "content_license": "journal policy states CC BY 4.0",
         "database_license": "DergiPark collection/database terms not established for bulk reuse",
@@ -438,7 +540,10 @@
         "official_file_inventory": "archive visible; immutable article inventory not recorded",
         "expected_raw_size": "0.2-1 GB",
         "expected_document_count": "unknown pending archive/OAI inventory",
-        "expected_language_distribution": {"tr": 0.85, "en": 0.15},
+        "expected_language_distribution": {
+          "tr": 0.85,
+          "en": 0.15
+        },
         "update_status": "active journal; policy updated 2026-04-07"
       },
       "acceptance_gates": {
@@ -469,18 +574,76 @@
         "spam": "low"
       },
       "resolution_steps": [
-        "Pin a dated article/OAI identifier inventory.",
-        "Confirm collection-level bulk access terms and rate limits.",
-        "Verify embedded CC BY 4.0 metadata per article and create checksums."
-      ]
+        "The exact issue/article inventory and item-level CC BY evidence remain unresolved."
+      ],
+      "phase5b_approval_state": "conditional",
+      "phase5c_resolution": {
+        "review_date": "2026-07-22",
+        "question_count": 15,
+        "answers": {
+          "exact_downloadable_artifact": "archive visible; immutable article inventory not recorded",
+          "exact_snapshot_release_dump_tag_or_commit": "unresolved dated OAI/article ID inventory",
+          "content_license_explicit": "journal policy states CC BY 4.0",
+          "collection_or_database_license_explicit": "DergiPark collection/database terms not established for bulk reuse",
+          "redistribution_rights_explicit": "article text may be reused where CC BY 4.0 is explicit",
+          "modification_and_derivative_processing_rights_explicit": "CC BY 4.0 adaptation permitted with attribution and change notice",
+          "machine_processing_or_model_training_prohibited": "none identified in CC BY policy",
+          "attribution_obligations_executable": "author, title, journal, DOI/URL, license and modification notice",
+          "official_acquisition_reproducible": "official journal archive/OAI only after permission and rate-limit confirmation",
+          "checksum_or_signed_manifest_available": "article manifest and generated SHA-256 required",
+          "language_composition_officially_supported": {
+            "tr": 0.85,
+            "en": 0.15
+          },
+          "corpus_v3_relationship_understood": "new non-Wikimedia Turkish scholarly prose",
+          "conservative_capacity_estimable_without_download": "long-running bilingual archive estimate discounted for article-license uncertainty, references, metadata PII and deduplication",
+          "source_concentration_violation": false,
+          "benchmark_pii_private_or_contamination_concerns": {
+            "pii": "medium",
+            "private_data": "low",
+            "unsafe_content": "low",
+            "benchmark_contamination": "medium",
+            "copyrighted_long_form": "medium",
+            "boilerplate": "medium",
+            "spam": "low"
+          }
+        },
+        "resolution_type": "bounded_sample_required",
+        "final_status": "conditional",
+        "decision_reason": "The exact issue/article inventory and item-level CC BY evidence remain unresolved.",
+        "remaining_blockers": [
+          "The exact issue/article inventory and item-level CC BY evidence remain unresolved."
+        ],
+        "next_action": "The exact issue/article inventory and item-level CC BY evidence remain unresolved.",
+        "future_sample_plan": {
+          "execution_authorized": false,
+          "maximum_download_bytes": 25000000,
+          "exact_files": "must be named in a future approved manifest",
+          "checksum_requirement": "SHA-256 before inspection",
+          "destination": "$EXTERNAL_SSD_ROOT\\DarkMindArchive\\corpus-v4\\samples\\turk_kutuphaneciligi_ccby_20260722",
+          "retention": "retain immutable sample and audit output; no training use",
+          "metrics": [
+            "licence_coverage",
+            "language_mix",
+            "PII",
+            "quality",
+            "Corpus_V3_overlap"
+          ],
+          "training_authorized": false
+        }
+      }
     },
     {
       "id": "nist_publications_cleared_subset",
       "official_source_name": "NIST employee-authored technical-series subset",
       "official_url": "https://www.nist.gov/publications",
       "snapshot_or_version": "exact technical-series manifest unresolved",
-      "language": ["en"],
-      "category": ["technical_documentation"],
+      "language": [
+        "en"
+      ],
+      "category": [
+        "technical_documentation"
+      ],
       "license": "U.S. government works public domain domestically; technical-series and third-party conditions vary",
       "license_evidence_url": "https://www.nist.gov/copyrights-disclaimers",
       "source_cap_tokens": 30000000,
@@ -491,7 +654,10 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://www.nist.gov/publications",
-        "official_license_urls": ["https://www.nist.gov/copyrights-disclaimers", "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications"],
+        "official_license_urls": [
+          "https://www.nist.gov/copyrights-disclaimers",
+          "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications"
+        ],
         "artifact_license": "item and authorship specific",
         "content_license": "NIST employee works generally public domain in the United States; Technical Series has stated reuse/citation terms",
         "database_license": "unknown_pending_collection_inventory_terms",
@@ -509,7 +675,9 @@
         "official_file_inventory": "not yet limited to a reproducible employee-authored subset",
         "expected_raw_size": "5-40 GB",
         "expected_document_count": "unknown pending technical-series inventory",
-        "expected_language_distribution": {"en": 1.0},
+        "expected_language_distribution": {
+          "en": 1.0
+        },
         "update_status": "active collection"
       },
       "acceptance_gates": {
@@ -540,18 +708,60 @@
         "spam": "low"
       },
       "resolution_steps": [
-        "Select named NIST Technical Series and a dated publication-ID inventory.",
-        "Record NIST employee authorship and exclude third-party text/figures per item.",
-        "Confirm collection access method and sample extraction yield."
-      ]
+        "Pin a publication inventory and exclude every marked third-party work."
+      ],
+      "phase5b_approval_state": "conditional",
+      "phase5c_resolution": {
+        "review_date": "2026-07-22",
+        "question_count": 15,
+        "answers": {
+          "exact_downloadable_artifact": "not yet limited to a reproducible employee-authored subset",
+          "exact_snapshot_release_dump_tag_or_commit": "unresolved publication identifier allowlist",
+          "content_license_explicit": "NIST employee works generally public domain in the United States; Technical Series has stated reuse/citation terms",
+          "collection_or_database_license_explicit": "unknown_pending_collection_inventory_terms",
+          "redistribution_rights_explicit": "available only after author and third-party-rights filtering",
+          "modification_and_derivative_processing_rights_explicit": "varies by item; third-party material excluded",
+          "machine_processing_or_model_training_prohibited": "none identified for cleared works",
+          "attribution_obligations_executable": "publication title, NIST authors, report identifier and source",
+          "official_acquisition_reproducible": "official NIST publication pages/files only",
+          "checksum_or_signed_manifest_available": "generated SHA-256 and item-rights record required",
+          "language_composition_officially_supported": {
+            "en": 1.0
+          },
+          "corpus_v3_relationship_understood": "new English scientific and engineering prose",
+          "conservative_capacity_estimable_without_download": "broad official publication volume discounted for employee-authorship, third-party figures/text, PDF extraction and near deduplication",
+          "source_concentration_violation": false,
+          "benchmark_pii_private_or_contamination_concerns": {
+            "pii": "low",
+            "private_data": "low",
+            "unsafe_content": "low",
+            "benchmark_contamination": "medium",
+            "copyrighted_long_form": "medium",
+            "boilerplate": "medium",
+            "spam": "low"
+          }
+        },
+        "resolution_type": "metadata_resolvable",
+        "final_status": "conditional",
+        "decision_reason": "Pin a publication inventory and exclude every marked third-party work.",
+        "remaining_blockers": [
+          "Pin a publication inventory and exclude every marked third-party work."
+        ],
+        "next_action": "Pin a publication inventory and exclude every marked third-party work."
+      }
     },
     {
       "id": "eur_lex_reusable_text_20260722",
       "official_source_name": "EUR-Lex reusable EU legal text subset",
       "official_url": "https://eur-lex.europa.eu/",
       "snapshot_or_version": "Cellar/official-dump CELEX allowlist not yet pinned",
-      "language": ["en"],
-      "category": ["english_general_educational", "technical_documentation"],
+      "language": [
+        "en"
+      ],
+      "category": [
+        "english_general_educational",
+        "technical_documentation"
+      ],
       "license": "Decision 2011/833/EU reuse; EU-owned editorial text CC BY 4.0; metadata CC0",
       "license_evidence_url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html?locale=en",
       "source_cap_tokens": 30000000,
@@ -562,7 +772,10 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=en",
-        "official_license_urls": ["https://eur-lex.europa.eu/content/legal-notice/legal-notice.html?locale=en", "https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=en"],
+        "official_license_urls": [
+          "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html?locale=en",
+          "https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=en"
+        ],
         "artifact_license": "document-type and ownership specific under EU reuse policy",
         "content_license": "legal documents reusable unless special conditions apply; EU editorial material CC BY 4.0",
         "database_license": "EUR-Lex metadata CC0; collection contents retain document-specific rights",
@@ -580,7 +793,9 @@
         "official_file_inventory": "CELEX sector 3 English in-force subset proposed but not pinned",
         "expected_raw_size": "10-40 GB",
         "expected_document_count": "unknown pending dump inventory",
-        "expected_language_distribution": {"en": 1.0},
+        "expected_language_distribution": {
+          "en": 1.0
+        },
         "update_status": "active and continuously updated"
       },
       "acceptance_gates": {
@@ -611,29 +826,73 @@
         "spam": "low"
       },
       "resolution_steps": [
-        "Pin CELEX sectors, language, in-force status and an official dump date.",
-        "Build a rights-exclusion matrix for special and third-party content.",
-        "Predeclare CELEX-level overlap removal against DGT/JRC candidates."
-      ]
+        "Pin a CELLAR/data-dump release and preserve document-level reuse notices."
+      ],
+      "phase5b_approval_state": "conditional",
+      "phase5c_resolution": {
+        "review_date": "2026-07-22",
+        "question_count": 15,
+        "answers": {
+          "exact_downloadable_artifact": "CELEX sector 3 English in-force subset proposed but not pinned",
+          "exact_snapshot_release_dump_tag_or_commit": "unresolved CELEX sector/language/dump date and checksum inventory",
+          "content_license_explicit": "legal documents reusable unless special conditions apply; EU editorial material CC BY 4.0",
+          "collection_or_database_license_explicit": "EUR-Lex metadata CC0; collection contents retain document-specific rights",
+          "redistribution_rights_explicit": "permitted for eligible EU-owned documents with source acknowledgement",
+          "modification_and_derivative_processing_rights_explicit": "permitted for eligible content with modifications indicated",
+          "machine_processing_or_model_training_prohibited": "none identified",
+          "attribution_obligations_executable": "European Union source, CELEX identifier and modification notice",
+          "official_acquisition_reproducible": "official EUR-Lex data dump or Cellar API",
+          "checksum_or_signed_manifest_available": "official dump metadata plus generated SHA-256 required",
+          "language_composition_officially_supported": {
+            "en": 1.0
+          },
+          "corpus_v3_relationship_understood": "new structured legal prose; high DGT/JRC overlap risk",
+          "conservative_capacity_estimable_without_download": "broad legal corpus reduced for eligible sectors, rights exclusions, consolidated-version duplication and DGT/JRC overlap",
+          "source_concentration_violation": false,
+          "benchmark_pii_private_or_contamination_concerns": {
+            "pii": "medium",
+            "private_data": "low",
+            "unsafe_content": "low",
+            "benchmark_contamination": "low",
+            "copyrighted_long_form": "medium",
+            "boilerplate": "high",
+            "spam": "low"
+          }
+        },
+        "resolution_type": "metadata_resolvable",
+        "final_status": "conditional",
+        "decision_reason": "Pin a CELLAR/data-dump release and preserve document-level reuse notices.",
+        "remaining_blockers": [
+          "Pin a CELLAR/data-dump release and preserve document-level reuse notices."
+        ],
+        "next_action": "Pin a CELLAR/data-dump release and preserve document-level reuse notices."
+      }
     },
     {
       "id": "dgt_acquis_tr_en_20260722",
       "official_source_name": "European Commission DGT-Acquis",
       "official_url": "https://joint-research-centre.ec.europa.eu/language-technology-resources/dgt-acquis_en",
       "snapshot_or_version": "2011-era DGT-Acquis release",
-      "language": ["en", "multilingual_eu"],
-      "category": ["technical_documentation"],
+      "language": [
+        "en",
+        "multilingual_eu"
+      ],
+      "category": [
+        "technical_documentation"
+      ],
       "license": "European Commission reuse terms on the official artifact page",
       "license_evidence_url": "https://joint-research-centre.ec.europa.eu/language-technology-resources/dgt-acquis_en",
-      "source_cap_tokens": 4000000,
+      "source_cap_tokens": 0,
       "quality_tier": "B",
       "relationship_to_corpus_v3": "high EUR-Lex/JRC overlap; no verified Turkish component",
       "previous_approval_state": "conditional",
-      "approval_state": "deferred",
+      "approval_state": "rejected",
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://joint-research-centre.ec.europa.eu/language-technology-resources/dgt-acquis_en",
-        "official_license_urls": ["https://joint-research-centre.ec.europa.eu/language-technology-resources/dgt-acquis_en"],
+        "official_license_urls": [
+          "https://joint-research-centre.ec.europa.eu/language-technology-resources/dgt-acquis_en"
+        ],
         "artifact_license": "Commission-owned corpus reusable under Decision 2011/833/EU with stated attribution",
         "content_license": "European Commission document reuse policy",
         "database_license": "corpus reuse terms stated on artifact page",
@@ -651,7 +910,10 @@
         "official_file_inventory": "81 GB original-format, 9 GB final XML, 5 GB filtered text, 3 GB paragraph corpus; English archive listed",
         "expected_raw_size": "3-81 GB depending format",
         "expected_document_count": "3.5-4.9 million files/segments depending format",
-        "expected_language_distribution": {"en": "available", "tr": "not listed among official release languages"},
+        "expected_language_distribution": {
+          "en": "available",
+          "tr": "not listed among official release languages"
+        },
         "update_status": "legacy corpus ending 2011"
       },
       "acceptance_gates": {
@@ -665,9 +927,9 @@
         "overlap_manageable": false
       },
       "capacity": {
-        "optimistic_tokens": 4000000,
-        "expected_tokens": 2000000,
-        "conservative_tokens": 1000000,
+        "optimistic_tokens": 0,
+        "expected_tokens": 0,
+        "conservative_tokens": 0,
         "expected_rejection_percent": 50.0,
         "confidence": "medium",
         "basis": "English-only usable estimate heavily discounted for CELEX/EUR-Lex duplication; no Turkish capacity counted"
@@ -681,19 +943,27 @@
         "boilerplate": "high",
         "spam": "low"
       },
-      "resolution_steps": [
-        "Do not count this source toward controlled Turkish-English capacity.",
-        "Reconsider only after EUR-Lex CELEX dedup shows material unique English yield.",
-        "Record official archive checksums before any future acquisition."
-      ]
+      "resolution_steps": [],
+      "phase5b_approval_state": "deferred",
+      "phase5c_correction": {
+        "reason": "The official DGT-TM page lists 24 EU languages; Turkish is not covered.",
+        "official_evidence_url": "https://joint-research-centre.ec.europa.eu/language-technology-resources/dgt-translation-memory_en",
+        "review_date": "2026-07-22"
+      }
     },
     {
       "id": "dergipark_ccby_only_subset_20260722",
       "official_source_name": "DergiPark article-level commercial-reuse allowlist",
       "official_url": "https://dergipark.org.tr/",
       "snapshot_or_version": "journal/article allowlist unresolved",
-      "language": ["tr", "en"],
-      "category": ["turkish_general_educational", "technical_documentation"],
+      "language": [
+        "tr",
+        "en"
+      ],
+      "category": [
+        "turkish_general_educational",
+        "technical_documentation"
+      ],
       "license": "mixed by journal and article; open access is not a blanket license",
       "license_evidence_url": "https://dergipark.org.tr/en/pub/page/dergipark-politikasi",
       "source_cap_tokens": 30000000,
@@ -704,7 +974,9 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://dergipark.org.tr/",
-        "official_license_urls": ["https://dergipark.org.tr/en/pub/page/dergipark-politikasi"],
+        "official_license_urls": [
+          "https://dergipark.org.tr/en/pub/page/dergipark-politikasi"
+        ],
         "artifact_license": "per-journal and per-article only",
         "content_license": "mixed; admit only explicit CC0, CC BY or separately approved commercial-use terms",
         "database_license": "platform-wide database/bulk-reuse license not established",
@@ -722,7 +994,10 @@
         "official_file_inventory": "no approved platform-wide inventory",
         "expected_raw_size": "5-40 GB for a future allowlisted subset",
         "expected_document_count": "unknown pending license inventory",
-        "expected_language_distribution": {"tr": 0.80, "en": 0.20},
+        "expected_language_distribution": {
+          "tr": 0.8,
+          "en": 0.2
+        },
         "update_status": "active platform with journal-specific policies"
       },
       "acceptance_gates": {
@@ -753,29 +1028,90 @@
         "spam": "low"
       },
       "resolution_steps": [
-        "Identify journals with explicit commercial-reuse licenses and stable OAI metadata.",
-        "Confirm platform bulk-access permission and item-level license consistency.",
-        "Pin article IDs, embedded licenses, language and checksums before promotion."
-      ]
+        "DergiPark is a platform, not a portal-wide content licence; journals must be allowlisted."
+      ],
+      "phase5b_approval_state": "conditional",
+      "phase5c_resolution": {
+        "review_date": "2026-07-22",
+        "question_count": 15,
+        "answers": {
+          "exact_downloadable_artifact": "no approved platform-wide inventory",
+          "exact_snapshot_release_dump_tag_or_commit": "unresolved article-level allowlist and license metadata snapshot",
+          "content_license_explicit": "mixed; admit only explicit CC0, CC BY or separately approved commercial-use terms",
+          "collection_or_database_license_explicit": "platform-wide database/bulk-reuse license not established",
+          "redistribution_rights_explicit": "item specific",
+          "modification_and_derivative_processing_rights_explicit": "item specific",
+          "machine_processing_or_model_training_prohibited": "no platform-wide conclusion; item terms govern",
+          "attribution_obligations_executable": "author, title, journal, DOI/URL, exact license and retrieval snapshot",
+          "official_acquisition_reproducible": "official journal endpoints/OAI only after platform permission confirmation",
+          "checksum_or_signed_manifest_available": "article allowlist and generated SHA-256 required",
+          "language_composition_officially_supported": {
+            "tr": 0.8,
+            "en": 0.2
+          },
+          "corpus_v3_relationship_understood": "high-value non-Wikimedia Turkish prose with duplicate and rights risk",
+          "conservative_capacity_estimable_without_download": "broad platform volume reduced for explicit commercial-license allowlisting, PDF quality, references, PII and cross-journal duplicates",
+          "source_concentration_violation": false,
+          "benchmark_pii_private_or_contamination_concerns": {
+            "pii": "medium",
+            "private_data": "low",
+            "unsafe_content": "medium",
+            "benchmark_contamination": "medium",
+            "copyrighted_long_form": "high",
+            "boilerplate": "high",
+            "spam": "low"
+          }
+        },
+        "resolution_type": "bounded_sample_required",
+        "final_status": "conditional",
+        "decision_reason": "DergiPark is a platform, not a portal-wide content licence; journals must be allowlisted.",
+        "remaining_blockers": [
+          "DergiPark is a platform, not a portal-wide content licence; journals must be allowlisted."
+        ],
+        "next_action": "DergiPark is a platform, not a portal-wide content licence; journals must be allowlisted.",
+        "future_sample_plan": {
+          "execution_authorized": false,
+          "maximum_download_bytes": 25000000,
+          "exact_files": "must be named in a future approved manifest",
+          "checksum_requirement": "SHA-256 before inspection",
+          "destination": "$EXTERNAL_SSD_ROOT\\DarkMindArchive\\corpus-v4\\samples\\dergipark_ccby_only_subset_20260722",
+          "retention": "retain immutable sample and audit output; no training use",
+          "metrics": [
+            "licence_coverage",
+            "language_mix",
+            "PII",
+            "quality",
+            "Corpus_V3_overlap"
+          ],
+          "training_authorized": false
+        }
+      }
     },
     {
       "id": "project_gutenberg_turkish_vetted",
       "official_source_name": "Project Gutenberg Turkish public-domain candidates",
       "official_url": "https://www.gutenberg.org/",
       "snapshot_or_version": "per-work rights manifest unresolved",
-      "language": ["tr"],
-      "category": ["turkish_general_educational"],
+      "language": [
+        "tr"
+      ],
+      "category": [
+        "turkish_general_educational"
+      ],
       "license": "U.S. public-domain determination plus Project Gutenberg terms; Turkish/EU rights need review",
       "license_evidence_url": "https://www.gutenberg.org/policy/license.html",
       "source_cap_tokens": 3000000,
       "quality_tier": "B",
       "relationship_to_corpus_v3": "new book prose with high public-domain mirror overlap risk",
       "previous_approval_state": "conditional",
-      "approval_state": "conditional",
+      "approval_state": "deferred",
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://www.gutenberg.org/",
-        "official_license_urls": ["https://www.gutenberg.org/policy/license.html", "https://www.gutenberg.org/policy/"],
+        "official_license_urls": [
+          "https://www.gutenberg.org/policy/license.html",
+          "https://www.gutenberg.org/policy/"
+        ],
         "artifact_license": "work specific; U.S. Project Gutenberg clearance is not a Turkish-jurisdiction conclusion",
         "content_license": "works not restricted under U.S. copyright law; local-law review required outside the U.S.",
         "database_license": "Project Gutenberg terms/trademark conditions apply to collection files",
@@ -793,7 +1129,9 @@
         "official_file_inventory": "Turkish-language candidate list not pinned",
         "expected_raw_size": "0.1-1 GB",
         "expected_document_count": "unknown but expected small",
-        "expected_language_distribution": {"tr": 1.0},
+        "expected_language_distribution": {
+          "tr": 1.0
+        },
         "update_status": "active catalog"
       },
       "acceptance_gates": {
@@ -824,18 +1162,59 @@
         "spam": "low"
       },
       "resolution_steps": [
-        "Create a Turkish work-ID inventory using official catalog metadata.",
-        "Document Turkish/EU public-domain status per work.",
-        "Resolve Project Gutenberg boilerplate and redistribution handling."
-      ]
+        "Rights and trademark conditions are work- and jurisdiction-specific; no Turkish allowlist is pinned."
+      ],
+      "phase5b_approval_state": "conditional",
+      "phase5c_resolution": {
+        "review_date": "2026-07-22",
+        "question_count": 15,
+        "answers": {
+          "exact_downloadable_artifact": "Turkish-language candidate list not pinned",
+          "exact_snapshot_release_dump_tag_or_commit": "unresolved Turkish work-ID allowlist",
+          "content_license_explicit": "works not restricted under U.S. copyright law; local-law review required outside the U.S.",
+          "collection_or_database_license_explicit": "Project Gutenberg terms/trademark conditions apply to collection files",
+          "redistribution_rights_explicit": "work and jurisdiction specific",
+          "modification_and_derivative_processing_rights_explicit": "work specific; Project Gutenberg boilerplate/trademark terms apply",
+          "machine_processing_or_model_training_prohibited": "none identified for verified works",
+          "attribution_obligations_executable": "author, title, ebook ID, source and documented rights determination",
+          "official_acquisition_reproducible": "official catalog/bulk mechanism only; robots policy respected",
+          "checksum_or_signed_manifest_available": "official catalog IDs plus generated SHA-256",
+          "language_composition_officially_supported": {
+            "tr": 1.0
+          },
+          "corpus_v3_relationship_understood": "new book prose with high public-domain mirror overlap risk",
+          "conservative_capacity_estimable_without_download": "small Turkish catalog estimate reduced for jurisdiction review, OCR quality, boilerplate and mirror duplication",
+          "source_concentration_violation": false,
+          "benchmark_pii_private_or_contamination_concerns": {
+            "pii": "low",
+            "private_data": "low",
+            "unsafe_content": "medium",
+            "benchmark_contamination": "medium",
+            "copyrighted_long_form": "high",
+            "boilerplate": "high",
+            "spam": "low"
+          }
+        },
+        "resolution_type": "metadata_resolvable",
+        "final_status": "deferred",
+        "decision_reason": "Rights and trademark conditions are work- and jurisdiction-specific; no Turkish allowlist is pinned.",
+        "remaining_blockers": [
+          "Rights and trademark conditions are work- and jurisdiction-specific; no Turkish allowlist is pinned."
+        ],
+        "next_action": "Rights and trademark conditions are work- and jurisdiction-specific; no Turkish allowlist is pinned."
+      }
     },
     {
       "id": "pmc_oa_commercial_reuse_subset",
       "official_source_name": "PMC OA explicit commercial-reuse subset",
       "official_url": "https://pmc.ncbi.nlm.nih.gov/tools/openftlist/",
       "snapshot_or_version": "dated OA file list not yet pinned",
-      "language": ["en"],
-      "category": ["technical_documentation"],
+      "language": [
+        "en"
+      ],
+      "category": [
+        "technical_documentation"
+      ],
       "license": "article-level CC0, CC BY or CC BY-SA only; CC BY-ND excluded",
       "license_evidence_url": "https://pmc.ncbi.nlm.nih.gov/tools/openftlist/",
       "source_cap_tokens": 30000000,
@@ -846,7 +1225,10 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://pmc.ncbi.nlm.nih.gov/tools/openftlist/",
-        "official_license_urls": ["https://pmc.ncbi.nlm.nih.gov/tools/openftlist/", "https://pmc.ncbi.nlm.nih.gov/tools/oa-service/"],
+        "official_license_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/tools/openftlist/",
+          "https://pmc.ncbi.nlm.nih.gov/tools/oa-service/"
+        ],
         "artifact_license": "per-article OA license in the dated file list and article XML",
         "content_license": "only CC0, CC BY and CC BY-SA admitted; ND, NC and unclear items excluded",
         "database_license": "PMC OA collection terms require article-level rights compliance",
@@ -864,7 +1246,10 @@
         "official_file_inventory": "commercial-use group exists but must be narrowed to CC0/BY/BY-SA and removed-item status",
         "expected_raw_size": "20-100 GB for a capped subset",
         "expected_document_count": "unknown pending dated license-filtered file list",
-        "expected_language_distribution": {"en": 0.98, "other_rejected": 0.02},
+        "expected_language_distribution": {
+          "en": 0.98,
+          "other_rejected": 0.02
+        },
         "update_status": "active and regularly updated"
       },
       "acceptance_gates": {
@@ -895,29 +1280,73 @@
         "spam": "low"
       },
       "resolution_steps": [
-        "Pin a dated OA file list and removed-items list.",
-        "Filter metadata to CC0, CC BY and CC BY-SA before selecting packages.",
-        "Define biomedical PII, retraction and benchmark exclusion manifests."
-      ]
+        "Admit only exact OA articles carrying CC0, CC BY, CC BY-SA, or separately approved terms."
+      ],
+      "phase5b_approval_state": "conditional",
+      "phase5c_resolution": {
+        "review_date": "2026-07-22",
+        "question_count": 15,
+        "answers": {
+          "exact_downloadable_artifact": "commercial-use group exists but must be narrowed to CC0/BY/BY-SA and removed-item status",
+          "exact_snapshot_release_dump_tag_or_commit": "unresolved dated OA file list and removed-items list",
+          "content_license_explicit": "only CC0, CC BY and CC BY-SA admitted; ND, NC and unclear items excluded",
+          "collection_or_database_license_explicit": "PMC OA collection terms require article-level rights compliance",
+          "redistribution_rights_explicit": "permitted only under each admitted article license",
+          "modification_and_derivative_processing_rights_explicit": "permitted for CC0/BY/BY-SA; ND excluded",
+          "machine_processing_or_model_training_prohibited": "none identified for admitted licenses",
+          "attribution_obligations_executable": "PMCID, citation, authors, source URL, license and snapshot",
+          "official_acquisition_reproducible": "PMC Cloud/FTP/OAI/API/BioC approved services only",
+          "checksum_or_signed_manifest_available": "official file list plus per-package hashes where available and generated SHA-256",
+          "language_composition_officially_supported": {
+            "en": 0.98,
+            "other_rejected": 0.02
+          },
+          "corpus_v3_relationship_understood": "new scientific prose with high benchmark and near-duplicate risk",
+          "conservative_capacity_estimable_without_download": "large OA inventory reduced for license allowlist, English filtering, references, XML extraction, retractions, PII and benchmark overlap",
+          "source_concentration_violation": false,
+          "benchmark_pii_private_or_contamination_concerns": {
+            "pii": "medium",
+            "private_data": "medium",
+            "unsafe_content": "medium",
+            "benchmark_contamination": "high",
+            "copyrighted_long_form": "high",
+            "boilerplate": "high",
+            "spam": "low"
+          }
+        },
+        "resolution_type": "metadata_resolvable",
+        "final_status": "conditional",
+        "decision_reason": "Admit only exact OA articles carrying CC0, CC BY, CC BY-SA, or separately approved terms.",
+        "remaining_blockers": [
+          "Admit only exact OA articles carrying CC0, CC BY, CC BY-SA, or separately approved terms."
+        ],
+        "next_action": "Admit only exact OA articles carrying CC0, CC BY, CC BY-SA, or separately approved terms."
+      }
     },
     {
       "id": "openstax_legacy_ccby_editions",
       "official_source_name": "OpenStax legacy CC BY editions",
       "official_url": "https://openstax.org/subjects",
       "snapshot_or_version": "legacy edition allowlist unresolved",
-      "language": ["en"],
-      "category": ["english_general_educational"],
+      "language": [
+        "en"
+      ],
+      "category": [
+        "english_general_educational"
+      ],
       "license": "edition-specific legacy CC BY only; current library generally moved to CC BY-NC-SA",
       "license_evidence_url": "https://openstax.org/blog/openstax-licensing",
       "source_cap_tokens": 20000000,
       "quality_tier": "A",
       "relationship_to_corpus_v3": "new educational prose with edition duplication risk",
       "previous_approval_state": "conditional",
-      "approval_state": "conditional",
+      "approval_state": "deferred",
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://openstax.org/subjects",
-        "official_license_urls": ["https://openstax.org/blog/openstax-licensing"],
+        "official_license_urls": [
+          "https://openstax.org/blog/openstax-licensing"
+        ],
         "artifact_license": "exact embedded license of each legacy edition must be CC BY",
         "content_license": "legacy CC BY editions only; newer CC BY-NC-SA excluded",
         "database_license": "not_applicable",
@@ -935,7 +1364,9 @@
         "official_file_inventory": "legacy CC BY edition inventory not pinned",
         "expected_raw_size": "1-5 GB",
         "expected_document_count": "book/edition count unknown pending allowlist",
-        "expected_language_distribution": {"en": 1.0},
+        "expected_language_distribution": {
+          "en": 1.0
+        },
         "update_status": "licensing transition announced 2026-04-22"
       },
       "acceptance_gates": {
@@ -966,29 +1397,74 @@
         "spam": "low"
       },
       "resolution_steps": [
-        "List exact legacy edition files whose embedded notice is CC BY.",
-        "Record stable URLs, file sizes and checksums.",
-        "Exclude all NC-SA updates and duplicated later editions."
-      ]
+        "Legacy CC BY editions and embedded third-party exceptions require an edition-level manifest."
+      ],
+      "phase5b_approval_state": "conditional",
+      "phase5c_resolution": {
+        "review_date": "2026-07-22",
+        "question_count": 15,
+        "answers": {
+          "exact_downloadable_artifact": "legacy CC BY edition inventory not pinned",
+          "exact_snapshot_release_dump_tag_or_commit": "unresolved immutable edition file list",
+          "content_license_explicit": "legacy CC BY editions only; newer CC BY-NC-SA excluded",
+          "collection_or_database_license_explicit": "not_applicable",
+          "redistribution_rights_explicit": "allowed only for pinned CC BY editions",
+          "modification_and_derivative_processing_rights_explicit": "CC BY adaptations permitted with attribution",
+          "machine_processing_or_model_training_prohibited": "none identified for CC BY editions",
+          "attribution_obligations_executable": "OpenStax, title, edition, contributors, URL and exact notice",
+          "official_acquisition_reproducible": "official OpenStax edition download links",
+          "checksum_or_signed_manifest_available": "edition file SHA-256 and embedded-license capture required",
+          "language_composition_officially_supported": {
+            "en": 1.0
+          },
+          "corpus_v3_relationship_understood": "new educational prose with edition duplication risk",
+          "conservative_capacity_estimable_without_download": "legacy catalog estimate reduced for NC-SA transition, edition pinning, duplicated revisions and textbook boilerplate",
+          "source_concentration_violation": false,
+          "benchmark_pii_private_or_contamination_concerns": {
+            "pii": "low",
+            "private_data": "low",
+            "unsafe_content": "low",
+            "benchmark_contamination": "medium",
+            "copyrighted_long_form": "medium",
+            "boilerplate": "medium",
+            "spam": "low"
+          }
+        },
+        "resolution_type": "metadata_resolvable",
+        "final_status": "deferred",
+        "decision_reason": "Legacy CC BY editions and embedded third-party exceptions require an edition-level manifest.",
+        "remaining_blockers": [
+          "Legacy CC BY editions and embedded third-party exceptions require an edition-level manifest."
+        ],
+        "next_action": "Legacy CC BY editions and embedded third-party exceptions require an edition-level manifest."
+      }
     },
     {
       "id": "stack_exchange_ccbysa_dump",
       "official_source_name": "Stack Exchange public data dump",
       "official_url": "https://archive.org/details/stackexchange",
       "snapshot_or_version": "official dump date unresolved",
-      "language": ["en"],
-      "category": ["technical_documentation", "code_structured"],
+      "language": [
+        "en"
+      ],
+      "category": [
+        "technical_documentation",
+        "code_structured"
+      ],
       "license": "CC BY-SA version varies by post contribution date",
       "license_evidence_url": "https://stackoverflow.com/help/licensing",
       "source_cap_tokens": 30000000,
       "quality_tier": "B",
       "relationship_to_corpus_v3": "new technical dialogue with high duplication, PII and benchmark risk",
       "previous_approval_state": "conditional",
-      "approval_state": "conditional",
+      "approval_state": "deferred",
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://archive.org/details/stackexchange",
-        "official_license_urls": ["https://stackoverflow.com/help/licensing", "https://stackoverflow.com/legal/api-terms-of-use"],
+        "official_license_urls": [
+          "https://stackoverflow.com/help/licensing",
+          "https://stackoverflow.com/legal/api-terms-of-use"
+        ],
         "artifact_license": "post-level date-dependent CC BY-SA 2.5, 3.0 or 4.0",
         "content_license": "CC BY-SA version determined by contribution date and revision history",
         "database_license": "dump/database redistribution terms require confirmation with attribution graph",
@@ -1006,7 +1482,10 @@
         "official_file_inventory": "site XML archives, exact date and site allowlist unresolved",
         "expected_raw_size": "20-100 GB",
         "expected_document_count": "unknown pending site and date allowlist",
-        "expected_language_distribution": {"en": 0.95, "code": 0.05},
+        "expected_language_distribution": {
+          "en": 0.95,
+          "code": 0.05
+        },
         "update_status": "periodic dump"
       },
       "acceptance_gates": {
@@ -1051,29 +1530,92 @@
         "max_code_to_natural_language_ratio": 0.35
       },
       "resolution_steps": [
-        "Pin dump date, site allowlist and official checksums.",
-        "Build revision-aware post-license and attribution records.",
-        "Demonstrate high-PII mitigation and benchmark-solution filtering on an authorized sample."
-      ]
+        "Attribution reconstruction, PII, benchmark leakage, and current dump identity remain unresolved."
+      ],
+      "phase5b_approval_state": "conditional",
+      "phase5c_resolution": {
+        "review_date": "2026-07-22",
+        "question_count": 15,
+        "answers": {
+          "exact_downloadable_artifact": "site XML archives, exact date and site allowlist unresolved",
+          "exact_snapshot_release_dump_tag_or_commit": "unresolved official dump date and checksums",
+          "content_license_explicit": "CC BY-SA version determined by contribution date and revision history",
+          "collection_or_database_license_explicit": "dump/database redistribution terms require confirmation with attribution graph",
+          "redistribution_rights_explicit": "subject to post-level CC BY-SA and attribution",
+          "modification_and_derivative_processing_rights_explicit": "permitted under applicable CC BY-SA with ShareAlike",
+          "machine_processing_or_model_training_prohibited": "no blanket prohibition identified in content license; platform terms still apply",
+          "attribution_obligations_executable": "post URL, author, title, date and license version",
+          "official_acquisition_reproducible": "officially referenced Stack Exchange data dump only",
+          "checksum_or_signed_manifest_available": "Archive.org file inventory/checksums must be pinned",
+          "language_composition_officially_supported": {
+            "en": 0.95,
+            "code": 0.05
+          },
+          "corpus_v3_relationship_understood": "new technical dialogue with high duplication, PII and benchmark risk",
+          "conservative_capacity_estimable_without_download": "technical post volume reduced for site allowlist, PII, signatures, low-quality fragments, duplicate answers, benchmarks and attribution burden",
+          "source_concentration_violation": false,
+          "benchmark_pii_private_or_contamination_concerns": {
+            "pii": "high",
+            "private_data": "medium",
+            "unsafe_content": "medium",
+            "benchmark_contamination": "high",
+            "copyrighted_long_form": "medium",
+            "boilerplate": "high",
+            "spam": "high"
+          }
+        },
+        "resolution_type": "bounded_sample_required",
+        "final_status": "deferred",
+        "decision_reason": "Attribution reconstruction, PII, benchmark leakage, and current dump identity remain unresolved.",
+        "remaining_blockers": [
+          "Attribution reconstruction, PII, benchmark leakage, and current dump identity remain unresolved."
+        ],
+        "next_action": "Attribution reconstruction, PII, benchmark leakage, and current dump identity remain unresolved.",
+        "future_sample_plan": {
+          "execution_authorized": false,
+          "maximum_download_bytes": 25000000,
+          "exact_files": "must be named in a future approved manifest",
+          "checksum_requirement": "SHA-256 before inspection",
+          "destination": "$EXTERNAL_SSD_ROOT\\DarkMindArchive\\corpus-v4\\samples\\stack_exchange_ccbysa_dump",
+          "retention": "retain immutable sample and audit output; no training use",
+          "metrics": [
+            "licence_coverage",
+            "language_mix",
+            "PII",
+            "quality",
+            "Corpus_V3_overlap"
+          ],
+          "training_authorized": false
+        }
+      }
     },
     {
       "id": "github_permissive_repo_allowlist",
       "official_source_name": "GitHub permissive-license repository allowlist",
       "official_url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository",
       "snapshot_or_version": "repository allowlist unresolved",
-      "language": ["en", "code"],
-      "category": ["code_structured", "technical_documentation"],
+      "language": [
+        "en",
+        "code"
+      ],
+      "category": [
+        "code_structured",
+        "technical_documentation"
+      ],
       "license": "repository and file-level explicit permissive licenses only",
       "license_evidence_url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository",
-      "source_cap_tokens": 30000000,
+      "source_cap_tokens": 0,
       "quality_tier": "A",
       "relationship_to_corpus_v3": "new code; high fork/vendor/benchmark duplication risk",
       "previous_approval_state": "conditional",
-      "approval_state": "conditional",
+      "approval_state": "rejected",
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://docs.github.com/en/rest/licenses/licenses",
-        "official_license_urls": ["https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository", "https://docs.github.com/en/rest/licenses/licenses"],
+        "official_license_urls": [
+          "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository",
+          "https://docs.github.com/en/rest/licenses/licenses"
+        ],
         "artifact_license": "exact repository and file license; public visibility is not a license",
         "content_license": "only approved permissive licenses with file-level exceptions resolved",
         "database_license": "not_applicable_to_individual_git_repositories",
@@ -1091,7 +1633,10 @@
         "official_file_inventory": "no repository allowlist yet",
         "expected_raw_size": "5-50 GB depending allowlist",
         "expected_document_count": "unknown pending repository/file inventory",
-        "expected_language_distribution": {"code": 0.80, "en": 0.20},
+        "expected_language_distribution": {
+          "code": 0.8,
+          "en": 0.2
+        },
         "update_status": "candidate class, not a dataset"
       },
       "acceptance_gates": {
@@ -1105,9 +1650,9 @@
         "overlap_manageable": false
       },
       "capacity": {
-        "optimistic_tokens": 50000000,
-        "expected_tokens": 20000000,
-        "conservative_tokens": 8000000,
+        "optimistic_tokens": 0,
+        "expected_tokens": 0,
+        "conservative_tokens": 0,
         "expected_rejection_percent": 60.0,
         "confidence": "low",
         "basis": "allowlisted code estimate reduced for license exceptions, vendors, generated/minified files, forks, tests, secrets and code-quality filters"
@@ -1133,32 +1678,73 @@
         "fork_dedup": "Git object, repository ancestry and code-clone deduplication",
         "benchmark_solution_filter": true,
         "max_files_per_project": 5000,
-        "max_code_to_natural_language_ratio": 0.80
+        "max_code_to_natural_language_ratio": 0.8
       },
-      "resolution_steps": [
-        "Select named official or high-quality repositories and exact commits.",
-        "Verify repository and file-level licenses without relying solely on Licensee API.",
-        "Predeclare language, file caps, vendor/generated/test exclusions and attribution."
-      ]
+      "resolution_steps": [],
+      "phase5b_approval_state": "conditional",
+      "phase5c_resolution": {
+        "review_date": "2026-07-22",
+        "question_count": 15,
+        "answers": {
+          "exact_downloadable_artifact": "no repository allowlist yet",
+          "exact_snapshot_release_dump_tag_or_commit": "unresolved repository/commit/file allowlist",
+          "content_license_explicit": "only approved permissive licenses with file-level exceptions resolved",
+          "collection_or_database_license_explicit": "not_applicable_to_individual_git_repositories",
+          "redistribution_rights_explicit": "license specific",
+          "modification_and_derivative_processing_rights_explicit": "license specific",
+          "machine_processing_or_model_training_prohibited": "license and repository terms checked per source",
+          "attribution_obligations_executable": "repository, commit, authorship, source URL and required notices",
+          "official_acquisition_reproducible": "official Git endpoint, one approved repository at a time",
+          "checksum_or_signed_manifest_available": "Git commit plus per-file SHA-256 manifest",
+          "language_composition_officially_supported": {
+            "code": 0.8,
+            "en": 0.2
+          },
+          "corpus_v3_relationship_understood": "new code; high fork/vendor/benchmark duplication risk",
+          "conservative_capacity_estimable_without_download": "allowlisted code estimate reduced for license exceptions, vendors, generated/minified files, forks, tests, secrets and code-quality filters",
+          "source_concentration_violation": false,
+          "benchmark_pii_private_or_contamination_concerns": {
+            "pii": "high",
+            "private_data": "medium",
+            "unsafe_content": "medium",
+            "benchmark_contamination": "high",
+            "copyrighted_long_form": "medium",
+            "boilerplate": "medium",
+            "spam": "medium"
+          }
+        },
+        "resolution_type": "policy_rejected",
+        "final_status": "rejected",
+        "decision_reason": "Public repository visibility is not a licence and a platform-wide allowlist is not auditable.",
+        "remaining_blockers": [],
+        "next_action": "none"
+      }
     },
     {
       "id": "arxiv_explicit_commercial_cc_subset",
       "official_source_name": "arXiv explicit commercial-CC subset",
       "official_url": "https://arxiv.org/",
       "snapshot_or_version": "paper/version manifest unresolved",
-      "language": ["en"],
-      "category": ["technical_documentation"],
+      "language": [
+        "en"
+      ],
+      "category": [
+        "technical_documentation"
+      ],
       "license": "only per-version CC0, CC BY or CC BY-SA",
       "license_evidence_url": "https://info.arxiv.org/help/license/index.html",
       "source_cap_tokens": 30000000,
       "quality_tier": "A",
       "relationship_to_corpus_v3": "new scientific prose with benchmark and preprint-version duplication risk",
       "previous_approval_state": "conditional",
-      "approval_state": "conditional",
+      "approval_state": "deferred",
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://info.arxiv.org/help/bulk_data_s3.html",
-        "official_license_urls": ["https://info.arxiv.org/help/license/index.html", "https://info.arxiv.org/help/bulk_data_s3.html"],
+        "official_license_urls": [
+          "https://info.arxiv.org/help/license/index.html",
+          "https://info.arxiv.org/help/bulk_data_s3.html"
+        ],
         "artifact_license": "per-paper, per-version license from OAI metadata",
         "content_license": "CC0, CC BY or CC BY-SA only; default arXiv, NC and ND excluded",
         "database_license": "bulk S3 terms and manifests apply; article rights remain per item",
@@ -1176,7 +1762,10 @@
         "official_file_inventory": "full source collection about 9.2 TB as of April 2025; explicit-CC subset not enumerated",
         "expected_raw_size": "20-500 GB after metadata-first allowlisting",
         "expected_document_count": "unknown; official page says only a small fraction use non-default licenses",
-        "expected_language_distribution": {"en": 0.98, "other_rejected": 0.02},
+        "expected_language_distribution": {
+          "en": 0.98,
+          "other_rejected": 0.02
+        },
         "update_status": "monthly S3 updates"
       },
       "acceptance_gates": {
@@ -1207,18 +1796,76 @@
         "spam": "medium"
       },
       "resolution_steps": [
-        "Use OAI metadata only to count exact eligible licenses before any S3 authorization.",
-        "Pin an S3 manifest version and paper/version allowlist.",
-        "Estimate requester-pays cost, extraction yield and benchmark exclusions."
-      ]
+        "Author-selected licences, version identity, long-form overlap, and benchmark leakage need a frozen allowlist."
+      ],
+      "phase5b_approval_state": "conditional",
+      "phase5c_resolution": {
+        "review_date": "2026-07-22",
+        "question_count": 15,
+        "answers": {
+          "exact_downloadable_artifact": "full source collection about 9.2 TB as of April 2025; explicit-CC subset not enumerated",
+          "exact_snapshot_release_dump_tag_or_commit": "unresolved OAI license allowlist and S3 manifest version",
+          "content_license_explicit": "CC0, CC BY or CC BY-SA only; default arXiv, NC and ND excluded",
+          "collection_or_database_license_explicit": "bulk S3 terms and manifests apply; article rights remain per item",
+          "redistribution_rights_explicit": "only for explicit admitted licenses",
+          "modification_and_derivative_processing_rights_explicit": "CC0/BY/BY-SA permit adaptation; other licenses excluded",
+          "machine_processing_or_model_training_prohibited": "none identified for admitted licenses",
+          "attribution_obligations_executable": "authors, title, arXiv ID, version, URL and exact license",
+          "official_acquisition_reproducible": "official OAI metadata then requester-pays S3 only",
+          "checksum_or_signed_manifest_available": "official S3 manifests include MD5, size and item count; selected files also SHA-256",
+          "language_composition_officially_supported": {
+            "en": 0.98,
+            "other_rejected": 0.02
+          },
+          "corpus_v3_relationship_understood": "new scientific prose with benchmark and preprint-version duplication risk",
+          "conservative_capacity_estimable_without_download": "large corpus reduced sharply because most papers use the default non-reusable license, then for versions, LaTeX failures and benchmarks",
+          "source_concentration_violation": false,
+          "benchmark_pii_private_or_contamination_concerns": {
+            "pii": "medium",
+            "private_data": "low",
+            "unsafe_content": "medium",
+            "benchmark_contamination": "high",
+            "copyrighted_long_form": "high",
+            "boilerplate": "high",
+            "spam": "medium"
+          }
+        },
+        "resolution_type": "bounded_sample_required",
+        "final_status": "deferred",
+        "decision_reason": "Author-selected licences, version identity, long-form overlap, and benchmark leakage need a frozen allowlist.",
+        "remaining_blockers": [
+          "Author-selected licences, version identity, long-form overlap, and benchmark leakage need a frozen allowlist."
+        ],
+        "next_action": "Author-selected licences, version identity, long-form overlap, and benchmark leakage need a frozen allowlist.",
+        "future_sample_plan": {
+          "execution_authorized": false,
+          "maximum_download_bytes": 25000000,
+          "exact_files": "must be named in a future approved manifest",
+          "checksum_requirement": "SHA-256 before inspection",
+          "destination": "$EXTERNAL_SSD_ROOT\\DarkMindArchive\\corpus-v4\\samples\\arxiv_explicit_commercial_cc_subset",
+          "retention": "retain immutable sample and audit output; no training use",
+          "metrics": [
+            "licence_coverage",
+            "language_mix",
+            "PII",
+            "quality",
+            "Corpus_V3_overlap"
+          ],
+          "training_authorized": false
+        }
+      }
     },
     {
       "id": "turkiye_open_data_documents_unlicensed",
       "official_source_name": "Turkiye Open Data Portal document candidates",
       "official_url": "https://veri.gov.tr/",
       "snapshot_or_version": "no dataset selected",
-      "language": ["tr"],
-      "category": ["turkish_general_educational"],
+      "language": [
+        "tr"
+      ],
+      "category": [
+        "turkish_general_educational"
+      ],
       "license": "dataset-specific; no blanket reusable-document license verified",
       "license_evidence_url": "https://veri.gov.tr/",
       "source_cap_tokens": 20000000,
@@ -1229,7 +1876,9 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://veri.gov.tr/",
-        "official_license_urls": ["https://veri.gov.tr/"],
+        "official_license_urls": [
+          "https://veri.gov.tr/"
+        ],
         "artifact_license": "unknown because no artifact selected",
         "content_license": "unknown",
         "database_license": "unknown",
@@ -1247,7 +1896,9 @@
         "official_file_inventory": "none",
         "expected_raw_size": "unknown",
         "expected_document_count": "unknown",
-        "expected_language_distribution": {"tr": "expected but unverified"},
+        "expected_language_distribution": {
+          "tr": "expected but unverified"
+        },
         "update_status": "portal availability observed; artifact evidence absent"
       },
       "acceptance_gates": {
@@ -1281,15 +1932,22 @@
         "Identify named text-rich datasets with artifact-specific licenses.",
         "Verify content and database reuse rights from official pages.",
         "Return as separate candidates rather than approving the portal class."
-      ]
+      ],
+      "phase5b_approval_state": "deferred"
     },
     {
       "id": "python_docs_incremental_versions",
       "official_source_name": "Python documentation incremental versions",
       "official_url": "https://docs.python.org/3/download.html",
       "snapshot_or_version": "no incremental version selected",
-      "language": ["tr", "en"],
-      "category": ["technical_documentation", "code_structured"],
+      "language": [
+        "tr",
+        "en"
+      ],
+      "category": [
+        "technical_documentation",
+        "code_structured"
+      ],
       "license": "PSF License v2 documentation; examples additionally 0BSD",
       "license_evidence_url": "https://docs.python.org/3/license.html",
       "source_cap_tokens": 1000000,
@@ -1300,7 +1958,10 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://docs.python.org/3/download.html",
-        "official_license_urls": ["https://docs.python.org/3/license.html", "https://docs.python.org/3/download.html"],
+        "official_license_urls": [
+          "https://docs.python.org/3/license.html",
+          "https://docs.python.org/3/download.html"
+        ],
         "artifact_license": "PSF License v2; examples 0BSD",
         "content_license": "PSF License v2",
         "database_license": "not_applicable",
@@ -1318,7 +1979,10 @@
         "official_file_inventory": "3.14.6 archives listed; already used by Corpus V3",
         "expected_raw_size": "under 300 MB",
         "expected_document_count": "version archive file inventory",
-        "expected_language_distribution": {"tr": 0.5, "en": 0.5},
+        "expected_language_distribution": {
+          "tr": 0.5,
+          "en": 0.5
+        },
         "update_status": "active; 3.14.6 last updated 2026-07-20"
       },
       "acceptance_gates": {
@@ -1365,15 +2029,20 @@
         "Wait for a newer official documentation version.",
         "Use path-level and normalized-text diffs against the exact Corpus V3 Python snapshot.",
         "Promote only measured unique changed documentation."
-      ]
+      ],
+      "phase5b_approval_state": "deferred"
     },
     {
       "id": "common_crawl_unbounded",
       "official_source_name": "Unbounded Common Crawl",
       "official_url": "https://commoncrawl.org/",
       "snapshot_or_version": "rejected source class",
-      "language": ["mixed"],
-      "category": ["uncontrolled_web"],
+      "language": [
+        "mixed"
+      ],
+      "category": [
+        "uncontrolled_web"
+      ],
       "license": "crawl infrastructure terms do not license third-party page content",
       "license_evidence_url": "https://commoncrawl.org/terms-of-use",
       "source_cap_tokens": 0,
@@ -1384,7 +2053,9 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://commoncrawl.org/",
-        "official_license_urls": ["https://commoncrawl.org/terms-of-use"],
+        "official_license_urls": [
+          "https://commoncrawl.org/terms-of-use"
+        ],
         "artifact_license": "Common Crawl terms; third-party content rights remain with origin sites",
         "content_license": "unknown/mixed third-party rights",
         "database_license": "Common Crawl terms do not cure page-level rights",
@@ -1402,7 +2073,9 @@
         "official_file_inventory": "not selected",
         "expected_raw_size": "not applicable",
         "expected_document_count": "not applicable",
-        "expected_language_distribution": {"mixed": 1.0},
+        "expected_language_distribution": {
+          "mixed": 1.0
+        },
         "update_status": "active service; rejected policy class"
       },
       "acceptance_gates": {
@@ -1432,15 +2105,22 @@
         "boilerplate": "high",
         "spam": "high"
       },
-      "resolution_steps": []
+      "resolution_steps": [],
+      "phase5b_approval_state": "rejected"
     },
     {
       "id": "social_media_scrape",
       "official_source_name": "Social-media post scraping",
       "official_url": "https://docs.x.com/developer-terms/policy",
       "snapshot_or_version": "rejected source class",
-      "language": ["tr", "en", "mixed"],
-      "category": ["private_or_personal"],
+      "language": [
+        "tr",
+        "en",
+        "mixed"
+      ],
+      "category": [
+        "private_or_personal"
+      ],
       "license": "platform terms and user rights incompatible with a redistributed full-text corpus",
       "license_evidence_url": "https://docs.x.com/developer-terms/policy",
       "source_cap_tokens": 0,
@@ -1451,7 +2131,9 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://docs.x.com/developer-terms/policy",
-        "official_license_urls": ["https://docs.x.com/developer-terms/policy"],
+        "official_license_urls": [
+          "https://docs.x.com/developer-terms/policy"
+        ],
         "artifact_license": "no dataset artifact selected",
         "content_license": "user/platform rights; full-text redistribution not granted",
         "database_license": "platform API terms",
@@ -1469,7 +2151,9 @@
         "official_file_inventory": "none",
         "expected_raw_size": "not applicable",
         "expected_document_count": "not applicable",
-        "expected_language_distribution": {"mixed": 1.0},
+        "expected_language_distribution": {
+          "mixed": 1.0
+        },
         "update_status": "rejected policy class"
       },
       "acceptance_gates": {
@@ -1499,15 +2183,22 @@
         "boilerplate": "medium",
         "spam": "high"
       },
-      "resolution_steps": []
+      "resolution_steps": [],
+      "phase5b_approval_state": "rejected"
     },
     {
       "id": "unbounded_generated_dataset_sweep",
       "official_source_name": "Unbounded generated-text dataset sweep",
       "official_url": "https://huggingface.co/datasets",
       "snapshot_or_version": "rejected source class",
-      "language": ["tr", "en", "mixed"],
-      "category": ["generated_text"],
+      "language": [
+        "tr",
+        "en",
+        "mixed"
+      ],
+      "category": [
+        "generated_text"
+      ],
       "license": "mixed user-supplied metadata and provenance",
       "license_evidence_url": "https://huggingface.co/docs/hub/repositories-licenses",
       "source_cap_tokens": 0,
@@ -1518,7 +2209,10 @@
       "official_evidence": {
         "access_date": "2026-07-22",
         "official_dataset_url": "https://huggingface.co/datasets",
-        "official_license_urls": ["https://huggingface.co/docs/hub/repositories-licenses", "https://huggingface.co/docs/hub/datasets-cards"],
+        "official_license_urls": [
+          "https://huggingface.co/docs/hub/repositories-licenses",
+          "https://huggingface.co/docs/hub/datasets-cards"
+        ],
         "artifact_license": "none; no dataset selected",
         "content_license": "mixed and user-declared",
         "database_license": "dataset specific",
@@ -1536,7 +2230,9 @@
         "official_file_inventory": "none",
         "expected_raw_size": "not applicable",
         "expected_document_count": "not applicable",
-        "expected_language_distribution": {"mixed": 1.0},
+        "expected_language_distribution": {
+          "mixed": 1.0
+        },
         "update_status": "rejected policy class"
       },
       "acceptance_gates": {
@@ -1566,7 +2262,1233 @@
         "boilerplate": "high",
         "spam": "high"
       },
-      "resolution_steps": []
+      "resolution_steps": [],
+      "phase5b_approval_state": "rejected"
+    },
+    {
+      "id": "mozilla_common_voice_tr_26",
+      "official_source_name": "Mozilla Common Voice Scripted Speech Turkish 26.0",
+      "official_url": "https://datacollective.mozillafoundation.org/datasets/cmqinosfq00x4nr07gnk0rdf9",
+      "snapshot_or_version": "cv-corpus-26.0-2026-06-12; 2.78 GB; 413,915 sentences",
+      "language": [
+        "tr"
+      ],
+      "category": [
+        "turkish_general_educational"
+      ],
+      "license": "CC0 label subject to Mozilla dataset terms and no-rehost restriction",
+      "license_evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_cap_tokens": 0,
+      "quality_tier": "candidate",
+      "relationship_to_corpus_v3": "new candidate; mandatory V3 hash and near-duplicate exclusion",
+      "previous_approval_state": "rejected",
+      "approval_state": "rejected",
+      "official_evidence": {
+        "access_date": "2026-07-22",
+        "official_dataset_url": "https://mozilladatacollective.com/datasets/cmqinosfq00x4nr07gnk0rdf9",
+        "official_license_urls": [
+          "https://creativecommons.org/publicdomain/zero/1.0/"
+        ],
+        "artifact_license": "CC0 label subject to Mozilla dataset terms and no-rehost restriction",
+        "content_license": "CC0 label subject to Mozilla dataset terms and no-rehost restriction",
+        "database_license": "not_applicable",
+        "exact_snapshot": "cv-corpus-26.0-2026-06-12; 2.78 GB; 413,915 sentences",
+        "download_mechanism": "official HTTPS artifact only",
+        "redistribution_rights": "must be explicit for every admitted artifact",
+        "modification_rights": "must permit normalization, filtering, and derived corpus records",
+        "attribution_requirements": "record creator, title, source URL, version, licence, and modifications",
+        "share_alike_requirements": "preserve artifact-level obligations; unresolved items excluded",
+        "noncommercial_restrictions": "NC material excluded",
+        "machine_learning_restrictions": "none identified in cited licence; approval still required",
+        "terms_of_service_restrictions": "official distribution route only; no scraping",
+        "rate_limits": "single-worker bounded acquisition only after separate authorization",
+        "checksum_or_manifest": "not_published; generate SHA-256 manifest before approval",
+        "official_file_inventory": "cv-corpus-26.0-2026-06-12; 2.78 GB; 413,915 sentences",
+        "expected_raw_size": "2780000000-2780000000 bytes planning range",
+        "expected_document_count": "413915 sentences",
+        "expected_language_distribution": {
+          "tr": 1.0
+        },
+        "update_status": "official evidence reviewed 2026-07-22"
+      },
+      "acceptance_gates": {
+        "artifact_identity_clear": true,
+        "snapshot_reproducible": true,
+        "license_explicit": true,
+        "machine_processing_permitted": false,
+        "acquisition_method_permitted": false,
+        "attribution_actionable": true,
+        "quality_suitable": false,
+        "overlap_manageable": false
+      },
+      "capacity": {
+        "optimistic_tokens": 0,
+        "expected_tokens": 0,
+        "conservative_tokens": 0,
+        "expected_rejection_percent": 55,
+        "confidence": "low",
+        "basis": "official metadata plus bounded planning assumptions; no files downloaded"
+      },
+      "risk": {
+        "pii": "low",
+        "private_data": "low",
+        "unsafe_content": "low",
+        "benchmark_contamination": "low",
+        "copyrighted_long_form": "high",
+        "boilerplate": "medium",
+        "spam": "low"
+      },
+      "resolution_steps": [],
+      "overlap_plan": {
+        "document_id": "stable official artifact plus internal path",
+        "url": "canonical official URL comparison",
+        "hash": "raw and normalized SHA-256",
+        "normalized_fingerprint": "exact normalized-text digest",
+        "near_dedup": "MinHash/LSH against admitted Corpus V3 and V4 records",
+        "ngram_sampling": "sampled long n-gram overlap audit",
+        "corpus_v3_wikimedia": "reject copied or translated Wikimedia passages",
+        "corpus_v3_python_docs": "reject copied Python documentation passages",
+        "benchmark": "benchmark name and prompt fingerprint denylist"
+      },
+      "phase5c_discovery": true,
+      "new_candidate_evidence": {
+        "stable_source_id": "mozilla_common_voice_tr_26",
+        "official_name": "Mozilla Common Voice Scripted Speech Turkish 26.0",
+        "official_artifact_url": "https://mozilladatacollective.com/datasets/cmqinosfq00x4nr07gnk0rdf9",
+        "official_metadata_url": "https://datacollective.mozillafoundation.org/datasets/cmqinosfq00x4nr07gnk0rdf9",
+        "official_license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "exact_snapshot_version_commit_date": "cv-corpus-26.0-2026-06-12; 2.78 GB; 413,915 sentences",
+        "language": [
+          "tr"
+        ],
+        "category": [
+          "turkish_general_educational"
+        ],
+        "artifact_type": "speech metadata and prompts",
+        "expected_raw_bytes": {
+          "minimum": 2780000000,
+          "maximum": 2780000000,
+          "basis": "official metadata or conservative planning range"
+        },
+        "expected_documents_or_files": "413915 sentences",
+        "optimistic_tokens": 0,
+        "expected_tokens": 0,
+        "conservative_post_filter_unique_tokens": 0,
+        "loss_estimates_percent": {
+          "extraction": 8,
+          "language_filter": 3,
+          "pii_secret": 2,
+          "exact_dedup": 8,
+          "near_dedup": 12,
+          "corpus_v3_overlap": 8,
+          "contamination": 4,
+          "license_rejection": 10
+        },
+        "capacity_basis": "official metadata plus bounded planning assumptions; no acquisition",
+        "confidence_level": "low",
+        "evidence_access_date": "2026-07-22",
+        "attribution_text_or_template": "Creator; title/path; official URL; snapshot; licence; modifications",
+        "source_cap_tokens": 0,
+        "concentration_family": "mozilla_common_voice",
+        "pii_risk": "low",
+        "benchmark_risk": "low",
+        "private_data_risk": "low",
+        "approval_status": "rejected",
+        "unresolved_questions": []
+      }
+    },
+    {
+      "id": "leipzig_turkish_corpora_official_route",
+      "official_source_name": "Leipzig Corpora Collection Turkish download route",
+      "official_url": "https://www.wortschatz.uni-leipzig.de/en/usage",
+      "snapshot_or_version": "official Turkish route returned no artifact on 2026-07-22",
+      "language": [
+        "tr"
+      ],
+      "category": [
+        "turkish_general_educational"
+      ],
+      "license": "download pages describe CC BY, but Turkish artifact and source rights are unresolved",
+      "license_evidence_url": "https://www.wortschatz.uni-leipzig.de/en/usage",
+      "source_cap_tokens": 0,
+      "quality_tier": "candidate",
+      "relationship_to_corpus_v3": "new candidate; mandatory V3 hash and near-duplicate exclusion",
+      "previous_approval_state": "rejected",
+      "approval_state": "rejected",
+      "official_evidence": {
+        "access_date": "2026-07-22",
+        "official_dataset_url": "https://wortschatz.uni-leipzig.de/en/download/Turkish",
+        "official_license_urls": [
+          "https://www.wortschatz.uni-leipzig.de/en/usage"
+        ],
+        "artifact_license": "download pages describe CC BY, but Turkish artifact and source rights are unresolved",
+        "content_license": "download pages describe CC BY, but Turkish artifact and source rights are unresolved",
+        "database_license": "not_applicable",
+        "exact_snapshot": "official Turkish route returned no artifact on 2026-07-22",
+        "download_mechanism": "official HTTPS artifact only",
+        "redistribution_rights": "must be explicit for every admitted artifact",
+        "modification_rights": "must permit normalization, filtering, and derived corpus records",
+        "attribution_requirements": "record creator, title, source URL, version, licence, and modifications",
+        "share_alike_requirements": "preserve artifact-level obligations; unresolved items excluded",
+        "noncommercial_restrictions": "NC material excluded",
+        "machine_learning_restrictions": "none identified in cited licence; approval still required",
+        "terms_of_service_restrictions": "official distribution route only; no scraping",
+        "rate_limits": "single-worker bounded acquisition only after separate authorization",
+        "checksum_or_manifest": "not_published; generate SHA-256 manifest before approval",
+        "official_file_inventory": "official Turkish route returned no artifact on 2026-07-22",
+        "expected_raw_size": "0-0 bytes planning range",
+        "expected_document_count": "no official Turkish artifact inventory",
+        "expected_language_distribution": {
+          "tr": 1.0
+        },
+        "update_status": "official evidence reviewed 2026-07-22"
+      },
+      "acceptance_gates": {
+        "artifact_identity_clear": true,
+        "snapshot_reproducible": true,
+        "license_explicit": true,
+        "machine_processing_permitted": false,
+        "acquisition_method_permitted": false,
+        "attribution_actionable": true,
+        "quality_suitable": false,
+        "overlap_manageable": false
+      },
+      "capacity": {
+        "optimistic_tokens": 0,
+        "expected_tokens": 0,
+        "conservative_tokens": 0,
+        "expected_rejection_percent": 55,
+        "confidence": "low",
+        "basis": "official metadata plus bounded planning assumptions; no files downloaded"
+      },
+      "risk": {
+        "pii": "low",
+        "private_data": "low",
+        "unsafe_content": "low",
+        "benchmark_contamination": "low",
+        "copyrighted_long_form": "high",
+        "boilerplate": "medium",
+        "spam": "low"
+      },
+      "resolution_steps": [],
+      "overlap_plan": {
+        "document_id": "stable official artifact plus internal path",
+        "url": "canonical official URL comparison",
+        "hash": "raw and normalized SHA-256",
+        "normalized_fingerprint": "exact normalized-text digest",
+        "near_dedup": "MinHash/LSH against admitted Corpus V3 and V4 records",
+        "ngram_sampling": "sampled long n-gram overlap audit",
+        "corpus_v3_wikimedia": "reject copied or translated Wikimedia passages",
+        "corpus_v3_python_docs": "reject copied Python documentation passages",
+        "benchmark": "benchmark name and prompt fingerprint denylist"
+      },
+      "phase5c_discovery": true,
+      "new_candidate_evidence": {
+        "stable_source_id": "leipzig_turkish_corpora_official_route",
+        "official_name": "Leipzig Corpora Collection Turkish download route",
+        "official_artifact_url": "https://wortschatz.uni-leipzig.de/en/download/Turkish",
+        "official_metadata_url": "https://www.wortschatz.uni-leipzig.de/en/usage",
+        "official_license_url": "https://www.wortschatz.uni-leipzig.de/en/usage",
+        "exact_snapshot_version_commit_date": "official Turkish route returned no artifact on 2026-07-22",
+        "language": [
+          "tr"
+        ],
+        "category": [
+          "turkish_general_educational"
+        ],
+        "artifact_type": "sentence corpus",
+        "expected_raw_bytes": {
+          "minimum": 0,
+          "maximum": 0,
+          "basis": "official metadata or conservative planning range"
+        },
+        "expected_documents_or_files": "no official Turkish artifact inventory",
+        "optimistic_tokens": 0,
+        "expected_tokens": 0,
+        "conservative_post_filter_unique_tokens": 0,
+        "loss_estimates_percent": {
+          "extraction": 8,
+          "language_filter": 3,
+          "pii_secret": 2,
+          "exact_dedup": 8,
+          "near_dedup": 12,
+          "corpus_v3_overlap": 8,
+          "contamination": 4,
+          "license_rejection": 10
+        },
+        "capacity_basis": "official metadata plus bounded planning assumptions; no acquisition",
+        "confidence_level": "low",
+        "evidence_access_date": "2026-07-22",
+        "attribution_text_or_template": "Creator; title/path; official URL; snapshot; licence; modifications",
+        "source_cap_tokens": 0,
+        "concentration_family": "leipzig_corpora",
+        "pii_risk": "low",
+        "benchmark_risk": "low",
+        "private_data_risk": "low",
+        "approval_status": "rejected",
+        "unresolved_questions": []
+      }
+    },
+    {
+      "id": "govinfo_federal_register_2025_xml",
+      "official_source_name": "GovInfo Federal Register 2025 XML bulk data",
+      "official_url": "https://www.govinfo.gov/developers",
+      "snapshot_or_version": "Federal Register 2025 XML bulk directory; exact file manifest unresolved",
+      "language": [
+        "en"
+      ],
+      "category": [
+        "english_general_educational",
+        "technical_documentation"
+      ],
+      "license": "US federal public-domain presumption with item-level third-party exceptions",
+      "license_evidence_url": "https://www.govinfo.gov/about/policies",
+      "source_cap_tokens": 30000000,
+      "quality_tier": "candidate",
+      "relationship_to_corpus_v3": "new candidate; mandatory V3 hash and near-duplicate exclusion",
+      "previous_approval_state": "conditional",
+      "approval_state": "conditional",
+      "official_evidence": {
+        "access_date": "2026-07-22",
+        "official_dataset_url": "https://www.govinfo.gov/bulkdata/FR/2025/",
+        "official_license_urls": [
+          "https://www.govinfo.gov/about/policies"
+        ],
+        "artifact_license": "US federal public-domain presumption with item-level third-party exceptions",
+        "content_license": "US federal public-domain presumption with item-level third-party exceptions",
+        "database_license": "not_applicable",
+        "exact_snapshot": "Federal Register 2025 XML bulk directory; exact file manifest unresolved",
+        "download_mechanism": "official HTTPS artifact only",
+        "redistribution_rights": "must be explicit for every admitted artifact",
+        "modification_rights": "must permit normalization, filtering, and derived corpus records",
+        "attribution_requirements": "record creator, title, source URL, version, licence, and modifications",
+        "share_alike_requirements": "preserve artifact-level obligations; unresolved items excluded",
+        "noncommercial_restrictions": "NC material excluded",
+        "machine_learning_restrictions": "none identified in cited licence; approval still required",
+        "terms_of_service_restrictions": "official distribution route only; no scraping",
+        "rate_limits": "single-worker bounded acquisition only after separate authorization",
+        "checksum_or_manifest": "not_published; generate SHA-256 manifest before approval",
+        "official_file_inventory": "Federal Register 2025 XML bulk directory; exact file manifest unresolved",
+        "expected_raw_size": "500000000-2000000000 bytes planning range",
+        "expected_document_count": "one XML package per issue; inventory to pin",
+        "expected_language_distribution": {
+          "en": 1.0
+        },
+        "update_status": "official evidence reviewed 2026-07-22"
+      },
+      "acceptance_gates": {
+        "artifact_identity_clear": false,
+        "snapshot_reproducible": false,
+        "license_explicit": true,
+        "machine_processing_permitted": false,
+        "acquisition_method_permitted": false,
+        "attribution_actionable": true,
+        "quality_suitable": false,
+        "overlap_manageable": false
+      },
+      "capacity": {
+        "optimistic_tokens": 45000000,
+        "expected_tokens": 30000000,
+        "conservative_tokens": 18000000,
+        "expected_rejection_percent": 55,
+        "confidence": "medium",
+        "basis": "official metadata plus bounded planning assumptions; no files downloaded"
+      },
+      "risk": {
+        "pii": "low",
+        "private_data": "low",
+        "unsafe_content": "low",
+        "benchmark_contamination": "low",
+        "copyrighted_long_form": "low",
+        "boilerplate": "medium",
+        "spam": "low"
+      },
+      "resolution_steps": [
+        "Pin exact 2025 file inventory, checksums, notices, and reusable text fields."
+      ],
+      "overlap_plan": {
+        "document_id": "stable official artifact plus internal path",
+        "url": "canonical official URL comparison",
+        "hash": "raw and normalized SHA-256",
+        "normalized_fingerprint": "exact normalized-text digest",
+        "near_dedup": "MinHash/LSH against admitted Corpus V3 and V4 records",
+        "ngram_sampling": "sampled long n-gram overlap audit",
+        "corpus_v3_wikimedia": "reject copied or translated Wikimedia passages",
+        "corpus_v3_python_docs": "reject copied Python documentation passages",
+        "benchmark": "benchmark name and prompt fingerprint denylist"
+      },
+      "phase5c_discovery": true,
+      "new_candidate_evidence": {
+        "stable_source_id": "govinfo_federal_register_2025_xml",
+        "official_name": "GovInfo Federal Register 2025 XML bulk data",
+        "official_artifact_url": "https://www.govinfo.gov/bulkdata/FR/2025/",
+        "official_metadata_url": "https://www.govinfo.gov/developers",
+        "official_license_url": "https://www.govinfo.gov/about/policies",
+        "exact_snapshot_version_commit_date": "Federal Register 2025 XML bulk directory; exact file manifest unresolved",
+        "language": [
+          "en"
+        ],
+        "category": [
+          "english_general_educational",
+          "technical_documentation"
+        ],
+        "artifact_type": "XML bulk data",
+        "expected_raw_bytes": {
+          "minimum": 500000000,
+          "maximum": 2000000000,
+          "basis": "official metadata or conservative planning range"
+        },
+        "expected_documents_or_files": "one XML package per issue; inventory to pin",
+        "optimistic_tokens": 45000000,
+        "expected_tokens": 30000000,
+        "conservative_post_filter_unique_tokens": 18000000,
+        "loss_estimates_percent": {
+          "extraction": 8,
+          "language_filter": 3,
+          "pii_secret": 2,
+          "exact_dedup": 8,
+          "near_dedup": 12,
+          "corpus_v3_overlap": 8,
+          "contamination": 4,
+          "license_rejection": 10
+        },
+        "capacity_basis": "official metadata plus bounded planning assumptions; no acquisition",
+        "confidence_level": "medium",
+        "evidence_access_date": "2026-07-22",
+        "attribution_text_or_template": "Creator; title/path; official URL; snapshot; licence; modifications",
+        "source_cap_tokens": 30000000,
+        "concentration_family": "us_federal_register",
+        "pii_risk": "low",
+        "benchmark_risk": "low",
+        "private_data_risk": "low",
+        "approval_status": "conditional",
+        "unresolved_questions": [
+          "Pin exact 2025 file inventory, checksums, notices, and reusable text fields."
+        ]
+      }
+    },
+    {
+      "id": "bccampus_ccby_textbook_allowlist",
+      "official_source_name": "BCcampus exact-edition CC BY textbook allowlist",
+      "official_url": "https://open.bccampus.ca/help/",
+      "snapshot_or_version": "exact edition allowlist unresolved",
+      "language": [
+        "en"
+      ],
+      "category": [
+        "english_general_educational"
+      ],
+      "license": "CC BY only after edition-level verification",
+      "license_evidence_url": "https://open.bccampus.ca/create-open-textbooks/creative-commons-open-licences-for-authors/",
+      "source_cap_tokens": 30000000,
+      "quality_tier": "candidate",
+      "relationship_to_corpus_v3": "new candidate; mandatory V3 hash and near-duplicate exclusion",
+      "previous_approval_state": "conditional",
+      "approval_state": "conditional",
+      "official_evidence": {
+        "access_date": "2026-07-22",
+        "official_dataset_url": "https://open.bccampus.ca/browse-our-collection/find-open-textbooks/",
+        "official_license_urls": [
+          "https://open.bccampus.ca/create-open-textbooks/creative-commons-open-licences-for-authors/"
+        ],
+        "artifact_license": "CC BY only after edition-level verification",
+        "content_license": "CC BY only after edition-level verification",
+        "database_license": "not_applicable",
+        "exact_snapshot": "exact edition allowlist unresolved",
+        "download_mechanism": "official HTTPS artifact only",
+        "redistribution_rights": "must be explicit for every admitted artifact",
+        "modification_rights": "must permit normalization, filtering, and derived corpus records",
+        "attribution_requirements": "record creator, title, source URL, version, licence, and modifications",
+        "share_alike_requirements": "preserve artifact-level obligations; unresolved items excluded",
+        "noncommercial_restrictions": "NC material excluded",
+        "machine_learning_restrictions": "none identified in cited licence; approval still required",
+        "terms_of_service_restrictions": "official distribution route only; no scraping",
+        "rate_limits": "single-worker bounded acquisition only after separate authorization",
+        "checksum_or_manifest": "not_published; generate SHA-256 manifest before approval",
+        "official_file_inventory": "exact edition allowlist unresolved",
+        "expected_raw_size": "1000000000-8000000000 bytes planning range",
+        "expected_document_count": "edition-level inventory required",
+        "expected_language_distribution": {
+          "en": 1.0
+        },
+        "update_status": "official evidence reviewed 2026-07-22"
+      },
+      "acceptance_gates": {
+        "artifact_identity_clear": false,
+        "snapshot_reproducible": false,
+        "license_explicit": true,
+        "machine_processing_permitted": false,
+        "acquisition_method_permitted": false,
+        "attribution_actionable": true,
+        "quality_suitable": false,
+        "overlap_manageable": false
+      },
+      "capacity": {
+        "optimistic_tokens": 40000000,
+        "expected_tokens": 25000000,
+        "conservative_tokens": 15000000,
+        "expected_rejection_percent": 55,
+        "confidence": "low",
+        "basis": "official metadata plus bounded planning assumptions; no files downloaded"
+      },
+      "risk": {
+        "pii": "low",
+        "private_data": "low",
+        "unsafe_content": "low",
+        "benchmark_contamination": "low",
+        "copyrighted_long_form": "medium",
+        "boilerplate": "medium",
+        "spam": "low"
+      },
+      "resolution_steps": [
+        "Pin exact CC BY editions and remove third-party media and exceptions."
+      ],
+      "overlap_plan": {
+        "document_id": "stable official artifact plus internal path",
+        "url": "canonical official URL comparison",
+        "hash": "raw and normalized SHA-256",
+        "normalized_fingerprint": "exact normalized-text digest",
+        "near_dedup": "MinHash/LSH against admitted Corpus V3 and V4 records",
+        "ngram_sampling": "sampled long n-gram overlap audit",
+        "corpus_v3_wikimedia": "reject copied or translated Wikimedia passages",
+        "corpus_v3_python_docs": "reject copied Python documentation passages",
+        "benchmark": "benchmark name and prompt fingerprint denylist"
+      },
+      "phase5c_discovery": true,
+      "new_candidate_evidence": {
+        "stable_source_id": "bccampus_ccby_textbook_allowlist",
+        "official_name": "BCcampus exact-edition CC BY textbook allowlist",
+        "official_artifact_url": "https://open.bccampus.ca/browse-our-collection/find-open-textbooks/",
+        "official_metadata_url": "https://open.bccampus.ca/help/",
+        "official_license_url": "https://open.bccampus.ca/create-open-textbooks/creative-commons-open-licences-for-authors/",
+        "exact_snapshot_version_commit_date": "exact edition allowlist unresolved",
+        "language": [
+          "en"
+        ],
+        "category": [
+          "english_general_educational"
+        ],
+        "artifact_type": "PDF/EPUB/HTML textbooks",
+        "expected_raw_bytes": {
+          "minimum": 1000000000,
+          "maximum": 8000000000,
+          "basis": "official metadata or conservative planning range"
+        },
+        "expected_documents_or_files": "edition-level inventory required",
+        "optimistic_tokens": 40000000,
+        "expected_tokens": 25000000,
+        "conservative_post_filter_unique_tokens": 15000000,
+        "loss_estimates_percent": {
+          "extraction": 8,
+          "language_filter": 3,
+          "pii_secret": 2,
+          "exact_dedup": 8,
+          "near_dedup": 12,
+          "corpus_v3_overlap": 8,
+          "contamination": 4,
+          "license_rejection": 10
+        },
+        "capacity_basis": "official metadata plus bounded planning assumptions; no acquisition",
+        "confidence_level": "low",
+        "evidence_access_date": "2026-07-22",
+        "attribution_text_or_template": "Creator; title/path; official URL; snapshot; licence; modifications",
+        "source_cap_tokens": 30000000,
+        "concentration_family": "bccampus",
+        "pii_risk": "low",
+        "benchmark_risk": "low",
+        "private_data_risk": "low",
+        "approval_status": "conditional",
+        "unresolved_questions": [
+          "Pin exact CC BY editions and remove third-party media and exceptions."
+        ]
+      }
+    },
+    {
+      "id": "plos_ccby_jats_allowlist",
+      "official_source_name": "PLOS CC BY JATS article allowlist",
+      "official_url": "https://plos.org/terms-of-use/",
+      "snapshot_or_version": "exact article and licence allowlist unresolved",
+      "language": [
+        "en"
+      ],
+      "category": [
+        "technical_documentation"
+      ],
+      "license": "generally CC BY or comparable; item-level notices control",
+      "license_evidence_url": "https://plos.org/terms-of-use/",
+      "source_cap_tokens": 30000000,
+      "quality_tier": "candidate",
+      "relationship_to_corpus_v3": "new candidate; mandatory V3 hash and near-duplicate exclusion",
+      "previous_approval_state": "conditional",
+      "approval_state": "conditional",
+      "official_evidence": {
+        "access_date": "2026-07-22",
+        "official_dataset_url": "https://api.plos.org/",
+        "official_license_urls": [
+          "https://plos.org/terms-of-use/"
+        ],
+        "artifact_license": "generally CC BY or comparable; item-level notices control",
+        "content_license": "generally CC BY or comparable; item-level notices control",
+        "database_license": "not_applicable",
+        "exact_snapshot": "exact article and licence allowlist unresolved",
+        "download_mechanism": "official HTTPS artifact only",
+        "redistribution_rights": "must be explicit for every admitted artifact",
+        "modification_rights": "must permit normalization, filtering, and derived corpus records",
+        "attribution_requirements": "record creator, title, source URL, version, licence, and modifications",
+        "share_alike_requirements": "preserve artifact-level obligations; unresolved items excluded",
+        "noncommercial_restrictions": "NC material excluded",
+        "machine_learning_restrictions": "none identified in cited licence; approval still required",
+        "terms_of_service_restrictions": "official distribution route only; no scraping",
+        "rate_limits": "single-worker bounded acquisition only after separate authorization",
+        "checksum_or_manifest": "not_published; generate SHA-256 manifest before approval",
+        "official_file_inventory": "exact article and licence allowlist unresolved",
+        "expected_raw_size": "2000000000-12000000000 bytes planning range",
+        "expected_document_count": "article inventory required",
+        "expected_language_distribution": {
+          "en": 1.0
+        },
+        "update_status": "official evidence reviewed 2026-07-22"
+      },
+      "acceptance_gates": {
+        "artifact_identity_clear": false,
+        "snapshot_reproducible": false,
+        "license_explicit": true,
+        "machine_processing_permitted": false,
+        "acquisition_method_permitted": false,
+        "attribution_actionable": true,
+        "quality_suitable": false,
+        "overlap_manageable": false
+      },
+      "capacity": {
+        "optimistic_tokens": 55000000,
+        "expected_tokens": 35000000,
+        "conservative_tokens": 20000000,
+        "expected_rejection_percent": 55,
+        "confidence": "low",
+        "basis": "official metadata plus bounded planning assumptions; no files downloaded"
+      },
+      "risk": {
+        "pii": "low",
+        "private_data": "low",
+        "unsafe_content": "low",
+        "benchmark_contamination": "medium",
+        "copyrighted_long_form": "medium",
+        "boilerplate": "medium",
+        "spam": "low"
+      },
+      "resolution_steps": [
+        "Pin exact CC BY article IDs, JATS checksums, corrections, and exclusions."
+      ],
+      "overlap_plan": {
+        "document_id": "stable official artifact plus internal path",
+        "url": "canonical official URL comparison",
+        "hash": "raw and normalized SHA-256",
+        "normalized_fingerprint": "exact normalized-text digest",
+        "near_dedup": "MinHash/LSH against admitted Corpus V3 and V4 records",
+        "ngram_sampling": "sampled long n-gram overlap audit",
+        "corpus_v3_wikimedia": "reject copied or translated Wikimedia passages",
+        "corpus_v3_python_docs": "reject copied Python documentation passages",
+        "benchmark": "benchmark name and prompt fingerprint denylist"
+      },
+      "phase5c_discovery": true,
+      "new_candidate_evidence": {
+        "stable_source_id": "plos_ccby_jats_allowlist",
+        "official_name": "PLOS CC BY JATS article allowlist",
+        "official_artifact_url": "https://api.plos.org/",
+        "official_metadata_url": "https://plos.org/terms-of-use/",
+        "official_license_url": "https://plos.org/terms-of-use/",
+        "exact_snapshot_version_commit_date": "exact article and licence allowlist unresolved",
+        "language": [
+          "en"
+        ],
+        "category": [
+          "technical_documentation"
+        ],
+        "artifact_type": "JATS XML/API records",
+        "expected_raw_bytes": {
+          "minimum": 2000000000,
+          "maximum": 12000000000,
+          "basis": "official metadata or conservative planning range"
+        },
+        "expected_documents_or_files": "article inventory required",
+        "optimistic_tokens": 55000000,
+        "expected_tokens": 35000000,
+        "conservative_post_filter_unique_tokens": 20000000,
+        "loss_estimates_percent": {
+          "extraction": 8,
+          "language_filter": 3,
+          "pii_secret": 2,
+          "exact_dedup": 8,
+          "near_dedup": 12,
+          "corpus_v3_overlap": 8,
+          "contamination": 4,
+          "license_rejection": 10
+        },
+        "capacity_basis": "official metadata plus bounded planning assumptions; no acquisition",
+        "confidence_level": "low",
+        "evidence_access_date": "2026-07-22",
+        "attribution_text_or_template": "Creator; title/path; official URL; snapshot; licence; modifications",
+        "source_cap_tokens": 30000000,
+        "concentration_family": "plos",
+        "pii_risk": "low",
+        "benchmark_risk": "medium",
+        "private_data_risk": "low",
+        "approval_status": "conditional",
+        "unresolved_questions": [
+          "Pin exact CC BY article IDs, JATS checksums, corrections, and exclusions."
+        ]
+      }
+    },
+    {
+      "id": "go_1_26_5_source_docs",
+      "official_source_name": "Go 1.26.5 source and documentation",
+      "official_url": "https://go.dev/dl/",
+      "snapshot_or_version": "go1.26.5.src.tar.gz",
+      "language": [
+        "en",
+        "code"
+      ],
+      "category": [
+        "technical_documentation",
+        "code_structured"
+      ],
+      "license": "Go project BSD-style licence with path-level notices",
+      "license_evidence_url": "https://go.dev/LICENSE",
+      "source_cap_tokens": 10000000,
+      "quality_tier": "candidate",
+      "relationship_to_corpus_v3": "new candidate; mandatory V3 hash and near-duplicate exclusion",
+      "previous_approval_state": "conditional",
+      "approval_state": "conditional",
+      "official_evidence": {
+        "access_date": "2026-07-22",
+        "official_dataset_url": "https://go.dev/dl/go1.26.5.src.tar.gz",
+        "official_license_urls": [
+          "https://go.dev/LICENSE"
+        ],
+        "artifact_license": "Go project BSD-style licence with path-level notices",
+        "content_license": "Go project BSD-style licence with path-level notices",
+        "database_license": "not_applicable",
+        "exact_snapshot": "go1.26.5.src.tar.gz",
+        "download_mechanism": "official HTTPS artifact only",
+        "redistribution_rights": "must be explicit for every admitted artifact",
+        "modification_rights": "must permit normalization, filtering, and derived corpus records",
+        "attribution_requirements": "record creator, title, source URL, version, licence, and modifications",
+        "share_alike_requirements": "preserve artifact-level obligations; unresolved items excluded",
+        "noncommercial_restrictions": "NC material excluded",
+        "machine_learning_restrictions": "none identified in cited licence; approval still required",
+        "terms_of_service_restrictions": "official distribution route only; no scraping",
+        "rate_limits": "single-worker bounded acquisition only after separate authorization",
+        "checksum_or_manifest": "sha256:495be4bc87176ac567392e5b4116abd98466d33d7b49d41e764ccc6976b2dc42",
+        "official_file_inventory": "go1.26.5.src.tar.gz",
+        "expected_raw_size": "33000000-33000000 bytes planning range",
+        "expected_document_count": "archive file inventory after checksum verification",
+        "expected_language_distribution": {
+          "en": 0.5,
+          "code": 0.5
+        },
+        "update_status": "official evidence reviewed 2026-07-22"
+      },
+      "acceptance_gates": {
+        "artifact_identity_clear": true,
+        "snapshot_reproducible": true,
+        "license_explicit": true,
+        "machine_processing_permitted": false,
+        "acquisition_method_permitted": false,
+        "attribution_actionable": true,
+        "quality_suitable": false,
+        "overlap_manageable": false
+      },
+      "capacity": {
+        "optimistic_tokens": 8000000,
+        "expected_tokens": 5000000,
+        "conservative_tokens": 3000000,
+        "expected_rejection_percent": 55,
+        "confidence": "medium",
+        "basis": "official metadata plus bounded planning assumptions; no files downloaded"
+      },
+      "risk": {
+        "pii": "low",
+        "private_data": "low",
+        "unsafe_content": "low",
+        "benchmark_contamination": "low",
+        "copyrighted_long_form": "low",
+        "boilerplate": "medium",
+        "spam": "low"
+      },
+      "resolution_steps": [
+        "Verify archive checksum, path licences, generated files, and final filtered capacity."
+      ],
+      "overlap_plan": {
+        "document_id": "stable official artifact plus internal path",
+        "url": "canonical official URL comparison",
+        "hash": "raw and normalized SHA-256",
+        "normalized_fingerprint": "exact normalized-text digest",
+        "near_dedup": "MinHash/LSH against admitted Corpus V3 and V4 records",
+        "ngram_sampling": "sampled long n-gram overlap audit",
+        "corpus_v3_wikimedia": "reject copied or translated Wikimedia passages",
+        "corpus_v3_python_docs": "reject copied Python documentation passages",
+        "benchmark": "benchmark name and prompt fingerprint denylist"
+      },
+      "phase5c_discovery": true,
+      "new_candidate_evidence": {
+        "stable_source_id": "go_1_26_5_source_docs",
+        "official_name": "Go 1.26.5 source and documentation",
+        "official_artifact_url": "https://go.dev/dl/go1.26.5.src.tar.gz",
+        "official_metadata_url": "https://go.dev/dl/",
+        "official_license_url": "https://go.dev/LICENSE",
+        "exact_snapshot_version_commit_date": "go1.26.5.src.tar.gz",
+        "language": [
+          "en",
+          "code"
+        ],
+        "category": [
+          "technical_documentation",
+          "code_structured"
+        ],
+        "artifact_type": "source tarball",
+        "expected_raw_bytes": {
+          "minimum": 33000000,
+          "maximum": 33000000,
+          "basis": "official metadata or conservative planning range"
+        },
+        "expected_documents_or_files": "archive file inventory after checksum verification",
+        "optimistic_tokens": 8000000,
+        "expected_tokens": 5000000,
+        "conservative_post_filter_unique_tokens": 3000000,
+        "loss_estimates_percent": {
+          "extraction": 8,
+          "language_filter": 3,
+          "pii_secret": 2,
+          "exact_dedup": 8,
+          "near_dedup": 12,
+          "corpus_v3_overlap": 8,
+          "contamination": 4,
+          "license_rejection": 10
+        },
+        "capacity_basis": "official metadata plus bounded planning assumptions; no acquisition",
+        "confidence_level": "medium",
+        "evidence_access_date": "2026-07-22",
+        "attribution_text_or_template": "Creator; title/path; official URL; snapshot; licence; modifications",
+        "source_cap_tokens": 10000000,
+        "concentration_family": "go_project",
+        "pii_risk": "low",
+        "benchmark_risk": "low",
+        "private_data_risk": "low",
+        "approval_status": "conditional",
+        "unresolved_questions": [
+          "Verify archive checksum, path licences, generated files, and final filtered capacity."
+        ]
+      },
+      "code_policy": {
+        "license_scope": "exact release/repository licence plus path-level exceptions",
+        "language_mix": "documentation prose and source code measured separately",
+        "exclude_generated_vendor_minified": true,
+        "exclude_test_fixtures": true,
+        "secret_scan": true,
+        "pii_scan": true,
+        "dependency_metadata": "record dependency and bundled third-party notices",
+        "fork_dedup": "repository and normalized-file hash",
+        "benchmark_solution_filter": "deny benchmark and challenge solutions",
+        "max_files_per_project": 20000,
+        "max_code_to_natural_language_ratio": 0.45
+      }
+    },
+    {
+      "id": "kubernetes_website_f2987ba",
+      "official_source_name": "Kubernetes documentation website",
+      "official_url": "https://github.com/kubernetes/website",
+      "snapshot_or_version": "git commit f2987ba1cceaa85fcd44cd1a221010d745d7335c",
+      "language": [
+        "en",
+        "code"
+      ],
+      "category": [
+        "technical_documentation",
+        "code_structured"
+      ],
+      "license": "CC BY 4.0 for website content subject to path-level notices",
+      "license_evidence_url": "https://github.com/kubernetes/website/blob/main/LICENSE",
+      "source_cap_tokens": 10000000,
+      "quality_tier": "candidate",
+      "relationship_to_corpus_v3": "new candidate; mandatory V3 hash and near-duplicate exclusion",
+      "previous_approval_state": "conditional",
+      "approval_state": "conditional",
+      "official_evidence": {
+        "access_date": "2026-07-22",
+        "official_dataset_url": "https://github.com/kubernetes/website",
+        "official_license_urls": [
+          "https://github.com/kubernetes/website/blob/main/LICENSE"
+        ],
+        "artifact_license": "CC BY 4.0 for website content subject to path-level notices",
+        "content_license": "CC BY 4.0 for website content subject to path-level notices",
+        "database_license": "not_applicable",
+        "exact_snapshot": "git commit f2987ba1cceaa85fcd44cd1a221010d745d7335c",
+        "download_mechanism": "official HTTPS artifact only",
+        "redistribution_rights": "must be explicit for every admitted artifact",
+        "modification_rights": "must permit normalization, filtering, and derived corpus records",
+        "attribution_requirements": "record creator, title, source URL, version, licence, and modifications",
+        "share_alike_requirements": "preserve artifact-level obligations; unresolved items excluded",
+        "noncommercial_restrictions": "NC material excluded",
+        "machine_learning_restrictions": "none identified in cited licence; approval still required",
+        "terms_of_service_restrictions": "official distribution route only; no scraping",
+        "rate_limits": "single-worker bounded acquisition only after separate authorization",
+        "checksum_or_manifest": "not_published; generate SHA-256 manifest before approval",
+        "official_file_inventory": "git commit f2987ba1cceaa85fcd44cd1a221010d745d7335c",
+        "expected_raw_size": "200000000-1500000000 bytes planning range",
+        "expected_document_count": "repository paths at pinned commit",
+        "expected_language_distribution": {
+          "en": 0.5,
+          "code": 0.5
+        },
+        "update_status": "official evidence reviewed 2026-07-22"
+      },
+      "acceptance_gates": {
+        "artifact_identity_clear": true,
+        "snapshot_reproducible": true,
+        "license_explicit": true,
+        "machine_processing_permitted": false,
+        "acquisition_method_permitted": false,
+        "attribution_actionable": true,
+        "quality_suitable": false,
+        "overlap_manageable": false
+      },
+      "capacity": {
+        "optimistic_tokens": 15000000,
+        "expected_tokens": 10000000,
+        "conservative_tokens": 5000000,
+        "expected_rejection_percent": 55,
+        "confidence": "medium",
+        "basis": "official metadata plus bounded planning assumptions; no files downloaded"
+      },
+      "risk": {
+        "pii": "low",
+        "private_data": "low",
+        "unsafe_content": "low",
+        "benchmark_contamination": "low",
+        "copyrighted_long_form": "low",
+        "boilerplate": "medium",
+        "spam": "low"
+      },
+      "resolution_steps": [
+        "Pin archive hash and exclude translations, generated files, vendored assets, and benchmark-like tutorials."
+      ],
+      "overlap_plan": {
+        "document_id": "stable official artifact plus internal path",
+        "url": "canonical official URL comparison",
+        "hash": "raw and normalized SHA-256",
+        "normalized_fingerprint": "exact normalized-text digest",
+        "near_dedup": "MinHash/LSH against admitted Corpus V3 and V4 records",
+        "ngram_sampling": "sampled long n-gram overlap audit",
+        "corpus_v3_wikimedia": "reject copied or translated Wikimedia passages",
+        "corpus_v3_python_docs": "reject copied Python documentation passages",
+        "benchmark": "benchmark name and prompt fingerprint denylist"
+      },
+      "phase5c_discovery": true,
+      "new_candidate_evidence": {
+        "stable_source_id": "kubernetes_website_f2987ba",
+        "official_name": "Kubernetes documentation website",
+        "official_artifact_url": "https://github.com/kubernetes/website",
+        "official_metadata_url": "https://github.com/kubernetes/website",
+        "official_license_url": "https://github.com/kubernetes/website/blob/main/LICENSE",
+        "exact_snapshot_version_commit_date": "git commit f2987ba1cceaa85fcd44cd1a221010d745d7335c",
+        "language": [
+          "en",
+          "code"
+        ],
+        "category": [
+          "technical_documentation",
+          "code_structured"
+        ],
+        "artifact_type": "Git repository",
+        "expected_raw_bytes": {
+          "minimum": 200000000,
+          "maximum": 1500000000,
+          "basis": "official metadata or conservative planning range"
+        },
+        "expected_documents_or_files": "repository paths at pinned commit",
+        "optimistic_tokens": 15000000,
+        "expected_tokens": 10000000,
+        "conservative_post_filter_unique_tokens": 5000000,
+        "loss_estimates_percent": {
+          "extraction": 8,
+          "language_filter": 3,
+          "pii_secret": 2,
+          "exact_dedup": 8,
+          "near_dedup": 12,
+          "corpus_v3_overlap": 8,
+          "contamination": 4,
+          "license_rejection": 10
+        },
+        "capacity_basis": "official metadata plus bounded planning assumptions; no acquisition",
+        "confidence_level": "medium",
+        "evidence_access_date": "2026-07-22",
+        "attribution_text_or_template": "Creator; title/path; official URL; snapshot; licence; modifications",
+        "source_cap_tokens": 10000000,
+        "concentration_family": "kubernetes_project",
+        "pii_risk": "low",
+        "benchmark_risk": "low",
+        "private_data_risk": "low",
+        "approval_status": "conditional",
+        "unresolved_questions": [
+          "Pin archive hash and exclude translations, generated files, vendored assets, and benchmark-like tutorials."
+        ]
+      },
+      "code_policy": {
+        "license_scope": "exact release/repository licence plus path-level exceptions",
+        "language_mix": "documentation prose and source code measured separately",
+        "exclude_generated_vendor_minified": true,
+        "exclude_test_fixtures": true,
+        "secret_scan": true,
+        "pii_scan": true,
+        "dependency_metadata": "record dependency and bundled third-party notices",
+        "fork_dedup": "repository and normalized-file hash",
+        "benchmark_solution_filter": "deny benchmark and challenge solutions",
+        "max_files_per_project": 20000,
+        "max_code_to_natural_language_ratio": 0.45
+      }
+    },
+    {
+      "id": "nodejs_24_18_0_source_docs",
+      "official_source_name": "Node.js 24.18.0 source and documentation",
+      "official_url": "https://nodejs.org/en/blog/release/v24.18.0",
+      "snapshot_or_version": "node-v24.18.0.tar.xz",
+      "language": [
+        "en",
+        "code"
+      ],
+      "category": [
+        "technical_documentation",
+        "code_structured"
+      ],
+      "license": "MIT root licence plus bundled third-party component licences",
+      "license_evidence_url": "https://github.com/nodejs/node/blob/v24.18.0/LICENSE",
+      "source_cap_tokens": 10000000,
+      "quality_tier": "candidate",
+      "relationship_to_corpus_v3": "new candidate; mandatory V3 hash and near-duplicate exclusion",
+      "previous_approval_state": "conditional",
+      "approval_state": "conditional",
+      "official_evidence": {
+        "access_date": "2026-07-22",
+        "official_dataset_url": "https://nodejs.org/dist/v24.18.0/node-v24.18.0.tar.xz",
+        "official_license_urls": [
+          "https://github.com/nodejs/node/blob/v24.18.0/LICENSE"
+        ],
+        "artifact_license": "MIT root licence plus bundled third-party component licences",
+        "content_license": "MIT root licence plus bundled third-party component licences",
+        "database_license": "not_applicable",
+        "exact_snapshot": "node-v24.18.0.tar.xz",
+        "download_mechanism": "official HTTPS artifact only",
+        "redistribution_rights": "must be explicit for every admitted artifact",
+        "modification_rights": "must permit normalization, filtering, and derived corpus records",
+        "attribution_requirements": "record creator, title, source URL, version, licence, and modifications",
+        "share_alike_requirements": "preserve artifact-level obligations; unresolved items excluded",
+        "noncommercial_restrictions": "NC material excluded",
+        "machine_learning_restrictions": "none identified in cited licence; approval still required",
+        "terms_of_service_restrictions": "official distribution route only; no scraping",
+        "rate_limits": "single-worker bounded acquisition only after separate authorization",
+        "checksum_or_manifest": "sha256:e94afde24db08e0c564ee7110a2d5aab51ee0059382c9fd8233c54eec47b28f9",
+        "official_file_inventory": "node-v24.18.0.tar.xz",
+        "expected_raw_size": "30000000-30000000 bytes planning range",
+        "expected_document_count": "archive paths after third-party inventory",
+        "expected_language_distribution": {
+          "en": 0.5,
+          "code": 0.5
+        },
+        "update_status": "official evidence reviewed 2026-07-22"
+      },
+      "acceptance_gates": {
+        "artifact_identity_clear": true,
+        "snapshot_reproducible": true,
+        "license_explicit": true,
+        "machine_processing_permitted": false,
+        "acquisition_method_permitted": false,
+        "attribution_actionable": true,
+        "quality_suitable": false,
+        "overlap_manageable": false
+      },
+      "capacity": {
+        "optimistic_tokens": 18000000,
+        "expected_tokens": 12000000,
+        "conservative_tokens": 6000000,
+        "expected_rejection_percent": 55,
+        "confidence": "medium",
+        "basis": "official metadata plus bounded planning assumptions; no files downloaded"
+      },
+      "risk": {
+        "pii": "low",
+        "private_data": "low",
+        "unsafe_content": "low",
+        "benchmark_contamination": "low",
+        "copyrighted_long_form": "low",
+        "boilerplate": "medium",
+        "spam": "low"
+      },
+      "resolution_steps": [
+        "Resolve bundled third-party licences and select only eligible documentation/source paths."
+      ],
+      "overlap_plan": {
+        "document_id": "stable official artifact plus internal path",
+        "url": "canonical official URL comparison",
+        "hash": "raw and normalized SHA-256",
+        "normalized_fingerprint": "exact normalized-text digest",
+        "near_dedup": "MinHash/LSH against admitted Corpus V3 and V4 records",
+        "ngram_sampling": "sampled long n-gram overlap audit",
+        "corpus_v3_wikimedia": "reject copied or translated Wikimedia passages",
+        "corpus_v3_python_docs": "reject copied Python documentation passages",
+        "benchmark": "benchmark name and prompt fingerprint denylist"
+      },
+      "phase5c_discovery": true,
+      "new_candidate_evidence": {
+        "stable_source_id": "nodejs_24_18_0_source_docs",
+        "official_name": "Node.js 24.18.0 source and documentation",
+        "official_artifact_url": "https://nodejs.org/dist/v24.18.0/node-v24.18.0.tar.xz",
+        "official_metadata_url": "https://nodejs.org/en/blog/release/v24.18.0",
+        "official_license_url": "https://github.com/nodejs/node/blob/v24.18.0/LICENSE",
+        "exact_snapshot_version_commit_date": "node-v24.18.0.tar.xz",
+        "language": [
+          "en",
+          "code"
+        ],
+        "category": [
+          "technical_documentation",
+          "code_structured"
+        ],
+        "artifact_type": "source tarball",
+        "expected_raw_bytes": {
+          "minimum": 30000000,
+          "maximum": 30000000,
+          "basis": "official metadata or conservative planning range"
+        },
+        "expected_documents_or_files": "archive paths after third-party inventory",
+        "optimistic_tokens": 18000000,
+        "expected_tokens": 12000000,
+        "conservative_post_filter_unique_tokens": 6000000,
+        "loss_estimates_percent": {
+          "extraction": 8,
+          "language_filter": 3,
+          "pii_secret": 2,
+          "exact_dedup": 8,
+          "near_dedup": 12,
+          "corpus_v3_overlap": 8,
+          "contamination": 4,
+          "license_rejection": 10
+        },
+        "capacity_basis": "official metadata plus bounded planning assumptions; no acquisition",
+        "confidence_level": "medium",
+        "evidence_access_date": "2026-07-22",
+        "attribution_text_or_template": "Creator; title/path; official URL; snapshot; licence; modifications",
+        "source_cap_tokens": 10000000,
+        "concentration_family": "nodejs_project",
+        "pii_risk": "low",
+        "benchmark_risk": "low",
+        "private_data_risk": "low",
+        "approval_status": "conditional",
+        "unresolved_questions": [
+          "Resolve bundled third-party licences and select only eligible documentation/source paths."
+        ]
+      },
+      "code_policy": {
+        "license_scope": "exact release/repository licence plus path-level exceptions",
+        "language_mix": "documentation prose and source code measured separately",
+        "exclude_generated_vendor_minified": true,
+        "exclude_test_fixtures": true,
+        "secret_scan": true,
+        "pii_scan": true,
+        "dependency_metadata": "record dependency and bundled third-party notices",
+        "fork_dedup": "repository and normalized-file hash",
+        "benchmark_solution_filter": "deny benchmark and challenge solutions",
+        "max_files_per_project": 20000,
+        "max_code_to_natural_language_ratio": 0.45
+      }
     }
-  ]
+  ],
+  "phase5b_predecessor": {
+    "registry_id": "corpus-v4-phase5b-official-evidence-20260722",
+    "sha256": "6acca0c1f648d51121b775e1244190549c8e4bd9dbd109bd500f611f22a907c1"
+  },
+  "phase5c_resolution_complete": true,
+  "conditional_capacity_counted_as_approved": false,
+  "acquisition_enabled": false,
+  "source_lock_classification": "PARTIALLY LOCKED",
+  "source_lock_decision": "DARKMIND V2 CORPUS V4 SOURCE PLAN REQUIRES ADDITIONAL OFFICIAL SOURCES BEFORE ACQUISITION",
+  "candidate_counts": {
+    "total": 28,
+    "approved": 3,
+    "conditional": 12,
+    "deferred": 6,
+    "rejected": 7,
+    "new": 8,
+    "phase5b_conditionals_resolved": 11
+  },
+  "capacity_model": {
+    "formal_thresholds": {
+      "expected_tokens": 250000000,
+      "conservative_tokens": 200000000
+    },
+    "preferred_reserve_thresholds": {
+      "expected_tokens": 275000000,
+      "conservative_tokens": 220000000
+    },
+    "approved": {
+      "expected_tokens": 10000000,
+      "conservative_tokens": 6300000
+    },
+    "formal_deficit": {
+      "expected_tokens": 240000000,
+      "conservative_tokens": 193700000
+    },
+    "preferred_reserve_deficit": {
+      "expected_tokens": 265000000,
+      "conservative_tokens": 213700000
+    },
+    "conditional_capacity_is_scenario_only": true
+  },
+  "exclusive_category_allocation": {
+    "turkish_general_educational": {
+      "target": 72000000,
+      "expected": 0,
+      "conservative": 0,
+      "deficit": 72000000,
+      "reserve_tokens": -72000000,
+      "locked": false
+    },
+    "english_general_educational": {
+      "target": 50000000,
+      "expected": 0,
+      "conservative": 0,
+      "deficit": 50000000,
+      "reserve_tokens": -50000000,
+      "locked": false
+    },
+    "technical_documentation": {
+      "target": 42000000,
+      "expected": 6300000,
+      "conservative": 3800000,
+      "deficit": 38200000,
+      "reserve_tokens": -38200000,
+      "locked": false
+    },
+    "code_structured_text": {
+      "target": 26000000,
+      "expected": 3700000,
+      "conservative": 2500000,
+      "deficit": 23500000,
+      "reserve_tokens": -23500000,
+      "locked": false
+    },
+    "controlled_bilingual": {
+      "target": 10000000,
+      "expected": 0,
+      "conservative": 0,
+      "deficit": 10000000,
+      "reserve_tokens": -10000000,
+      "locked": false
+    }
+  },
+  "storage_projection": {
+    "approved_raw_min_bytes": 272412570,
+    "approved_raw_max_bytes": 1222412570,
+    "fits_external_ssd_plan": true,
+    "conditional_sources_excluded": true
+  }
 }

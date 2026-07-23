@@ -194,6 +194,59 @@ def classify_source_lock(
     return "NOT LOCKED"
 
 
+def validate_exclusive_category_allocation(sources: list[dict[str, Any]]) -> dict[str, int]:
+    """Ensure approved capacity is counted in exactly one category."""
+    expected = 0
+    conservative = 0
+    for source in sources:
+        if source.get("approval_state") != "approved":
+            continue
+        allocations = source.get("approved_category_capacity", {})
+        allocated_expected = sum(item["expected_tokens"] for item in allocations.values())
+        allocated_conservative = sum(item["conservative_tokens"] for item in allocations.values())
+        if allocated_expected != source["capacity"]["expected_tokens"]:
+            raise ValueError(f"approved expected capacity is not exclusively allocated: {source['id']}")
+        if allocated_conservative != source["capacity"]["conservative_tokens"]:
+            raise ValueError(f"approved conservative capacity is not exclusively allocated: {source['id']}")
+        expected += allocated_expected
+        conservative += allocated_conservative
+    return {"expected_tokens": expected, "conservative_tokens": conservative}
+
+
+def classify_phase5c_source_lock(
+    approved_expected: int,
+    approved_conservative: int,
+    categories: dict[str, dict[str, Any]],
+    concentration_passes: bool,
+    attribution_complete: bool,
+    acquisition_reproducible: bool,
+    storage_feasible: bool,
+    material_progress: bool = True,
+) -> str:
+    """Apply the Phase 5C four-way source-lock decision policy."""
+    categories_locked = all(item.get("locked") is True for item in categories.values())
+    formal_lock = (
+        approved_expected >= 250_000_000
+        and approved_conservative >= 200_000_000
+        and categories_locked
+        and concentration_passes
+        and attribution_complete
+        and acquisition_reproducible
+        and storage_feasible
+    )
+    if formal_lock:
+        narrow_category_reserve = any(
+            item.get("conservative", 0) - item.get("target", 0) < item.get("target", 0) * 0.10
+            for item in categories.values()
+        )
+        if approved_conservative < 220_000_000 or narrow_category_reserve:
+            return "LOCKED WITH LIMITED RESERVE"
+        return "LOCKED"
+    if material_progress:
+        return "PARTIALLY LOCKED"
+    return "NOT LOCKED"
+
+
 def assert_planning_only(payload: dict[str, Any]) -> None:
     if payload.get("planning_only") is not True:
         raise ValueError("Phase 5B artifact must be planning-only")

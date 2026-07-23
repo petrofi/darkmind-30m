@@ -20,15 +20,27 @@ ENTRY_FIELDS = {
     "expected_size", "expected_checksum", "license_identity", "license_evidence_url",
     "attribution_record", "download_command_template", "retry_policy", "rate_limit",
     "destination_path", "classification", "approval", "post_filter_cap_tokens",
+    "allowed_redirect_hosts", "content_execution_allowed",
 }
 
 
 def validate_acquisition_plan(plan: dict[str, Any], registry: dict[str, Any]) -> dict[str, Any]:
-    if plan.get("schema_version") != "darkmind-v2-corpus-v4-acquisition-plan-v1":
+    if plan.get("schema_version") != "darkmind-v2-corpus-v4-acquisition-plan-v2":
         raise ValueError("unexpected acquisition-plan schema")
     assert_planning_only(plan)
     if plan.get("execution_authorized") is not False:
         raise ValueError("acquisition execution is not authorized")
+    if plan.get("acquisition_enabled") is not False or plan.get("conditional_sources_allowed") is not False:
+        raise ValueError("Phase 5C acquisition must remain blocked for conditional sources")
+    if plan.get("allowed_source_states") != ["approved"]:
+        raise ValueError("only approved sources may appear in the acquisition plan")
+    controls = plan.get("execution_controls", {})
+    if controls.get("requires_separate_human_authorization") is not True:
+        raise ValueError("separate human authorization is required")
+    if controls.get("extract_or_execute_downloaded_content") is not False:
+        raise ValueError("downloaded content execution must be disabled")
+    if not isinstance(controls.get("maximum_total_bytes"), int) or controls["maximum_total_bytes"] <= 0:
+        raise ValueError("a positive acquisition byte ceiling is required")
     root = plan.get("authorized_root_template", "")
     if not root or "EXTERNAL_SSD_ROOT" not in root:
         raise ValueError("authorized external-SSD root template is required")
@@ -67,6 +79,11 @@ def validate_acquisition_plan(plan: dict[str, Any], registry: dict[str, Any]) ->
             raise ValueError(f"download outside authorized root: {source_id}")
         if entry["classification"] != "immutable_raw":
             raise ValueError(f"raw acquisition must be immutable: {source_id}")
+        if entry["content_execution_allowed"] is not False:
+            raise ValueError(f"downloaded content execution enabled: {source_id}")
+        official_host = entry["official_url"].split("/")[2]
+        if entry["allowed_redirect_hosts"] != [official_host]:
+            raise ValueError(f"redirect host allowlist is not exact: {source_id}")
         approval = entry["approval"]
         if approval.get("source_state") != "approved" or approval.get("execution_approved") is not False:
             raise ValueError(f"invalid acquisition approval state: {source_id}")
@@ -80,7 +97,7 @@ def validate_acquisition_plan(plan: dict[str, Any], registry: dict[str, Any]) ->
     if concentration["result"] != "PASS":
         raise ValueError(f"source concentration violation: {concentration['violations']}")
     return {
-        "schema_version": "darkmind-v2-corpus-v4-acquisition-plan-validation-v1",
+        "schema_version": "darkmind-v2-corpus-v4-acquisition-plan-validation-v2",
         "result": "PASS",
         "entry_count": len(entries),
         "approved_source_coverage": f"{len(seen)}/{len(approved_ids)}",

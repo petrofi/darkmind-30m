@@ -1,0 +1,72 @@
+{
+  "schema_version": "darkmind-v2-corpus-v4-attribution-manifest-v1",
+  "manifest_id": "darkmind-v2-corpus-v4-attribution-phase5c-20260722",
+  "created_date": "2026-07-22",
+  "planning_only": true,
+  "downloads_performed": false,
+  "scraping_performed": false,
+  "execution_authorized": false,
+  "acquisition_plan_id": "darkmind-v2-corpus-v4-approved-sources-phase5c-20260722",
+  "coverage": {
+    "approved_sources": 3,
+    "manifest_entries": 3,
+    "complete": true
+  },
+  "entries": [
+    {
+      "source_id": "mdn_content_20260722",
+      "official_source_name": "MDN Web Docs English content repository",
+      "snapshot_version": "3b763f8f076c053b7a44e261c3a19a1879bc11ff",
+      "official_url": "https://github.com/mdn/content",
+      "license_identity": "CC BY-SA 2.5 or later documentation prose; code blocks excluded",
+      "license_evidence_url": "https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Attrib_copyright_license",
+      "attribution_record": {
+        "creator": "Mozilla Contributors",
+        "title_rule": "page front-matter title",
+        "source_rule": "canonical MDN URL",
+        "license": "CC BY-SA 2.5 or later",
+        "modification_notice_required": true
+      },
+      "modification_notice": "Normalized, filtered, deduplicated, and tokenized for research corpus use.",
+      "record_key_template": "{source_id}:{snapshot_version}:{document_path_or_url}",
+      "approval_state": "approved",
+      "acquisition_execution_authorized": false
+    },
+    {
+      "source_id": "rust_official_docs_1_90",
+      "official_source_name": "Rust 1.90 official documentation source",
+      "snapshot_version": "1159e78c4747b02ef996e55082b704c09b970588",
+      "official_url": "https://github.com/rust-lang/rust",
+      "license_identity": "Apache-2.0 OR MIT for selected official Rust repository paths",
+      "license_evidence_url": "https://rust-lang.org/policies/licenses/",
+      "attribution_record": {
+        "creator": "The Rust Project Developers",
+        "source_rule": "repository path and commit",
+        "license": "Apache-2.0 OR MIT",
+        "notices_required": true
+      },
+      "modification_notice": "Normalized, filtered, deduplicated, and tokenized for research corpus use.",
+      "record_key_template": "{source_id}:{snapshot_version}:{document_path_or_url}",
+      "approval_state": "approved",
+      "acquisition_execution_authorized": false
+    },
+    {
+      "source_id": "postgresql_docs_18",
+      "official_source_name": "PostgreSQL 18.0 documentation",
+      "snapshot_version": "PostgreSQL 18.0",
+      "official_url": "https://ftp.postgresql.org/pub/source/v18.0/postgresql-18.0.tar.bz2",
+      "license_identity": "PostgreSQL License",
+      "license_evidence_url": "https://www.postgresql.org/about/licence/",
+      "attribution_record": {
+        "creator": "PostgreSQL Global Development Group and Regents",
+        "source_rule": "version 18.0 archive and documentation path",
+        "license": "PostgreSQL License",
+        "notices_required": true
+      },
+      "modification_notice": "Normalized, filtered, deduplicated, and tokenized for research corpus use.",
+      "record_key_template": "{source_id}:{snapshot_version}:{document_path_or_url}",
+      "approval_state": "approved",
+      "acquisition_execution_authorized": false
+    }
+  ]
+}

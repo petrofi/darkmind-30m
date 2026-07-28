@@ -15,6 +15,7 @@ from darkmind_v2.corpus.phase5b_source_lock import (
     category_capacity,
     classify_source_lock,
     classify_phase5c_source_lock,
+    classify_phase5d_source_lock,
     validate_capacity,
     validate_code_policy,
     validate_concentration,
@@ -28,7 +29,7 @@ from darkmind_v2.corpus.phase5b_source_lock import (
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_REGISTRY = ROOT / "darkmind_v2" / "corpus" / "source_registry.v4.candidates.json"
-SCHEMA_VERSION = "darkmind-v2-source-registry-v4-candidates-v3"
+SCHEMA_VERSION = "darkmind-v2-source-registry-v4-candidates-v4"
 PHASE5C_QUESTIONS = {
     "exact_downloadable_artifact",
     "exact_snapshot_release_dump_tag_or_commit",
@@ -81,7 +82,7 @@ def validate_registry(payload: dict[str, Any]) -> dict[str, Any]:
     if payload.get("schema_version") != SCHEMA_VERSION:
         raise ValueError("unexpected source-registry V4 schema")
     assert_planning_only(payload)
-    if payload.get("access_date") != "2026-07-22":
+    if payload.get("access_date") != "2026-07-23":
         raise ValueError("registry access date must be explicit")
     sources = payload.get("sources", [])
     ids = [item.get("id") for item in sources]
@@ -135,12 +136,27 @@ def validate_registry(payload: dict[str, Any]) -> dict[str, Any]:
         if not evidence["capacity_basis"]:
             raise ValueError(f"new candidate lacks capacity basis: {source['id']}")
 
+    sampled = [source for source in sources if source.get("phase5d_sample_resolution")]
+    if len(sampled) != 6:
+        raise ValueError("Phase 5D must record six bounded sample resolutions")
+    for source in sampled:
+        resolution = source["phase5d_sample_resolution"]
+        if resolution.get("authorization_id") != "darkmind-v2-phase5d-bounded-sampling-20260723":
+            raise ValueError(f"sample authorization mismatch: {source['id']}")
+        if resolution.get("final_status") != source["approval_state"]:
+            raise ValueError(f"sample resolution state mismatch: {source['id']}")
+        if resolution.get("training_use") is not False:
+            raise ValueError(f"sample training use is enabled: {source['id']}")
+        capacity = resolution.get("capacity", {})
+        if not {"optimistic_tokens", "expected_tokens", "conservative_tokens", "uncertainty_band"} <= set(capacity):
+            raise ValueError(f"sample capacity evidence is incomplete: {source['id']}")
+
     states = Counter(item["approval_state"] for item in sources)
     approved = approved_capacity(sources)
     categories = category_capacity(sources)
     exclusive = validate_exclusive_category_allocation(sources)
     concentration = validate_concentration(payload["approved_acquisition_caps"])
-    classification = classify_phase5c_source_lock(
+    classification = classify_phase5d_source_lock(
         approved["expected_tokens"],
         approved["conservative_tokens"],
         categories,
@@ -150,13 +166,13 @@ def validate_registry(payload: dict[str, Any]) -> dict[str, Any]:
         payload["storage_plan_feasible"],
     )
     if payload.get("source_lock_classification") != classification:
-        raise ValueError("stored source-lock classification does not match Phase 5C policy")
+        raise ValueError("stored source-lock classification does not match Phase 5D policy")
     if payload.get("conditional_capacity_counted_as_approved") is not False:
         raise ValueError("conditional capacity must not be counted as approved")
     if payload.get("acquisition_enabled") is not False:
-        raise ValueError("Phase 5C acquisition must remain disabled")
+        raise ValueError("Phase 5D acquisition must remain disabled")
     return {
-        "schema_version": "darkmind-v2-source-registry-v4-validation-v3",
+        "schema_version": "darkmind-v2-source-registry-v4-validation-v4",
         "result": "PASS",
         "candidate_sources": len(sources),
         "approval_counts": {state: states.get(state, 0) for state in sorted(STATES)},

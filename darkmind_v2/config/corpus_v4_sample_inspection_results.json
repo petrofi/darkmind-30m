@@ -1,0 +1,660 @@
+{
+  "schema_version": "darkmind-v2-corpus-v4-sample-inspection-results-v1",
+  "authorization_id": "darkmind-v2-phase5d-bounded-sampling-20260723",
+  "inspection_date": "2026-07-23",
+  "selection_seed": 20260723,
+  "runtime_evidence_root": "C:\\DarkMindRuntime\\phase5d",
+  "runtime_samples_committed": false,
+  "sampled_candidates": 6,
+  "total_downloaded_bytes": 424284460,
+  "maximum_total_downloaded_bytes": 10000000000,
+  "corpus_v3_reference_documents": 447127,
+  "corpus_v3_near_reference_documents": 28226,
+  "downloaded_content_executed": false,
+  "training_use": false,
+  "production_tokenization": false,
+  "sources": [
+    {
+      "accepted_documents": 105,
+      "capacity": {
+        "basis": "bounded exact collection only; no portal-wide extrapolation",
+        "conservative_tokens": 4215,
+        "corpus_v3_overlap_loss_rate": 0.0,
+        "expected_tokens": 5058,
+        "extraction_loss_rate": 0.0,
+        "internal_dedup_loss_rate": 0.042753,
+        "inventory_count": 200,
+        "optimistic_tokens": 5620,
+        "pii_secret_loss_rate": 0.0,
+        "quality_filter_loss_rate": 0.271226,
+        "sample_coverage": 1.0,
+        "sample_documents": 200,
+        "uncertainty_band": [
+          4215,
+          5620
+        ]
+      },
+      "category": {
+        "english_general_educational": {
+          "share": 1.0,
+          "tokens": 8056
+        }
+      },
+      "deduplication": {
+        "corpus_v3_exact_overlap_documents": 0,
+        "corpus_v3_near_overlap_documents": 0,
+        "corpus_v3_near_reference_documents": 28226,
+        "corpus_v3_near_reference_sample_rate": "1/16 deterministic hash sample",
+        "corpus_v3_reference_documents": 447127,
+        "internal_and_cross_source_exact_duplicates": 3,
+        "internal_and_cross_source_near_duplicates": 1,
+        "simhash_max_hamming_distance": 3
+      },
+      "extraction": {
+        "empty_extraction_rate": 0.0,
+        "extracted_records": 200,
+        "extraction_success_rate": 1.0,
+        "ocr_dependent_documents": 0,
+        "ocr_used": false,
+        "opened_files": 1,
+        "parse_failure_rate": 0.0,
+        "parse_failures": 0,
+        "raw_records": 200,
+        "selected_records": 200
+      },
+      "language": {
+        "en": {
+          "share": 1.0,
+          "tokens": 8056
+        }
+      },
+      "no_training": true,
+      "quality": {
+        "quality_rejected_documents": 91,
+        "score_median": 0.6301,
+        "score_min": 0.4835,
+        "score_p95": 0.6763
+      },
+      "raw_bytes": 114854,
+      "safety": {
+        "benchmark_hits": 0,
+        "credential_patterns": 0,
+        "emails": 0,
+        "pii_secret_rejected_documents": 0,
+        "private_keys": 0,
+        "street_addresses": 0,
+        "telephone_numbers": 0
+      },
+      "schema_version": "darkmind-v2-phase5d-source-inspection-v1",
+      "source_id": "govuk_content_ogl3_20260722",
+      "text": {
+        "boilerplate_hits": 0,
+        "document_length_median": 133.0,
+        "document_length_min": 22,
+        "document_length_p95": 249.0,
+        "extracted_characters": 27648,
+        "extracted_words": 4177,
+        "malformed_unicode": 0
+      },
+      "tokenizer": {
+        "byte_fallback_rate": 0.03897716,
+        "byte_fallback_tokens": 314,
+        "eos_boundaries": 200,
+        "name": "darkmind_v2_sp_bpe24k_v1",
+        "post_corpus_v3_overlap_tokens": 5620,
+        "post_dedup_tokens": 5620,
+        "post_pii_filter_tokens": 5871,
+        "post_quality_filter_tokens": 5871,
+        "raw_tokens": 8056,
+        "tokens_per_accepted_document": 53.524,
+        "tokens_per_raw_mb": 70141.223,
+        "unknown_token_rate": 0.0,
+        "unknown_tokens": 0
+      },
+      "checksum": {
+        "algorithm": "sha256",
+        "result": "LOCAL_ONLY_PASS",
+        "local_sha256": "3d6aabd43e636a966488a6d5ed9e2468adbaf65c3c2a36b6ea620a0b5de23a10",
+        "published_checksum_verified": false
+      },
+      "final_status": "conditional",
+      "decision_reason": "The bounded API response proves metadata extraction, not a reproducible rights-filtered content inventory or portal capacity."
+    },
+    {
+      "accepted_documents": 0,
+      "capacity": {
+        "basis": "bounded exact collection only; no portal-wide extrapolation",
+        "conservative_tokens": 0,
+        "corpus_v3_overlap_loss_rate": 1.0,
+        "expected_tokens": 0,
+        "extraction_loss_rate": 1.0,
+        "internal_dedup_loss_rate": 1.0,
+        "inventory_count": 0,
+        "optimistic_tokens": 0,
+        "pii_secret_loss_rate": 1.0,
+        "quality_filter_loss_rate": 1.0,
+        "sample_coverage": 0.0,
+        "sample_documents": 0,
+        "uncertainty_band": [
+          0,
+          0
+        ]
+      },
+      "category": {},
+      "deduplication": {
+        "corpus_v3_exact_overlap_documents": 0,
+        "corpus_v3_near_overlap_documents": 0,
+        "corpus_v3_near_reference_documents": 28226,
+        "corpus_v3_near_reference_sample_rate": "1/16 deterministic hash sample",
+        "corpus_v3_reference_documents": 447127,
+        "internal_and_cross_source_exact_duplicates": 0,
+        "internal_and_cross_source_near_duplicates": 0,
+        "simhash_max_hamming_distance": 3
+      },
+      "extraction": {
+        "empty_extraction_rate": 0.0,
+        "extracted_records": 0,
+        "extraction_success_rate": 0.0,
+        "ocr_dependent_documents": 0,
+        "ocr_used": false,
+        "opened_files": 0,
+        "parse_failure_rate": 0.0,
+        "parse_failures": 0,
+        "raw_records": 0,
+        "selected_records": 0
+      },
+      "language": {},
+      "no_training": true,
+      "quality": {
+        "quality_rejected_documents": 0,
+        "score_median": 0.0,
+        "score_min": 0.0,
+        "score_p95": 0.0
+      },
+      "raw_bytes": 67225,
+      "safety": {
+        "benchmark_hits": 0,
+        "credential_patterns": 0,
+        "emails": 0,
+        "pii_secret_rejected_documents": 0,
+        "private_keys": 0,
+        "street_addresses": 0,
+        "telephone_numbers": 0
+      },
+      "schema_version": "darkmind-v2-phase5d-source-inspection-v1",
+      "source_id": "govinfo_federal_register_2025_xml",
+      "text": {
+        "boilerplate_hits": 0,
+        "document_length_median": 0,
+        "document_length_min": 0,
+        "document_length_p95": 0.0,
+        "extracted_characters": 0,
+        "extracted_words": 0,
+        "malformed_unicode": 0
+      },
+      "tokenizer": {
+        "byte_fallback_rate": 0.0,
+        "byte_fallback_tokens": 0,
+        "eos_boundaries": 0,
+        "name": "darkmind_v2_sp_bpe24k_v1",
+        "post_corpus_v3_overlap_tokens": 0,
+        "post_dedup_tokens": 0,
+        "post_pii_filter_tokens": 0,
+        "post_quality_filter_tokens": 0,
+        "raw_tokens": 0,
+        "tokens_per_accepted_document": 0.0,
+        "tokens_per_raw_mb": 0.0,
+        "unknown_token_rate": 0.0,
+        "unknown_tokens": 0
+      },
+      "checksum": {
+        "algorithm": "local_sha256",
+        "result": "LOCAL_SHA256_ONLY",
+        "local_sha256": "d477ced76ee7e72f04cd6327f1dc9ccf1115be9e224fc4b134258b4071e4ef35",
+        "published_checksum_verified": false
+      },
+      "final_status": "deferred",
+      "decision_reason": "The official bulk-data endpoint returned an HTML service error and no XML inventory, so artifact identity and extraction yield remain unproven."
+    },
+    {
+      "accepted_documents": 11,
+      "capacity": {
+        "basis": "bounded exact collection only; no portal-wide extrapolation",
+        "conservative_tokens": 359,
+        "corpus_v3_overlap_loss_rate": 0.0,
+        "expected_tokens": 431,
+        "extraction_loss_rate": 0.8,
+        "internal_dedup_loss_rate": 0.0,
+        "inventory_count": 200,
+        "optimistic_tokens": 479,
+        "pii_secret_loss_rate": 0.0,
+        "quality_filter_loss_rate": 0.66315,
+        "sample_coverage": 1.0,
+        "sample_documents": 200,
+        "uncertainty_band": [
+          359,
+          479
+        ]
+      },
+      "category": {
+        "technical_documentation": {
+          "share": 1.0,
+          "tokens": 1422
+        }
+      },
+      "deduplication": {
+        "corpus_v3_exact_overlap_documents": 0,
+        "corpus_v3_near_overlap_documents": 0,
+        "corpus_v3_near_reference_documents": 28226,
+        "corpus_v3_near_reference_sample_rate": "1/16 deterministic hash sample",
+        "corpus_v3_reference_documents": 447127,
+        "internal_and_cross_source_exact_duplicates": 0,
+        "internal_and_cross_source_near_duplicates": 0,
+        "simhash_max_hamming_distance": 3
+      },
+      "extraction": {
+        "empty_extraction_rate": 0.8,
+        "extracted_records": 40,
+        "extraction_success_rate": 0.2,
+        "ocr_dependent_documents": 0,
+        "ocr_used": false,
+        "opened_files": 1,
+        "parse_failure_rate": 0.0,
+        "parse_failures": 0,
+        "raw_records": 200,
+        "selected_records": 200
+      },
+      "language": {
+        "en": {
+          "share": 1.0,
+          "tokens": 1422
+        }
+      },
+      "no_training": true,
+      "quality": {
+        "quality_rejected_documents": 189,
+        "score_median": 0.3,
+        "score_min": 0.3,
+        "score_p95": 0.6434
+      },
+      "raw_bytes": 49354,
+      "safety": {
+        "benchmark_hits": 0,
+        "credential_patterns": 0,
+        "emails": 0,
+        "pii_secret_rejected_documents": 0,
+        "private_keys": 0,
+        "street_addresses": 0,
+        "telephone_numbers": 0
+      },
+      "schema_version": "darkmind-v2-phase5d-source-inspection-v1",
+      "source_id": "plos_ccby_jats_allowlist",
+      "text": {
+        "boilerplate_hits": 0,
+        "document_length_median": 0.0,
+        "document_length_min": 0,
+        "document_length_p95": 123.0,
+        "extracted_characters": 4257,
+        "extracted_words": 570,
+        "malformed_unicode": 0
+      },
+      "tokenizer": {
+        "byte_fallback_rate": 0.0,
+        "byte_fallback_tokens": 0,
+        "eos_boundaries": 200,
+        "name": "darkmind_v2_sp_bpe24k_v1",
+        "post_corpus_v3_overlap_tokens": 479,
+        "post_dedup_tokens": 479,
+        "post_pii_filter_tokens": 479,
+        "post_quality_filter_tokens": 479,
+        "raw_tokens": 1422,
+        "tokens_per_accepted_document": 43.545,
+        "tokens_per_raw_mb": 28812.254,
+        "unknown_token_rate": 0.0,
+        "unknown_tokens": 0
+      },
+      "checksum": {
+        "algorithm": "sha256",
+        "result": "LOCAL_ONLY_PASS",
+        "local_sha256": "ad1752b3fa6bec1bc6ad9d3ada4f69a387ff9ccc77a43607c39015b1e94db55d",
+        "published_checksum_verified": false
+      },
+      "final_status": "conditional",
+      "decision_reason": "The bounded search response contains metadata and sparse abstracts; item-level CC BY JATS identity and useful full-text yield remain unresolved."
+    },
+    {
+      "accepted_documents": 493,
+      "capacity": {
+        "basis": "bounded exact collection only; no portal-wide extrapolation",
+        "conservative_tokens": 4500000,
+        "corpus_v3_overlap_loss_rate": 0.0,
+        "expected_tokens": 7500000,
+        "extraction_loss_rate": 0.0,
+        "internal_dedup_loss_rate": 0.011683,
+        "inventory_count": 5593,
+        "optimistic_tokens": 10000000,
+        "pii_secret_loss_rate": 0.019727,
+        "quality_filter_loss_rate": 0.033907,
+        "sample_coverage": 0.08939746,
+        "sample_documents": 500,
+        "uncertainty_band": [
+          4500000,
+          10000000
+        ]
+      },
+      "category": {
+        "code_structured_text": {
+          "share": 0.999576,
+          "tokens": 2320539
+        },
+        "technical_documentation": {
+          "share": 0.000424,
+          "tokens": 984
+        }
+      },
+      "deduplication": {
+        "corpus_v3_exact_overlap_documents": 0,
+        "corpus_v3_near_overlap_documents": 0,
+        "corpus_v3_near_reference_documents": 28226,
+        "corpus_v3_near_reference_sample_rate": "1/16 deterministic hash sample",
+        "corpus_v3_reference_documents": 447127,
+        "internal_and_cross_source_exact_duplicates": 1,
+        "internal_and_cross_source_near_duplicates": 0,
+        "simhash_max_hamming_distance": 3
+      },
+      "extraction": {
+        "empty_extraction_rate": 0.0,
+        "extracted_records": 500,
+        "extraction_success_rate": 1.0,
+        "ocr_dependent_documents": 0,
+        "ocr_used": false,
+        "opened_files": 500,
+        "parse_failure_rate": 0.0,
+        "parse_failures": 0,
+        "raw_records": 5593,
+        "selected_records": 500
+      },
+      "language": {
+        "code": {
+          "share": 0.999576,
+          "tokens": 2320539
+        },
+        "en": {
+          "share": 0.000424,
+          "tokens": 984
+        }
+      },
+      "no_training": true,
+      "quality": {
+        "quality_rejected_documents": 4,
+        "score_median": 0.8021,
+        "score_min": 0.5078,
+        "score_p95": 0.8575
+      },
+      "raw_bytes": 34140216,
+      "safety": {
+        "benchmark_hits": 0,
+        "credential_patterns": 3,
+        "emails": 19,
+        "pii_secret_rejected_documents": 2,
+        "private_keys": 0,
+        "street_addresses": 2,
+        "telephone_numbers": 857
+      },
+      "schema_version": "darkmind-v2-phase5d-source-inspection-v1",
+      "source_id": "go_1_26_5_source_docs",
+      "text": {
+        "boilerplate_hits": 599,
+        "document_length_median": 2892.5,
+        "document_length_min": 38,
+        "document_length_p95": 42317.0,
+        "extracted_characters": 5216266,
+        "extracted_words": 756970,
+        "malformed_unicode": 13
+      },
+      "tokenizer": {
+        "byte_fallback_rate": 0.08002333,
+        "byte_fallback_tokens": 185776,
+        "eos_boundaries": 500,
+        "name": "darkmind_v2_sp_bpe24k_v1",
+        "post_corpus_v3_overlap_tokens": 2172878,
+        "post_dedup_tokens": 2172878,
+        "post_pii_filter_tokens": 2198563,
+        "post_quality_filter_tokens": 2242806,
+        "raw_tokens": 2321523,
+        "tokens_per_accepted_document": 4407.46,
+        "tokens_per_raw_mb": 67999.658,
+        "unknown_token_rate": 0.0,
+        "unknown_tokens": 0
+      },
+      "checksum": {
+        "algorithm": "sha256",
+        "result": "PASS",
+        "local_sha256": "495be4bc87176ac567392e5b4116abd98466d33d7b49d41e764ccc6976b2dc42",
+        "published_checksum_verified": true
+      },
+      "final_status": "approved",
+      "decision_reason": "The exact official archive, published SHA-256, project license, deterministic extraction, quality, safety filtering, and Corpus V3 overlap checks passed."
+    },
+    {
+      "accepted_documents": 480,
+      "capacity": {
+        "basis": "bounded exact collection only; no portal-wide extrapolation",
+        "conservative_tokens": 4233948,
+        "corpus_v3_overlap_loss_rate": 0.0,
+        "expected_tokens": 5645265,
+        "extraction_loss_rate": 0.0,
+        "internal_dedup_loss_rate": 0.0,
+        "inventory_count": 2269,
+        "optimistic_tokens": 7527021,
+        "pii_secret_loss_rate": 0.022238,
+        "quality_filter_loss_rate": 0.000256,
+        "sample_coverage": 0.22036139,
+        "sample_documents": 500,
+        "uncertainty_band": [
+          4233948,
+          7527021
+        ]
+      },
+      "category": {
+        "technical_documentation": {
+          "share": 1.0,
+          "tokens": 1696824
+        }
+      },
+      "deduplication": {
+        "corpus_v3_exact_overlap_documents": 0,
+        "corpus_v3_near_overlap_documents": 0,
+        "corpus_v3_near_reference_documents": 28226,
+        "corpus_v3_near_reference_sample_rate": "1/16 deterministic hash sample",
+        "corpus_v3_reference_documents": 447127,
+        "internal_and_cross_source_exact_duplicates": 0,
+        "internal_and_cross_source_near_duplicates": 0,
+        "simhash_max_hamming_distance": 3
+      },
+      "extraction": {
+        "empty_extraction_rate": 0.0,
+        "extracted_records": 500,
+        "extraction_success_rate": 1.0,
+        "ocr_dependent_documents": 0,
+        "ocr_used": false,
+        "opened_files": 500,
+        "parse_failure_rate": 0.0,
+        "parse_failures": 0,
+        "raw_records": 2269,
+        "selected_records": 500
+      },
+      "language": {
+        "en": {
+          "share": 1.0,
+          "tokens": 1696824
+        }
+      },
+      "no_training": true,
+      "quality": {
+        "quality_rejected_documents": 15,
+        "score_median": 0.8914,
+        "score_min": 0.4814,
+        "score_p95": 0.9214
+      },
+      "raw_bytes": 334486939,
+      "safety": {
+        "benchmark_hits": 0,
+        "credential_patterns": 11,
+        "emails": 27,
+        "pii_secret_rejected_documents": 5,
+        "private_keys": 0,
+        "street_addresses": 0,
+        "telephone_numbers": 2289
+      },
+      "schema_version": "darkmind-v2-phase5d-source-inspection-v1",
+      "source_id": "kubernetes_website_f2987ba",
+      "text": {
+        "boilerplate_hits": 1,
+        "document_length_median": 4771.0,
+        "document_length_min": 41,
+        "document_length_p95": 39733.0,
+        "extracted_characters": 4894826,
+        "extracted_words": 740766,
+        "malformed_unicode": 0
+      },
+      "tokenizer": {
+        "byte_fallback_rate": 0.05650144,
+        "byte_fallback_tokens": 95873,
+        "eos_boundaries": 500,
+        "name": "darkmind_v2_sp_bpe24k_v1",
+        "post_corpus_v3_overlap_tokens": 1658665,
+        "post_dedup_tokens": 1658665,
+        "post_pii_filter_tokens": 1658665,
+        "post_quality_filter_tokens": 1696389,
+        "raw_tokens": 1696824,
+        "tokens_per_accepted_document": 3455.552,
+        "tokens_per_raw_mb": 5072.916,
+        "unknown_token_rate": 0.0,
+        "unknown_tokens": 0
+      },
+      "checksum": {
+        "algorithm": "git_commit",
+        "result": "IDENTITY_PASS_LOCAL_SHA256_PASS",
+        "local_sha256": "e1f9c43641e8d85489041b1e6c193f55cb33cfedf92b275256de9b76d0a42798",
+        "published_checksum_verified": true
+      },
+      "final_status": "approved",
+      "decision_reason": "The exact official commit, CC BY 4.0 website scope, deterministic English-content extraction, safety filtering, and Corpus V3 overlap checks passed."
+    },
+    {
+      "accepted_documents": 469,
+      "capacity": {
+        "basis": "bounded exact collection only; no portal-wide extrapolation",
+        "conservative_tokens": 2764668,
+        "corpus_v3_overlap_loss_rate": 0.0,
+        "expected_tokens": 3686225,
+        "extraction_loss_rate": 0.0,
+        "internal_dedup_loss_rate": 0.000232,
+        "inventory_count": 901,
+        "optimistic_tokens": 4914967,
+        "pii_secret_loss_rate": 0.061137,
+        "quality_filter_loss_rate": 0.043603,
+        "sample_coverage": 0.55493896,
+        "sample_documents": 500,
+        "uncertainty_band": [
+          2764668,
+          4914967
+        ]
+      },
+      "category": {
+        "code_structured_text": {
+          "share": 0.527365,
+          "tokens": 1602275
+        },
+        "technical_documentation": {
+          "share": 0.472635,
+          "tokens": 1435993
+        }
+      },
+      "deduplication": {
+        "corpus_v3_exact_overlap_documents": 0,
+        "corpus_v3_near_overlap_documents": 0,
+        "corpus_v3_near_reference_documents": 28226,
+        "corpus_v3_near_reference_sample_rate": "1/16 deterministic hash sample",
+        "corpus_v3_reference_documents": 447127,
+        "internal_and_cross_source_exact_duplicates": 0,
+        "internal_and_cross_source_near_duplicates": 1,
+        "simhash_max_hamming_distance": 3
+      },
+      "extraction": {
+        "empty_extraction_rate": 0.0,
+        "extracted_records": 500,
+        "extraction_success_rate": 1.0,
+        "ocr_dependent_documents": 0,
+        "ocr_used": false,
+        "opened_files": 500,
+        "parse_failure_rate": 0.0,
+        "parse_failures": 0,
+        "raw_records": 901,
+        "selected_records": 500
+      },
+      "language": {
+        "code": {
+          "share": 0.527365,
+          "tokens": 1602275
+        },
+        "en": {
+          "share": 0.472635,
+          "tokens": 1435993
+        }
+      },
+      "no_training": true,
+      "quality": {
+        "quality_rejected_documents": 9,
+        "score_median": 0.8488,
+        "score_min": 0.5331,
+        "score_p95": 0.886
+      },
+      "raw_bytes": 55425872,
+      "safety": {
+        "benchmark_hits": 0,
+        "credential_patterns": 129,
+        "emails": 111,
+        "pii_secret_rejected_documents": 21,
+        "private_keys": 1,
+        "street_addresses": 0,
+        "telephone_numbers": 845
+      },
+      "schema_version": "darkmind-v2-phase5d-source-inspection-v1",
+      "source_id": "nodejs_24_18_0_source_docs",
+      "text": {
+        "boilerplate_hits": 105,
+        "document_length_median": 6415.5,
+        "document_length_min": 58,
+        "document_length_p95": 66362.0,
+        "extracted_characters": 8150192,
+        "extracted_words": 1051672,
+        "malformed_unicode": 2
+      },
+      "tokenizer": {
+        "byte_fallback_rate": 0.09709084,
+        "byte_fallback_tokens": 294988,
+        "eos_boundaries": 500,
+        "name": "darkmind_v2_sp_bpe24k_v1",
+        "post_corpus_v3_overlap_tokens": 2727507,
+        "post_dedup_tokens": 2727507,
+        "post_pii_filter_tokens": 2728141,
+        "post_quality_filter_tokens": 2905791,
+        "raw_tokens": 3038268,
+        "tokens_per_accepted_document": 5815.58,
+        "tokens_per_raw_mb": 54816.783,
+        "unknown_token_rate": 0.0,
+        "unknown_tokens": 0
+      },
+      "checksum": {
+        "algorithm": "sha256",
+        "result": "PASS",
+        "local_sha256": "e94afde24db08e0c564ee7110a2d5aab51ee0059382c9fd8233c54eec47b28f9",
+        "published_checksum_verified": true
+      },
+      "final_status": "conditional",
+      "decision_reason": "Useful yield is demonstrated, but bundled third-party license mapping and the elevated credential/private-key pattern rejection require a path allowlist."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "darkmind-v2-corpus-v4-acquisition-plan-v2",
-  "plan_id": "darkmind-v2-corpus-v4-approved-sources-phase5c-20260722",
+  "plan_id": "darkmind-v2-corpus-v4-approved-sources-phase5d-20260723",
   "created_date": "2026-07-22",
   "planning_only": true,
   "downloads_performed": false,
@@ -146,12 +146,104 @@
         "ftp.postgresql.org"
       ],
       "content_execution_allowed": false
+    },
+    {
+      "source_id": "go_1_26_5_source_docs",
+      "source_family": "go_project",
+      "official_url": "https://go.dev/dl/go1.26.5.src.tar.gz",
+      "snapshot_version": "go1.26.5.src.tar.gz",
+      "expected_filename": "go1.26.5.src.tar.gz",
+      "expected_size": {
+        "min_bytes": 34140216,
+        "max_bytes": 34140216
+      },
+      "expected_checksum": {
+        "algorithm": "sha256",
+        "value": "495be4bc87176ac567392e5b4116abd98466d33d7b49d41e764ccc6976b2dc42"
+      },
+      "license_identity": "Go project BSD-style license with path-level notices",
+      "license_evidence_url": "https://go.dev/LICENSE",
+      "attribution_record": {
+        "creator": "The Go Authors",
+        "source_rule": "archive path and Go 1.26.5 release",
+        "license": "Go project BSD-style license",
+        "notices_required": true
+      },
+      "download_command_template": "curl --fail --location --retry 2 --output {destination} https://go.dev/dl/go1.26.5.src.tar.gz",
+      "retry_policy": {
+        "max_attempts": 3,
+        "backoff_seconds": 30,
+        "resume_partial": true
+      },
+      "rate_limit": "one HTTPS archive request",
+      "destination_path": "$EXTERNAL_SSD_ROOT\\DarkMindArchive\\corpus-v4\\raw\\go_1_26_5_source_docs\\go1.26.5.src.tar.gz",
+      "classification": "immutable_raw",
+      "approval": {
+        "source_state": "approved",
+        "evidence_review": "Phase 5D bounded sample passed; full acquisition still requires separate authorization",
+        "review_date": "2026-07-23",
+        "execution_approved": false
+      },
+      "post_filter_cap_tokens": 10000000,
+      "single_code_ecosystem": true,
+      "bilingual_source": false,
+      "generated_text": false,
+      "allowed_redirect_hosts": [
+        "go.dev"
+      ],
+      "content_execution_allowed": false
+    },
+    {
+      "source_id": "kubernetes_website_f2987ba",
+      "source_family": "kubernetes_project",
+      "official_url": "https://github.com/kubernetes/website/archive/f2987ba1cceaa85fcd44cd1a221010d745d7335c.tar.gz",
+      "snapshot_version": "f2987ba1cceaa85fcd44cd1a221010d745d7335c",
+      "expected_filename": "kubernetes-website-f2987ba1cceaa85fcd44cd1a221010d745d7335c.tar.gz",
+      "expected_size": {
+        "min_bytes": 334486939,
+        "max_bytes": 334486939
+      },
+      "expected_checksum": {
+        "algorithm": "git_commit",
+        "value": "f2987ba1cceaa85fcd44cd1a221010d745d7335c"
+      },
+      "license_identity": "CC BY 4.0 for English website content subject to path-level notices",
+      "license_evidence_url": "https://github.com/kubernetes/website/blob/f2987ba1cceaa85fcd44cd1a221010d745d7335c/LICENSE",
+      "attribution_record": {
+        "creator": "The Kubernetes Authors",
+        "source_rule": "English documentation path and exact commit",
+        "license": "CC BY 4.0",
+        "modification_notice_required": true
+      },
+      "download_command_template": "curl --fail --location --retry 2 --output {destination} https://github.com/kubernetes/website/archive/f2987ba1cceaa85fcd44cd1a221010d745d7335c.tar.gz",
+      "retry_policy": {
+        "max_attempts": 3,
+        "backoff_seconds": 60,
+        "resume_partial": true
+      },
+      "rate_limit": "one HTTPS archive request",
+      "destination_path": "$EXTERNAL_SSD_ROOT\\DarkMindArchive\\corpus-v4\\raw\\kubernetes_website_f2987ba\\kubernetes-website-f2987ba1cceaa85fcd44cd1a221010d745d7335c.tar.gz",
+      "classification": "immutable_raw",
+      "approval": {
+        "source_state": "approved",
+        "evidence_review": "Phase 5D bounded sample passed; full acquisition still requires separate authorization",
+        "review_date": "2026-07-23",
+        "execution_approved": false
+      },
+      "post_filter_cap_tokens": 10000000,
+      "single_code_ecosystem": false,
+      "bilingual_source": false,
+      "generated_text": false,
+      "allowed_redirect_hosts": [
+        "github.com"
+      ],
+      "content_execution_allowed": false
     }
   ],
-  "revised_date": "2026-07-22",
+  "revised_date": "2026-07-23",
   "predecessor": {
-    "plan_id": "darkmind-v2-corpus-v4-approved-sources-20260722",
-    "sha256": "017af8d60071d47fb2e5cf3a5a40f598a95296586253ce24aba14a73b6626f68"
+    "plan_id": "darkmind-v2-corpus-v4-approved-sources-phase5c-20260722",
+    "sha256": "10d460b9993f3075dc6cf4b06cd61267b3f980b429f5302d6f6d743821cb8e84"
   },
   "acquisition_enabled": false,
   "conditional_sources_allowed": false,
@@ -164,6 +256,6 @@
     "verify_checksum_before_extraction": true,
     "redirects_must_remain_on_official_host": true,
     "extract_or_execute_downloaded_content": false,
-    "maximum_total_bytes": 1222412570
+    "maximum_total_bytes": 1591039725
   }
 }

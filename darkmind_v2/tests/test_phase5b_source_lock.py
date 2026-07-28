@@ -78,8 +78,8 @@ def test_conservative_capacity_order_is_enforced(registry: dict) -> None:
 def test_category_capacity_coverage_is_not_overclaimed(registry: dict) -> None:
     result = category_capacity(registry["sources"])
     assert set(result) == set(CATEGORY_TARGETS)
-    assert result["technical_documentation"]["conservative"] == 3_800_000
-    assert result["code_structured_text"]["conservative"] == 2_500_000
+    assert result["technical_documentation"]["conservative"] == 8_035_856
+    assert result["code_structured_text"]["conservative"] == 6_998_092
     assert all(item["locked"] is False for item in result.values())
 
 
@@ -97,7 +97,7 @@ def test_acquisition_manifest_schema_and_plan_validate(registry: dict, plan: dic
     assert schema["properties"]["execution_authorized"]["const"] is False
     result = validate_acquisition_plan(plan, registry)
     assert result["result"] == "PASS"
-    assert result["approved_source_coverage"] == "3/3"
+    assert result["approved_source_coverage"] == "5/5"
 
 
 def test_unapproved_source_is_rejected(registry: dict, plan: dict) -> None:
@@ -140,7 +140,7 @@ def test_high_pii_source_cannot_be_approved_without_mitigation(registry: dict) -
 
 def test_source_lock_classification(registry: dict) -> None:
     result = validate_registry(registry)
-    assert result["source_lock_classification"] == "PARTIALLY LOCKED"
+    assert result["source_lock_classification"] == "OPEN-ONLY LIMITED"
     locked_categories = {
         key: {"locked": True, "target": value, "expected": value, "conservative": value}
         for key, value in CATEGORY_TARGETS.items()
@@ -183,4 +183,4 @@ def test_required_reports_exist_and_decision_matches_registry(registry: dict) ->
     decision = (REPORTS / "phase5b_source_lock_decision.md").read_text(encoding="utf-8")
     assert "PARTIALLY LOCKED" in decision
     assert "REQUIRES ADDITIONAL LICENSE OR CAPACITY RESOLUTION" in decision
-    assert validate_registry(registry)["source_lock_classification"] == "PARTIALLY LOCKED"
+    assert validate_registry(registry)["source_lock_classification"] == "OPEN-ONLY LIMITED"

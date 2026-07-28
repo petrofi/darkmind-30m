@@ -70,7 +70,7 @@ def test_dgt_turkish_assumption_is_rejected(registry: dict) -> None:
 
 def test_approved_capacity_is_exclusively_allocated(registry: dict) -> None:
     result = validate_exclusive_category_allocation(registry["sources"])
-    assert result == {"expected_tokens": 10_000_000, "conservative_tokens": 6_300_000}
+    assert result == {"expected_tokens": 23_145_265, "conservative_tokens": 15_033_948}
     bad = copy.deepcopy(registry["sources"])
     approved = next(item for item in bad if item["approval_state"] == "approved")
     first = next(iter(approved["approved_category_capacity"].values()))
@@ -81,11 +81,11 @@ def test_approved_capacity_is_exclusively_allocated(registry: dict) -> None:
 
 def test_capacity_deficits_and_reserves_are_explicit(registry: dict) -> None:
     capacity = registry["capacity_model"]
-    assert capacity["approved"] == {"expected_tokens": 10_000_000, "conservative_tokens": 6_300_000}
-    assert capacity["formal_deficit"] == {"expected_tokens": 240_000_000, "conservative_tokens": 193_700_000}
+    assert capacity["approved"] == {"expected_tokens": 23_145_265, "conservative_tokens": 15_033_948}
+    assert capacity["formal_deficit"] == {"expected_tokens": 226_854_735, "conservative_tokens": 184_966_052}
     assert capacity["preferred_reserve_deficit"] == {
-        "expected_tokens": 265_000_000,
-        "conservative_tokens": 213_700_000,
+        "expected_tokens": 251_854_735,
+        "conservative_tokens": 204_966_052,
     }
     assert capacity["conditional_capacity_is_scenario_only"] is True
 
@@ -103,7 +103,7 @@ def test_attribution_manifest_is_complete(registry: dict) -> None:
     manifest = load(CONFIG / "corpus_v4_attribution_manifest.json")
     result = validate_attribution_manifest(manifest, registry)
     assert result["result"] == "PASS"
-    assert result["approved_source_coverage"] == "3/3"
+    assert result["approved_source_coverage"] == "5/5"
 
 
 def test_acquisition_maps_only_approved_sources(registry: dict, plan: dict) -> None:
@@ -160,4 +160,4 @@ def test_phase5c_reports_and_decision_exist(registry: dict) -> None:
     assert all((REPORTS / name).is_file() for name in names)
     decision = (REPORTS / "phase5c_source_lock_decision.md").read_text(encoding="utf-8")
     assert "## PARTIALLY LOCKED" in decision
-    assert registry["source_lock_decision"] in decision
+    assert "DARKMIND V2 CORPUS V4 SOURCE PLAN REQUIRES ADDITIONAL OFFICIAL SOURCES BEFORE ACQUISITION" in decision

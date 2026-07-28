@@ -1,15 +1,15 @@
 {
   "schema_version": "darkmind-v2-corpus-v4-attribution-manifest-v1",
-  "manifest_id": "darkmind-v2-corpus-v4-attribution-phase5c-20260722",
+  "manifest_id": "darkmind-v2-corpus-v4-attribution-phase5d-20260723",
   "created_date": "2026-07-22",
   "planning_only": true,
   "downloads_performed": false,
   "scraping_performed": false,
   "execution_authorized": false,
-  "acquisition_plan_id": "darkmind-v2-corpus-v4-approved-sources-phase5c-20260722",
+  "acquisition_plan_id": "darkmind-v2-corpus-v4-approved-sources-phase5d-20260723",
   "coverage": {
-    "approved_sources": 3,
-    "manifest_entries": 3,
+    "approved_sources": 5,
+    "manifest_entries": 5,
     "complete": true
   },
   "entries": [
@@ -64,6 +64,42 @@
         "notices_required": true
       },
       "modification_notice": "Normalized, filtered, deduplicated, and tokenized for research corpus use.",
+      "record_key_template": "{source_id}:{snapshot_version}:{document_path_or_url}",
+      "approval_state": "approved",
+      "acquisition_execution_authorized": false
+    },
+    {
+      "source_id": "go_1_26_5_source_docs",
+      "official_source_name": "Go 1.26.5 source and documentation",
+      "snapshot_version": "go1.26.5.src.tar.gz",
+      "official_url": "https://go.dev/dl/go1.26.5.src.tar.gz",
+      "license_identity": "Go project BSD-style license with path-level notices",
+      "license_evidence_url": "https://go.dev/LICENSE",
+      "attribution_record": {
+        "creator": "The Go Authors",
+        "source_rule": "archive path and Go 1.26.5 release",
+        "license": "Go project BSD-style license",
+        "notices_required": true
+      },
+      "modification_notice": "Selected, normalized, filtered, deduplicated, and token-counted for research corpus planning.",
+      "record_key_template": "{source_id}:{snapshot_version}:{document_path_or_url}",
+      "approval_state": "approved",
+      "acquisition_execution_authorized": false
+    },
+    {
+      "source_id": "kubernetes_website_f2987ba",
+      "official_source_name": "Kubernetes English documentation website",
+      "snapshot_version": "f2987ba1cceaa85fcd44cd1a221010d745d7335c",
+      "official_url": "https://github.com/kubernetes/website/archive/f2987ba1cceaa85fcd44cd1a221010d745d7335c.tar.gz",
+      "license_identity": "CC BY 4.0 for English website content subject to path-level notices",
+      "license_evidence_url": "https://github.com/kubernetes/website/blob/f2987ba1cceaa85fcd44cd1a221010d745d7335c/LICENSE",
+      "attribution_record": {
+        "creator": "The Kubernetes Authors",
+        "source_rule": "English documentation path and exact commit",
+        "license": "CC BY 4.0",
+        "modification_notice_required": true
+      },
+      "modification_notice": "Selected, normalized, filtered, deduplicated, and token-counted for research corpus planning.",
       "record_key_template": "{source_id}:{snapshot_version}:{document_path_or_url}",
       "approval_state": "approved",
       "acquisition_execution_authorized": false
